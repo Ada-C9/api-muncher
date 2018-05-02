@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
+gem 'httparty'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 # Use postgresql as the database for Active Record
@@ -67,6 +68,7 @@ gem 'foundation-rails'
 gem 'normalize-rails'
 group :development, :test do
   gem 'pry-rails'
+  gem 'dotenv-rails'
 end
 
 group :development do

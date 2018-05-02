@@ -1,0 +1,7 @@
+<h1>Muncher</h1>
+<h3>Search below</h3>
+<%= form_tag recipes_path, method: :get do %>
+  <%= label_tag(:search, "Search For a recipe") %>
+  <%= text_field_tag(:search) %>
+  <%= submit_tag("Search") %>
+<% end %>

@@ -1,19 +1,9 @@
 require "test_helper"
 
 describe RecipesController do
-  it "should get search" do
-    get recipes_search_url
-    value(response).must_be :success?
-  end
-
-  it "should get index" do
-    get recipes_index_url
-    value(response).must_be :success?
-  end
-
-  it "should get show" do
-    get recipes_show_url
-    value(response).must_be :success?
-  end
+  # describe "root" do
+  #   get root_path
+  #   must_respond_with :success
+  # end
 
 end

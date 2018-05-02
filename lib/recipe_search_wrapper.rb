@@ -6,30 +6,29 @@ class RecipeSearchWrapper
   APP_ID = ENV["APP_ID"]
   APP_KEY = ENV["APP_KEY"]
 
-  def self.list_recipes(search)
-    response = HTTParty.get("#{URL}search?q=#{search}&app_id=#{APP_ID}&app_key=#{APP_KEY}")
+  @recipe_list = []
 
-    list_recipes = []
+  def self.list_recipes(search)
+    # uri endcode
+    encoded_uri = URI.encode("#{URL}search?q=#{search}&app_id=#{APP_ID}&app_key=#{APP_KEY}")
+
+    response = HTTParty.get(encoded_uri)
+
+    @recipe_list = []
     if response["hits"]
       response["hits"].each do |recipe|
-        uri = recipe["recipe"]["uri"]
-        id = RecipeSearchWrapper.parse_id(recipe["recipe"]["uri"])
-        name = recipe["recipe"]["label"]
-        image = recipe["recipe"]["image"]
-        list_recipes << Recipe.new(id, name, image)
+        @recipe_list << Recipe.new(recipe)
       end
     end
-
-    return list_recipes
-  end
-
-  def self.parse_id(uri)
-    length = uri.length
-    index = uri.index("_")
-    return uri[index,length]
+    return @recipe_list
   end
 
   def self.find_recipe(recipe_id)
-
+    @recipe_list.each do |recipe|
+      if recipe.id == recipe_id
+        return recipe
+      end
+    end
   end
+
 end

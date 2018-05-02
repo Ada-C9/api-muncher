@@ -12,12 +12,19 @@ class EdamamApiWrapper
     recipe_list = []
 
     if response["hits"] && response["count"] > 0
-      response.parsed_response["hits"].each do |recipe|
-        recipe_list << Recipe.new(recipe["label"], recipe["uri"].match(/[^_]*$/))
-      end
+      response.parsed_response["hits"].each do |hit|
+        recipe_list << Recipe.new(
+          hit["recipe"]["label"],
+          hit["recipe"]["uri"].match(/[^_]*$/),
+          hit["recipe"]["image"],
+          hit["recipe"]["source"],
+          hit["recipe"]["url"],
+          hit["recipe"]["ingredientLines"],
+          hit["recipe"]["dietLabels"])
+        end
     end
 
     return recipe_list
   end
-  
+
 end

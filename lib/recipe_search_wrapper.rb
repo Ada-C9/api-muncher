@@ -2,6 +2,8 @@ require 'httparty'
 require 'pry'
 
 class RecipeSearchWrapper
+  class RecipeError < StandardError; end
+
   def self.search_recipes
     app_id = ENV["APPLICATION_ID"]
     app_key = ENV["APPLICATION_KEY"]
@@ -25,6 +27,7 @@ class RecipeSearchWrapper
     return response["hits"].map do |raw_recipe|
       Recipe.from_api(raw_recipe)
     end
+  end
 
 
     # recipes.each do |recipe|
@@ -32,12 +35,11 @@ class RecipeSearchWrapper
     # end
     # return nil
 
-    # private
-    # def self.raise_on_error(response)
-    #   unless response["ok"]
-    #     raise #SlackError.new(response["error"])
-    #   end
-    # end
-
+  private
+  def self.raise_on_error(response)
+    unless response["ok"]
+      raise RecipeError.new(response["error"])
+    end
   end
+
 end

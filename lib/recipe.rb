@@ -5,6 +5,9 @@ class Recipe
     raise ArgumentError if label == nil
 
     @label = label
+
+    # need to figure out how to populate r using recipe that's passed in via function below
+    @r
   end
 
   def self.from_api(recipe)

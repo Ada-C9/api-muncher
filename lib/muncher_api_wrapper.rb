@@ -20,12 +20,15 @@ class MuncherApiWrapper
     end
   end
 
+  # doesn't work bc recipe needs to be the muncher r key
+  # need to store this as an instance variable of the recipe
   def self.show_recipe(recipe)
-    url = BASE_URL + "?" + "r=#{recipe}" + "app_id=#{APP_ID}" + "app_key=#{APP_KEY}"
+    url = "#{BASE_URL}?r=#{recipe}&app_id=#{APP_ID}&app_key=#{APP_KEY}"
+
     response = HTTParty.get(url)
 
     # add conditional in case recipe not found
-    return response[0]
+    return "???"
   end
 
 end

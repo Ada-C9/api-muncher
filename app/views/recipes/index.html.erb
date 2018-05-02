@@ -1,0 +1,11 @@
+<section class="muncher-home">
+  <h1>MUNCHER</h1>
+  <% if @recipes %>
+    <ul>
+      <% @recipes.each do |recipe| %>
+        <li>
+          <%= recipe.name %>
+        </li>
+    </ul>
+    <% end %>
+</section>

@@ -13,6 +13,12 @@
 
   <body>
 
+    <% if flash[:result] %>
+      <section class="callout <%= flash[:status] %>">
+        <p><%= flash[:status] == :alert ? "A problem occurred: " : "" %><%= flash[:result] %></p>
+      </section>
+    <% end %>
+
     <%= yield %>
 
   </body>

@@ -7,8 +7,9 @@ class RecipesController < ApplicationController
 
     @recipes = RecipeSearchWrapper.list_recipes(@search)
     if @recipes == []
-      # flash message that message was not found
-      # redirect to root/search
+      flash[:status] = :alert
+      flash[:result] = "There are zero search results for: \'#{@search}\'"
+      render :root
     end
   end
 

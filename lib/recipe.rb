@@ -1,15 +1,19 @@
 class Recipe
-  attr_reader :name, :picture
-  def initialize(name, picture)
-    valid_attribute(name)
-    valid_attribute(picture)
+  attr_reader :label, :image
+  def initialize(label, image)
+    valid_attribute(label)
+    valid_attribute(image)
 
-    @name = name
-    @picture = picture
+    @label = name
+    @image = image
   end
 
-
-
+  def self.from_api(raw_recipe)
+    self.new(
+      raw_recipe["label"],
+      raw_recipe["image"]
+    )
+  end
 
   private
 

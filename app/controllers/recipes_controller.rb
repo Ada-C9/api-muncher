@@ -8,6 +8,7 @@ class RecipesController < ApplicationController
     @search = params[:search]
 
     # call self method in api wrapper
+    @recipes = RecipeSearchWrapper.list_recipes(@search)
   end
 
   def show

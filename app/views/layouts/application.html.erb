@@ -9,11 +9,18 @@
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+    <script src="https://developer.edamam.com/attribution/badge.js"></script>
   </head>
 
   <body>
 
-    <%= yield %>
+    <main>
+      <%= yield %>
+    </main>
 
+    <footer>
+      <div>&copy muncher llc</div>
+      <div id="edamam-badge" data-color="transparent"></div>
+    </footer>
   </body>
 </html>

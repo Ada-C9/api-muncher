@@ -4,7 +4,8 @@
     <ul>
       <% @recipes.each do |recipe| %>
         <li>
-          <%=  recipe["recipe"]["label"] %>
+          <img src="<%= recipe.image %>" alt="recipe photo">
+          <%=  link_to recipe.name, muncher_path() %>
         </li>
       <% end %>
     </ul>

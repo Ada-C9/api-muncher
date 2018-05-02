@@ -6,6 +6,6 @@ class Recipe
   end
 
   def self.from_api(raw_recipe)
-    self.new(raw_recipe["label"])
+    self.new(raw_recipe["recipe"]["label"])
   end
 end

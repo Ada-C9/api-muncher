@@ -1,0 +1,6 @@
+<%= form_tag search_path, method: "post" do %>
+  <%= label_tag(:query, "Find your flavor...") %>
+  <%= text_field_tag(:query) %>
+  <%= submit_tag("Search", class: "hollow button small") %>
+
+<% end %>

@@ -13,13 +13,16 @@ class RecipesController < ApplicationController
       end
     else
       flash[:status] = :failure
-      flash[:result_text] = "Search failed"
+      flash[:result_text] = "Searching failed"
     end
   end
 
   def show
     if params[:recipe_id]
       @recipe = EdamamApiWrapper.find_recipe(params[:recipe_id])
+    else
+      flash[:status] = :failure
+      flash[:result_text] = "Invalid recipe ID was provided"
     end
   end
 

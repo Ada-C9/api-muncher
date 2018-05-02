@@ -1,4 +1,5 @@
-<h1>MUNCHER</h1>
+<h1><%= link_to "MUNCHER", root_path %></h1>
+
 <section class="search-container">
   <%= form_tag(recipes_path, method: :get) do %>
     <%= text_field_tag :term, nil, placeholder: "🔍" %>

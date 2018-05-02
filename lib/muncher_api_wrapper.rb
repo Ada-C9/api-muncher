@@ -8,9 +8,9 @@ class MuncherApiWrapper
 
   def self.search_recipes(search_term)
     url = "#{BASE_URL}search?q=#{search_term}&app_id=#{APP_ID}&app_key=#{APP_KEY}"
-    data = HTTParty.get(url)
-    if data["recipes"]
-      return data["recipes"]
+    results = HTTParty.get(url)
+    if results["hits"]
+      return results["hits"]
     else
       return []
     end

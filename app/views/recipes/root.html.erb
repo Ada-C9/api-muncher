@@ -1,1 +1,8 @@
-root
+<h1>Search for recipes <span class="recipe-search"></span> </h1>
+
+<%= form_tag search_results_path, method: :get do %>
+  <%= label_tag(:query, "Enter term") %>
+  <%= text_field_tag(:query) %>
+  <%= submit_tag("Search") %>
+
+<% end %>

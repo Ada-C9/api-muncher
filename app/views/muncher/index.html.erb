@@ -1,2 +1,11 @@
-<h1>Muncher#index</h1>
-<p>Find me in app/views/muncher/index.html.erb</p>
+<h1>Matching Recipes</h1>
+
+<% if @recipes %>
+    <ul>
+      <% @recipes.each do |recipe| %>
+        <li>
+          <%=  recipe["recipe"]["label"] %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>

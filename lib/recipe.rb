@@ -14,13 +14,13 @@ class Recipe
 
   def self.from_api(response)
     recipe_data = {
-    label: response["recipe"]["label"],
-    image: response["recipe"]["image"],
-    orig_url: response["recipe"]["url"],
-    ingredients: response["recipe"]["ingredientLines"],
-    diet: response["recipe"]["dietLabels"],
-    health: response["recipe"]["healthLabels"],
-    uri: response["recipe"]["uri"],
+    label: response["label"],
+    image: response["image"],
+    orig_url: response["url"],
+    ingredients: response["ingredientLines"],
+    diet: response["dietLabels"],
+    health: response["healthLabels"],
+    uri: response["uri"],
   }
     self.new(recipe_data)
   end

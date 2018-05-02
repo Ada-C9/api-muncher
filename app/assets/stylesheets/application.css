@@ -1,19 +1,105 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *= require normalize-rails
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*= require normalize-rails
 
- *
- *= require_tree .
- *= require_self
- *= require foundation_and_overrides
+*
+*= require_tree .
+*= require_self
+*= require foundation_and_overrides
 
- */
+*/
+
+/* Set the background color of body to tan */
+body {
+
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+
+
+/* On screens that are 600px or less, set the background color to olive */
+
+@media screen and (min-width: 600px) {
+
+
+  section.results {
+    display: flex;
+    flex-flow: wrap row;
+  }
+
+  article.results.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    width: 20vw;
+    height: 20vw;
+    max-width: 25vw;
+    margin: 2vw;
+  }
+
+  article.results.item img {
+    /* max-width: 25vw;
+    max-height: 25vh; */
+    width: auto;
+    height: 25vh;
+  }
+
+  article.results.item a {
+    color: hsl(189, 6%, 16%);
+    text-decoration: none;
+    font-size: .9em;
+    min-height: 5vh;
+    max-height: 8vh;
+    margin-top: 2vh;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  article.results.item a:hover {
+    color: hsl(180, 30%, 53%);
+  }
+
+  nav.pagination {
+    display: flex;
+  }
+
+
+}
+section.search {
+  width: 80vw;
+  margin: 0 10vw;
+  height: 40vh;
+  padding: auto;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 30vh;
+}
+img.edamam-logo {
+  max-height: 7vh;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-content; center;
+  font-size: .8em;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+.button {
+  align-self: flex-end;
+}

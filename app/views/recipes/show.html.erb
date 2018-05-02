@@ -1,2 +1,8 @@
-<h1>Recipes#Show</h1>
-<p>Find me in app/views/recipes/index.html.erb</p>
+<section class="recipe">
+  <% if @result %>
+    <h2><%= @result.label.titlecase %></h2>
+      <%= image_url(@result) %>
+      <%= link_to @result.label, @result.orig_url.html_safe, target: :_blank %>
+    </article>
+  <% end %>
+</section>

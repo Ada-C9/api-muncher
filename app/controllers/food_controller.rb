@@ -2,9 +2,11 @@ class FoodController < ApplicationController
   around_action :catch_api_error
 
   def root
+    @recipes
   end
 
   def index
+    @recipes
   end
 
 

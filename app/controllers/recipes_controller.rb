@@ -1,8 +1,8 @@
 class RecipesController < ApplicationController
-  def search
+  def root
   end
 
-  def index
+  def search
   end
 
   def show

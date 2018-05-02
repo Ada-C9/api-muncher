@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>EdamamApi</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://developer.edamam.com/attribution/badge.js"></script>
   <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
-
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag    "application", media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
 </head>
 
 <body>
-
+  <% if flash[:status] %>
+   <section class="row status <%= flash[:status] %>">
+     <h3>
+       <%= flash[:message] %>
+     </h3>
+   </section>
+  <% end %>
   <%= yield %>
   <div id="edamam-badge" data-color="white"></div>
 </body>

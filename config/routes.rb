@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'recipes/index'
 
-  get 'recipes/show'
+  root to: "recipes#search"
+  get 'recipes/index', to: 'recipes#index', as: 'recipes'
+  get 'recipes/show', to: 'recipes#show', as: 'recipe'
 
-  get 'recipes/search'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

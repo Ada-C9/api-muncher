@@ -5,6 +5,7 @@ def index
 end
 
 def show
+  @recipe = 
 end
 
 end

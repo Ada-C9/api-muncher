@@ -18,6 +18,8 @@ class RecipeSearchWrapper
     # binding.pry
     # response["hits"][0]["recipe"]["label"] => teriyaki chicken
 
+    #raw_recipe["recipe"]["label"] => teriyaki chicken
+
     return response["hits"].map do |raw_recipe|
       Recipe.from_api(raw_recipe)
     end

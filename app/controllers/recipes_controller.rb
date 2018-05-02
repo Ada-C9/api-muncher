@@ -3,4 +3,7 @@ class RecipesController < ApplicationController
     @recipes = RecipeSearchWrapper.search_recipes
   end
 
+  def show
+  
+  end
 end

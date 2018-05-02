@@ -3,4 +3,5 @@ Rails.application.routes.draw do
 
   root 'recipes#root'
   get 'results', to: 'recipes#index', as: 'results'
+  get 'recipes/:id', to: 'recipes#show', as: 'recipe'
 end

@@ -1,7 +1,6 @@
+require 'pry'
+
 class RecipesController < ApplicationController
-  URL = "https://api.edamam.com/"
-  ID = ENV["EDAMAM_ID"]
-  KEY = ENV["EDAMAM_KEYS"]
 
   def root
   end
@@ -9,17 +8,10 @@ class RecipesController < ApplicationController
   def index
     @query = params[:search]
     @recipes = EdamamApiWrapper.get_recipes(@query)
+  end
 
-    # encoded_uri = URI.encode("#{URL}search?q=#{@queary}&app_id=#{ID}&app_key=#{KEY}")
-    #
-    # response = HTTParty.get(encoded_uri)
-    #
-    # @recipes = []
-    #
-    # if response["hits"]
-    #   response["hits"].each do |entry|
-    #     @recipes << entry
-    #   end
-    # end
+  def show
+    id = params[:id]
+    @recipe = EdamamApiWrapper.show_recipe(id)
   end
 end

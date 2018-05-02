@@ -4,9 +4,9 @@
     <ul>
       <% @recipes.each do |item| %>
         <li>
-          <img src="<%= item["recipe"]["image"] %>" >
-          <%= item["recipe"]["label"] %>
-          by <%= item["recipe"]["source"] %>
+          <img src="<%= item.image %>" >
+          <%= link_to item.source, recipe_path(item.id) %>
+          by <%= item.label %>
         </li>
         <% end %>
     </ul>

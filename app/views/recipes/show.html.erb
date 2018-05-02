@@ -1,0 +1,20 @@
+<h1>Your Chosen Recipe</h1>
+<article>
+  <h3><%= @recipe.source %></h3>
+  <h4>by <%= @recipe.label %></h4>
+  <img src="<%= @recipe.image %>" >
+  <p>
+    Servings: <%= @recipe.count %>
+    <ul>
+      <h4>Ingredients</h4>
+      <% @recipe.ingredients.each do |item| %>
+        <li>
+          <%= item["text"] %>
+        </li>
+      <% end %>
+
+    </ul>
+
+  </p>
+
+</article>

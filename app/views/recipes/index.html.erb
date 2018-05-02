@@ -1,2 +1,16 @@
-<h1>Recipes#index</h1>
-<p>Find me in app/views/recipes/index.html.erb</p>
+<h2>MUNCHER</h2>
+<p>placeholder for search box</p>
+
+<h3>Results for "<%= session[:term] %>"</h3>
+<ul>
+  <% if @recipes == [] %>
+    <h4>Nothing has been found.</h4>
+  <% else %>
+    <% @recipes.each do |recipe| %>
+      <li>
+        <%= link_to image_tag(recipe.image, alt: recipe.title), recipe_path(recipe) %>
+        <h4><%= recipe.title %></h4>
+      </li>
+    <% end %>
+  <% end %>
+</ul>

@@ -29,6 +29,7 @@ class RecipeSearchWrapper
         return recipe
       end
     end
+    return nil
   end
 
 end

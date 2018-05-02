@@ -16,5 +16,8 @@ class RecipesController < ApplicationController
   def show
     id = params[:id]
     @recipe = RecipeSearchWrapper.find_recipe(id)
+    # if @recipe.nil?
+    #   flash[:status]
+    # end
   end
 end

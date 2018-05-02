@@ -1,0 +1,12 @@
+<section class="recipes-list">
+  <h1>Things to Cook</h1>
+  <% if @recipes %>
+    <ul>
+      <% @recipes.each do |recipe| %>
+        <li>
+          Recipes Go Here
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+</section>

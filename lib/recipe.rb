@@ -5,12 +5,12 @@ class Recipe
     @label = label
     @source = source
     @image = image
-    @id = parse_uri(uri)
+    @id = Recipe.parse_uri(uri)
     @ingredients = ingredients
     @count = count
   end
 
-  def parse_uri(initial_uri)
+  def self.parse_uri(initial_uri)
     return initial_uri.split('_')[1].strip
   end
 

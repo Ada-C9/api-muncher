@@ -20,6 +20,12 @@ VCR.configure do |config|
   end
 end
 
+# https://github.com/rails/rails/issues/31324
+# add to test/test_helper.rb
+if ActionPack::VERSION::STRING >= "5.2.0"
+  Minitest::Rails::TestUnit = Rails::TestUnit
+end
+
 #  For colorful output!
 Minitest::Reporters.use!(
   Minitest::Reporters::SpecReporter.new,

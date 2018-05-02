@@ -1,26 +1,21 @@
 class FoodController < ApplicationController
-  around_action :catch_api_error
+  # around_action :catch_api_error
 
-  def root
-    @recipes
+  def new
+    @recipe_search = params[:recipe]
   end
 
-  def index
-    @recipes
+  def show
+    @recipe = params[:recipe]
   end
 
+  def create
+    recipe_search = params[:recipe]
 
-  private
-  def catch_api_error
-    begin
-      # This will run the actual controller action
-      # Actually the same yield keyword as in
-      # application.html.erb
-      yield
-    rescue SlackApiWrapper::SlackError => error
-      flash[:status] = :failure
-      flash[:message] = "API called failed: #{error}"
-      redirect_back fallback_location: root_path
-    end
+    EdamamApiWrapper.recipe_list(recipe_search)
+    flash[:status] = :success
+    flash.now[:message] = "Here is a list of recipes for #{recipe_search}"
+    render :show
   end
+
 end

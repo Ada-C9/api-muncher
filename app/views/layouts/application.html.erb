@@ -4,16 +4,33 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Muncher" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
 
+  <header>
+    <nav>
+
+    </nav>
+  </header>
+
   <body>
+    <% if flash[:status] %>
+       <section class="row status <%= flash[:status] %>">
+         <h3>
+           <%= flash[:message] %>
+         </h3>
+        </section>
+    <% end %>
 
     <%= yield %>
 
   </body>
+
+  <footer>
+    
+  </footer>
 </html>

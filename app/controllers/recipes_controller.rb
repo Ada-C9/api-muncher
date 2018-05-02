@@ -2,11 +2,11 @@ class RecipesController < ApplicationController
   around_action :catch_api_error
 
   def index
-    @ingredients = SlackApiWrapper.list_ingredients
+    @recipes = EdamamApiWrapper.list_recipes
   end
 
   def new
-    @ingredient_name = params[:ingredient]
+    @recipe_name = params[:recipe]
   end
 
   def show
@@ -20,7 +20,7 @@ class RecipesController < ApplicationController
       # Actually the same yield keyword as in
       # application.html.erb
       yield
-    rescue SlackApiWrapper::SlackError => error
+    rescue EdamamApiWrapper::EdamamError => error
       flash[:status] = :failure
       flash[:message] = "API called failed: #{error}"
       redirect_back fallback_location: root_path

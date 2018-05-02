@@ -14,6 +14,7 @@ class EdamamApiWrapper
     if response["hits"]
       response["hits"].each do |hit|
         @recipe_list << Recipe.new(
+          hit["recipe"]["uri"],
           hit["recipe"]["label"],
           hit["recipe"]["image"],
           hit["recipe"]["source"],
@@ -29,9 +30,9 @@ class EdamamApiWrapper
     return @recipe_list
   end
 
-  def self.find_recipe(title)
+  def self.find_recipe(recipe_id)
     @recipe_list.each do |recipe|
-      if recipe.title == title
+      if recipe.id == recipe_id
         return recipe
       end
     end

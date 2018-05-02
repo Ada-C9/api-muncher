@@ -13,8 +13,8 @@ class RecipesController < ApplicationController
   end
 
   def show
-    if params[:title]
-      @recipe = EdamamApiWrapper.find_recipe(params[:title])
+    if params[:recipe_id]
+      @recipe = EdamamApiWrapper.find_recipe(params[:recipe_id])
     end
   end
 

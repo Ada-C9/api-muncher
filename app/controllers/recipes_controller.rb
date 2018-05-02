@@ -20,6 +20,10 @@ class RecipesController < ApplicationController
 
   def index
     @recipes = EdamamApiWrapper.list_recipes(params[:search])
+
+    if @recipes.count < 1
+      flash[:error] = "No recipies available for that search. Please try again!"
+    end
   end
 
   def show

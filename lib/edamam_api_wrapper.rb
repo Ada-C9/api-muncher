@@ -13,8 +13,8 @@ class EdamamApiWrapper
     response = HTTParty.get(url)
 
     if response["count"] && response["count"] > 0
-      Recsearch.from_api(response)
-
+      search = Recsearch.from_api(response)
+      return search
     else
 
     end

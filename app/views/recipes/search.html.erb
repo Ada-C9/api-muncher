@@ -1,0 +1,11 @@
+
+<h1>Welcome</h1>
+
+<section class="search-form">
+  <%= form_tag results_path, method: :get do %>
+
+  <%= text_field_tag :query %>
+  <%= submit_tag 'Search', class: 'button' %>
+  <% end %>
+
+</section>

@@ -1,5 +1,7 @@
 class Recsearch
 
+  attr_reader :recipes, :query
+
   def initialize(query, recipe_list)
     @query = query
     self.load_recipes(recipe_list)

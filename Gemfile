@@ -83,3 +83,8 @@ group :test do
   gem 'minitest-rails'
   gem 'minitest-reporters'
 end
+
+group :development, :test do
+  gem 'minitest-vcr'
+  gem 'webmock'
+end

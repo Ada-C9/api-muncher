@@ -12,25 +12,17 @@ class RecipeApiWrapper
 
     response = HTTParty.get(url)
     #ALWAYS CHECK YOUR ERROR CODES
-    unless response["ok"]
+    unless response.success?
       raise StandardError.new(response["error"])
     end
 
-    return response["hits"][0].map do |raw_recipe|
-      Channel.from_api(raw_recipe)
+    return response["hits"].map do |raw_recipe|
+      Recipe.from_api(raw_recipe["recipe"])
     end
   end
 
-  def self.send_message(channel_name, message)
-    api_key = ENV["EDAMAM_API_KEY"]
-    api_id = ENV["EDAMAM_API_ID"]
+  def self.show_recipe(url)
 
-    url_root = "https://slack.com/api/chat/postMessage"
-    full_url = URI.encode("#{url_root}?channel=#{channel_name}&text=#{message}&token=#{token}")
-
-    response = HTTParty.post(full_url)
-
-    raise_on_error(response)
   end
 
   private

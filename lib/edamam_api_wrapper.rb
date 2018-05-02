@@ -5,7 +5,8 @@ class EdamamApiWrapper
   APP_ID = ENV["APP_ID"]
   APP_KEY = ENV["APP_KEY"]
 
-  def self.
+  def self.list_recipes(ingredient)
+    response = HTTParty.get("#{URL}?q=")
 
   end
 end

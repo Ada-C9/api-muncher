@@ -2,15 +2,16 @@ require 'httparty'
 
 class EdamamApiWrapper
   URL = "https://api.edamam.com/"
-  ID = "032d2336"
-  KEY = f5d02acbf83fb385394cb39dd26d6b59
+  ID = ENV["EDAMAM_ID"]
+  KEY = ENV["EDAMAM_KEYS"]
 
 
   def self.get_recipes(search)
-    response = HTTParty.get("#{URL}search?q=#{search}&app_id=#{ID}&app_key=#{KEY}")
+    encoded_uri = URI.encode("#{URL}search?q=#{search}&app_id=#{ID}&app_key=#{KEY}")
+
+    response = HTTParty.get(encoded_uri)
 
     recipe_list = []
-
     if response["hits"]
       response["hits"].each do |entry|
         recipe_list << entry

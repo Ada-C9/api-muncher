@@ -1,11 +1,14 @@
 <section class="muncher-home">
-  <h1>MUNCHER</h1>
+  <h1>MUNCH THIS</h1>
   <% if @recipes %>
     <ul>
-      <% @recipes.each do |recipe| %>
+      <% @recipes.each do |item| %>
         <li>
-          <%= recipe.name %>
+          <img src="<%= item["recipe"]["image"] %>" >
+          <%= item["recipe"]["label"] %>
+          by <%= item["recipe"]["source"] %>
         </li>
+        <% end %>
     </ul>
     <% end %>
 </section>

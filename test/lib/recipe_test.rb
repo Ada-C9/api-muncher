@@ -3,14 +3,26 @@ require 'test_helper'
 describe Recipe do
   let (:recipe_name) {'teriyaki chicken'}
   let (:recipe_uri) {'www.edamam.com/a_recipe'}
+  let (:recipe_ingredients) { ['some', 'ingredients'] }
+  let (:recipe_image) { 'www.edamam.com/image' }
+  let (:dietary_info) { {cals: 'cals', fat: 'fat'} }
 
   describe 'initialize' do
     it 'creates an instance of recipe with all required fields' do
-      recipe = Recipe.new(name: recipe_name, uri: recipe_uri)
+      recipe = Recipe.new(
+        name: recipe_name,
+        uri: recipe_uri,
+        ingredients: recipe_ingredients,
+        image: recipe_image,
+        dietary_info: dietary_info
+      )
 
       recipe.must_be_instance_of Recipe
       recipe.name.must_equal recipe_name
       recipe.uri.must_equal recipe_uri
+      recipe.ingredients.must_equal recipe_ingredients
+      recipe.image.must_equal recipe_image
+      recipe.dietary_info.must_equal dietary_info
     end
 
     it 'raises an error for invalid data' do

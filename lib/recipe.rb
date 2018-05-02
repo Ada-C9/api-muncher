@@ -13,7 +13,10 @@ class Recipe
   def self.from_api(raw_recipe)
     self.new(
       name: raw_recipe['label'],
-      uri: raw_recipe['uri']
+      uri: raw_recipe['uri'],
+      ingredients: raw_recipe['ingredientLines'],
+      image: raw_recipe['image'],
+      dietary_info: raw_recipe['totalNutrients']
     )
   end
 

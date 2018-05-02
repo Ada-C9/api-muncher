@@ -5,12 +5,10 @@ class RecipesController < ApplicationController
     @recipes = EdamamApiWrapper.list_recipes
   end
 
-  def new
-    @recipe_name = params[:recipe]
-  end
-
   def show
+    recipe_id = params[:id]
 
+    @recipe = Recipe.find(recipe_id)
   end
 
   private

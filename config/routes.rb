@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root 'recipe#index'
 
-  resources :recipes
+  resources :recipes  
   # get ':channel/new', to: 'chat#new', as: 'new_message'
   # post ':channel', to: 'chat#create', as: 'send_message'
 end

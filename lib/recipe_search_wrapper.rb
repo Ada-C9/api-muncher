@@ -19,7 +19,8 @@ class RecipeSearchWrapper
     #raw_recipe["recipe"]["label"] => teriyaki chicken
 
     return response["hits"].map do |raw_recipe|
-      Recipe.from_api(raw_recipe)
+      recipe = raw_recipe["recipe"]
+      Recipe.from_api(recipe)
     end
   end
 

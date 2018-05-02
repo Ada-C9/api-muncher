@@ -6,9 +6,13 @@
         <li>
           <%= link_to recipe.label, recipe_path(recipe) %>
           <%= link_to ("Original Recipe"), recipe.url %>
+          <%= recipe.uri %>
+
           <%= recipe.ingredients.each do |ingredient| %>
             <%= puts ingredient %>
           <% end %>
+          <%= recipe.servings.to_i %>
+
           <%= recipe.health_labels.each do |health_label| %>
             <%= puts health_label %>
           <% end %>

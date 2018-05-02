@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
   around_action :catch_api_error
-  
+
   def index
     @recipes = RecipeSearchWrapper.search_recipes
   end

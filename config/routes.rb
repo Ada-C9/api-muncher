@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  get 'recipes/index'
-  get 'recipes/show'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  root 'recipes#home'
+
+  get '/recipes', to: 'recipes#index'
+
+  get '/recipes/:label', to: 'recipes#show', as: "recipe"
+
 end

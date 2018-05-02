@@ -6,8 +6,11 @@
 
 <% end %>
 
-<% @recipes.each do |recipe| %>
-
-  <%= recipe %>
-
-<% end %>
+<ul>
+  <% @recipes.each do |recipe| %>
+    <li>
+      <img src="<%= recipe.photo_url %>" />
+      <%= recipe.name %>
+    </li>
+  <% end %>
+</ul>

@@ -1,8 +1,11 @@
 class RecipesController < ApplicationController
   def root
+
   end
 
   def list
+    # text entered into search form
+    @search = params[:search]
   end
 
   def show

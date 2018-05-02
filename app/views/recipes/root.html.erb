@@ -1,6 +1,6 @@
-<h1>Muncher</h1>
+<h1>Website Title</h1>
 
-<%= form_tag(search_results_path, :method => "get", id: "search-form") do %>
+<%= form_tag(search_results_path, method: :get) do %>
     <%= text_field_tag :search, params[:search], placeholder: "Search Recipes" %>
     <%= submit_tag "Search", :name => nil %>
 <% end %>

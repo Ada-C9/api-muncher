@@ -14,12 +14,6 @@ class RecipeSearchWrapper
 
     response = HTTParty.get(encoded_uri).parsed_response
 
-    # unless response["ok"]
-    #   raise StandardError.new(response["error"])
-    # end
-
-    # binding.pry
-
     #response["hits"][0]["recipe"]["label"] => teriyaki chicken
 
     #raw_recipe["recipe"]["label"] => teriyaki chicken

@@ -70,6 +70,10 @@ GEM
       safe_yaml (~> 1.0.0)
     crass (1.0.4)
     debug_inspector (0.0.3)
+    dotenv (2.2.2)
+    dotenv-rails (2.2.2)
+      dotenv (= 2.2.2)
+      railties (>= 3.2, < 6.0)
     erubi (1.7.1)
     execjs (2.7.0)
     ffi (1.9.23)
@@ -80,6 +84,8 @@ GEM
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     hashdiff (0.3.7)
+    httparty (0.16.2)
+      multi_xml (>= 0.5.2)
     i18n (1.0.1)
       concurrent-ruby (~> 1.0)
     jbuilder (2.7.0)
@@ -120,6 +126,7 @@ GEM
       minitest (>= 4.7.5)
       vcr (>= 2.9)
     multi_json (1.13.1)
+    multi_xml (0.6.0)
     nio4r (2.3.0)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
@@ -226,7 +233,9 @@ DEPENDENCIES
   binding_of_caller
   byebug
   capybara (~> 2.13)
+  dotenv-rails
   foundation-rails
+  httparty
   jbuilder (~> 2.5)
   jquery-rails
   jquery-turbolinks

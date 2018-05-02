@@ -1,9 +1,8 @@
-require 'httparty'
 
 class Recipe
-  attr_reader :name, :id
+  attr_reader :title, :id
 
-  def initialize(name, id, options = {})
+  def initialize(title, id, options = {})
     @name = name
     @id = id
   end

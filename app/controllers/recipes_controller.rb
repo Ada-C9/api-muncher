@@ -6,6 +6,8 @@ class RecipesController < ApplicationController
   def list
     # text entered into search form
     @search = params[:search]
+
+    # call self method in api wrapper
   end
 
   def show

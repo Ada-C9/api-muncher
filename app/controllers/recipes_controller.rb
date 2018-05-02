@@ -33,8 +33,7 @@ class RecipesController < ApplicationController
   end
 
   def show
-    binding.pry
-    @recipe = params[:recipe]
+    recipe = params[:id]
     @result = EdamamApiWrapper.search(recipe)
   end
 end

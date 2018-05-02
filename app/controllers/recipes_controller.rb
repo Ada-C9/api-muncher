@@ -2,7 +2,7 @@ class RecipesController < ApplicationController
   def root
   end
 
-  def search
+  def list
   end
 
   def show

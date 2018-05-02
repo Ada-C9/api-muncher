@@ -13,6 +13,9 @@ class RecipesController < ApplicationController
   end
 
   def show
+    if params[:title]
+      @recipe = EdamamApiWrapper.find_recipe(params[:title])
+    end
   end
 
 end

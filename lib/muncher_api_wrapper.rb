@@ -1,7 +1,7 @@
 require 'httparty'
 require 'pry'
 
-module MuncherApiWrapper
+class MuncherApiWrapper
 
   def self.get_recipe(query)
     app_id = ENV['MUNCHER_API_ID']

@@ -68,6 +68,7 @@ gem 'normalize-rails'
 group :development, :test do
   gem 'dotenv-rails'
   gem 'pry-rails'
+  gem 'httparty'
 end
 
 group :development do

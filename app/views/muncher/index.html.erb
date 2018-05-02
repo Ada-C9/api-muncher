@@ -1,11 +1,11 @@
-<h1>Matching Recipes</h1>
+<h1>Results for <%= params[:search] %></h1>
 
 <% if @recipes %>
     <ul>
       <% @recipes.each do |recipe| %>
         <li>
           <img src="<%= recipe.image %>" alt="recipe photo">
-          <%=  link_to recipe.name, muncher_path() %>
+          <%= recipe.name %>
         </li>
       <% end %>
     </ul>

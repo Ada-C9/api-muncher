@@ -6,7 +6,7 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module ApiMuncher
+module MuncherAPI
   class Application < Rails::Application
     config.generators do |g|
       # Force new test files to be generated in the minitest-spec style

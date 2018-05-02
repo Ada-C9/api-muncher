@@ -5,6 +5,7 @@
       <% @recipes.each do |recipe| %>
         <li>
           <%= link_to recipe.label, recipe_path(recipe) %>
+          <%= link_to ("Original Recipe"), recipe.url %>
         </li>
       <% end %>
     </ul>

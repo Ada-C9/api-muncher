@@ -1,9 +1,9 @@
 <h1>Recipes</h2>
 
 <ul>
-  <% @recipe_list.each do |r| %>
+  <% @recipe_list.each do |recipe_info| %>
     <li>
-      <%= link_to r.label, recipe_path(r) %>
+      <%= link_to recipe_info[:label], recipe_path(recipe_info[:id]) %>
     </li>
   <% end %>
 </ul>

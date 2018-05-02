@@ -6,8 +6,9 @@ class RecipesController < ApplicationController
   end
 
   def show
-    recipe = recipe_params["id"]
-    @recipe = MuncherApiWrapper.show_recipe(recipe)
+
+    id = recipe_id
+    @recipe_details = MuncherApiWrapper.show_recipe(id)
   end
 
   def search
@@ -19,8 +20,8 @@ class RecipesController < ApplicationController
     params.require(:search)
   end
 
-  def recipe_params
-    params.require(:id)
+  def recipe_id
+    params.require("id")
   end
 
 end

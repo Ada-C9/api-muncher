@@ -1,6 +1,6 @@
 <h1>Search</h1>
 
-<%= form_for :search, url: index_path(:terms) do |f| %>
+<%= form_for :search, url: index_path do |f| %>
   <%= f.search_field :terms, placeholder: "Search..." %>
   <%= f.submit "Submit" %>
 <% end %>

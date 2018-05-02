@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :recipes, only: [:show]
 
-  post '/recipes/:terms', to: 'recipes#index', as: :index
+  post '/recipes', to: 'recipes#index', as: :index
   get '/search', to: 'recipes#search', as: :search
 
 end

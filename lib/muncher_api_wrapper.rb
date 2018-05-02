@@ -15,7 +15,7 @@ class MuncherApiWrapper
     raise_error(response)
 
     return response['hits'].map do |raw_recipe|
-      Recipe.from_api(raw_recipe)
+      Recipe.from_api(raw_recipe['recipe'])
     end
   end
 

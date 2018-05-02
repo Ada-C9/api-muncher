@@ -26,11 +26,15 @@ describe Recipe do
     end
 
     it 'raises an error for invalid data' do
-      proc { Recipe.new(name: nil, uri: nil) }.must_raise ArgumentError
-      proc { Recipe.new(name: nil, uri: recipe_uri) }.must_raise ArgumentError
-      proc { Recipe.new(name: recipe_name, uri: nil) }.must_raise ArgumentError
-      proc { Recipe.new(name: '', uri: recipe_uri) }.must_raise ArgumentError
-      proc { Recipe.new(name: recipe_name, uri: '') }.must_raise ArgumentError
+      proc { Recipe.new(name: nil, uri: nil, image: nil, ingredients: nil, dietary_info: nil) }.must_raise ArgumentError
+
+      proc { Recipe.new(name: nil, uri: recipe_uri, image: nil, ingredients: nil, dietary_info: nil) }.must_raise ArgumentError
+
+      proc { Recipe.new(name: recipe_name, uri: nil, image: nil, ingredients: nil, dietary_info: nil) }.must_raise ArgumentError
+
+      proc { Recipe.new(name: '', uri: recipe_uri, image: nil, ingredients: nil, dietary_info: nil) }.must_raise ArgumentError
+
+      proc { Recipe.new(name: recipe_name, uri: '', image: nil, ingredients: nil, dietary_info: nil) }.must_raise ArgumentError
     end
   end
 

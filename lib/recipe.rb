@@ -1,13 +1,18 @@
 class Recipe
-  attr_reader :name, :uri
+  DEFAULT_IMAGE = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/480px-No_image_available.svg.png"
+  DEFAULT_INGREDIENTS = ['Ingredients Unavailable']
 
-  # will probably end up needing more things
-  def initialize(name: recipe_name, uri: recipe_uri)
+  attr_reader :name, :uri, :ingredients, :image, :dietary_info
+
+  def initialize(name: recipe_name, uri: recipe_uri, image: DEFAULT_IMAGE, ingredients: DEFAULT_INGREDIENTS, dietary_info: nil)
     raise ArgumentError.new("Name can't be blank") if name.nil? || name.empty?
     raise ArgumentError.new("Uri can't be blank") if uri.nil? || uri.empty?
 
     @name = name
     @uri = uri
+    @image = image
+    @ingredients = ingredients
+    @dietary_info = dietary_info
   end
 
   def self.from_api(raw_recipe)

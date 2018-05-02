@@ -10,16 +10,19 @@ class MuncherApiWrapper
     base_url = "https://api.edamam.com/search"
     full_url = URI.encode(base_url + "?q=#{query}" "&app_id=#{app_id}&app_key=#{app_key}")
 
-    result = HTTParty.get(full_url)
+    response = HTTParty.get(full_url)
 
-    raise_error(result)
+    raise_error(response)
 
+    return response['hits'].map do |raw_recipe|
+      Recipe.from_api(raw_recipe)
+    end
   end
 
   private
 
-  def raise_error(result)
-    unless result['ok']
+  def self.raise_error(response)
+    unless response.message == 'OK'
       raise StandardError.new('No Results')
     end
   end

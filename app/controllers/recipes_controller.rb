@@ -4,8 +4,13 @@ class RecipesController < ApplicationController
 
   def index
     if params[:term]
-      @recipes = EdamamApiWrapper.list_recipes(params[:term])
-      session[:term] = params[:term]
+      if params[:page_num]
+        @recipes = EdamamApiWrapper.list_recipes(params[:term], params[:page_num])
+        session[:term] = params[:term]
+      else
+        @recipes = EdamamApiWrapper.list_recipes(params[:term], 1)
+        session[:term] = params[:term]
+      end
     else
       flash[:status] = :failure
       flash[:result_text] = "Search failed"

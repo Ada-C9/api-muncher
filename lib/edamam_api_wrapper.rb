@@ -6,12 +6,12 @@ class EdamamApiWrapper
   KEYS = ENV["EDAMAM_KEYS"]
   @recipe_list = []
 
-  def self.list_recipes(term)
-    response = HTTParty.get("#{URL}?q=#{term}&app_id=#{ID}&app_key=#{KEYS}")
-
-    # recipe_list = []
+  def self.list_recipes(term, page_num)
+    start_from = (page_num.to_i - 1) * 10
+    response = HTTParty.get("#{URL}?q=#{term}&app_id=#{ID}&app_key=#{KEYS}&from=#{start_from}")
 
     if response["hits"]
+      @recipe_list = []
       response["hits"].each do |hit|
         @recipe_list << Recipe.new(
           hit["recipe"]["uri"],

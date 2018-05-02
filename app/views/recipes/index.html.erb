@@ -14,3 +14,13 @@
     <% end %>
   <% end %>
 </ul>
+
+<nav aria-label="Pagination">
+  <ul class="pagination text-center">
+    <li><%= link_to "1", recipes_path("page_num" => 1, "term" => session[:term]) %></li>
+    <li><%= link_to "2", recipes_path("page_num" => 2, "term" => session[:term]) %></li>
+    <li><%= link_to "3", recipes_path("page_num" => 3, "term" => session[:term]) %></li>
+    <li><%= link_to "4", recipes_path("page_num" => 4, "term" => session[:term]) %></li>
+    <li><%= link_to "5", recipes_path("page_num" => 5, "term" => session[:term]) %></li>
+  </ul>
+</nav>

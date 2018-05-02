@@ -6,11 +6,13 @@ class Recipe
     if label.nil? || label.empty?
       raise ArgumentError.new("The recipe needs a label")
     end
-    
+
     @label = label
   end
 
   def self.from_api(raw_recipe)
-    self.new(raw_recipe["recipe"]["label"])
+    self.new(
+      raw_recipe["recipe"]["label"]
+    )
   end
 end

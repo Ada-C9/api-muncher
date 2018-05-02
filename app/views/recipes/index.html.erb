@@ -1,2 +1,13 @@
-<h1>Recipes#index</h1>
-<p>Find me in app/views/recipes/index.html.erb</p>
+
+<section class="recipes-list">
+  <h1>Results for <%= @query %></h1>
+  <% if @recipes %>
+    <ul>
+      <% @recipes.each do |recipe| %>
+        <li>
+          <%= link_to recipe.name, recipe_path(recipe.id) %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+</section>

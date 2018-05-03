@@ -1,5 +1,5 @@
 <h1><%= @recipe.name %></h1>
-<h2>From <% link_to @recipe.source, @recipe.url %></h2>
+<h2>From <%= link_to @recipe.source, @recipe.url %></h2>
 <%= image_tag @recipe.photo %>
 <h4>Ingredients:</h4>
 <ul>

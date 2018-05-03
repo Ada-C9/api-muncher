@@ -69,13 +69,20 @@ gem 'foundation-rails'
 gem 'normalize-rails'
 group :development, :test do
   gem 'pry-rails'
+  gem 'dotenv-rails'
 end
 
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'dotenv-rails'
+
 end
+
+group :development, :test do
+  gem 'minitest-vcr'
+  gem 'webmock'
+end
+
 
 group :test do
   gem 'minitest-rails'

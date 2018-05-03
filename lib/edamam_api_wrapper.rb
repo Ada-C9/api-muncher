@@ -9,7 +9,8 @@ class EdamamApiWrapper
 
   def self.list_recipes(ingredient)
     response = HTTParty.get("#{URL}?q=#{ingredient}&app_id=#{APP_ID}&app_key=#{APP_KEY}")
-
+    
+    @recipes = []
 
     if response["hits"]
       response["hits"].each do |recipe|

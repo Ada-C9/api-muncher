@@ -1,11 +1,24 @@
-<h1><%= @recipe.name %></h1>
-<h4>-<%= @recipe.source %>-</h4>
+<header>
+  <h4>Muncher</h4>
+  <section class='header-bar'>
+  <%= form_tag muncher_index_path, method: :get do %>
+    <%= label_tag(:search, "Find your flavor...") %>
+    <%= text_field_tag(:search) %>
+    <%= submit_tag("Search") %>
 
-<section>
+  <% end %>
+  </section>
+</header>
+
+<h1><%= link_to @recipe.name, @recipe.url  %></h1>
+<h4>by <%= @recipe.source %></h4>
+
+<section class='show-page'>
+  <div class='image-section'>
   <img src="<%= @recipe.image %>" alt="recipe photo">
-  <%= link_to @recipe.name, @recipe.url %>
-  <div>
-    <h3>Dietary Labels</h3>
+
+    <section class='nutrition'>
+    <span>Dietary Labels</span>
     <ul>
       <% if @recipe.dietary_info %>
       <% @recipe.dietary_info.each do |label| %>
@@ -15,9 +28,10 @@
       <% end %>
       <% end %>
     </ul>
+    </section>
   </div>
-  <div>
-    <h3>Ingredients</h3>
+  <div class='ingredients'>
+    <span>Ingredients</span>
     <ul>
       <% @recipe.ingredients.each do |label| %>
       <li>

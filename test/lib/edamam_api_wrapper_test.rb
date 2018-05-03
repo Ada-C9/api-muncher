@@ -4,17 +4,15 @@ describe EdamamApiWrapper do
 
   it "displays results for a valid ingredient search" do
     VCR.use_cassette("recipe") do
-      response = edamamApiWrapper.list_recipes("chicken")
-      response["ok"].must_equal true
-      response["message"]["text"].must_equal "test message"
+      recipes = EdamamApiWrapper.list_recipes("chicken")
+      recipes.count.wont_be_nil
     end
   end
 
-  it "Can't send message to fake channel" do
-    VCR.use_cassette("channels") do
-      response = SlackApiWrapper.send_message("this-channel-does-not-exist", "test message")
-      response["ok"].must_equal false
-      response["error"].wont_be_nil
+  it "returns an empty array with an invalid ingredient" do
+    VCR.use_cassette("recipe") do
+      recipes = EdamamApiWrapper.list_recipes("unsefwbsfie")
+      recipes.must_equal []
     end
   end
 end

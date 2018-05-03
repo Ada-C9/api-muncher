@@ -75,3 +75,5 @@ group :test do
 end
 
 gem 'httparty'
+
+gem 'will_paginate', '>= 3.1'

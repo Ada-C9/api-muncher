@@ -1,12 +1,25 @@
-<h1>Results for <%= params[:search] %></h1>
+<header>
+  <h4>Muncher</h4>
+  <%= form_tag muncher_index_path, method: :get do %>
+    <%= label_tag(:search, "Find your flavor...") %>
+    <%= text_field_tag(:search) %>
+    <%= submit_tag("Search") %>
+
+  <% end %>
+</header>
+
+<h1>Results for "<%= params[:search] %>"</h1>
+<section class='recipes'>
 
 <% if @recipes %>
     <ul>
       <% @recipes.each do |recipe| %>
         <li>
           <img src="<%= recipe.image %>" alt="recipe photo">
-          <%= link_to recipe.name, muncher_path(recipe.get_id) %>
+          <p><%= link_to recipe.name, muncher_path(recipe.get_id) %></p>
         </li>
       <% end %>
     </ul>
   <% end %>
+
+</section>

@@ -17,3 +17,73 @@
  *= require foundation_and_overrides
 
  */
+
+.recipes {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.recipes ul li {
+  display: inline-block;
+  padding: 1.1em;
+}
+
+h1 {
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
+}
+
+.show-page {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 18%;
+  margin-right: 18%;
+
+  height: 90%
+}
+
+.image-section {
+  width: 55%;
+}
+
+.nutrition {
+  margin-left: 2em;
+  margin-top: 1em;
+  justify-content: center;
+}
+
+.ingredients {
+  margin-left: 2em;
+  margin-top: -8em;
+  justify-content: center;
+}
+
+
+.show-page span {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+html, body {
+    height: 100%
+}
+
+header {
+  background-color: gray;
+  height: 20%;
+}
+
+
+footer {
+  background-color: gray;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

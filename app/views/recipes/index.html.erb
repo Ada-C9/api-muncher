@@ -1,20 +1,35 @@
 <section class="recipes-list">
 
-<h1>Send Message to <span class="channel-name"> <%= @channel %></span> </h1>
-
-  <%= form_tag send_message_path(@channel_name), method: "post" do %>
-    <%= label_tag(:message, "Enter Message") %>
-    <%= text_field_tag(:message) %>
-    <%= submit_tag("Send") %>
-  <% end %>
-
-
-  <h1>Results for ...</h1>
+  <h1>Results for quere</h1>
   <% if @recipes %>
     <ul>
       <% @recipes.each do |recipe| %>
         <li>
-          <%= link_to recipe.name, show_recipes_path(recipe.name) %>
+          <%= recipe.label %>
+        </li>
+        <li>
+          <%= image_tag recipe.image %>
+        </li>
+        <li> Source:
+          <%= link_to recipe.source, recipe.url %>
+        </li>
+        <li>
+          <ul>
+          <% recipe.health_labels.each do |label| %>
+            <li>
+              <%= label %>
+            </li>
+          <% end %>
+          </ul>
+        </li>
+        <li>
+          <ul>        
+          <% recipe.ingredients.each do |ingredient| %>
+            <li>
+              <%= ingredient %>
+            </li>
+          <% end %>
+        </ul>
         </li>
       <% end %>
     </ul>

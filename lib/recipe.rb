@@ -1,7 +1,8 @@
 class Recipe
   attr_reader :id, :name, :photo, :url, :source, :ingredients, :diet_labels, :health_labels
-  def initialize(id, name, photo, url, source, ingredients, diet_labels, health_labels)
-    @id = id
+  def initialize(uri, name, photo, url, source, ingredients, diet_labels, health_labels)
+    split_uri = uri.split("_")
+    @id = split_uri.last
     @name = name
     @photo = photo
     @url = url

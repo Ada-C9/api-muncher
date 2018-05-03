@@ -8,4 +8,8 @@ class RecipesController < ApplicationController
     @recipes = EdamamApiWrapper.list_all_recipes(params[:text])
   end
 
+  def create
+
+  end
+
 end

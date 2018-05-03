@@ -6,6 +6,7 @@ describe Recipe do
   let (:recipe_ingredients) { ['some', 'ingredients'] }
   let (:recipe_image) { 'www.edamam.com/image' }
   let (:dietary_info) { {cals: 'cals', fat: 'fat'} }
+  let (:recipe_url) { 'www.food.com/another_recipe' }
 
   describe 'initialize' do
     it 'creates an instance of recipe with all required fields' do
@@ -14,7 +15,8 @@ describe Recipe do
         uri: recipe_uri,
         ingredients: recipe_ingredients,
         image: recipe_image,
-        dietary_info: dietary_info
+        dietary_info: dietary_info,
+        url: recipe_url
       )
 
       recipe.must_be_instance_of Recipe
@@ -26,15 +28,15 @@ describe Recipe do
     end
 
     it 'raises an error for invalid data' do
-      proc { Recipe.new(name: nil, uri: nil, image: nil, ingredients: nil, dietary_info: nil) }.must_raise ArgumentError
+      proc { Recipe.new(name: nil, uri: nil, image: nil, ingredients: nil, dietary_info: nil, url: nil) }.must_raise ArgumentError
 
-      proc { Recipe.new(name: nil, uri: recipe_uri, image: nil, ingredients: nil, dietary_info: nil) }.must_raise ArgumentError
+      proc { Recipe.new(name: nil, uri: recipe_uri, image: nil, ingredients: nil, dietary_info: nil, url: nil) }.must_raise ArgumentError
 
-      proc { Recipe.new(name: recipe_name, uri: nil, image: nil, ingredients: nil, dietary_info: nil) }.must_raise ArgumentError
+      proc { Recipe.new(name: recipe_name, uri: nil, image: nil, ingredients: nil, dietary_info: nil, url: nil) }.must_raise ArgumentError
 
-      proc { Recipe.new(name: '', uri: recipe_uri, image: nil, ingredients: nil, dietary_info: nil) }.must_raise ArgumentError
+      proc { Recipe.new(name: '', uri: recipe_uri, image: nil, ingredients: nil, dietary_info: nil, url: nil) }.must_raise ArgumentError
 
-      proc { Recipe.new(name: recipe_name, uri: '', image: nil, ingredients: nil, dietary_info: nil) }.must_raise ArgumentError
+      proc { Recipe.new(name: recipe_name, uri: '', image: nil, ingredients: nil, dietary_info: nil, url: nil) }.must_raise ArgumentError
     end
   end
 

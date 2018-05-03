@@ -1,8 +1,9 @@
 <h1>Search Results</h1>
 <p>Search results for input: <%= @search %></p>
 
+<%= will_paginate @recipes_pag %>
 <ul>
-  <% @recipes.each do |recipe| %>
+  <% @recipes_pag.each do |recipe| %>
     <li>
       <img src="<%= recipe.image %>" alt= "<%= recipe.name %>" >
       <%= link_to recipe.name, recipe_show_path(recipe.id) %>

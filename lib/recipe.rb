@@ -10,6 +10,8 @@ class Recipe
     @dietary_info = recipe_hash["dietLabels"]
   end
 
+  # add logic to raise custom error if recipe hash is invalid
+
   def parse_id(uri)
     length = uri.length
     index = uri.index("_")

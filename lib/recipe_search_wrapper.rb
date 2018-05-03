@@ -9,7 +9,7 @@ class RecipeSearchWrapper
   @recipe_list = []
 
   def self.list_recipes(search)
-    encoded_uri = URI.encode("#{URL}search?q=#{search}&app_id=#{APP_ID}&app_key=#{APP_KEY}")
+    encoded_uri = URI.encode("#{URL}search?q=#{search}&app_id=#{APP_ID}&app_key=#{APP_KEY}&from=0&to=30")
 
     response = HTTParty.get(encoded_uri)
 

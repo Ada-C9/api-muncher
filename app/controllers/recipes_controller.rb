@@ -11,6 +11,9 @@ class RecipesController < ApplicationController
       flash[:result] = "There are zero search results for: \'#{@search}\'"
       redirect_to root_path
     end
+
+    @recipes_pag = @recipes.paginate(:page => params[:page],:per_page => 10)
+    # Post.paginate(:page => params[:page], :per_page => 30)
   end
 
   def show

@@ -2,10 +2,9 @@ require 'test_helper'
 
 describe EdamamApiWrapper do
 
-
-  it "" do
-    VCR.use_cassette("channels") do
-      response = SlackApiWrapper.send_message("CAGCPB64A", "test message")
+  it "displays results for a valid ingredient search" do
+    VCR.use_cassette("recipe") do
+      response = edamamApiWrapper.list_recipes("chicken")
       response["ok"].must_equal true
       response["message"]["text"].must_equal "test message"
     end

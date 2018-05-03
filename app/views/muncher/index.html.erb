@@ -5,7 +5,7 @@
       <% @recipes.each do |recipe| %>
         <li>
           <img src="<%= recipe.image %>" alt="recipe photo">
-          <%= recipe.name %>
+          <%= link_to recipe.name, muncher_path(recipe.get_id) %>
         </li>
       <% end %>
     </ul>

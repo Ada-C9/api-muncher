@@ -1,2 +1,29 @@
-<h1>Muncher#show</h1>
-<p>Find me in app/views/muncher/show.html.erb</p>
+<h1><%= @recipe.name %></h1>
+<h4>-<%= @recipe.source %>-</h4>
+
+<section>
+  <img src="<%= @recipe.image %>" alt="recipe photo">
+  <%= link_to @recipe.name, @recipe.url %>
+  <div>
+    <h3>Dietary Labels</h3>
+    <ul>
+      <% if @recipe.dietary_info %>
+      <% @recipe.dietary_info.each do |label| %>
+      <li>
+        <%= label  %>
+      </li>
+      <% end %>
+      <% end %>
+    </ul>
+  </div>
+  <div>
+    <h3>Ingredients</h3>
+    <ul>
+      <% @recipe.ingredients.each do |label| %>
+      <li>
+        <%= label  %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</section>

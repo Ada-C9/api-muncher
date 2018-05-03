@@ -8,7 +8,7 @@ class MuncherController < ApplicationController
   end
 
   def show
-    @recipe = EdamamApiWrapper.get_recipe()
+    @recipe = EdamamApiWrapper.get_recipe(params[:id])
   end
 
 end

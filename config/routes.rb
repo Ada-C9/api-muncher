@@ -4,8 +4,5 @@ Rails.application.routes.draw do
   root 'recipes#root'
 
   get 'search', to: 'recipes#index', as: 'search_results'
-
-  # get ':recipe/new', to: 'recipes#new', as: 'recipe_new'
-  # post ':recipe', to: 'recipes#create', as: 'recipe_create'
-
+  get 'recipe/:id', to: 'recipes#show', as: 'recipe'
 end

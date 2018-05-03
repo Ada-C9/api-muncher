@@ -1,4 +1,7 @@
+<h1>Results for <%= @term %></h1>
 <% @recipes.each do |r| %>
-<%= r.title %>
-<%= r.id %>
+<ul>
+  <li><%= image_tag(r.image, size: "100", alt: "Recipe image") %></li>
+  <li><%= link_to r.title, recipe_path(r.id) %></li>
+</ul>
 <% end %>

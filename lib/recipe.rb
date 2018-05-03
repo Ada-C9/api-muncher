@@ -1,6 +1,6 @@
 
 class Recipe
-  attr_reader :title, :id
+  attr_reader :title, :id, :image, :source, :url, :ingredients, :diet
 
   def initialize(title, id, image, source, url, ingredients, diet, options = {})
     @title = title

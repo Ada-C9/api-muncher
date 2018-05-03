@@ -30,6 +30,10 @@
   text-align: center;
 }
 
+.search.button {
+  text-align: right;
+}
+
 .card {
   min-width: 300px;
   max-width: 300px;

@@ -1,5 +1,5 @@
 <%= form_tag :recipes, url: recipes_path, method: :get, class: 'cell small-12 medium-10 medium-offset-1 large-4 large-offset-4 ', id: 'search-bar' do %>
   <%= hidden_field_tag :page, 1 %>
   <%= text_field_tag :query, params[:query] %>
-  <%= submit_tag 'Get Recipes', class: 'button' %>
+  <%= submit_tag 'Get Recipes', class: 'button search' %>
 <% end %>

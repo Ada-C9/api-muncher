@@ -26,6 +26,9 @@ html, body {
 
 body {
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 li {
@@ -35,6 +38,8 @@ li {
 /* PAGINATION */
 .pagination a {
   display: inline;
+  color: white;
+  font-size: 1rem;
 }
 
 a.single_recipe {
@@ -77,12 +82,51 @@ div.submit {
   width: 15%;
 } */
 
+/* LIST */
+section.list {
+  color: white;
+  background-color: black;
+}
+
+h2 {
+  text-align: center;
+  margin: 0;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+nav {
+  height: auto;
+}
+
+ul.pagination {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+ul.pagination li{
+  padding: 1rem;
+}
+
+a.single_recipe {
+  text-align: center;
+  color: white;
+}
+
+div#search_button {
+  text-align: center;
+}
+
 /* FOOTER */
 footer {
   background-color: gray;
-  position: fixed;
+  /* position: fixed; */
   left: 0;
   bottom: 0;
   width: 100%;
+  height: 3rem;
   text-align: center;
+  margin-top:auto;
 }

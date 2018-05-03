@@ -1,17 +1,15 @@
-<h1>Search Results</h1>
-<p>Search results for input: <%= @search %></p>
-
-<nav aria-label="Pagination">
-  <ul class="pagination">
-    <% @recipes_pag.each do |recipe| %>
-      <li>
-        <img src="<%= recipe.image %>" alt= "<%= recipe.name %>" >
-        <%= link_to recipe.name, recipe_show_path(recipe.id), class: "single_recipe" %>
-      </li>
-    <% end %>
-  </ul>
-</nav>
-
-<%= will_paginate @recipes_pag %>
-
-<%= link_to 'Back to search', root_path %>
+<section class="list">
+  <h2>Search results for "<%= @search %>"</h2>
+  <div id="search_button"><%= link_to 'Back to search', root_path, class: "button" %></div>
+  <nav aria-label="Pagination">
+    <ul class="pagination">
+      <% @recipes_pag.each do |recipe| %>
+        <li>
+          <img src="<%= recipe.image %>" alt= "<%= recipe.name %>" >
+          <%= link_to recipe.name, recipe_show_path(recipe.id), class: "single_recipe" %>
+        </li>
+      <% end %>
+    </ul>
+    <%= will_paginate @recipes_pag %>
+  </nav>
+</section>

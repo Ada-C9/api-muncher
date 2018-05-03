@@ -1,13 +1,14 @@
 class Recipe
-  attr_reader :id, :title, :image
+  attr_reader :id, :title, :image, :link, :source, :ingredients, :dietlabels
 
-  def initialize(id, title, image, options = {})
-    @title = title
+  def initialize(id, title, image, link, source, ingredients, dietlabels)
     @id = id
-    # @ingredients = ingredients
-    # @dietlabels = dietlabels
-    # @link = link
+    @title = title
     @image = image
+    @link = link
+    @source = source
+    @ingredients = ingredients
+    @dietlabels = dietlabels
   end
 
 end

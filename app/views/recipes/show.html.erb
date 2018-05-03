@@ -1,0 +1,38 @@
+<div class="show-head">
+  <h1><%= @recipe.title %></h1>
+  <p>
+    By <%= @recipe.source %>
+  </p>
+</div>
+
+<div class="show-mid">
+  <p>
+    <%= image_tag(@recipe.image) %>
+  </p>
+  <ul>
+    <strong>Ingredients</strong>
+    <% @recipe.ingredients.each do |ingredient| %>
+    <li>
+      <%= ingredient['text'] %>
+    </li>
+    <% end %>
+  </ul>
+
+</div>
+
+<div class="show-low">
+  <ul>
+    <strong>Dietary Labels</strong>
+    <% if @recipe.dietlabels.count < 1 %>
+    <li>
+      N/A
+    </li>
+    <% else %>
+    <% @recipe.dietlabels.each do |dl| %>
+    <li>
+      <%= dl %>
+    </li>
+    <% end %>
+    <% end %>
+  </ul>
+</div>

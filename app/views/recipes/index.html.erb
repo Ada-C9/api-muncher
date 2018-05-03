@@ -1,4 +1,4 @@
-<h1> <%= @recipes.length %> Results for <%= params[:search] %></h1>
+<h1> Results for <%= params[:search] %></h1>
 
 <section class="index">
   <% @recipes.each do |recipe| %>
@@ -6,7 +6,7 @@
     <%= image_tag(recipe.image) %>
   </div>
   <div>
-    <%= recipe.title %>
+    <%= link_to recipe.title, recipe_path(recipe.id) %>
   </div>
   <% end %>
 </section>

@@ -71,7 +71,7 @@
   						|					 |			   | “envelop” result in a JavaScript function
   						|					 |			   | call to the specified callback. Optional
   +-----------+----------+---------+-------------------------------------------+
-  *Exactly one of these ( q / r ) must be present
+  * Exactly one of these ( q / r ) must be present
 
 ################################################################################
 

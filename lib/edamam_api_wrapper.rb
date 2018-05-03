@@ -7,7 +7,7 @@ class EdamamApiWrapper
 	APP_ID = ENV["APPLICATION_ID"]
 	APP_KEY = ENV["APPLICATION_KEY"]
 
-	def self.search_recipes(query_text, from: nil, to: nil, diet: nil, health: nil)
+	def self.search_recipes(query_text, from: 0, to: 2, diet: nil, health: nil)
 		search_url = build_url_for_search(query_text, from, to, diet, health)
 		response = HTTParty.get(search_url)
 

@@ -4,7 +4,9 @@ class RecipesController < ApplicationController
 
 	# displays up to 10 results at a time from search
 	def results
+		query_text = params[:query_text] # from form
 		@recipes = EdamamApiWrapper.search_recipes(query_text, from: nil, to: nil, diet: nil, health: nil)
+
 	end
 
 	# Shows details about a recipe
@@ -13,7 +15,7 @@ class RecipesController < ApplicationController
 
 	# makes api request using search term
 	def search
-		# @
+
 	end
 
 end

@@ -12,6 +12,17 @@
   </head>
 
   <body>
+    <h2>Welcome to searching shit</h2>
+
+  
+    <%= form_tag results_path(@search_input), method: "get" do %>
+      <%= label_tag(:query_text, "Enter food") %>
+      <%= text_field_tag(:query_text) %>
+      <%= submit_tag "Search" %>
+
+    <% end %>
+
+
 
     <%= yield %>
 

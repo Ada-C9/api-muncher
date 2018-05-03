@@ -4,6 +4,8 @@ require 'pry'
 class EdamamApiWrapper
   BASE_URL = "https://test-es.edamam.com/search"
   SINGLE_RECIPE_URL = "http://www.edamam.com/ontologies/edamam.owl#recipe_"
+  APP_ID = ENV["EDAMAM_APP_ID"]
+  APP_KEY = ENV["EDAMAM_APP_KEY"]
 
   def self.list_recipes(search_term)
     url = BASE_URL + "?q=#{ search_term }"
@@ -20,17 +22,14 @@ class EdamamApiWrapper
 
   def self.show_recipe(recipe_uri_id)
     uri_id = get_uri_id(recipe_uri_id)
-    url = SINGLE_RECIPE_URL +  uri_id 
-    formatted_url = format_url(url)
-    data = HTTParty.get(formatted_url)
-    raise
+    url = BASE_URL + "?r=" + format_url(SINGLE_RECIPE_URL) +  uri_id + "&app_id=#{ APP_ID }" + "&app_key=#{ APP_KEY }"
+    data = HTTParty.get(url)
     recipe = create_recipe(data.first)
     return recipe
   end
 
   private
   def self.create_recipe(api_params)
-    # binding.pry
     return Recipe.new(
       api_params['label'],
       api_params['image'],

@@ -3,3 +3,9 @@
   <%= text_field_tag(:q, @query) %>
   <%= submit_tag("Search") %>
 <% end %>
+
+<% if @recipes.count > 0 %>
+  <% @recipes.each do |recipe| %>
+    <%= recipe.name =%>
+  <% end %>
+<% end %>

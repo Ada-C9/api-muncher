@@ -1,14 +1,10 @@
 class Recipe
-  attr_reader :name, :link, :ingredients, :diet_info, :id
+  attr_reader :uri, :name, :ingredients
 
-  def initialize(name, link, ingredients, diet_info, id)
-    # should I raise an argument error here or when I supply the info to the class???
-    raise ArgumentError if name == nil || name "" || id == nil || id "" || ingredients == nil || ingredients == ""
-
+  def initialize(uri, name, ingredients)
     @name = name
-    @link = link
+    @uri = uri
     @ingredients = ingredients
-    @id = id
   end
 
 end

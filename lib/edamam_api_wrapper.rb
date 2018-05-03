@@ -1,6 +1,4 @@
-require 'edamam-ruby'
 require 'httparty'
-
 
 class EdamamApiWrapper
 
@@ -20,7 +18,13 @@ class EdamamApiWrapper
 
   def self.list_recipes(search)
 
-    response = HTTParty.get("#{URL}?q=#{search}&app_id=#{APP_ID}&app_key=#{APP_KEY}")
+    if !@recipe_list.empty?
+      @recipe_list = []
+    end
+
+    encoded_uri =  URI.encode("#{URL}?q=#{search}&app_id=#{APP_ID}&app_key=#{APP_KEY}")
+
+    response = HTTParty.get(encoded_uri)
 
     if response ["hits"]
       response["hits"].each do |recipe|
@@ -28,5 +32,6 @@ class EdamamApiWrapper
       end
     end
     return @recipe_list
+
   end
 end

@@ -1,13 +1,15 @@
 class Recipe
-  attr_reader :label, :source, :image, :id, :ingredients, :count
+  attr_reader :label, :source, :image, :id, :ingredients, :count, :url, :health
 
-  def initialize(label, source, image, uri, ingredients, count, options = {})
+  def initialize(label, source, image, uri, ingredients, count, url, health, options = {})
     @label = label
     @source = source
     @image = image
     @id = Recipe.parse_uri(uri)
     @ingredients = ingredients
     @count = count
+    @url = url
+    @health = health
   end
 
   def self.parse_uri(initial_uri)

@@ -7,7 +7,10 @@ class RecipesController < ApplicationController
 
   def index
     @query = params[:search]
-    @recipes = EdamamApiWrapper.get_recipes(@query)
+    search = @query
+    params[:first] ? @first = params[:first] : @first = "0"
+
+    @recipes = EdamamApiWrapper.get_recipes(search, @first)
   end
 
   def show

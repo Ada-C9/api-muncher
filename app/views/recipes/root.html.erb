@@ -1,6 +1,6 @@
 <h1>MUNCHER</h1>
 <section>
-  <%= form_tag results_path, method: "get" do %>
+  <%= form_tag results_path(:first => "0"), method: "get" do %>
     <%= label_tag(:search, "Find Your Flavor...") %>
     <%= text_field_tag(:search) %>
     <%= submit_tag("Search") %>

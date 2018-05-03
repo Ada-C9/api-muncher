@@ -17,3 +17,29 @@
  *= require foundation_and_overrides
 
  */
+
+#recipe-show {
+  text-align: center;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+#muncher-home ul {
+  margin-bottom: 2em;
+  display: flex;
+  flex-direction: row
+}
+
+/* li {
+  width: 30em;
+} */
+
+/* * {
+  border: black 1px solid;
+} */
+
+/* #muncher-home {
+  text-align: center;
+} */

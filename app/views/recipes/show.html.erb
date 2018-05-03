@@ -1,20 +1,27 @@
-<h1>Your Chosen Recipe</h1>
-<article>
-  <h3><%= @recipe.source %></h3>
+<section id="recipe-show">
+  <h1>MUNCHER</h1>
+  <h2><%= @recipe.source %></h2>
   <h4>by <%= @recipe.label %></h4>
-  <img src="<%= @recipe.image %>" >
-  <p>
-    Servings: <%= @recipe.count %>
+  Serves: <%= @recipe.count.round(0) %>
+  <br/><br/>
+  <article>
+    <img src="<%= @recipe.image %>" alt="<%= @recipe.source %> image"><br/><br/>
     <ul>
+      <h4>Health Labels</h4>
+        <% @recipe.health.each do |label| %>
+        <li>
+          <%= label %>
+        </li>
+        <% end %><br/>
       <h4>Ingredients</h4>
       <% @recipe.ingredients.each do |item| %>
         <li>
           <%= item["text"] %>
         </li>
       <% end %>
-
     </ul>
-
-  </p>
-
-</article>
+    <p>
+      <a href="<%= @recipe.url %>"  target="_blank">Full Recipe</a>
+    </p>
+  </article>
+</section>

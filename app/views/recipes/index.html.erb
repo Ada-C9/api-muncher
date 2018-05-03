@@ -1,14 +1,28 @@
-<section class="muncher-home">
+<section id="muncher-home">
   <h1>MUNCH THIS</h1>
   <% if @recipes %>
-    <ul>
+    <div class="grid-x grid-padding-x align-center">
       <% @recipes.each do |item| %>
-        <li>
+        <div class="cell small-4">
           <img src="<%= item.image %>" >
-          <%= link_to item.source, recipe_path(item.id) %>
-          by <%= item.label %>
-        </li>
-        <% end %>
-    </ul>
-    <% end %>
+          <p>
+            <%= link_to item.source, recipe_path(item.id) %>
+          </p>
+          <p>
+            by <%= item.label %>
+          </p>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</section>
+<section>
+  <nav aria-label="Pagination">
+  <ul class="pagination text-center">
+    <li class="pagination-previous disabled">Previous</li>
+    <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
+    <li><%= link_to "2", results_path(params.merge(:first => "10")) %></li>
+    <li class="pagination-next"><a href="#" aria-label="Next page">Next</a></li>
+  </ul>
+</nav>
 </section>

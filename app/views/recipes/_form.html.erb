@@ -1,0 +1,9 @@
+<section>
+  <%= form_for @recipe do |f| %>
+    <%= f.label :search, "q"  %>
+    <%= f.text_field :search %>
+
+
+    <%= f.submit class: "button" %>
+  <% end %>
+</section>

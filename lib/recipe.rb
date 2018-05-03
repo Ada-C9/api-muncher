@@ -4,16 +4,14 @@ class Recipe
 	attr_reader :name, :uri, :url, :image, :ingredients, :diet_labels,
 		:health_labels
 
-	def initialize(name, uri, url, image, ingredients, diet_labels, health_labels,
-				options = {})
-		@name = name # called 'label' from API
-		@uri = uri # String, looks like url but functions as id in search. See docs.
-		@url = url # String, url
-		@image = image # String, url
-		@ingredients = ingredients # array, called 'ingredientLines' in API
-		@diet_labels = diet_labels # array, called 'dietLabels' in API
-		@health_labels = health_labels # array, called 'healthLabels' in API
-
+	def initialize(params)
+		@name = params['label'] # String
+		@uri = params['uri'] # String, looks like url but functions as id in search. See docs.
+		@url = params['url'] # String, url
+		@image = params['image'] # String, url
+		@ingredients = params['ingredientLines'] # array of Strings
+		@diet_labels = params['dietLabels'] # array of String
+		@health_labels = params['healthLabels'] # array of Strings
 	#	TODO: valid checks for everything!
 	end
 

@@ -5,23 +5,19 @@ class EdamamApiWrapper
 
 	URL = "https://api.edamam.com/search?"
 	APP_ID = ENV["APPLICATION_ID"]
-	APP_KEY = EVN["APPLICATION_KEY"]
+	APP_KEY = ENV["APPLICATION_KEY"]
 
 	def self.search_recipes(query_text, from: nil, to: nil, diet: nil, health: nil)
 		search_url = build_url_for_search(query_text, from, to, diet, health)
 		response = HTTParty.get(search_url)
 
-		recipes_list = [] # got from lib/recipe
-
-		if response["recipes"] # if statement just in case something went wrong.
-			response["recipes"].each do |recipe|
-				recipes_list << Recipe.new(recipe["label"], recipe["uri"],
-					recipe["image"], recipe["ingredients"], recipe["diet_labels"],
-					recipe["diet_labels"])
-			end
+		recipes_list = []
+		if response["hits"]
+			response["hits"].each { |hit| recipes_list << Recipe.new(hit['recipe']) }
 		end
 		return recipes_list
 	end
+
 
 	def self.get_recipe(recipe_uri)
 	end
@@ -48,42 +44,42 @@ class EdamamApiWrapper
 	# QUESTION: Do to and from have to come together? Are there any rules about
 	# their relationship with each other.
 
-	def build_url_for_search(query_text, from, to, diet, health)
-		build_url = "#{URL}r=#{query_text}&app_id=#{APP_ID}&app_key=#{APP_KEY}"
+	def self.build_url_for_search(query_text, from, to, diet, health)
+		build_url = "#{URL}q=#{query_text}&app_id=#{APP_ID}&app_key=#{APP_KEY}"
 		add_from_to_url(from, build_url)
 		add_to_to_url(to, build_url)
 		add_diet_to_url(diet, build_url)
 		add_health_to_url(health, build_url)
-		return
+		return build_url
 	end
 
-	def add_diet_to_url(diet, build_url)
-		get_url << "&diet=" << diet if DIET_OPTIONS.include?(diet)
+	def self.add_diet_to_url(diet, build_url)
+		build_url << "&diet=#{diet}" if DIET_OPTIONS.include?(diet)
 	end
 
-	def add_health_to_url(health, build_url)
-		get_url << "&health=" << diet if HEALTH_OPTIONS.include?(health)
+	def self.add_health_to_url(health, build_url)
+		build_url << "&health=#{health}" if HEALTH_OPTIONS.include?(health)
 	end
+	#
+	# def self.add_to_or_from_to_url(from, build_url)
+	# 	if !from.nil? && !(from.is_a?(Integer) && from >= 0)
+	# 		raise ArgumentError.new("invalid 'from'")
+	# 	end
+	# 	build_url << "&from=" << from if from.is_a?(Integer)
+	# end
 
-	def add_to_or_from_to_url(from, build_url)
+	def self.add_from_to_url(from, build_url)
 		if !from.nil? && !(from.is_a?(Integer) && from >= 0)
 			raise ArgumentError.new("invalid 'from'")
 		end
-		get_url << "&from=" << from if from.is_a?(Integer)
+		build_url << "&from=#{from}" if from.is_a?(Integer)
 	end
 
-	def add_from_to_url(from, build_url)
-		if !from.nil? && !(from.is_a?(Integer) && from >= 0)
-			raise ArgumentError.new("invalid 'from'")
-		end
-		get_url << "&from=" << from if from.is_a?(Integer)
-	end
-
-	def add_to_to_url(to, build_url)
+	def self.add_to_to_url(to, build_url)
 		if !to.nil? && !(to.is_a?(Integer) && to >= 0)
 			raise ArgumentError.new("invalid 'to'")
 		end
-		get_url << "&to=" << from if to.is_a?(Integer)
+		build_url << "&to=#{to}" if to.is_a?(Integer)
 	end
 
 end

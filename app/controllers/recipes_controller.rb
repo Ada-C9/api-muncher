@@ -1,7 +1,10 @@
 class RecipesController < ApplicationController
+	# def index
+	# end
 
 	# displays up to 10 results at a time from search
-	def list
+	def results
+		@recipes = EdamamApiWrapper.search_recipes(query_text, from: nil, to: nil, diet: nil, health: nil)
 	end
 
 	# Shows details about a recipe
@@ -10,6 +13,7 @@ class RecipesController < ApplicationController
 
 	# makes api request using search term
 	def search
+		# @
 	end
 
 end

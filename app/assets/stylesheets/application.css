@@ -17,3 +17,12 @@
  *= require foundation_and_overrides
 
  */
+body {
+  list-style-type: none;
+}
+
+footer {
+  display: flex;
+  justify-content: flex-end;
+
+}

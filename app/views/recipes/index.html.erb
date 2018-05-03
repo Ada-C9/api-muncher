@@ -5,6 +5,7 @@
       <% @recipes.each do |recipe| %>
         <li>
           <%= recipe.uri %>
+          <%= image_tag recipe.image %>
           <%= link_to recipe.label, recipe_path(:label => recipe.label, :uri => recipe.uri) %>
         </li>
       <% end %>

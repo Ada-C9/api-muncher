@@ -38,6 +38,7 @@ class RecipeSearchWrapper
     #response[0]
     uri = response[0]["uri"]
     label = response[0]["label"]
+    image = response[0]["image"]
     url = response[0]["url"]
     servings = response[0]["yield"]
     ingredients = response[0]["ingredients"]
@@ -54,6 +55,7 @@ class RecipeSearchWrapper
     recipe = Recipe.new(
         uri,
         label,
+        image,
         url,
         servings,
         ingredients,

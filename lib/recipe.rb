@@ -1,10 +1,11 @@
 class Recipe
   #change this to be like http://eric-price.net/blog/rails-api-wrapper/
-  attr_reader :uri, :label, :url, :servings, :ingredients, :health_labels, :calories, :fat, :saturated_fat, :mono_fat, :carbs, :protein, :sodium, :fiber, :cholesterol
+  attr_reader :uri, :label, :image, :url, :servings, :ingredients, :health_labels, :calories, :fat, :saturated_fat, :mono_fat, :carbs, :protein, :sodium, :fiber, :cholesterol
 
   def initialize(
     uri,
     label,
+    image,
     url,
     servings,
     ingredients,
@@ -26,6 +27,7 @@ class Recipe
 
     @uri = uri
     @label = label
+    @image = image
     @url = url
     @servings = servings
     @ingredients = ingredients
@@ -46,6 +48,7 @@ class Recipe
     self.new(
       raw_recipe["uri"],
       raw_recipe["label"],
+      raw_recipe["image"],
       raw_recipe["url"],
       raw_recipe["yield"],
       raw_recipe["ingredientLines"],

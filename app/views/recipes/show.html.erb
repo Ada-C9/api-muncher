@@ -1,5 +1,10 @@
 <section>
+
+
   <h2><%=@recipe.label%></h2>
+
+  <a target="_blank" href="<%=@recipe.url%>">Go to the original <%=@recipe.label%> recipe</a>
+
   <img src="<%=@recipe.image%>" alt="<%=@recipe.label%>">
   <% unless @recipe.ingredients.nil?%>
   <h3>Ingredients:</h3>
@@ -10,10 +15,12 @@
   </ul>
   <%end%>
   <% unless @recipe.health.nil?%>
+  <h3>Dietary information:</h3>
   <ul>
     <% @recipe.health.each do |health|%></li>
     <li><%=health%></li>
     <%end%>
   </ul>
   <%end%>
+
 </section>

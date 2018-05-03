@@ -1,10 +1,14 @@
 class RecipesController < ApplicationController
-  def index
-  end
-
-  def show
-  end
 
   def root
   end
+
+  def index
+    @recipes = EdamamApiWrapper.search_recipes(params[:q])
+  end
+
+  def show
+    @recipe = EdamamApiWrapper.show_recipe(params[:id])
+  end
+
 end

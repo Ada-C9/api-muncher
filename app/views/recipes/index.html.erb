@@ -1,4 +1,6 @@
+<%= render partial: 'shared/search' %>
+
 <% @recipes.each do |recipe| %>
-  <%= link_to image_tag(recipe.image), recipe_path(recipe.uri) %>
+  <%= link_to image_tag(recipe.image), recipe_path(uri: recipe.uri) %>
   <%= recipe.name %>
 <% end %>

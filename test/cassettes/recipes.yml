@@ -453,4 +453,442 @@ http_interactions:
         }
     http_version: 
   recorded_at: Thu, 03 May 2018 00:31:59 GMT
+- request:
+    method: get
+    uri: https://api.edamam.com/search?app_id=<EDAMAM_ID>&app_key=<EDAMAM_KEY>&r=this-is-not-a-uri
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - ngx_openresty
+      Date:
+      - Thu, 03 May 2018 02:30:55 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '1'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - route=272f54237f8ce06ebc267f46f9de4658; Path=/
+      Cache-Control:
+      - private
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      X-Served-By:
+      - ip-10-150-7-77/10.150.7.77
+    body:
+      encoding: UTF-8
+      string: "["
+    http_version: 
+  recorded_at: Thu, 03 May 2018 02:30:57 GMT
+- request:
+    method: get
+    uri: http://www.edamam.com/ontologies/edamam.owl
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Moved Temporarily
+    headers:
+      Server:
+      - ngx_openresty
+      Date:
+      - Thu, 03 May 2018 02:43:01 GMT
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '154'
+      Location:
+      - http://www.edamam.com/
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: "<html>\r\n<head><title>302 Found</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>302
+        Found</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"
+    http_version: 
+  recorded_at: Thu, 03 May 2018 02:43:01 GMT
+- request:
+    method: get
+    uri: http://www.edamam.com/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Server:
+      - ngx_openresty
+      Date:
+      - Thu, 03 May 2018 02:43:01 GMT
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - route=272f54237f8ce06ebc267f46f9de4658; Path=/
+      Cache-Control:
+      - private
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      Location:
+      - https://www.edamam.com/
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Thu, 03 May 2018 02:43:02 GMT
+- request:
+    method: get
+    uri: https://www.edamam.com/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Cookie:
+      - route=272f54237f8ce06ebc267f46f9de4658
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - ngx_openresty
+      Date:
+      - Thu, 03 May 2018 02:43:02 GMT
+      Content-Type:
+      - text/html;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      - Accept-Encoding
+      Cache-Control:
+      - private
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      X-Served-By:
+      - ip-10-150-7-77/10.150.7.77
+      Set-Cookie:
+      - JSESSIONID=FE58726E8AEEB3FAC6E812CDDB9F9A3E; Path=/
+      - JSESSIONID=FE58726E8AEEB3FAC6E812CDDB9F9A3E; Path=/; Secure; HttpOnly
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<title>Edamam - Eat
+        better!</title>\n\t<!-- Google Tag Manager -->\n\t<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n\tnew
+        Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n\tj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n\t'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n\t})(window,document,'script','dataLayer','GTM-K65MLJG');</script>\n\t<!--
+        End Google Tag Manager -->\n\t\n\t<meta http-equiv=\"Content-Type\" content=\"text/html;
+        charset=UTF-8\" />\n\t<meta http-equiv=\"Content-Language\" content=\"en\"
+        />\n\t<meta http-equiv=\"Content-Style-Type\" content=\"text/css\" />\n\t\n\t<meta
+        http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\" />\n\n\t<meta
+        name=\"viewport\" content=\"user-scalable=no, initial-scale=1.0, maximum-scale=1.0,
+        width=device-width\">\n\n\t<meta name=\"robots\" content=\"all,index,follow\"
+        />\n\t<meta name=\"googlebot\" content=\"index,follow,noodp\" />\n\t<meta
+        name=\"msnbot\" content=\"all,index,follow\" />\n\t\n\t<meta name=\"verify-v1\"
+        content=\"Google Webmaster tools\" />\n\t<meta name=\"verify-v1\" content=\"Yahoo
+        Site Explorer\" />\n\t<meta name=\"verify-v1\" content=\"MSN Webmaster Center\"
+        />\n\t\n\t<meta name=\"SKYPE_TOOLBAR\" content=\"SKYPE_TOOLBAR_PARSER_COMPATIBLE\"
+        />     \n\t\n\t<meta name=\"msvalidate.01\" content=\"7F2E64189BDDA591F65C4F5FEA9F9E2F\"
+        />\n\n\t<meta name=\"description\" content=\"Find the best recipes from across
+        the web. Filter by calories and diet. Share recipes with friends and on social
+        networks.\"/>\n\t<meta name=\"keywords\" content=\"recipes, easy recipes,
+        healthy recipes, food recipes\"/>\n\n\t<meta name=\"google-signin-scope\"
+        content=\"profile email\">\n\t<meta name=\"google-signin-client_id\" content=\"971390188100-4n7h468fk6ihd8i8lddhpamtt793oti6.apps.googleusercontent.com\">\n\n\t<link
+        rel=\"icon\" type=\"image/png\" href=\"/assets/img/favicon-32x32.png\" sizes=\"32x32\"/>\n\t<link
+        rel=\"icon\" type=\"image/png\" href=\"/assets/img/favicon-16x16.png\" sizes=\"16x16\"/>\n\t<!--
+        Bootstrap CSS -->\n\t<link href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css\"
+        rel=\"stylesheet\">\n\n\t<!-- Roboto -->\n\t<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,100italic,300italic,400italic,500italic,500,700,700italic,900,900italic'
+        rel='stylesheet' type='text/css'>\n\t<!-- Exo 2 -->\n\t<link href=\"https://fonts.googleapis.com/css?family=Exo+2\"
+        rel=\"stylesheet\" type='text/css'> \n\n\t<!-- Font Awesome CSS -->\n\t<link
+        rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css\">\n\n\t<!--
+        CSS -->\n\t<link href=\"/assets/css/style.css\" rel=\"stylesheet\">\n\n\t<!--
+        HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+        -->\n\t<!-- WARNING: Respond.js doesn't work if you view the page via file://
+        -->\n\t<!--[if lt IE 9]>\n\t\t\t<script src=\"https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js\"></script>\n\t\t\t<script
+        src=\"https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js\"></script>\n\t<![endif]-->\t</head><body
+        id=\"homePage\">\n\n\t<!-- Google Tag Manager (noscript) -->\n\t<noscript><iframe
+        src=\"https://www.googletagmanager.com/ns.html?id=GTM-K65MLJG\"\n\theight=\"0\"
+        width=\"0\" style=\"display:none;visibility:hidden\"></iframe></noscript>\n\t<!--
+        End Google Tag Manager (noscript) --><!-- Nav -->\n\t<nav class=\"navbar navbar-default\"
+        role=\"navigation\">\n\t\t<div class=\"container-fluid\">\n\t\t\t<!-- Brand
+        and toggle get grouped for better mobile display -->\n\t\t\t<div class=\"navbar-header\">\n\t\t\t\t<div
+        class=\"navbar-brand\"><a href=\"/\"><img src=\"/assets/img/small-logo.png\"
+        class=\"small\"><img src=\"/assets/img/logo.png\" class=\"logo\"></a></div>\n\t\t\t</div>\n\t\t\t<!--
+        Collect the nav links, forms, and other content for toggling -->\n\t\t\t<div
+        id=\"navbar-brand-centered\">\n\t\t\t\t<ul class=\"nav navbar-nav navbar-brand-centered\">\n\t\t\t\t\n\t\t\t\t<li>\n\t\t\t\t\t\t<a
+        href=\"https://developer.edamam.com\">API Developer Portal</a>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li>\n\t\t\t\t\t<a
+        href=\"/website/wizard.jsp\">Nutrition Wizard</a>\n\t\t\t\t\t</li>\t\t\t\t\t\n\t\t\t\t</ul>\n\t\t\t\t<ul
+        class=\"nav navbar-nav navbar-right\">\n\t\t\t\t\t<li class=\"login\">\n\t\t\t\t\t\t<a
+        class=\"login-link\" href=\"/login\">Login</a>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li
+        class=\"thumb userImage\"><img src=\"\"></li>\n\t\t\t\t\t<li class=\"right-bar-menu\"
+        onclick=\"openNav()\">Menu</li>\n\t\t\t\t</ul>\n\t\t\t</div><!-- /.navbar-collapse
+        -->\n\t\t</div><!-- /.container-fluid -->\n\t</nav><!-- /Nav -->\n\t<!-- Page
+        -->\n\t<div class=\"container-fluid bgr home\">\n\t\t<div class=\"container\">\n\t\t\t<div
+        class=\"row\">\n\t\t\t\t<div class=\"col-md-6 col-sm-6\">\n\t\t\t\t\t<div
+        class=\"col-md-12\">\n\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t<div
+        class=\"col-md-12 block-title\">\n\t\t\t\t\t\t\t\t<h1>Business</h1>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div
+        class=\"row\">\n\t\t\t\t\t\t\t<div class=\"col-md-12 block\">\n\t\t\t\t\t\t\t\t<div
+        class=\"row\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-3 col-sm-0\">\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"icoAnalysis\"></div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div
+        class=\"col-md-9 col-sm-12 core\">\n\t\t\t\t\t\t\t\t\t\t<h3><span>Nutrition
+        Analysis API</span></h3>\n\t\t\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t\t\t<li>Analyze
+        any recipe or ingredient list</li>\n\t\t\t\t\t\t\t\t\t\t\t<li>Automatic tagging
+        for allergens and popular diets</li>\n\t\t\t\t\t\t\t\t\t\t\t<li>Database of
+        540,000+ food items</li>\n\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div
+        class=\"row\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"https://developer.edamam.com/edamam-nutrition-api\" class=\"more\">Sign
+        Up</a>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div
+        class=\"row\">\n\t\t\t\t\t\t\t<div class=\"col-md-12 block\">\n\t\t\t\t\t\t\t\t<div
+        class=\"row\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-3 col-sm-0\">\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"icoRecommendation\"></div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div
+        class=\"col-md-9 col-sm-12 core\">\n\t\t\t\t\t\t\t\t\t\t<h3><span>Recipe Search
+        API</span></h3>\n\t\t\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t\t\t<li>1.7+
+        million nutritionally analyzed recipes</li>\n\t\t\t\t\t\t\t\t\t\t\t<li>Detailed
+        macro and micronutrient data</li>\n\t\t\t\t\t\t\t\t\t\t\t<li>Filter by calories,
+        diets and allergens</li>\n\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div
+        class=\"row\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"https://developer.edamam.com/edamam-recipe-api\" class=\"more\">Sign
+        Up</a>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div
+        class=\"col-md-6 col-sm-6\">\n\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t<div
+        class=\"row\">\n\t\t\t\t\t\t\t<div class=\"col-md-12 block-title\">\n\t\t\t\t\t\t\t\t<h1>Consumer</h1>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div
+        class=\"row\">\n\t\t\t\t\t\t\t<div class=\"col-md-12 block\">\n\t\t\t\t\t\t\t\t<div
+        class=\"row\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-12 core\">\n\t\t\t\t\t\t\t\t\t\t<form
+        id=\"search-form\" action=\"/recipes/\" method=\"get\">\n\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<h3><span>Find
+        something to cook</span></h3>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        id=\"search-field\" class=\"ac_input\" value=\"\" type=\"text\" placeholder=\"e.g.,
+        kale salad, bean soup, chocolate\" name=\"q\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id='autocomplete' class='suggestions'>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class='box'>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div><!--
+        /box -->\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div><!-- /autocomplete -->\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"dropdown\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a id=\"dLabel\" data-target=\"#\"
+        href=\"javascript:;\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\"
+        aria-expanded=\"false\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tRefine search by <span>Calories,
+        Diet, Ingredients</span> <b class=\"caret down\"></b>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"dropdown-menu\" aria-labelledby=\"dLabel\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"col-md-12 filters\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"col-md-6 col-sm-12 col-xs-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4>Calories</h4>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"text\" value=\"\" placeholder=\"From\" class=\"from-to-area\" maxlength=\"4\"
+        id=\"cal-from\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\"
+        value=\"\" placeholder=\"To\" class=\"from-to-area\" maxlength=\"4\" id=\"cal-to\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"hidden\" value=\"\" name=\"calories\" id=\"calories-input\">\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"col-md-6 col-sm-12 col-xs-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4>Ingredients</h4>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"text\" value=\"\" placeholder=\"Up to\" name=\"ingr\" class=\"from-to-area\"
+        maxlength=\"4\" id=\"ing-upto\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4>Diets</h4>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row\" id=\"search-filter-diet\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"col-md-4 col-xs-6\">\n\t\t<ul>\n\t\t\t<li>\n\t\t\t\t<input type=\"checkbox\"
+        id=\"calories-Vegetarian\" value=\"vegetarian\" name=\"health\"  class=\"pseudo-checkbox
+        sr-only\">\n\t\t\t\t<label for=\"calories-Vegetarian\">Vegetarian</label>\n\t\t\t</li>\n\t\t</ul>\n\t</div>\t\t\t\n<div
+        class=\"col-md-4 col-xs-6\">\n\t\t<ul>\n\t\t\t<li>\n\t\t\t\t<input type=\"checkbox\"
+        id=\"calories-Vegan\" value=\"vegan\" name=\"health\"  class=\"pseudo-checkbox
+        sr-only\">\n\t\t\t\t<label for=\"calories-Vegan\">Vegan</label>\n\t\t\t</li>\n\t\t</ul>\n\t</div>\t\t\t\n<div
+        class=\"col-md-4 col-xs-6\">\n\t\t<ul>\n\t\t\t<li>\n\t\t\t\t<input type=\"checkbox\"
+        id=\"calories-Paleo\" value=\"paleo\" name=\"health\"  class=\"pseudo-checkbox
+        sr-only\">\n\t\t\t\t<label for=\"calories-Paleo\">Paleo</label>\n\t\t\t</li>\n\t\t</ul>\n\t</div>\t\t\t\n<div
+        class=\"col-md-4 col-xs-6\">\n\t\t<ul>\n\t\t\t<li>\n\t\t\t\t<input type=\"checkbox\"
+        id=\"calories-High-Fiber\" value=\"high-fiber\" name=\"diet\"  class=\"pseudo-checkbox
+        sr-only\">\n\t\t\t\t<label for=\"calories-High-Fiber\">High-Fiber</label>\n\t\t\t</li>\n\t\t</ul>\n\t</div>\t\t\t\n<div
+        class=\"col-md-4 col-xs-6\">\n\t\t<ul>\n\t\t\t<li>\n\t\t\t\t<input type=\"checkbox\"
+        id=\"calories-High-Protein\" value=\"high-protein\" name=\"diet\"  class=\"pseudo-checkbox
+        sr-only\">\n\t\t\t\t<label for=\"calories-High-Protein\">High-Protein</label>\n\t\t\t</li>\n\t\t</ul>\n\t</div>\t\t\t\n<div
+        class=\"col-md-4 col-xs-6\">\n\t\t<ul>\n\t\t\t<li>\n\t\t\t\t<input type=\"checkbox\"
+        id=\"calories-Low-Carb\" value=\"low-carb\" name=\"diet\"  class=\"pseudo-checkbox
+        sr-only\">\n\t\t\t\t<label for=\"calories-Low-Carb\">Low-Carb</label>\n\t\t\t</li>\n\t\t</ul>\n\t</div>\t\t\t\n<div
+        class=\"col-md-4 col-xs-6\">\n\t\t<ul>\n\t\t\t<li>\n\t\t\t\t<input type=\"checkbox\"
+        id=\"calories-Low-Fat\" value=\"low-fat\" name=\"diet\"  class=\"pseudo-checkbox
+        sr-only\">\n\t\t\t\t<label for=\"calories-Low-Fat\">Low-Fat</label>\n\t\t\t</li>\n\t\t</ul>\n\t</div>\t\t\t\n<div
+        class=\"col-md-4 col-xs-6\">\n\t\t<ul>\n\t\t\t<li>\n\t\t\t\t<input type=\"checkbox\"
+        id=\"calories-Low-Sodium\" value=\"low-sodium\" name=\"diet\"  class=\"pseudo-checkbox
+        sr-only\">\n\t\t\t\t<label for=\"calories-Low-Sodium\">Low-Sodium</label>\n\t\t\t</li>\n\t\t</ul>\n\t</div>\t\t\t\n<div
+        class=\"col-md-4 col-xs-6\">\n\t\t<ul>\n\t\t\t<li>\n\t\t\t\t<input type=\"checkbox\"
+        id=\"calories-Low-Sugar\" value=\"sugar-conscious\" name=\"health\"  class=\"pseudo-checkbox
+        sr-only\">\n\t\t\t\t<label for=\"calories-Low-Sugar\">Low-Sugar</label>\n\t\t\t</li>\n\t\t</ul>\n\t</div>\t\t\t\n<div
+        class=\"col-md-4 col-xs-6\">\n\t\t<ul>\n\t\t\t<li>\n\t\t\t\t<input type=\"checkbox\"
+        id=\"calories-Alcohol-Free\" value=\"alcohol-free\" name=\"health\"  class=\"pseudo-checkbox
+        sr-only\">\n\t\t\t\t<label for=\"calories-Alcohol-Free\">Alcohol-Free</label>\n\t\t\t</li>\n\t\t</ul>\n\t</div>\t\t\t\n<div
+        class=\"col-md-4 col-xs-6\">\n\t\t<ul>\n\t\t\t<li>\n\t\t\t\t<input type=\"checkbox\"
+        id=\"calories-Balanced\" value=\"balanced\" name=\"diet\"  class=\"pseudo-checkbox
+        sr-only\">\n\t\t\t\t<label for=\"calories-Balanced\">Balanced</label>\n\t\t\t</li>\n\t\t</ul>\n\t</div>\t\t\t\n</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h4>Allergies</h4>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row\" id=\"search-filter-allergies\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"col-md-4 col-xs-6\">\n\t\t<ul>\n\t\t\t<li>\n\t\t\t\t<input type=\"checkbox\"
+        id=\"calories-Gluten\" value=\"gluten-free\" name=\"health\"  class=\"pseudo-checkbox
+        sr-only\">\n\t\t\t\t<label for=\"calories-Gluten\">Gluten</label>\n\t\t\t</li>\n\t\t</ul>\n\t</div>\t\t\t\n<div
+        class=\"col-md-4 col-xs-6\">\n\t\t<ul>\n\t\t\t<li>\n\t\t\t\t<input type=\"checkbox\"
+        id=\"calories-Dairy\" value=\"dairy-free\" name=\"health\"  class=\"pseudo-checkbox
+        sr-only\">\n\t\t\t\t<label for=\"calories-Dairy\">Dairy</label>\n\t\t\t</li>\n\t\t</ul>\n\t</div>\t\t\t\n<div
+        class=\"col-md-4 col-xs-6\">\n\t\t<ul>\n\t\t\t<li>\n\t\t\t\t<input type=\"checkbox\"
+        id=\"calories-Eggs\" value=\"egg-free\" name=\"health\"  class=\"pseudo-checkbox
+        sr-only\">\n\t\t\t\t<label for=\"calories-Eggs\">Eggs</label>\n\t\t\t</li>\n\t\t</ul>\n\t</div>\t\t\t\n<div
+        class=\"col-md-4 col-xs-6\">\n\t\t<ul>\n\t\t\t<li>\n\t\t\t\t<input type=\"checkbox\"
+        id=\"calories-Soy\" value=\"soy-free\" name=\"health\"  class=\"pseudo-checkbox
+        sr-only\">\n\t\t\t\t<label for=\"calories-Soy\">Soy</label>\n\t\t\t</li>\n\t\t</ul>\n\t</div>\t\t\t\n<div
+        class=\"col-md-4 col-xs-6\">\n\t\t<ul>\n\t\t\t<li>\n\t\t\t\t<input type=\"checkbox\"
+        id=\"calories-Wheat\" value=\"wheat-free\" name=\"health\"  class=\"pseudo-checkbox
+        sr-only\">\n\t\t\t\t<label for=\"calories-Wheat\">Wheat</label>\n\t\t\t</li>\n\t\t</ul>\n\t</div>\t\t\t\n<div
+        class=\"col-md-4 col-xs-6\">\n\t\t<ul>\n\t\t\t<li>\n\t\t\t\t<input type=\"checkbox\"
+        id=\"calories-Fish\" value=\"fish-free\" name=\"health\"  class=\"pseudo-checkbox
+        sr-only\">\n\t\t\t\t<label for=\"calories-Fish\">Fish</label>\n\t\t\t</li>\n\t\t</ul>\n\t</div>\t\t\t\n<div
+        class=\"col-md-4 col-xs-6\">\n\t\t<ul>\n\t\t\t<li>\n\t\t\t\t<input type=\"checkbox\"
+        id=\"calories-Shellfish\" value=\"shellfish-free\" name=\"health\"  class=\"pseudo-checkbox
+        sr-only\">\n\t\t\t\t<label for=\"calories-Shellfish\">Shellfish</label>\n\t\t\t</li>\n\t\t</ul>\n\t</div>\t\t\t\n<div
+        class=\"col-md-4 col-xs-6\">\n\t\t<ul>\n\t\t\t<li>\n\t\t\t\t<input type=\"checkbox\"
+        id=\"calories-Tree Nuts\" value=\"tree-nut-free\" name=\"health\"  class=\"pseudo-checkbox
+        sr-only\">\n\t\t\t\t<label for=\"calories-Tree Nuts\">Tree Nuts</label>\n\t\t\t</li>\n\t\t</ul>\n\t</div>\t\t\t\n<div
+        class=\"col-md-4 col-xs-6\">\n\t\t<ul>\n\t\t\t<li>\n\t\t\t\t<input type=\"checkbox\"
+        id=\"calories-Peanuts\" value=\"peanut-free\" name=\"health\"  class=\"pseudo-checkbox
+        sr-only\">\n\t\t\t\t<label for=\"calories-Peanuts\">Peanuts</label>\n\t\t\t</li>\n\t\t</ul>\n\t</div>\t\t\t\n</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6 col-sm-6
+        col-xs-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"clear-selection\">Clear
+        Filters</span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"col-md-6 col-sm-6 col-xs-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span
+        id=\"set-filters\" class=\"more\">Done</span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</form>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div
+        class=\"row\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t<a
+        href=\"javascript:void(0)\" class=\"more\" id=\"homeRecipeSearchBtn\">Find</a>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div
+        class=\"row\">\n\t\t\t\t\t\t\t<div class=\"col-md-12 block\">\n\t\t\t\t\t\t\t\t<form
+        id=\"analyze-form\" action=\"/website/wizard.jsp\" method=\"get\">\n\t\t\t\t\t\t\t\t<input
+        id=\"analyze-version\" type=\"hidden\" value=\"\" name=\"ver\">\n\t\t\t\t\t\t\t\t\t<div
+        class=\"row\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12 core\">\n\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<h3><span>Analyze
+        your meal</span><div class=\"tips\" data-toggle=\"modal\" data-target=\"#myModalTips\">Tips</div></h3>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"row\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<textarea
+        class=\"form-control analyze\" name=\"ingr\" placeholder=\"\" rows=\"\"></textarea>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div
+        class=\"row\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6 col-sm-6 col-xs-6\">\n\t\t\t\t\t\t\t\t\t\t\t<input
+        type=\"text\" value=\"1\" placeholder=\"1\" name=\"serving\" class=\"serving\"
+        maxlength=\"5\"> <span>Serving</span>\n\t\t\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<div
+        class=\"col-md-6 col-sm-6 col-xs-6\">\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\"
+        class=\"more\" id=\"homeAnalyzeBtn\">Analyze</a>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</form>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<!--
+        /Page -->\n\t\n\t<!-- Footer -->\n\t<footer class=\"footer\">\n\t\t<div class=\"container-fluid\">\n\t\t\t<span
+        class=\"pull-left text-left\">\n\t\t\t\t<ul class=\"list-inline\">\n\t\t\t\t\t<li>Follow
+        Us</li>\n\t\t\t\t\t<li><a href=\"http://pinterest.com/edamam\" target=\"_blank\"><img
+        src=\"/assets/img/pinterest.png\"></a></li>\n\t\t\t\t\t<li><a href=\"http://facebook.com/Edamam\"
+        target=\"_blank\"><img src=\"/assets/img/facebook.png\"></a></li>\n\t\t\t\t\t<li><a
+        href=\"http://twitter.com/#!/EdamamCo\" target=\"_blank\"><img src=\"/assets/img/twitter.png\"></a></li>\n\t\t\t\t</ul>\n\t\t\t</span>\n\t\t\t<span
+        class=\"pull-right text-right\">\n\t\t\t\t<ul class=\"list-inline\">\n\t\t\t\t\t<li>Download
+        Edamam App</li>\n\t\t\t\t\t<li class=\"ico-app\"><a href=\"http://itunes.apple.com/us/app/edamam/id516902296?mt=8&uo=4\"
+        target=\"_blank\"><img src=\"/assets/img/apple.png\"></a></li>\n\t\t\t\t\t<li
+        class=\"ico-app\"><a href=\"http://play.google.com/store/apps/details?id=com.edamam.recipesearch\"
+        target=\"_blank\"><img src=\"/assets/img/android.png\"></a></li>\n\t\t\t\t</ul>\n\t\t\t</span>\n\t\t</div>\n\t</footer><!--
+        /Footer -->\n\t\n\t<!-- Modals -->\n\t<div id=\"overlay\"></div>\n\t<div id=\"mySidenav\"
+        class=\"sidenav\">\n\t\t<a href=\"javascript:void(0)\" class=\"closebtn\"
+        onclick=\"closeNav()\">&times;</a>\n\t\t<div class=\"navigate\">\n\t\t\t<div
+        class=\"top\"></div>\n\t\t\t<a href=\"javascript:void(0)\" class=\"closebtn\"
+        onclick=\"closeNav()\">&times;</a>\n\t\t\t<a href=\"https://developer.edamam.com\">API
+        Developer Portal</a>\n\t\t\t<!-- a href=\"/\">Recipe Search</a -->\n\t\t\t<a
+        href=\"/website/wizard.jsp\">Nutrition Wizard</a>\n\t\t</div>\t\t\t\n\t\t<div
+        class=\"user\">\n\t\t\t<div class=\"profile userImage\"><img src=\"\">Hi,
+        <span></span></div>\n\t\t\t<a href=\"/recipes\" class=\"ico-meals\">My meals</a>\n\t\t\t<a
+        href=\"javascript:void(0)\" class=\"ico-wizard\">Analyze Your Meal <span></span></a>\n\t\t\t<!--
+        a href=\"/account/settings\" class=\"ico-profile\">Nutrition profile</a -->\n\t\t\t<a
+        href=\"/account/settings\" class=\"ico-account\">Account</a>\n\t\t\t<!-- a
+        href=\"/website/wizard.jsp\" class=\"ico-updown\">Upgrade / Downgrade</a -->\n\t\t\t<a
+        href=\"/logout\" class=\"ico-logout\">Logout</a>\n\t\t</div>\n\t\t<div class=\"menu\">\n\t\t\t<a
+        href=\"/about/company.jsp\" class=\"ico-company\">Company</a>\n\t\t\t<a href=\"/about/media.jsp\"
+        class=\"ico-media\">Media</a>\n\t\t\t<a href=\"/about/terms.jsp\" class=\"ico-terms\">Terms</a>\n\t\t\t<a
+        href=\"/about/privacy.jsp\" class=\"ico-privacy\">Privacy</a>\n\t\t\t<a href=\"javascript:void(0)\"
+        data-toggle=\"modal\" data-target=\"#myModalFeedback\" class=\"ico-feedback\">Feedback</a>\n\t\t\t<a
+        href=\"javascript:void(0)\" data-toggle=\"modal\" data-target=\"#myModalContact\"
+        class=\"ico-contacts\">Contact us</a>\n\t\t</div>\n\t</div><div id=\"myModalTips\"
+        class=\"modal fade\" role=\"dialog\">\n\t\t<div class=\"modal-dialog\">\n\t\t\t<!--
+        Modal content-->\n\t\t\t<div class=\"modal-content\">\n\t\t\t\t<div class=\"modal-header\">\n\t\t\t\t\t<button
+        type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n\t\t\t\t\t<h3
+        class=\"modal-title\">Tips</h3>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"modal-body\">\n\t\t\t\t\t<div
+        class=\"row\">\n\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t<p>If
+        an ingredient line is highlighted, we are not calculating the nutrition for
+        it, so please try rewriting it:</p>\n\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t<li>Always
+        include quantity: \"3 oz of butter cookies\" is better than \"butter cookies
+        or tuilles\"</li>\n\t\t\t\t\t\t\t\t<li>Shorten and simplify the line: \"2
+        cans of garbanzo beans, drained\" is better than \"2-2 1/2 cans of washed
+        and drained garbanzo beans\"</li>\n\t\t\t\t\t\t\t\t<li>If oil is used for
+        frying, indicate it in the ingredient line (add the words \"for frying\"),
+        so we can calculate how much gets absorbed</li>\n\t\t\t\t\t\t\t\t<li>For stocks
+        and broths, enter \"stock\" or \"broth\" in the recipe field, or we'll assume
+        it's a soup</li>\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div
+        class=\"modal-footer\"></div>\n\t\t\t</div>\n\t\t</div>\n\t</div><div id=\"myModalThanks\"
+        class=\"modal fade\" role=\"dialog\">\n\t\t<div class=\"modal-dialog\">\n\t\t\t<!--
+        Modal content-->\n\t\t\t<div class=\"modal-content\">\n\t\t\t\t<div class=\"modal-header\">\n\t\t\t\t\t<button
+        type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n\t\t\t\t</div>\n\t\t\t\t<div
+        class=\"modal-body\">\n\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t<p class=\"modal-body-text\"></p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div
+        class=\"modal-footer\"></div>\n\t\t\t</div>\n\t\t</div>\n\t</div><div id=\"myModalFeedback\"
+        class=\"modal fade\" role=\"dialog\">\n\t\t<div class=\"modal-dialog\">\n\t\t\t<!--
+        Modal content-->\n\t\t\t<div class=\"modal-content\">\n\t\t\t\t<div class=\"modal-header\">\n\t\t\t\t\t<button
+        type=\"button\" class=\"close cls\" data-dismiss=\"modal\">&times;</button>\n\t\t\t\t\t<h3
+        class=\"modal-title\">Feedback</h3>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"modal-body\">\n\t\t\t\t\t<div
+        class=\"row\">\n\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t<form
+        id=\"feedbackForm\">\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<input
+        type=\"text\" class=\"form-control\" id=\"email\" name=\"email\" placeholder=\"Your
+        email...\" required>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<input
+        type=\"text\" class=\"form-control\" id=\"subject\" name=\"subject\" placeholder=\"Subject...\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div
+        class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\"
+        type=\"textarea\" name=\"msg\" id=\"msg\" placeholder=\"Your feedback...\"
+        maxlength=\"140\" rows=\"7\" required></textarea>                   \n\t\t\t\t\t\t\t\t</div>
+        \        \n\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\" class=\"more\">Send</a>\n\t\t\t\t\t\t\t</form>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div
+        class=\"modal-footer\"></div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\t<div id=\"myModalContact\"
+        class=\"modal fade\" role=\"dialog\">\n\t\t<div class=\"modal-dialog\">\n\t\t\t<!--
+        Modal content-->\n\t\t\t<div class=\"modal-content\">\n\t\t\t\t<div class=\"modal-header\">\n\t\t\t\t\t<button
+        type=\"button\" class=\"close clsc\" data-dismiss=\"modal\">&times;</button>\n\t\t\t\t\t<h3
+        class=\"modal-title\">Contact us</h3>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"modal-body\">\n\t\t\t\t\t<div
+        class=\"row\">\n\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t<form
+        id=\"contactForm\">\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<input
+        type=\"text\" class=\"form-control\" id=\"email\" name=\"email\" placeholder=\"Your
+        email...\" required>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<input
+        type=\"text\" class=\"form-control\" id=\"subject\" name=\"subject\" placeholder=\"Subject...\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div
+        class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\"
+        type=\"textarea\" name=\"msg\" id=\"msg\" placeholder=\"Your message...\"
+        maxlength=\"140\" rows=\"7\" required></textarea>                   \n\t\t\t\t\t\t\t\t</div>
+        \        \n\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\" class=\"more\">Send</a>\n\t\t\t\t\t\t\t</form>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div
+        class=\"modal-footer\"></div>\n\t\t\t</div>\n\t\t</div>\n\t</div><!-- /Modals
+        -->\n\t\n\t<!-- jQuery -->\n\t<script src=\"https://code.jquery.com/jquery-1.11.1.min.js\"></script>\n\t<!--
+        Bootstrap Core JavaScript -->\n\t<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js\"></script>\n\t<!--
+        Cookie -->\n\t<script src=\"/assets/js/cookie.js\"></script>\t\n\t<!-- General
+        -->\n\t<script src=\"/assets/js/general.js\"></script>\n\t<!-- Search History
+        -->\n\t<script src=\"/assets/js/history.js\"></script>\t\n\t<!-- Validate
+        -->\n\t<script src=\"/assets/js/validate.js\"></script>\t\n\t<!-- Google API
+        -->\n\t<script src=\"https://apis.google.com/js/api:client.js\"></script><!--
+        jQuery Migrate -->\n\t<script src=\"https://code.jquery.com/jquery-migrate-1.0.0.js\"></script>\n\t<!--
+        Autocomplete -->\n\t<script src=\"/js/autocomplete.js\"></script>\n\n\t<script
+        type=\"text/javascript\">\n\t\tjQuery(document).ready(function() {\n\t\t\t$(\"#search-field\").autocomplete(\"/auto-complete\",
+        {\n\t\t\t\tselectFirst: false,\n\t\t\t\tparse: function( data ) {\n\t\t\t\t\tvar
+        ret = [];\n\t\t\t\t\t$(data).each( function() {\n\t\t\t\t\t\tret.push( { data:
+        [ this ], value: this, result: this } )\n\t\t\t\t\t});\n\t\t\t\t\tif(ret.length
+        > 0){\n\t\t\t\t\t\t$('.search-history').removeClass('search-history-show').addClass('search-history-hide');\n\t\t\t\t\t}
+        else if(ret.length == 0){\n\t\t\t\t\t\t$('.search-history').removeClass('search-history-hide').addClass('search-history-show');\n\t\t\t\t\t}\t\t\t\t\t\n\t\t\t\t\treturn
+        ret;\n\t\t\t\t}\n\t\t\t});\n\t    });\n\t</script>\n\t<!-- /Autocomplete -->\n\n</body>\n</html>\n\n"
+    http_version: 
+  recorded_at: Thu, 03 May 2018 02:43:03 GMT
 recorded_with: VCR 4.0.0

@@ -14,6 +14,7 @@ class Recipe
     @image = image
     @ingredients = ingredients
     @dietary_info = dietary_info
+    @url = url
   end
 
   def self.from_api(raw_recipe)

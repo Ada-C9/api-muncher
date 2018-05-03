@@ -1,3 +1,5 @@
+<%= render partial: 'shared/search' %>
+
 <%= @recipe.name %>
 <%= image_tag @recipe.image %>
-<%= link_to 'See Recipe', @recipe.url %>
+<%= link_to 'See Recipe', @recipe.url, target: :_blank %>

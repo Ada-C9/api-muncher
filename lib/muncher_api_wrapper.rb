@@ -8,7 +8,7 @@ class MuncherApiWrapper
   base_uri "https://api.edamam.com/search"
 
   def self.get_recipes(query)
-    full_url = URI.encode(base_uri + "?q=#{query}" + "&app_id=#{APP_ID}&app_key=#{APP_KEY}")
+    full_url = URI.encode(base_uri + "?q=#{query}" + "&app_id=#{APP_ID}&app_key=#{APP_KEY}&from=1&to=30")
 
     response = HTTParty.get(full_url)
 

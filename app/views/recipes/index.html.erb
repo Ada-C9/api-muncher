@@ -1,0 +1,27 @@
+<h5>Recipe Muncher</h5>
+
+<section>
+  <%= form_tag({controller: 'recipes', action: 'index'}, method: 'get') do %>
+  <%= label_tag(:query)%>
+  <%= text_field_tag(:query) %>
+  <%= submit_tag("Search!")%>
+  <% end %>
+</section>
+
+
+<%= %>
+<% %>
+<section>
+  <% if @recipes%>
+  <ul>
+    <% @recipes.each do |recipe| %>
+    <li>
+      <%= link_to recipe.name, recipe_path(recipe) %>
+    </li>
+    <% end %>
+  </ul>
+  <% end %>
+</section>
+
+
+<footer>Powered by Edamam</footer>

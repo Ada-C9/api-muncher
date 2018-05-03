@@ -18,6 +18,4 @@ class Recipe
       recipe_hash["recipe"]["calories"]
     )
   end
-
-
 end

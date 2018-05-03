@@ -1,25 +1,28 @@
-<%= render partial: "header" %>
+<div class="index-container">
+  <%= render partial: "header" %>
 
-<h3>Results for "<%= session[:term] %>"</h3>
-<ul>
-  <% if @recipes == [] %>
+  <h3>Results for "<%= session[:term] %>"</h3>
+  <ul>
+    <% if @recipes == [] %>
     <h4>Nothing has been found.</h4>
-  <% else %>
+    <% else %>
     <% @recipes.each do |recipe| %>
-      <li>
-        <%= link_to image_tag(recipe.image, alt: recipe.title), recipe_path(recipe, "recipe_id" => recipe.id) %>
-        <h4><%= link_to recipe.title, recipe_path(recipe, "recipe_id" => recipe.id) %></h4>
-      </li>
+    <li>
+      <%= link_to image_tag(recipe.image, alt: recipe.title), recipe_path(recipe, "recipe_id" => recipe.id) %>
+      <h4><%= link_to recipe.title, recipe_path(recipe, "recipe_id" => recipe.id) %></h4>
+    </li>
     <% end %>
-  <% end %>
-</ul>
-
-<nav aria-label="Pagination">
-  <ul class="pagination text-center">
-    <li><%= link_to "1", recipes_path("page_num" => 1, "term" => session[:term]) %></li>
-    <li><%= link_to "2", recipes_path("page_num" => 2, "term" => session[:term]) %></li>
-    <li><%= link_to "3", recipes_path("page_num" => 3, "term" => session[:term]) %></li>
-    <li><%= link_to "4", recipes_path("page_num" => 4, "term" => session[:term]) %></li>
-    <li><%= link_to "5", recipes_path("page_num" => 5, "term" => session[:term]) %></li>
+    <% end %>
   </ul>
-</nav>
+
+  <nav aria-label="Pagination">
+    <ul class="pagination text-center">
+      <li><%= link_to "1", recipes_path("page_num" => 1, "term" => session[:term]) %></li>
+      <li><%= link_to "2", recipes_path("page_num" => 2, "term" => session[:term]) %></li>
+      <li><%= link_to "3", recipes_path("page_num" => 3, "term" => session[:term]) %></li>
+      <li><%= link_to "4", recipes_path("page_num" => 4, "term" => session[:term]) %></li>
+      <li><%= link_to "5", recipes_path("page_num" => 5, "term" => session[:term]) %></li>
+    </ul>
+  </nav>
+
+</div>

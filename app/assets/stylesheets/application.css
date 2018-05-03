@@ -26,25 +26,18 @@ font-family: 'Old Standard TT', serif; */
  /* #05807E; green; */
 
 /*--------- global ---------*/
-body {
-  background-image: url('background.png');
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 html, body {
   height: 100%;
 }
 /********** text **********/
-body, h2, h3, h4, h5, p, label {
+body, h2, h3, h4, h5, p, a, label {
   font-family: 'Old Standard TT', serif;
-  color: white;
 }
 
 h1 {
   font-family: 'IM Fell French Canon', serif;
+
 }
 
 .button {
@@ -72,6 +65,7 @@ h1 {
 .main-container, .home {
   text-align: center;
   height: 100%;
+  width: 100%;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -92,6 +86,8 @@ h1 {
   font-size: 2rem;
   text-align: left;
 }
+
+/*--------- header ---------*/
 
 /*--------- index ---------*/
 

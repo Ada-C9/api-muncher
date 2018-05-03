@@ -5,6 +5,7 @@
     <%= form_tag(recipes_path, method: :get) do %>
     <%= label_tag "Find you flavor..." %>
     <%= text_field_tag :term, nil, placeholder: "🔍", class: "search-box" %>
+    <%= render partial: "flash" %>
     <%= submit_tag 'Search', class: "search button" %>
     <% end %>
   </section>

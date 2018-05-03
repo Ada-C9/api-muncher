@@ -1,12 +1,16 @@
 class RecipesController < ApplicationController
   around_action :catch_api_error
 
+  def root
+  end
+
   def index
-    @recipes = RecipeSearchWrapper.search_recipes
+    @query = params[:query]
+    recipes = RecipeSearchWrapper.search_recipes(@query)
   end
 
   def show
-
+    @recipe = RecipeSearchWrapper.find(params[:uri])
   end
 
   private

@@ -2,8 +2,11 @@ Rails.application.routes.draw do
 
   root 'recipes#home'
 
-  get '/recipes', to: 'recipes#index'
+  # resources :recipes, only: [:index, :show]
 
-  get '/recipes/:label', to: 'recipes#show', as: "recipe"
+  get '/recipes/', to: 'recipes#index', as: 'recipes'
+
+  get 'recipes/:uri', to: 'recipes#show', as: 'recipe'
+
 
 end

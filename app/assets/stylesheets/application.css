@@ -18,10 +18,21 @@
 
  */
 
- li {
-   list-style-type: none;
- }
+ /* OVERALL */
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
 
+body {
+  margin: 0;
+}
+
+li {
+ list-style-type: none;
+}
+
+/* PAGINATION */
 .pagination a {
   display: inline;
 }
@@ -31,5 +42,46 @@ a.single_recipe {
 }
 
 div.pagination {
+  text-align: center;
+}
+
+/* ROOT PAGE */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.root {
+  margin-bottom: 6rem;
+}
+
+form {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+div.submit {
+  text-align: center;
+}
+
+/* input.button {
+  width: 15%;
+} */
+
+/* FOOTER */
+footer {
+  background-color: gray;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   text-align: center;
 }

@@ -11,7 +11,7 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body>
+  <body class="container">
 
     <% if flash[:result] %>
       <section class="callout <%= flash[:status] %>">
@@ -22,4 +22,8 @@
     <%= yield %>
 
   </body>
+
+  <footer>
+    <p>Powered by Edamam</p>
+  </footer>
 </html>

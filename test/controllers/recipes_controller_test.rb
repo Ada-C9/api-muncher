@@ -4,7 +4,7 @@ describe RecipesController do
 
   it "should get home" do
     get root_path
-    value(respone).must_be :success?
+    value(response).must_be :success?
   end
 
 

@@ -1,5 +1,3 @@
-require 'httparty'
-require 'pry'
 
 class ApiMuncherWrapper
   BASE_URL = "https://api.edamam.com/search"
@@ -10,18 +8,17 @@ class ApiMuncherWrapper
     url = BASE_URL + "?q=#{name.gsub(' ', '+')}&app_id=#{APP_ID}&app_key=#{APP_KEY}"
     data = HTTParty.get(url)
 
+    recipe_list = []
     if data["hits"]
-      recipes = data["hits"].map do |hash|
+      data["hits"].each do |hash|
         recipe = hash["recipe"]
-        Recipe.new(recipe["label"],
-        recipe["uri"]),
-        image: recipe ["image"],
+        recipe_list << Recipe.new(recipe["label"],
+        recipe["uri"], {image: recipe ["image"],
         source: recipe['source'],
-        url: recipe['url']#
+        url: recipe['url']}
       )
       end
-      return
-      recipes
+      return recipes
     else
       return []
     end

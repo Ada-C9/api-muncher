@@ -10,7 +10,15 @@ class EdamamApiWrapper
     recipe_list = []
     if response["hits"]
       response["hits"].each do | recipe |
-        recipe_list << recipe
+        id = recipe["recipe"]["uri"]
+        name = recipe["recipe"]["label"]
+        photo = recipe["recipe"]["image"]
+        url = recipe["recipe"]["url"]
+        source = recipe["recipe"]["source"]
+        ingredients = recipe["recipe"]["ingredientLines"]
+        diet_labels = recipe["recipe"]["dietLabels"]
+        health_labels = recipe["recipe"]["healthLabels"]
+        recipe_list << Recipe.new(id, name, photo, url, source, ingredients, diet_labels, health_labels)
       end
     end
     return recipe_list

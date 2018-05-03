@@ -16,7 +16,8 @@ class RecipeSearchWrapper
     @recipe_list = []
     if response["hits"]
       response["hits"].each do |recipe|
-        @recipe_list << Recipe.new(recipe)
+        recipe_hash = recipe["recipe"]
+        @recipe_list << Recipe.new(recipe_hash)
       end
     end
     return @recipe_list

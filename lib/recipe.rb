@@ -1,5 +1,5 @@
 class Recipe
-  attr_reader :label, :uri, :url, :image, :source, :dietLabels, :healthLabels
+  attr_reader :label, :uri, :url, :image, :source, :diet_labels, :health_labels, :ingredient_lines
 
   def initialize(params)
     @label = params[:label]
@@ -7,7 +7,8 @@ class Recipe
     @url = params[:url]
     @image = params[:image]
     @source = params[:source]
-    @dietLabels = params[:dietLabels]
-    @healthLabels = params[:healthLabels]
+    @ingredient_lines = params[:ingredient_lines]
+    @diet_labels = params[:diet_labels]
+    @health_labels = params[:health_labels]
   end
 end

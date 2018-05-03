@@ -12,19 +12,31 @@ class EdamamApiWrapper
     recipes = []
     if response["hits"]
       response["hits"].each do |hit|
-        recipe = Recipe.new(
-          label: hit["recipe"]["label"],
-          uri: hit["recipe"]["uri"],
-          url: hit["recipe"]["url"],
-          image: hit["recipe"]["image"],
-          source: hit["recipe"]["source"],
-          dietLabels: hit["recipe"]["dietLabels"],
-          healthLabels: hit["recipe"]["healthLabels"]
-        )
+        recipe = self.create_recipe_from_response(hit["recipe"])
         recipes << recipe
       end
     end
-
     return recipes
+  end
+
+  def self.find_by_uri(uri)
+    url = "#{URL}?r=#{uri}&app_id=#{APP_ID}&app_key=#{APP_KEY}"
+    response = HTTParty.get(url)
+    return nil if response.blank?
+    return create_recipe_from_response(response.first)
+  end
+
+  def self.create_recipe_from_response(response_recipe)
+    print response_recipe
+    Recipe.new(
+      label: response_recipe["label"],
+      uri: URI.encode(response_recipe["uri"], /\W/),
+      url: response_recipe["url"],
+      image: response_recipe["image"],
+      source: response_recipe["source"],
+      ingredient_lines: response_recipe["ingredientLines"],
+      diet_labels: response_recipe["dietLabels"],
+      health_labels: response_recipe["healthLabels"]
+    )
   end
 end

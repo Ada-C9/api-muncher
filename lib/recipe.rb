@@ -1,4 +1,6 @@
 class Recipe
+	include Standards
+
 	attr_reader :name, :uri, :url, :image, :ingredients, :diet_labels,
 		:health_labels
 
@@ -11,6 +13,8 @@ class Recipe
 		@ingredients = ingredients # array, called 'ingredientLines' in API
 		@diet_labels = diet_labels # array, called 'dietLabels' in API
 		@health_labels = health_labels # array, called 'healthLabels' in API
+
+	#	TODO: valid checks for everything!
 	end
 
 end

@@ -1,5 +1,6 @@
-<h1>Search for recipes <span class="recipe-search"></span> </h1>
+<h1 class="recipe-search">Muncher</h1>
 
+<h5>Find your flavor...</h5>
 <%= form_tag search_results_path, method: :get do %>
   <%= label_tag(:query, "Enter term") %>
   <%= text_field_tag(:query) %>

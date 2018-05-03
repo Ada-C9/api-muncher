@@ -13,7 +13,25 @@
 
  *
  *= require_tree .
- *= require_self
  *= require foundation_and_overrides
-
+ *= require_self
  */
+
+.title {
+  text-align: center;
+  margin: 5vh;
+}
+
+.recipe-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.recipe-list .recipe {
+  border: solid 2px black;
+  width: 30vw;
+  min-width: 200px;
+  max-width: 300px;
+  margin: 1vw;
+}

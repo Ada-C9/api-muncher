@@ -1,1 +1,10 @@
+<h2 class="title">Results for "<%= @query %>"</h2>
 
+<section class="recipe-list">
+  <% @recipes.each do |recipe| %>
+  <div class="recipe">
+    <%= image_tag recipe.image %>
+    <h4><%= recipe.title %></h4>
+  </div>
+  <% end %>
+</section>

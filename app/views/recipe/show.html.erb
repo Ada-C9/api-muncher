@@ -1,2 +1,21 @@
-<h1>Recipe#show</h1>
-<p>Find me in app/views/recipe/show.html.erb</p>
+<h1><%= @recipe.name %></h1>
+<h2>From <% link_to @recipe.source, @recipe.url %></h2>
+<%= image_tag @recipe.photo %>
+<h4>Ingredients:</h4>
+<ul>
+  <% @recipe.ingredients.each do |ingredient| %>
+    <li><%= ingredient %></li>
+  <% end %>
+</ul>
+<h4>Dietary Labels</h4>
+<ul>
+  <% @recipe.diet_labels.each do |diet| %>
+    <li><%= diet %></li>
+  <% end %>
+</ul>
+<h4>Health Labels</h4>
+<ul>
+  <% @recipe.health_labels.each do |health| %>
+    <li><%= health %></li>
+  <% end %>
+</ul>

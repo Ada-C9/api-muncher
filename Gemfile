@@ -61,6 +61,8 @@ gem 'foundation-rails'
 gem 'normalize-rails'
 group :development, :test do
   gem 'pry-rails'
+  gem 'minitest-vcr'
+  gem 'webmock'
 end
 
 group :development do

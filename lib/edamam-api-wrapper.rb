@@ -1,12 +1,12 @@
 require "HTTParty"
 
 class EdamamApiWrapper
-  BASE_URL = "https://api.edamam.com/"
+  URL = "https://api.edamam.com/"
   APP_ID = ENV["APP_ID"]
   APP_KEY = ENV["APP_KEY"]
 
   def self.search(q)
-    response = HTTParty.get("#{BASE_URL}")
+    response = HTTParty.get("#{URL}" + "q=#{q}" + "&app_id=#{APP_ID}" + "&app_key=#{APP_KEY}")
   end
 
 

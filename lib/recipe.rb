@@ -1,14 +1,17 @@
-class Recipe
+class Recipe < ApplicationRecord
 
 	# this is a factory method. Keeps code dry and isolates dependencies
-	attr_reader :name
+	attr_reader :image, :label
 
-	def initialize(name)
-		@name = name
+	def initialize(image, label)
+		@image = image
+		@label = label
 	end
 
 	# if not nil, should return list of recipes
-	def self.from_api(raw_recipe)
-		self.new(raw_recipe["name"])
+	def self.from_api(raw_hit)
+		self.new(
+			raw_hit["recipe"]["image"]
+		)
+		end
 	end
-end

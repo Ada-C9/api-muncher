@@ -6,8 +6,12 @@ describe "Recipes" do
 	describe "search" do
 		it "returns results, image, from search" do
 			VCR.use_cassette("recipes") do
-						recipes = RecipeApiWrapper.search_recipes("chicken")
-					end
+				search = "chicken"
+				response = RecipeApiWrapper.search_recipes(search)
+
+				response["OK"].must_equal true
+				response["q"].must_equal search
+			end
 		end
 	end
 

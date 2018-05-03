@@ -6,14 +6,32 @@ require 'httparty'
 require 'pry'
 
 class RecipeApiWrapper
-	BASE_URL = "https://api.edamam.com/"
+	#https://api.edamam.com/search?q=chicken&app_id=ca7c58a1&app_key=dc5c0e810b7633854a733ca451bf7c3b
+
+	#"https://api.edamam.com/search?q=chicken&app_id=ca7c58a1&app_key=7398d40ea0ffc5ea473d08119b01bba5"
+	BASE_URL = "https://api.edamam.com/search?q="
 	ID = ENV["EDAMAM_ID"]
-	TOKEN = ENV["EDAMAM_TOKEN"]
+	KEY = ENV["EDAMAM_KEY"]
+
+
+	def self.search_recipes(query)
+		encoded_uri = URI.encode(BASE_URL + query + "&app_id=#{ID}" + "&app_key=#{KEY}")
+		puts encoded_uri
+
+		response = HTTParty.get(encoded_uri).parsed_response
+
+		hits = response["hits"]
+		puts "THESE ARE THE RECIPES: #{hits}"
+
+		hits.each do |hit|
+			puts hit["recipe"]
+		end
+	end
 
 	def self.list_recipes
+		search = chicken
 		# responses already in JSON...
-		url = BASE_URL +
-		"search?q=chicken" + "&app_id=#{ID}" + "&app_key=#{TOKEN}"
+		url = BASE_URL + "#{search}" + "&app_id=#{ID}" + "&app_key=#{KEY}"
 
 		response = HTTParty.get(url)
 
@@ -25,9 +43,6 @@ class RecipeApiWrapper
 		#   return []
 		# end
 
-	# return response["channels"].map do |raw_channel|
-		# creating instances of channels
-		# requires Recipe class
 		return response.map do |raw_hit|
 			Recipe.from_api(raw_hit)
 		end

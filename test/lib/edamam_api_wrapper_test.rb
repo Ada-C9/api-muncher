@@ -55,7 +55,7 @@ describe EdamamApiWrapper do
 
     it "returns return nil if given invalid recipe id" do
       VCR.use_cassette("recipes") do
-        recipe_found = EdamamApiWrapper.find_recipe(1)
+        recipe_found = EdamamApiWrapper.find_recipe("12345678123456781234567812345678")
 
         recipe_found.must_be_nil
       end

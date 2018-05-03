@@ -1,19 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+  <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
 
-    <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
-    <%= csrf_meta_tags %>
-  </head>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
 
-  <body>
+  <header>
+    <!-- Menu for searching available in every page: -->
+    <h1 class="recipe-search">Muncher</h1>
 
-    <%= yield %>
+    <%= form_tag search_results_path, method: :get do %>
+    <%= label_tag(:query, "Enter term") %>
+    <%= text_field_tag(:query) %>
+    <%= submit_tag("Search") %>
+    <% end %>
+  </header>
 
-  </body>
+</head>
+
+<body>
+
+  <%= yield %>
+
+</body>
+
+<footer>
+  <p>Powered by Edamam</p>
+</footer>
+
 </html>

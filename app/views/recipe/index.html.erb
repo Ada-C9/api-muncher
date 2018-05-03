@@ -1,2 +1,9 @@
-<h1>Recipe#index</h1>
-<p>Find me in app/views/recipe/index.html.erb</p>
+<h1>Search Results for <%= @search_terms%></h1>
+<section class="results-container">
+  <% @recipes.each do |recipe| %>
+    <section class="result">
+      <%= image_tag recipe.photo %>
+      <h4><%= recipe.name %></h4>
+    </section>
+  <% end %>
+</section>

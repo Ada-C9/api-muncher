@@ -1,0 +1,13 @@
+
+<section>
+  <h2>Your recipes:</h2>
+  <ul>
+    <% @recipes.each do |recipe| %>
+
+    <li>
+      <img src="<%=recipe.image%>" alt="<%=recipe.label%>">
+      <%=link_to recipe.label, recipe_path(recipe.uri)%>
+    </li>
+    <%end%>
+  </ul>
+</section>

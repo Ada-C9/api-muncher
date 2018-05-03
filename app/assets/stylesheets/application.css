@@ -17,3 +17,19 @@
  *= require foundation_and_overrides
 
  */
+
+ li {
+   list-style-type: none;
+ }
+
+.pagination a {
+  display: inline;
+}
+
+a.single_recipe {
+  display: block;
+}
+
+div.pagination {
+  text-align: center;
+}

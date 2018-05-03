@@ -1,8 +1,9 @@
 class Recipe
   #make the data that comes back from the API feel like a model, we are imitation the data the active record is sending, because an instance of a class is more managable for us.
-  attr_reader :label, :image, :health, :ingredient, :share, :uri
+  attr_reader :label, :image, :health, :ingredients, :share, :uri
 
   def initialize(label, image, health, ingredients, share, uri)
+
     #this is a lazy validation:
     if label.nil? || label.empty?
       raise ArgumentError.new("No recipe name")
@@ -10,7 +11,7 @@ class Recipe
     @label = label
     @image = image
     @health = health
-    @ingridients = ingredients
+    @ingredients = ingredients
     @share = share
     @uri = uri
   end
@@ -18,11 +19,12 @@ class Recipe
 
   def self.from_api(raw_recipe)
     self.new(
-      raw_recipe["recipe"]["label"],
-      raw_recipe["recipe"]["image"],
-      raw_recipe["recipe"]["healthlevels"],
-      raw_recipe["recipe"]["ingredientlines"],
-      raw_recipe["recipe"]["shareAs"],
-      raw_recipe["recipe"]["uri"].split("_").last)
+      raw_recipe["label"],
+      raw_recipe["image"],
+      raw_recipe["healthLevels"],
+      raw_recipe["ingredientLines"],
+      raw_recipe["shareAs"],
+      raw_recipe["uri"].split("_").last)
     end
+
   end

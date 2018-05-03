@@ -17,3 +17,12 @@
  *= require foundation_and_overrides
 
  */
+
+ body {
+   background: rgb(243, 244, 220);
+   font-family: 'Overpass', sans-serif;
+ }
+
+ h2 {
+   color: #aaa;
+ }

@@ -9,9 +9,16 @@
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+    <link href="https://fonts.googleapis.com/css?family=Overpass" rel="stylesheet">
   </head>
 
   <body>
+    <header>
+      <%= form_tag recipes_path, {:method => :get} do %>
+      <%= label_tag :query, "Search Recipe" %>
+      <%= text_field_tag :query, params[:query] %>
+      <%end%>
+    </header>
 
     <%= yield %>
 

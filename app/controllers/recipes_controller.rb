@@ -9,6 +9,7 @@ end
 
   def show
 
-    @recipe = EdamamApiWrapper.one_recipe(params[:uri])
+    @recipe = EdamamApiWrapper.one_recipe(params[:id])
+
   end
 end

@@ -4,11 +4,13 @@ require 'pry'
 class RecipeApiWrapper
   class RecipeError < StandardError; end
 
-  def self.list_recipes
-    api_key = ENV["EDAMAM_API_KEY"]
-    api_id = ENV["EDAMAM_API_ID"]
+  API_KEY = ENV["EDAMAM_API_KEY"]
+  API_ID = ENV["EDAMAM_API_ID"]
 
-    url = "https://api.edamam.com/search?app_id=#{api_id}&app_key=#{api_key}&q=chicken"
+  def self.list_recipes
+
+    query = "chicken pesto"
+    url = "https://api.edamam.com/search?app_id=#{API_ID}&app_key=#{API_KEY}&q=#{query}"
 
     response = HTTParty.get(url)
     #ALWAYS CHECK YOUR ERROR CODES
@@ -21,8 +23,16 @@ class RecipeApiWrapper
     end
   end
 
-  def self.show_recipe(url)
+  def self.show_recipe(uri)
+    url = "https://api.edamam.com/search?app_id=#{API_ID}&app_key=#{API_KEY}&r=#{uri}"
 
+    response = HTTParty.get(url)
+    #ALWAYS CHECK YOUR ERROR CODES
+    unless response.success?
+      raise StandardError.new(response["error"])
+    end
+
+    Recipe.from_api(response[0])
   end
 
   private

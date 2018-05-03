@@ -17,9 +17,4 @@ it "can get the new recipe form" do
   must_respond_with :ok
 end
 
-# it "can send a message" do
-#   post chat_create_path("PLACEHOLDER")
-#
-#   must_redirect_to root_path
-# end
 end

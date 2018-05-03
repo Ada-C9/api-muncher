@@ -1,0 +1,6 @@
+<%= form_tag recipes_path(@label), method: "get" do %>
+  <%= label_tag(:message, "Enter Recipe name") %>
+  <%= text_field_tag(:message) %>
+  <%= submit_tag("Search") %>
+
+<% end %>

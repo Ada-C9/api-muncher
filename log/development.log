@@ -1,0 +1,210 @@
+Started GET "/" for 127.0.0.1 at 2018-05-02 16:51:57 -0700
+
+NameError - uninitialized constant RecipeController:
+
+Started POST "/__better_errors/9dd5f1a9872624cd/variables" for 127.0.0.1 at 2018-05-02 16:51:57 -0700
+Started POST "/__better_errors/9dd5f1a9872624cd/variables" for 127.0.0.1 at 2018-05-02 16:52:28 -0700
+Started POST "/__better_errors/9dd5f1a9872624cd/variables" for 127.0.0.1 at 2018-05-02 16:52:29 -0700
+Started POST "/__better_errors/9dd5f1a9872624cd/variables" for 127.0.0.1 at 2018-05-02 16:52:29 -0700
+Started POST "/__better_errors/9dd5f1a9872624cd/variables" for 127.0.0.1 at 2018-05-02 16:52:30 -0700
+Started GET "/" for 127.0.0.1 at 2018-05-02 16:53:36 -0700
+Processing by RecipesController#index as HTML
+Completed 500 Internal Server Error in 213ms
+
+
+
+NoMethodError - undefined method `search_recipes' for EdemamApiWrapper:Module:
+  app/controllers/recipes_controller.rb:6:in `index'
+  app/controllers/recipes_controller.rb:18:in `catch_api_error'
+
+Started POST "/__better_errors/603fd6a7a16abb7a/variables" for 127.0.0.1 at 2018-05-02 16:53:36 -0700
+Started GET "/" for 127.0.0.1 at 2018-05-02 16:55:04 -0700
+Processing by RecipesController#index as HTML
+Completed 500 Internal Server Error in 3ms
+
+
+
+NoMethodError - undefined method `search_recipes' for EdemamApiWrapper:Module:
+  app/controllers/recipes_controller.rb:6:in `index'
+  app/controllers/recipes_controller.rb:18:in `catch_api_error'
+
+Started POST "/__better_errors/44d4b47353444630/variables" for 127.0.0.1 at 2018-05-02 16:55:04 -0700
+Started POST "/__better_errors/44d4b47353444630/eval" for 127.0.0.1 at 2018-05-02 16:55:11 -0700
+Started POST "/__better_errors/44d4b47353444630/eval" for 127.0.0.1 at 2018-05-02 16:55:23 -0700
+Started GET "/" for 127.0.0.1 at 2018-05-02 16:55:54 -0700
+Processing by RecipesController#index as HTML
+Completed 500 Internal Server Error in 4ms
+
+
+
+NoMethodError - undefined method `self' for EdemamApiWrapper:Module
+Did you mean?  itself:
+  app/controllers/recipes_controller.rb:6:in `index'
+  app/controllers/recipes_controller.rb:18:in `catch_api_error'
+
+Started POST "/__better_errors/411bd13fba738246/variables" for 127.0.0.1 at 2018-05-02 16:55:54 -0700
+Started GET "/" for 127.0.0.1 at 2018-05-02 16:57:10 -0700
+Processing by RecipesController#index as HTML
+Completed 500 Internal Server Error in 4ms
+
+
+
+NoMethodError - undefined method `search_recipes' for EdemamApiWrapper:Module:
+  app/controllers/recipes_controller.rb:6:in `index'
+  app/controllers/recipes_controller.rb:18:in `catch_api_error'
+
+Started POST "/__better_errors/70155789f399ba56/variables" for 127.0.0.1 at 2018-05-02 16:57:11 -0700
+Started POST "/__better_errors/70155789f399ba56/eval" for 127.0.0.1 at 2018-05-02 16:57:49 -0700
+Started POST "/__better_errors/70155789f399ba56/eval" for 127.0.0.1 at 2018-05-02 16:58:05 -0700
+Started GET "/" for 127.0.0.1 at 2018-05-02 16:58:58 -0700
+Processing by RecipesController#index as HTML
+Completed 500 Internal Server Error in 229ms
+
+
+
+NoMethodError - undefined method `search_recipes' for EdemamApiWrapper:Module:
+  app/controllers/recipes_controller.rb:6:in `index'
+  app/controllers/recipes_controller.rb:18:in `catch_api_error'
+
+Started POST "/__better_errors/8ad72ebc835c4189/variables" for 127.0.0.1 at 2018-05-02 16:58:58 -0700
+Started POST "/__better_errors/8ad72ebc835c4189/eval" for 127.0.0.1 at 2018-05-02 16:59:32 -0700
+Started POST "/__better_errors/8ad72ebc835c4189/eval" for 127.0.0.1 at 2018-05-02 17:00:03 -0700
+Started GET "/" for 127.0.0.1 at 2018-05-02 17:01:15 -0700
+Processing by RecipesController#index as HTML
+Completed 500 Internal Server Error in 4ms
+
+
+
+NoMethodError - undefined method `search_recipes' for EdemamApiWrapper:Module:
+  app/controllers/recipes_controller.rb:6:in `index'
+  app/controllers/recipes_controller.rb:18:in `catch_api_error'
+
+Started POST "/__better_errors/ebe4c09a98ed4c03/variables" for 127.0.0.1 at 2018-05-02 17:01:15 -0700
+Started POST "/__better_errors/ebe4c09a98ed4c03/eval" for 127.0.0.1 at 2018-05-02 17:01:21 -0700
+Started POST "/__better_errors/ebe4c09a98ed4c03/eval" for 127.0.0.1 at 2018-05-02 17:01:40 -0700
+Started GET "/" for 127.0.0.1 at 2018-05-02 17:04:16 -0700
+Processing by RecipesController#index as HTML
+Completed 500 Internal Server Error in 4ms
+
+
+
+NoMethodError - undefined method `search_recipes' for EdemamApiWrapper:Module:
+  app/controllers/recipes_controller.rb:6:in `index'
+  app/controllers/recipes_controller.rb:18:in `catch_api_error'
+
+Started POST "/__better_errors/d5707294cfd1fec1/variables" for 127.0.0.1 at 2018-05-02 17:04:16 -0700
+Started GET "/" for 127.0.0.1 at 2018-05-02 17:04:45 -0700
+Processing by RecipesController#index as HTML
+Completed 500 Internal Server Error in 3ms
+
+
+
+NoMethodError - undefined method `search_recipes' for EdemamApiWrapper:Module:
+  app/controllers/recipes_controller.rb:6:in `index'
+  app/controllers/recipes_controller.rb:18:in `catch_api_error'
+
+Started POST "/__better_errors/3e4e53cfd6856623/variables" for 127.0.0.1 at 2018-05-02 17:04:46 -0700
+Started GET "/" for 127.0.0.1 at 2018-05-02 17:06:34 -0700
+Processing by RecipesController#index as HTML
+Completed 500 Internal Server Error in 3ms
+
+
+
+NoMethodError - undefined method `search_recipes' for EdemamApiWrapper:Module:
+  app/controllers/recipes_controller.rb:6:in `index'
+  app/controllers/recipes_controller.rb:18:in `catch_api_error'
+
+Started POST "/__better_errors/2276da4b99d6172f/variables" for 127.0.0.1 at 2018-05-02 17:06:35 -0700
+Started GET "/" for 127.0.0.1 at 2018-05-02 17:06:55 -0700
+Processing by RecipesController#index as HTML
+Completed 500 Internal Server Error in 321ms
+
+
+
+SyntaxError - dynamic constant assignment
+    BASE_URL = "https://api.edamam.com "
+              ^
+/Users/analisasutherland/Documents/Ada_Developers_Academy/May_2018/Week_1/api-muncher/lib/edemam_api_wrapper.rb:8: dynamic constant assignment
+    TOKEN = ENV["EDEMAM_TOKEN"]
+           ^
+/Users/analisasutherland/Documents/Ada_Developers_Academy/May_2018/Week_1/api-muncher/lib/edemam_api_wrapper.rb:9: dynamic constant assignment
+    API_ID = ENV["EDEMAM_ID"]
+            ^:
+  lib/edemam_api_wrapper.rb:7:in `'
+  app/controllers/recipes_controller.rb:6:in `index'
+  app/controllers/recipes_controller.rb:18:in `catch_api_error'
+
+Started POST "/__better_errors/71982e2bb4c5d478/variables" for 127.0.0.1 at 2018-05-02 17:06:55 -0700
+Started GET "/" for 127.0.0.1 at 2018-05-02 17:07:19 -0700
+Processing by RecipesController#index as HTML
+Completed 500 Internal Server Error in 25ms
+
+
+
+LoadError - cannot load such file -- httparty:
+  lib/edemam_api_wrapper.rb:1:in `<top (required)>'
+  app/controllers/recipes_controller.rb:6:in `index'
+  app/controllers/recipes_controller.rb:18:in `catch_api_error'
+
+Started POST "/__better_errors/ad48184b73261fb0/variables" for 127.0.0.1 at 2018-05-02 17:07:19 -0700
+Started GET "/" for 127.0.0.1 at 2018-05-02 17:08:19 -0700
+Processing by RecipesController#index as HTML
+Completed 500 Internal Server Error in 305ms
+
+
+
+LoadError - cannot load such file -- httparty:
+  lib/edemam_api_wrapper.rb:1:in `<top (required)>'
+  app/controllers/recipes_controller.rb:6:in `index'
+  app/controllers/recipes_controller.rb:18:in `catch_api_error'
+
+Started POST "/__better_errors/ce5e0e428669f72d/variables" for 127.0.0.1 at 2018-05-02 17:08:20 -0700
+Started GET "/" for 127.0.0.1 at 2018-05-02 17:09:01 -0700
+Processing by RecipesController#index as HTML
+Completed 500 Internal Server Error in 5ms
+
+
+
+LoadError - cannot load such file -- httparty:
+  lib/edemam_api_wrapper.rb:1:in `<top (required)>'
+  app/controllers/recipes_controller.rb:6:in `index'
+  app/controllers/recipes_controller.rb:18:in `catch_api_error'
+
+Started POST "/__better_errors/a665738c71228a58/variables" for 127.0.0.1 at 2018-05-02 17:09:01 -0700
+Started GET "/" for 127.0.0.1 at 2018-05-02 17:09:28 -0700
+Processing by RecipesController#index as HTML
+Completed 500 Internal Server Error in 202ms
+
+
+
+ArgumentError - wrong number of arguments (given 0, expected 1):
+  lib/edemam_api_wrapper.rb:9:in `search_recipes'
+  app/controllers/recipes_controller.rb:6:in `index'
+  app/controllers/recipes_controller.rb:18:in `catch_api_error'
+
+Started POST "/__better_errors/31c55c4b97b7337d/variables" for 127.0.0.1 at 2018-05-02 17:09:29 -0700
+Started GET "/" for 127.0.0.1 at 2018-05-02 17:21:14 -0700
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (3.1ms)
+Started GET "/" for 127.0.0.1 at 2018-05-02 17:21:15 -0700
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 15240ms (Views: 15236.5ms)
+
+
+Completed 200 OK in 16561ms (Views: 16242.1ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2018-05-02 17:22:16 -0700
+Processing by RecipesController#search as HTML
+Completed 500 Internal Server Error in 1ms
+
+
+
+RuntimeError - :
+  app/controllers/recipes_controller.rb:11:in `search'
+  app/controllers/recipes_controller.rb:23:in `catch_api_error'
+
+Started POST "/__better_errors/22d71f3f1a0ba813/variables" for 127.0.0.1 at 2018-05-02 17:22:16 -0700

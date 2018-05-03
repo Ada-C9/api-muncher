@@ -1,6 +1,7 @@
 require 'httparty'
 
 class EdemamApiWrapper
+  class EdemamError < StandardError; end
   BASE_URL = "https://api.edamam.com "
   TOKEN = ENV["EDEMAM_TOKEN"]
   API_ID = ENV["EDEMAM_ID"]
@@ -14,4 +15,5 @@ class EdemamApiWrapper
       return []
     end
   end
+
 end

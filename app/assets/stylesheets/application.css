@@ -26,8 +26,72 @@ font-family: 'Old Standard TT', serif; */
  /* #05807E; green; */
 
 /*--------- global ---------*/
+body {
+  background-image: url('background.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+html, body {
+  height: 100%;
+}
+/********** text **********/
+body, h2, h3, h4, h5, p, label {
+  font-family: 'Old Standard TT', serif;
+  color: white;
+}
+
+h1 {
+  font-family: 'IM Fell French Canon', serif;
+}
+
+.button {
+  font-size: 1.5rem;
+  padding: 0.8rem;
+  background-color: #05807E;
+}
+
+/********** flash **********/
+.callout {
+  border: none;
+  text-align: center;
+  background: none;
+}
+
+.callout .success {
+  color: green;
+}
+
+.callout .error, .callout .alert {
+  color: red;
+}
+
+/********** main **********/
+.main-container, .home {
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-around;
+}
 
 /*--------- home ---------*/
+.home a {
+  font-size: 7rem;
+  color: #05807E;
+}
+
+.search-container {
+  width: 50%;
+}
+
+.search-container label {
+  font-size: 2rem;
+  text-align: left;
+}
 
 /*--------- index ---------*/
 

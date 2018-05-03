@@ -1,9 +1,11 @@
-<h1><%= link_to "MUNCHER", root_path %></h1>
+<div class="home">
+  <h1><%= link_to "MUNCHER", root_path %></h1>
 
-<section class="search-container">
-  <%= form_tag(recipes_path, method: :get) do %>
+  <section class="search-container">
+    <%= form_tag(recipes_path, method: :get) do %>
     <%= label_tag "Find you flavor..." %>
-    <%= text_field_tag :term, nil, placeholder: "🔍" %>
-    <%= submit_tag 'Search', class: "button" %>
-  <% end %>
-</section>
+    <%= text_field_tag :term, nil, placeholder: "🔍", class: "search-box" %>
+    <%= submit_tag 'Search', class: "search button" %>
+    <% end %>
+  </section>
+</div>

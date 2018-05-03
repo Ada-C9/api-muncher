@@ -17,4 +17,8 @@ class Recipe
     @healthLabels =  options[:healthLabels]
   end
 
+  def uri_trim
+    return self.uri[/(?<=_)[a-zA-Z0-9]+/]
+  end
+
 end

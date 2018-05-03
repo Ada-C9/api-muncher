@@ -6,6 +6,7 @@ describe Recipe do
       "uri" => "http://www.edamam.com/ontologies/edamam.owl#recipe_b66666d5c882ca199f43def8f1b8a03f",
       "label" => "Caramel Cake",
       "image" => "https://www.edamam.com/web-img/482/482417e9943411f0e7db4be74a7b5114.jpg",
+      "source" => "Serious Eats",
       "url" => "http://www.lottieanddoof.com/2009/02/my-favorite-cake-period/",
       "dietLabels" => [ ],
       "ingredients" => [

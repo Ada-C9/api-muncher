@@ -78,10 +78,6 @@ div.submit {
   text-align: center;
 }
 
-/* input.button {
-  width: 15%;
-} */
-
 /* LIST */
 section.list {
   color: white;
@@ -117,6 +113,16 @@ a.single_recipe {
 
 div#search_button {
   text-align: center;
+}
+
+/* SHOW */
+section.show {
+  color: white;
+  background-color: black;
+}
+
+div.show-item {
+  /* display: inline-block; */
 }
 
 /* FOOTER */

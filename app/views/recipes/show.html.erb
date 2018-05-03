@@ -1,24 +1,29 @@
-<section>
-  <h1><%= @recipe.name %></h1>
+<section class="show">
 
-  <img src="<%= @recipe.image %>" alt= "<%= @recipe.name %>" >
-  <p><%= link_to 'Original Recipe', @recipe.url %></p>
-  <p>Ingredients: </p>
-  <ul>
-    <% @recipe.ingredients.each do |ingredient| %>
-      <li><%= ingredient["text"] %></li>
-    <% end %>
-  </ul>
-  <p>Dietary Info: </p>
-  <ul>
-    <% if @recipe.dietary_info == [] %>
-      <p>None</p>
-    <% else %>
-      <% @recipe.dietary_info.each do |label| %>
-      <li><%= label %></li>
+  <div class="show-item">
+    <h2><%= @recipe.name %></h2>
+    <img src="<%= @recipe.image %>" alt= "<%= @recipe.name %>">
+    <p><%= link_to 'Original Recipe', @recipe.url %></p>
+  </div>
+
+  <div class="show-item">
+    <p>Ingredients: </p>
+    <ul>
+      <% @recipe.ingredients.each do |ingredient| %>
+        <li><%= ingredient["text"] %></li>
       <% end %>
-    <% end %>
-  </ul>
+    </ul>
+    <p>Dietary Info: </p>
+    <ul>
+      <% if @recipe.dietary_info == [] %>
+        <p>None</p>
+      <% else %>
+        <% @recipe.dietary_info.each do |label| %>
+        <li><%= label %></li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
 
-  <%= link_to 'Back to search', root_path %>
 </section>
+<%= link_to 'New Search', root_path, class: "button" %>

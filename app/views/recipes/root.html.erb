@@ -1,0 +1,7 @@
+<h1>I am root</h1>
+
+<%= form_tag query_recipe_path, method: :get do %>
+  <p><%= label_tag(:query, "Find a thing to cook") %></p>
+  <p><%= text_field_tag(:query) %></p>
+  <p><%= submit_tag("Find", class: "button") %></p>
+<% end %>

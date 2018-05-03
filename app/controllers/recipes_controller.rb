@@ -6,7 +6,7 @@ class RecipesController < ApplicationController
 
   def index
     @query = params[:query]
-    recipes = RecipeSearchWrapper.search_recipes(@query)
+    return @recipes = RecipeSearchWrapper.search_recipes(@query)
   end
 
   def show

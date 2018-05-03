@@ -1,1 +1,18 @@
-<h1><%= recipe.label %></h1>
+<h1><%= @recipe.label %></h1>
+<%= link_to ("Original Recipe"), @recipe.url %>
+<%= @recipe.servings.to_i %>
+<%= @recipe.ingredients.each do |ingredient| %>
+  <%= puts ingredient %>
+<% end %>
+<%= @recipe.health_labels.each do |health_label| %>
+  <%= puts health_label %>
+<% end %>
+<%= @recipe.calories %>
+<%= @recipe.fat %>
+<%= @recipe.saturated_fat %>
+<%= @recipe.mono_fat %>
+<%= @recipe.carbs %>
+<%= @recipe.protein %>
+<%= @recipe.sodium %>
+<%= @recipe.fiber %>
+<%= @recipe.cholesterol %>

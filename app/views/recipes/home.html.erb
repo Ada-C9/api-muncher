@@ -2,6 +2,7 @@
 
 <section class="search-container">
   <%= form_tag(recipes_path, method: :get) do %>
+    <%= label_tag "Find you flavor..." %>
     <%= text_field_tag :term, nil, placeholder: "🔍" %>
     <%= submit_tag 'Search', class: "button" %>
   <% end %>

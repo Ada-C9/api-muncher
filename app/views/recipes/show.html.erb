@@ -1,2 +1,24 @@
 <h1>Recipes#show</h1>
 <p>Find me in app/views/recipes/show.html.erb</p>
+
+<%= render partial: "form" %>
+
+<p>  <%= image_tag(@recipe.image, alt: @recipe.label) %>  </p>
+<h3> <%= @recipe.label %> </h3>
+<h5>By <%= @recipe.source %> </h5>
+
+<% if @recipe.ingredients != nil  %>
+<% @recipe.ingredients.each do |i| %>
+<ul>
+  <li> <%= i %> </li>
+</ul>
+<% end %>
+<% end %>
+
+<% if @recipe.diet_labels != nil %>
+<% @recipe.diet_labels.each do |i| %>
+<ul>
+  <li> <%= i %> </li>
+</ul>
+<% end %>
+<% end %>

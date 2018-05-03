@@ -13,9 +13,9 @@ class RecipesController < ApplicationController
         session[:term] = params[:term]
       end
     else
-      flash.now[:status] = :failure
-      flash.now[:result_text] = "Please enter a valid term for searching"
-      render :home, status: :bad_request
+      flash[:status] = :failure
+      flash[:result_text] = "Please enter a valid term for searching"
+      redirect_to root_path
     end
   end
 

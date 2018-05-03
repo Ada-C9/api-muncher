@@ -38,9 +38,10 @@ describe RecipesController do
           term: nil
         }
 
-        flash.now[:status].must_equal :failure
-        flash.now[:result_text].must_equal "Please enter a valid term for searching"
-        must_respond_with :bad_request
+        flash[:status].must_equal :failure
+        flash[:result_text].must_equal "Please enter a valid term for searching"
+        must_respond_with :redirect
+        must_redirect_to root_path
       end
     end
 
@@ -50,9 +51,10 @@ describe RecipesController do
           term: "     "
         }
 
-        flash.now[:status].must_equal :failure
-        flash.now[:result_text].must_equal "Please enter a valid term for searching"
-        must_respond_with :bad_request
+        flash[:status].must_equal :failure
+        flash[:result_text].must_equal "Please enter a valid term for searching"
+        must_respond_with :redirect
+        must_redirect_to root_path
       end
     end
   end

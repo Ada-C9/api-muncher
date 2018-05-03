@@ -8,8 +8,8 @@
 
   "more" : true,
   "count" : 14936,
-  "hits" : [ { 			  # start of hits
-  	"recipe" : { 										 # start of first recipe
+  "hits" : [ {               # start of hits
+  	"recipe" : {                # start of first recipe
   	 	"uri" : "http://www.edamam.com/ontologies/edamam.owl recipe_3da...dee89f",
   	 	"label" : "Grilled Butterflied Chicken Recipe",
   	 	"image" : "https://www.edamam.com/web-img/7a2/7a2f41a78...30c6463.jpg",
@@ -23,11 +23,11 @@
   	 	"ingredientLines" : [ "1 whole chicken, 3 1/2 to 4 pounds",
                            "Kosher salt and freshly ground black pepper" ],
   		# ... more stuff
-  	}, 																 # end of first recipe
-   	"recipe" : {											 # start of next recipe
+  	},                          # end of first recipe
+   	"recipe" : {                # start of next recipe
   	  #	...
-  	}																	 # end of next recipe
-  ]										#  end of hits
+  	}                           # end of next recipe
+  ]                        #  end of hits
 
 
 ################################################################################
@@ -36,40 +36,40 @@
     Parameter | Required | Type    | Description
   +-----------+----------+---------+-------------------------------------------+
     q         | yes*     | string  | Query text. For example q=chicken. This or
-  						|					 |				 | the r parameter are required
+              |          |         | the r parameter are required
   +-----------+----------+---------+-------------------------------------------+
     r         | yes*     | string  | Returns information about a specific recipe
-  						|					 |				 | based on its ID ie. -r=http%3A%2F%2Fwww.
-  						|				   |				 | edamam.com%2Fontologies%2Fedamam.owl%23r
-  						|					 |			   | ecipe_9b5945e03f05acbf9d69625138385408
-  						|					 |				 | This or the q parameter are required
+              |          |         | based on its ID ie. -r=http%3A%2F%2Fwww.
+              |          |         | edamam.com%2Fontologies%2Fedamam.owl%23r
+              |          |         | ecipe_9b5945e03f05acbf9d69625138385408
+              |          |         | This or the q parameter are required
   +-----------+----------+---------+-------------------------------------------+
     app_id    | yes      | string  | Your 3scale application ID
   +-----------+----------+---------+-------------------------------------------+
     app_key   | yes      | string  | Your 3scale application key
   +-----------+----------+---------+-------------------------------------------+
     from      | no       | integer | First result index (default 0).
- 							|					 |				 | Example: from=20
+              |          |         | Example: from=20
   +-----------+----------+---------+-------------------------------------------+
     to        | no       | integer | Last result index (exclusive, default
-  						|					 |				 | from + 10). Example: to=30
+              |          |         | from + 10). Example: to=30
   +-----------+----------+---------+-------------------------------------------+
     ingr      | no       | integer | Maximum number of ingredients.
- 							|					 |				 | Example: ingr=5
+              |	         |         | Example: ingr=5
   +-----------+----------+---------+-------------------------------------------+
     diet      | no       | enum    | Diet label: one of “balanced”,
- 							|					 |				 |	 “high-protein”, “high-fiber”, “low-fat”,
- 							|					 |				 | “low-carb”, “low-sodium”
+              |	         |         | “high-protein”, “high-fiber”, “low-fat”,
+              |	         |         | “low-carb”, “low-sodium”
   +-----------+----------+---------+-------------------------------------------+
     health    | no       | enum    | Health label: One of the Health api params
-  						|					 |			   | listed in Diet and Health Labels table
-  						|					 |				 | in documentation. For example:
-  						|					 |				 | “peanut-free”, “tree-nut-free”, “soy-free”,
-  						|					 |				 | “fish-free”, “shellfish-free”
+              |          |         | listed in Diet and Health Labels table
+              |          |         | in documentation. For example:
+              |          |         | “peanut-free”, “tree-nut-free”, “soy-free”,
+              |          |         | “fish-free”, “shellfish-free”
   +-----------+----------+---------+-------------------------------------------+
     callback  | no       | string  | Callback parameter for JSONP. This will
-  						|					 |			   | “envelop” result in a JavaScript function
-  						|					 |			   | call to the specified callback. Optional
+              |          |         | “envelop” result in a JavaScript function
+              |          |         | call to the specified callback. Optional
   +-----------+----------+---------+-------------------------------------------+
   * Exactly one of these ( q / r ) must be present
 

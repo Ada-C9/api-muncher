@@ -1,0 +1,19 @@
+<h1>Recipe Details</h1>
+
+<p><%= @recipe.name %></p>
+<img src="<%= @recipe.image %>">
+<p><%= @recipe.url %></p>
+<p>Ingredients:</p>
+<ul>
+  <% @recipe.ingredients.each do |ingredient| %>
+  <li><%= ingredient %></li>
+  <% end %>
+</ul>
+
+
+<p>Dietary Labels:</p>
+<ul>
+  <% @recipe.dietary_info.each do |label| %>
+  <li><%= label %></li>
+  <% end %>
+</ul>

@@ -1,2 +1,17 @@
-<h1>Recipes#index</h1>
-<p>Find me in app/views/recipes/index.html.erb</p>
+<h2>Recipes for <%= @query %></h2>
+
+<section>
+  <% if @recipes %>
+  <ul>
+    <% @recipes.each do |recipe| %>
+    <li>
+      <%= recipe.label %>
+    </li>
+    <% end %>
+  </ul>
+  <% else %>
+  <p>
+  None found!
+  </p>
+  <% end %>
+</section>

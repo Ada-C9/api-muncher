@@ -3,7 +3,7 @@
   <div class="show-item">
     <h2><%= @recipe.name %></h2>
     <img src="<%= @recipe.image %>" alt= "<%= @recipe.name %>">
-    <p><%= link_to 'Original Recipe', @recipe.url %></p>
+    <p>Source: <%= link_to @recipe.source, @recipe.url %></p>
   </div>
 
   <div class="show-item">

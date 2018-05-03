@@ -1,0 +1,8 @@
+<h1>Api-Tizing</h1>
+
+<%= form_tag recipes_path, method: "get" do %>
+  <%= label_tag(:text, "Enter an ingredient") %>
+  <%= text_field_tag(:text) %>
+  <%= submit_tag("Search") %>
+
+<% end %>

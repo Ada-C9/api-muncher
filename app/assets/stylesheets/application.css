@@ -17,3 +17,24 @@
  *= require foundation_and_overrides
 
  */
+
+#root-title {
+  text-align: center;
+}
+
+/*#search-bar {
+  text-align: center;
+}*/
+
+#edamam-badge {
+  text-align: center;
+}
+
+.card {
+  min-width: 300px;
+  max-width: 300px;
+}
+
+.card-picture {
+  text-align: center;
+}

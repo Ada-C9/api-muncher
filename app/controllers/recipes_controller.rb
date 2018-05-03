@@ -5,8 +5,8 @@ class RecipesController < ApplicationController
   end
 
   def index
-    query = params[:query]
-    @recipes = MuncherApiWrapper.get_recipes(query)
+    @query = params[:query]
+    @recipes = MuncherApiWrapper.get_recipes(@query, params[:page])
   end
 
   def show

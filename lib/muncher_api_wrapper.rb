@@ -1,5 +1,3 @@
-require 'pry'
-
 class MuncherApiWrapper
   include HTTParty
 

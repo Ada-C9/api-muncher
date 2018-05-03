@@ -1,4 +1,3 @@
-require 'pry'
 class RecipesController < ApplicationController
 
   def root

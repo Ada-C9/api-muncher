@@ -1,24 +1,77 @@
-<h1>Recipes#show</h1>
-<p>Find me in app/views/recipes/show.html.erb</p>
-
+<title>Show Recipe</title>
 <%= render partial: "form" %>
 
-<p>  <%= image_tag(@recipe.image, alt: @recipe.label) %>  </p>
-<h3> <%= @recipe.label %> </h3>
-<h5>By <%= @recipe.source %> </h5>
+<section class="recipe-details">
 
-<% if @recipe.ingredients != nil  %>
-<% @recipe.ingredients.each do |i| %>
-<ul>
-  <li> <%= i %> </li>
-</ul>
-<% end %>
-<% end %>
+  <section class="page-headline">
+    <h2> <%= @recipe.label %> </h2>
+    <h5>By <%= link_to @recipe.source, @recipe.url %> </h5> <!--TODO: add link to source-->
+  </section>
 
-<% if @recipe.diet_labels != nil %>
-<% @recipe.diet_labels.each do |i| %>
-<ul>
-  <li> <%= i %> </li>
-</ul>
-<% end %>
-<% end %>
+  <image>
+    <%= image_tag(@recipe.image, alt: @recipe.label) %>
+  </image>
+
+  <p>Original recipe URL: <%= @recipe.url %> </p> <!--TODO: delete line?-->
+  <p>Number of servings: <%= @recipe.yield.to_i %> </p>
+  <p>Total energy: <%= @recipe.calories.to_i %> kcal </p> <!--TODO: need conversion?-->
+  <p>Total weight: <%= @recipe.totalWeight.to_i %> g </p>
+
+  <section class="recipe-list ingredients">
+    <h5>Ingredients list </h5>
+    <% if @recipe.ingredients != nil  %>
+    <% @recipe.ingredients.each do |i| %>
+    <ul>
+      <li> <%= i["text"] %> </li> <!--TODO: figure out ingrediant syntax-->
+    </ul>
+    <% end %>
+    <% end %>
+  </section>
+
+  <section class="recipe-list nutrition">
+    <h5> Total nutrients for the entire recipe </h5>
+    <% if @recipe.totalNutrients != nil %>
+    <% @recipe.totalNutrients.each do |i| %>
+    <ul>
+      <li> <%= "#{i[1]["label"]}: #{i[1]["quantity"].to_i} #{i[1]["unit"]}"%> </li>
+    </ul>
+    <% end %>
+    <% end %>
+  </section>
+
+  <section class="recipe-list nutrition">
+    <h5> Percent daily value for the entire recipe </h5>
+    <% if @recipe.totalDaily != nil %>
+    <% @recipe.totalDaily.each do |i| %>
+    <ul>
+      <li> <%= "#{i[1]["label"]}: #{i[1]["quantity"].to_i}#{i[1]["unit"]}"%> </li>
+    </ul>
+    <% end %>
+    <% end %>
+  </section>
+
+  <section class="recipe-list labels">
+    <h5>Diet labels</h5>
+    <% if @recipe.dietLabels != nil %>
+    <% @recipe.dietLabels.each do |i| %>
+    <ul>
+      <li> <%= i %> </li>
+    </ul>
+    <% end %>
+    <% end %>
+  </section>
+
+  <section class="recipe-list labels">
+    <h5>Health labels</h5>
+    <% if @recipe.healthLabels != nil %>
+    <% @recipe.healthLabels.each do |i| %>
+    <ul>
+      <li> <%= i %> </li>
+    </ul>
+    <% end %>
+    <% end %>
+  </section>
+
+</section>
+
+</section>

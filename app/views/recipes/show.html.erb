@@ -1,7 +1,7 @@
 <div class="show-head">
   <h1><%= @recipe.title %></h1>
   <p>
-    By <%= @recipe.source %>
+    By <%= link_to @recipe.source, @recipe.link %>
   </p>
 </div>
 

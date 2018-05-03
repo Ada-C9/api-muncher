@@ -1,0 +1,23 @@
+<h2><%= @recipe.name %></h2>
+
+<img src="<%= @recipe.photo_url %>" />
+
+<%= link_to 'Ver receta', @recipe.original_recipe_url %>
+
+<h4>Ingredientes</h4>
+<ul>
+  <% @recipe.ingredients.each do |ingredient| %>
+  <li>
+    <%= ingredient %>
+  </li>
+  <% end %>
+</ul>
+
+<h4>Información Dietética</h4>
+<ul>
+  <% @recipe.dietary_labels.each do |label| %>
+  <li>
+    <%= label %>
+  </li>
+  <% end %>
+</ul>

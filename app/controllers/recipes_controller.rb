@@ -2,18 +2,17 @@ class RecipesController < ApplicationController
   around_action :catch_api_error
 
   # return a list of searched recipes
-  def index
-    # Need to turn this into a blank and waiting search bar
-    # @recipes = EdemamApiWrapper.search_recipes
-  end
 
-  def search
-    raise
+  # Need to turn this into a blank and waiting search bar
+  def search ;end
+
+  def index
+    @recipes = EdemamApiWrapper.search_recipes(params[:query])
   end
 
   # Show a found recipes details
   # def show
-
+  #
   # end
 
   private

@@ -1,0 +1,9 @@
+<section class="search-bar">
+  <h1>Muncher</h1>
+
+  <%= form_tag(index_path, method: "get") do %>
+  <%= label_tag(:query, "Search for:") %>
+  <%= text_field_tag(:query) %>
+  <%= submit_tag("Search") %>
+  <% end %>
+</section>

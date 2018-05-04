@@ -15,12 +15,11 @@
   <% end %>
 
   <section>
-    <p><%= @page %> of <%= @last_page %></p>
     <% if @page > 1 %>
       <%= link_to "<- Prev", recipes_path(q: @query, page: @page - 1) %>
     <% end %>
 
-    <%= "[ pg#{@page} of #{@last_page} ]" %>
+    <%= "[ p#{@page} of #{@last_page} ]" %>
 
     <% if @page < @last_page %>
       <%= link_to "Next ->", recipes_path(q: @query, page: @page + 1) %>

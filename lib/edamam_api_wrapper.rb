@@ -4,17 +4,21 @@ class EdamamApiWrapper
   ID = ENV["APPLICATION_ID"]
   KEY = ENV["APPLICATION_KEY"]
 
-  def self.list_recipes(key_words, search_range = [])
+  def self.list_recipes(key_words, start_index = nil)
     encoded_key_words = URI.encode(key_words)
-    if search_range.empty?
-      response = HTTParty.get("#{BASE_URL}q=#{encoded_key_words}&app_id=#{ID}&app_key=#{KEY}")
+    if start_index
+      response = HTTParty.get("#{BASE_URL}q=#{encoded_key_words}&app_id=#{ID}&app_key=#{KEY}&from=#{start_index}")
     else
-      response = HTTParty.get("#{BASE_URL}q=#{encoded_key_words}&app_id=#{ID}&app_key=#{KEY}&from=#{search_range[0]}&to=#{search_range[1]}")
+      response = HTTParty.get("#{BASE_URL}q=#{encoded_key_words}&app_id=#{ID}&app_key=#{KEY}")
     end
     recipe_search = {}
     if response["hits"]
       recipe_search[:recipe_list] = []
-      recipe_search[:more] = response["more"]
+      if response["count"] < 100
+        recipe_search[:page_count] = response["count"].to_i/10
+      else
+        recipe_search[:page_count] = 10
+      end
       response["hits"].each do | recipe |
         uri = recipe["recipe"]["uri"]
         name = recipe["recipe"]["label"]

@@ -26,3 +26,6 @@ footer {
   justify-content: flex-end;
 
 }
+.recipe-list {
+  list-style-type: none;
+}

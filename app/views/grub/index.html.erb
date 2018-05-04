@@ -1,0 +1,15 @@
+  <h1>Recipes</h1>
+<section class="recipe-list">
+  <% if @recipes %>
+    <ul>
+      <% @recipes.each do |item| %>
+        <li class="gallery-item">
+          <figure>
+            <%= image_tag item["recipe"]["image"] %>
+              <figcaption><p><%= item["recipe"]["label"] %></p></figcaption>
+          </figure>
+          </li>
+      <% end %>
+    </ul>
+  <% end %>
+</section>

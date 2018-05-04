@@ -9,7 +9,7 @@ class RecipesController < ApplicationController
   end
 
   def show
-
+    @recipe = EdamamApiWrapper.single_search(params[:id])
   end
 
 end

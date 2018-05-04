@@ -1,0 +1,10 @@
+<h1>THIS IS A VIEW</h1>
+
+<%if @recipe && @recipe.title %>
+<ul>
+  <li>Title: <%= @recipe.title%></li>
+  <li>By: <%= @recipe.author%></li>
+  <li><%= image_tag @recipe.image %></li>
+  <li>Ingredients: <%= @recipe.ingredients%></li>
+</ul>
+<% end %>

@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
 
   root 'search#new'
-  get 'index', to: 'search#index', as: 'recipes'
-  get ':recipe/show', to: 'search#show', as: 'recipe_show'
+  get 'search/index', to: 'search#index', as: 'recipes'
+  get 'search/:id/show', to: 'search#show', as: 'recipe'
+
+  # resources :search, only: [:index, :show]
+
   #
   # get 'search/new'
   # get 'search/index'

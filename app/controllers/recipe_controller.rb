@@ -1,7 +1,16 @@
 class RecipeController < ApplicationController
   def index
-    result = EdamamApiWrapper.find_it(query)
-    @recipes = result["hits"][0]
+    query = params["query"]
+
+    if EdamamApiWrapper.find_it(query)
+      results = EdamamApiWrapper.find_it(query)
+      @recipes = results["hits"]
+      
+      flash[:success] = "Found!"
+
+    else
+      flash[:alert] = "Error"
+    end
   end
 
   def create
@@ -9,6 +18,8 @@ class RecipeController < ApplicationController
     query = params["query"]
 
     if EdamamApiWrapper.find_it(query)
+      results = EdamamApiWrapper.find_it(query)
+      @recipes = results["hits"]
       flash[:success] = "Found!"
     else
       flash[:alert] = "Error"

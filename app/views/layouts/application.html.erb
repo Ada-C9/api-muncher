@@ -12,6 +12,21 @@
   </head>
 
   <body>
+    <header class="page-header">
+      <nav>
+        <ul class='top-nav'>
+          <li class="welcome">Welcome Guest</li>
+        </ul>
+        <span>
+          <h2 class="title"><%= link_to image_tag("NOSHER-logo.png"), root_path %></h2>
+        </span>
+        <span>
+            <% unless (controller_name == "search" && action_name == "new") %>
+              <%= render partial: "form" %>
+            <% end %>
+        </span>
+      </nav>
+    </header>
 
     <section>
       <% flash.each do | name, message | %>

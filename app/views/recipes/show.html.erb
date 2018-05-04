@@ -5,9 +5,9 @@
   <% end %>
 </div>
 
-<section class="show show-container">
+<h4 id="show-title"><%= @recipe.name %></h4>
 
-  <h4 id="show-title"><%= @recipe.name %></h4>
+<section class="show show-container">
   <div id="show-photo">
     <img src="<%= @recipe.image %>" alt= "<%= @recipe.name %>">
     <p>Source: <%= link_to @recipe.source, @recipe.url, target: :_blank %></p>

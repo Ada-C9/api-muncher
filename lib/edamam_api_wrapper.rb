@@ -8,7 +8,7 @@ class EdamamApiWrapper
 	APP_ID = ENV["APPLICATION_ID"]
 	APP_KEY = ENV["APPLICATION_KEY"]
 	PER_PAGE = 9
-	MAX_ALLOWABLE_PAGES = 5
+	MAX_ALLOWABLE_PAGES = 10
 
 	# def self.search_recipes(query_text, from: 0, to: 11, diet: nil, health: nil)
 	# def self.search_recipes(query_text, from, to: PER_PAGE, diet: nil, health: nil)

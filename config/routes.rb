@@ -3,4 +3,6 @@ Rails.application.routes.draw do
 
   root 'recipes#index'
 
+
+  get 'show/:uri', to: 'recipes#show', as: 'show_recipes'
 end

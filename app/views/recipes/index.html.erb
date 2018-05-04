@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Recipes</title>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>Recipes</title>
+</head>
+<body>
   <%= yield %>
-Here are all the recipes that you searched for
-<%= @recipes %>
-  </body>
+  <%if  @recipes && @recipes != []%>
+  Here are all the recipes that you searched for
+  <% @recipes.each do |recipe|%>
+  <%= image_tag(recipe.image, alt: "picture of the image") %>
+  <a href= "<%= recipe.url %>" >External Link</a>
+
+  <%= link_to recipe.label, show_recipes_path(recipe.uri.split("_")[1])%>
+
+  <% end %>
+
+  <% else %>
+  Sorry we don't have that in our recipe book, please search again.
+  <% end %>
+</body>
 </html>
+
+<a href=""></a>

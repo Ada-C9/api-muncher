@@ -15,26 +15,28 @@ describe EdamamApiWrapper do
     VCR.use_cassette("recipes") do
       response = EdamamApiWrapper.list_recipes('apple')
 
-      # response.must_be_kind_of Hash
-      #response.["ok"].must_equal true
-      response["recipe"]
-    end
+      response.must_be_kind_of Array
+      response.first.must_be_kind_of Recipe
 
+    end
+  end
   #   it "can't send message to  channel" do
   # VCR.use_cassette("channels") do
   #   response = SlackApiWrapper.send_msg("this-channel-does-not-exist", "test message")
   #   response["ok"].must_equal false
   #   response["error"].wont_be_nil
   # end
-end
+
+
+
+  it 'cannot be initialized with less than 1 parameter' do
+    proc {EdamamApiWrapper.list_recipes}.must_raise ArgumentError
   end
+end
 
 
 
 
-  #   it 'cannot be initialized with less than 1 parameter' do
-  #     proc {EdamamApiWrapper.new}.must_raise ArgumentError
-  #   end
-  # end
-  #
-  #
+
+#
+#

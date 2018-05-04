@@ -11,7 +11,7 @@ class Recipe
       @ingredients = recipe_hash["ingredients"]
       @dietary_info = recipe_hash["dietLabels"]
     else
-      raise ArgumentError.new("Invalid Hash")
+      raise ArgumentError.new("Invalid Recipe URL")
     end
   end
 

@@ -1,3 +1,4 @@
+
 class RecipesController < ApplicationController
 
   def root
@@ -6,7 +7,7 @@ class RecipesController < ApplicationController
 
   def index
     @term = params[:query]
-    @recipes = EdamamApiWrapper.find_recipes(@term)
+    @recipes = EdamamApiWrapper.find_recipes(@term).paginate(:page => params[:page], :per_page => 10)
   end
 
   def show

@@ -5,3 +5,10 @@
   <li><%= link_to r.title, recipe_path(r.id) %></li>
 </ul>
 <% end %>
+
+<div class="pagination">
+  <div class="page_info">
+    <%= page_entries_info @recipes %>
+  </div>
+  <%= will_paginate @recipes, :container => false %>
+</div>

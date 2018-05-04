@@ -152,14 +152,18 @@ div#search_button {
 section.show {
   color: white;
   background-color: black;
+  height: 100%;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
 }
 
 section.show-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 1fr 7fr;
   grid-template-areas:
-    "title text"
+    "title title"
     "photo text";
 }
 

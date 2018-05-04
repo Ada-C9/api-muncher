@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.1'
 gem 'httparty'
 gem 'will_paginate'
-gem 'foundation-rails'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
@@ -45,7 +45,7 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'minitest-vcr'
   gem 'webmock'
-  gem 'awesome_print'
+  # gem 'capybara', '~> 2.13'
 end
 
 group :development do
@@ -63,6 +63,7 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+  gem 'simplecov'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -72,10 +73,12 @@ gem 'jquery-turbolinks'
 gem 'jquery-rails'
 gem 'foundation-rails'
 gem 'normalize-rails'
+gem 'awesome_print'
 
 group :development, :test do
   gem 'pry-rails'
 end
+
 
 group :development do
   gem 'better_errors'
@@ -85,5 +88,4 @@ end
 group :test do
   gem 'minitest-rails'
   gem 'minitest-reporters'
-  gem 'simplecov'
 end

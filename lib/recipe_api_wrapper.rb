@@ -8,35 +8,33 @@ class RecipeApiWrapper
   API_ID = ENV["EDAMAM_API_ID"]
 
   search_results = []
-  def self.list_recipes
+  def self.list_recipes(query)
 
-    query = "chicken pesto"
     url = "https://api.edamam.com/search?app_id=#{API_ID}&app_key=#{API_KEY}&q=#{query}"
 
-    encoded_uri = URI.encoded(url)
+    encoded_uri = URI.encode(url)
 
     response = HTTParty.get(url).parsed_response
     #ALWAYS CHECK YOUR ERROR CODES
-    unless response.success?
-      raise StandardError.new(response["error"])
-    end
+    # unless response.success?
+    #   raise StandardError.new(response["error"])
+    # end
 
-    return response["hits"].each do |raw_recipe|
+    return response["hits"].map do |raw_recipe|
       Recipe.from_api(raw_recipe["recipe"])
     end
   end
 
-  def show_recipe(uri)
+  def self.show_recipe(uri)
     url = "https://api.edamam.com/search?app_id=#{API_ID}&app_key=#{API_KEY}&r=#{uri}"
 
-    encoded_uri = URI.encoded(url)
+    encoded_uri = URI.encode(url)
 
-    response = HTTParty.get(url)
+    response = HTTParty.get(url).parsed_response
     #ALWAYS CHECK YOUR ERROR CODES
-    unless response.success?
-      raise StandardError.new(response["error"])
-    end
-
+    # unless response.success?
+    #   raise StandardError.new(response["error"])
+    # end
     return Recipe.from_api(response[0])
   end
 
@@ -44,7 +42,7 @@ class RecipeApiWrapper
 
   def self.raise_on_error(response)
     unless response["ok"]
-      raise ReecipeError.new(response["error"])
+      raise RecipeError.new(response["error"])
     end
   end
 end

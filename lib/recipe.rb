@@ -1,7 +1,7 @@
 class Recipe
-  attr_reader :label, :image, :url, :ingredientlines, :totalnutrients
+  attr_reader :label, :image, :url, :uri, :ingredientlines, :totalnutrients
 
-  def initialize(label: recipe_label, image: recipe_image, url: recipe_url, ingredientlines: recipe_ingredientlines, totalnutrients: totalnutrients)
+  def initialize(label: recipe_label, image: recipe_image, url: recipe_url, uri: recipe_uri, ingredientlines: recipe_ingredientlines, totalnutrients: totalnutrients)
     #note that we use lazy evaluation to our advantage here. Also nil.empty? would raise a different error
     if label.nil? || label.empty?
       raise ArgumentError.new("Need a recipe name pls")
@@ -23,6 +23,7 @@ class Recipe
       label: raw_recipe["label"],
       image: raw_recipe["image"],
       url: raw_recipe["url"],
+      uri: raw_recipe["uri"],
       ingredientlines: raw_recipe["ingredientLines"],
       totalnutrients: raw_recipe["totalNutrients"])
   end

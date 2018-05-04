@@ -13,6 +13,5 @@ class EdamamApiWrapper
     response = HTTParty.get(url)
 
     return response
-
   end
 end

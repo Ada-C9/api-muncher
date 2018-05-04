@@ -11,10 +11,5 @@ describe RecipesController do
   must_respond_with :ok
 end
 
-it "can get the new recipe form" do
-  get new_search_path
-
-  must_respond_with :ok
-end
 
 end

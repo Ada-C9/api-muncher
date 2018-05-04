@@ -13,7 +13,14 @@
 
   <body>
 
-    <%= yield %>
+<h1>Search recipes for </h1>
 
+<%= form_tag(root_path, method: 'get') do %>
+  <%= label_tag(:search, "Enter Search") %>
+  <%= text_field_tag(:search, params[:search]) %>
+  <%= submit_tag("Submit") %>
+<% end %>
+
+<%= yield %>
   </body>
 </html>

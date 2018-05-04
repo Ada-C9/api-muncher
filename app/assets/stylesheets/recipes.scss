@@ -62,6 +62,11 @@ ul {
   margin: 3%;
 }
 
+.show_recipe ul {
+  justify-content: center;
+
+}
+
 .show_recipe ul li img {
   margin-top: 30px;
   color: rgb(40, 88, 75);
@@ -86,10 +91,17 @@ ul {
   width: 200px;
   height: 80px;
 }
+
 footer {
   text-align: center;
   font-family: sans-serif;
   color: #474935;
   padding: 2%;
   border-top: solid 1px #7f827c;
+}
+
+#pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }

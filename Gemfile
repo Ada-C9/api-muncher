@@ -87,3 +87,5 @@ group :development, :test do
   gem 'minitest-vcr'
   gem 'webmock'
 end
+
+gem 'will_paginate-foundation'

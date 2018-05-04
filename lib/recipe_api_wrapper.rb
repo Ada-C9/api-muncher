@@ -38,7 +38,8 @@ class RecipeApiWrapper
 
   private
   def self.raise_on_error(response)
-    unless response["ok"]
+    # this needs to be changed based on the api
+    unless response["more"]
       raise SlackError.new(response["error"])
     end
   end

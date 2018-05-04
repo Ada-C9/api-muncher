@@ -1,0 +1,13 @@
+<section>
+  <h1>Recipes</h1>
+  <% if @recipe_list %>
+    <ul>
+      <% @recipe_list.each do |recipe| %>
+        <li>
+          <%= link_to recipe.label, recipe_details_path(recipe) %>
+          <%= recipe.image %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+</section>

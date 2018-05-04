@@ -1,0 +1,8 @@
+<h1>Pick a base ingredient</h1>
+
+<%= form_tag recipe_path(@recipe_list), method: "get" do %>
+  <%= label_tag(:recipe, "Enter Ingredient") %>
+  <%= text_field_tag(:recipe) %>
+  <%= submit_tag("Send") %>
+
+<% end %>

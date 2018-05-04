@@ -43,4 +43,8 @@ class ActiveSupport::TestCase
   end
 end
 
+if ActionPack::VERSION::STRING >= “5.2.0”
+ Minitest::Rails::TestUnit = Rails::TestUnit
+end
+
 end

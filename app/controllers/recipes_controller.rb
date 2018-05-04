@@ -8,12 +8,12 @@ class RecipesController < ApplicationController
   end
 
   def show
-    @recipe = ApiMuncherWrapper.find_recipes(params[:uri])
+    recipe_id = params[:id]
+    @recipe = ApiMuncherWrapper.find_recipe(recipe_id)
     if recipe.nil?
-      flash[:alert] = "Recipe doesn't exist"
-      redirect_back(fallback_location: root_path)
+      flash[:alert] = "Invalid recipe"
     else
-      @recipe
+      @recipe = recipe
     end
   end
 end

@@ -1,14 +1,15 @@
-<section class="recipes-results">
-  <h1>Results for: "<%= @search_terms %>"</h1>
-
-  <% if @recipes %>
-    <ul>
-      <% @recipes.each do |recipe| %>
-        <li>
-          <%= image_tag(recipe.image) %>
-          <%= link_to recipe.name, recipe_path(recipe.id) %>
-        </li>
-      <% end %>
-    </ul>
-  <% end %>
+<h1>Results for: "<%= @search_terms %>"</h1>
+<section>
+  <div>
+    <% if @recipes %>
+      <ul class="grid-container">
+        <% @recipes.each do |recipe| %>
+          <li class="grid-item">
+            <%= link_to image_tag(recipe.image), recipe_path(recipe.id) %>
+            <%= link_to recipe.name, recipe_path(recipe.id) %>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
 </section>

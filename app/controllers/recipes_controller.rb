@@ -8,7 +8,11 @@ class RecipesController < ApplicationController
   end
 
   def show
-    @recipe = EdamamApiWrapper.show_recipe(params[:id])
+    begin
+      @recipe = EdamamApiWrapper.show_recipe(params[:id])
+    rescue ArgumentError => error
+      redirect_to root_path
+    end
   end
 
 end

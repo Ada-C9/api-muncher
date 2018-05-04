@@ -22,11 +22,12 @@ describe MuncherApiWrapper do
       end
     end
 
+    # What am I supposed to do about this!?!?
     it 'does something when a query has no results' do
       VCR.use_cassette('recipes') do
         recipes = MuncherApiWrapper.get_recipes('asdfas', '1')
 
-        recipes.count.must_equal 0
+        recipes.length.must_equal 0
       end
     end
   end # get_recipes

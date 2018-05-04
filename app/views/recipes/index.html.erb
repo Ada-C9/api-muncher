@@ -1,3 +1,5 @@
+<% require 'pry' %>
+
 <%= form_tag(search_path, method: "get") do %>
   <%= label_tag(:q, "Find your flavor:") %>
   <%= text_field_tag(:q, @query) %>
@@ -6,6 +8,16 @@
 
 <% if @recipes.count > 0 %>
   <% @recipes.each do |recipe| %>
-    <%= recipe.name =%>
+    <ul>
+      <li>
+        <%= link_to "#{recipe.name}", recipe_path(r: recipe.uri) =%>
+      </li>
+
+      <li>
+
+        <%= link_to(image_tag(recipe.image_url, :alt => "#{recipe.name}"), recipe_path(r: recipe.uri)) %>
+
+      </li>
+    </ul>
   <% end %>
 <% end %>

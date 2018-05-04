@@ -1,7 +1,8 @@
 require 'httparty'
+require 'pry'
 
 class ApiMuncherWrapper
-  BASE_URL = "https://test-es.edamam.com/search"
+  BASE_URL = "https://api.edamam.com/search"
   APPLICATION_ID = ENV["APPLICATION_ID"]
   APPLICATION_KEYS = ENV["APPLICATION_KEYS"]
 
@@ -18,12 +19,30 @@ class ApiMuncherWrapper
       uri = hit["recipe"]["uri"]
       name = hit["recipe"]["label"]
       ingredients = hit["recipe"]["ingredientLines"]
-
-      recipes << Recipe.new(uri, name, ingredients)
+      image_url = hit["recipe"]["image"]
+      link = hit["recipe"]["url"]
+      recipes << Recipe.new(uri, name, ingredients, image_url, link)
     end
 
     return recipes
   end
 
+  def self.get_recipe(r)
+
+    return r if r.nil?
+
+    url = "#{BASE_URL}?r=#{r}&app_id=#{APPLICATION_ID}&app_key=#{APPLICATION_KEYS}"
+    # send a message through slasck or get has to encode
+    data = HTTParty.get(URI.encode(url))
+
+    uri = data[0]["uri"]
+    name = data[0]["label"]
+    ingredients = data[0]["ingredientLines"]
+    image_url = data[0]["image"]
+
+    link = data[0]["url"]
+
+    return Recipe.new(uri, name, ingredients, image_url, link)
+  end
 # From and to to get paging done
 end

@@ -1,5 +1,4 @@
 require 'httparty'
-require 'pry'
 
 class RecipeApiWrapper
   class RecipeError < StandardError; end

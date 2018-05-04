@@ -7,7 +7,7 @@ class Recipe
     # # our advantage here
     # # Boolean logic short cercut
     if label.nil? || label.empty?
-      raise ArgumentError.new("Need a name recipe to search")
+      raise ArgumentError.new("Need a recipe to search")
     end
 
     @label = label

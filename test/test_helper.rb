@@ -40,6 +40,10 @@ Minitest::Reporters.use!(
 # Uncomment for awesome colorful output
 # require "minitest/pride"
 
+if ActionPack::VERSION::STRING >= "5.2.0"
+  Minitest::Rails::TestUnit = Rails::TestUnit
+end
+
 class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all

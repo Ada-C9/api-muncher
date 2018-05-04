@@ -1,18 +1,23 @@
 class RecipesController < ApplicationController
   around_action :catch_api_error
 
+  def homepage; end
+
   def index
     @recipes = RecipeApiWrapper.list_recipes
-  end
-
-  def new
-    @recipe_name = params["recipe"]
+    # add pagenation here
   end
 
   def show
     recipe_id = params[:id]
 
     @recipe = Recipe.find(recipe_id)
+  end
+
+  def search
+    ingredient = params[:ingredient]
+
+    redirect_to recipes_path(ingredient)
   end
 
   private

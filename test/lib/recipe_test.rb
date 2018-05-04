@@ -6,7 +6,7 @@ describe Recipe do
       label = "test recipe"
       image = "https://www.edamam.com/web-img/7a2/7a2f41a7891e8a8f8a087a96930c6463.jpg"
       source = "test source"
-      shareAs = "http://www.edamam.com/recipe/grilled-butterflied-chicken-recipe-3da1169eb633a5e4607890ebf7dee89f/chicken/alcohol-free/591-722-cal"
+      shareAs = "http://www.edamam.com/recipe/teriyaki-chicken-7bf4a371c6884d809682a72808da7dc2/chicken"
       healthLabels = [
                     "Sugar-Conscious",
                     "Peanut-Free",
@@ -53,7 +53,7 @@ describe Recipe do
     end
 
     it "Raises an exception without critical data" do
-      @fake_recipe_data["name"] = nil
+      @fake_recipe_data["label"] = nil
       # can also write the above as @fake_recipe_data.delete("name")
 
       proc {

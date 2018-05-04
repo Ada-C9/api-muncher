@@ -38,13 +38,24 @@ li {
 /* HEADER */
 .header {
   background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.header a {
-  float: right;
+.header a, .header p {
+  /* float: right; */
   color: white;
   padding: 0.5rem;
 }
+
+/* a.btn-default {
+  align-self: flex-end;
+}
+
+#nav-title {
+  align-self: flex-start;
+} */
 
 /* PAGINATION */
 .pagination a {

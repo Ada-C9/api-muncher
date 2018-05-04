@@ -25,7 +25,7 @@ describe MuncherController do
       VCR.use_cassette("recipe") do
         get muncher_index_path
         recipes = EdamamApiWrapper.list_recipes("")
-    
+
       end
       must_respond_with :redirect
       must_redirect_to root_path
@@ -36,7 +36,6 @@ describe MuncherController do
 
     it "should succeed with a valid uri" do
       VCR.use_cassette("recipe") do
-        recipes = EdamamApiWrapper.list_recipes("chicken")
         get muncher_path("7bf4a371c6884d809682a72808da7dc2")
       end
       must_respond_with :success
@@ -44,7 +43,6 @@ describe MuncherController do
 
     it "should redirect to the root path with a bogus uri" do
       VCR.use_cassette("recipe") do
-        recipes = EdamamApiWrapper.list_recipes("chicken")
         get muncher_path("kgljv")
       end
       must_respond_with :redirect

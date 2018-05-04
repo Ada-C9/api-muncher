@@ -28,7 +28,7 @@ class EdemamApiWrapper
 
     full_url = "#{url_root}#{uri}&app_id=#{app_id}&app_key=#{app_key}"
     response = HTTParty.get(full_url).parsed_response
-
+    # binding.pry
     raise ArgumentError.new("Could not find recipe") unless response[0]
 
     return Recipe.new(response[0])

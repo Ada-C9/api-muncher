@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root "recipes#homepage"
 
   get "muncher", to: "recipes#homepage", as: "homepage"
-  get "recipes/:flavor", to: "recipes#index", as: "recipes"
+  get "recipes", to: "recipes#index", as: "recipes"
 
   get "display/:recipe_uri", to: "recipes#show", as: "show_recipe"
   get "search", to: "recipes#search", as: "search"

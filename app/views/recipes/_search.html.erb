@@ -2,7 +2,7 @@
   <h2><span class="blue-mc">M</span><span class="red-ue">U</span><span class="yellow-nr">N</span><span class="blue-mc">C</span><span id="green-h">H</span><span class="red-ue">E</span><span class="yellow-nr">R</span></h2>
 
 
-  <%= form_tag search_path, method: :get, id: "search-bar" do %>
+  <%= form_tag recipes_path, method: :get, id: "search-bar" do %>
   <%= text_field_tag :flavor, params[:flavor], require: true, id: "search-field" %>
   <%= button_tag "Search Recipes", class: "button is-primay is-outlined is-small", id: "seach-button" %>
   <% end %>

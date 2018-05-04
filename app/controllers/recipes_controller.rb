@@ -11,9 +11,4 @@ class RecipesController < ApplicationController
     @recipe = EdemamApiWrapper.find_recipe(params[:recipe_uri])
   end
 
-  def search
-    flavor = params[:flavor]
-
-    redirect_to recipes_path(flavor)
-  end
 end

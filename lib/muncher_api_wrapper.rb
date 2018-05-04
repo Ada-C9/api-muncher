@@ -12,14 +12,19 @@ class MuncherApiWrapper
     recipes_list = []
     if results["hits"]
       results["hits"].each do |result_data|
-        recipes_list << create_recipe(result_data)
+        recipes_list << result_data
       end
     end
       return recipes_list
   end
 
+  def self.show_recipe(recipe_id)
+    url = "#{BASE_URL}search?r=r=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_#{recipe_d}&app_id=#{APP_ID}&app_key=#{APP_KEY}"
+    response = HTTParty.get(url)
+  end
+
   private
-  
+
   def create_recipe(api_params)
     return Recipe.new(
       api_params["label"],
@@ -27,10 +32,6 @@ class MuncherApiWrapper
       api_params["url"],
       api_params["ingredientLines"]
     )
-  end
-
-  def self.show_recipe
-
   end
 
 end

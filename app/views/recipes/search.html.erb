@@ -1,2 +1,6 @@
 <h3>Search for Recipes: </h3>
-<input type="text" placeholder="Search..">
+  <%= form_tag search_path, method: :post do %>
+  <%= label_tag :search_term %>
+  <%= text_field_tag :search_term %>
+  <%= submit_tag %>
+<% end %>

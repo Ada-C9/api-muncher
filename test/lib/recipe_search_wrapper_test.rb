@@ -32,8 +32,8 @@ describe RecipeSearchWrapper do
 
   describe "find_recipe(id)" do
     it "returns a Recipe instance for a valid id" do
-      VCR.use_cassette("search_recipe") do
-        RecipeSearchWrapper.list_recipes(valid_search)
+      VCR.use_cassette("new_recipe") do
+        recipes = RecipeSearchWrapper.list_recipes(valid_search)
         response = RecipeSearchWrapper.find_recipe(valid_id)
         response.id.must_equal valid_id
         response.must_be_kind_of Recipe

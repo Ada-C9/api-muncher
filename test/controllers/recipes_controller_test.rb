@@ -17,8 +17,8 @@ describe RecipesController do
     it "must succeed with valid search text" do
       VCR.use_cassette("recipe") do
         get search_results_path
-        RecipeSearchWrapper.list_recipes(valid_search)
-        must_respond_with :success
+        response = RecipeSearchWrapper.list_recipes(valid_search)
+        must_respond_with :found
       end
     end
 
@@ -49,7 +49,7 @@ describe RecipesController do
 
         get recipe_show_path(valid_id)
         RecipeSearchWrapper.find_recipe(valid_id)
-        must_respond_with :success
+        must_respond_with :found
       end
     end
 

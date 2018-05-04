@@ -22,6 +22,7 @@ module ApiMuncher
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
     # Automatically load all code from <rails_root>/lib
+    config.enable_dependency_loading = true
     config.eager_load_paths << Rails.root.join('lib')
   end
 end

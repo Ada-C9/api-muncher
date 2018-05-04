@@ -6,7 +6,8 @@ describe "RecipeApiWrapper" do
 
     it "gives a list of recipes" do
       VCR.use_cassette("recipes") do
-        recipes = RecipeSearchWrapper.search_recipes
+        query = "chicken"
+        recipes = RecipeSearchWrapper.search_recipes(query)
 
         recipes.each do |recipe|
           recipe.must_be_kind_of Recipe
@@ -16,5 +17,5 @@ describe "RecipeApiWrapper" do
 
   end
 
-  
+
 end

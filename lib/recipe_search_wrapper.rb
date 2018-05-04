@@ -21,6 +21,7 @@ class RecipeSearchWrapper
     #raw_recipe["recipe"]["label"] => teriyaki chicken
 
     recipes = []
+    #should I handle of nil/empty response["hits"] here?
     response["hits"].map do |raw_recipe|
       recipe = raw_recipe["recipe"]
       recipes << Recipe.from_api(recipe)

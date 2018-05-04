@@ -19,7 +19,10 @@
       <h2 id="site-title">
         <%= link_to "Cooking Thyme", root_path %>
       </h2>
-      <h4 id="slogan">There is always thyme for cooking</h4>
+      <h4 id="slogan">
+        There is always thyme for cooking
+      </h4>
+
       <% if request.fullpath != root_path %>
       <nav class="nav-search">
         <%= render partial: "form" %>
@@ -29,16 +32,16 @@
 
     <main>
 
-    <% if flash[:status] %>
-       <section class="row status <%= flash[:status] %>">
-         <h3>
-           <%= flash[:message] %>
-         </h3>
-        </section>
-    <% end %>
+      <% if flash[:status] %>
+         <section class="row status <%= flash[:status] %>">
+           <h3>
+             <%= flash[:message] %>
+           </h3>
+          </section>
+      <% end %>
 
 
-    <%= yield %>
+      <%= yield %>
     </main>
 
   </body>

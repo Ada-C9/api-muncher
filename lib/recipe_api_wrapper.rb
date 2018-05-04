@@ -1,6 +1,4 @@
 require 'httparty'
-require 'pry'
-
 
 class RecipeApiWrapper
   class RecipeError < StandardError; end
@@ -25,15 +23,15 @@ class RecipeApiWrapper
     end
   end
 
-  def self.show_recipe(label)
-
-    full_url = URI.encode("#{url_root}?channel=#{channel_name}&text=#{message}&token=#{token}&username=This is not Luxi&icon_emoji=:sheepy:")
-
-    response = HTTParty.post(full_url)
-
-    raise_on_error(response)
-
-  end
+  # def self.show_recipe(label)
+  #
+  #   full_url = URI.encode("#{url_root}?channel=#{channel_name}&text=#{message}&token=#{token}&username=This is not Luxi&icon_emoji=:sheepy:")
+  #
+  #   response = HTTParty.post(full_url)
+  #
+  #   raise_on_error(response)
+  #
+  # end
 
   private
   def self.raise_on_error(response)

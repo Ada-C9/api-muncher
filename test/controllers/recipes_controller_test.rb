@@ -10,7 +10,7 @@ describe RecipesController do
   end
 
   describe 'index' do
-    it 'must return ok for multiple recipes' do
+    it 'must return ok for a list of recipes' do
       VCR.use_cassette('recipes') do
         get recipes_path, params: {query: 'chicken'}
 

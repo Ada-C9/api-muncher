@@ -17,17 +17,17 @@
   width: 25%;
 }
 
-figure {
+.item-image {
 	margin: 0;
 	position: relative;
 }
 
-figure img {
+.item-image > img {
 	width: 100%;
 	height: auto;
 }
 
-figcaption {
+.caption {
   background: rgba(0, 0, 0, .5);
   position: absolute;
   display: -webkit-flex;
@@ -44,7 +44,7 @@ figcaption {
   transition: all .5s;
 }
 
-figcaption p {
+.caption p {
   text-align: center;
   padding: 0 30px;
   width: 100%;

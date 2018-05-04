@@ -2,11 +2,12 @@
 <section class="recipe-list">
   <% if @recipes %>
     <ul>
+    <span class="nav"><%= paginate @paginatable_array %></span>
       <% @recipes.each do |item| %>
         <li class="gallery-item">
-          <figure>
+          <figure class="item-image">
             <%= image_tag item["recipe"]["image"] %>
-              <figcaption><p><%= item["recipe"]["label"] %></p></figcaption>
+              <figcaption clas="caption"><p><%= item["recipe"]["label"] %></p></figcaption>
           </figure>
           </li>
       <% end %>

@@ -6,7 +6,7 @@ class EdamamApiWrapper
 
   def self.find_it(terms)
 
-    message_url = BASE_URL + "q=#{terms}&" + "app_id=#{ID}&" + "app_key=#{TOKEN}"
+    message_url = BASE_URL + "q=#{terms}&" + "app_id=#{ID}&" + "app_key=#{TOKEN}&to=50"
     response = HTTParty.get(message_url)
 
     recipes = []

@@ -3,7 +3,8 @@ class RecipeController < ApplicationController
     query = params["query"]
 
     results = EdamamApiWrapper.find_it(query)
-    @recipes = results.paginate(:page => params[:page], :per_page => 2) 
+    @recipes = results.paginate(:page => params[:page], :per_page => 10) 
+
     if @recipes.length > 0
       flash[:success] = "#{@recipes.length} Recipes Found!"
     else

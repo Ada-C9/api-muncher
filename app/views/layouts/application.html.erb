@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <%= favicon_link_tag asset_path('favicon.png'), rel: 'icon', type: 'image/png' %>
 
-    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "A Wok in Progress" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
@@ -14,6 +15,9 @@
   <body>
 
     <%= yield %>
+    <footer>
+      <div>Created with Edamam</div>
+    </footer>
 
   </body>
 </html>

@@ -1,39 +1,48 @@
 class Recipe
 
-  attr_reader :id, :name, :image, :ingredients, :dietary_info, :url
+  attr_reader :id, :name, :image, :ingredients, :dietary_info, :health_info, :url
 
-  def initialize(id, name, image, ingredients, dietary_info, url)
-    if name.nil? || name.empty?
-      raise ArgumentError.new("Need a name please")
+  def initialize(input)
+    @id = input[:id]
+    @name = input[:name]
+    @image = input[:image]
+    @ingredients = input[:ingredients]
+    @dietary_info = input[:dietary_info]
+    @health_info = input[:health_info]
+    @url = input[:url]
+
+    if id.nil? || id.empty?
+      raise ArgumentError.new("Recipe must have an id")
     end
 
-    @id = id
-    @name = name
-    @image = image
-    @ingredients = ingredients
-    @dietary_info = dietary_info
-    @url = url
+    if name.nil? || name.empty?
+      raise ArgumentError.new("Recipe must have a name")
+    end
   end
 
   def self.from_query_api(raw_recipe)
-    self.new(
-      raw_recipe["recipe"]["uri"].split("_")[1],
-      raw_recipe["recipe"]["label"],
-      raw_recipe["recipe"]["image"],
-      raw_recipe["recipe"]["ingredientLines"],
-      raw_recipe["recipe"]["dietLabels"],
-      raw_recipe["recipe"]["url"]
-    )
+    data = {
+      id: raw_recipe["recipe"]["uri"].split("_")[-1],
+      name: raw_recipe["recipe"]["label"],
+      image: raw_recipe["recipe"]["image"],
+      ingredients: raw_recipe["recipe"]["ingredientLines"],
+      dietary_info: raw_recipe["recipe"]["dietLabels"],
+      health_info: raw_recipe["recipe"]["healthLabels"],
+      url: raw_recipe["recipe"]["url"]
+    }
+    self.new(data)
   end
 
   def self.from_recipe_api(raw_recipe)
-    self.new(
-      raw_recipe[0]["uri"].split("_")[1],
-      raw_recipe[0]["label"],
-      raw_recipe[0]["image"],
-      raw_recipe[0]["ingredientLines"],
-      raw_recipe[0]["dietLabels"],
-      raw_recipe[0]["url"]
-    )
+    data = {
+      id: raw_recipe[0]["uri"].split("_")[-1],
+      name: raw_recipe[0]["label"],
+      image: raw_recipe[0]["image"],
+      ingredients: raw_recipe[0]["ingredientLines"],
+      dietary_info: raw_recipe[0]["dietLabels"],
+      health_info: raw_recipe[0]["healthLabels"],
+      url: raw_recipe[0]["url"]
+    }
+    self.new(data)
   end
 end

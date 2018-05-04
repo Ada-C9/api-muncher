@@ -11,9 +11,12 @@
 </ul>
 
 
-<p>Dietary Labels:</p>
+<p>Health and Dietary Labels:</p>
 <ul>
   <% @recipe.dietary_info.each do |label| %>
+  <li><%= label %></li>
+  <% end %>
+  <% @recipe.health_info.each do |label| %>
   <li><%= label %></li>
   <% end %>
 </ul>

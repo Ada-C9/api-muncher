@@ -23,6 +23,7 @@ module ApiMuncher
     # -- all .rb files in that directory are automatically loaded.
 
     # Automatically load all code from <rails_root>/lib
-    config.eager_load_paths << Rails.root.join('lib')
+    # config.eager_load_paths << Rails.root.join('lib')
+    config.eager_load_paths += %W(#{config.root}/lib)
   end
 end

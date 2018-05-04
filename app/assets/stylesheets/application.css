@@ -42,12 +42,6 @@ h1 {
 
 }
 
-ul {
-  text-align: center;
-  list-style-type: none;
-  padding: 0;
-}
-
 a:hover {
   color: #05807E;
 }
@@ -132,6 +126,12 @@ a:hover {
   justify-content: space-around;
 }
 
+.recipe-container ul {
+  text-align: center;
+  list-style-type: none;
+  padding: 0;
+}
+
 .recipe-info {
   width: 250px;
   margin: 20px;
@@ -141,5 +141,25 @@ a:hover {
   font-size: 1.5rem;
 }
 /*--------- show ---------*/
+.show-container {
+  width: 100%;
+  min-height: 900px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.recipe-details {
+  display: flex;
+  flex-flow: grid;
+  grid-template-columns: 3fr 4fr;
+  padding-top: 30px;
+}
+
+.recipe-texts {
+  padding-left: 50px;
+  text-align: left;
+  width: 400px;
+}
 
 /*--------- mobile ---------*/

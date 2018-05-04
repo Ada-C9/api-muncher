@@ -1,18 +1,27 @@
-<%= render partial: "header" %>
+<div class="show-container">
+  <%= render partial: "header" %>
 
-<p><%= link_to @recipe.title, @recipe.url, target: :_blank %></p>
-<p>By <%= @recipe.source %></p>
-<%= link_to image_tag(@recipe.image, alt: @recipe.title), @recipe.url, target: :_blank %>
+  <h3><%= link_to @recipe.title, @recipe.url, target: :_blank %></h3>
+  <h4>By <%= @recipe.source %></h4>
 
-<p>Ingredients</p>
-<ul>
-  <% @recipe.ingredients.each do |ingredient| %>
-    <li><%= ingredient %></li>
-  <% end %>
-</ul>
-<p>Dietary Labels</p>
-<ul>
-  <% @recipe.diet_labels.each do |diet_label| %>
-    <li><%= diet_label %></li>
-  <% end %>
-</ul>
+  <div class="recipe-details">
+    <%= link_to image_tag(@recipe.image, alt: "Image is not available."), @recipe.url, target: :_blank %>
+
+    <div class="recipe-texts">
+      <h5>Ingredients</h5>
+      <ul>
+        <% @recipe.ingredients.each do |ingredient| %>
+        <li><%= ingredient %></li>
+        <% end %>
+      </ul>
+      <% if @recipe.diet_labels != [] %>
+      <h5>Dietary Labels</h5>
+      <ul>
+        <% @recipe.diet_labels.each do |diet_label| %>
+        <li><%= diet_label %></li>
+        <% end %>
+      </ul>
+      <% end %>
+    </div>
+  </div>
+</div>

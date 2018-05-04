@@ -1,6 +1,8 @@
 require 'httparty'
 
 class EdamamApiWrapper
+  class EdamamError < StandardError; end
+
   BASE_URL = "https://api.edamam.com/search"
   ID = ENV["EDAMAM_API_ID"]
   KEY = ENV["EDAMAM_API_KEY"]
@@ -10,6 +12,20 @@ class EdamamApiWrapper
 
     response = HTTParty.get(full_url).parsed_response
 
+    raise_on_error(response)
+
+    return response["hits"].map do |raw_recipe|
+      Recipe.from_api(raw_recipe)
+    end
+  end
+
+  end
+
+  private
+  def self.raise_on_error(response)
+    unless response["ok"]
+      raise EdamamError.new(response["error"])
+    end
   end
 
 end

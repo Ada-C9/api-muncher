@@ -19,7 +19,7 @@
       <%= image_tag(recipe.image) %>
     </div>
     <div>
-      <%= link_to recipe.title, recipe_path(recipe.id) %>
+      <%= link_to recipe.title, { action: 'show', :id => recipe.id }  %>
     </div>
   </div>
   <% end %>

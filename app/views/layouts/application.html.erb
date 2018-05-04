@@ -11,11 +11,36 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Fjalla+One:400,700|Abel' %>
+
+    <script src="https://developer.edamam.com/attribution/badge.js"></script>
   </head>
 
   <body>
+    <header class="page-header">
+      <h2>
+        <%= link_to "Cook a Thing", root_path %>
+        <small>Find Things and Cook Them</small>
+      </h2>
+
+      <nav>
+        <section class="site-nav">
+          <%= link_to "Find a Thing", root_path, class: "button" %>
+        </section>
+        <section class="user-nav">
+          <!-- fill in with github stuff -->
+
+        </section>
+      </nav>
+
+
+    </header>
 
     <%= yield %>
 
+    <footer class="page-footer">
+      <div id="edamam-badge" data-color="white"></div>
+    </footer>
+
   </body>
+
 </html>

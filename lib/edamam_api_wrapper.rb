@@ -20,7 +20,7 @@ class EdamamApiWrapper
   end
 
   def self.display_recipe
-    full_url = URI.encode(BASE_URL + "?r=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23" + uri + "&app_id=" + ID + "&app_key=" + KEY)
+    full_url = URI.encode(BASE_URL + "?r=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_" + uri + "&app_id=" + ID + "&app_key=" + KEY)
 
     response = HTTParty.get(full_url).parsed_response
 

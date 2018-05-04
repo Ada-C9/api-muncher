@@ -10,7 +10,7 @@ class Recipe
 
     @label = name
     @image = image
-    @uri = uri.split(owl)
+    @uri = uri.split(recipe_)
     @url = url
     @ingredient_list = ingredient_list
     @nutrition_info = nutrition_info
@@ -18,7 +18,7 @@ class Recipe
 
   def self.from_api(raw_recipe)
     self.new(
-      raw_recipe["label"],
+      raw_recipe[recipe]["label"],
       raw_recipe["image"],
       raw_recipe["uri"],
       raw_recipe["url"],

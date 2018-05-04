@@ -8,7 +8,7 @@ class EdamamApiWrapper
 
 
   def self.search(query)
-    url = URI.encode("#{BASE_URL}/search?q=#{query}&app_id=#{EDAMID}&app_key=#{KEY}")
+    url = URI.encode("#{BASE_URL}/search?q=#{query}&app_id=#{EDAMID}&app_key=#{KEY}&to=100")
 
     response = HTTParty.get(url)
 

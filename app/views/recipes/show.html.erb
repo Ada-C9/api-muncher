@@ -26,14 +26,17 @@
         <%= @recipe.calories.round(2) %>cal
       </ul>
 
-      <ul>
-        <h3 class="yellow-nr">
-          Dietary Labels:
-        </h3>
-        <% @recipe.dietlabels.each do |lab| %>
-        <li>
-          <%= lab %>
-        </li>
+      <% if !@recipe.dietlabels.empty? %>
+          <ul>
+            <h3 class="yellow-nr">
+              Dietary Labels:
+            </h3>
+            <% @recipe.dietlabels.each do |lab| %>
+            <li>
+              <%= lab %>
+            </li>
+        <% end %>
+
         <% end %>
       </ul>
     </section>

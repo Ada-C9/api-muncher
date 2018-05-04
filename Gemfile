@@ -69,7 +69,7 @@ gem 'jquery-rails'
 gem 'foundation-rails'
 gem 'normalize-rails'
 
-gem 'will_paginate' # TODO: Should this go here??
+# gem 'will_paginate' # TODO: Should this go here??
 
 group :development, :test do
   gem 'pry-rails'

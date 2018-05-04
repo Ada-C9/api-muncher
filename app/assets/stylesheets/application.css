@@ -69,7 +69,7 @@ body {
   height: 100%;
   /* padding-bottom: 5%;
   padding-top: 5%; */
-  border: 1px solid rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   overflow: hidden;
   position: relative;
   text-align: center;
@@ -87,88 +87,109 @@ body {
   position: absolute;
   overflow: hidden;
   top: 0;
-  left: 0; }
+  left: 0;
+}
 
-  .overlay-fade-in p {
-    letter-spacing: 0.15em;
-    color: #f4f4f4;
-    font-size: 28px;
-    opacity: 0;
-    transition: all 0.2s linear;
-  }
-  .overlay-fade-in img {
-    transition: all 0.2s linear;
-  }
-  .overlay-fade-in .image-overlay-content {
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    transition: all 0.4s ease-in-out;
-  }
-  .overlay-fade-in h4 {
-    color: #f2f2f2;
-    font-size: 1.8rem;
-    margin-top: 40%;
-    opacity: 0;
-    transition: all 0.2s ease-in-out;
-    background: rgba(0, 0, 0, 0.7);
-  }
-  .overlay-fade-in .button {
-    display: inline-block;
-    text-decoration: none;
-    padding: 7px 14px;
-    background: #FFF;
-    color: #222;
-    text-transform: uppercase;
-    box-shadow: 0 0 1px #000;
-    position: relative;
-    border: 1px solid #999;
-    opacity: 0;
-    transition: all 0.2s ease-in-out;
-  }
+.overlay-fade-in p {
+  letter-spacing: 0.15em;
+  color: #f4f4f4;
+  font-size: 28px;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+.overlay-fade-in img {
+  transition: all 0.2s linear;
+}
+.overlay-fade-in .image-overlay-content {
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease-in-out;
+}
+.overlay-fade-in h4 {
+  color: #f2f2f2;
+  font-size: 1.8rem;
+  margin-top: 40%;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  background: rgba(0, 0, 0, 0.7);
+}
+.overlay-fade-in .button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 14px;
+  background: #FFF;
+  color: #222;
+  text-transform: uppercase;
+  box-shadow: 0 0 1px #000;
+  position: relative;
+  border: 1px solid #999;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
 
-  .overlay-fade-in .button:hover {
-    box-shadow: 0 0 5px #000;
-  }
-  .overlay-fade-in:hover img {
-    transform: scale(1.2);
-  }
-  .overlay-fade-in:hover .image-overlay-content {
-    opacity: 1;
-  }
-  .overlay-fade-in:hover h4, .overlay-fade-in p, .overlay-fade-in .button {
-    opacity: 1;
-  }
-  .overlay-fade-in:hover p {
-    transition-delay: 0.1s;
-  }
-  .overlay-fade-in:hover .button {
-    transition-delay: 0.2s;
-  }
+.overlay-fade-in .button:hover {
+  box-shadow: 0 0 5px #000;
+}
+.overlay-fade-in:hover img {
+  transform: scale(1.2);
+}
+.overlay-fade-in:hover .image-overlay-content {
+  opacity: 1;
+}
+.overlay-fade-in:hover h4, .overlay-fade-in p, .overlay-fade-in .button {
+  opacity: 1;
+}
+.overlay-fade-in:hover p {
+  transition-delay: 0.1s;
+}
+.overlay-fade-in:hover .button {
+  transition-delay: 0.2s;
+}
 
-  /* I added this */
-  .overlay-fade-in h4 a {
-    color: white;
-  }
+/* I added this */
+.overlay-fade-in h4 a {
+  color: white;
+}
 
-  .pagination-ul {
-    justify-content: center;
-    align-content: center;
-  }
+.pagination-ul {
+  justify-content: center;
+  align-content: center;
+}
 
-  .pagination-numbers {
-    font-size: 2em;
-    font-weight: bold;
-  }
+.pagination-numbers {
+  font-size: 2em;
+  font-weight: bold;
+}
 
-  .pagination-group {
-    justify-content: center;
-    align-content: center;
-  }
+.pagination-group {
+  justify-content: center;
+  align-content: center;
+}
 
+/* .button {
+  margin-top: 1.8em;
 
+} */
 
+.label_tag {
+  color: #FEFEFE;
+
+}
+#query_text {
+      margin-bottom: 0rem;
+}
+
+#edamam-badge {
+  vertical-align: baseline;
+}
+/* .whole-thing {
+  height: 1
+} */
   .pagination-numbers a {
 
+  }
+  .inside-shit {
+    background-color: rgba(255, 255, 255, 0.5);
   }
 
   /* .found-image {

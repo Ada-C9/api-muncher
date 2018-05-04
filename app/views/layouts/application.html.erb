@@ -14,39 +14,31 @@
   </head>
 
   <body>
-<section class="main-part inside-shit">
-  <!-- <div class="grid-y medium-grid-frame">
-    <div class="cell shrink header medium-cell-block-container text-center"> -->
+    <section class="main-part inside-shit">
+      <div class="header text-center">
+        <h2>Welcome to searching shit</h2>
+          <%= form_tag results_path(@search_input), method: "get" do %>
+            <div class="grid-x align-center">
+              <div class="cell medium-4 input-group">
+                <!-- <section class="input-group"> -->
+                  <!-- <%= label_tag(:query_text, '`', class:"input-group-label") %> -->
+                  <%= text_field_tag(:query_text) %>
 
-        <div class="row expanded flex-dir-column">
-          <div class="columns shrink header text-center">
-            <h2>Welcome to searching shit</h2>
-          <!-- </div>
-        </div> -->
+                <div class="input-group-button">
+                  <%= submit_tag "Search", class:"button" %>
+                </div>
+                </div>
+              <!-- </section> -->
+            </div>
+          <% end %>
 
-        
-        <%= form_tag results_path(@search_input), method: "get" do %>
-          <%= label_tag(:query_text, "Enter food") %>
-          <%= text_field_tag(:query_text) %>
-          <%= submit_tag "Search" %>
-        <% end %>
-      </div>
-    </div>
-
-        <!-- <div class="cell medium-auto medium-cell-block-container">
-                <div class="grid-x grid-padding-x">
-                  <div class="cell medium-8 medium-cell-block-y"> -->
+        <div class="grid-y whole-thing">
 
       <%= yield %>
-<!-- </div>
-</div>
-</div> -->
-
-
 
       <div id="edamam-badge" data-color="white"></div>
-      <!-- </div> -->
+    </div>
+</div>
     </section>
-
   </body>
 </html>

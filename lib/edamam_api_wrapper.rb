@@ -10,8 +10,6 @@ class EdamamApiWrapper
 	PER_PAGE = 9
 	MAX_ALLOWABLE_PAGES = 10
 
-	# def self.search_recipes(query_text, from: 0, to: 11, diet: nil, health: nil)
-	# def self.search_recipes(query_text, from, to: PER_PAGE, diet: nil, health: nil)
 	def self.search_recipes(query_text, from, diet: nil)
 		response = HTTParty.get(build_url_for_search(query_text, from, diet))
 		return { # TODO: better to make this a class?
@@ -23,14 +21,11 @@ class EdamamApiWrapper
 	def self.get_recipe(uri)
 		result = HTTParty.get(URI.encode(get_find_recipe_base_url(uri)))
 		return Recipe.new(result.pop)
-		# raise
 	end
 
 	private
 
 	def self.build_recipes(response)
-		# search_url = build_url_for_search(query_text, from, to, diet, health)
-		# search_url = build_url_for_search(query_text, from, diet)
 		recipes_list = []
 		if response["hits"]
 			response["hits"].each { |hit| recipes_list << Recipe.new(hit['recipe']) }
@@ -78,7 +73,7 @@ class EdamamApiWrapper
 		build_url << "&from=#{from}" if from.is_a?(Integer)
 		build_url << "&to=#{from + PER_PAGE}" if from.is_a?(Integer)
 	end
-
+end
 	# def self.add_health_to_url(health, build_url)
 	# 	build_url << "&health=#{health}" if HEALTH_OPTIONS.include?(health)
 	# end
@@ -97,7 +92,7 @@ class EdamamApiWrapper
 	# 	build_url << "&to=#{to}" if to.is_a?(Integer)
 	# end
 
-end
+
 
 ################################################################################
 

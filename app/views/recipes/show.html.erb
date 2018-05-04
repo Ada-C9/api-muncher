@@ -1,18 +1,19 @@
-<section class="show">
-  <div class="header">
-    <p id="nav-title">TITLE</p>
-    <%= link_to root_path, class: "btn btn-default" do %>
-      <i class="fas fa-search"></i> search
-    <% end %>
-  </div>
+<div class="header">
+  <p id="nav-title">TITLE</p>
+  <%= link_to root_path, class: "btn btn-default" do %>
+    <i class="fas fa-search"></i> search
+  <% end %>
+</div>
 
-  <div class="show-item">
-    <h2><%= @recipe.name %></h2>
+<section class="show show-container">
+
+  <h4 id="show-title"><%= @recipe.name %></h4>
+  <div id="show-photo">
     <img src="<%= @recipe.image %>" alt= "<%= @recipe.name %>">
     <p>Source: <%= link_to @recipe.source, @recipe.url %></p>
   </div>
 
-  <div class="show-item">
+  <div id="show-text">
     <p>Ingredients: </p>
     <ul>
       <% @recipe.ingredients.each do |ingredient| %>

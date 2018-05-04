@@ -12,7 +12,7 @@ class Recipe
     @url = input[:url]
 
     if id.nil? || name.nil?
-      raise ArgumentError.new("Recipe must have an id")
+      raise ArgumentError.new("Recipe must have an id and name")
     end
   end
 

@@ -5,17 +5,20 @@
 			<li class="product-summary">
 				<div class="row small-up-2 medium-up-3 large-up-4 align-center">
 					<div class="column">
-						<div class="card">
-							<div class="card-section">
+						<!-- <div class="card"> -->
+							<!-- <div class="card-section"> -->
+								<div class="image-wrapper overlay-fade-in">
 								<%= image_tag(result.image, :alt => "recipe image", :class => "found-image") %>
-								<p><%= link_to result.name, { action: 'show', :uri => result.uri }%></p>
+								 <div class="image-overlay-content">
+									 <h4><%= link_to result.name, { action: 'show', :uri => result.uri }%></h4>
+								 </div>
 							</div>
 							<!-- <div class="card-divider"> -->
 								<!-- <ul class="menu"> -->
 									<!-- <p class="text-wrap"><%= result.name %></p> -->
 								<!-- </ul> -->
 							<!-- </div> -->
-						</div>
+						<!-- </div> -->
 					</div>
 				</div>
 			</li>

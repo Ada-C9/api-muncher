@@ -25,8 +25,7 @@ class EdamamApiWrapper
   end
 
   def self.return_recipe(uri)
-    encoded_uri = URI.encode(uri)
-    response = HTTParty.get("#{BASE_URL}r=http:%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_#{encoded_uri}&app_id=#{ID}&app_key=#{KEY}")
+    response = HTTParty.get("#{BASE_URL}r=http:%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_#{uri}&app_id=#{ID}&app_key=#{KEY}")
     if !response.empty?
       uri = response[0]["uri"]
       name = response[0]["label"]

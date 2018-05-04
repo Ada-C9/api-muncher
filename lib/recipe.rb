@@ -9,7 +9,7 @@ class Recipe
     @uri = recipe["uri"]
     @image = recipe["image"]
     @url = recipe["url"]
-    @recipe_source = recipe["source"]
+    @source = recipe["source"]
     @ingredientLines = recipe["ingredientLines"]
     @totalNutrients = recipe["totalNutrients"]
     @healthLabels = recipe["healthLabels"]

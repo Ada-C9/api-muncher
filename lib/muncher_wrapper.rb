@@ -42,10 +42,9 @@ class MuncherWrapper
       attributes["url"] = response[0]["url"]
       attributes["source"] = response[0]["source"]
       attributes["ingredientLines"] = response[0]["ingredientLines"]
-      attributes["diet_labels"] = response[0]["dietLabels"]
-      attributes["total_nutrients"] = response[0]["totalNutrients"]
-      attributes["health_labels"] = response[0]["healthLabels"]
-      
+      attributes["totalNutrients"] = response[0]["totalNutrients"]
+      attributes["healthLabels"] = response[0]["healthLabels"]
+
       recipe = Recipe.new(attributes)
     else
       return nil

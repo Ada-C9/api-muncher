@@ -12,7 +12,11 @@
 
 
 <p>Dietary Labels</p>
-<%=@recipe.healthLabels%>
+<%@recipe.healthLabels.each do |line| %>
+<ul>
+  <li><%= line %></li>
+</ul>
+<%end%>
 
 
 

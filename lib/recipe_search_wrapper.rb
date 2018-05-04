@@ -1,5 +1,4 @@
 require 'httparty'
-require 'pry'
 
 class RecipeSearchWrapper
   @app_id = ENV["APPLICATION_ID"]

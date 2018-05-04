@@ -6,7 +6,7 @@
         <li>
           <%= recipe.uri %>
           <%= image_tag recipe.image %>
-          <%= link_to recipe.label, recipe_path(:label => recipe.label, :uri => recipe.uri) %>
+          <%= link_to recipe.label, recipe_path(:uri => recipe.uri, :label => recipe.label) %>
         </li>
       <% end %>
     </ul>

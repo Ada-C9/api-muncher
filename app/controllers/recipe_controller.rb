@@ -1,4 +1,4 @@
-class RecipesController < ApplicationController
+class RecipeController < ApplicationController
   around_action :catch_api_error
 
   def root
@@ -10,7 +10,7 @@ class RecipesController < ApplicationController
   end
 
   def show
-    @recipe = RecipeSearchWrapper.find(params[:uri])
+    @recipe = RecipeSearchWrapper.find_recipe(params[:uri])
   end
 
   private

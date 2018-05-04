@@ -22,6 +22,10 @@
    list-style-type: none;
  }
 
+.card {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
 
 .prod-container {
   display: flex;

@@ -13,11 +13,11 @@ VCR.configure do |config|
     :record => :new_episodes,    # record new data
     :match_requests_on => [:method, :uri, :body] # The http method, URI and body of a request all need to match
   }
-  config.filter_sensitive_data("<APP_ID>") do
-    ENV['APP_ID']
+  config.filter_sensitive_data("<EDAMAM_ID>") do
+    ENV['EDAMAM_ID']
   end
-  config.filter_sensitive_data("<APP_KEY>") do
-    ENV['APP_KEY']
+  config.filter_sensitive_data("<EDAMAM_KEY>") do
+    ENV['EDAMAM_KEY']
   end
 end
 

@@ -1,1 +1,6 @@
-<h2>You made it to the show page</h2>
+
+
+<h2><%= @recipe.label%></h2>
+<img src="<%= @recipe.image %>" alt="recipe image">
+<%= @recipe.ingredients %>
+<%= @recipe.health %>

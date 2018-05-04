@@ -1,4 +1,5 @@
 require 'edamam_api_wrapper.rb'
+require 'pry'
 
 class RecipesController < ApplicationController
 
@@ -8,7 +9,8 @@ class RecipesController < ApplicationController
   end
 
   def show
-    uri = params[:uri]
+    uri = params[:format]
+    @recipe = EdamamApiWrapper.get_recipe(uri)
   end
 
 end

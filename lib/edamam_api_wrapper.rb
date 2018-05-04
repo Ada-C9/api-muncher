@@ -11,13 +11,18 @@ class EdamamApiWrapper
     response = HTTParty.get(url)
 
     return response['hits'].map do |raw_data|
-        Recipe.from_api(raw_data)
+        Recipe.from_api(raw_data["recipe"])
     end
   end
 
   def self.get_recipe(uri)
-    encoded_uri = URI.encode(uri)
-    url =  (BASE_URL+"?r=#{encoded_uri}&app_id="+TOKEN_APP_ID+"&app_key="+TOKEN_APP_KEY)
+    # encoded_uri = URI.encode(uri)
+    url =  (BASE_URL+"?r=http:%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_#{uri}&app_id="+TOKEN_APP_ID+"&app_key="+TOKEN_APP_KEY)
+
+    response = HTTParty.get(url)
+    # return response['hits'].map do |raw_data|
+      Recipe.from_api(response[0])
+    # end
   end
 
 end

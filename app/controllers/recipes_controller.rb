@@ -1,3 +1,5 @@
+require 'edamam_api_wrapper.rb'
+
 class RecipesController < ApplicationController
 
   def index

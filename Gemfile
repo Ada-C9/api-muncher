@@ -33,6 +33,10 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'autoprefixer-rails'
+gem "omniauth"
+gem "omniauth-github"
+
 gem 'httparty'
 
 group :development, :test do

@@ -8,7 +8,7 @@
 						<div class="card">
 							<div class="card-section">
 								<%= image_tag(result.image, :alt => "recipe image", :class => "found-image") %>
-								<p class="text-wrap"><%= result.name %></p>
+								<p><%= link_to result.name, { action: 'show', :uri => result.uri }%></p>
 							</div>
 							<!-- <div class="card-divider"> -->
 								<!-- <ul class="menu"> -->

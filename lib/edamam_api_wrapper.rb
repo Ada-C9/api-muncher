@@ -20,7 +20,10 @@ class EdamamApiWrapper
 		}
 	end
 
-	def self.get_recipe(recipe_uri)
+	def self.get_recipe(uri)
+		result = HTTParty.get(URI.encode(get_find_recipe_base_url(uri)))
+		return Recipe.new(result.pop)
+		# raise
 	end
 
 	private
@@ -44,28 +47,28 @@ class EdamamApiWrapper
 	# their relationship with each other.
 
 	def self.build_url_for_search(query_text, from, diet)
-		build_url = "#{URL}q=#{query_text}&app_id=#{APP_ID}&app_key=#{APP_KEY}"
+		build_url = get_search_base_url(query_text)
 		add_from_to_url(from, build_url)
-		# add_to_to_url(to, build_url)
 		add_diet_to_url(diet, build_url)
-		# add_health_to_url(health, build_url)
 		return build_url
+	end
+
+	def self.get_search_base_url(query_text)
+		return get_base_url("q=#{query_text}")
+	end
+
+	def self.get_find_recipe_base_url(recipe_uri)
+		return get_base_url("r=#{recipe_uri}")
+	end
+
+
+	def self.get_base_url(input)
+		return "#{URL}#{input}&app_id=#{APP_ID}&app_key=#{APP_KEY}"
 	end
 
 	def self.add_diet_to_url(diet, build_url)
 		build_url << "&diet=#{diet}" if DIET_OPTIONS.include?(diet)
 	end
-
-	def self.add_health_to_url(health, build_url)
-		build_url << "&health=#{health}" if HEALTH_OPTIONS.include?(health)
-	end
-
-	# def self.add_to_or_from_to_url(from, build_url)
-	# 	if !from.nil? && !(from.is_a?(Integer) && from >= 0)
-	# 		raise ArgumentError.new("invalid 'from'")
-	# 	end
-	# 	build_url << "&from=" << from if from.is_a?(Integer)
-	# end
 
 	def self.add_from_to_url(from, build_url)
 		from = from.to_i if !from.nil?
@@ -76,12 +79,23 @@ class EdamamApiWrapper
 		build_url << "&to=#{from + PER_PAGE}" if from.is_a?(Integer)
 	end
 
-	def self.add_to_to_url(to, build_url)
-		if !to.nil? && !(to.is_a?(Integer) && to >= 0)
-			raise ArgumentError.new("invalid 'to'")
-		end
-		build_url << "&to=#{to}" if to.is_a?(Integer)
-	end
+	# def self.add_health_to_url(health, build_url)
+	# 	build_url << "&health=#{health}" if HEALTH_OPTIONS.include?(health)
+	# end
+
+	# def self.add_to_or_from_to_url(from, build_url)
+	# 	if !from.nil? && !(from.is_a?(Integer) && from >= 0)
+	# 		raise ArgumentError.new("invalid 'from'")
+	# 	end
+	# 	build_url << "&from=" << from if from.is_a?(Integer)
+	# end
+
+	# def self.add_to_to_url(to, build_url)
+	# 	if !to.nil? && !(to.is_a?(Integer) && to >= 0)
+	# 		raise ArgumentError.new("invalid 'to'")
+	# 	end
+	# 	build_url << "&to=#{to}" if to.is_a?(Integer)
+	# end
 
 end
 

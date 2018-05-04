@@ -1,7 +1,5 @@
-
-<section >
+<section>
   <article>
-    <h1><%= link_to "MUNCH THIS", root_path %></h1>
     <div class="index-nav">
       <div class="directions">
         <%= will_paginate @recipes, :page_links => false, :container => false, :previous_label => 'Previous&nbsp;&nbsp;', :next_label => ' Next' %>
@@ -11,15 +9,14 @@
       </div>
     </div>
   </article>
-  <article id="muncher-home">
+  <article class="muncher-home">
     <% if @recipes %>
       <div class="grid-x grid-padding-x align-center">
         <% @recipes.each do |item| %>
           <div class="cell small-4">
-            <img src="<%= item.image %>" >
+            <%= link_to image_tag(item.image), recipe_path(item.id) , :alt => "#{item.source} image", :title => "#{item.source}" %>
             <p>
               <%= link_to item.source, recipe_path(item.id) %><br/>
-              
               by <%= item.label %>
             </p>
           </div>
@@ -27,8 +24,8 @@
       </div>
     <% end %>
   </article>
-</section>
 
-<div class="pages">
-  <%= will_paginate @recipes, :container => false, :previous_label => "←", :next_label => "→"%>
-</div>
+  <div class="pages">
+    <%= will_paginate @recipes, :container => false, :previous_label => "←", :next_label => "→"%>
+  </div>
+</section>

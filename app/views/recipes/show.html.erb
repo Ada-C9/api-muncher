@@ -1,9 +1,9 @@
-<section id="recipe-show">
-  <h1>MUNCHER</h1>
-  <h2><a href="<%= @recipe.url %>"  target="_blank"><%= @recipe.source %></a></h2>
-  <h4>by <%= @recipe.label %></h4>
-  Serves: <%= @recipe.count.round(0) %>
-
+<section class="recipe-show">
+  <div class="show-header">
+    <h2><a href="<%= @recipe.url %>"  target="_blank" title="click to see recipe"><%= @recipe.source %></a></h2>
+    <h4>by <%= @recipe.label %></h4>
+    Serves: <%= @recipe.count.round(0) %>
+  </div>
 
   <article class="show-details">
     <div class="show-feature">
@@ -11,7 +11,7 @@
         <img src="<%= @recipe.image %>" alt="<%= @recipe.source %> image">
       </div>
       <div>
-        <h4>Ingredients</h4>
+        <h4 class="info">Ingredients</h4>
         <ul>
           <% @recipe.ingredients.each do |item| %>
             <li>
@@ -19,18 +19,19 @@
             </li>
           <% end %>
         </ul>
+        <ul>
+          <h4 class="info">Health Labels</h4>
+            <% @recipe.health.each do |label| %>
+            <li>
+              <%= label %>
+            </li>
+            <% end %>
+        </ul>
       </div>
     </div>
 
     <div>
-      <ul>
-        <h4>Health Labels</h4>
-          <% @recipe.health.each do |label| %>
-          <li>
-            <%= label %>
-          </li>
-          <% end %>
-      </ul>
+
     </div>
 
 

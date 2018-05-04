@@ -7,10 +7,12 @@ class RecipesController < ApplicationController
     if params[:term] && params[:term].strip.length > 0
       if params[:page_num]
         @recipes = EdamamApiWrapper.list_recipes(params[:term], params[:page_num])
-        session[:term] = params[:term]
       else
         @recipes = EdamamApiWrapper.list_recipes(params[:term], 1)
-        session[:term] = params[:term]
+      end
+      session[:term] = params[:term]
+      if !session[:term_collection].include?(params[:term])
+        term_collection << params[:term]
       end
     else
       flash[:status] = :failure
@@ -27,6 +29,10 @@ class RecipesController < ApplicationController
       flash[:result_text] = "Could not find that recipe"
       redirect_to recipes_path
     end
+  end
+
+  def term_collection
+    session[:term_collection] ||= []
   end
 
 end

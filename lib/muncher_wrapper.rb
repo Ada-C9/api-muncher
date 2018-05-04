@@ -1,7 +1,5 @@
 require 'httparty'
 
-
-
 class MuncherWrapper
   URL = "https://api.edamam.com/search"
   KEY = ENV["APP_KEY"]
@@ -13,7 +11,7 @@ class MuncherWrapper
 
     @recipe_list = []
 
-    encoded_uri = URI.encode("#{URL}?q=#{search_phrase}&app_id=#{ID}&app_key=#{KEY}&to=100").parsed_response
+    encoded_uri = URI.encode("#{URL}?q=#{search_phrase}&app_id=#{ID}&app_key=#{KEY}&to=100")
 
     response = HTTParty.get(encoded_uri)
 
@@ -29,9 +27,10 @@ class MuncherWrapper
 
 
   def self.show_recipe(uri)
-    url = "#{URL}?app_id=#{ID}&app_key=#{KEY}&r=#{uri}"
 
-    response = HTTParty.get(url).parsed_response
+    url = URI.encode("#{URL}?r=#http:%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_#{uri}&app_id=#{ID}&app_key=#{KEY}")
+
+    response = HTTParty.get(url)
     #raise
     if response != nil
 
@@ -55,6 +54,6 @@ class MuncherWrapper
     return recipe
   end
 
-  end
+
 
 end

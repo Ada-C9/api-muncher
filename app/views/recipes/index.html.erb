@@ -5,11 +5,12 @@
     <ul>
       <% @recipes.each do |recipe| %>
         <li>
-          <%= link_to recipe.label, recipe_show_path(recipe) %>
-          <%= link_to image_tag(recipe.image, :size => "300x300", alt:"recipe image"), recipe_show_path(recipe) %>
+          <%= link_to recipe.label, recipe_show_path(recipe.id) %>
+          <%= link_to image_tag(recipe.image, :size => "300x300", alt:"recipe image"), recipe_show_path(recipe.id) %>
         </li>
 
       <% end %>
     </ul>
   <% end %>
 </section>
+<%= will_paginate @recipes, class: "page-nav row" %>

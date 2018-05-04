@@ -3,8 +3,7 @@
   <% if @recipes %>
     <ul>
       <% @recipes.each do |entry| %>
-      <li>  <%= entry["recipe"]["label"] %> </li>
+      <li>  <%= entry.label %> </li>
       <% end %>
-    </ul>
   <% end %>
 </section>

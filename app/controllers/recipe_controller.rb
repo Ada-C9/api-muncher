@@ -2,30 +2,16 @@ class RecipeController < ApplicationController
   def index
     query = params["query"]
 
-    if EdamamApiWrapper.find_it(query)
-      results = EdamamApiWrapper.find_it(query)
-      @recipes = results["hits"]
-      
-      flash[:success] = "Found!"
+    @recipes = EdamamApiWrapper.find_it(query)
 
+    if @recipes.length > 0
+      flash[:success] = "#{@recipes.length} Recipes Found!"
     else
-      flash[:alert] = "Error"
+      flash[:alert] = "No Recipes Found :("
     end
   end
 
   def create
-
-    query = params["query"]
-
-    if EdamamApiWrapper.find_it(query)
-      results = EdamamApiWrapper.find_it(query)
-      @recipes = results["hits"]
-      flash[:success] = "Found!"
-    else
-      flash[:alert] = "Error"
-    end
-
-    redirect_to results_path
   end
 
   def new

@@ -8,10 +8,14 @@ class RecipeApiWrapper
   BASE_URL = "https://api.edamam.com/search"
   APP_ID = ENV["API_APP_ID"]
   APP_KEY = ENV["API_APP_KEY"]
+  QUERY = "chicken"
+  FROM = 1
+  TO = 20
+
 
   def self.list_recipes
 
-    full_url = URI.encode(BASE_URL + "?q=chicken&app_id=" + APP_ID + "&app_key=" + APP_KEY)
+    full_url = URI.encode(BASE_URL + "?q=" + QUERY + "&app_id=" + APP_ID + "&app_key=" + APP_KEY + "&from=#{FROM}&to=#{TO}")
 
     response = HTTParty.get(full_url)
 

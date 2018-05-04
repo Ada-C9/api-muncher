@@ -1,5 +1,4 @@
 require 'httparty'
-require 'pry'
 require 'will_paginate'
 
 class EdamamApiWrapper

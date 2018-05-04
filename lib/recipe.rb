@@ -1,5 +1,5 @@
 class Recipe
-
+  # paginates_per 8
   attr_reader :label, :image, :calories, :url
 
   def initialize(label, image, calories, url)
@@ -17,5 +17,6 @@ class Recipe
     raw_data["recipe"]["url"]
     )
   end
+
 
 end

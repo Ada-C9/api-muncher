@@ -1,5 +1,6 @@
 require 'httparty'
 require 'pry'
+require 'will_paginate'
 
 class EdamamApiWrapper
   TOKEN_APP_ID = ENV['APP_ID']

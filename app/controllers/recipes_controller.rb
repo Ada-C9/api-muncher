@@ -15,10 +15,4 @@ class RecipesController < ApplicationController
     @recipe = EdamamApiWrapper.show_recipe(params[:id])
   end
 
-  private
-
-  # def recipe_params
-  #   params.require(:recipe).permit(:id, :title, :image, :link, :source, :ingredients, :dietlabels)
-  # end
-
 end

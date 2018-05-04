@@ -1,8 +1,18 @@
+<header>
+  <div>
+    <h1>Recipedia</h1>
+  </div>
+  <div class="search-bar">
+    <%= form_tag(recipes_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Recipes" %>
+    <%= submit_tag "Search", :name => nil, :class => "button" %>
+    <% end %>
+  </div>
+</header>
+
 <div class="show-head">
-  <h3><%= @recipe.title %></h3>
-  <p>
-    By <%= link_to @recipe.source, @recipe.link %>
-  </p>
+    <h3><%= @recipe.title %></h3>
+    <h5>By <%= link_to @recipe.source, @recipe.link %></h5>
 </div>
 
 <div class="show-mid">

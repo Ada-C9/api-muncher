@@ -8,7 +8,13 @@ class RecipesController < ApplicationController
   end
 
   def show
-    @recipe = EdemamApiWrapper.find_recipe(params[:recipe_uri])
+    begin
+      @recipe = EdemamApiWrapper.find_recipe(params[:recipe_uri])
+    rescue EdemamApiWrapper::EdemamError => error
+      redirect_back fallback_location: homepage_path
+      flash[:status] = :failure
+      flash[:error] = error.message
+    end
   end
 
 end

@@ -30,10 +30,10 @@ describe RecipesController do
       VCR.use_cassette("recipes") do
 
         fake_uri = "4e29jshfr3343daadak;jdjladda75d4ecae2d1c7bb72c56"
-        # binding.pry
-        proc {
-          get show_recipe_path(fake_uri)
-        }.must_raise ArgumentError
+
+        get show_recipe_path(fake_uri)
+        must_respond_with :redirect
+        flash[:status].must_equal :failure
       end
     end
   end

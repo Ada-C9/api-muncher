@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-gem 'sinatra', '1.0'
 
 ruby '2.4.1'
 
@@ -82,7 +81,6 @@ end
 
 group :development do
   gem 'better_errors'
-  gem 'binding_of_caller'
 end
 
 group :test do

@@ -18,7 +18,26 @@
 
  */
 
-.align-center div {
+.align-center {
   text-align: center;
+}
+
+.more-padding {
+  padding: 1em;
+}
+
+.search-wrapper {
+  padding: 10% 20% 0 20%;
+}
+
+/* .will_paginate a, .will_paginate .current {
+  background-color: red;
+} */
+
+.pagination .current {
+  background: grey;
+}
+
+.pagination a {
   display: inline-block;
 }

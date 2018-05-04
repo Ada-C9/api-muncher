@@ -13,11 +13,11 @@
 
   <body>
     <header>
-      Recipe Muncher
+      Recipe hAPI
     </header>
-    <section>
+
+    <section class="search-wrapper more-padding align-center">
       <%= form_tag({controller: 'recipes', action: 'index'}, method: 'get') do %>
-      <%= label_tag(:query)%>
       <%= text_field_tag(:query) %>
       <%= submit_tag("Search!")%>
       <% end %>

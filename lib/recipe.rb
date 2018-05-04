@@ -1,13 +1,14 @@
 class Recipe
-  attr_reader :name, :uri, :image, :ingredients, :calories, :link
+  attr_reader :name, :uri, :image, :ingredients, :calories, :link, :source
 
-  def initialize(name, uri, image, ingredients, calories, link)
+  def initialize(name, uri, image, ingredients, calories, link, source)
     @name = name
     @uri = uri
     @image = image
     @ingredients = ingredients
     @calories = calories
     @link = link
+    @source = source
     # @nutrients = nutrients
   end
 
@@ -17,10 +18,11 @@ class Recipe
       recipe_hash["image"],
       recipe_hash["ingredientLines"],
       recipe_hash["calories"],
-      recipe_hash["url"]
+      recipe_hash["url"],
+      recipe_hash["source"]
     )
   end
-  
+
   # def self.from_api(recipe_hash)
   #   self.new(recipe_hash["recipe"]["label"],
   #     recipe_hash["recipe"]["uri"],

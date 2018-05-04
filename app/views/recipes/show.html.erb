@@ -1,7 +1,11 @@
-<h5>Recipe Details</h5>
 
 <!-- Show View: recipe name, link to original recipe, ingredients, dietary info -->
-<%= @recipe.name %></br></br>
+<h4><%= @recipe.name %></h4>
+<h5>Recipe by:<%= link_to "#{@recipe.source}", @recipe.link %></h5>
+
+<div>
+        <%= image_tag(@recipe.image, alt:"#{@recipe.name}") %>
+      </div>
 <%= link_to @recipe.link %></br></br>
 
 <strong>Ingredients</strong></br>

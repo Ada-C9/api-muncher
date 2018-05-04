@@ -78,7 +78,13 @@ header {
   background-color: gray;
   height: 20%;
 }
+.pagination {
+  text-align: center;
+}
+.pagination a{
+  display: inline;
 
+}
 
 footer {
   background-color: gray;

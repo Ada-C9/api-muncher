@@ -8,8 +8,8 @@ class EdamamApiWrapper
   @recipes = []
 
   def self.list_recipes(ingredient)
-    response = HTTParty.get("#{URL}?q=#{ingredient}&app_id=#{APP_ID}&app_key=#{APP_KEY}")
-    
+    response = HTTParty.get("#{URL}?q=#{ingredient}&app_id=#{APP_ID}&app_key=#{APP_KEY}&from=0&to=100")
+
     @recipes = []
 
     if response["hits"]

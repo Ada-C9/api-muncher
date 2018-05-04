@@ -1,0 +1,12 @@
+<section class="recipes-list">
+  <h1>Recipes</h1>
+  <% if @recipes %>
+    <ul>
+      <% @recipes.each do |recipe| %>
+        <li>
+          <%= recipe.label %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+</section>

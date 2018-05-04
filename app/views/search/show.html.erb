@@ -1,2 +1,26 @@
-<h1>Search#show</h1>
-<p>Find me in app/views/search/show.html.erb</p>
+<section>
+  <h2><%= @recipe.name %></h2>
+  <h4>By: <%= @recipe.contributor %></h4>
+</section>
+<section>
+  <%= image_tag(@recipe.image) %>
+</section>
+<section>
+  <strong>Ingredients</strong>
+  <ul>
+    <% @recipe.ingredients.each do |i| %>
+      <li><%= i %></li>
+    <% end %>
+  </ul>
+</section>
+<section>
+  <strong>Dietary Labels</strong>
+  <ul>
+    <% @recipe.dietary_labels.each do |d| %>
+      <li><%= d %></li>
+    <% end %>
+    <% @recipe.health_labels.each do |h| %>
+      <li><%= h %></li>
+    <% end %>
+  </ul>
+</section>

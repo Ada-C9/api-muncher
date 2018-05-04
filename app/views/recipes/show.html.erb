@@ -1,1 +1,21 @@
 <h1><%= @recipe.title %></h1>
+
+<p>By <%= @recipe.source %></p>
+<p><%= link_to "See original recipes", @recipe.url %></p>
+
+<%= image_tag(@recipe.image, size: "100", alt: "Recipe image") %>
+
+<h6>Ingredients:</h6>
+
+<ul>
+  <% @recipe.ingredients.each do |ingredient|%>
+  <li> <%= ingredient %> </li>
+</ul>
+<% end %>
+
+<h6>Dietry Information:</h6>
+<ul>
+  <% @recipe.diet.each do |diet_label|%>
+  <li> <%= diet_label %> </li>
+</ul>
+<% end %>

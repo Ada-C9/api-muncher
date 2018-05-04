@@ -10,10 +10,11 @@ class RecipesController < ApplicationController
   def show
     recipe_id = params[:id]
     @recipe = ApiMuncherWrapper.find_recipe(recipe_id)
-    if recipe.nil?
+
+    if @recipe.nil?
       flash[:alert] = "Invalid recipe"
     else
-      @recipe = recipe
+      @recipe
     end
   end
 end

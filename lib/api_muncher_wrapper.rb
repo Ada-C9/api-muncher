@@ -7,25 +7,38 @@ class ApiMuncherWrapper
   @recipe_list = []
 
   def self.search_recipes(search)
+
+    # if!@recipe_list.empty
+    #   @recipe_list = []
+    # end
+
     url = BASE_URL + "?q=#{search}&app_id=#{APP_ID}&app_key=#{APP_KEY}"
     data = HTTParty.get(url)
 
     if data["hits"]
+      @recipe_list = []
       data["hits"].each do |hash|
         recipe = hash["recipe"]
         @recipe_list << Recipe.new(recipe["label"],
           recipe["uri"], {image: recipe ["image"],
             source: recipe['source'],
-            url: recipe['url']}
+            url: recipe['url'],
+            ingredients: recipe['ingredientLines'],
+            dietary_info:recipe['dietLabels']}
           )
-        end
-        return @recipe_list
-      else
-        return []
       end
+      return @recipe_list
     end
 
-    def self.find_recipe(id)
-      @recipe_list.find { |recipe| recipe.id == id}
-    end
   end
+
+  def self.find_recipe(id)
+    @recipe_list.each do |recipe|
+      if recipe.id == id
+        return recipe
+      end
+    end
+    return nil
+  end
+
+end

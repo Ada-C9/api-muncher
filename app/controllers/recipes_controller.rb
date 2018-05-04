@@ -7,8 +7,8 @@ class RecipesController < ApplicationController
     @recipes = Kaminari.paginate_array(api_search).page(params[:page]).per(8)
   end
 
-  def create
-
+  def show
+    uri = params[:uri]
   end
 
 end

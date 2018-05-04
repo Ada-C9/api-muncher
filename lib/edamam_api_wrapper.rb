@@ -16,5 +16,9 @@ class EdamamApiWrapper
     end
   end
 
+  def self.get_recipe(uri)
+    encoded_uri = URI.encode(uri)
+    url =  (BASE_URL+"?r=#{encoded_uri}&app_id="+TOKEN_APP_ID+"&app_key="+TOKEN_APP_KEY)
+  end
 
 end

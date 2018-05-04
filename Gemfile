@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+gem 'sinatra', '1.0'
+
 ruby '2.4.1'
 
 gem 'will_paginate'
@@ -73,6 +75,7 @@ gem 'jquery-turbolinks'
 gem 'jquery-rails'
 gem 'foundation-rails'
 gem 'normalize-rails'
+
 group :development, :test do
   gem 'pry-rails'
 end

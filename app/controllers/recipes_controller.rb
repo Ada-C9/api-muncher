@@ -6,9 +6,8 @@ class RecipesController < ApplicationController
   end
 
   def show
-
     id = recipe_id
-    @recipe_details = MuncherApiWrapper.show_recipe(id)
+    @recipe = MuncherApiWrapper.show_recipe(id)
   end
 
   def search

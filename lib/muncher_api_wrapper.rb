@@ -2,7 +2,7 @@ require 'httparty'
 
 class MuncherApiWrapper
   BASE_URL = "https://api.edamam.com/search"
-  BASE_SEARCH = "http://www.edamam.com/ontologies/edamam.owl#"
+  BASE_SEARCH = "http://www.edamam.com/ontologies/edamam.owl#recipe_"
   APP_ID = ENV["MUNCHER_APP_ID"]
   APP_KEY = ENV["MUNCHER_APP_KEY"]
 
@@ -18,12 +18,13 @@ class MuncherApiWrapper
 
     recipe_list = []
     response["hits"].each do |r|
-      label_and_uri = {}
-      label_and_uri[:label] = r["recipe"]["label"]
-      # #recipe_ always has to be last item in
-      label_and_uri[:id] = r["recipe"]["uri"].split("#")[-1]
+      label_uri_image = {}
+      label_uri_image[:label] = r["recipe"]["label"]
+      # #recipe_ always has to be last # delimited item in uri otherwise this breaks
+      label_uri_image[:id] = r["recipe"]["uri"].split("#recipe_")[-1]
+      label_uri_image[:image] = r["recipe"]["image"]
 
-      recipe_list << label_and_uri
+      recipe_list << label_uri_image
     end
     return recipe_list
   end
@@ -36,9 +37,8 @@ class MuncherApiWrapper
     escaped = URI.escape(url)
     response = HTTParty.get(escaped)
 
-    
-
-    return "???"
+    recipe = Recipe.from_api(response[0])
+    return recipe
   end
 
 end

@@ -150,6 +150,27 @@ body {
     color: white;
   }
 
+  .pagination-ul {
+    justify-content: center;
+    align-content: center;
+  }
+
+  .pagination-numbers {
+    font-size: 2em;
+    font-weight: bold;
+  }
+
+  .pagination-group {
+    justify-content: center;
+    align-content: center;
+  }
+
+
+
+  .pagination-numbers a {
+
+  }
+
   /* .found-image {
     padding-left: 0.5rem;
     padding-right: 0.5rem;

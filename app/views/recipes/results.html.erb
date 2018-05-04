@@ -20,11 +20,22 @@
 </section>
 
 
-<ul>
-	<% (1...@max_pages).each do |page| %>
-	<%= link_to page, { action: 'results', :from => page } %>
-	<% end %>
+
+	<ul>
+  <section class="grid-x grid-margin-x pagination-group">
+<!-- <section class="pagination-ul"> -->
+
+			<% (1...@max_pages).each do |page| %>
+			<section class="cell shrink text-center pagination-numbers">
+				<%= link_to page, { action: 'results', :from => page } %>
+			</section>
+			<% end %>
+
+</section>
+
 </ul>
+
+
 <!-- <div class="grid-x grid-margin-x"> -->
 <!-- <div class="cell small-4">4 cells</div>
 <div class="cell auto">Whatever's left!</div>

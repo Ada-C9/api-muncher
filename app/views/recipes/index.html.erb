@@ -4,9 +4,8 @@
   <ul>
     <% @recipes.each do |recipe| %>
     <li>
-      # make the label a link_to show page
-      <%= recipe["label"]%>
-      <%= recipe["image"] %>
+      <!-- make the label a link_to show page -->
+      <%= recipe["recipe"]["label"]%>
     </li>
     <% end %>
   </ul>

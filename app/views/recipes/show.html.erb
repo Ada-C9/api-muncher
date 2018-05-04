@@ -10,7 +10,7 @@
   <h4 id="show-title"><%= @recipe.name %></h4>
   <div id="show-photo">
     <img src="<%= @recipe.image %>" alt= "<%= @recipe.name %>">
-    <p>Source: <%= link_to @recipe.source, @recipe.url %></p>
+    <p>Source: <%= link_to @recipe.source, @recipe.url, target: :_blank %></p>
   </div>
 
   <div id="show-text">

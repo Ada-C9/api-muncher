@@ -1,16 +1,15 @@
-
-<section class="channels-list">
-  <h1> Results for '<%= @query %>'</h1>
+<h1> Results for '<%= @query %>'</h1>
+<section class="grid-container">
   <% if @recipes %>
-    <ul>
-      <% @recipes.each do |recipe| %>
-        <li>
-          <%= link_to recipe.label, recipe_show_path(recipe.id) %>
-          <%= link_to image_tag(recipe.image, :size => "300x300", alt:"recipe image"), recipe_show_path(recipe.id) %>
-        </li>
 
-      <% end %>
-    </ul>
+  <% @recipes.each do |recipe| %>
+  <div class="grid-item">
+  <%= link_to image_tag(recipe.image, :size => "200x200", alt:"recipe image"), recipe_show_path(recipe.id) %>
+  <p><%= link_to recipe.label, recipe_show_path(recipe.id) %></p>
+  </div>
+
+  <% end %>
+
   <% end %>
 </section>
 <%= will_paginate @recipes, class: "page-nav row" %>

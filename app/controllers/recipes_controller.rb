@@ -1,7 +1,7 @@
 require 'httparty'
-require_dependency '../../lib/muncher_wrapper'
-require_dependency '../../lib/recipe'
-require 'will_paginate/array'
+# require_dependency '../../lib/muncher_wrapper'
+# require_dependency '../../lib/recipe'
+ require 'will_paginate/array'
 
 
 class RecipesController < ApplicationController
@@ -10,10 +10,8 @@ class RecipesController < ApplicationController
 
   def index
     @query = params[:search_phrase]
-    # recipes = MuncherWrapper.get_recipes(@query)
-    # @recipes = recipes.paginate(:page => params[:page], :per_page => 12)
-
-    @recipes = MuncherWrapper.paginate(:page => params[:page], :per_page => 12).get_recipes(@query)
+    recipes = MuncherWrapper.get_recipes(@query)
+    @recipes = recipes.paginate(:page => params[:page], :per_page => 12)
 
     if @recipes.empty?
       flash[:status] = :failure

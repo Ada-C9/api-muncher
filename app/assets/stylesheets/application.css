@@ -17,3 +17,63 @@
  *= require foundation_and_overrides
 
  */
+
+ /*font-family: 'Lobster', cursive;
+ font-family: 'Abril Fatface', cursive;
+ font-family: 'Shadows Into Light', cursive;
+ font-family: 'Poiret One', cursive;*/
+
+ header {
+  background-image: url("munch.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  height: 350px;
+}
+
+body {
+  /*margin-top: 10px;*/
+  background-color: #F8FAF8;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+ .grid-container {
+   display: grid;
+   align-items:  center;
+   grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+}
+
+.grid-item {
+  justify-self: center;
+  align-items: center;
+}
+
+
+
+
+@media screen and (max-width: 1000px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .header {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+}

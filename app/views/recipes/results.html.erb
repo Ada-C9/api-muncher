@@ -1,17 +1,17 @@
 <section class="grid-container">
-	<section class="grid-x align-center">
+	<section class="grid-x grid-margin-x align-center">
 		<ul class="prod-container">
 			<% @recipes.each do |result| %>
 			<li class="product-summary">
-				<div class="row small-up-2 medium-up-3 large-up-4 align-center">
-					<div class="column">
+				<!-- <div class="row cell small-4 align-center"> -->
+					<div class="block-thing">
 						<div class="image-wrapper overlay-fade-in">
 							<%= image_tag(result.image, :alt => "recipe image", :class => "found-image") %>
 							<div class="image-overlay-content">
 								<h4><%= link_to result.name, { action: 'show', :uri => result.uri }%></h4>
 							</div>
 						</div>
-					</div>
+					<!-- </div> -->
 				</div>
 			</li>
 			<%end%>
@@ -25,3 +25,8 @@
 	<%= link_to page, { action: 'results', :from => page } %>
 	<% end %>
 </ul>
+<!-- <div class="grid-x grid-margin-x"> -->
+<!-- <div class="cell small-4">4 cells</div>
+<div class="cell auto">Whatever's left!</div>
+<div class="cell auto">Whatever's left!</div>
+</div> -->

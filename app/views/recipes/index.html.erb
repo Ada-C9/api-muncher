@@ -1,8 +1,19 @@
 <h2>HiHello</h2>
 
 <% @recipes.each do |recipe| %>
-  <p><%= puts "hello" %></p>
-  <p><%= recipe.label %></p>
-<% end %>
+  <h3><%= link_to recipe.label, recipe.url %></h3>
+  <img src=" <%= recipe.image %>" alt="recipe photo">
 
-<%= @recipe %>
+  <h4>Ingredient List</h4>
+  <ul>
+    <% recipe.ingredientlines.each do |ingredient| %>
+    <li><%= ingredient %></li>
+    <% end %>
+  </ul>
+  <h4>Nutritional Information</h4>
+  <ul>
+    <% recipe.totalnutrients.each do |nutrient| %>
+    <li><%= "#{nutrient[1]["label"]}: #{'%.2f' % nutrient[1]["quantity"]} #{nutrient[1]["unit"]}" %></li>
+    <% end %>
+  </ul>
+<% end %>

@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Lobster|Poiret+One|Shadows+Into+Light" rel="stylesheet">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Lobster|Poiret+One|Shadows+Into+Light" rel="stylesheet">
 
-    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+  <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
 
-    <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
-    <%= csrf_meta_tags %>
-  </head>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
 
-  <header>
+<header>
 
-  </header>
+</header>
 
-  <body>
 
-    <%= yield %>
+<body>
 
-  </body>
+  <%= yield %>
+
+</body>
+
+<footer>
+  Powered by <img src="https://www.edamam.com/images/logo-site-header.png" alt="edamam logo"/>
+</footer>
 </html>

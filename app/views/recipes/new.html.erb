@@ -1,7 +1,7 @@
 <h1>Search Muncher Recipes</h1>
 
 <%= form_tag recipe_results_path, method: "get" do %>
-  <%= label_tag(:search_phrase, "Find your Flavor") %>
+  <%= label_tag(:search_phrase, "Pick some ingredients:") %>
   <%= text_field_tag(:search_phrase) %>
   <%= submit_tag("Search") %>
 

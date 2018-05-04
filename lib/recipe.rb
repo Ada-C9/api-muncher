@@ -1,4 +1,4 @@
-require 'pry'
+
 class Recipe
   attr_reader :label, :image, :orig_url, :ingredients, :diet, :health, :uri, :source
 

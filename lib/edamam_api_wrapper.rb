@@ -1,5 +1,5 @@
 require 'httparty'
-require 'pry'
+
 BASE_URL = "https://api.edamam.com/search?"
 KEY = ENV["APP_KEY"]
 APP = ENV["APP_ID"]

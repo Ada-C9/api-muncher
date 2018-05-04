@@ -15,13 +15,14 @@
 
 <body>
   <header class="top">
-    <h1> Muncher </h1>
+    <h1><%= link_to "Muncher", root_path %></h1>
     <% if display_search?(request.fullpath) %>
     <aside class="search"> <%= render partial: 'layouts/search' %> </aside>
     <% end %>
   </header>
-
-  <%= yield %>
+  <section class="content">
+    <%= yield %>
+  </section>
 
   <footer>
     <span> powered by <%= image_tag("edamam.png", class: "edamam-logo") %></span>

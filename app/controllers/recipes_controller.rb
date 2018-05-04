@@ -1,4 +1,4 @@
-require 'pry'
+
 class RecipesController < ApplicationController
   def root
     query = params[:query]

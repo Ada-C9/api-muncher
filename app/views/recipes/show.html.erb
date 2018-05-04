@@ -10,7 +10,7 @@
       <li><%= ingredient %></li>
       <% end %>
     </ul>
-    <section class="tags">
+    <section class="tags clearfix">
       <ul>
       <% @result.health.each do |label| %>
       <li><%=link_to label, results_path(label), class: " health" %></li>

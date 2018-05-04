@@ -3,19 +3,25 @@ class Recipe
 
   def initialize(recipe_hash)
     @id = parse_id(recipe_hash["uri"])
-    @name = recipe_hash["label"]
-    @source = recipe_hash["source"]
-    @image = recipe_hash["image"]
-    @url = recipe_hash["url"]
-    @ingredients = recipe_hash["ingredients"]
-    @dietary_info = recipe_hash["dietLabels"]
+    if @id
+      @name = recipe_hash["label"]
+      @source = recipe_hash["source"]
+      @image = recipe_hash["image"]
+      @url = recipe_hash["url"]
+      @ingredients = recipe_hash["ingredients"]
+      @dietary_info = recipe_hash["dietLabels"]
+    else
+      raise ArgumentError.new("Invalid Hash")
+    end
   end
-
-  # add logic to raise custom error if recipe hash is invalid
 
   def parse_id(uri)
     length = uri.length
     index = uri.index("_")
-    return uri[index,length]
+    if index
+      return uri[index,length]
+    else
+      return nil
+    end
   end
 end

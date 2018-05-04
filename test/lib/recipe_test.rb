@@ -30,10 +30,16 @@ describe Recipe do
       response.ingredients.must_be_kind_of Array
     end
 
-    it "cannot create Recipe instance without recipe hash" do
+    it "cannot create Recipe instance without valid recipe hash" do
       proc {
         Recipe.new()
       }.must_raise ArgumentError
+
+      recipe["uri"] = "Invalid URI"
+      proc {
+        Recipe.new(recipe)
+      }.must_raise ArgumentError
     end
+
   end
 end

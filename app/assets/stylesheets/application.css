@@ -18,10 +18,16 @@
 
  */
 
-header #site-title, #slogan {
+header #site-title {
   text-align: center;
+  padding-top: 2rem;
 }
 
+header #slogan {
+  text-align: center;
+  padding-top: .5rem;
+  padding-bottom: 1rem;
+}
 
 #footer {
   text-align: center;
@@ -29,6 +35,17 @@ header #site-title, #slogan {
 }
 
 section#search-bar{
-  padding: 5%;
-
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 3%
 }
+
+/* section#search-bar submit_tag {
+  display: flex;
+  flex-direction: row;
+
+} */
+
+/* section#homepage-search-bar {
+  padding: 100%;
+} */

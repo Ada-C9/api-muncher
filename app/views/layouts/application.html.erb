@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "CookingThyme" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Cooking Thyme" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
@@ -17,11 +17,11 @@
 
     <header>
       <h2 id="site-title">
-        <% link_to "Cooking Thyme", root_path %>
-        <strong id="slogan">There is always thyme for cooking</strong>
+        <%= link_to "Cooking Thyme", root_path %>
       </h2>
+      <h4 id="slogan">There is always thyme for cooking</h4>
       <% if request.fullpath != root_path %>
-      <nav>
+      <nav class="nav-search">
         <%= render partial: "form" %>
       </nav>
       <% end %>

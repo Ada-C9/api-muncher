@@ -1,21 +1,20 @@
 class Recipe
+
   attr_reader :label, :image, :calories, :url
 
-  def initialize(label, image, calories, url,uri)
+  def initialize(label, image, calories, url)
     @label = label
     @image = image
     @calories = calories
     @url = url
-    @uri = uri
   end
 
   def self.from_api(raw_data)
     self.new(
-    raw_data["label"],
-    raw_data["image"],
-    raw_data["calories"],
-    raw_data["url"],
-    raw_data["id"]
+    raw_data["recipe"]["label"],
+    raw_data["recipe"]["image"],
+    raw_data["recipe"]["calories"],
+    raw_data["recipe"]["url"]
     )
   end
 

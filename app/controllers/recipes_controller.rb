@@ -1,11 +1,7 @@
 class RecipesController < ApplicationController
 
-  def homepage
-
-  end
-
   def index
-    @recipes = EdamamApiWrapper.list_all_recipes(params[:text])
+    @recipes = EdamamApiWrapper.list_all_recipes(params[:search])
   end
 
   def create

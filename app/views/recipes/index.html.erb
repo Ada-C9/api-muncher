@@ -1,10 +1,15 @@
 <section class="recipe-list">
   <ul>
-    <% @recipes.each do |recipe| %>
-    <li>
-      <%= link_to recipe.label, recipes_path(recipe) %>
-      <%= recipe.image %>
-    </li>
+     <% @recipes.each do |recipe|%>
+     <li class="thumbnail">
+       <div>
+         <img src="<%= recipe.image %>" alt='recipe image'>
+       </div>
+      <p>
+        <%= link_to recipe.label %>
+      </p>
+     </li>
+
   </ul>
   <% end %>
 </section>

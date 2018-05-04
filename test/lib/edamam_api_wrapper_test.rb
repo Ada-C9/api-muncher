@@ -27,9 +27,9 @@ describe EdamamApiWrapper do
   end
 
   it "returns nil if the recipe does not exist" do
-    VCR.use_cassette("recipe") do
-      recipe = EdamamApiWrapper.get_recipe("7bf4a")
-      recipe must_be_nil
+    VCR.use_cassette("recipe1") do
+      recipe = EdamamApiWrapper.get_recipe("fjkecs")
+      recipe.must_be_nil
     end
   end
 end

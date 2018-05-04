@@ -28,8 +28,10 @@ class EdamamApiWrapper
 
       response = HTTParty.get(encode)
 
-      if response == []
+      if response.empty?
+        
         return nil
+
       else
 
         recipe = Recipe.new(response[0]["label"], response[0]["uri"], response[0]["ingredientLines"], response[0]["image"], response[0]["healthLabels"], response[0]["url"], response[0]["source"])

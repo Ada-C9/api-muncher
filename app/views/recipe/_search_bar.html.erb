@@ -1,0 +1,5 @@
+  <%= form_tag recipes_path, method: :get do %>
+    <%= label_tag :search_terms, search_title %>
+    <%= text_field_tag :search_terms %>
+    <%= submit_tag "Search" %>
+  <% end %>

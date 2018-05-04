@@ -1,5 +1,8 @@
+<div class="index-search">
+  <%= render partial: "search_bar", locals: {search_title: "Start New Search"}%>
+</div>
 <h1>Search Results for <%= @search_terms%></h1>
-<%= render "pagination_nav" %>
+<%= render partial: "pagination_nav" %>
 <section class="results-container">
   <% @recipes.each do |recipe| %>
     <section class="result">
@@ -8,4 +11,4 @@
     </section>
   <% end %>
 </section>
-<%= render "pagination_nav" %>
+<%= render partial: "pagination_nav" %>

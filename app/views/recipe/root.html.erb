@@ -1,7 +1,5 @@
-<h1>Looking for some recipes?</h1>
+<h2>Looking for some recipes?</h2>
 
-<%= form_tag recipes_path, method: :get do %>
-  <%= label_tag(:search_terms, "Search by Words") %>
-  <%= text_field_tag(:search_terms) %>
-  <%= submit_tag("Search") %>
-<% end %>
+<div class="root-search">
+  <%= render partial: "search_bar", locals: {search_title: "Search the Recipes"} %>
+</div>

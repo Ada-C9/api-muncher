@@ -17,3 +17,89 @@
  *= require foundation_and_overrides
 
  */
+
+ * {
+   box-sizing: border-box;
+ }
+
+ body {
+   /*font-family: 'Work Sans', sans-serif;*/
+   /*font-family: 'Helvetica', sans-serif;*/
+   /*font-family: 'Quicksand', sans-serif;*/
+   /*font-family: 'Roboto', sans-serif;*/
+   font-family: 'Montserrat', sans-serif;
+   /*font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif*/
+   margin: 20px;
+ }
+
+ ul {
+   list-style-type: none;
+   margin-left: 0px;
+ }
+
+ a {
+   text-decoration: none;
+   color: black;
+ }
+
+ h2 {
+   margin-bottom: 20px;
+
+ }
+
+ h3 {
+   font-size: 2em;
+ }
+
+ h3, h5 {
+   text-align: center;
+   padding-bottom: 40px;
+   padding-top: 20px;
+ }
+
+ footer {
+   width: 100%;
+   min-height: 30px;
+   margin: 50px auto;
+   padding: 20px 20px 40px 20px;
+   text-align: center;
+ }
+
+ .title {
+  letter-spacing: 3px;
+  text-align: center;
+  color: black;
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(186px, 1fr));
+  grid-column-gap: 25px;
+  grid-row-gap: 25px;
+}
+
+.grid-item {
+  justify-self: center;
+  align-items: center;
+}
+
+.show-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.show-section2 {
+  margin-left: 40px;
+}
+
+.show-section1 {
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+
+.show-header {
+  text-align: center;
+  margin-bottom: 50px;
+}

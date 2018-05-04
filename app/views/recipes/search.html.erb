@@ -1,9 +1,11 @@
+<h2>Muncher</h2>
+
 <section>
-  <%= form_tag search_path do %>
+  <%= form_tag recipes_path, method: :get do %>
     <%= label :label, "What's for dinner?"  %>
     <%= text_field_tag :label %>
 
 
-    <%= submit_tag "Search"%>
+    <%= submit_tag "Search" %>
   <% end %>
 </section>

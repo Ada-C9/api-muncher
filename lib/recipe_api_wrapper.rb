@@ -17,8 +17,6 @@ class RecipeApiWrapper
 	def self.list_recipes
 		# url = BASE_URL + "#{search}" + "&app_id=#{ID}" + "&app_key=#{KEY}"
 
-		# search_result = from_api(search_recipes)
-
 		query = "chicken"
 
 		url = BASE_URL + query + "&app_id=#{ID}" + "&app_key=#{KEY}"

@@ -12,8 +12,17 @@
   </head>
 
   <body>
-
     <%= yield %>
-
+    <footer>
+      <div class="pagination">
+      <%=link_to 1, {:action => 'index', :from=> 0, :to=> 9, :query=>params[:query]} %>
+      <%=link_to 2, {:action => 'index', :from=> 10, :to=> 20, :query=>params[:query]} %>
+      <%=link_to 3, {:action => 'index', :from=> 21, :to=> 30, :query=>params[:query]} %>
+      <%=link_to 4, {:action => 'index', :from=> 31, :to=> 40, :query=>params[:query]} %>
+      <%=link_to 5, {:action => 'index', :from=> 41, :to=>50, :query=>params[:query]} %>
+      </div>
+    </footer>
   </body>
+
+
 </html>

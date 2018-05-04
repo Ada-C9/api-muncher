@@ -24,5 +24,6 @@ module ApiMuncher
     # the framework and any gems in your application.
     # Automatically load all code from <rails_root>/lib
     config.autoload_paths << Rails.root.join('lib')
+    config.eager_load_paths += %W(#{config.root}/lib)
   end
 end

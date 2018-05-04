@@ -8,16 +8,10 @@ class RecipeApiWrapper
 	KEY = ENV["EDAMAM_KEY"]
 
 
-	def self.search_recipes(query)
-		encoded_uri = URI.encode(BASE_URL + query + "&app_id=#{ID}" + "&app_key=#{KEY}")
+	def self.search_recipes
+		encoded_uri = URI.encode(BASE_URL + "&app_id=#{ID}" + "&app_key=#{KEY}")
 
 		response = HTTParty.get(encoded_uri).parsed_response
-
-		# hits = response["hits"]
-		#
-		# hits.each do |hit|
-		# 	return hit["recipe"]["image"]
-		# end
 	end
 
 	def self.list_recipes

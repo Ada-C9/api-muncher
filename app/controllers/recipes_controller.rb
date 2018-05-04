@@ -3,6 +3,7 @@ class RecipesController < ApplicationController
 		@recipes = RecipeApiWrapper.list_recipes
 	end
 
-	def show
+	def search
+		@recipe = RecipeApiWrapper.search_recipes
 	end
 end

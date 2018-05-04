@@ -1,0 +1,16 @@
+<section class="show_recipe">
+  <%= render partial: "search", locals: { page_title: "You previours search"} %>
+
+  <h1>Here are results for <%= params[:flavor] %></h1>
+
+  <ul>
+    <% @recipes.each do |re| %>
+    <li>
+      <%= link_to re.name, show_recipe_path(re.uri.split("_")[1]) %>
+      <%= image_tag(re.image, alt: "food-image", class: "food-image") %>
+    </li>
+    <% end %>
+  </ul>
+<%= will_paginate(@recipes) %>
+
+</section>

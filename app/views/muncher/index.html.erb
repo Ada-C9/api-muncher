@@ -1,14 +1,15 @@
 <header>
-  <h4>Muncher</h4>
+  <h4 class='muncher'>muncher</h4>
+  <section class='header-bar'>
   <%= form_tag muncher_index_path, method: :get do %>
-    <%= label_tag(:search, "Find your flavor...") %>
     <%= text_field_tag(:search) %>
-    <%= submit_tag("Search") %>
+    <%= submit_tag("Search")  %>
 
   <% end %>
+</section>
 </header>
 
-<h1>Results for "<%= params[:search] %>"</h1>
+<h4>Results for "<%= params[:search] %>"</h4>
 <section class='recipes'>
 
 <% if @recipes %>

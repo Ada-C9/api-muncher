@@ -26,8 +26,8 @@ class EdamamApiWrapper
     @recipes.each do |recipe|
       if recipe.get_id == id
         return recipe
-
       end
     end
+    @recipe = nil 
   end
 end

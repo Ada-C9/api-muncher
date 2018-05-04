@@ -1,4 +1,4 @@
-<h1>Results for: "<%= @search_terms %>"</h1>
+<h3>Results for: "<%= @search_terms %>"</h3>
 <section>
   <div>
     <% if @recipes %>
@@ -13,3 +13,5 @@
     <% end %>
   </div>
 </section>
+
+<span><%= will_paginate @recipes %></span>

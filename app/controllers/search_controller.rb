@@ -5,7 +5,7 @@ class SearchController < ApplicationController
 
   def index
     @search_terms = params[:search_terms]
-    @recipes = RecipeApiWrapper.find_recipes(@search_terms)
+    @recipes = RecipeApiWrapper.find_recipes(@search_terms).paginate(page: params[:page], per_page: 10)
   end
 
   def show

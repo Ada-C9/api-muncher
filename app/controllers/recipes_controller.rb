@@ -1,5 +1,5 @@
 require 'edamam_api_wrapper.rb'
-require 'pry'
+
 
 class RecipesController < ApplicationController
 

@@ -6,5 +6,8 @@
       <li>  <%= entry.label %> </li>
       <% end %>
     </ul>
+
   <% end %>
 </section>
+
+    <%= will_paginate @recipes, class: "row" %>

@@ -35,11 +35,6 @@ class EdamamWrapper
     Recipe.from_api(response[0])
   end
 
-  # def self.create_object(array)
-  #   return array.map do |recipe_hash|
-  #     Recipe.from_api(recipe_hash)
-  #   end
-  # end
 
   private
   def self.raise_on_error(response)

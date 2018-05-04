@@ -16,7 +16,8 @@ module ApiMuncher
       # Always use .js files, never .coffee
       g.javascript_engine :js
       # Automatically load all code from <rails_root>/lib
-      config.autoload_paths << Rails.root.join('lib')
+      # config.autoload_paths << Rails.root.join('lib')
+      config.eager_load_paths << Rails.root.join('lib')
     end
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2

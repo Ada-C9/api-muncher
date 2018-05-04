@@ -11,12 +11,8 @@ class Recipe
     @health_info = input[:health_info]
     @url = input[:url]
 
-    if id.nil? || id.empty?
+    if id.nil? || name.nil?
       raise ArgumentError.new("Recipe must have an id")
-    end
-
-    if name.nil? || name.empty?
-      raise ArgumentError.new("Recipe must have a name")
     end
   end
 

@@ -34,7 +34,7 @@ class EdemamApiWrapper
     return Recipe.new(response[0])
   end
 
-  private
+  # private
   # def self.raise_on_error(response)
   #   binding.pry
   #   unless response["hits"] || response[0]["uri"]

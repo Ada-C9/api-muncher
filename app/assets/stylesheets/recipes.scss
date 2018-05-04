@@ -15,7 +15,7 @@ body section h2 {
 }
 
 body section {
-  margin: 5% 10%;
+  margin: 3% 10%;
   text-align: center;
 }
 
@@ -70,4 +70,26 @@ ul {
 .show_recipe ul {
   display: flex;
   flex-wrap: wrap;
+}
+
+.recipe-info > img {
+  width: 300px;
+  max-height: 300px;
+  border-radius: 30%;
+}
+
+.show-page > h2 {
+  margin-bottom: 5%;
+}
+
+#site-logo {
+  width: 200px;
+  height: 80px;
+}
+footer {
+  text-align: center;
+  font-family: sans-serif;
+  color: #474935;
+  padding: 2%;
+  border-top: solid 1px #7f827c;
 }

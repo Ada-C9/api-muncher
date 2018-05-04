@@ -32,13 +32,45 @@ ul li {
   flex-direction: row
 }
 
-/* li {
-  width: 30em;
-} */
 
 /* * {
   border: black 1px solid;
 } */
+
+
+.index-nav {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  margin-right: 1em;
+  margin-bottom: .75em;
+}
+
+.stats {
+  font-size: .75em;
+}
+
+.directions {
+  display: flex;
+  margin-left: 1em;
+  font-size: .75em;
+}
+
+.pages {
+  text-align: center;
+  padding: 1.5em;
+  margin-bottom: 2em;
+}
+
+.show-feature {
+  display: flex;
+  flex-direction: row;
+  margin: 2em;
+}
+
+.show-feature li {
+  font-size: .75em;
+}
 
 /* #muncher-home {
   text-align: center;

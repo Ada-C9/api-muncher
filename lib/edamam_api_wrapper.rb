@@ -7,15 +7,14 @@ class EdamamApiWrapper
 
   @recipe_list = []
 
-  def self.get_recipes(search, number)
+  def self.get_recipes(search)
     if !@recipe_list.empty?
       @recipe_list = []
     end
 
-    encoded_uri = URI.encode("#{URL}q=#{search}&app_id=#{ID}&app_key=#{KEY}&from=#{number}")
+    encoded_uri = URI.encode("#{URL}q=#{search}&app_id=#{ID}&app_key=#{KEY}&from=0&to=50")
 
     response = HTTParty.get(encoded_uri)
-    binding.pry
     if response["hits"]
       response["hits"].each do |item|
         @recipe_list << Recipe.new(item["recipe"]["source"], item["recipe"]["label"], item["recipe"]["image"], item["recipe"]["uri"], item["recipe"]["ingredients"],

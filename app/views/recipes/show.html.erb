@@ -1,27 +1,38 @@
 <section id="recipe-show">
   <h1>MUNCHER</h1>
-  <h2><%= @recipe.source %></h2>
+  <h2><a href="<%= @recipe.url %>"  target="_blank"><%= @recipe.source %></a></h2>
   <h4>by <%= @recipe.label %></h4>
   Serves: <%= @recipe.count.round(0) %>
-  <br/><br/>
-  <article>
-    <img src="<%= @recipe.image %>" alt="<%= @recipe.source %> image"><br/><br/>
-    <ul>
-      <h4>Health Labels</h4>
-        <% @recipe.health.each do |label| %>
-        <li>
-          <%= label %>
-        </li>
-        <% end %><br/>
-      <h4>Ingredients</h4>
-      <% @recipe.ingredients.each do |item| %>
-        <li>
-          <%= item["text"] %>
-        </li>
-      <% end %>
-    </ul>
-    <p>
-      <a href="<%= @recipe.url %>"  target="_blank">Full Recipe</a>
-    </p>
+
+
+  <article class="show-details">
+    <div class="show-feature">
+      <div>
+        <img src="<%= @recipe.image %>" alt="<%= @recipe.source %> image">
+      </div>
+      <div>
+        <h4>Ingredients</h4>
+        <ul>
+          <% @recipe.ingredients.each do |item| %>
+            <li>
+              <%= item["text"] %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+
+    <div>
+      <ul>
+        <h4>Health Labels</h4>
+          <% @recipe.health.each do |label| %>
+          <li>
+            <%= label %>
+          </li>
+          <% end %>
+      </ul>
+    </div>
+
+
   </article>
 </section>

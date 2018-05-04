@@ -27,25 +27,25 @@ class MuncherWrapper
 
 
   def self.show_recipe(uri)
+    return [] if uri.blank?
 
-    url = URI.encode("#{URL}?r=#http:%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_#{uri}&app_id=#{ID}&app_key=#{KEY}")
+    url = "#{URL}?r=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_#{uri}&app_id=#{ID}&app_key=#{KEY}"
 
     response = HTTParty.get(url)
-    #raise
+    #raise-
     if response != nil
 
       attributes = {}
-        attributes["label"] = response[0]["label"]
-        attributes["uri"] = response[0]["uri"]
-        attributes["image"] = response[0]["image"]
-        attributes["url"] = response[0]["url"]
-        attributes["source"] = response[0]["source"]
-        attributes["ingredientLines"] = response[0]["ingredientLines"]
-        attributes["diet_labels"] = response[0]["dietLabels"]
-        attributes["total_nutrients"] = response[0]["totalNutrients"]
-        attributes["health_labels"] = response[0]["healthLabels"]
-
-
+      attributes["label"] = response[0]["label"]
+      attributes["uri"] = response[0]["uri"]
+      attributes["image"] = response[0]["image"]
+      attributes["url"] = response[0]["url"]
+      attributes["source"] = response[0]["source"]
+      attributes["ingredientLines"] = response[0]["ingredientLines"]
+      attributes["diet_labels"] = response[0]["dietLabels"]
+      attributes["total_nutrients"] = response[0]["totalNutrients"]
+      attributes["health_labels"] = response[0]["healthLabels"]
+      
       recipe = Recipe.new(attributes)
     else
       return nil

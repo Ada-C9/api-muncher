@@ -1,1 +1,19 @@
-<h1>Recipe Name here</h1>
+<h1><%= @recipe.label %></h1>
+
+
+<%= image_tag(@recipe.image, :size => "300x300", alt:"recipe image") %>
+
+<p>Ingredients</p>
+<%@recipe.ingredientLines.each do |line| %>
+  <ul>
+    <li><%= line %></li>
+  </ul>
+  <%end%>
+
+
+<p>Dietary Labels</p>
+<%=@recipe.healthLabels%>
+
+
+
+<p>See the original recipe from: <%= link_to "#{@recipe.source}", @recipe.url %> </p>

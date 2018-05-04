@@ -2,7 +2,7 @@ class Recipe
   # paginates_per 8
   attr_reader :label, :image, :calories, :url, :uri
 
-  def initialize(label, image, calories, url)
+  def initialize(label, image, calories, url,uri)
     @label = label
     @image = image
     @calories = calories

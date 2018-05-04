@@ -1,13 +1,13 @@
-require "HTTParty"
-require_dependency '../../lib/recipe'
+require "httparty"
+require "awesome_print"
 
 class EdamamApiWrapper
-
+  # Your code here!
   BASE_URL = "https://api.edamam.com/"
   APP_KEY = ENV["EDAMAM_KEY"]
   APP_ID = ENV["EDAMAM_ID"]
 
-  def self.search(query, app_key = nil, app_id = nil)
+  def self.search(query)
     app_key ||= APP_KEY
     app_id ||= APP_ID
     query = URI.encode(query)
@@ -20,7 +20,6 @@ class EdamamApiWrapper
           id: recipe_hash["recipe"]["uri"].remove("http://www.edamam.com/ontologies/edamam.owl#recipe_"),
           url: recipe_hash["recipe"]["url"],
           ingredients: recipe_hash["recipe"]["ingredientLines"],
-          # optional values
           dietary_info: recipe_hash["recipe"]["dietLabels"],
           health_info: recipe_hash["recipe"]["healthLabels"],
           image: recipe_hash["recipe"]["image"],

@@ -109,7 +109,7 @@ article.results.item a {
   text-align: center;
 }
 
-span.page, span.last {
+span.page {
   display: none;
 }
 

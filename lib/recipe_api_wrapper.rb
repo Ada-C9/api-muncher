@@ -11,13 +11,13 @@ class RecipeApiWrapper
 
     url = URI.encode(BASE_URL + "#{user_query}" + "&app_id" + token_id + "&app_key" + token_key)
 
-    response = HTTParty.get(url)
+    response = HTTParty.get(url).parsed_response
 
     # ALWAYS CHECK YOUR ERROR CODES
     raise_on_error(response)
 
-    return response["hits"].map do |raw_recipes|
-      Recipe.from_api(raw_recipes)
+    return response["hits"].map do |raw_recipe|
+      Recipe.from_api(raw_recipe)
     end
   end
 

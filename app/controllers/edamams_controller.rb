@@ -1,0 +1,2 @@
+class EdamamsController < ApplicationController
+end

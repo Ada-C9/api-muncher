@@ -1,6 +1,6 @@
 class Recipe
   #change this to be like http://eric-price.net/blog/rails-api-wrapper/
-  attr_reader :uri, :label, :image, :url, :servings, :ingredients, :health_labels, :calories, :fat, :total_nutrients
+  attr_reader :uri, :label, :image, :url, :servings, :ingredients, :health_labels, :calories, :fat, :saturated_fat, :mono_fat, :carbs, :protein, :sodium, :fiber, :cholesterol
 
   #this is a really annoying amount of arguments to require
   def initialize(
@@ -12,7 +12,14 @@ class Recipe
     ingredients,
     health_labels,
     calories,
-    total_nutrients
+    fat,
+    saturated_fat,
+    mono_fat,
+    carbs,
+    protein,
+    sodium,
+    fiber,
+    cholesterol
   )
 
 
@@ -32,7 +39,14 @@ class Recipe
     @ingredients = ingredients
     @health_labels = health_labels
     @calories = calories
-    @total_nutrients = total_nutrients
+    @fat = fat
+    @saturated_fat = saturated_fat
+    @mono_fat = mono_fat
+    @carbs = carbs
+    @protein = protein
+    @sodium = sodium
+    @fiber = fiber
+    @cholesterol = cholesterol
 
   end
 
@@ -46,7 +60,14 @@ class Recipe
       raw_recipe["ingredientLines"],
       raw_recipe["healthLabels"],
       raw_recipe["calories"],
-      raw_recipe["totalNutrients"]
+      raw_recipe["totalNutrients"]["FAT"]["quantity"],
+      raw_recipe["totalNutrients"]["FASAT"]["quantity"],
+      raw_recipe["totalNutrients"]["FAMS"]["quantity"],
+      raw_recipe["totalNutrients"]["CHOCDF"]["quantity"],
+      raw_recipe["totalNutrients"]["PROCNT"]["quantity"],
+      raw_recipe["totalNutrients"]["NA"]["quantity"],
+      raw_recipe["totalNutrients"]["FIBTG"]["quantity"],
+      raw_recipe["totalNutrients"]["CHOLE"]["quantity"]
     )
   end
 

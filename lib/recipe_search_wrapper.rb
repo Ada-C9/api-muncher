@@ -1,5 +1,6 @@
 require 'httparty'
 
+
 class RecipeSearchWrapper
   @app_id = ENV["APPLICATION_ID"]
   @app_key = ENV["APPLICATION_KEY"]
@@ -14,6 +15,10 @@ class RecipeSearchWrapper
 
     response = HTTParty.get(encoded_uri).parsed_response
     puts response
+
+    #response["hits"][0]["recipe"]["label"] => teriyaki chicken
+
+    #raw_recipe["recipe"]["label"] => teriyaki chicken
 
     recipes = []
     #should I handle of nil/empty response["hits"] here?
@@ -31,7 +36,7 @@ class RecipeSearchWrapper
     encoded_uri = URI.encode("https://api.edamam.com/search?app_id=#{@app_id}&app_key=#{@app_key}&r=" + uri)
 
     response = HTTParty.get(encoded_uri).parsed_response
-
+    #response[0]
     uri = response[0]["uri"]
     label = response[0]["label"]
     image = response[0]["image"]
@@ -41,6 +46,8 @@ class RecipeSearchWrapper
     health_labels = response[0]["healthLabels"]
     calories = response[0]["calories"]
     fat = response[0]["FAT"]
+    saturated_fat = response[0]["FASAT"]
+    mono_fat = response[0]["FAMS"]
     carbs = response[0]["CHOCDF"]
     protein = response[0]["PROCNT"]
     sodium = response[0]["NA"]
@@ -56,10 +63,13 @@ class RecipeSearchWrapper
         health_labels,
         calories,
         fat,
+        saturated_fat,
+        mono_fat,
         carbs,
         protein,
         sodium,
-        fiber
+        fiber,
+        cholesterol
       )
       return recipe
   end

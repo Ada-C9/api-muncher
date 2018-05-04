@@ -21,5 +21,17 @@
 .index {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(2, 1fr)
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.index div {
+  margin: 10px;
+}
+
+.index div img, .big-image img {
+  border-radius: 5px;
+}
+
+.index div p {
+  text-align: center;
 }

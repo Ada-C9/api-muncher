@@ -1,9 +1,10 @@
-<section class="channels-list">
-  <h1> Results for "search term"</h1>
+<section class="recipes-list">
+  <h1> Results for "<%= @query %>"</h1>
   <% if @recipes %>
     <ul>
       <% @recipes.each do |recipe| %>
         <li>
+          <%= image_tag(recipe.image) %>
           <%= link_to recipe.label, recipe_path(recipe.uri) %>
         </li>
       <% end %>

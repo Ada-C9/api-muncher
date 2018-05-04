@@ -15,5 +15,36 @@
  *= require_tree .
  *= require_self
  *= require foundation_and_overrides
-
  */
+
+header h1, .search-bar, #search-form, footer, #pages, #info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+#info b {
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+.index {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.index-container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 1em;
+}

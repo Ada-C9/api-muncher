@@ -3,24 +3,8 @@ class RecipesController < ApplicationController
   def root
   end
 
-  def new
-  end
-
-  def create
-  end
-
-  def update
-  end
-
-  def edit
-  end
-
-  def destroy
-  end
-
   def index
     @recipes = EdamamApiWrapper.list_recipes(params[:search]).paginate(:page => params[:page], :per_page => 10)
-
 
     # if @recipes.count < 1
     #   flash[:error] = "No recipes available for that search. Please try again!"
@@ -33,8 +17,8 @@ class RecipesController < ApplicationController
 
   private
 
-  def recipe_params
-    params.require(:recipe).permit(:id, :title, :image, :link, :source, :ingredients, :dietlabels)
-  end
+  # def recipe_params
+  #   params.require(:recipe).permit(:id, :title, :image, :link, :source, :ingredients, :dietlabels)
+  # end
 
 end

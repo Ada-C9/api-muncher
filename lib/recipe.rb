@@ -1,6 +1,6 @@
 class Recipe
-  attr_reader :label, :image, :uri
-  def initialize(label, image, uri)
+  attr_reader :label, :image, :uri, :url, :ingredient_list, :nutrition_info
+  def initialize(label, image, uri, url, ingredient_list, nutrition_info)
     valid_attribute(label)
     valid_attribute(image)
     valid_attribute(uri)
@@ -8,13 +8,19 @@ class Recipe
     @label = name
     @image = image
     @uri = uri.split(owl)
+    @url = url
+    @ingredient_list = ingredient_list
+    @nutrition_info = nutrition_info
   end
 
   def self.from_api(raw_recipe)
     self.new(
       raw_recipe["label"],
       raw_recipe["image"],
-      raw_recipe["uri"]
+      raw_recipe["uri"],
+      raw_recipe["url"],
+      raw_recipe["ingreditensLines"],
+      raw_recipe["totalNutrients"]
     )
 
   end

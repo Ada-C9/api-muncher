@@ -26,7 +26,9 @@ class EdamamApiWrapper
 
     raise_on_error(response)
 
-    return response
+    return response["hits"].map do |raw_recipe|
+      Recipe.from_api(raw_recipe)
+    end
 
   end
 

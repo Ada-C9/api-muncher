@@ -2,15 +2,17 @@
 class Recipe
   attr_reader :title, :id, :image, :source, :url, :ingredients, :diet, :portion
 
-  def initialize(title, id, image, source, url, portion, ingredients, diet, options = {})
-    @title = title
-    @id = id
-    @image = image
-    @source = source
-    @url = url
-    @portion = portion
-    @ingredients = ingredients
-    @diet = diet
+  def initialize(info_hash, options = {})
+    raise ArgumentError if info_hash.empty?
+
+    @title = info_hash[:title]
+    @id = info_hash[:id]
+    @image = info_hash[:image]
+    @source = info_hash[:source]
+    @url = info_hash[:url]
+    @portion = info_hash[:portion]
+    @ingredients = info_hash[:ingredients]
+    @diet = info_hash[:diet]
   end
 
 end

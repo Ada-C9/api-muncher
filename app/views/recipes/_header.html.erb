@@ -3,6 +3,7 @@
   <section class="search-container">
     <%= form_tag(recipes_path, method: :get) do %>
       <%= text_field_tag :term, nil, placeholder: "🔍" %>
+      <%= render partial: "flash" %>
       <%= submit_tag 'Search', class: "button" %>
     <% end %>
   </section>

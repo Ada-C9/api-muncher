@@ -8,14 +8,14 @@
     <%= link_to image_tag(@recipe.image, alt: "Image is not available."), @recipe.url, target: :_blank %>
 
     <div class="recipe-texts">
-      <h5>Ingredients</h5>
+      <h5><strong>Ingredients</strong></h5>
       <ul>
         <% @recipe.ingredients.each do |ingredient| %>
         <li><%= ingredient %></li>
         <% end %>
       </ul>
       <% if @recipe.diet_labels != [] %>
-      <h5>Dietary Labels</h5>
+      <h5><strong>Dietary Labels</strong></h5>
       <ul>
         <% @recipe.diet_labels.each do |diet_label| %>
         <li><%= diet_label %></li>

@@ -28,13 +28,27 @@ header h1, .search-bar, #search-form, footer, #pages, #info, h3, h5 {
 
 header {
   padding-top: 2.5em;
-  padding-bottom: 2.5em;
+  padding-bottom: 2em;
   background-color: #c2f0c2;
 }
 
 footer {
+  /* margin-top: 1em; */
   padding-top: 1em;
   background-color: #c2f0c2;
+}
+
+#root {
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+ #root h5 {
+   color: grey;
+   margin: 0;
+ }
+
+#root-footer {
+  background-color: white;
 }
 
 h3 {
@@ -46,7 +60,7 @@ img {
 }
 
 .show-mid ul {
-padding-left: 2em;
+padding-left: 1.5em;
 }
 
 .show-mid, .show-low {
@@ -69,9 +83,10 @@ padding-left: 2em;
 #results {
   padding-top: 1em
 }
+
 .show-head {
   padding-top: 1em;
-  padding-bottom: 2.5em;
+  padding-bottom: 3em;
 }
 
 .pagination {

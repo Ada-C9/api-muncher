@@ -1,6 +1,7 @@
-<header>
+<header id="root">
   <div>
     <h1>Recipedia</h1>
+    <h5>Find your flavor ...</h5>
   </div>
   <div class="search-bar">
     <%= form_tag(recipes_path, :method => "get", id: "search-form") do %>
@@ -9,3 +10,7 @@
     <% end %>
   </div>
 </header>
+
+<footer id="root-footer">
+  <strong>Powered by Edamam</strong>
+</footer>

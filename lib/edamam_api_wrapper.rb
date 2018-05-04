@@ -27,6 +27,8 @@ class EdamamApiWrapper
     return create_recipe_from_response(response.first)
   end
 
+  private
+  
   def self.create_recipe_from_response(response_recipe)
     Recipe.new(
       label: response_recipe["label"],

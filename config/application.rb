@@ -15,6 +15,7 @@ module ApiMuncher
       # Always use .js files, never .coffee
       g.javascript_engine :js
     end
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 

@@ -1,5 +1,7 @@
 class RecipeController < ApplicationController
   def index
+    result = EdamamApiWrapper.find_it(query)
+    @recipes = result["hits"][0]
   end
 
   def create

@@ -2,7 +2,7 @@ class EdamamApiWrapper
 
   BASE_URL = "https://api.edamam.com/search/"
 
-  TOKEN = ENV["EDAMAM_TOKEN "]
+  TOKEN = ENV["EDAMAM_TOKEN"]
   ID = ENV["EDAMAM_ID"]
 
   def self.find_it(terms)

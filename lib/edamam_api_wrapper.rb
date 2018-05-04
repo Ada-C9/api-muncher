@@ -18,6 +18,7 @@ class EdamamApiWrapper
           hit["recipe"]["image"],
           hit["recipe"]["source"],
           hit["recipe"]["url"],
+          hit["recipe"]["yield"],
           hit["recipe"]["ingredientLines"],
           hit["recipe"]["dietLabels"])
       end

@@ -5,17 +5,19 @@
 
 <%= image_tag(@recipe.image, size: "100", alt: "Recipe image") %>
 
-<h6>Ingredients:</h6>
+<h6>Yield: <%= @recipe.portion.to_i %> </h6>
 
+<h6>Ingredients:</h6>
 <ul>
   <% @recipe.ingredients.each do |ingredient|%>
   <li> <%= ingredient %> </li>
+  <% end %>
 </ul>
-<% end %>
+
 
 <h6>Dietry Information:</h6>
 <ul>
   <% @recipe.diet.each do |diet_label|%>
   <li> <%= diet_label %> </li>
+  <% end %>
 </ul>
-<% end %>

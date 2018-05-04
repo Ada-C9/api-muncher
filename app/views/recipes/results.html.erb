@@ -2,4 +2,8 @@
 	<p><%= result.name %></p>
 <% end %>
 
-<%= will_paginate @posts %>
+<ul>
+<% @max_pages.times do |page| %>
+	<%= link_to page, { action: 'results', :start => page } %>
+<% end %>
+</ul>

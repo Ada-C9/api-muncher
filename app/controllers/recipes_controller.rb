@@ -4,19 +4,16 @@ class RecipesController < ApplicationController
 
 	# displays up to 10 results at a time from search
 	def results
-		query_text = params[:query_text] # from form
-		session[:query_text] = query_text
-		# session[:diet] = params[:diet]
-		@recipes = EdamamApiWrapper.search_recipes(
-			query_text, 0, 40, diet: nil, health: nil).paginate(
-				:page => params[:page], :per_page => 10)
-
-		# @recipes_page_2 = EdamamApiWrapper.search_recipes(
-		# 	query_text, from: 12, to: 24, diet: nil, health: nil).paginate(
-		# 		:page => params[:page], :per_page => 10)
-		# @recipes = EdamamApiWrapper.search_recipes(query_text, diet: nil).paginate(
-		# 	:page => params[:page], :per_page => 15)
-
+		if params[:query_text] || session[:query_text]
+				session[:query_text] = params[:query_text] if params[:query_text]
+				start = params[:start] || 0
+				search_results = EdamamApiWrapper.search_recipes(session[:query_text], start)
+				@recipes = search_results[:recipes]
+				@max_pages = search_results[:max_pages]
+		else
+			flash[:alert] = "Something broke!"
+			redirect_to root
+		end
 
 	end
 

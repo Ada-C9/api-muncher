@@ -7,11 +7,14 @@
   </section>
 
   <section class="recipe-index">
+    <% counter = 1 %>
     <% @recipes.each do |recipe| %>
     <figure>
+
       <%= link_to image_tag(recipe.image, alt: recipe.label), recipe_path(recipe.uri_trim) %>
-      <figcaption><%= recipe.label %></figcaption>
+      <figcaption> <%= "#{counter}. #{recipe.label}" %></figcaption>
     </figure>
+    <% counter += 1 %>
     <br><!--TODO: switch to padding-->
     <% end %>
   </section>

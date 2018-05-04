@@ -22,7 +22,7 @@ class EdamamApiWrapper
       @recipe_list = []
     end
 
-    encoded_uri =  URI.encode("#{URL}?q=#{search}&app_id=#{APP_ID}&app_key=#{APP_KEY}")
+    encoded_uri =  URI.encode("#{URL}?q=#{search}&app_id=#{APP_ID}&app_key=#{APP_KEY}&from=0&to=30")
 
     response = HTTParty.get(encoded_uri)
 

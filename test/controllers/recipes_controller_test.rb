@@ -49,7 +49,7 @@ describe RecipesController do
 
         get recipe_show_path(valid_id)
         RecipeSearchWrapper.find_recipe(valid_id)
-        must_respond_with :found
+        must_respond_with :ok
       end
     end
 

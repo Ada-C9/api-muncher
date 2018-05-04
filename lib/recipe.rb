@@ -1,5 +1,5 @@
 class Recipe
-  attr_reader :id ,:name, :source, :image, :url, :ingredients, :dietary_info
+  attr_reader :id, :name, :source, :image, :url, :ingredients, :dietary_info
 
   def initialize(recipe_hash)
     @id = parse_id(recipe_hash["uri"])

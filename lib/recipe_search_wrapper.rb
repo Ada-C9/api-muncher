@@ -28,7 +28,17 @@ class RecipeSearchWrapper
         return recipe
       end
     end
-    return nil
+
+    encoded_uri = URI.encode("#{URL}search?r=http://www.edamam.com/ontologies/edamam.owl#recipe#{recipe_id}&app_id=#{APP_ID}&app_key=#{APP_KEY}")
+
+    response = HTTParty.get(encoded_uri)
+    if response.parsed_response == []
+      return nil
+    else
+      recipe_hash = response.first
+      one_recipe = Recipe.new(recipe_hash)
+      return one_recipe
+    end
   end
 
 end

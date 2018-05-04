@@ -11,8 +11,10 @@ class RecipesController < ApplicationController
         @recipes = EdamamApiWrapper.list_recipes(params[:term], 1)
       end
       session[:term] = params[:term]
-      if !session[:term_collection].include?(params[:term])
-        term_collection << params[:term]
+      if session[:term_collection].nil?
+          session[:term_collection] = [params[:term]]
+      elsif !session[:term_collection].include?(params[:term])
+        session[:term_collection] << params[:term]
       end
     else
       flash[:status] = :failure
@@ -29,10 +31,6 @@ class RecipesController < ApplicationController
       flash[:result_text] = "Could not find that recipe"
       redirect_to recipes_path
     end
-  end
-
-  def term_collection
-    session[:term_collection] ||= []
   end
 
 end

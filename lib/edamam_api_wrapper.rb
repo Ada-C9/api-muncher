@@ -3,10 +3,10 @@ require "pry"
 
 class EdamamApiWrapper
   # Your code here!
-  def self.recipe_list(query,to: 10,from: 0)
+  def self.recipe_list(query, page)
     q = query
-    to = to
-    from = from
+    to = (10 * page) + 1
+    from = to - 10
 
     key = ENV["EDAMAM_KEY"]
     id = ENV["APPLICATION_ID"]

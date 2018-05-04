@@ -9,11 +9,15 @@
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet">
 </head>
 
 <body>
   <header class="top">
     <h1> Muncher </h1>
+    <% if display_search?(request.fullpath) %>
+    <aside class="search"> <%= render partial: 'layouts/search' %> </aside>
+    <% end %>
   </header>
 
   <%= yield %>

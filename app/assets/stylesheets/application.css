@@ -19,8 +19,69 @@
 */
 
 /* Set the background color of body to tan */
-body {
+* {
+  /* set in foundations */
+  font-family: 'Pangolin', cursive;
+}
 
+section.results {
+  display: flex;
+  flex-direction: column;
+}
+
+section.tags ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+section.tags ul a {
+  line-height: inherit;
+  color: #1779ba;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  background-color: antiquewhite;
+  text-align: center;
+  margin: .5vh;
+  padding: 1vh;
+}
+
+aside.search {
+  display: none;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 5vh;
+}
+img.edamam-logo {
+  max-height: 7vh;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-content; center;
+  font-size: .8em;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+.button {
+  align-self: flex-end;
+}
+
+article.results.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  /* width: 100%;
+  height: auto; */
+  margin: 2vw;
 }
 
 /* On screens that are 992px or less, set the background color to blue */
@@ -28,12 +89,12 @@ body {
 
 /* On screens that are 600px or less, set the background color to olive */
 
-@media screen and (min-width: 600px) {
 
+@media screen and (min-width: 400px) {
 
-  section.results {
-    display: flex;
-    flex-flow: wrap row;
+  h1 {
+    text-align: center;
+    padding-top: 30vh;
   }
 
   article.results.item {
@@ -41,8 +102,8 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-content: center;
-    width: 20vw;
-    height: 20vw;
+    width: 25vw;
+    height: 35vw;
     max-width: 25vw;
     margin: 2vw;
   }
@@ -71,35 +132,27 @@ body {
 
   nav.pagination {
     display: flex;
+    justify-content: space-around;
+    visibility: visible;
+  }
+}
+
+
+@media screen and (min-width: 600px) {
+  aside.search, section.search {
+    width: 80vw;
+    margin: 0 10vw;
+    height: 40vh;
+    padding: auto;
+    display: block
   }
 
+  section.recipe img {
+    float: left;
+    margin: 10vh;
+  }
 
-}
-section.search {
-  width: 80vw;
-  margin: 0 10vw;
-  height: 40vh;
-  padding: auto;
-}
-
-h1 {
-  text-align: center;
-  padding-top: 30vh;
-}
-img.edamam-logo {
-  max-height: 7vh;
-}
-
-footer {
-  display: flex;
-  justify-content: center;
-  align-content; center;
-  font-size: .8em;
-}
-form {
-  display: flex;
-  flex-direction: column;
-}
-.button {
-  align-self: flex-end;
+  section.tags ul {
+    flex-flow: wrap row;
+  }
 }

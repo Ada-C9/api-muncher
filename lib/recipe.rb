@@ -1,6 +1,6 @@
 require 'pry'
 class Recipe
-  attr_reader :label, :image, :orig_url, :ingredients, :diet, :health, :uri, :id
+  attr_reader :label, :image, :orig_url, :ingredients, :diet, :health, :uri, :source
 
   def initialize(recipe_data)
     @label = recipe_data[:label]
@@ -10,6 +10,7 @@ class Recipe
     @ingredients = recipe_data[:ingredients]
     @diet = recipe_data[:diet]
     @health = recipe_data[:health]
+    @source = recipe_data[:source]
   end
 
   def self.from_api(response)
@@ -18,6 +19,7 @@ class Recipe
     image: response["image"],
     orig_url: response["url"],
     ingredients: response["ingredientLines"],
+    source: response["source"],
     diet: response["dietLabels"],
     health: response["healthLabels"],
     uri: response["uri"],
@@ -25,10 +27,4 @@ class Recipe
     self.new(recipe_data)
   end
 
-  def parse_ingredients(recipe)
-  end
-
-  def self.get_id(uri)
-    return uri.split("owl")[1]
-  end
 end

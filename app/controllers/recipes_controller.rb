@@ -29,7 +29,7 @@ class RecipesController < ApplicationController
   def results
     @query = params[:query]
     results = EdamamApiWrapper.search(@query)
-@results = Kaminari.paginate_array(results).page(params[:page]).per(10)
+@results = Kaminari.paginate_array(results).page(params[:page]).per(12)
   end
 
   def show

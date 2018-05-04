@@ -4,11 +4,11 @@
     <ul>
       <% @recipes.each do |recipe| %>
         <li>
-          <%= recipe.uri %>
           <%= image_tag recipe.image %>
           <%= link_to recipe.label, recipe_path(:uri => recipe.uri, :label => recipe.label) %>
         </li>
       <% end %>
+      <%= will_paginate @recipes %>
     </ul>
   <% end %>
 </section>

@@ -1,3 +1,4 @@
+
 class RecipesController < ApplicationController
   around_action :catch_api_error
 
@@ -6,7 +7,9 @@ class RecipesController < ApplicationController
 
   def index
     @query = params[:query]
-    return @recipes = RecipeSearchWrapper.search_recipes(@query)
+    # return @recipes = RecipeSearchWrapper.search_recipes(@query)
+    @recipes = RecipeSearchWrapper.search_recipes(@query).paginate(:page => params[:page], :per_page => 10)
+
   end
 
   def show

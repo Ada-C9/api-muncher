@@ -79,6 +79,10 @@ section.container {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-image: url("https://images.unsplash.com/photo-1491185841098-9ce20f966624?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f83a8cf7b92564946950e478c9606e4f&auto=format&fit=crop&w=2378&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+
 }
 
 div.root {
@@ -95,10 +99,16 @@ form {
 h1 {
   text-align: center;
   margin-bottom: 2rem;
+  color: white;
 }
 
 div.submit {
   text-align: center;
+}
+
+input#search {
+  background-color: transparent;
+  color: white;
 }
 
 /* LIST */
@@ -175,7 +185,7 @@ div#show-text {
 
 /* FOOTER */
 footer {
-  background-color: black;
+  background-color: transparent;
   color: white;
   /* position: fixed; */
   left: 0;

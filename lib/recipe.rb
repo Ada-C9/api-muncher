@@ -4,6 +4,9 @@ class Recipe
     valid_attribute(label)
     valid_attribute(image)
     valid_attribute(uri)
+    valid_attribute(url)
+    valid_attribute(ingredient_list)
+    valid_attribute(nutrition_info)
 
     @label = name
     @image = image

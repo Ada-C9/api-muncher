@@ -13,6 +13,7 @@ class Recipe
     @label = label
     @image = image
     @url = url
+    @uri = uri
     @ingredientlines = ingredientlines
     @totalnutrients = totalnutrients
   end

@@ -7,7 +7,6 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = RecipeApiWrapper.show_recipe(params[:uri])
-    raise
   end
 
   private

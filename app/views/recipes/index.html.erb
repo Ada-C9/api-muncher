@@ -1,6 +1,6 @@
 <h2>HiHello</h2>
 
 <% @recipes.each do |recipe| %>
-  <h3><%= link_to recipe.label, recipe_path(:uri => recipe.url, :label => recipe.label) %></h3>
+  <h3><%= link_to recipe.label, recipe_path(:uri => recipe.uri, :label => recipe.label) %></h3>
   <img src=" <%= recipe.image %>" alt="recipe photo">
 <% end %>

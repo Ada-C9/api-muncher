@@ -30,11 +30,12 @@ class RecipeApiWrapper
 
     encoded_uri = URI.encode(url)
 
-    response = HTTParty.get(url).parsed_response
-    #ALWAYS CHECK YOUR ERROR CODES
+    response = HTTParty.get(encoded_uri).parsed_response
+    # ALWAYS CHECK YOUR ERROR CODES
     # unless response.success?
     #   raise StandardError.new(response["error"])
     # end
+
     return Recipe.from_api(response[0])
   end
 

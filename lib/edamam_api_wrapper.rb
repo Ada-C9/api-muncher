@@ -8,7 +8,10 @@ class EdamamApiWrapper
   @recipe_list = []
 
   def self.find_recipes(query)
-    response = HTTParty.get("#{URL}?q=#{query}&app_id=#{ID}&app_key=#{KEY}")
+    @recipe_list.clear
+
+    response = HTTParty.get("#{URL}?q=#{query}&app_id=#{ID}&app_key=#{KEY}&to=50")
+# raise
 
     if response["hits"] && response["count"] > 0
       response.parsed_response["hits"].each do |hit|
@@ -21,9 +24,9 @@ class EdamamApiWrapper
           hit["recipe"]["yield"],
           hit["recipe"]["ingredientLines"],
           hit["recipe"]["dietLabels"])
-      end
+        end
     end
-      return @recipe_list
+    return @recipe_list
   end
 
   def self.find(id)

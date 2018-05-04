@@ -6,10 +6,16 @@
 
     <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
+
+  <!-- <header>
+    <span>search <i class="fas fa-search"></i></span>
+  </header> -->
 
   <body>
 

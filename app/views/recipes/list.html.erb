@@ -1,6 +1,11 @@
 <section class="list">
+  <div class="header">
+    <%= link_to root_path, class: "btn btn-default" do %>
+      <i class="fas fa-search"></i> search
+    <% end %>
+  </div>
+
   <h2>Search results for "<%= @search %>"</h2>
-  <div id="search_button"><%= link_to 'Back to search', root_path, class: "button" %></div>
   <nav aria-label="Pagination">
     <ul class="pagination">
       <% @recipes_pag.each do |recipe| %>

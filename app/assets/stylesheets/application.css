@@ -35,6 +35,17 @@ li {
  list-style-type: none;
 }
 
+/* HEADER */
+.header {
+  background-color: black;
+}
+
+.header a {
+  float: right;
+  color: white;
+  padding: 0.5rem;
+}
+
 /* PAGINATION */
 .pagination a {
   display: inline;
@@ -127,7 +138,8 @@ div.show-item {
 
 /* FOOTER */
 footer {
-  background-color: gray;
+  background-color: black;
+  color: white;
   /* position: fixed; */
   left: 0;
   bottom: 0;

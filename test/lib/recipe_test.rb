@@ -23,9 +23,9 @@ describe Recipe do
       recipe.label.must_equal label
       recipe.image.must_equal image
       recipe.source.must_equal source
-      recipe.shareAs.must_equal shareAs
-      recipe.healthLabels.must_equal healthLabels
-      recipe.ingredientLines.must_equal ingredientLines
+      recipe.url.must_equal shareAs
+      recipe.health_labels.must_equal healthLabels
+      recipe.ingredients.must_equal ingredientLines
     end
 
     it "cannot be created without a name or id" do

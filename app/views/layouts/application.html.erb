@@ -13,13 +13,22 @@
     <script src="https://developer.edamam.com/attribution/badge.js"></script>
   </head>
 
-  <header>
-    <nav>
-
-    </nav>
-  </header>
-
   <body>
+
+    <header>
+      <h2 id="site-title">
+        <% link_to "Cooking Thyme", root_path %>
+        <strong id="slogan">There is always thyme for cooking</strong>
+      </h2>
+      <% if request.fullpath != root_path %>
+      <nav>
+        <%= render partial: "form" %>
+      </nav>
+      <% end %>
+    </header>
+
+    <main>
+
     <% if flash[:status] %>
        <section class="row status <%= flash[:status] %>">
          <h3>
@@ -28,11 +37,13 @@
         </section>
     <% end %>
 
+
     <%= yield %>
+    </main>
 
   </body>
 
-  <footer>
+  <footer id="footer">
     <section>
       <div id="edamam-badge" data-color="white"></div>
     </section>

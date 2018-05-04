@@ -4,7 +4,7 @@ class RecipesController < ApplicationController
   def homepage; end
 
   def index
-    @recipes = RecipeApiWrapper.list_recipes
+    @recipes = RecipeApiWrapper.list_recipes(params[:ingredient])
     # add pagenation here
   end
 

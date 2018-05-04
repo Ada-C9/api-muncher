@@ -39,7 +39,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'foundation-rails'
 gem 'autoprefixer-rails'
 
-gem 'will_paginate', '~> 3.0'
+gem 'will_paginate'
 
 gem 'httparty'
 

@@ -1,5 +1,4 @@
 require 'httparty'
-require "pry"
 
 class EdamamApiWrapper
   # Your code here!
@@ -18,6 +17,7 @@ class EdamamApiWrapper
     #raise StandarError.new(response["error"])
     #en
     #return response["hits"]
+    #total_results = response["hits"].maps.count
     return response["hits"].map do |raw_recipe|
 
       Recipe.from_api(raw_recipe["recipe"])

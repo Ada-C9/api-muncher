@@ -63,7 +63,7 @@ img.edamam-logo {
 footer {
   display: flex;
   justify-content: center;
-  align-content; center;
+  align-content: center;
   font-size: .8em;
 }
 form {

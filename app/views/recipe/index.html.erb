@@ -1,4 +1,16 @@
 <h1>Search Results for <%= @search_terms%></h1>
+<% first_index = @range[0].to_i if @range %>
+<% last_index = @range[1].to_i  if @range %>
+<ul>
+  <% if !@range && @more == true %>
+    <li><%= link_to "more recipes", recipes_path(search_terms: @search_terms, range: [10, 20])%></li>
+  <% elsif @more == true %>
+    <li><%= link_to "previous recipes", recipes_path(search_terms: @search_terms, range: [(first_index - 10) , first_index])%></li>
+    <li><%= link_to "more recipes", recipes_path(search_terms: @search_terms, range: [last_index, (last_index + 10)])%></li>
+  <% elsif @more == false %>
+    <li><%= link_to "previous recipes", recipes_path(search_terms: @search_terms, range: [(first_index - 10) , first_index])%></li>
+  <% end %>
+</ul>
 <section class="results-container">
   <% @recipes.each do |recipe| %>
     <section class="result">
@@ -7,3 +19,13 @@
     </section>
   <% end %>
 </section>
+<ul>
+  <% if !@range && @more == true %>
+    <li><%= link_to "more recipes", recipes_path(search_terms: @search_terms, range: [10, 20])%></li>
+  <% elsif @more == true %>
+    <li><%= link_to "previous recipes", recipes_path(search_terms: @search_terms, range: [(first_index - 10) , first_index])%></li>
+    <li><%= link_to "more recipes", recipes_path(search_terms: @search_terms, range: [last_index, (last_index + 10)])%></li>
+  <% elsif @more == false %>
+    <li><%= link_to "previous recipes", recipes_path(search_terms: @search_terms, range: [(first_index - 10) , first_index])%></li>
+  <% end %>
+</ul>

@@ -6,9 +6,15 @@ class EdamamApiWrapper
 
   def self.list_recipes(key_words, search_range = [])
     encoded_key_words = URI.encode(key_words)
-    response = HTTParty.get("#{BASE_URL}q=#{encoded_key_words}&app_id=#{ID}&app_key=#{KEY}")
-    recipe_list = []
+    if search_range.empty?
+      response = HTTParty.get("#{BASE_URL}q=#{encoded_key_words}&app_id=#{ID}&app_key=#{KEY}")
+    else
+      response = HTTParty.get("#{BASE_URL}q=#{encoded_key_words}&app_id=#{ID}&app_key=#{KEY}&from=#{search_range[0]}&to=#{search_range[1]}")
+    end
+    recipe_search = {}
     if response["hits"]
+      recipe_search[:recipe_list] = []
+      recipe_search[:more] = response["more"]
       response["hits"].each do | recipe |
         uri = recipe["recipe"]["uri"]
         name = recipe["recipe"]["label"]
@@ -18,10 +24,10 @@ class EdamamApiWrapper
         ingredients = recipe["recipe"]["ingredientLines"]
         diet_labels = recipe["recipe"]["dietLabels"]
         health_labels = recipe["recipe"]["healthLabels"]
-        recipe_list << Recipe.new(uri, name, photo, url, source, ingredients, diet_labels, health_labels)
+        recipe_search[:recipe_list] << Recipe.new(uri, name, photo, url, source, ingredients, diet_labels, health_labels)
       end
     end
-    return recipe_list
+    return recipe_search
   end
 
   def self.return_recipe(uri)

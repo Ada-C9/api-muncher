@@ -1,11 +1,12 @@
 <section class="recipes-results">
   <h1>Results for: "<%= @search_terms %>"</h1>
-  
+
   <% if @recipes %>
     <ul>
       <% @recipes.each do |recipe| %>
         <li>
-          <%= recipe.label %>
+          <%= image_tag(recipe.image) %>
+          <%= link_to recipe.name, recipe_path(recipe.id) %>
         </li>
       <% end %>
     </ul>

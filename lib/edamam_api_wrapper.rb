@@ -6,12 +6,8 @@ class EdamamApiWrapper
   ID = ENV["EDAMAM_ID"]
   KEY = ENV["EDAMAM_KEYS"]
 
-  @recipe_list = []
-
   def self.get_recipes(search)
-    if !@recipe_list.empty?
-      @recipe_list = []
-    end
+    @recipe_list = []
 
     encoded_uri = URI.encode("#{URL}q=#{search}&app_id=#{ID}&app_key=#{KEY}&from=0&to=50")
 
@@ -30,14 +26,15 @@ class EdamamApiWrapper
   def self.show_recipe(id)
     encoded_uri = URI.encode("#{URL}r=#{URL2}#{id}&app_id=#{ID}&app_key=#{KEY}")
     response = HTTParty.get(encoded_uri)
-    if response
-      @recipe = Recipe.new(response[0]["source"], response[0]["label"], response[0]["image"], response[0]["uri"], response[0]["ingredients"],
+
+    if response.empty?
+      return nil
+    else
+      recipe = Recipe.new(response[0]["source"], response[0]["label"], response[0]["image"], response[0]["uri"], response[0]["ingredients"],
       response[0]["yield"],
       response[0]["url"],
       response[0]["healthLabels"])
-      return @recipe
-
+      return recipe
     end
-
   end
 end

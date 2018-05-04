@@ -7,7 +7,7 @@ class EdamamApiWrapper
 	URL = "https://api.edamam.com/search?"
 	APP_ID = ENV["APPLICATION_ID"]
 	APP_KEY = ENV["APPLICATION_KEY"]
-	PER_PAGE = 10
+	PER_PAGE = 9
 	MAX_ALLOWABLE_PAGES = 5
 
 	# def self.search_recipes(query_text, from: 0, to: 11, diet: nil, health: nil)
@@ -20,26 +20,8 @@ class EdamamApiWrapper
 		}
 	end
 
-
 	def self.get_recipe(recipe_uri)
 	end
-
-	# def self.send_message(channel, message)
-	# 	message_url = "#{URL}chat.postMessage"
-	# 	response = HTTParty.post(message_url,
-	# 		body: {
-	# 			"token" => TOKEN,
-	# 			"channel" => channel,
-	# 			"text" => message,
-	# 			"username" => "FrontRowNewsBot",
-	# 			"icon_emoji" => ":nerd_face:",
-	# 			"as_user" => "false"
-	# 		},
-	# 		:header => { 'Content-Type' => 'application/x-www-form-urlencoded' }
-	# 	)
-	# 	# return response.success? # initial way we did this.
-	# 	return response # changed after testing. Can keep the original way if you want
-	# end
 
 	private
 
@@ -52,7 +34,6 @@ class EdamamApiWrapper
 		end
 		return recipes_list
 	end
-
 
 	def self.get_max_page_count(response)
 		total_pages = (response["count"] / PER_PAGE.to_f).ceil # ceil makes it an int
@@ -78,7 +59,7 @@ class EdamamApiWrapper
 	def self.add_health_to_url(health, build_url)
 		build_url << "&health=#{health}" if HEALTH_OPTIONS.include?(health)
 	end
-	#
+
 	# def self.add_to_or_from_to_url(from, build_url)
 	# 	if !from.nil? && !(from.is_a?(Integer) && from >= 0)
 	# 		raise ArgumentError.new("invalid 'from'")

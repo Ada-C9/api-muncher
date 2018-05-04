@@ -1,9 +1,35 @@
-<% @recipes.each do |result| %>
-	<p><%= result.name %></p>
-<% end %>
+<section class="grid-container">
+	<section class="grid-x align-center">
+		<ul class="prod-container">
+			<% @recipes.each do |result| %>
+			<li class="product-summary">
+				<div class="row small-up-2 medium-up-3 large-up-4 align-center">
+					<div class="column">
+						<div class="card">
+							<div class="card-section">
+								<%= image_tag(result.image, :alt => "recipe image", :class => "found-image") %>
+								<p class="text-wrap"><%= result.name %></p>
+							</div>
+							<!-- <div class="card-divider"> -->
+								<!-- <ul class="menu"> -->
+									<!-- <p class="text-wrap"><%= result.name %></p> -->
+								<!-- </ul> -->
+							<!-- </div> -->
+						</div>
+					</div>
+				</div>
+			</li>
+			<%end%>
+		</ul>
+	</section>
+</section>
+
+
+
+
 
 <ul>
-<% @max_pages.times do |page| %>
+	<% @max_pages.times do |page| %>
 	<%= link_to page, { action: 'results', :start => page } %>
-<% end %>
+	<% end %>
 </ul>

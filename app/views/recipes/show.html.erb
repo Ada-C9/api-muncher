@@ -1,0 +1,42 @@
+<%= render partial: "search", locals: { page_title: "Welcome to Muncher"} %>
+
+<section>
+
+  <h2>
+    <%= @recipe.name %>
+  </h2>
+
+  <section class="recipe-info">
+    <%= image_tag(@recipe.image, alt: "food-image", class: "food_pic") %>
+    <!-- <section class="list-info"> -->
+      <ul>
+        <h3>
+          Ingridients:
+        </h3>
+        <% @recipe.ingridients.each do |ingr| %>
+        <li>
+          <%= ingr %>
+        </li>
+        <% end %>
+      </ul>
+      <ul>
+        <h3>
+          Total Calories:
+        </h3>
+        <%= @recipe.calories.round(2) %>cal
+      </ul>
+
+      <ul>
+        <h3>
+          Dietary Labels:
+        </h3>
+        <%= @recipe.dietlabels.each do |lab| %>
+        <li>
+          <%= lab %>
+        </li>
+        <% end %>
+      </ul>
+    <!-- </section> -->
+
+  </section>
+</section>

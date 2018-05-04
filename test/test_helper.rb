@@ -29,6 +29,9 @@ end
 
 
 VCR.configure do |config|
+  config.before_record do |i|
+    i.response.body.force_encoding('UTF-8')
+  end
   config.cassette_library_dir = 'test/cassettes' # folder where casettes will be located
   config.hook_into :webmock # tie into this other tool called webmock
   config.default_cassette_options = {
@@ -42,6 +45,7 @@ VCR.configure do |config|
     ENV['EDAMAM_KEY']
   end
 end
+
 
 class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.

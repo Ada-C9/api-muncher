@@ -1,8 +1,7 @@
 require 'will_paginate/array'
 
 class RecipesController < ApplicationController
-  def search
-  end
+  def search; end
 
   def index
     query = params[:query]

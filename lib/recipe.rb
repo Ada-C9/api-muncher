@@ -7,7 +7,7 @@ class Recipe
 
     @label = name
     @image = image
-    @uri = uri
+    @uri = uri.split(owl)
   end
 
   def self.from_api(raw_recipe)
@@ -16,7 +16,6 @@ class Recipe
       raw_recipe["image"],
       raw_recipe["uri"]
     )
-# need to modify URI to only take string after "#recipe_"5fd01ba00243309c1396f7717745c100
 
   end
 

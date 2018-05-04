@@ -1,5 +1,4 @@
 require 'httparty'
-require 'pry'
 
 class RecipeSearchWrapper
   URL = "https://api.edamam.com/"

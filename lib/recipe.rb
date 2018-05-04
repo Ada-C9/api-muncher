@@ -15,7 +15,7 @@ class Recipe
     raw_data["recipe"]["label"],
     raw_data["recipe"]["image"],
     raw_data["recipe"]["calories"],
-    raw_data["recipe"]["url"]
+    raw_data["recipe"]["url"],
     raw_data["recipe"]["uri"]
     )
   end

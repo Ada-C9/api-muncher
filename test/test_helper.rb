@@ -6,6 +6,10 @@ require "minitest/reporters"
 require 'vcr'
 require 'webmock/minitest'
 
+if ActionPack::VERSION::STRING >= "5.2.0"
+ Minitest::Rails::TestUnit = Rails::TestUnit
+end
+
  # for Colorized output
 
 #  For colorful output!

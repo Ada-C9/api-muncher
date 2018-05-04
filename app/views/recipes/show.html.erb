@@ -1,6 +1,6 @@
 <h2><%= link_to "MUNCHER", root_path %></h2>
 
-<p><%= link_to@recipe.label, @recipe.url %></p>
+<p><%= link_to@recipe.label, @recipe.url, target: :_blank  %></p>
 <p>By <%= @recipe.source %></p>
 
 <%= link_to image_tag(@recipe.image, alt: @recipe.label), @recipe.url, target: :_blank %>

@@ -1,15 +1,14 @@
 <h1>List of Recipes</h1>
 
+<%= will_paginate @recipes %>
+
 <section>
-  <% if @recipes %>
-    <ul>
-      <% @recipes.each do |recipe| %>
-      <div>
-        <li><%= link_to recipe.name, recipe_path(recipe.id) %></li>
-        <li><img src="<%= recipe.image %>"></li>
-        </li>
-      </div>
-      <% end %>
-    </ul>
-  <% end %>
+  <ul>
+    <% @recipes.each do |recipe| %>
+    <div>
+      <li><%= link_to recipe.name, recipe_path(recipe.id) %></li>
+      <li><img src="<%= recipe.image %>"></li>
+    </div>
+    <% end %>
+  </ul>
 </section>

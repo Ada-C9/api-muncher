@@ -20,7 +20,6 @@ class EdamamApiWrapper
     app_id = ENV["EDAMAM_APP_ID"]
     app_key = ENV["EDAMAM_APP_KEY"]
     uri = "http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_" + id.to_s
-    #uri = recipe_uri
     url = "https://api.edamam.com/search?r=#{uri}&app_id=#{app_id}&app_key=#{app_key}"
 
     response = HTTParty.get(url).parsed_response

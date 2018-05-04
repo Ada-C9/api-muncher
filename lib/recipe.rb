@@ -1,4 +1,7 @@
 class Recipe
+
+  #paginates_per 12
+
   attr_reader :id, :name, :image, :ingredients, :dietary_info, :url
 
   def initialize(id, name, image, ingredients, dietary_info, url)

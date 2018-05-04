@@ -6,11 +6,11 @@ describe EdamamApiWrapper do
       VCR.use_cassette("recipes") do
         response = EdamamApiWrapper.get_recipes("pumpkin pie")
         response.must_be_kind_of Array
-        response.length.must_equal 10
+        response.length.must_equal 50
       end
     end
 
-    it "Puts nothing in the array if invalid" do
+    it "Returns empty array for edgey queries" do
       VCR.use_cassette("recipes") do
         response = EdamamApiWrapper.get_recipes("")
         response.must_be_kind_of Array
@@ -33,13 +33,22 @@ describe EdamamApiWrapper do
     it "returns a single recipe" do
       VCR.use_cassette("recipes") do
         response = EdamamApiWrapper.get_recipes("pumpkin pie")
-        response.length.must_equal 10
+        response.length.must_equal 50
 
         a = response.first.id
         b = EdamamApiWrapper.show_recipe(a)
 
         b.class.must_equal Recipe
         b.id.must_equal a
+      end
+    end
+
+    it "returns nil if recipe is invalid" do
+      VCR.use_cassette("recipes") do
+        response = EdamamApiWrapper.get_recipes("pumpkin pie")
+
+        a = response.last.id.to_i + 1
+        EdamamApiWrapper.show_recipe(a).must_be_nil
       end
     end
   end

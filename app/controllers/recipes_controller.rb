@@ -10,6 +10,11 @@ class RecipesController < ApplicationController
 
   def show
     id = params[:id]
-    @recipe = EdamamApiWrapper.show_recipe(id)
+    chosen_recipe = EdamamApiWrapper.show_recipe(id)
+    if chosen_recipe.nil?
+      redirect_to root_path
+    else
+      @recipe = chosen_recipe
+    end
   end
 end

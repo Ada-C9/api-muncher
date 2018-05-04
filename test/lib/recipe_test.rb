@@ -4,12 +4,14 @@ describe Recipe do
   it "Must initialize label, source, image, uri, ingredients, and count properly" do
     uri = "http://www.edamam.com/ontologies/edamam.owl#recipe_c513b886ac38461ca5ed70b162994566"
 
-    recipe = Recipe.new("label", "source", "image", uri, "ingredients", "count")
+    recipe = Recipe.new("label", "source", "image", uri, "ingredients", "count", "url", "health")
     recipe.label.must_equal "label"
     recipe.source.must_equal "source"
     recipe.image.must_equal "image"
     recipe.id.must_equal "c513b886ac38461ca5ed70b162994566"
     recipe.count.must_equal "count"
+    recipe.url.must_equal "url"
+    recipe.health.must_equal "health"
   end
 
   it "Must not initialize an invalid recipe" do

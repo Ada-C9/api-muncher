@@ -39,7 +39,11 @@ class EdamamApiWrapper
   def self.show_recipe(uri_trim)
     url = BASE_URL + "?r=" + BASE_URI + "#{uri_trim}" + "&app_id=#{APP_ID}" + "&app_key=#{APP_KEY}"
     response = HTTParty.get(url)
-    recipe = get_recipe(response[0])
-    return recipe
+    if response.body == "[]"
+      raise ArgumentError.new("Recipe does not exist!")
+    else
+      recipe = get_recipe(response[0])
+      return recipe
+    end
   end
 end

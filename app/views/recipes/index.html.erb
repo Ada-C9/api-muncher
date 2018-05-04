@@ -11,16 +11,4 @@
   </div>
 <% end %>
 
-<nav aria-label="Pagination row large-10">
-  <ul class="pagination text-center">
-    <li class="pagination-previous">Previous</li>
-    <li><%= link_to 1, recipes_path(query: @query, page: 1) %></li>
-    <li><%= link_to 2, recipes_path(query: @query, page: 2) %></li>
-    <li><%= link_to 3, recipes_path(query: @query, page: 3) %></li>
-    <li><%= link_to 4, recipes_path(query: @query, page: 4) %></li>
-    <li class="ellipsis"></li>
-    <li><%= link_to 12, recipes_path(query: @query, page: 12) %></li>
-    <li><%= link_to 13, recipes_path(query: @query, page: 13) %></li>
-    <li class="pagination-next"><a href="#" aria-label="Next page">Next</a></li>
-  </ul>
-</nav>
+<%= will_paginate @recipes, class: 'cell pagination' %>

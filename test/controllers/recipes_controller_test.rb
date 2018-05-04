@@ -12,7 +12,7 @@ describe RecipesController do
   describe 'index' do
     it 'must return ok for a list of recipes' do
       VCR.use_cassette('recipes') do
-        get recipes_path, params: {query: 'chicken', page: 1}
+        get recipes_path, params: {query: 'chicken'}
 
         must_respond_with :ok
       end
@@ -21,7 +21,7 @@ describe RecipesController do
     it 'must return ok for no recipes' do
       skip
       VCR.use_cassette('recipes') do
-        get recipes_path, params: {query: 'some-non-indexed-dish', page: 1}
+        get recipes_path, params: {query: 'some-non-indexed-dish'}
 
         must_respond_with :ok
       end

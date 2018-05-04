@@ -22,10 +22,6 @@
   text-align: center;
 }
 
-/*#search-bar {
-  text-align: center;
-}*/
-
 #edamam-badge {
   text-align: center;
 }
@@ -41,4 +37,16 @@
 
 .card-picture {
   text-align: center;
+}
+
+.pagination {
+  text-align: center;
+}
+
+.pagination a {
+  display: inline;
+}
+
+.pagination > a:hover {
+  background-color: rgb(215, 232, 194);
 }

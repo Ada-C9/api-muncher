@@ -5,9 +5,10 @@ class MuncherApiWrapper
   APP_KEY = ENV['MUNCHER_API_KEY']
   base_uri "https://api.edamam.com/search"
 
-  def self.get_recipes(query, page_no)
-    last = (page_no.to_i * 12) + 1
-    first = ((page_no.to_i * 12) - 11)
+  def self.get_recipes(query)
+
+    last = 241
+    first = 1
 
     full_url = URI.encode(base_uri + "?q=#{query}" + "&app_id=#{APP_ID}&app_key=#{APP_KEY}&from=#{first}&to=#{last}")
 

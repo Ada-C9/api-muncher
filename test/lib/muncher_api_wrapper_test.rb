@@ -4,7 +4,7 @@ describe MuncherApiWrapper do
   describe 'get_recipes' do
     it 'must return a collection of recipes' do
       VCR.use_cassette('recipes') do
-        recipes = MuncherApiWrapper.get_recipes('chicken', '1')
+        recipes = MuncherApiWrapper.get_recipes('chicken')
 
         recipes.each do |recipe|
           recipe.must_be_instance_of Recipe
@@ -14,7 +14,7 @@ describe MuncherApiWrapper do
 
     it 'works for a query that includes spaces' do
       VCR.use_cassette('recipes') do
-        recipes = MuncherApiWrapper.get_recipes('phad thai', '1')
+        recipes = MuncherApiWrapper.get_recipes('phad thai')
 
         recipes.each do |recipe|
           recipe.must_be_instance_of Recipe
@@ -25,7 +25,7 @@ describe MuncherApiWrapper do
     # What am I supposed to do about this!?!?
     it 'does something when a query has no results' do
       VCR.use_cassette('recipes') do
-        recipes = MuncherApiWrapper.get_recipes('asdfas', '1')
+        recipes = MuncherApiWrapper.get_recipes('asdfas')
 
         recipes.length.must_equal 0
       end

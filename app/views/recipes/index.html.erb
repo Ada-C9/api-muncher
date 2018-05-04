@@ -1,9 +1,10 @@
 <section class="recipe-list">
-  <h1>Recipe List</h1>
+  <h1>Recipe</h1>
   <% if @recipes %>
     <ul>
       <% @recipes.each do |item| %>
-        <li><%= item.label %></li>
+        <li><%= item["recipe"]["label"] %></li>
+        <li><%= image_tag item["recipe"]["image"] %></li>
       <% end %>
     </ul>
   <% end %>

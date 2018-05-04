@@ -9,7 +9,7 @@ class EdamamApiWrapper
   def self.recipe_list(food)
     encoded_uri = URI.encode(BASE_URL + "q=#{food}" + "&app_id=#{APP_ID}&app_key=#{APP_KEY}" + "&from=0&to=12")
 
-    response = HTTParty.get(encoded_uri)
+    response = HTTParty.get(encoded_uri).parsed_response
 
 
     unless response["more"]

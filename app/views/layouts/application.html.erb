@@ -12,8 +12,23 @@
   </head>
 
   <body>
+    <header>
+      Recipe Muncher
+    </header>
+    <section>
+      <%= form_tag({controller: 'recipes', action: 'index'}, method: 'get') do %>
+      <%= label_tag(:query)%>
+      <%= text_field_tag(:query) %>
+      <%= submit_tag("Search!")%>
+      <% end %>
+    </section>
 
     <%= yield %>
 
+    <footer class="align-center">
+          <p>
+            COPYRIGHT &copy; ID 2018 | Powered by <%= link_to "Edamam", "https://www.edamam.com/" %>
+          </p>
+        </footer>
   </body>
 </html>

@@ -5,6 +5,7 @@ require 'rails/all'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+Bundler.require(:default)
 
 module ApiMuncher
   class Application < Rails::Application
@@ -14,6 +15,8 @@ module ApiMuncher
 
       # Always use .js files, never .coffee
       g.javascript_engine :js
+      # Automatically load all code from <rails_root>/lib
+      config.autoload_paths << Rails.root.join('lib')
     end
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2

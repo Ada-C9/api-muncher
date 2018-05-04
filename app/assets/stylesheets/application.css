@@ -17,3 +17,8 @@
  *= require foundation_and_overrides
 
  */
+
+.align-center div {
+  text-align: center;
+  display: inline-block;
+}

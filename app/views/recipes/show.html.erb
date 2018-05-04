@@ -1,1 +1,16 @@
 <h5>Recipe Details</h5>
+
+<!-- Show View: recipe name, link to original recipe, ingredients, dietary info -->
+<%= @recipe.name %></br></br>
+<%= link_to @recipe.link %></br></br>
+
+<strong>Ingredients</strong></br>
+<% @recipe.ingredients.each do |ingredient| %>
+<ul>
+  <li>
+    <%= ingredient %>
+  </li>
+</ul>
+<% end %>
+
+<h6>Calories: <%= @recipe.calories.round %></h6>

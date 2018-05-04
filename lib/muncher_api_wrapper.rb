@@ -1,16 +1,15 @@
-require 'HTTParty'
-
 class MuncherApiWrapper
+  include HTTParty
 
   APP_ID = ENV['MUNCHER_API_ID']
   APP_KEY = ENV['MUNCHER_API_KEY']
-  BASE_URI "https://api.edamam.com/search"
+  base_uri "https://api.edamam.com/search"
 
   def self.get_recipes(query, page_no)
     last = (page_no.to_i * 12) + 1
     first = ((page_no.to_i * 12) - 11)
 
-    full_url = URI.encode(BASE_URI + "?q=#{query}" + "&app_id=#{APP_ID}&app_key=#{APP_KEY}&from=#{first}&to=#{last}")
+    full_url = URI.encode(base_uri + "?q=#{query}" + "&app_id=#{APP_ID}&app_key=#{APP_KEY}&from=#{first}&to=#{last}")
 
     response = HTTParty.get(full_url)
 
@@ -26,7 +25,7 @@ class MuncherApiWrapper
       raise ArgumentError.new('Needs a valid URI')
     end
 
-    full_url = URI.encode(BASE_URI + "?r=#{recipe_uri}" + "&app_id=#{APP_ID}&app_key=#{APP_KEY}")
+    full_url = URI.encode(base_uri + "?r=#{recipe_uri}" + "&app_id=#{APP_ID}&app_key=#{APP_KEY}")
 
     response = HTTParty.get(full_url)
 

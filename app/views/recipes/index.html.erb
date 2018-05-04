@@ -2,10 +2,8 @@
   <h1>Recipe List</h1>
   <% if @recipes %>
     <ul>
-      <% @recipes.each do |food| %>
-        <li>
-          <%= food %>
-        </li>
+      <% @recipes.each do |item| %>
+        <li><%= item.label %></li>
       <% end %>
     </ul>
   <% end %>

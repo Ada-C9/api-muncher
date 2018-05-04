@@ -1,4 +1,4 @@
-require 'httparty'
+
 
 class EdamamApiWrapper
 
@@ -7,18 +7,17 @@ class EdamamApiWrapper
   BASE_URL = "https://api.edamam.com/search?"
 
   def self.recipe_list(food)
-    encoded_uri = URI.encode(BASE_URL + "q=#{food}" + "&app_id=#{APP_ID}&app_key=#{APP_KEY}" + "&from=0&to=10")
+    encoded_uri = URI.encode(BASE_URL + "q=#{food}" + "&app_id=#{APP_ID}&app_key=#{APP_KEY}" + "&from=0&to=12")
 
-    response = HTTParty.get(encoded_uri).parsed_response
+    response = HTTParty.get(encoded_uri)
 
-    # unless response["ok"]
-    #   raise StandardError.new(response["error!"])
-    # end
 
-    details = response["hits"]
+    unless response["more"]
+      raise StandardError.new(response["error!"])
+    end
 
-  return details.map do |recipe|
-      Recipe.from_api(recipe)
+    return response["hits"].each do |raw_recipe|
+      Recipe.from_api(raw_recipe["recipe"])
     end
   end
 end

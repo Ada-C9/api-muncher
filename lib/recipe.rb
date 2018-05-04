@@ -6,9 +6,9 @@ class Recipe
     # # Note that the below we used lazy evaluation to
     # # our advantage here
     # # Boolean logic short cercut
-    # if name.nil? || name.empty?
-    #   raise ArgumentError.new("Need a name please")
-    # end
+    if label.nil? || label.empty?
+      raise ArgumentError.new("Need a name recipe to search")
+    end
 
     @label = label
     @image = image

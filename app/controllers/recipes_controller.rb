@@ -5,6 +5,10 @@ class RecipesController < ApplicationController
     @recipes = RecipeApiWrapper.list_recipes
   end
 
+  def new
+    @recipe_name = params["recipe"]
+  end
+
   def show
     recipe_id = params[:id]
 

@@ -4,8 +4,16 @@ class RecipesController < ApplicationController
 
 	# displays up to 10 results at a time from search
 	def results
-		query_text = params[:query_text] # from form
-		@recipes = EdamamApiWrapper.search_recipes(query_text, from: nil, to: nil, diet: nil, health: nil)
+		if params[:query_text] || session[:query_text]
+				session[:query_text] = params[:query_text] if params[:query_text]
+				start = params[:start] || 0
+				search_results = EdamamApiWrapper.search_recipes(session[:query_text], start)
+				@recipes = search_results[:recipes]
+				@max_pages = search_results[:max_pages]
+		else
+			flash[:alert] = "Something broke!"
+			redirect_to root
+		end
 
 	end
 
@@ -15,6 +23,7 @@ class RecipesController < ApplicationController
 
 	# makes api request using search term
 	def search
+
 
 	end
 

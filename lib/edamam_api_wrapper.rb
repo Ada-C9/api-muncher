@@ -1,4 +1,5 @@
 require 'httparty'
+require 'will_paginate/array'
 
 class EdamamApiWrapper
 	include Standards
@@ -6,16 +7,17 @@ class EdamamApiWrapper
 	URL = "https://api.edamam.com/search?"
 	APP_ID = ENV["APPLICATION_ID"]
 	APP_KEY = ENV["APPLICATION_KEY"]
+	PER_PAGE = 10
+	MAX_ALLOWABLE_PAGES = 5
 
-	def self.search_recipes(query_text, from: 0, to: 2, diet: nil, health: nil)
-		search_url = build_url_for_search(query_text, from, to, diet, health)
-		response = HTTParty.get(search_url)
-
-		recipes_list = []
-		if response["hits"]
-			response["hits"].each { |hit| recipes_list << Recipe.new(hit['recipe']) }
-		end
-		return recipes_list
+	# def self.search_recipes(query_text, from: 0, to: 11, diet: nil, health: nil)
+	# def self.search_recipes(query_text, from, to: PER_PAGE, diet: nil, health: nil)
+	def self.search_recipes(query_text, from, diet: nil)
+		response = HTTParty.get(build_url_for_search(query_text, from, diet))
+		return { # TODO: better to make this a class?
+			recipes: build_recipes(response),
+			max_pages: get_max_page_count(response)
+		}
 	end
 
 
@@ -41,15 +43,31 @@ class EdamamApiWrapper
 
 	private
 
+	def self.build_recipes(response)
+		# search_url = build_url_for_search(query_text, from, to, diet, health)
+		# search_url = build_url_for_search(query_text, from, diet)
+		recipes_list = []
+		if response["hits"]
+			response["hits"].each { |hit| recipes_list << Recipe.new(hit['recipe']) }
+		end
+		return recipes_list
+	end
+
+
+	def self.get_max_page_count(response)
+		total_pages = (response["count"] / PER_PAGE.to_f).ceil # ceil makes it an int
+		return total_pages > MAX_ALLOWABLE_PAGES ? MAX_ALLOWABLE_PAGES : total_pages
+	end
+
 	# QUESTION: Do to and from have to come together? Are there any rules about
 	# their relationship with each other.
 
-	def self.build_url_for_search(query_text, from, to, diet, health)
+	def self.build_url_for_search(query_text, from, diet)
 		build_url = "#{URL}q=#{query_text}&app_id=#{APP_ID}&app_key=#{APP_KEY}"
 		add_from_to_url(from, build_url)
-		add_to_to_url(to, build_url)
+		# add_to_to_url(to, build_url)
 		add_diet_to_url(diet, build_url)
-		add_health_to_url(health, build_url)
+		# add_health_to_url(health, build_url)
 		return build_url
 	end
 
@@ -69,10 +87,12 @@ class EdamamApiWrapper
 	# end
 
 	def self.add_from_to_url(from, build_url)
+		from = from.to_i if !from.nil?
 		if !from.nil? && !(from.is_a?(Integer) && from >= 0)
 			raise ArgumentError.new("invalid 'from'")
 		end
 		build_url << "&from=#{from}" if from.is_a?(Integer)
+		build_url << "&to=#{from + PER_PAGE}" if from.is_a?(Integer)
 	end
 
 	def self.add_to_to_url(to, build_url)

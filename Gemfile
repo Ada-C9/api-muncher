@@ -65,15 +65,14 @@ gem 'jquery-turbolinks'
 gem 'jquery-rails'
 gem 'foundation-rails'
 gem 'normalize-rails'
+
 group :development, :test do
   gem 'pry-rails'
-end
-
-group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'dotenv-rails'
 end
+
 
 group :test do
   gem 'minitest-rails'
@@ -81,3 +80,10 @@ group :test do
 end
 
 gem 'httparty'
+
+gem "will_paginate"
+
+group :development, :test do
+  gem 'minitest-vcr'
+  gem 'webmock'
+end

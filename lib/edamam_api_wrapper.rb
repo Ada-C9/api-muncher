@@ -34,4 +34,15 @@ class EdamamApiWrapper
     return @recipe_list
 
   end
+
+  def self.show_recipe(uri)
+
+    @recipe_list.each do |recipe|
+      if recipe.uri == uri
+        return recipe
+      else
+        return nil
+      end
+    end
+  end
 end

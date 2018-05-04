@@ -9,6 +9,5 @@ attr_reader :label, :uri, :image, :recipe_source, :url, :ingredientLines, :total
     @recipe_source = recipe["recipe_source"]
     @ingredientLines = recipe["ingredientLines"]
     @totalNutrients = recipe["totalNutrients"]
-
   end
 end

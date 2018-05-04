@@ -4,12 +4,9 @@
     <ul>
       <% @recipes.each do |recipe| %>
         <li>
-          <%= recipe.label %>
+          <%= link_to recipe.label, recipe_path(recipe.uri) %>
         </li>
       <% end %>
     </ul>
   <% end %>
 </section>
-
-
-Add CommentCollapse 

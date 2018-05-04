@@ -4,23 +4,15 @@ class RecipesController < ApplicationController
   end
 
   def index
-  @query = params[:search]
-  @recipes = EdamamApiWrapper.list_recipes(@query)
+    @query = params[:search]
+    @recipes = EdamamApiWrapper.list_recipes(@query)
   end
 
-  def new
-    @recipe = params[:recipe]
-  end
-
-  def create
-    recipe = params[:recipe]
-
-    if SlackApiWrapper.send_message(channel, message)
-      flash[:success] = "Message Sent!"
-    else
-      flash[:alert] = "Error Sending"
+  def show
+    @recipe = EdamamApiWrapper.show_recipe(params[:id])
+    if @recipe.nil?
+      flash[:alert] = "That recipe does not exist"
+      redirect_back fallback_location: recipes_path
     end
-
-    redirect_to chat_new_path(channel)
   end
 end

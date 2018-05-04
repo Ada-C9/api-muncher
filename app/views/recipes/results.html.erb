@@ -29,7 +29,7 @@
 
 
 <ul>
-	<% @max_pages.times do |page| %>
-	<%= link_to page, { action: 'results', :start => page } %>
+	<% (1...@max_pages).each do |page| %>
+	<%= link_to page, { action: 'results', :from => page } %>
 	<% end %>
 </ul>

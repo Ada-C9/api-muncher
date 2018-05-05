@@ -76,6 +76,11 @@
   font-family: 'Playfair Display', serif;
 }
 
+.hover img:hover {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
 .pages {
   text-align: center;
   padding: 1.5em;

@@ -22,7 +22,8 @@ describe RecipesController do
   describe "show" do
     it "returns the requested recipe" do
       VCR.use_cassette("recipes") do
-      response = EdamamApiWrapper.get_recipes("pumpkin pie")
+      query = {:search => "pumpkin pie"}
+      response = EdamamApiWrapper.get_recipes(query)
       a = response.first.id
       get recipe_path(a)
       must_respond_with :success
@@ -31,7 +32,8 @@ describe RecipesController do
 
     it "redirects invalid request" do
       VCR.use_cassette("recipes") do
-      response = EdamamApiWrapper.get_recipes("pumpkin pie")
+      query = {:search => "pumpkin pie"}
+      response = EdamamApiWrapper.get_recipes(query)
 
       a = response.last.id.to_i + 1
 

@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :favorite_recipes
 
   def self.build_from_github(auth_hash)
     return User.new(

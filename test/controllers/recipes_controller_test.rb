@@ -11,4 +11,10 @@ describe RecipesController do
     value(response).must_be :success?
   end
 
+  it "INSERT CONTROLLER TEST DESCRIPTION HERE" do
+    VCR.use_cassette("YOURCONTROLLERTESTCASSETTEFILENAMEHERE") do
+      # INSERT ALL OF THE CONTROLLER TEST HERE
+    end
+  end
+
 end

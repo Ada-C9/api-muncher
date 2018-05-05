@@ -7,9 +7,15 @@ class RecipesController < ApplicationController
 
   def index
     @query = params[:query]
-    # return @recipes = RecipeSearchWrapper.search_recipes(@query)
-    @recipes = RecipeSearchWrapper.search_recipes(@query).paginate(:page => params[:page], :per_page => 10)
 
+    @recipes = RecipeSearchWrapper.search_recipes(@query)
+    if @recipes.empty?
+      flash[:status] = :failure
+      flash[:result_text] = "There are no recipes for #{params[:query]}. Maybe you could write one?"
+      redirect_to root_path
+    else
+      @recipes = @recipes.paginate(:page => params[:page], :per_page => 10)
+    end
   end
 
   def show
@@ -25,7 +31,7 @@ class RecipesController < ApplicationController
       yield
     rescue RecipeSearchWrapper::RecipeError => error
       flash[:status] = :failure
-      flash[:message] = "API called failed: #{error}"
+      flash[:result_text] = "API called failed: #{error}"
       redirect_back fallback_location: root_path
     end
   end

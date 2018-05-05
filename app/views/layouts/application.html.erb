@@ -19,7 +19,18 @@
   </nav>
 
   <body>
-    <%= yield %>
+    <%if params[:query].nil?%>
+      <h1>Welcome to Wrapped Recipes!</h1>
+    <%else%>
+        <h1>Search Results for: <%=params[:query]%></h1>
+    <%end%>
+    <section id="search-bar">
+      <%= form_tag query_results_path, method: :get do %>
+        <%=text_field_tag :query%>
+        <%= submit_tag "Search", class:"button"%>
+      <%end%>
+    </section>
+      <%= yield %>
     <footer>
       <div>
         <ul class="pagination">
@@ -35,6 +46,7 @@
       <li><%=link_to 10, {:action => 'index', :from=> 91, :to=>100, :query=>params[:query]} %></li>
     </ul>
       </div>
+
     </footer>
   </body>
 

@@ -18,9 +18,20 @@
 
  */
 
+
 nav{
   margin-left:85%;
   margin-top:10px;
+}
+
+#search-bar{
+  margin-left:50px;
+  margin-right:50px;
+  flex-grow: 100%;
+}
+
+#search-bar .button {
+  margin-left: 43%;
 }
 
  #food-items{
@@ -35,7 +46,7 @@ nav{
  }
 
  .pagination{
-  padding-left:35%;
+  padding-left:31%;
  }
 
  .pagination li{

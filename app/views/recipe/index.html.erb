@@ -1,9 +1,3 @@
-
-<%= form_tag query_results_path, method: :get do %>
-  <%=text_field_tag :query%>
-  <%= submit_tag "Search", class:"button"%>
-<%end%>
-
 <ul id="food-items">
   <%@recipes.each do |recipe|%>
     <li id="food-image"><%=link_to image_tag(recipe.image),recipe_show_path(recipe.label,:uri=>recipe.uri)%>

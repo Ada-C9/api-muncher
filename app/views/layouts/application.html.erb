@@ -11,6 +11,7 @@
     <%= csrf_meta_tags %>
   </head>
   <nav>
+  <%=link_to "Home", root_path ,class:"button"%>
 <%if user = User.find_by(id: session[:user_id]) %>
   <span>Signed in as <%=user.username%> </span><%=link_to "Log out", signout_path, clss:"button"%>
 <%else%>

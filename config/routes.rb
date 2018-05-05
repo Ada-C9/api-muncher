@@ -3,10 +3,8 @@ Rails.application.routes.draw do
 	# root '/'
 	root 'recipes#search'
 
-	resources :recipes, only: [:index, :show]
+	# resources :recipes, only: [:index, :show]
 
-	# GET recipes/, as: recipes_path
-	# post 'recipes/:id', as: new_recipe_path
-
-	# get '/', to: 'recipes#search', as: 'search'
+	get '/recipes', to: 'recipes#index', as: 'recipes'
+	get '/recipes/:uid', to: 'recipes#show', as: 'recipe'
 end

@@ -3,17 +3,17 @@ require "test_helper"
 # Note You will also need to place the VCR.use_cassette block around your controller tests as well. Otherwise your controller tests, which use the API will fail.
 
 describe "Recipes" do
-	describe "search" do
-		it "returns results, image, from search" do
-			VCR.use_cassette("recipes") do
-				search = "chicken"
-				response = RecipeApiWrapper.search_recipes(search)
-
-				response["OK"].must_equal true
-				response["q"].must_equal search
-			end
-		end
-	end
+	# describe "search" do
+	# 	it "returns results, image, from search" do
+	# 		VCR.use_cassette("recipes") do
+	# 			search = "chicken"
+	# 			response = RecipeApiWrapper.search_recipes(search)
+	#
+	# 			response["OK"].must_equal true
+	# 			response["q"].must_equal search
+	# 		end
+	# 	end
+	# end
 
 	# describe "list_recipes" do
 	# 	it "lists recipes based on search" do
@@ -26,4 +26,14 @@ describe "Recipes" do
 	# 		end
 	# 	end
 	# end
+
+	describe "get_details" do
+		it "returns the details for a specific recipe" do
+			VCR.use_cassette("recipes") do
+						search = "ice cream"
+						response = RecipeApiWrapper.search_recipes(search)
+
+			end 
+		end
+	end
 end

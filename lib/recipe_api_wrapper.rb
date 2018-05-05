@@ -9,7 +9,7 @@ class RecipeApiWrapper
 
 	def self.list_recipes(query)
 		encoded_uri = URI.encode(BASE_URL + query + "&app_id=#{ID}" + "&app_key=#{KEY}")
-		#
+
 		response = HTTParty.get(encoded_uri).parsed_response
 
 		hits = response["hits"]
@@ -19,6 +19,15 @@ class RecipeApiWrapper
 		return hits.map do |raw_hit|
 			Recipe.from_api(raw_hit)
 		end
+	end
+
+	def self.get_details
+
+		url = "https://api.edamam.com" + "&app_id=#{ID}" + "&app_key=#{KEY}"
+
+		response = HTTParty.get(url).parsed_response
+
+		recipe = response["hits"]["recipe"]
 	end
 
 	private

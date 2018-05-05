@@ -3,13 +3,15 @@ class RecipesController < ApplicationController
 		query = params[:q]
 
 		@recipes = RecipeApiWrapper.list_recipes(query)
+	end
 
-		# if RecipeApiWrapper.list_recipes(query)
-		# 	flash[:success]
-		#
-		# 	# redirect_to recipes_path
-		# else
-		# 	flash[:alert] = "Something's not working."
-		# end
+	def search
+		# have a view for this route but no functions necessary
+	end
+
+	def show
+		uid = params[:uid]
+	
+		@recipe = RecipeApiWrapper.get_details(uid)
 	end
 end

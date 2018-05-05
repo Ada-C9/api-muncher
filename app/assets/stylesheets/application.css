@@ -33,6 +33,17 @@ body {
 
 form {
   /* border: solid 1px blue; */
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  grid-column-gap: 2rem;
+}
+
+form input[type="text"] {
+  height: 3rem;
+}
+
+form input[type="submit"] {
+  height: 3rem;
 }
 
 /* recipe card styles  */

@@ -2,8 +2,8 @@
   <h1>Comelón</h1>
   <h4>¡Busca recetas con información dietética!</h4>
   <%= form_tag recipes_path, method: :get do %>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag 'Search' %>
+    <%= text_field_tag :search, params[:search], placeholder: "ejemplo: ceviche" %>
+    <%= submit_tag 'Buscar' %>
   <% end %>
 </section>
 
@@ -21,7 +21,7 @@
     </li>
     <% end %>
   </ul>
-  
+
   <aside>
     <%= paginate @recipes, window: 2, outer_window: 1 %>
   </aside>

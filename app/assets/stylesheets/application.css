@@ -132,6 +132,12 @@
   padding: .5em;
 }
 
+.status h3 {
+  text-align: center;
+  padding: 1em;
+  font-family: 'Playfair Display', serif;
+  color: red;
+}
 
 /* * {
   border: black 1px solid;

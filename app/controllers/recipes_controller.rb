@@ -17,6 +17,8 @@ class RecipesController < ApplicationController
     id = params[:id]
     chosen_recipe = EdamamApiWrapper.show_recipe(id)
     if chosen_recipe.nil?
+      flash[:status] = :alert
+      flash[:result_text] = "🙅🏻‍ Please try again! 🙅🏻"
       redirect_to root_path
     else
       @recipe = chosen_recipe

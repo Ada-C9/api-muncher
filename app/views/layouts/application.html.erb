@@ -20,7 +20,16 @@
       </div>
     </header>
 
-    <%= yield %>
+    <% if flash[:result_text] %>
+      <section class="status <%= flash[:status] %>">
+        <h3><%= flash[:result_text] %></h3>
+      </section>
+    <% end %>
+
+    <main>
+      <%= yield %>
+    </main>
+
     <footer>
       <div id="edamam-badge" data-color="white"></div>
     </footer>

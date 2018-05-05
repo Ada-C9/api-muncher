@@ -65,6 +65,7 @@ ul {
 
 main {
   padding: 2rem;
+  justify-content: center;
 }
 
 .page-footer {
@@ -89,8 +90,8 @@ main {
   padding: 0w 4px;
 }
 
-.pagination {
-  text-align: center;
+.pagination a {
+  float: left;
 }
 
 @media screen and (max-width: 800px) {

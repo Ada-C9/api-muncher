@@ -9,7 +9,7 @@ class RecipeSearchWrapper
   class RecipeError < StandardError; end
 
   def self.search_recipes(query)
-    url = @base_url  + "app_id=#{@app_id}&app_key=#{@app_key}" + "&q=#{query}" + "&to=20"
+    url = @base_url  + "app_id=#{@app_id}&app_key=#{@app_key}" + "&q=#{query}" + "&to=1000"
 
     encoded_uri = URI.encode(url)
 

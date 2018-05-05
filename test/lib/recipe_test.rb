@@ -45,7 +45,7 @@ describe Recipe do
       }
     end
 
-    it 'pulls the relevant information into an instance of recipe_' do
+    it 'pulls the relevant information into an instance of recipe' do
       recipe = Recipe.from_api(@fake_recipe_data)
 
       recipe.must_be_kind_of Recipe

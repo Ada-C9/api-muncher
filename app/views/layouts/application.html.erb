@@ -10,9 +10,11 @@
     <script src="https://developer.edamam.com/attribution/badge.js"></script>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+
   </head>
 
   <body>
+    <header><h1><%= link_to "Muncher", root_path %></h1></header>
 
     <%= yield %>
   <footer>

@@ -12,7 +12,8 @@ class MuncherApiWrapper
     recipes_list = []
     if results["hits"]
       results["hits"].each do |result_data|
-        recipes_list << result_data
+        recipe = Recipe.new(result_data["recipe"]["label"], result_data["recipe"]["image"], result_data["recipe"]["url"], result_data["recipe"]["ingredientLines"])
+        recipes_list << recipe
       end
     end
       return recipes_list

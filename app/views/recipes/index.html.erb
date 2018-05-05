@@ -5,7 +5,8 @@
     <% @recipes.each do |recipe| %>
     <li>
       <!-- make the label a link_to show page -->
-      <%= recipe["recipe"]["label"]%>
+      <%= image_url(recipe) %>
+      <%= recipe.label %>
     </li>
     <% end %>
   </ul>

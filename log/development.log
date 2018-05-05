@@ -1122,3 +1122,1316 @@ Processing by RecipesController#index as HTML
 Completed 200 OK in 569ms (Views: 126.2ms)
 
 
+Started GET "/index?utf8=%E2%9C%93&query=cucumber&commit=Search" for 127.0.0.1 at 2018-05-04 11:51:38 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"cucumber", "commit"=>"Search"}
+Completed 500 Internal Server Error in 767ms
+
+
+
+SyntaxError - syntax error, unexpected keyword_end, expecting end-of-input:
+  lib/edemam_api_wrapper.rb:32:in `'
+  app/controllers/recipes_controller.rb:10:in `index'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/f3bc4f397665f940/variables" for 127.0.0.1 at 2018-05-04 11:51:39 -0700
+Started GET "/index?utf8=%E2%9C%93&query=cucumber&commit=Search" for 127.0.0.1 at 2018-05-04 11:52:12 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"cucumber", "commit"=>"Search"}
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 1906ms (Views: 802.7ms)
+
+
+Started GET "/index?utf8=%E2%9C%93&query=cucumber&commit=Search" for 127.0.0.1 at 2018-05-04 12:16:35 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"cucumber", "commit"=>"Search"}
+Completed 500 Internal Server Error in 353ms
+
+
+
+SyntaxError - syntax error, unexpected end-of-input, expecting keyword_end:
+  lib/edemam_api_wrapper.rb:33:in `'
+  app/controllers/recipes_controller.rb:10:in `index'
+  app/controllers/recipes_controller.rb:23:in `catch_api_error'
+
+Started POST "/__better_errors/a4eed190962c71e4/variables" for 127.0.0.1 at 2018-05-04 12:16:36 -0700
+Started GET "/index?utf8=%E2%9C%93&query=cucumber&commit=Search" for 127.0.0.1 at 2018-05-04 12:16:57 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"cucumber", "commit"=>"Search"}
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 1652ms (Views: 698.7ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2018-05-04 12:17:01 -0700
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 610ms (Views: 137.3ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2018-05-04 12:17:29 -0700
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 620ms (Views: 135.5ms)
+
+
+Started GET "/index?utf8=%E2%9C%93&query=cucumber&commit=Search" for 127.0.0.1 at 2018-05-04 12:17:32 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"cucumber", "commit"=>"Search"}
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 1134ms (Views: 140.0ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2018-05-04 12:17:35 -0700
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 677ms (Views: 113.6ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2018-05-04 12:18:24 -0700
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 2505ms (Views: 675.4ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2018-05-04 12:18:39 -0700
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 717ms (Views: 164.7ms)
+
+
+Started GET "/index?utf8=%E2%9C%93&query=cucumber&commit=Search" for 127.0.0.1 at 2018-05-04 12:18:45 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"cucumber", "commit"=>"Search"}
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 1150ms (Views: 140.0ms)
+
+
+Started GET "/index?utf8=%E2%9C%93&query=cucumber&commit=Search" for 127.0.0.1 at 2018-05-04 12:24:57 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"cucumber", "commit"=>"Search"}
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 1982ms (Views: 710.3ms)
+
+
+Started GET "/recipes/%23%3CRecipe:0x007fc88c9bb480%3E" for 127.0.0.1 at 2018-05-04 12:25:00 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"#<Recipe:0x007fc88c9bb480>"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 170ms (Views: 166.5ms)
+
+
+Started GET "/recipes/%23%3CRecipe:0x007fc88c9bb480%3E" for 127.0.0.1 at 2018-05-04 12:25:33 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"#<Recipe:0x007fc88c9bb480>"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 138ms (Views: 134.0ms)
+
+
+Started GET "/index?utf8=%E2%9C%93&query=cucumber&commit=Search" for 127.0.0.1 at 2018-05-04 12:26:28 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"cucumber", "commit"=>"Search"}
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 983ms (Views: 134.4ms)
+
+
+Started GET "/recipes/%23%3CRecipe:0x007fc8947e2cf0%3E" for 127.0.0.1 at 2018-05-04 12:26:43 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"#<Recipe:0x007fc8947e2cf0>"}
+Completed 500 Internal Server Error in 2ms
+
+
+
+NoMethodError - undefined method `gsub' for nil:NilClass:
+  lib/edemam_api_wrapper.rb:19:in `show_recipe'
+  app/controllers/recipes_controller.rb:15:in `show'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/5bab64993223eafa/variables" for 127.0.0.1 at 2018-05-04 12:26:43 -0700
+Started POST "/__better_errors/5bab64993223eafa/eval" for 127.0.0.1 at 2018-05-04 12:27:51 -0700
+Started GET "/recipes/%23%3CRecipe:0x007fc8947e2cf0%3E" for 127.0.0.1 at 2018-05-04 12:28:43 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"#<Recipe:0x007fc8947e2cf0>"}
+Completed 500 Internal Server Error in 3ms
+
+
+
+NoMethodError - undefined method `gsub' for nil:NilClass:
+  lib/edemam_api_wrapper.rb:19:in `show_recipe'
+  app/controllers/recipes_controller.rb:15:in `show'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/ff3bf443837c4b8b/variables" for 127.0.0.1 at 2018-05-04 12:28:43 -0700
+Started GET "/recipes/%23%3CRecipe:0x007fc8947e2cf0%3E" for 127.0.0.1 at 2018-05-04 13:53:08 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"#<Recipe:0x007fc8947e2cf0>"}
+Completed 500 Internal Server Error in 3ms
+
+
+
+NoMethodError - undefined method `gsub' for nil:NilClass:
+  lib/edemam_api_wrapper.rb:19:in `show_recipe'
+  app/controllers/recipes_controller.rb:15:in `show'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/9e3e5437b35b5c93/variables" for 127.0.0.1 at 2018-05-04 13:53:08 -0700
+Started GET "/recipes/%23%3CRecipe:0x007fc8947e2cf0%3E" for 127.0.0.1 at 2018-05-04 13:53:47 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"#<Recipe:0x007fc8947e2cf0>"}
+Completed 500 Internal Server Error in 4ms
+
+
+
+SyntaxError - formal argument cannot be an instance variable
+  def self.show_recipe(@uri)
+                           ^:
+  lib/edemam_api_wrapper.rb:18:in `'
+  app/controllers/recipes_controller.rb:15:in `show'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/369a1c6c464d0112/variables" for 127.0.0.1 at 2018-05-04 13:53:47 -0700
+Started GET "/recipes/%23%3CRecipe:0x007fc8947e2cf0%3E" for 127.0.0.1 at 2018-05-04 13:53:58 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"#<Recipe:0x007fc8947e2cf0>"}
+Completed 500 Internal Server Error in 3ms
+
+
+
+NoMethodError - undefined method `gsub' for nil:NilClass:
+  lib/edemam_api_wrapper.rb:19:in `show_recipe'
+  app/controllers/recipes_controller.rb:15:in `show'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/335de5e2c34756cb/variables" for 127.0.0.1 at 2018-05-04 13:53:58 -0700
+Started POST "/__better_errors/335de5e2c34756cb/eval" for 127.0.0.1 at 2018-05-04 13:54:21 -0700
+Started POST "/__better_errors/335de5e2c34756cb/eval" for 127.0.0.1 at 2018-05-04 13:54:29 -0700
+Started POST "/__better_errors/335de5e2c34756cb/eval" for 127.0.0.1 at 2018-05-04 13:57:16 -0700
+Started GET "/" for 127.0.0.1 at 2018-05-04 13:58:04 -0700
+Processing by RecipesController#search as HTML
+  Rendering recipes/search.html.erb within layouts/application
+  Rendered recipes/search.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 134ms (Views: 124.3ms)
+
+
+Started GET "/index?utf8=%E2%9C%93&query=cucumber&commit=Search" for 127.0.0.1 at 2018-05-04 13:58:08 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"cucumber", "commit"=>"Search"}
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 1669ms (Views: 154.2ms)
+
+
+Started GET "/recipes/%23%3CRecipe:0x007fc895086640%3E" for 127.0.0.1 at 2018-05-04 13:58:14 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"#<Recipe:0x007fc895086640>"}
+Completed 500 Internal Server Error in 2ms
+
+
+
+NoMethodError - undefined method `gsub' for nil:NilClass:
+  lib/edemam_api_wrapper.rb:19:in `show_recipe'
+  app/controllers/recipes_controller.rb:15:in `show'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/7e848ec44ef16388/variables" for 127.0.0.1 at 2018-05-04 13:58:14 -0700
+Started GET "/recipes/%23%3CRecipe:0x007fc895086640%3E" for 127.0.0.1 at 2018-05-04 14:01:11 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/recipes/%23%3CRecipe:0x007fc895086640%3E"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/recipes/%23%3CRecipe:0x007fc895086640%3E" for 127.0.0.1 at 2018-05-04 14:04:57 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/recipes/%23%3CRecipe:0x007fc895086640%3E"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-05-04 14:05:13 -0700
+Processing by RecipesController#search as HTML
+  Rendering recipes/search.html.erb within layouts/application
+  Rendered recipes/search.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 1079ms (Views: 718.1ms)
+
+
+Started GET "/index?utf8=%E2%9C%93&query=cucumber&commit=Search" for 127.0.0.1 at 2018-05-04 14:05:19 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"cucumber", "commit"=>"Search"}
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 1100ms (Views: 131.4ms)
+
+
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_0f8b9562910c933e3017fc7860fae7d4" for 127.0.0.1 at 2018-05-04 14:05:21 -0700
+
+NameError - uninitialized constant RecipeController:
+
+Started POST "/__better_errors/76339e40c6fd85f5/variables" for 127.0.0.1 at 2018-05-04 14:05:21 -0700
+Started POST "/__better_errors/76339e40c6fd85f5/variables" for 127.0.0.1 at 2018-05-04 14:05:34 -0700
+Started POST "/__better_errors/76339e40c6fd85f5/variables" for 127.0.0.1 at 2018-05-04 14:05:35 -0700
+Started POST "/__better_errors/76339e40c6fd85f5/variables" for 127.0.0.1 at 2018-05-04 14:05:36 -0700
+Started POST "/__better_errors/76339e40c6fd85f5/variables" for 127.0.0.1 at 2018-05-04 14:05:37 -0700
+Started POST "/__better_errors/76339e40c6fd85f5/variables" for 127.0.0.1 at 2018-05-04 14:05:38 -0700
+Started POST "/__better_errors/76339e40c6fd85f5/variables" for 127.0.0.1 at 2018-05-04 14:05:39 -0700
+Started POST "/__better_errors/76339e40c6fd85f5/variables" for 127.0.0.1 at 2018-05-04 14:05:40 -0700
+Started POST "/__better_errors/76339e40c6fd85f5/variables" for 127.0.0.1 at 2018-05-04 14:05:41 -0700
+Started POST "/__better_errors/76339e40c6fd85f5/variables" for 127.0.0.1 at 2018-05-04 14:05:42 -0700
+Started POST "/__better_errors/76339e40c6fd85f5/variables" for 127.0.0.1 at 2018-05-04 14:05:43 -0700
+Started GET "/" for 127.0.0.1 at 2018-05-04 14:06:57 -0700
+Processing by RecipesController#search as HTML
+  Rendering recipes/search.html.erb within layouts/application
+  Rendered recipes/search.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 124ms (Views: 120.8ms)
+
+
+Started GET "/index?utf8=%E2%9C%93&query=cucumber&commit=Search" for 127.0.0.1 at 2018-05-04 14:07:01 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"cucumber", "commit"=>"Search"}
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 882ms (Views: 151.9ms)
+
+
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_0f8b9562910c933e3017fc7860fae7d4" for 127.0.0.1 at 2018-05-04 14:07:03 -0700
+
+NameError - uninitialized constant RecipeController:
+
+Started POST "/__better_errors/001e7bd1e1572028/variables" for 127.0.0.1 at 2018-05-04 14:07:03 -0700
+Started GET "/" for 127.0.0.1 at 2018-05-04 14:07:54 -0700
+Processing by RecipesController#search as HTML
+  Rendering recipes/search.html.erb within layouts/application
+  Rendered recipes/search.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 168ms (Views: 164.7ms)
+
+
+Started GET "/index?utf8=%E2%9C%93&query=cucumber&commit=Search" for 127.0.0.1 at 2018-05-04 14:07:59 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"cucumber", "commit"=>"Search"}
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 826ms (Views: 132.9ms)
+
+
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_0f8b9562910c933e3017fc7860fae7d4" for 127.0.0.1 at 2018-05-04 14:08:01 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_0f8b9562910c933e3017fc7860fae7d4"}
+Completed 500 Internal Server Error in 1470ms
+
+
+
+HTTParty::RedirectionTooDeep - HTTP redirects too deep:
+  lib/edemam_api_wrapper.rb:21:in `show_recipe'
+  app/controllers/recipes_controller.rb:15:in `show'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/e07ea5bef4b2fd21/variables" for 127.0.0.1 at 2018-05-04 14:08:02 -0700
+Started GET "/" for 127.0.0.1 at 2018-05-04 14:09:16 -0700
+Processing by RecipesController#search as HTML
+  Rendering recipes/search.html.erb within layouts/application
+  Rendered recipes/search.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 113ms (Views: 109.9ms)
+
+
+Started GET "/index?utf8=%E2%9C%93&query=cucumber&commit=Search" for 127.0.0.1 at 2018-05-04 14:09:22 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"cucumber", "commit"=>"Search"}
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 1239ms (Views: 153.3ms)
+
+
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_0f8b9562910c933e3017fc7860fae7d4" for 127.0.0.1 at 2018-05-04 14:09:24 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_0f8b9562910c933e3017fc7860fae7d4"}
+Completed 500 Internal Server Error in 1301ms
+
+
+
+HTTParty::RedirectionTooDeep - HTTP redirects too deep:
+  lib/edemam_api_wrapper.rb:21:in `show_recipe'
+  app/controllers/recipes_controller.rb:15:in `show'
+  app/controllers/recipes_controller.rb:23:in `catch_api_error'
+
+Started POST "/__better_errors/4f8cb2873e6dcb2c/variables" for 127.0.0.1 at 2018-05-04 14:09:25 -0700
+Started GET "/" for 127.0.0.1 at 2018-05-04 14:09:49 -0700
+Processing by RecipesController#search as HTML
+  Rendering recipes/search.html.erb within layouts/application
+  Rendered recipes/search.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 139ms (Views: 136.0ms)
+
+
+Started GET "/index?utf8=%E2%9C%93&query=cucumber&commit=Search" for 127.0.0.1 at 2018-05-04 14:09:52 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"cucumber", "commit"=>"Search"}
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 835ms (Views: 147.7ms)
+
+
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_0f8b9562910c933e3017fc7860fae7d4" for 127.0.0.1 at 2018-05-04 14:09:54 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_0f8b9562910c933e3017fc7860fae7d4"}
+Completed 500 Internal Server Error in 1293ms
+
+
+
+HTTParty::RedirectionTooDeep - HTTP redirects too deep:
+  lib/edemam_api_wrapper.rb:21:in `show_recipe'
+  app/controllers/recipes_controller.rb:15:in `show'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/c5b78a52504bd625/variables" for 127.0.0.1 at 2018-05-04 14:09:55 -0700
+Started POST "/__better_errors/c5b78a52504bd625/eval" for 127.0.0.1 at 2018-05-04 14:10:08 -0700
+Started POST "/__better_errors/c5b78a52504bd625/eval" for 127.0.0.1 at 2018-05-04 14:10:13 -0700
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_0f8b9562910c933e3017fc7860fae7d4" for 127.0.0.1 at 2018-05-04 14:10:54 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_0f8b9562910c933e3017fc7860fae7d4"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 602ms (Views: 125.2ms)
+
+
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_0f8b9562910c933e3017fc7860fae7d4" for 127.0.0.1 at 2018-05-04 14:13:35 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_0f8b9562910c933e3017fc7860fae7d4"}
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_0f8b9562910c933e3017fc7860fae7d4" for 127.0.0.1 at 2018-05-04 14:17:22 -0700
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 270588ms
+
+
+
+NoMethodError - undefined method `label' for nil:NilClass:
+  app/views/recipes/show.html.erb:2:in `_app_views_recipes_show_html_erb__2061719316877094699_70324234762480'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Processing by RecipesController#show as HTML
+Started GET "/" for 127.0.0.1 at 2018-05-04 14:18:06 -0700
+Started GET "/" for 127.0.0.1 at 2018-05-04 14:18:06 -0700
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_0f8b9562910c933e3017fc7860fae7d4"}
+Processing by RecipesController#search as HTML
+Processing by RecipesController#search as HTML
+  Rendering recipes/search.html.erb within layouts/application
+  Rendering recipes/search.html.erb within layouts/application
+  Rendered recipes/search.html.erb within layouts/application (1.0ms)
+  Rendered recipes/search.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 295ms (Views: 278.4ms)
+
+
+Completed 200 OK in 301ms (Views: 298.8ms)
+
+
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 783ms
+
+
+
+NoMethodError - undefined method `[]' for #<Recipe:0x007feb3b5351a0>:
+  app/views/recipes/show.html.erb:5:in `_app_views_recipes_show_html_erb__2061719316877094699_70324144665960'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started GET "/index?utf8=%E2%9C%93&query=pineapple&commit=Search" for 127.0.0.1 at 2018-05-04 14:18:21 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"pineapple", "commit"=>"Search"}
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 1824ms (Views: 731.3ms)
+
+
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_c4a3b26a3e6d705817ead5b3b59796ef" for 127.0.0.1 at 2018-05-04 14:18:32 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_c4a3b26a3e6d705817ead5b3b59796ef"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (11.5ms)
+Completed 500 Internal Server Error in 463ms
+
+
+
+NoMethodError - undefined method `[]' for #<Recipe:0x007fb8a323a538>:
+  app/views/recipes/show.html.erb:5:in `_app_views_recipes_show_html_erb___3398512925574487495_70215493850120'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/cae118c524aa9404/variables" for 127.0.0.1 at 2018-05-04 14:18:32 -0700
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_c4a3b26a3e6d705817ead5b3b59796ef" for 127.0.0.1 at 2018-05-04 14:18:50 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_c4a3b26a3e6d705817ead5b3b59796ef"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 406ms
+
+
+
+NoMethodError - undefined method `ingredients' for #<Recipe:0x007fb8aa50d6c8>:
+  app/views/recipes/show.html.erb:5:in `_app_views_recipes_show_html_erb___3398512925574487495_70215554065020'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/c605c2298483e456/variables" for 127.0.0.1 at 2018-05-04 14:18:50 -0700
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_c4a3b26a3e6d705817ead5b3b59796ef" for 127.0.0.1 at 2018-05-04 14:19:51 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_c4a3b26a3e6d705817ead5b3b59796ef"}
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_c4a3b26a3e6d705817ead5b3b59796ef" for 127.0.0.1 at 2018-05-04 14:28:00 -0700
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 516329ms
+
+
+
+NoMethodError - undefined method `label' for nil:NilClass:
+  app/views/recipes/show.html.erb:2:in `_app_views_recipes_show_html_erb___3398512925574487495_70215555889140'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_c4a3b26a3e6d705817ead5b3b59796ef"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 634ms (Views: 141.3ms)
+
+
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_c4a3b26a3e6d705817ead5b3b59796ef" for 127.0.0.1 at 2018-05-04 14:32:14 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_c4a3b26a3e6d705817ead5b3b59796ef"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 1521ms (Views: 680.6ms)
+
+
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_c4a3b26a3e6d705817ead5b3b59796ef" for 127.0.0.1 at 2018-05-04 14:32:53 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_c4a3b26a3e6d705817ead5b3b59796ef"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (10.4ms)
+Completed 500 Internal Server Error in 474ms
+
+
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/views/recipes/show.html.erb:7:in `block in _app_views_recipes_show_html_erb___480291736210922392_70290247551040'
+  app/views/recipes/show.html.erb:5:in `_app_views_recipes_show_html_erb___480291736210922392_70290247551040'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/c051d7f86b86b178/variables" for 127.0.0.1 at 2018-05-04 14:32:54 -0700
+Started GET "/index?utf8=%E2%9C%93&query=pineapple&commit=Search" for 127.0.0.1 at 2018-05-04 14:33:08 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"pineapple", "commit"=>"Search"}
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 1004ms (Views: 128.2ms)
+
+
+Started GET "/recipe?uri%5B%5D=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_c4a3b26a3e6d705817ead5b3b59796ef&uri%5B%5D%5B%5D%5Btext%5D=1+pineapple&uri%5B%5D%5B%5D%5Bweight%5D=905.0&uri%5B%5D%5B%5D%5Btext%5D=1%2F4+cup+sugar&uri%5B%5D%5B%5D%5Bweight%5D=50.0&uri%5B%5D%5B%5D%5Btext%5D=1%2F4+cup+lemon+juice&uri%5B%5D%5B%5D%5Bweight%5D=61.0&uri%5B%5D%5BCA%5D%5Blabel%5D=Calcium&uri%5B%5D%5BCA%5D%5Bquantity%5D=121.81&uri%5B%5D%5BCA%5D%5Bunit%5D=mg&uri%5B%5D%5BCHOCDF%5D%5Blabel%5D=Carbs&uri%5B%5D%5BCHOCDF%5D%5Bquantity%5D=172.935&uri%5B%5D%5BCHOCDF%5D%5Bunit%5D=g&uri%5B%5D%5BENERC_KCAL%5D%5Blabel%5D=Energy&uri%5B%5D%5BENERC_KCAL%5D%5Bquantity%5D=659.42&uri%5B%5D%5BENERC_KCAL%5D%5Bunit%5D=kcal&uri%5B%5D%5BFAMS%5D%5Blabel%5D=Monounsaturated&uri%5B%5D%5BFAMS%5D%5Bquantity%5D=0.12131&uri%5B%5D%5BFAMS%5D%5Bunit%5D=g&uri%5B%5D%5BFAPU%5D%5Blabel%5D=Polyunsaturated&uri%5B%5D%5BFAPU%5D%5Bquantity%5D=0.37481000000000003&uri%5B%5D%5BFAPU%5D%5Bunit%5D=g&uri%5B%5D%5BFASAT%5D%5Blabel%5D=Saturated&uri%5B%5D%5BFASAT%5D%5Bquantity%5D=0.10585&uri%5B%5D%5BFASAT%5D%5Bunit%5D=g&uri%5B%5D%5BFAT%5D%5Blabel%5D=Fat&uri%5B%5D%5BFAT%5D%5Bquantity%5D=1.2324000000000002&uri%5B%5D%5BFAT%5D%5Bunit%5D=g&uri%5B%5D%5BFE%5D%5Blabel%5D=Iron&uri%5B%5D%5BFE%5D%5Bquantity%5D=2.6982999999999997&uri%5B%5D%5BFE%5D%5Bunit%5D=mg&uri%5B%5D%5BFIBTG%5D%5Blabel%5D=Fiber&uri%5B%5D%5BFIBTG%5D%5Bquantity%5D=12.853&uri%5B%5D%5BFIBTG%5D%5Bunit%5D=g&uri%5B%5D%5BFOLDFE%5D%5Blabel%5D=Folate+equivalent+%28total%29&uri%5B%5D%5BFOLDFE%5D%5Bquantity%5D=175.1&uri%5B%5D%5BFOLDFE%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BFOLFD%5D%5Blabel%5D=Folate+%28food%29&uri%5B%5D%5BFOLFD%5D%5Bquantity%5D=175.1&uri%5B%5D%5BFOLFD%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BK%5D%5Blabel%5D=Potassium&uri%5B%5D%5BK%5D%5Bquantity%5D=1050.28&uri%5B%5D%5BK%5D%5Bunit%5D=mg&uri%5B%5D%5BMG%5D%5Blabel%5D=Magnesium&uri%5B%5D%5BMG%5D%5Bquantity%5D=112.26&uri%5B%5D%5BMG%5D%5Bunit%5D=mg&uri%5B%5D%5BNA%5D%5Blabel%5D=Sodium&uri%5B%5D%5BNA%5D%5Bquantity%5D=10.16&uri%5B%5D%5BNA%5D%5Bunit%5D=mg&uri%5B%5D%5BNIA%5D%5Blabel%5D=Niacin+%28B3%29&uri%5B%5D%5BNIA%5D%5Bquantity%5D=4.58051&uri%5B%5D%5BNIA%5D%5Bunit%5D=mg&uri%5B%5D%5BP%5D%5Blabel%5D=Phosphorus&uri%5B%5D%5BP%5D%5Bquantity%5D=77.28&uri%5B%5D%5BP%5D%5Bunit%5D=mg&uri%5B%5D%5BPROCNT%5D%5Blabel%5D=Protein&uri%5B%5D%5BPROCNT%5D%5Bquantity%5D=5.1005&uri%5B%5D%5BPROCNT%5D%5Bunit%5D=g&uri%5B%5D%5BRIBF%5D%5Blabel%5D=Riboflavin+%28B2%29&uri%5B%5D%5BRIBF%5D%5Bquantity%5D=0.30825&uri%5B%5D%5BRIBF%5D%5Bunit%5D=mg&uri%5B%5D%5BSUGAR%5D%5Blabel%5D=Sugars&uri%5B%5D%5BSUGAR%5D%5Bquantity%5D=140.5797&uri%5B%5D%5BSUGAR%5D%5Bunit%5D=g&uri%5B%5D%5BSUGAR.added%5D%5Blabel%5D=Sugars%2C+added&uri%5B%5D%5BSUGAR.added%5D%5Bquantity%5D=49.9&uri%5B%5D%5BSUGAR.added%5D%5Bunit%5D=g&uri%5B%5D%5BTHIA%5D%5Blabel%5D=Thiamin+%28B1%29&uri%5B%5D%5BTHIA%5D%5Bquantity%5D=0.7295900000000001&uri%5B%5D%5BTHIA%5D%5Bunit%5D=mg&uri%5B%5D%5BTOCPHA%5D%5Blabel%5D=Vitamin+E&uri%5B%5D%5BTOCPHA%5D%5Bquantity%5D=0.2725&uri%5B%5D%5BTOCPHA%5D%5Bunit%5D=mg&uri%5B%5D%5BVITA_RAE%5D%5Blabel%5D=Vitamin+A&uri%5B%5D%5BVITA_RAE%5D%5Bquantity%5D=27.150000000000002&uri%5B%5D%5BVITA_RAE%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BVITB6A%5D%5Blabel%5D=Vitamin+B6&uri%5B%5D%5BVITB6A%5D%5Bquantity%5D=1.04166&uri%5B%5D%5BVITB6A%5D%5Bunit%5D=mg&uri%5B%5D%5BVITC%5D%5Blabel%5D=Vitamin+C&uri%5B%5D%5BVITC%5D%5Bquantity%5D=456.19700000000006&uri%5B%5D%5BVITC%5D%5Bunit%5D=mg&uri%5B%5D%5BVITK1%5D%5Blabel%5D=Vitamin+K&uri%5B%5D%5BVITK1%5D%5Bquantity%5D=6.335&uri%5B%5D%5BVITK1%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BZN%5D%5Blabel%5D=Zinc&uri%5B%5D%5BZN%5D%5Bquantity%5D=1.1215&uri%5B%5D%5BZN%5D%5Bunit%5D=mg" for 127.0.0.1 at 2018-05-04 14:33:20 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>["http://www.edamam.com/ontologies/edamam.owl#recipe_c4a3b26a3e6d705817ead5b3b59796ef", {"text"=>"1/4 cup lemon juice", "weight"=>"61.0", "CA"=>{"label"=>"Calcium", "quantity"=>"121.81", "unit"=>"mg"}, "CHOCDF"=>{"label"=>"Carbs", "quantity"=>"172.935", "unit"=>"g"}, "ENERC_KCAL"=>{"label"=>"Energy", "quantity"=>"659.42", "unit"=>"kcal"}, "FAMS"=>{"label"=>"Monounsaturated", "quantity"=>"0.12131", "unit"=>"g"}, "FAPU"=>{"label"=>"Polyunsaturated", "quantity"=>"0.37481000000000003", "unit"=>"g"}, "FASAT"=>{"label"=>"Saturated", "quantity"=>"0.10585", "unit"=>"g"}, "FAT"=>{"label"=>"Fat", "quantity"=>"1.2324000000000002", "unit"=>"g"}, "FE"=>{"label"=>"Iron", "quantity"=>"2.6982999999999997", "unit"=>"mg"}, "FIBTG"=>{"label"=>"Fiber", "quantity"=>"12.853", "unit"=>"g"}, "FOLDFE"=>{"label"=>"Folate equivalent (total)", "quantity"=>"175.1", "unit"=>"µg"}, "FOLFD"=>{"label"=>"Folate (food)", "quantity"=>"175.1", "unit"=>"µg"}, "K"=>{"label"=>"Potassium", "quantity"=>"1050.28", "unit"=>"mg"}, "MG"=>{"label"=>"Magnesium", "quantity"=>"112.26", "unit"=>"mg"}, "NA"=>{"label"=>"Sodium", "quantity"=>"10.16", "unit"=>"mg"}, "NIA"=>{"label"=>"Niacin (B3)", "quantity"=>"4.58051", "unit"=>"mg"}, "P"=>{"label"=>"Phosphorus", "quantity"=>"77.28", "unit"=>"mg"}, "PROCNT"=>{"label"=>"Protein", "quantity"=>"5.1005", "unit"=>"g"}, "RIBF"=>{"label"=>"Riboflavin (B2)", "quantity"=>"0.30825", "unit"=>"mg"}, "SUGAR"=>{"label"=>"Sugars", "quantity"=>"140.5797", "unit"=>"g"}, "SUGAR.added"=>{"label"=>"Sugars, added", "quantity"=>"49.9", "unit"=>"g"}, "THIA"=>{"label"=>"Thiamin (B1)", "quantity"=>"0.7295900000000001", "unit"=>"mg"}, "TOCPHA"=>{"label"=>"Vitamin E", "quantity"=>"0.2725", "unit"=>"mg"}, "VITA_RAE"=>{"label"=>"Vitamin A", "quantity"=>"27.150000000000002", "unit"=>"µg"}, "VITB6A"=>{"label"=>"Vitamin B6", "quantity"=>"1.04166", "unit"=>"mg"}, "VITC"=>{"label"=>"Vitamin C", "quantity"=>"456.19700000000006", "unit"=>"mg"}, "VITK1"=>{"label"=>"Vitamin K", "quantity"=>"6.335", "unit"=>"µg"}, "ZN"=>{"label"=>"Zinc", "quantity"=>"1.1215", "unit"=>"mg"}}]}
+Completed 500 Internal Server Error in 3ms
+
+
+
+NoMethodError - undefined method `gsub' for #<Array:0x007fdb727ab5e8>:
+  lib/edemam_api_wrapper.rb:19:in `show_recipe'
+  app/controllers/recipes_controller.rb:15:in `show'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/22fa80a6f0f504eb/variables" for 127.0.0.1 at 2018-05-04 14:33:20 -0700
+Started GET "/index?utf8=%E2%9C%93&query=pineapple&commit=Search" for 127.0.0.1 at 2018-05-04 14:33:33 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"pineapple", "commit"=>"Search"}
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 1091ms (Views: 165.1ms)
+
+
+Started GET "/recipe?uri%5B%5D=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_c4a3b26a3e6d705817ead5b3b59796ef&uri%5B%5D%5B%5D%5Btext%5D=1+pineapple&uri%5B%5D%5B%5D%5Bweight%5D=905.0&uri%5B%5D%5B%5D%5Btext%5D=1%2F4+cup+sugar&uri%5B%5D%5B%5D%5Bweight%5D=50.0&uri%5B%5D%5B%5D%5Btext%5D=1%2F4+cup+lemon+juice&uri%5B%5D%5B%5D%5Bweight%5D=61.0&uri%5B%5D%5BCA%5D%5Blabel%5D=Calcium&uri%5B%5D%5BCA%5D%5Bquantity%5D=121.81&uri%5B%5D%5BCA%5D%5Bunit%5D=mg&uri%5B%5D%5BCHOCDF%5D%5Blabel%5D=Carbs&uri%5B%5D%5BCHOCDF%5D%5Bquantity%5D=172.935&uri%5B%5D%5BCHOCDF%5D%5Bunit%5D=g&uri%5B%5D%5BENERC_KCAL%5D%5Blabel%5D=Energy&uri%5B%5D%5BENERC_KCAL%5D%5Bquantity%5D=659.42&uri%5B%5D%5BENERC_KCAL%5D%5Bunit%5D=kcal&uri%5B%5D%5BFAMS%5D%5Blabel%5D=Monounsaturated&uri%5B%5D%5BFAMS%5D%5Bquantity%5D=0.12131&uri%5B%5D%5BFAMS%5D%5Bunit%5D=g&uri%5B%5D%5BFAPU%5D%5Blabel%5D=Polyunsaturated&uri%5B%5D%5BFAPU%5D%5Bquantity%5D=0.37481000000000003&uri%5B%5D%5BFAPU%5D%5Bunit%5D=g&uri%5B%5D%5BFASAT%5D%5Blabel%5D=Saturated&uri%5B%5D%5BFASAT%5D%5Bquantity%5D=0.10585&uri%5B%5D%5BFASAT%5D%5Bunit%5D=g&uri%5B%5D%5BFAT%5D%5Blabel%5D=Fat&uri%5B%5D%5BFAT%5D%5Bquantity%5D=1.2324000000000002&uri%5B%5D%5BFAT%5D%5Bunit%5D=g&uri%5B%5D%5BFE%5D%5Blabel%5D=Iron&uri%5B%5D%5BFE%5D%5Bquantity%5D=2.6982999999999997&uri%5B%5D%5BFE%5D%5Bunit%5D=mg&uri%5B%5D%5BFIBTG%5D%5Blabel%5D=Fiber&uri%5B%5D%5BFIBTG%5D%5Bquantity%5D=12.853&uri%5B%5D%5BFIBTG%5D%5Bunit%5D=g&uri%5B%5D%5BFOLDFE%5D%5Blabel%5D=Folate+equivalent+%28total%29&uri%5B%5D%5BFOLDFE%5D%5Bquantity%5D=175.1&uri%5B%5D%5BFOLDFE%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BFOLFD%5D%5Blabel%5D=Folate+%28food%29&uri%5B%5D%5BFOLFD%5D%5Bquantity%5D=175.1&uri%5B%5D%5BFOLFD%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BK%5D%5Blabel%5D=Potassium&uri%5B%5D%5BK%5D%5Bquantity%5D=1050.28&uri%5B%5D%5BK%5D%5Bunit%5D=mg&uri%5B%5D%5BMG%5D%5Blabel%5D=Magnesium&uri%5B%5D%5BMG%5D%5Bquantity%5D=112.26&uri%5B%5D%5BMG%5D%5Bunit%5D=mg&uri%5B%5D%5BNA%5D%5Blabel%5D=Sodium&uri%5B%5D%5BNA%5D%5Bquantity%5D=10.16&uri%5B%5D%5BNA%5D%5Bunit%5D=mg&uri%5B%5D%5BNIA%5D%5Blabel%5D=Niacin+%28B3%29&uri%5B%5D%5BNIA%5D%5Bquantity%5D=4.58051&uri%5B%5D%5BNIA%5D%5Bunit%5D=mg&uri%5B%5D%5BP%5D%5Blabel%5D=Phosphorus&uri%5B%5D%5BP%5D%5Bquantity%5D=77.28&uri%5B%5D%5BP%5D%5Bunit%5D=mg&uri%5B%5D%5BPROCNT%5D%5Blabel%5D=Protein&uri%5B%5D%5BPROCNT%5D%5Bquantity%5D=5.1005&uri%5B%5D%5BPROCNT%5D%5Bunit%5D=g&uri%5B%5D%5BRIBF%5D%5Blabel%5D=Riboflavin+%28B2%29&uri%5B%5D%5BRIBF%5D%5Bquantity%5D=0.30825&uri%5B%5D%5BRIBF%5D%5Bunit%5D=mg&uri%5B%5D%5BSUGAR%5D%5Blabel%5D=Sugars&uri%5B%5D%5BSUGAR%5D%5Bquantity%5D=140.5797&uri%5B%5D%5BSUGAR%5D%5Bunit%5D=g&uri%5B%5D%5BSUGAR.added%5D%5Blabel%5D=Sugars%2C+added&uri%5B%5D%5BSUGAR.added%5D%5Bquantity%5D=49.9&uri%5B%5D%5BSUGAR.added%5D%5Bunit%5D=g&uri%5B%5D%5BTHIA%5D%5Blabel%5D=Thiamin+%28B1%29&uri%5B%5D%5BTHIA%5D%5Bquantity%5D=0.7295900000000001&uri%5B%5D%5BTHIA%5D%5Bunit%5D=mg&uri%5B%5D%5BTOCPHA%5D%5Blabel%5D=Vitamin+E&uri%5B%5D%5BTOCPHA%5D%5Bquantity%5D=0.2725&uri%5B%5D%5BTOCPHA%5D%5Bunit%5D=mg&uri%5B%5D%5BVITA_RAE%5D%5Blabel%5D=Vitamin+A&uri%5B%5D%5BVITA_RAE%5D%5Bquantity%5D=27.150000000000002&uri%5B%5D%5BVITA_RAE%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BVITB6A%5D%5Blabel%5D=Vitamin+B6&uri%5B%5D%5BVITB6A%5D%5Bquantity%5D=1.04166&uri%5B%5D%5BVITB6A%5D%5Bunit%5D=mg&uri%5B%5D%5BVITC%5D%5Blabel%5D=Vitamin+C&uri%5B%5D%5BVITC%5D%5Bquantity%5D=456.19700000000006&uri%5B%5D%5BVITC%5D%5Bunit%5D=mg&uri%5B%5D%5BVITK1%5D%5Blabel%5D=Vitamin+K&uri%5B%5D%5BVITK1%5D%5Bquantity%5D=6.335&uri%5B%5D%5BVITK1%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BZN%5D%5Blabel%5D=Zinc&uri%5B%5D%5BZN%5D%5Bquantity%5D=1.1215&uri%5B%5D%5BZN%5D%5Bunit%5D=mg" for 127.0.0.1 at 2018-05-04 14:33:38 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>["http://www.edamam.com/ontologies/edamam.owl#recipe_c4a3b26a3e6d705817ead5b3b59796ef", {"text"=>"1/4 cup lemon juice", "weight"=>"61.0", "CA"=>{"label"=>"Calcium", "quantity"=>"121.81", "unit"=>"mg"}, "CHOCDF"=>{"label"=>"Carbs", "quantity"=>"172.935", "unit"=>"g"}, "ENERC_KCAL"=>{"label"=>"Energy", "quantity"=>"659.42", "unit"=>"kcal"}, "FAMS"=>{"label"=>"Monounsaturated", "quantity"=>"0.12131", "unit"=>"g"}, "FAPU"=>{"label"=>"Polyunsaturated", "quantity"=>"0.37481000000000003", "unit"=>"g"}, "FASAT"=>{"label"=>"Saturated", "quantity"=>"0.10585", "unit"=>"g"}, "FAT"=>{"label"=>"Fat", "quantity"=>"1.2324000000000002", "unit"=>"g"}, "FE"=>{"label"=>"Iron", "quantity"=>"2.6982999999999997", "unit"=>"mg"}, "FIBTG"=>{"label"=>"Fiber", "quantity"=>"12.853", "unit"=>"g"}, "FOLDFE"=>{"label"=>"Folate equivalent (total)", "quantity"=>"175.1", "unit"=>"µg"}, "FOLFD"=>{"label"=>"Folate (food)", "quantity"=>"175.1", "unit"=>"µg"}, "K"=>{"label"=>"Potassium", "quantity"=>"1050.28", "unit"=>"mg"}, "MG"=>{"label"=>"Magnesium", "quantity"=>"112.26", "unit"=>"mg"}, "NA"=>{"label"=>"Sodium", "quantity"=>"10.16", "unit"=>"mg"}, "NIA"=>{"label"=>"Niacin (B3)", "quantity"=>"4.58051", "unit"=>"mg"}, "P"=>{"label"=>"Phosphorus", "quantity"=>"77.28", "unit"=>"mg"}, "PROCNT"=>{"label"=>"Protein", "quantity"=>"5.1005", "unit"=>"g"}, "RIBF"=>{"label"=>"Riboflavin (B2)", "quantity"=>"0.30825", "unit"=>"mg"}, "SUGAR"=>{"label"=>"Sugars", "quantity"=>"140.5797", "unit"=>"g"}, "SUGAR.added"=>{"label"=>"Sugars, added", "quantity"=>"49.9", "unit"=>"g"}, "THIA"=>{"label"=>"Thiamin (B1)", "quantity"=>"0.7295900000000001", "unit"=>"mg"}, "TOCPHA"=>{"label"=>"Vitamin E", "quantity"=>"0.2725", "unit"=>"mg"}, "VITA_RAE"=>{"label"=>"Vitamin A", "quantity"=>"27.150000000000002", "unit"=>"µg"}, "VITB6A"=>{"label"=>"Vitamin B6", "quantity"=>"1.04166", "unit"=>"mg"}, "VITC"=>{"label"=>"Vitamin C", "quantity"=>"456.19700000000006", "unit"=>"mg"}, "VITK1"=>{"label"=>"Vitamin K", "quantity"=>"6.335", "unit"=>"µg"}, "ZN"=>{"label"=>"Zinc", "quantity"=>"1.1215", "unit"=>"mg"}}]}
+Completed 500 Internal Server Error in 4ms
+
+
+
+NoMethodError - undefined method `gsub' for #<Array:0x007fdb7b831a18>:
+  lib/edemam_api_wrapper.rb:19:in `show_recipe'
+  app/controllers/recipes_controller.rb:15:in `show'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/b1b5a6ac56e28ba2/variables" for 127.0.0.1 at 2018-05-04 14:33:38 -0700
+Started GET "/" for 127.0.0.1 at 2018-05-04 14:34:04 -0700
+Processing by RecipesController#search as HTML
+  Rendering recipes/search.html.erb within layouts/application
+  Rendered recipes/search.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 1009ms (Views: 682.3ms)
+
+
+Started GET "/index?utf8=%E2%9C%93&query=basil&commit=Search" for 127.0.0.1 at 2018-05-04 14:34:16 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"basil", "commit"=>"Search"}
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 946ms (Views: 191.9ms)
+
+
+Started GET "/recipe?uri%5B%5D=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_e9d318b6c547e3e2adb395133c1e21cf&uri%5B%5D%5B%5D%5Btext%5D=2+ounces+basil-infused+gin+%28or+gin+of+your+choice%29&uri%5B%5D%5B%5D%5Bweight%5D=56.69904625&uri%5B%5D%5B%5D%5Btext%5D=1+ounce+lime+juice&uri%5B%5D%5B%5D%5Bweight%5D=28.349523125&uri%5B%5D%5B%5D%5Btext%5D=1+ounce+simple+syrup&uri%5B%5D%5B%5D%5Bweight%5D=28.349523125&uri%5B%5D%5BCA%5D%5Blabel%5D=Calcium&uri%5B%5D%5BCA%5D%5Bquantity%5D=7.654371243750001&uri%5B%5D%5BCA%5D%5Bunit%5D=mg&uri%5B%5D%5BCHOCDF%5D%5Blabel%5D=Carbs&uri%5B%5D%5BCHOCDF%5D%5Bquantity%5D=23.121871060750003&uri%5B%5D%5BCHOCDF%5D%5Bunit%5D=g&uri%5B%5D%5BENERC_KCAL%5D%5Blabel%5D=Energy&uri%5B%5D%5BENERC_KCAL%5D%5Bquantity%5D=232.46608962500005&uri%5B%5D%5BENERC_KCAL%5D%5Bunit%5D=kcal&uri%5B%5D%5BFAMS%5D%5Blabel%5D=Monounsaturated&uri%5B%5D%5BFAMS%5D%5Bquantity%5D=0.0022679618500000003&uri%5B%5D%5BFAMS%5D%5Bunit%5D=g&uri%5B%5D%5BFAPU%5D%5Blabel%5D=Polyunsaturated&uri%5B%5D%5BFAPU%5D%5Bquantity%5D=0.00652039031875&uri%5B%5D%5BFAPU%5D%5Bunit%5D=g&uri%5B%5D%5BFASAT%5D%5Blabel%5D=Saturated&uri%5B%5D%5BFASAT%5D%5Bquantity%5D=0.0022679618500000003&uri%5B%5D%5BFASAT%5D%5Bunit%5D=g&uri%5B%5D%5BFAT%5D%5Blabel%5D=Fat&uri%5B%5D%5BFAT%5D%5Bquantity%5D=0.019844666187500005&uri%5B%5D%5BFAT%5D%5Bunit%5D=g&uri%5B%5D%5BFE%5D%5Blabel%5D=Iron&uri%5B%5D%5BFE%5D%5Bquantity%5D=1.0460974033125001&uri%5B%5D%5BFE%5D%5Bunit%5D=mg&uri%5B%5D%5BFIBTG%5D%5Blabel%5D=Fiber&uri%5B%5D%5BFIBTG%5D%5Bquantity%5D=0.11339809250000002&uri%5B%5D%5BFIBTG%5D%5Bunit%5D=g&uri%5B%5D%5BFOLDFE%5D%5Blabel%5D=Folate+equivalent+%28total%29&uri%5B%5D%5BFOLDFE%5D%5Bquantity%5D=2.8349523125000005&uri%5B%5D%5BFOLDFE%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BFOLFD%5D%5Blabel%5D=Folate+%28food%29&uri%5B%5D%5BFOLFD%5D%5Bquantity%5D=2.8349523125000005&uri%5B%5D%5BFOLFD%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BK%5D%5Blabel%5D=Potassium&uri%5B%5D%5BK%5D%5Bquantity%5D=51.02914162500001&uri%5B%5D%5BK%5D%5Bunit%5D=mg&uri%5B%5D%5BMG%5D%5Blabel%5D=Magnesium&uri%5B%5D%5BMG%5D%5Bquantity%5D=5.102914162500001&uri%5B%5D%5BMG%5D%5Bunit%5D=mg&uri%5B%5D%5BNA%5D%5Blabel%5D=Sodium&uri%5B%5D%5BNA%5D%5Bquantity%5D=18.143694800000002&uri%5B%5D%5BNA%5D%5Bunit%5D=mg&uri%5B%5D%5BNIA%5D%5Blabel%5D=Niacin+%28B3%29&uri%5B%5D%5BNIA%5D%5Bquantity%5D=0.06860584596250001&uri%5B%5D%5BNIA%5D%5Bunit%5D=mg&uri%5B%5D%5BP%5D%5Blabel%5D=Phosphorus&uri%5B%5D%5BP%5D%5Bquantity%5D=6.236895087500001&uri%5B%5D%5BP%5D%5Bunit%5D=mg&uri%5B%5D%5BPROCNT%5D%5Blabel%5D=Protein&uri%5B%5D%5BPROCNT%5D%5Bquantity%5D=0.119067997125&uri%5B%5D%5BPROCNT%5D%5Bunit%5D=g&uri%5B%5D%5BRIBF%5D%5Blabel%5D=Riboflavin+%28B2%29&uri%5B%5D%5BRIBF%5D%5Bquantity%5D=0.021262142343750002&uri%5B%5D%5BRIBF%5D%5Bunit%5D=mg&uri%5B%5D%5BSUGAR%5D%5Blabel%5D=Sugars&uri%5B%5D%5BSUGAR%5D%5Bquantity%5D=21.230957868312505&uri%5B%5D%5BSUGAR%5D%5Bunit%5D=g&uri%5B%5D%5BSUGAR.added%5D%5Blabel%5D=Sugars%2C+added&uri%5B%5D%5BSUGAR.added%5D%5Bquantity%5D=20.751850927500005&uri%5B%5D%5BSUGAR.added%5D%5Bunit%5D=g&uri%5B%5D%5BTHIA%5D%5Blabel%5D=Thiamin+%28B1%29&uri%5B%5D%5BTHIA%5D%5Bquantity%5D=0.043941760843750004&uri%5B%5D%5BTHIA%5D%5Bunit%5D=mg&uri%5B%5D%5BTOCPHA%5D%5Blabel%5D=Vitamin+E&uri%5B%5D%5BTOCPHA%5D%5Bquantity%5D=0.06236895087500001&uri%5B%5D%5BTOCPHA%5D%5Bunit%5D=mg&uri%5B%5D%5BVITA_RAE%5D%5Blabel%5D=Vitamin+A&uri%5B%5D%5BVITA_RAE%5D%5Bquantity%5D=0.5669904625000001&uri%5B%5D%5BVITA_RAE%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BVITB6A%5D%5Blabel%5D=Vitamin+B6&uri%5B%5D%5BVITB6A%5D%5Bquantity%5D=0.010772818787500001&uri%5B%5D%5BVITB6A%5D%5Bunit%5D=mg&uri%5B%5D%5BVITC%5D%5Blabel%5D=Vitamin+C&uri%5B%5D%5BVITC%5D%5Bquantity%5D=8.504856937500001&uri%5B%5D%5BVITC%5D%5Bunit%5D=mg&uri%5B%5D%5BVITK1%5D%5Blabel%5D=Vitamin+K&uri%5B%5D%5BVITK1%5D%5Bquantity%5D=0.17009713875000002&uri%5B%5D%5BVITK1%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BZN%5D%5Blabel%5D=Zinc&uri%5B%5D%5BZN%5D%5Bquantity%5D=0.07654371243750001&uri%5B%5D%5BZN%5D%5Bunit%5D=mg" for 127.0.0.1 at 2018-05-04 14:34:34 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>["http://www.edamam.com/ontologies/edamam.owl#recipe_e9d318b6c547e3e2adb395133c1e21cf", {"text"=>"1 ounce simple syrup", "weight"=>"28.349523125", "CA"=>{"label"=>"Calcium", "quantity"=>"7.654371243750001", "unit"=>"mg"}, "CHOCDF"=>{"label"=>"Carbs", "quantity"=>"23.121871060750003", "unit"=>"g"}, "ENERC_KCAL"=>{"label"=>"Energy", "quantity"=>"232.46608962500005", "unit"=>"kcal"}, "FAMS"=>{"label"=>"Monounsaturated", "quantity"=>"0.0022679618500000003", "unit"=>"g"}, "FAPU"=>{"label"=>"Polyunsaturated", "quantity"=>"0.00652039031875", "unit"=>"g"}, "FASAT"=>{"label"=>"Saturated", "quantity"=>"0.0022679618500000003", "unit"=>"g"}, "FAT"=>{"label"=>"Fat", "quantity"=>"0.019844666187500005", "unit"=>"g"}, "FE"=>{"label"=>"Iron", "quantity"=>"1.0460974033125001", "unit"=>"mg"}, "FIBTG"=>{"label"=>"Fiber", "quantity"=>"0.11339809250000002", "unit"=>"g"}, "FOLDFE"=>{"label"=>"Folate equivalent (total)", "quantity"=>"2.8349523125000005", "unit"=>"µg"}, "FOLFD"=>{"label"=>"Folate (food)", "quantity"=>"2.8349523125000005", "unit"=>"µg"}, "K"=>{"label"=>"Potassium", "quantity"=>"51.02914162500001", "unit"=>"mg"}, "MG"=>{"label"=>"Magnesium", "quantity"=>"5.102914162500001", "unit"=>"mg"}, "NA"=>{"label"=>"Sodium", "quantity"=>"18.143694800000002", "unit"=>"mg"}, "NIA"=>{"label"=>"Niacin (B3)", "quantity"=>"0.06860584596250001", "unit"=>"mg"}, "P"=>{"label"=>"Phosphorus", "quantity"=>"6.236895087500001", "unit"=>"mg"}, "PROCNT"=>{"label"=>"Protein", "quantity"=>"0.119067997125", "unit"=>"g"}, "RIBF"=>{"label"=>"Riboflavin (B2)", "quantity"=>"0.021262142343750002", "unit"=>"mg"}, "SUGAR"=>{"label"=>"Sugars", "quantity"=>"21.230957868312505", "unit"=>"g"}, "SUGAR.added"=>{"label"=>"Sugars, added", "quantity"=>"20.751850927500005", "unit"=>"g"}, "THIA"=>{"label"=>"Thiamin (B1)", "quantity"=>"0.043941760843750004", "unit"=>"mg"}, "TOCPHA"=>{"label"=>"Vitamin E", "quantity"=>"0.06236895087500001", "unit"=>"mg"}, "VITA_RAE"=>{"label"=>"Vitamin A", "quantity"=>"0.5669904625000001", "unit"=>"µg"}, "VITB6A"=>{"label"=>"Vitamin B6", "quantity"=>"0.010772818787500001", "unit"=>"mg"}, "VITC"=>{"label"=>"Vitamin C", "quantity"=>"8.504856937500001", "unit"=>"mg"}, "VITK1"=>{"label"=>"Vitamin K", "quantity"=>"0.17009713875000002", "unit"=>"µg"}, "ZN"=>{"label"=>"Zinc", "quantity"=>"0.07654371243750001", "unit"=>"mg"}}]}
+Completed 500 Internal Server Error in 5ms
+
+
+
+NoMethodError - undefined method `gsub' for #<Array:0x007ff090580178>:
+  lib/edemam_api_wrapper.rb:19:in `show_recipe'
+  app/controllers/recipes_controller.rb:15:in `show'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/1c133903ec40a7a6/variables" for 127.0.0.1 at 2018-05-04 14:34:34 -0700
+Started GET "/recipe?uri%5B%5D=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_e9d318b6c547e3e2adb395133c1e21cf&uri%5B%5D%5B%5D%5Btext%5D=2+ounces+basil-infused+gin+%28or+gin+of+your+choice%29&uri%5B%5D%5B%5D%5Bweight%5D=56.69904625&uri%5B%5D%5B%5D%5Btext%5D=1+ounce+lime+juice&uri%5B%5D%5B%5D%5Bweight%5D=28.349523125&uri%5B%5D%5B%5D%5Btext%5D=1+ounce+simple+syrup&uri%5B%5D%5B%5D%5Bweight%5D=28.349523125&uri%5B%5D%5BCA%5D%5Blabel%5D=Calcium&uri%5B%5D%5BCA%5D%5Bquantity%5D=7.654371243750001&uri%5B%5D%5BCA%5D%5Bunit%5D=mg&uri%5B%5D%5BCHOCDF%5D%5Blabel%5D=Carbs&uri%5B%5D%5BCHOCDF%5D%5Bquantity%5D=23.121871060750003&uri%5B%5D%5BCHOCDF%5D%5Bunit%5D=g&uri%5B%5D%5BENERC_KCAL%5D%5Blabel%5D=Energy&uri%5B%5D%5BENERC_KCAL%5D%5Bquantity%5D=232.46608962500005&uri%5B%5D%5BENERC_KCAL%5D%5Bunit%5D=kcal&uri%5B%5D%5BFAMS%5D%5Blabel%5D=Monounsaturated&uri%5B%5D%5BFAMS%5D%5Bquantity%5D=0.0022679618500000003&uri%5B%5D%5BFAMS%5D%5Bunit%5D=g&uri%5B%5D%5BFAPU%5D%5Blabel%5D=Polyunsaturated&uri%5B%5D%5BFAPU%5D%5Bquantity%5D=0.00652039031875&uri%5B%5D%5BFAPU%5D%5Bunit%5D=g&uri%5B%5D%5BFASAT%5D%5Blabel%5D=Saturated&uri%5B%5D%5BFASAT%5D%5Bquantity%5D=0.0022679618500000003&uri%5B%5D%5BFASAT%5D%5Bunit%5D=g&uri%5B%5D%5BFAT%5D%5Blabel%5D=Fat&uri%5B%5D%5BFAT%5D%5Bquantity%5D=0.019844666187500005&uri%5B%5D%5BFAT%5D%5Bunit%5D=g&uri%5B%5D%5BFE%5D%5Blabel%5D=Iron&uri%5B%5D%5BFE%5D%5Bquantity%5D=1.0460974033125001&uri%5B%5D%5BFE%5D%5Bunit%5D=mg&uri%5B%5D%5BFIBTG%5D%5Blabel%5D=Fiber&uri%5B%5D%5BFIBTG%5D%5Bquantity%5D=0.11339809250000002&uri%5B%5D%5BFIBTG%5D%5Bunit%5D=g&uri%5B%5D%5BFOLDFE%5D%5Blabel%5D=Folate+equivalent+%28total%29&uri%5B%5D%5BFOLDFE%5D%5Bquantity%5D=2.8349523125000005&uri%5B%5D%5BFOLDFE%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BFOLFD%5D%5Blabel%5D=Folate+%28food%29&uri%5B%5D%5BFOLFD%5D%5Bquantity%5D=2.8349523125000005&uri%5B%5D%5BFOLFD%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BK%5D%5Blabel%5D=Potassium&uri%5B%5D%5BK%5D%5Bquantity%5D=51.02914162500001&uri%5B%5D%5BK%5D%5Bunit%5D=mg&uri%5B%5D%5BMG%5D%5Blabel%5D=Magnesium&uri%5B%5D%5BMG%5D%5Bquantity%5D=5.102914162500001&uri%5B%5D%5BMG%5D%5Bunit%5D=mg&uri%5B%5D%5BNA%5D%5Blabel%5D=Sodium&uri%5B%5D%5BNA%5D%5Bquantity%5D=18.143694800000002&uri%5B%5D%5BNA%5D%5Bunit%5D=mg&uri%5B%5D%5BNIA%5D%5Blabel%5D=Niacin+%28B3%29&uri%5B%5D%5BNIA%5D%5Bquantity%5D=0.06860584596250001&uri%5B%5D%5BNIA%5D%5Bunit%5D=mg&uri%5B%5D%5BP%5D%5Blabel%5D=Phosphorus&uri%5B%5D%5BP%5D%5Bquantity%5D=6.236895087500001&uri%5B%5D%5BP%5D%5Bunit%5D=mg&uri%5B%5D%5BPROCNT%5D%5Blabel%5D=Protein&uri%5B%5D%5BPROCNT%5D%5Bquantity%5D=0.119067997125&uri%5B%5D%5BPROCNT%5D%5Bunit%5D=g&uri%5B%5D%5BRIBF%5D%5Blabel%5D=Riboflavin+%28B2%29&uri%5B%5D%5BRIBF%5D%5Bquantity%5D=0.021262142343750002&uri%5B%5D%5BRIBF%5D%5Bunit%5D=mg&uri%5B%5D%5BSUGAR%5D%5Blabel%5D=Sugars&uri%5B%5D%5BSUGAR%5D%5Bquantity%5D=21.230957868312505&uri%5B%5D%5BSUGAR%5D%5Bunit%5D=g&uri%5B%5D%5BSUGAR.added%5D%5Blabel%5D=Sugars%2C+added&uri%5B%5D%5BSUGAR.added%5D%5Bquantity%5D=20.751850927500005&uri%5B%5D%5BSUGAR.added%5D%5Bunit%5D=g&uri%5B%5D%5BTHIA%5D%5Blabel%5D=Thiamin+%28B1%29&uri%5B%5D%5BTHIA%5D%5Bquantity%5D=0.043941760843750004&uri%5B%5D%5BTHIA%5D%5Bunit%5D=mg&uri%5B%5D%5BTOCPHA%5D%5Blabel%5D=Vitamin+E&uri%5B%5D%5BTOCPHA%5D%5Bquantity%5D=0.06236895087500001&uri%5B%5D%5BTOCPHA%5D%5Bunit%5D=mg&uri%5B%5D%5BVITA_RAE%5D%5Blabel%5D=Vitamin+A&uri%5B%5D%5BVITA_RAE%5D%5Bquantity%5D=0.5669904625000001&uri%5B%5D%5BVITA_RAE%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BVITB6A%5D%5Blabel%5D=Vitamin+B6&uri%5B%5D%5BVITB6A%5D%5Bquantity%5D=0.010772818787500001&uri%5B%5D%5BVITB6A%5D%5Bunit%5D=mg&uri%5B%5D%5BVITC%5D%5Blabel%5D=Vitamin+C&uri%5B%5D%5BVITC%5D%5Bquantity%5D=8.504856937500001&uri%5B%5D%5BVITC%5D%5Bunit%5D=mg&uri%5B%5D%5BVITK1%5D%5Blabel%5D=Vitamin+K&uri%5B%5D%5BVITK1%5D%5Bquantity%5D=0.17009713875000002&uri%5B%5D%5BVITK1%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BZN%5D%5Blabel%5D=Zinc&uri%5B%5D%5BZN%5D%5Bquantity%5D=0.07654371243750001&uri%5B%5D%5BZN%5D%5Bunit%5D=mg" for 127.0.0.1 at 2018-05-04 14:34:48 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>["http://www.edamam.com/ontologies/edamam.owl#recipe_e9d318b6c547e3e2adb395133c1e21cf", {"text"=>"1 ounce simple syrup", "weight"=>"28.349523125", "CA"=>{"label"=>"Calcium", "quantity"=>"7.654371243750001", "unit"=>"mg"}, "CHOCDF"=>{"label"=>"Carbs", "quantity"=>"23.121871060750003", "unit"=>"g"}, "ENERC_KCAL"=>{"label"=>"Energy", "quantity"=>"232.46608962500005", "unit"=>"kcal"}, "FAMS"=>{"label"=>"Monounsaturated", "quantity"=>"0.0022679618500000003", "unit"=>"g"}, "FAPU"=>{"label"=>"Polyunsaturated", "quantity"=>"0.00652039031875", "unit"=>"g"}, "FASAT"=>{"label"=>"Saturated", "quantity"=>"0.0022679618500000003", "unit"=>"g"}, "FAT"=>{"label"=>"Fat", "quantity"=>"0.019844666187500005", "unit"=>"g"}, "FE"=>{"label"=>"Iron", "quantity"=>"1.0460974033125001", "unit"=>"mg"}, "FIBTG"=>{"label"=>"Fiber", "quantity"=>"0.11339809250000002", "unit"=>"g"}, "FOLDFE"=>{"label"=>"Folate equivalent (total)", "quantity"=>"2.8349523125000005", "unit"=>"µg"}, "FOLFD"=>{"label"=>"Folate (food)", "quantity"=>"2.8349523125000005", "unit"=>"µg"}, "K"=>{"label"=>"Potassium", "quantity"=>"51.02914162500001", "unit"=>"mg"}, "MG"=>{"label"=>"Magnesium", "quantity"=>"5.102914162500001", "unit"=>"mg"}, "NA"=>{"label"=>"Sodium", "quantity"=>"18.143694800000002", "unit"=>"mg"}, "NIA"=>{"label"=>"Niacin (B3)", "quantity"=>"0.06860584596250001", "unit"=>"mg"}, "P"=>{"label"=>"Phosphorus", "quantity"=>"6.236895087500001", "unit"=>"mg"}, "PROCNT"=>{"label"=>"Protein", "quantity"=>"0.119067997125", "unit"=>"g"}, "RIBF"=>{"label"=>"Riboflavin (B2)", "quantity"=>"0.021262142343750002", "unit"=>"mg"}, "SUGAR"=>{"label"=>"Sugars", "quantity"=>"21.230957868312505", "unit"=>"g"}, "SUGAR.added"=>{"label"=>"Sugars, added", "quantity"=>"20.751850927500005", "unit"=>"g"}, "THIA"=>{"label"=>"Thiamin (B1)", "quantity"=>"0.043941760843750004", "unit"=>"mg"}, "TOCPHA"=>{"label"=>"Vitamin E", "quantity"=>"0.06236895087500001", "unit"=>"mg"}, "VITA_RAE"=>{"label"=>"Vitamin A", "quantity"=>"0.5669904625000001", "unit"=>"µg"}, "VITB6A"=>{"label"=>"Vitamin B6", "quantity"=>"0.010772818787500001", "unit"=>"mg"}, "VITC"=>{"label"=>"Vitamin C", "quantity"=>"8.504856937500001", "unit"=>"mg"}, "VITK1"=>{"label"=>"Vitamin K", "quantity"=>"0.17009713875000002", "unit"=>"µg"}, "ZN"=>{"label"=>"Zinc", "quantity"=>"0.07654371243750001", "unit"=>"mg"}}]}
+Completed 500 Internal Server Error in 2ms
+
+
+
+NoMethodError - undefined method `gsub' for #<Array:0x007ff08fb43660>:
+  lib/edemam_api_wrapper.rb:19:in `show_recipe'
+  app/controllers/recipes_controller.rb:15:in `show'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/d838ab9cbba91356/variables" for 127.0.0.1 at 2018-05-04 14:34:48 -0700
+Started GET "/recipe?uri%5B%5D=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_e9d318b6c547e3e2adb395133c1e21cf&uri%5B%5D%5B%5D%5Btext%5D=2+ounces+basil-infused+gin+%28or+gin+of+your+choice%29&uri%5B%5D%5B%5D%5Bweight%5D=56.69904625&uri%5B%5D%5B%5D%5Btext%5D=1+ounce+lime+juice&uri%5B%5D%5B%5D%5Bweight%5D=28.349523125&uri%5B%5D%5B%5D%5Btext%5D=1+ounce+simple+syrup&uri%5B%5D%5B%5D%5Bweight%5D=28.349523125&uri%5B%5D%5BCA%5D%5Blabel%5D=Calcium&uri%5B%5D%5BCA%5D%5Bquantity%5D=7.654371243750001&uri%5B%5D%5BCA%5D%5Bunit%5D=mg&uri%5B%5D%5BCHOCDF%5D%5Blabel%5D=Carbs&uri%5B%5D%5BCHOCDF%5D%5Bquantity%5D=23.121871060750003&uri%5B%5D%5BCHOCDF%5D%5Bunit%5D=g&uri%5B%5D%5BENERC_KCAL%5D%5Blabel%5D=Energy&uri%5B%5D%5BENERC_KCAL%5D%5Bquantity%5D=232.46608962500005&uri%5B%5D%5BENERC_KCAL%5D%5Bunit%5D=kcal&uri%5B%5D%5BFAMS%5D%5Blabel%5D=Monounsaturated&uri%5B%5D%5BFAMS%5D%5Bquantity%5D=0.0022679618500000003&uri%5B%5D%5BFAMS%5D%5Bunit%5D=g&uri%5B%5D%5BFAPU%5D%5Blabel%5D=Polyunsaturated&uri%5B%5D%5BFAPU%5D%5Bquantity%5D=0.00652039031875&uri%5B%5D%5BFAPU%5D%5Bunit%5D=g&uri%5B%5D%5BFASAT%5D%5Blabel%5D=Saturated&uri%5B%5D%5BFASAT%5D%5Bquantity%5D=0.0022679618500000003&uri%5B%5D%5BFASAT%5D%5Bunit%5D=g&uri%5B%5D%5BFAT%5D%5Blabel%5D=Fat&uri%5B%5D%5BFAT%5D%5Bquantity%5D=0.019844666187500005&uri%5B%5D%5BFAT%5D%5Bunit%5D=g&uri%5B%5D%5BFE%5D%5Blabel%5D=Iron&uri%5B%5D%5BFE%5D%5Bquantity%5D=1.0460974033125001&uri%5B%5D%5BFE%5D%5Bunit%5D=mg&uri%5B%5D%5BFIBTG%5D%5Blabel%5D=Fiber&uri%5B%5D%5BFIBTG%5D%5Bquantity%5D=0.11339809250000002&uri%5B%5D%5BFIBTG%5D%5Bunit%5D=g&uri%5B%5D%5BFOLDFE%5D%5Blabel%5D=Folate+equivalent+%28total%29&uri%5B%5D%5BFOLDFE%5D%5Bquantity%5D=2.8349523125000005&uri%5B%5D%5BFOLDFE%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BFOLFD%5D%5Blabel%5D=Folate+%28food%29&uri%5B%5D%5BFOLFD%5D%5Bquantity%5D=2.8349523125000005&uri%5B%5D%5BFOLFD%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BK%5D%5Blabel%5D=Potassium&uri%5B%5D%5BK%5D%5Bquantity%5D=51.02914162500001&uri%5B%5D%5BK%5D%5Bunit%5D=mg&uri%5B%5D%5BMG%5D%5Blabel%5D=Magnesium&uri%5B%5D%5BMG%5D%5Bquantity%5D=5.102914162500001&uri%5B%5D%5BMG%5D%5Bunit%5D=mg&uri%5B%5D%5BNA%5D%5Blabel%5D=Sodium&uri%5B%5D%5BNA%5D%5Bquantity%5D=18.143694800000002&uri%5B%5D%5BNA%5D%5Bunit%5D=mg&uri%5B%5D%5BNIA%5D%5Blabel%5D=Niacin+%28B3%29&uri%5B%5D%5BNIA%5D%5Bquantity%5D=0.06860584596250001&uri%5B%5D%5BNIA%5D%5Bunit%5D=mg&uri%5B%5D%5BP%5D%5Blabel%5D=Phosphorus&uri%5B%5D%5BP%5D%5Bquantity%5D=6.236895087500001&uri%5B%5D%5BP%5D%5Bunit%5D=mg&uri%5B%5D%5BPROCNT%5D%5Blabel%5D=Protein&uri%5B%5D%5BPROCNT%5D%5Bquantity%5D=0.119067997125&uri%5B%5D%5BPROCNT%5D%5Bunit%5D=g&uri%5B%5D%5BRIBF%5D%5Blabel%5D=Riboflavin+%28B2%29&uri%5B%5D%5BRIBF%5D%5Bquantity%5D=0.021262142343750002&uri%5B%5D%5BRIBF%5D%5Bunit%5D=mg&uri%5B%5D%5BSUGAR%5D%5Blabel%5D=Sugars&uri%5B%5D%5BSUGAR%5D%5Bquantity%5D=21.230957868312505&uri%5B%5D%5BSUGAR%5D%5Bunit%5D=g&uri%5B%5D%5BSUGAR.added%5D%5Blabel%5D=Sugars%2C+added&uri%5B%5D%5BSUGAR.added%5D%5Bquantity%5D=20.751850927500005&uri%5B%5D%5BSUGAR.added%5D%5Bunit%5D=g&uri%5B%5D%5BTHIA%5D%5Blabel%5D=Thiamin+%28B1%29&uri%5B%5D%5BTHIA%5D%5Bquantity%5D=0.043941760843750004&uri%5B%5D%5BTHIA%5D%5Bunit%5D=mg&uri%5B%5D%5BTOCPHA%5D%5Blabel%5D=Vitamin+E&uri%5B%5D%5BTOCPHA%5D%5Bquantity%5D=0.06236895087500001&uri%5B%5D%5BTOCPHA%5D%5Bunit%5D=mg&uri%5B%5D%5BVITA_RAE%5D%5Blabel%5D=Vitamin+A&uri%5B%5D%5BVITA_RAE%5D%5Bquantity%5D=0.5669904625000001&uri%5B%5D%5BVITA_RAE%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BVITB6A%5D%5Blabel%5D=Vitamin+B6&uri%5B%5D%5BVITB6A%5D%5Bquantity%5D=0.010772818787500001&uri%5B%5D%5BVITB6A%5D%5Bunit%5D=mg&uri%5B%5D%5BVITC%5D%5Blabel%5D=Vitamin+C&uri%5B%5D%5BVITC%5D%5Bquantity%5D=8.504856937500001&uri%5B%5D%5BVITC%5D%5Bunit%5D=mg&uri%5B%5D%5BVITK1%5D%5Blabel%5D=Vitamin+K&uri%5B%5D%5BVITK1%5D%5Bquantity%5D=0.17009713875000002&uri%5B%5D%5BVITK1%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BZN%5D%5Blabel%5D=Zinc&uri%5B%5D%5BZN%5D%5Bquantity%5D=0.07654371243750001&uri%5B%5D%5BZN%5D%5Bunit%5D=mg" for 127.0.0.1 at 2018-05-04 14:34:56 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>["http://www.edamam.com/ontologies/edamam.owl#recipe_e9d318b6c547e3e2adb395133c1e21cf", {"text"=>"1 ounce simple syrup", "weight"=>"28.349523125", "CA"=>{"label"=>"Calcium", "quantity"=>"7.654371243750001", "unit"=>"mg"}, "CHOCDF"=>{"label"=>"Carbs", "quantity"=>"23.121871060750003", "unit"=>"g"}, "ENERC_KCAL"=>{"label"=>"Energy", "quantity"=>"232.46608962500005", "unit"=>"kcal"}, "FAMS"=>{"label"=>"Monounsaturated", "quantity"=>"0.0022679618500000003", "unit"=>"g"}, "FAPU"=>{"label"=>"Polyunsaturated", "quantity"=>"0.00652039031875", "unit"=>"g"}, "FASAT"=>{"label"=>"Saturated", "quantity"=>"0.0022679618500000003", "unit"=>"g"}, "FAT"=>{"label"=>"Fat", "quantity"=>"0.019844666187500005", "unit"=>"g"}, "FE"=>{"label"=>"Iron", "quantity"=>"1.0460974033125001", "unit"=>"mg"}, "FIBTG"=>{"label"=>"Fiber", "quantity"=>"0.11339809250000002", "unit"=>"g"}, "FOLDFE"=>{"label"=>"Folate equivalent (total)", "quantity"=>"2.8349523125000005", "unit"=>"µg"}, "FOLFD"=>{"label"=>"Folate (food)", "quantity"=>"2.8349523125000005", "unit"=>"µg"}, "K"=>{"label"=>"Potassium", "quantity"=>"51.02914162500001", "unit"=>"mg"}, "MG"=>{"label"=>"Magnesium", "quantity"=>"5.102914162500001", "unit"=>"mg"}, "NA"=>{"label"=>"Sodium", "quantity"=>"18.143694800000002", "unit"=>"mg"}, "NIA"=>{"label"=>"Niacin (B3)", "quantity"=>"0.06860584596250001", "unit"=>"mg"}, "P"=>{"label"=>"Phosphorus", "quantity"=>"6.236895087500001", "unit"=>"mg"}, "PROCNT"=>{"label"=>"Protein", "quantity"=>"0.119067997125", "unit"=>"g"}, "RIBF"=>{"label"=>"Riboflavin (B2)", "quantity"=>"0.021262142343750002", "unit"=>"mg"}, "SUGAR"=>{"label"=>"Sugars", "quantity"=>"21.230957868312505", "unit"=>"g"}, "SUGAR.added"=>{"label"=>"Sugars, added", "quantity"=>"20.751850927500005", "unit"=>"g"}, "THIA"=>{"label"=>"Thiamin (B1)", "quantity"=>"0.043941760843750004", "unit"=>"mg"}, "TOCPHA"=>{"label"=>"Vitamin E", "quantity"=>"0.06236895087500001", "unit"=>"mg"}, "VITA_RAE"=>{"label"=>"Vitamin A", "quantity"=>"0.5669904625000001", "unit"=>"µg"}, "VITB6A"=>{"label"=>"Vitamin B6", "quantity"=>"0.010772818787500001", "unit"=>"mg"}, "VITC"=>{"label"=>"Vitamin C", "quantity"=>"8.504856937500001", "unit"=>"mg"}, "VITK1"=>{"label"=>"Vitamin K", "quantity"=>"0.17009713875000002", "unit"=>"µg"}, "ZN"=>{"label"=>"Zinc", "quantity"=>"0.07654371243750001", "unit"=>"mg"}}]}
+Completed 500 Internal Server Error in 3ms
+
+
+
+NoMethodError - undefined method `gsub' for #<Array:0x007ff092185d50>:
+  lib/edemam_api_wrapper.rb:19:in `show_recipe'
+  app/controllers/recipes_controller.rb:15:in `show'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/a2a3959a1de3613b/variables" for 127.0.0.1 at 2018-05-04 14:34:57 -0700
+Started GET "/recipe?uri%5B%5D=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_e9d318b6c547e3e2adb395133c1e21cf&uri%5B%5D%5B%5D%5Btext%5D=2+ounces+basil-infused+gin+%28or+gin+of+your+choice%29&uri%5B%5D%5B%5D%5Bweight%5D=56.69904625&uri%5B%5D%5B%5D%5Btext%5D=1+ounce+lime+juice&uri%5B%5D%5B%5D%5Bweight%5D=28.349523125&uri%5B%5D%5B%5D%5Btext%5D=1+ounce+simple+syrup&uri%5B%5D%5B%5D%5Bweight%5D=28.349523125&uri%5B%5D%5BCA%5D%5Blabel%5D=Calcium&uri%5B%5D%5BCA%5D%5Bquantity%5D=7.654371243750001&uri%5B%5D%5BCA%5D%5Bunit%5D=mg&uri%5B%5D%5BCHOCDF%5D%5Blabel%5D=Carbs&uri%5B%5D%5BCHOCDF%5D%5Bquantity%5D=23.121871060750003&uri%5B%5D%5BCHOCDF%5D%5Bunit%5D=g&uri%5B%5D%5BENERC_KCAL%5D%5Blabel%5D=Energy&uri%5B%5D%5BENERC_KCAL%5D%5Bquantity%5D=232.46608962500005&uri%5B%5D%5BENERC_KCAL%5D%5Bunit%5D=kcal&uri%5B%5D%5BFAMS%5D%5Blabel%5D=Monounsaturated&uri%5B%5D%5BFAMS%5D%5Bquantity%5D=0.0022679618500000003&uri%5B%5D%5BFAMS%5D%5Bunit%5D=g&uri%5B%5D%5BFAPU%5D%5Blabel%5D=Polyunsaturated&uri%5B%5D%5BFAPU%5D%5Bquantity%5D=0.00652039031875&uri%5B%5D%5BFAPU%5D%5Bunit%5D=g&uri%5B%5D%5BFASAT%5D%5Blabel%5D=Saturated&uri%5B%5D%5BFASAT%5D%5Bquantity%5D=0.0022679618500000003&uri%5B%5D%5BFASAT%5D%5Bunit%5D=g&uri%5B%5D%5BFAT%5D%5Blabel%5D=Fat&uri%5B%5D%5BFAT%5D%5Bquantity%5D=0.019844666187500005&uri%5B%5D%5BFAT%5D%5Bunit%5D=g&uri%5B%5D%5BFE%5D%5Blabel%5D=Iron&uri%5B%5D%5BFE%5D%5Bquantity%5D=1.0460974033125001&uri%5B%5D%5BFE%5D%5Bunit%5D=mg&uri%5B%5D%5BFIBTG%5D%5Blabel%5D=Fiber&uri%5B%5D%5BFIBTG%5D%5Bquantity%5D=0.11339809250000002&uri%5B%5D%5BFIBTG%5D%5Bunit%5D=g&uri%5B%5D%5BFOLDFE%5D%5Blabel%5D=Folate+equivalent+%28total%29&uri%5B%5D%5BFOLDFE%5D%5Bquantity%5D=2.8349523125000005&uri%5B%5D%5BFOLDFE%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BFOLFD%5D%5Blabel%5D=Folate+%28food%29&uri%5B%5D%5BFOLFD%5D%5Bquantity%5D=2.8349523125000005&uri%5B%5D%5BFOLFD%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BK%5D%5Blabel%5D=Potassium&uri%5B%5D%5BK%5D%5Bquantity%5D=51.02914162500001&uri%5B%5D%5BK%5D%5Bunit%5D=mg&uri%5B%5D%5BMG%5D%5Blabel%5D=Magnesium&uri%5B%5D%5BMG%5D%5Bquantity%5D=5.102914162500001&uri%5B%5D%5BMG%5D%5Bunit%5D=mg&uri%5B%5D%5BNA%5D%5Blabel%5D=Sodium&uri%5B%5D%5BNA%5D%5Bquantity%5D=18.143694800000002&uri%5B%5D%5BNA%5D%5Bunit%5D=mg&uri%5B%5D%5BNIA%5D%5Blabel%5D=Niacin+%28B3%29&uri%5B%5D%5BNIA%5D%5Bquantity%5D=0.06860584596250001&uri%5B%5D%5BNIA%5D%5Bunit%5D=mg&uri%5B%5D%5BP%5D%5Blabel%5D=Phosphorus&uri%5B%5D%5BP%5D%5Bquantity%5D=6.236895087500001&uri%5B%5D%5BP%5D%5Bunit%5D=mg&uri%5B%5D%5BPROCNT%5D%5Blabel%5D=Protein&uri%5B%5D%5BPROCNT%5D%5Bquantity%5D=0.119067997125&uri%5B%5D%5BPROCNT%5D%5Bunit%5D=g&uri%5B%5D%5BRIBF%5D%5Blabel%5D=Riboflavin+%28B2%29&uri%5B%5D%5BRIBF%5D%5Bquantity%5D=0.021262142343750002&uri%5B%5D%5BRIBF%5D%5Bunit%5D=mg&uri%5B%5D%5BSUGAR%5D%5Blabel%5D=Sugars&uri%5B%5D%5BSUGAR%5D%5Bquantity%5D=21.230957868312505&uri%5B%5D%5BSUGAR%5D%5Bunit%5D=g&uri%5B%5D%5BSUGAR.added%5D%5Blabel%5D=Sugars%2C+added&uri%5B%5D%5BSUGAR.added%5D%5Bquantity%5D=20.751850927500005&uri%5B%5D%5BSUGAR.added%5D%5Bunit%5D=g&uri%5B%5D%5BTHIA%5D%5Blabel%5D=Thiamin+%28B1%29&uri%5B%5D%5BTHIA%5D%5Bquantity%5D=0.043941760843750004&uri%5B%5D%5BTHIA%5D%5Bunit%5D=mg&uri%5B%5D%5BTOCPHA%5D%5Blabel%5D=Vitamin+E&uri%5B%5D%5BTOCPHA%5D%5Bquantity%5D=0.06236895087500001&uri%5B%5D%5BTOCPHA%5D%5Bunit%5D=mg&uri%5B%5D%5BVITA_RAE%5D%5Blabel%5D=Vitamin+A&uri%5B%5D%5BVITA_RAE%5D%5Bquantity%5D=0.5669904625000001&uri%5B%5D%5BVITA_RAE%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BVITB6A%5D%5Blabel%5D=Vitamin+B6&uri%5B%5D%5BVITB6A%5D%5Bquantity%5D=0.010772818787500001&uri%5B%5D%5BVITB6A%5D%5Bunit%5D=mg&uri%5B%5D%5BVITC%5D%5Blabel%5D=Vitamin+C&uri%5B%5D%5BVITC%5D%5Bquantity%5D=8.504856937500001&uri%5B%5D%5BVITC%5D%5Bunit%5D=mg&uri%5B%5D%5BVITK1%5D%5Blabel%5D=Vitamin+K&uri%5B%5D%5BVITK1%5D%5Bquantity%5D=0.17009713875000002&uri%5B%5D%5BVITK1%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BZN%5D%5Blabel%5D=Zinc&uri%5B%5D%5BZN%5D%5Bquantity%5D=0.07654371243750001&uri%5B%5D%5BZN%5D%5Bunit%5D=mg" for 127.0.0.1 at 2018-05-04 14:35:54 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>["http://www.edamam.com/ontologies/edamam.owl#recipe_e9d318b6c547e3e2adb395133c1e21cf", {"text"=>"1 ounce simple syrup", "weight"=>"28.349523125", "CA"=>{"label"=>"Calcium", "quantity"=>"7.654371243750001", "unit"=>"mg"}, "CHOCDF"=>{"label"=>"Carbs", "quantity"=>"23.121871060750003", "unit"=>"g"}, "ENERC_KCAL"=>{"label"=>"Energy", "quantity"=>"232.46608962500005", "unit"=>"kcal"}, "FAMS"=>{"label"=>"Monounsaturated", "quantity"=>"0.0022679618500000003", "unit"=>"g"}, "FAPU"=>{"label"=>"Polyunsaturated", "quantity"=>"0.00652039031875", "unit"=>"g"}, "FASAT"=>{"label"=>"Saturated", "quantity"=>"0.0022679618500000003", "unit"=>"g"}, "FAT"=>{"label"=>"Fat", "quantity"=>"0.019844666187500005", "unit"=>"g"}, "FE"=>{"label"=>"Iron", "quantity"=>"1.0460974033125001", "unit"=>"mg"}, "FIBTG"=>{"label"=>"Fiber", "quantity"=>"0.11339809250000002", "unit"=>"g"}, "FOLDFE"=>{"label"=>"Folate equivalent (total)", "quantity"=>"2.8349523125000005", "unit"=>"µg"}, "FOLFD"=>{"label"=>"Folate (food)", "quantity"=>"2.8349523125000005", "unit"=>"µg"}, "K"=>{"label"=>"Potassium", "quantity"=>"51.02914162500001", "unit"=>"mg"}, "MG"=>{"label"=>"Magnesium", "quantity"=>"5.102914162500001", "unit"=>"mg"}, "NA"=>{"label"=>"Sodium", "quantity"=>"18.143694800000002", "unit"=>"mg"}, "NIA"=>{"label"=>"Niacin (B3)", "quantity"=>"0.06860584596250001", "unit"=>"mg"}, "P"=>{"label"=>"Phosphorus", "quantity"=>"6.236895087500001", "unit"=>"mg"}, "PROCNT"=>{"label"=>"Protein", "quantity"=>"0.119067997125", "unit"=>"g"}, "RIBF"=>{"label"=>"Riboflavin (B2)", "quantity"=>"0.021262142343750002", "unit"=>"mg"}, "SUGAR"=>{"label"=>"Sugars", "quantity"=>"21.230957868312505", "unit"=>"g"}, "SUGAR.added"=>{"label"=>"Sugars, added", "quantity"=>"20.751850927500005", "unit"=>"g"}, "THIA"=>{"label"=>"Thiamin (B1)", "quantity"=>"0.043941760843750004", "unit"=>"mg"}, "TOCPHA"=>{"label"=>"Vitamin E", "quantity"=>"0.06236895087500001", "unit"=>"mg"}, "VITA_RAE"=>{"label"=>"Vitamin A", "quantity"=>"0.5669904625000001", "unit"=>"µg"}, "VITB6A"=>{"label"=>"Vitamin B6", "quantity"=>"0.010772818787500001", "unit"=>"mg"}, "VITC"=>{"label"=>"Vitamin C", "quantity"=>"8.504856937500001", "unit"=>"mg"}, "VITK1"=>{"label"=>"Vitamin K", "quantity"=>"0.17009713875000002", "unit"=>"µg"}, "ZN"=>{"label"=>"Zinc", "quantity"=>"0.07654371243750001", "unit"=>"mg"}}]}
+Completed 500 Internal Server Error in 3ms
+
+
+
+NoMethodError - undefined method `gsub' for #<Array:0x007ff092003428>:
+  lib/edemam_api_wrapper.rb:19:in `show_recipe'
+  app/controllers/recipes_controller.rb:15:in `show'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/14ee61e07738f55d/variables" for 127.0.0.1 at 2018-05-04 14:35:54 -0700
+Started GET "/recipe?uri%5B%5D=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_e9d318b6c547e3e2adb395133c1e21cf&uri%5B%5D%5B%5D%5Btext%5D=2+ounces+basil-infused+gin+%28or+gin+of+your+choice%29&uri%5B%5D%5B%5D%5Bweight%5D=56.69904625&uri%5B%5D%5B%5D%5Btext%5D=1+ounce+lime+juice&uri%5B%5D%5B%5D%5Bweight%5D=28.349523125&uri%5B%5D%5B%5D%5Btext%5D=1+ounce+simple+syrup&uri%5B%5D%5B%5D%5Bweight%5D=28.349523125&uri%5B%5D%5BCA%5D%5Blabel%5D=Calcium&uri%5B%5D%5BCA%5D%5Bquantity%5D=7.654371243750001&uri%5B%5D%5BCA%5D%5Bunit%5D=mg&uri%5B%5D%5BCHOCDF%5D%5Blabel%5D=Carbs&uri%5B%5D%5BCHOCDF%5D%5Bquantity%5D=23.121871060750003&uri%5B%5D%5BCHOCDF%5D%5Bunit%5D=g&uri%5B%5D%5BENERC_KCAL%5D%5Blabel%5D=Energy&uri%5B%5D%5BENERC_KCAL%5D%5Bquantity%5D=232.46608962500005&uri%5B%5D%5BENERC_KCAL%5D%5Bunit%5D=kcal&uri%5B%5D%5BFAMS%5D%5Blabel%5D=Monounsaturated&uri%5B%5D%5BFAMS%5D%5Bquantity%5D=0.0022679618500000003&uri%5B%5D%5BFAMS%5D%5Bunit%5D=g&uri%5B%5D%5BFAPU%5D%5Blabel%5D=Polyunsaturated&uri%5B%5D%5BFAPU%5D%5Bquantity%5D=0.00652039031875&uri%5B%5D%5BFAPU%5D%5Bunit%5D=g&uri%5B%5D%5BFASAT%5D%5Blabel%5D=Saturated&uri%5B%5D%5BFASAT%5D%5Bquantity%5D=0.0022679618500000003&uri%5B%5D%5BFASAT%5D%5Bunit%5D=g&uri%5B%5D%5BFAT%5D%5Blabel%5D=Fat&uri%5B%5D%5BFAT%5D%5Bquantity%5D=0.019844666187500005&uri%5B%5D%5BFAT%5D%5Bunit%5D=g&uri%5B%5D%5BFE%5D%5Blabel%5D=Iron&uri%5B%5D%5BFE%5D%5Bquantity%5D=1.0460974033125001&uri%5B%5D%5BFE%5D%5Bunit%5D=mg&uri%5B%5D%5BFIBTG%5D%5Blabel%5D=Fiber&uri%5B%5D%5BFIBTG%5D%5Bquantity%5D=0.11339809250000002&uri%5B%5D%5BFIBTG%5D%5Bunit%5D=g&uri%5B%5D%5BFOLDFE%5D%5Blabel%5D=Folate+equivalent+%28total%29&uri%5B%5D%5BFOLDFE%5D%5Bquantity%5D=2.8349523125000005&uri%5B%5D%5BFOLDFE%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BFOLFD%5D%5Blabel%5D=Folate+%28food%29&uri%5B%5D%5BFOLFD%5D%5Bquantity%5D=2.8349523125000005&uri%5B%5D%5BFOLFD%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BK%5D%5Blabel%5D=Potassium&uri%5B%5D%5BK%5D%5Bquantity%5D=51.02914162500001&uri%5B%5D%5BK%5D%5Bunit%5D=mg&uri%5B%5D%5BMG%5D%5Blabel%5D=Magnesium&uri%5B%5D%5BMG%5D%5Bquantity%5D=5.102914162500001&uri%5B%5D%5BMG%5D%5Bunit%5D=mg&uri%5B%5D%5BNA%5D%5Blabel%5D=Sodium&uri%5B%5D%5BNA%5D%5Bquantity%5D=18.143694800000002&uri%5B%5D%5BNA%5D%5Bunit%5D=mg&uri%5B%5D%5BNIA%5D%5Blabel%5D=Niacin+%28B3%29&uri%5B%5D%5BNIA%5D%5Bquantity%5D=0.06860584596250001&uri%5B%5D%5BNIA%5D%5Bunit%5D=mg&uri%5B%5D%5BP%5D%5Blabel%5D=Phosphorus&uri%5B%5D%5BP%5D%5Bquantity%5D=6.236895087500001&uri%5B%5D%5BP%5D%5Bunit%5D=mg&uri%5B%5D%5BPROCNT%5D%5Blabel%5D=Protein&uri%5B%5D%5BPROCNT%5D%5Bquantity%5D=0.119067997125&uri%5B%5D%5BPROCNT%5D%5Bunit%5D=g&uri%5B%5D%5BRIBF%5D%5Blabel%5D=Riboflavin+%28B2%29&uri%5B%5D%5BRIBF%5D%5Bquantity%5D=0.021262142343750002&uri%5B%5D%5BRIBF%5D%5Bunit%5D=mg&uri%5B%5D%5BSUGAR%5D%5Blabel%5D=Sugars&uri%5B%5D%5BSUGAR%5D%5Bquantity%5D=21.230957868312505&uri%5B%5D%5BSUGAR%5D%5Bunit%5D=g&uri%5B%5D%5BSUGAR.added%5D%5Blabel%5D=Sugars%2C+added&uri%5B%5D%5BSUGAR.added%5D%5Bquantity%5D=20.751850927500005&uri%5B%5D%5BSUGAR.added%5D%5Bunit%5D=g&uri%5B%5D%5BTHIA%5D%5Blabel%5D=Thiamin+%28B1%29&uri%5B%5D%5BTHIA%5D%5Bquantity%5D=0.043941760843750004&uri%5B%5D%5BTHIA%5D%5Bunit%5D=mg&uri%5B%5D%5BTOCPHA%5D%5Blabel%5D=Vitamin+E&uri%5B%5D%5BTOCPHA%5D%5Bquantity%5D=0.06236895087500001&uri%5B%5D%5BTOCPHA%5D%5Bunit%5D=mg&uri%5B%5D%5BVITA_RAE%5D%5Blabel%5D=Vitamin+A&uri%5B%5D%5BVITA_RAE%5D%5Bquantity%5D=0.5669904625000001&uri%5B%5D%5BVITA_RAE%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BVITB6A%5D%5Blabel%5D=Vitamin+B6&uri%5B%5D%5BVITB6A%5D%5Bquantity%5D=0.010772818787500001&uri%5B%5D%5BVITB6A%5D%5Bunit%5D=mg&uri%5B%5D%5BVITC%5D%5Blabel%5D=Vitamin+C&uri%5B%5D%5BVITC%5D%5Bquantity%5D=8.504856937500001&uri%5B%5D%5BVITC%5D%5Bunit%5D=mg&uri%5B%5D%5BVITK1%5D%5Blabel%5D=Vitamin+K&uri%5B%5D%5BVITK1%5D%5Bquantity%5D=0.17009713875000002&uri%5B%5D%5BVITK1%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BZN%5D%5Blabel%5D=Zinc&uri%5B%5D%5BZN%5D%5Bquantity%5D=0.07654371243750001&uri%5B%5D%5BZN%5D%5Bunit%5D=mg" for 127.0.0.1 at 2018-05-04 14:37:15 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>["http://www.edamam.com/ontologies/edamam.owl#recipe_e9d318b6c547e3e2adb395133c1e21cf", {"text"=>"1 ounce simple syrup", "weight"=>"28.349523125", "CA"=>{"label"=>"Calcium", "quantity"=>"7.654371243750001", "unit"=>"mg"}, "CHOCDF"=>{"label"=>"Carbs", "quantity"=>"23.121871060750003", "unit"=>"g"}, "ENERC_KCAL"=>{"label"=>"Energy", "quantity"=>"232.46608962500005", "unit"=>"kcal"}, "FAMS"=>{"label"=>"Monounsaturated", "quantity"=>"0.0022679618500000003", "unit"=>"g"}, "FAPU"=>{"label"=>"Polyunsaturated", "quantity"=>"0.00652039031875", "unit"=>"g"}, "FASAT"=>{"label"=>"Saturated", "quantity"=>"0.0022679618500000003", "unit"=>"g"}, "FAT"=>{"label"=>"Fat", "quantity"=>"0.019844666187500005", "unit"=>"g"}, "FE"=>{"label"=>"Iron", "quantity"=>"1.0460974033125001", "unit"=>"mg"}, "FIBTG"=>{"label"=>"Fiber", "quantity"=>"0.11339809250000002", "unit"=>"g"}, "FOLDFE"=>{"label"=>"Folate equivalent (total)", "quantity"=>"2.8349523125000005", "unit"=>"µg"}, "FOLFD"=>{"label"=>"Folate (food)", "quantity"=>"2.8349523125000005", "unit"=>"µg"}, "K"=>{"label"=>"Potassium", "quantity"=>"51.02914162500001", "unit"=>"mg"}, "MG"=>{"label"=>"Magnesium", "quantity"=>"5.102914162500001", "unit"=>"mg"}, "NA"=>{"label"=>"Sodium", "quantity"=>"18.143694800000002", "unit"=>"mg"}, "NIA"=>{"label"=>"Niacin (B3)", "quantity"=>"0.06860584596250001", "unit"=>"mg"}, "P"=>{"label"=>"Phosphorus", "quantity"=>"6.236895087500001", "unit"=>"mg"}, "PROCNT"=>{"label"=>"Protein", "quantity"=>"0.119067997125", "unit"=>"g"}, "RIBF"=>{"label"=>"Riboflavin (B2)", "quantity"=>"0.021262142343750002", "unit"=>"mg"}, "SUGAR"=>{"label"=>"Sugars", "quantity"=>"21.230957868312505", "unit"=>"g"}, "SUGAR.added"=>{"label"=>"Sugars, added", "quantity"=>"20.751850927500005", "unit"=>"g"}, "THIA"=>{"label"=>"Thiamin (B1)", "quantity"=>"0.043941760843750004", "unit"=>"mg"}, "TOCPHA"=>{"label"=>"Vitamin E", "quantity"=>"0.06236895087500001", "unit"=>"mg"}, "VITA_RAE"=>{"label"=>"Vitamin A", "quantity"=>"0.5669904625000001", "unit"=>"µg"}, "VITB6A"=>{"label"=>"Vitamin B6", "quantity"=>"0.010772818787500001", "unit"=>"mg"}, "VITC"=>{"label"=>"Vitamin C", "quantity"=>"8.504856937500001", "unit"=>"mg"}, "VITK1"=>{"label"=>"Vitamin K", "quantity"=>"0.17009713875000002", "unit"=>"µg"}, "ZN"=>{"label"=>"Zinc", "quantity"=>"0.07654371243750001", "unit"=>"mg"}}]}
+Completed 500 Internal Server Error in 3ms
+
+
+
+NoMethodError - undefined method `gsub' for #<Array:0x007ff08fcaf490>:
+  lib/edemam_api_wrapper.rb:19:in `show_recipe'
+  app/controllers/recipes_controller.rb:15:in `show'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/2f0a325dd4551d2d/variables" for 127.0.0.1 at 2018-05-04 14:37:15 -0700
+Started POST "/__better_errors/2f0a325dd4551d2d/eval" for 127.0.0.1 at 2018-05-04 14:37:20 -0700
+Started GET "/recipe?uri%5B%5D=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_e9d318b6c547e3e2adb395133c1e21cf&uri%5B%5D%5B%5D%5Btext%5D=2+ounces+basil-infused+gin+%28or+gin+of+your+choice%29&uri%5B%5D%5B%5D%5Bweight%5D=56.69904625&uri%5B%5D%5B%5D%5Btext%5D=1+ounce+lime+juice&uri%5B%5D%5B%5D%5Bweight%5D=28.349523125&uri%5B%5D%5B%5D%5Btext%5D=1+ounce+simple+syrup&uri%5B%5D%5B%5D%5Bweight%5D=28.349523125&uri%5B%5D%5BCA%5D%5Blabel%5D=Calcium&uri%5B%5D%5BCA%5D%5Bquantity%5D=7.654371243750001&uri%5B%5D%5BCA%5D%5Bunit%5D=mg&uri%5B%5D%5BCHOCDF%5D%5Blabel%5D=Carbs&uri%5B%5D%5BCHOCDF%5D%5Bquantity%5D=23.121871060750003&uri%5B%5D%5BCHOCDF%5D%5Bunit%5D=g&uri%5B%5D%5BENERC_KCAL%5D%5Blabel%5D=Energy&uri%5B%5D%5BENERC_KCAL%5D%5Bquantity%5D=232.46608962500005&uri%5B%5D%5BENERC_KCAL%5D%5Bunit%5D=kcal&uri%5B%5D%5BFAMS%5D%5Blabel%5D=Monounsaturated&uri%5B%5D%5BFAMS%5D%5Bquantity%5D=0.0022679618500000003&uri%5B%5D%5BFAMS%5D%5Bunit%5D=g&uri%5B%5D%5BFAPU%5D%5Blabel%5D=Polyunsaturated&uri%5B%5D%5BFAPU%5D%5Bquantity%5D=0.00652039031875&uri%5B%5D%5BFAPU%5D%5Bunit%5D=g&uri%5B%5D%5BFASAT%5D%5Blabel%5D=Saturated&uri%5B%5D%5BFASAT%5D%5Bquantity%5D=0.0022679618500000003&uri%5B%5D%5BFASAT%5D%5Bunit%5D=g&uri%5B%5D%5BFAT%5D%5Blabel%5D=Fat&uri%5B%5D%5BFAT%5D%5Bquantity%5D=0.019844666187500005&uri%5B%5D%5BFAT%5D%5Bunit%5D=g&uri%5B%5D%5BFE%5D%5Blabel%5D=Iron&uri%5B%5D%5BFE%5D%5Bquantity%5D=1.0460974033125001&uri%5B%5D%5BFE%5D%5Bunit%5D=mg&uri%5B%5D%5BFIBTG%5D%5Blabel%5D=Fiber&uri%5B%5D%5BFIBTG%5D%5Bquantity%5D=0.11339809250000002&uri%5B%5D%5BFIBTG%5D%5Bunit%5D=g&uri%5B%5D%5BFOLDFE%5D%5Blabel%5D=Folate+equivalent+%28total%29&uri%5B%5D%5BFOLDFE%5D%5Bquantity%5D=2.8349523125000005&uri%5B%5D%5BFOLDFE%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BFOLFD%5D%5Blabel%5D=Folate+%28food%29&uri%5B%5D%5BFOLFD%5D%5Bquantity%5D=2.8349523125000005&uri%5B%5D%5BFOLFD%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BK%5D%5Blabel%5D=Potassium&uri%5B%5D%5BK%5D%5Bquantity%5D=51.02914162500001&uri%5B%5D%5BK%5D%5Bunit%5D=mg&uri%5B%5D%5BMG%5D%5Blabel%5D=Magnesium&uri%5B%5D%5BMG%5D%5Bquantity%5D=5.102914162500001&uri%5B%5D%5BMG%5D%5Bunit%5D=mg&uri%5B%5D%5BNA%5D%5Blabel%5D=Sodium&uri%5B%5D%5BNA%5D%5Bquantity%5D=18.143694800000002&uri%5B%5D%5BNA%5D%5Bunit%5D=mg&uri%5B%5D%5BNIA%5D%5Blabel%5D=Niacin+%28B3%29&uri%5B%5D%5BNIA%5D%5Bquantity%5D=0.06860584596250001&uri%5B%5D%5BNIA%5D%5Bunit%5D=mg&uri%5B%5D%5BP%5D%5Blabel%5D=Phosphorus&uri%5B%5D%5BP%5D%5Bquantity%5D=6.236895087500001&uri%5B%5D%5BP%5D%5Bunit%5D=mg&uri%5B%5D%5BPROCNT%5D%5Blabel%5D=Protein&uri%5B%5D%5BPROCNT%5D%5Bquantity%5D=0.119067997125&uri%5B%5D%5BPROCNT%5D%5Bunit%5D=g&uri%5B%5D%5BRIBF%5D%5Blabel%5D=Riboflavin+%28B2%29&uri%5B%5D%5BRIBF%5D%5Bquantity%5D=0.021262142343750002&uri%5B%5D%5BRIBF%5D%5Bunit%5D=mg&uri%5B%5D%5BSUGAR%5D%5Blabel%5D=Sugars&uri%5B%5D%5BSUGAR%5D%5Bquantity%5D=21.230957868312505&uri%5B%5D%5BSUGAR%5D%5Bunit%5D=g&uri%5B%5D%5BSUGAR.added%5D%5Blabel%5D=Sugars%2C+added&uri%5B%5D%5BSUGAR.added%5D%5Bquantity%5D=20.751850927500005&uri%5B%5D%5BSUGAR.added%5D%5Bunit%5D=g&uri%5B%5D%5BTHIA%5D%5Blabel%5D=Thiamin+%28B1%29&uri%5B%5D%5BTHIA%5D%5Bquantity%5D=0.043941760843750004&uri%5B%5D%5BTHIA%5D%5Bunit%5D=mg&uri%5B%5D%5BTOCPHA%5D%5Blabel%5D=Vitamin+E&uri%5B%5D%5BTOCPHA%5D%5Bquantity%5D=0.06236895087500001&uri%5B%5D%5BTOCPHA%5D%5Bunit%5D=mg&uri%5B%5D%5BVITA_RAE%5D%5Blabel%5D=Vitamin+A&uri%5B%5D%5BVITA_RAE%5D%5Bquantity%5D=0.5669904625000001&uri%5B%5D%5BVITA_RAE%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BVITB6A%5D%5Blabel%5D=Vitamin+B6&uri%5B%5D%5BVITB6A%5D%5Bquantity%5D=0.010772818787500001&uri%5B%5D%5BVITB6A%5D%5Bunit%5D=mg&uri%5B%5D%5BVITC%5D%5Blabel%5D=Vitamin+C&uri%5B%5D%5BVITC%5D%5Bquantity%5D=8.504856937500001&uri%5B%5D%5BVITC%5D%5Bunit%5D=mg&uri%5B%5D%5BVITK1%5D%5Blabel%5D=Vitamin+K&uri%5B%5D%5BVITK1%5D%5Bquantity%5D=0.17009713875000002&uri%5B%5D%5BVITK1%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BZN%5D%5Blabel%5D=Zinc&uri%5B%5D%5BZN%5D%5Bquantity%5D=0.07654371243750001&uri%5B%5D%5BZN%5D%5Bunit%5D=mg" for 127.0.0.1 at 2018-05-04 14:38:02 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>["http://www.edamam.com/ontologies/edamam.owl#recipe_e9d318b6c547e3e2adb395133c1e21cf", {"text"=>"1 ounce simple syrup", "weight"=>"28.349523125", "CA"=>{"label"=>"Calcium", "quantity"=>"7.654371243750001", "unit"=>"mg"}, "CHOCDF"=>{"label"=>"Carbs", "quantity"=>"23.121871060750003", "unit"=>"g"}, "ENERC_KCAL"=>{"label"=>"Energy", "quantity"=>"232.46608962500005", "unit"=>"kcal"}, "FAMS"=>{"label"=>"Monounsaturated", "quantity"=>"0.0022679618500000003", "unit"=>"g"}, "FAPU"=>{"label"=>"Polyunsaturated", "quantity"=>"0.00652039031875", "unit"=>"g"}, "FASAT"=>{"label"=>"Saturated", "quantity"=>"0.0022679618500000003", "unit"=>"g"}, "FAT"=>{"label"=>"Fat", "quantity"=>"0.019844666187500005", "unit"=>"g"}, "FE"=>{"label"=>"Iron", "quantity"=>"1.0460974033125001", "unit"=>"mg"}, "FIBTG"=>{"label"=>"Fiber", "quantity"=>"0.11339809250000002", "unit"=>"g"}, "FOLDFE"=>{"label"=>"Folate equivalent (total)", "quantity"=>"2.8349523125000005", "unit"=>"µg"}, "FOLFD"=>{"label"=>"Folate (food)", "quantity"=>"2.8349523125000005", "unit"=>"µg"}, "K"=>{"label"=>"Potassium", "quantity"=>"51.02914162500001", "unit"=>"mg"}, "MG"=>{"label"=>"Magnesium", "quantity"=>"5.102914162500001", "unit"=>"mg"}, "NA"=>{"label"=>"Sodium", "quantity"=>"18.143694800000002", "unit"=>"mg"}, "NIA"=>{"label"=>"Niacin (B3)", "quantity"=>"0.06860584596250001", "unit"=>"mg"}, "P"=>{"label"=>"Phosphorus", "quantity"=>"6.236895087500001", "unit"=>"mg"}, "PROCNT"=>{"label"=>"Protein", "quantity"=>"0.119067997125", "unit"=>"g"}, "RIBF"=>{"label"=>"Riboflavin (B2)", "quantity"=>"0.021262142343750002", "unit"=>"mg"}, "SUGAR"=>{"label"=>"Sugars", "quantity"=>"21.230957868312505", "unit"=>"g"}, "SUGAR.added"=>{"label"=>"Sugars, added", "quantity"=>"20.751850927500005", "unit"=>"g"}, "THIA"=>{"label"=>"Thiamin (B1)", "quantity"=>"0.043941760843750004", "unit"=>"mg"}, "TOCPHA"=>{"label"=>"Vitamin E", "quantity"=>"0.06236895087500001", "unit"=>"mg"}, "VITA_RAE"=>{"label"=>"Vitamin A", "quantity"=>"0.5669904625000001", "unit"=>"µg"}, "VITB6A"=>{"label"=>"Vitamin B6", "quantity"=>"0.010772818787500001", "unit"=>"mg"}, "VITC"=>{"label"=>"Vitamin C", "quantity"=>"8.504856937500001", "unit"=>"mg"}, "VITK1"=>{"label"=>"Vitamin K", "quantity"=>"0.17009713875000002", "unit"=>"µg"}, "ZN"=>{"label"=>"Zinc", "quantity"=>"0.07654371243750001", "unit"=>"mg"}}]}
+Completed 500 Internal Server Error in 4ms
+
+
+
+NoMethodError - undefined method `gsub' for #<Array:0x007ff09252af00>:
+  lib/edemam_api_wrapper.rb:19:in `show_recipe'
+  app/controllers/recipes_controller.rb:15:in `show'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/6b648b10b810b251/variables" for 127.0.0.1 at 2018-05-04 14:38:03 -0700
+Started GET "/recipe?uri%5B%5D=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_e9d318b6c547e3e2adb395133c1e21cf&uri%5B%5D%5B%5D%5Btext%5D=2+ounces+basil-infused+gin+%28or+gin+of+your+choice%29&uri%5B%5D%5B%5D%5Bweight%5D=56.69904625&uri%5B%5D%5B%5D%5Btext%5D=1+ounce+lime+juice&uri%5B%5D%5B%5D%5Bweight%5D=28.349523125&uri%5B%5D%5B%5D%5Btext%5D=1+ounce+simple+syrup&uri%5B%5D%5B%5D%5Bweight%5D=28.349523125&uri%5B%5D%5BCA%5D%5Blabel%5D=Calcium&uri%5B%5D%5BCA%5D%5Bquantity%5D=7.654371243750001&uri%5B%5D%5BCA%5D%5Bunit%5D=mg&uri%5B%5D%5BCHOCDF%5D%5Blabel%5D=Carbs&uri%5B%5D%5BCHOCDF%5D%5Bquantity%5D=23.121871060750003&uri%5B%5D%5BCHOCDF%5D%5Bunit%5D=g&uri%5B%5D%5BENERC_KCAL%5D%5Blabel%5D=Energy&uri%5B%5D%5BENERC_KCAL%5D%5Bquantity%5D=232.46608962500005&uri%5B%5D%5BENERC_KCAL%5D%5Bunit%5D=kcal&uri%5B%5D%5BFAMS%5D%5Blabel%5D=Monounsaturated&uri%5B%5D%5BFAMS%5D%5Bquantity%5D=0.0022679618500000003&uri%5B%5D%5BFAMS%5D%5Bunit%5D=g&uri%5B%5D%5BFAPU%5D%5Blabel%5D=Polyunsaturated&uri%5B%5D%5BFAPU%5D%5Bquantity%5D=0.00652039031875&uri%5B%5D%5BFAPU%5D%5Bunit%5D=g&uri%5B%5D%5BFASAT%5D%5Blabel%5D=Saturated&uri%5B%5D%5BFASAT%5D%5Bquantity%5D=0.0022679618500000003&uri%5B%5D%5BFASAT%5D%5Bunit%5D=g&uri%5B%5D%5BFAT%5D%5Blabel%5D=Fat&uri%5B%5D%5BFAT%5D%5Bquantity%5D=0.019844666187500005&uri%5B%5D%5BFAT%5D%5Bunit%5D=g&uri%5B%5D%5BFE%5D%5Blabel%5D=Iron&uri%5B%5D%5BFE%5D%5Bquantity%5D=1.0460974033125001&uri%5B%5D%5BFE%5D%5Bunit%5D=mg&uri%5B%5D%5BFIBTG%5D%5Blabel%5D=Fiber&uri%5B%5D%5BFIBTG%5D%5Bquantity%5D=0.11339809250000002&uri%5B%5D%5BFIBTG%5D%5Bunit%5D=g&uri%5B%5D%5BFOLDFE%5D%5Blabel%5D=Folate+equivalent+%28total%29&uri%5B%5D%5BFOLDFE%5D%5Bquantity%5D=2.8349523125000005&uri%5B%5D%5BFOLDFE%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BFOLFD%5D%5Blabel%5D=Folate+%28food%29&uri%5B%5D%5BFOLFD%5D%5Bquantity%5D=2.8349523125000005&uri%5B%5D%5BFOLFD%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BK%5D%5Blabel%5D=Potassium&uri%5B%5D%5BK%5D%5Bquantity%5D=51.02914162500001&uri%5B%5D%5BK%5D%5Bunit%5D=mg&uri%5B%5D%5BMG%5D%5Blabel%5D=Magnesium&uri%5B%5D%5BMG%5D%5Bquantity%5D=5.102914162500001&uri%5B%5D%5BMG%5D%5Bunit%5D=mg&uri%5B%5D%5BNA%5D%5Blabel%5D=Sodium&uri%5B%5D%5BNA%5D%5Bquantity%5D=18.143694800000002&uri%5B%5D%5BNA%5D%5Bunit%5D=mg&uri%5B%5D%5BNIA%5D%5Blabel%5D=Niacin+%28B3%29&uri%5B%5D%5BNIA%5D%5Bquantity%5D=0.06860584596250001&uri%5B%5D%5BNIA%5D%5Bunit%5D=mg&uri%5B%5D%5BP%5D%5Blabel%5D=Phosphorus&uri%5B%5D%5BP%5D%5Bquantity%5D=6.236895087500001&uri%5B%5D%5BP%5D%5Bunit%5D=mg&uri%5B%5D%5BPROCNT%5D%5Blabel%5D=Protein&uri%5B%5D%5BPROCNT%5D%5Bquantity%5D=0.119067997125&uri%5B%5D%5BPROCNT%5D%5Bunit%5D=g&uri%5B%5D%5BRIBF%5D%5Blabel%5D=Riboflavin+%28B2%29&uri%5B%5D%5BRIBF%5D%5Bquantity%5D=0.021262142343750002&uri%5B%5D%5BRIBF%5D%5Bunit%5D=mg&uri%5B%5D%5BSUGAR%5D%5Blabel%5D=Sugars&uri%5B%5D%5BSUGAR%5D%5Bquantity%5D=21.230957868312505&uri%5B%5D%5BSUGAR%5D%5Bunit%5D=g&uri%5B%5D%5BSUGAR.added%5D%5Blabel%5D=Sugars%2C+added&uri%5B%5D%5BSUGAR.added%5D%5Bquantity%5D=20.751850927500005&uri%5B%5D%5BSUGAR.added%5D%5Bunit%5D=g&uri%5B%5D%5BTHIA%5D%5Blabel%5D=Thiamin+%28B1%29&uri%5B%5D%5BTHIA%5D%5Bquantity%5D=0.043941760843750004&uri%5B%5D%5BTHIA%5D%5Bunit%5D=mg&uri%5B%5D%5BTOCPHA%5D%5Blabel%5D=Vitamin+E&uri%5B%5D%5BTOCPHA%5D%5Bquantity%5D=0.06236895087500001&uri%5B%5D%5BTOCPHA%5D%5Bunit%5D=mg&uri%5B%5D%5BVITA_RAE%5D%5Blabel%5D=Vitamin+A&uri%5B%5D%5BVITA_RAE%5D%5Bquantity%5D=0.5669904625000001&uri%5B%5D%5BVITA_RAE%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BVITB6A%5D%5Blabel%5D=Vitamin+B6&uri%5B%5D%5BVITB6A%5D%5Bquantity%5D=0.010772818787500001&uri%5B%5D%5BVITB6A%5D%5Bunit%5D=mg&uri%5B%5D%5BVITC%5D%5Blabel%5D=Vitamin+C&uri%5B%5D%5BVITC%5D%5Bquantity%5D=8.504856937500001&uri%5B%5D%5BVITC%5D%5Bunit%5D=mg&uri%5B%5D%5BVITK1%5D%5Blabel%5D=Vitamin+K&uri%5B%5D%5BVITK1%5D%5Bquantity%5D=0.17009713875000002&uri%5B%5D%5BVITK1%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BZN%5D%5Blabel%5D=Zinc&uri%5B%5D%5BZN%5D%5Bquantity%5D=0.07654371243750001&uri%5B%5D%5BZN%5D%5Bunit%5D=mg" for 127.0.0.1 at 2018-05-04 14:38:22 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>["http://www.edamam.com/ontologies/edamam.owl#recipe_e9d318b6c547e3e2adb395133c1e21cf", {"text"=>"1 ounce simple syrup", "weight"=>"28.349523125", "CA"=>{"label"=>"Calcium", "quantity"=>"7.654371243750001", "unit"=>"mg"}, "CHOCDF"=>{"label"=>"Carbs", "quantity"=>"23.121871060750003", "unit"=>"g"}, "ENERC_KCAL"=>{"label"=>"Energy", "quantity"=>"232.46608962500005", "unit"=>"kcal"}, "FAMS"=>{"label"=>"Monounsaturated", "quantity"=>"0.0022679618500000003", "unit"=>"g"}, "FAPU"=>{"label"=>"Polyunsaturated", "quantity"=>"0.00652039031875", "unit"=>"g"}, "FASAT"=>{"label"=>"Saturated", "quantity"=>"0.0022679618500000003", "unit"=>"g"}, "FAT"=>{"label"=>"Fat", "quantity"=>"0.019844666187500005", "unit"=>"g"}, "FE"=>{"label"=>"Iron", "quantity"=>"1.0460974033125001", "unit"=>"mg"}, "FIBTG"=>{"label"=>"Fiber", "quantity"=>"0.11339809250000002", "unit"=>"g"}, "FOLDFE"=>{"label"=>"Folate equivalent (total)", "quantity"=>"2.8349523125000005", "unit"=>"µg"}, "FOLFD"=>{"label"=>"Folate (food)", "quantity"=>"2.8349523125000005", "unit"=>"µg"}, "K"=>{"label"=>"Potassium", "quantity"=>"51.02914162500001", "unit"=>"mg"}, "MG"=>{"label"=>"Magnesium", "quantity"=>"5.102914162500001", "unit"=>"mg"}, "NA"=>{"label"=>"Sodium", "quantity"=>"18.143694800000002", "unit"=>"mg"}, "NIA"=>{"label"=>"Niacin (B3)", "quantity"=>"0.06860584596250001", "unit"=>"mg"}, "P"=>{"label"=>"Phosphorus", "quantity"=>"6.236895087500001", "unit"=>"mg"}, "PROCNT"=>{"label"=>"Protein", "quantity"=>"0.119067997125", "unit"=>"g"}, "RIBF"=>{"label"=>"Riboflavin (B2)", "quantity"=>"0.021262142343750002", "unit"=>"mg"}, "SUGAR"=>{"label"=>"Sugars", "quantity"=>"21.230957868312505", "unit"=>"g"}, "SUGAR.added"=>{"label"=>"Sugars, added", "quantity"=>"20.751850927500005", "unit"=>"g"}, "THIA"=>{"label"=>"Thiamin (B1)", "quantity"=>"0.043941760843750004", "unit"=>"mg"}, "TOCPHA"=>{"label"=>"Vitamin E", "quantity"=>"0.06236895087500001", "unit"=>"mg"}, "VITA_RAE"=>{"label"=>"Vitamin A", "quantity"=>"0.5669904625000001", "unit"=>"µg"}, "VITB6A"=>{"label"=>"Vitamin B6", "quantity"=>"0.010772818787500001", "unit"=>"mg"}, "VITC"=>{"label"=>"Vitamin C", "quantity"=>"8.504856937500001", "unit"=>"mg"}, "VITK1"=>{"label"=>"Vitamin K", "quantity"=>"0.17009713875000002", "unit"=>"µg"}, "ZN"=>{"label"=>"Zinc", "quantity"=>"0.07654371243750001", "unit"=>"mg"}}]}
+Completed 500 Internal Server Error in 3ms
+
+
+
+SyntaxError - formal argument cannot be an instance variable
+  def self.show_recipe(@uri)
+                           ^:
+  lib/edemam_api_wrapper.rb:18:in `'
+  app/controllers/recipes_controller.rb:15:in `show'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/83d8b849f3e1d82b/variables" for 127.0.0.1 at 2018-05-04 14:38:22 -0700
+Started GET "/recipe?uri%5B%5D=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_e9d318b6c547e3e2adb395133c1e21cf&uri%5B%5D%5B%5D%5Btext%5D=2+ounces+basil-infused+gin+%28or+gin+of+your+choice%29&uri%5B%5D%5B%5D%5Bweight%5D=56.69904625&uri%5B%5D%5B%5D%5Btext%5D=1+ounce+lime+juice&uri%5B%5D%5B%5D%5Bweight%5D=28.349523125&uri%5B%5D%5B%5D%5Btext%5D=1+ounce+simple+syrup&uri%5B%5D%5B%5D%5Bweight%5D=28.349523125&uri%5B%5D%5BCA%5D%5Blabel%5D=Calcium&uri%5B%5D%5BCA%5D%5Bquantity%5D=7.654371243750001&uri%5B%5D%5BCA%5D%5Bunit%5D=mg&uri%5B%5D%5BCHOCDF%5D%5Blabel%5D=Carbs&uri%5B%5D%5BCHOCDF%5D%5Bquantity%5D=23.121871060750003&uri%5B%5D%5BCHOCDF%5D%5Bunit%5D=g&uri%5B%5D%5BENERC_KCAL%5D%5Blabel%5D=Energy&uri%5B%5D%5BENERC_KCAL%5D%5Bquantity%5D=232.46608962500005&uri%5B%5D%5BENERC_KCAL%5D%5Bunit%5D=kcal&uri%5B%5D%5BFAMS%5D%5Blabel%5D=Monounsaturated&uri%5B%5D%5BFAMS%5D%5Bquantity%5D=0.0022679618500000003&uri%5B%5D%5BFAMS%5D%5Bunit%5D=g&uri%5B%5D%5BFAPU%5D%5Blabel%5D=Polyunsaturated&uri%5B%5D%5BFAPU%5D%5Bquantity%5D=0.00652039031875&uri%5B%5D%5BFAPU%5D%5Bunit%5D=g&uri%5B%5D%5BFASAT%5D%5Blabel%5D=Saturated&uri%5B%5D%5BFASAT%5D%5Bquantity%5D=0.0022679618500000003&uri%5B%5D%5BFASAT%5D%5Bunit%5D=g&uri%5B%5D%5BFAT%5D%5Blabel%5D=Fat&uri%5B%5D%5BFAT%5D%5Bquantity%5D=0.019844666187500005&uri%5B%5D%5BFAT%5D%5Bunit%5D=g&uri%5B%5D%5BFE%5D%5Blabel%5D=Iron&uri%5B%5D%5BFE%5D%5Bquantity%5D=1.0460974033125001&uri%5B%5D%5BFE%5D%5Bunit%5D=mg&uri%5B%5D%5BFIBTG%5D%5Blabel%5D=Fiber&uri%5B%5D%5BFIBTG%5D%5Bquantity%5D=0.11339809250000002&uri%5B%5D%5BFIBTG%5D%5Bunit%5D=g&uri%5B%5D%5BFOLDFE%5D%5Blabel%5D=Folate+equivalent+%28total%29&uri%5B%5D%5BFOLDFE%5D%5Bquantity%5D=2.8349523125000005&uri%5B%5D%5BFOLDFE%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BFOLFD%5D%5Blabel%5D=Folate+%28food%29&uri%5B%5D%5BFOLFD%5D%5Bquantity%5D=2.8349523125000005&uri%5B%5D%5BFOLFD%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BK%5D%5Blabel%5D=Potassium&uri%5B%5D%5BK%5D%5Bquantity%5D=51.02914162500001&uri%5B%5D%5BK%5D%5Bunit%5D=mg&uri%5B%5D%5BMG%5D%5Blabel%5D=Magnesium&uri%5B%5D%5BMG%5D%5Bquantity%5D=5.102914162500001&uri%5B%5D%5BMG%5D%5Bunit%5D=mg&uri%5B%5D%5BNA%5D%5Blabel%5D=Sodium&uri%5B%5D%5BNA%5D%5Bquantity%5D=18.143694800000002&uri%5B%5D%5BNA%5D%5Bunit%5D=mg&uri%5B%5D%5BNIA%5D%5Blabel%5D=Niacin+%28B3%29&uri%5B%5D%5BNIA%5D%5Bquantity%5D=0.06860584596250001&uri%5B%5D%5BNIA%5D%5Bunit%5D=mg&uri%5B%5D%5BP%5D%5Blabel%5D=Phosphorus&uri%5B%5D%5BP%5D%5Bquantity%5D=6.236895087500001&uri%5B%5D%5BP%5D%5Bunit%5D=mg&uri%5B%5D%5BPROCNT%5D%5Blabel%5D=Protein&uri%5B%5D%5BPROCNT%5D%5Bquantity%5D=0.119067997125&uri%5B%5D%5BPROCNT%5D%5Bunit%5D=g&uri%5B%5D%5BRIBF%5D%5Blabel%5D=Riboflavin+%28B2%29&uri%5B%5D%5BRIBF%5D%5Bquantity%5D=0.021262142343750002&uri%5B%5D%5BRIBF%5D%5Bunit%5D=mg&uri%5B%5D%5BSUGAR%5D%5Blabel%5D=Sugars&uri%5B%5D%5BSUGAR%5D%5Bquantity%5D=21.230957868312505&uri%5B%5D%5BSUGAR%5D%5Bunit%5D=g&uri%5B%5D%5BSUGAR.added%5D%5Blabel%5D=Sugars%2C+added&uri%5B%5D%5BSUGAR.added%5D%5Bquantity%5D=20.751850927500005&uri%5B%5D%5BSUGAR.added%5D%5Bunit%5D=g&uri%5B%5D%5BTHIA%5D%5Blabel%5D=Thiamin+%28B1%29&uri%5B%5D%5BTHIA%5D%5Bquantity%5D=0.043941760843750004&uri%5B%5D%5BTHIA%5D%5Bunit%5D=mg&uri%5B%5D%5BTOCPHA%5D%5Blabel%5D=Vitamin+E&uri%5B%5D%5BTOCPHA%5D%5Bquantity%5D=0.06236895087500001&uri%5B%5D%5BTOCPHA%5D%5Bunit%5D=mg&uri%5B%5D%5BVITA_RAE%5D%5Blabel%5D=Vitamin+A&uri%5B%5D%5BVITA_RAE%5D%5Bquantity%5D=0.5669904625000001&uri%5B%5D%5BVITA_RAE%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BVITB6A%5D%5Blabel%5D=Vitamin+B6&uri%5B%5D%5BVITB6A%5D%5Bquantity%5D=0.010772818787500001&uri%5B%5D%5BVITB6A%5D%5Bunit%5D=mg&uri%5B%5D%5BVITC%5D%5Blabel%5D=Vitamin+C&uri%5B%5D%5BVITC%5D%5Bquantity%5D=8.504856937500001&uri%5B%5D%5BVITC%5D%5Bunit%5D=mg&uri%5B%5D%5BVITK1%5D%5Blabel%5D=Vitamin+K&uri%5B%5D%5BVITK1%5D%5Bquantity%5D=0.17009713875000002&uri%5B%5D%5BVITK1%5D%5Bunit%5D=%C2%B5g&uri%5B%5D%5BZN%5D%5Blabel%5D=Zinc&uri%5B%5D%5BZN%5D%5Bquantity%5D=0.07654371243750001&uri%5B%5D%5BZN%5D%5Bunit%5D=mg" for 127.0.0.1 at 2018-05-04 14:38:37 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>["http://www.edamam.com/ontologies/edamam.owl#recipe_e9d318b6c547e3e2adb395133c1e21cf", {"text"=>"1 ounce simple syrup", "weight"=>"28.349523125", "CA"=>{"label"=>"Calcium", "quantity"=>"7.654371243750001", "unit"=>"mg"}, "CHOCDF"=>{"label"=>"Carbs", "quantity"=>"23.121871060750003", "unit"=>"g"}, "ENERC_KCAL"=>{"label"=>"Energy", "quantity"=>"232.46608962500005", "unit"=>"kcal"}, "FAMS"=>{"label"=>"Monounsaturated", "quantity"=>"0.0022679618500000003", "unit"=>"g"}, "FAPU"=>{"label"=>"Polyunsaturated", "quantity"=>"0.00652039031875", "unit"=>"g"}, "FASAT"=>{"label"=>"Saturated", "quantity"=>"0.0022679618500000003", "unit"=>"g"}, "FAT"=>{"label"=>"Fat", "quantity"=>"0.019844666187500005", "unit"=>"g"}, "FE"=>{"label"=>"Iron", "quantity"=>"1.0460974033125001", "unit"=>"mg"}, "FIBTG"=>{"label"=>"Fiber", "quantity"=>"0.11339809250000002", "unit"=>"g"}, "FOLDFE"=>{"label"=>"Folate equivalent (total)", "quantity"=>"2.8349523125000005", "unit"=>"µg"}, "FOLFD"=>{"label"=>"Folate (food)", "quantity"=>"2.8349523125000005", "unit"=>"µg"}, "K"=>{"label"=>"Potassium", "quantity"=>"51.02914162500001", "unit"=>"mg"}, "MG"=>{"label"=>"Magnesium", "quantity"=>"5.102914162500001", "unit"=>"mg"}, "NA"=>{"label"=>"Sodium", "quantity"=>"18.143694800000002", "unit"=>"mg"}, "NIA"=>{"label"=>"Niacin (B3)", "quantity"=>"0.06860584596250001", "unit"=>"mg"}, "P"=>{"label"=>"Phosphorus", "quantity"=>"6.236895087500001", "unit"=>"mg"}, "PROCNT"=>{"label"=>"Protein", "quantity"=>"0.119067997125", "unit"=>"g"}, "RIBF"=>{"label"=>"Riboflavin (B2)", "quantity"=>"0.021262142343750002", "unit"=>"mg"}, "SUGAR"=>{"label"=>"Sugars", "quantity"=>"21.230957868312505", "unit"=>"g"}, "SUGAR.added"=>{"label"=>"Sugars, added", "quantity"=>"20.751850927500005", "unit"=>"g"}, "THIA"=>{"label"=>"Thiamin (B1)", "quantity"=>"0.043941760843750004", "unit"=>"mg"}, "TOCPHA"=>{"label"=>"Vitamin E", "quantity"=>"0.06236895087500001", "unit"=>"mg"}, "VITA_RAE"=>{"label"=>"Vitamin A", "quantity"=>"0.5669904625000001", "unit"=>"µg"}, "VITB6A"=>{"label"=>"Vitamin B6", "quantity"=>"0.010772818787500001", "unit"=>"mg"}, "VITC"=>{"label"=>"Vitamin C", "quantity"=>"8.504856937500001", "unit"=>"mg"}, "VITK1"=>{"label"=>"Vitamin K", "quantity"=>"0.17009713875000002", "unit"=>"µg"}, "ZN"=>{"label"=>"Zinc", "quantity"=>"0.07654371243750001", "unit"=>"mg"}}]}
+Completed 500 Internal Server Error in 4ms
+
+
+
+NoMethodError - undefined method `gsub' for #<Array:0x007ff091037e40>:
+  lib/edemam_api_wrapper.rb:19:in `show_recipe'
+  app/controllers/recipes_controller.rb:15:in `show'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/197b0076e10f98e9/variables" for 127.0.0.1 at 2018-05-04 14:38:38 -0700
+Started GET "/index?utf8=%E2%9C%93&query=basil&commit=Search" for 127.0.0.1 at 2018-05-04 14:40:18 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"basil", "commit"=>"Search"}
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 1065ms (Views: 151.1ms)
+
+
+Started GET "/index?utf8=%E2%9C%93&query=basil&commit=Search" for 127.0.0.1 at 2018-05-04 14:42:37 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"basil", "commit"=>"Search"}
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 1368ms (Views: 158.6ms)
+
+
+Started GET "/index?utf8=%E2%9C%93&query=basil&commit=Search" for 127.0.0.1 at 2018-05-04 14:44:02 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"basil", "commit"=>"Search"}
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (11.0ms)
+Completed 500 Internal Server Error in 152765ms
+
+
+
+NoMethodError - undefined method `uri' for nil:NilClass:
+  app/views/recipes/index.html.erb:9:in `block in _app_views_recipes_index_html_erb__1852576998875679659_70335533208060'
+  app/views/recipes/index.html.erb:5:in `_app_views_recipes_index_html_erb__1852576998875679659_70335533208060'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/0d508a981bb4e136/variables" for 127.0.0.1 at 2018-05-04 14:46:35 -0700
+Started GET "/index?utf8=%E2%9C%93&query=basil&commit=Search" for 127.0.0.1 at 2018-05-04 14:46:40 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"basil", "commit"=>"Search"}
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 92263ms (Views: 202.6ms)
+
+
+Started GET "/index?utf8=%E2%9C%93&query=basil&commit=Search" for 127.0.0.1 at 2018-05-04 14:48:29 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"basil", "commit"=>"Search"}
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 1976ms (Views: 677.4ms)
+
+
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_e9d318b6c547e3e2adb395133c1e21cf" for 127.0.0.1 at 2018-05-04 14:48:38 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_e9d318b6c547e3e2adb395133c1e21cf"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 637ms (Views: 215.5ms)
+
+
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_e9d318b6c547e3e2adb395133c1e21cf" for 127.0.0.1 at 2018-05-04 14:49:08 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_e9d318b6c547e3e2adb395133c1e21cf"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (6.4ms)
+Completed 500 Internal Server Error in 451ms
+
+
+
+NoMethodError - undefined method `text' for #<Array:0x007fc08ca4a2c8>:
+  app/views/recipes/show.html.erb:5:in `_app_views_recipes_show_html_erb___1504929081125695549_70232485071120'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/b23d52e7ba01f090/variables" for 127.0.0.1 at 2018-05-04 14:49:09 -0700
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_e9d318b6c547e3e2adb395133c1e21cf" for 127.0.0.1 at 2018-05-04 14:50:28 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_e9d318b6c547e3e2adb395133c1e21cf"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 435ms
+
+
+
+NoMethodError - undefined method `text' for #<Hash:0x007fc087295ac8>:
+  app/views/recipes/show.html.erb:7:in `block in _app_views_recipes_show_html_erb___1504929081125695549_70232439363940'
+  app/views/recipes/show.html.erb:6:in `_app_views_recipes_show_html_erb___1504929081125695549_70232439363940'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/ab8324a944249cf6/variables" for 127.0.0.1 at 2018-05-04 14:50:29 -0700
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_e9d318b6c547e3e2adb395133c1e21cf" for 127.0.0.1 at 2018-05-04 14:50:54 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_e9d318b6c547e3e2adb395133c1e21cf"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 537ms (Views: 160.2ms)
+
+
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_e9d318b6c547e3e2adb395133c1e21cf" for 127.0.0.1 at 2018-05-04 14:51:37 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_e9d318b6c547e3e2adb395133c1e21cf"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 643ms (Views: 134.5ms)
+
+
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_e9d318b6c547e3e2adb395133c1e21cf" for 127.0.0.1 at 2018-05-04 14:56:41 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_e9d318b6c547e3e2adb395133c1e21cf"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 448ms
+
+
+
+SyntaxError - syntax error, unexpected ')', expecting '='
+uantity'], nutrients['unit'] );@output_buffer.safe_append='
+                              ^
+/Users/analisasutherland/Documents/Ada_Developers_Academy/May_2018/Week_1/api-muncher/app/views/recipes/show.html.erb:19: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/analisasutherland/Documents/Ada_Developers_Academy/May_2018/Week_1/api-muncher/app/views/recipes/show.html.erb:21: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^:
+  app/views/recipes/show.html.erb:13:in `'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/83522fc3f1cbbf30/variables" for 127.0.0.1 at 2018-05-04 14:56:42 -0700
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_e9d318b6c547e3e2adb395133c1e21cf" for 127.0.0.1 at 2018-05-04 14:57:01 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_e9d318b6c547e3e2adb395133c1e21cf"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 1102ms
+
+
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting ')'
+( nutrients['label'] nutrients['quantity'] nutrients['unit']
+                              ^
+/Users/analisasutherland/Documents/Ada_Developers_Academy/May_2018/Week_1/api-muncher/app/views/recipes/show.html.erb:13: syntax error, unexpected tIDENTIFIER, expecting ')'
+utrients['quantity'] nutrients['unit'] );@output_buffer.safe
+                              ^
+/Users/analisasutherland/Documents/Ada_Developers_Academy/May_2018/Week_1/api-muncher/app/views/recipes/show.html.erb:19: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^:
+  app/views/recipes/show.html.erb:13:in `'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/55c7140277cf74db/variables" for 127.0.0.1 at 2018-05-04 14:57:02 -0700
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_e9d318b6c547e3e2adb395133c1e21cf" for 127.0.0.1 at 2018-05-04 14:57:40 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_e9d318b6c547e3e2adb395133c1e21cf"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 457ms
+
+
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^:
+  app/views/recipes/show.html.erb:19:in `'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/4b7dd7d54ab5e0d3/variables" for 127.0.0.1 at 2018-05-04 14:57:41 -0700
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_e9d318b6c547e3e2adb395133c1e21cf" for 127.0.0.1 at 2018-05-04 14:58:07 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_e9d318b6c547e3e2adb395133c1e21cf"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 457ms
+
+
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^:
+  app/views/recipes/show.html.erb:19:in `'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/f7e6d4fa2c51c9cd/variables" for 127.0.0.1 at 2018-05-04 14:58:08 -0700
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_e9d318b6c547e3e2adb395133c1e21cf" for 127.0.0.1 at 2018-05-04 14:59:12 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_e9d318b6c547e3e2adb395133c1e21cf"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 406ms
+
+
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^:
+  app/views/recipes/show.html.erb:19:in `'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/f1e6c493381382e7/variables" for 127.0.0.1 at 2018-05-04 14:59:13 -0700
+Started GET "/index?utf8=%E2%9C%93&query=basil&commit=Search" for 127.0.0.1 at 2018-05-04 15:00:07 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"basil", "commit"=>"Search"}
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 1097ms (Views: 107.4ms)
+
+
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_e9d318b6c547e3e2adb395133c1e21cf" for 127.0.0.1 at 2018-05-04 15:00:10 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_e9d318b6c547e3e2adb395133c1e21cf"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 399ms
+
+
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^:
+  app/views/recipes/show.html.erb:21:in `'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/757ffa165b0b5ee9/variables" for 127.0.0.1 at 2018-05-04 15:00:11 -0700
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_e9d318b6c547e3e2adb395133c1e21cf" for 127.0.0.1 at 2018-05-04 15:00:27 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_e9d318b6c547e3e2adb395133c1e21cf"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (338.9ms)
+Completed 500 Internal Server Error in 796ms
+
+
+
+NameError - undefined local variable or method `nutrients' for #<#<Class:0x007fc0874ff570>:0x007fc0837d7738>
+Did you mean?  nutrient:
+  app/views/recipes/show.html.erb:13:in `block in _app_views_recipes_show_html_erb___1504929081125695549_70232408244420'
+  app/views/recipes/show.html.erb:11:in `_app_views_recipes_show_html_erb___1504929081125695549_70232408244420'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/5242de1e811e9ceb/variables" for 127.0.0.1 at 2018-05-04 15:00:28 -0700
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_e9d318b6c547e3e2adb395133c1e21cf" for 127.0.0.1 at 2018-05-04 15:00:38 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_e9d318b6c547e3e2adb395133c1e21cf"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 541ms
+
+
+
+TypeError - no implicit conversion of String into Integer:
+  app/views/recipes/show.html.erb:13:in `block in _app_views_recipes_show_html_erb___1504929081125695549_70232406908400'
+  app/views/recipes/show.html.erb:11:in `_app_views_recipes_show_html_erb___1504929081125695549_70232406908400'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/d7c9825e2b56ddf0/variables" for 127.0.0.1 at 2018-05-04 15:00:39 -0700
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_e9d318b6c547e3e2adb395133c1e21cf" for 127.0.0.1 at 2018-05-04 15:01:18 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_e9d318b6c547e3e2adb395133c1e21cf"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 697ms
+
+
+
+TypeError - no implicit conversion of String into Integer:
+  app/views/recipes/show.html.erb:13:in `block in _app_views_recipes_show_html_erb___1504929081125695549_70232486794060'
+  app/views/recipes/show.html.erb:11:in `_app_views_recipes_show_html_erb___1504929081125695549_70232486794060'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/135a65449660e496/variables" for 127.0.0.1 at 2018-05-04 15:01:19 -0700
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_e9d318b6c547e3e2adb395133c1e21cf" for 127.0.0.1 at 2018-05-04 15:04:10 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_e9d318b6c547e3e2adb395133c1e21cf"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 494ms
+
+
+
+TypeError - no implicit conversion of String into Integer:
+  app/views/recipes/show.html.erb:14:in `block in _app_views_recipes_show_html_erb___1504929081125695549_70232500960480'
+  app/views/recipes/show.html.erb:12:in `_app_views_recipes_show_html_erb___1504929081125695549_70232500960480'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/e33416bd596eb079/variables" for 127.0.0.1 at 2018-05-04 15:04:11 -0700
+Started GET "/" for 127.0.0.1 at 2018-05-04 15:04:13 -0700
+Processing by RecipesController#search as HTML
+  Rendering recipes/search.html.erb within layouts/application
+  Rendered recipes/search.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 141ms (Views: 138.7ms)
+
+
+Started GET "/index?utf8=%E2%9C%93&query=basil&commit=Search" for 127.0.0.1 at 2018-05-04 15:04:17 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"basil", "commit"=>"Search"}
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 874ms (Views: 135.4ms)
+
+
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_e9d318b6c547e3e2adb395133c1e21cf" for 127.0.0.1 at 2018-05-04 15:04:19 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_e9d318b6c547e3e2adb395133c1e21cf"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 416ms
+
+
+
+TypeError - no implicit conversion of String into Integer:
+  app/views/recipes/show.html.erb:14:in `block in _app_views_recipes_show_html_erb___1504929081125695549_70232446193760'
+  app/views/recipes/show.html.erb:12:in `_app_views_recipes_show_html_erb___1504929081125695549_70232446193760'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/38c4034221813dc8/variables" for 127.0.0.1 at 2018-05-04 15:04:20 -0700
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_e9d318b6c547e3e2adb395133c1e21cf" for 127.0.0.1 at 2018-05-04 15:04:34 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_e9d318b6c547e3e2adb395133c1e21cf"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 634ms
+
+
+
+TypeError - no implicit conversion of String into Integer:
+  app/views/recipes/show.html.erb:14:in `block in _app_views_recipes_show_html_erb___1504929081125695549_70232501266140'
+  app/views/recipes/show.html.erb:12:in `_app_views_recipes_show_html_erb___1504929081125695549_70232501266140'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/14d5539d0f699625/variables" for 127.0.0.1 at 2018-05-04 15:04:35 -0700
+Started GET "/" for 127.0.0.1 at 2018-05-04 15:04:46 -0700
+Processing by RecipesController#search as HTML
+  Rendering recipes/search.html.erb within layouts/application
+  Rendered recipes/search.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 127ms (Views: 123.8ms)
+
+
+Started GET "/index?utf8=%E2%9C%93&query=cucumber&commit=Search" for 127.0.0.1 at 2018-05-04 15:04:52 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"cucumber", "commit"=>"Search"}
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 991ms (Views: 103.3ms)
+
+
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_da7ed7a7eeb2c7c8547a20c6fb45aa4c" for 127.0.0.1 at 2018-05-04 15:04:55 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_da7ed7a7eeb2c7c8547a20c6fb45aa4c"}
+Completed 500 Internal Server Error in 379ms
+
+
+
+ArgumentError - No name has been provided for this recipe:
+  lib/recipe.rb:6:in `initialize'
+  lib/recipe.rb:19:in `format_api'
+  lib/edemam_api_wrapper.rb:23:in `show_recipe'
+  app/controllers/recipes_controller.rb:15:in `show'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/f677685a6d1cdb0a/variables" for 127.0.0.1 at 2018-05-04 15:04:55 -0700
+Started POST "/__better_errors/f677685a6d1cdb0a/eval" for 127.0.0.1 at 2018-05-04 15:05:07 -0700
+Started POST "/__better_errors/f677685a6d1cdb0a/eval" for 127.0.0.1 at 2018-05-04 15:05:10 -0700
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_da7ed7a7eeb2c7c8547a20c6fb45aa4c" for 127.0.0.1 at 2018-05-04 15:05:38 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_da7ed7a7eeb2c7c8547a20c6fb45aa4c"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 461ms
+
+
+
+TypeError - no implicit conversion of String into Integer:
+  app/views/recipes/show.html.erb:13:in `block in _app_views_recipes_show_html_erb___1504929081125695549_70232411748320'
+  app/views/recipes/show.html.erb:11:in `_app_views_recipes_show_html_erb___1504929081125695549_70232411748320'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/60716964fbcb2f50/variables" for 127.0.0.1 at 2018-05-04 15:05:39 -0700
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_da7ed7a7eeb2c7c8547a20c6fb45aa4c" for 127.0.0.1 at 2018-05-04 15:05:48 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_da7ed7a7eeb2c7c8547a20c6fb45aa4c"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 493ms (Views: 115.2ms)
+
+
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_da7ed7a7eeb2c7c8547a20c6fb45aa4c" for 127.0.0.1 at 2018-05-04 15:06:02 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_da7ed7a7eeb2c7c8547a20c6fb45aa4c"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 521ms
+
+
+
+NoMethodError - undefined method `name' for #<Recipe:0x007fc08376e788>:
+  app/views/recipes/show.html.erb:3:in `_app_views_recipes_show_html_erb___1504929081125695549_70232408025800'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/a02d36b331cc3902/variables" for 127.0.0.1 at 2018-05-04 15:06:03 -0700
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_da7ed7a7eeb2c7c8547a20c6fb45aa4c" for 127.0.0.1 at 2018-05-04 15:06:11 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_da7ed7a7eeb2c7c8547a20c6fb45aa4c"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 513ms (Views: 118.2ms)
+
+
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_da7ed7a7eeb2c7c8547a20c6fb45aa4c" for 127.0.0.1 at 2018-05-04 15:06:48 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_da7ed7a7eeb2c7c8547a20c6fb45aa4c"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 505ms (Views: 102.2ms)
+
+
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_da7ed7a7eeb2c7c8547a20c6fb45aa4c" for 127.0.0.1 at 2018-05-04 15:06:53 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_da7ed7a7eeb2c7c8547a20c6fb45aa4c"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 548ms (Views: 114.1ms)
+
+
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_da7ed7a7eeb2c7c8547a20c6fb45aa4c" for 127.0.0.1 at 2018-05-04 15:07:20 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_da7ed7a7eeb2c7c8547a20c6fb45aa4c"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 655ms (Views: 127.4ms)
+
+
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_da7ed7a7eeb2c7c8547a20c6fb45aa4c" for 127.0.0.1 at 2018-05-04 15:11:16 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_da7ed7a7eeb2c7c8547a20c6fb45aa4c"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 623ms (Views: 112.6ms)
+
+
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_da7ed7a7eeb2c7c8547a20c6fb45aa4c" for 127.0.0.1 at 2018-05-04 15:11:35 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_da7ed7a7eeb2c7c8547a20c6fb45aa4c"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 603ms (Views: 114.7ms)
+
+
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_da7ed7a7eeb2c7c8547a20c6fb45aa4c" for 127.0.0.1 at 2018-05-04 15:38:39 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_da7ed7a7eeb2c7c8547a20c6fb45aa4c"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 616ms
+
+
+
+NoMethodError - undefined method `each' for nil:NilClass:
+  app/views/recipes/show.html.erb:10:in `_app_views_recipes_show_html_erb___1504929081125695549_70232426415020'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/fc2de86d5a76b08d/variables" for 127.0.0.1 at 2018-05-04 15:38:40 -0700
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_da7ed7a7eeb2c7c8547a20c6fb45aa4c" for 127.0.0.1 at 2018-05-04 15:38:43 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_da7ed7a7eeb2c7c8547a20c6fb45aa4c"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 582ms
+
+
+
+NoMethodError - undefined method `each' for nil:NilClass:
+  app/views/recipes/show.html.erb:10:in `_app_views_recipes_show_html_erb___1504929081125695549_70232485878960'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/9a50fbf7102b814f/variables" for 127.0.0.1 at 2018-05-04 15:38:43 -0700
+Started GET "/" for 127.0.0.1 at 2018-05-04 15:39:00 -0700
+Processing by RecipesController#search as HTML
+  Rendering recipes/search.html.erb within layouts/application
+  Rendered recipes/search.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 140ms (Views: 130.0ms)
+
+
+Started GET "/index?utf8=%E2%9C%93&query=lemon&commit=Search" for 127.0.0.1 at 2018-05-04 15:39:04 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"lemon", "commit"=>"Search"}
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 1174ms (Views: 100.0ms)
+
+
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_2fb391cceeec3d82920a2035f1849d72" for 127.0.0.1 at 2018-05-04 15:39:16 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_2fb391cceeec3d82920a2035f1849d72"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 504ms (Views: 108.9ms)
+
+
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_2fb391cceeec3d82920a2035f1849d72" for 127.0.0.1 at 2018-05-04 15:42:21 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_2fb391cceeec3d82920a2035f1849d72"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 561ms (Views: 116.4ms)
+
+
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_2fb391cceeec3d82920a2035f1849d72" for 127.0.0.1 at 2018-05-04 15:46:12 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_2fb391cceeec3d82920a2035f1849d72"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 976ms
+
+
+
+SyntaxError - void value expression
+uffer.append=( return label );@output_buffer.safe_append='
+                              ^:
+  app/views/recipes/show.html.erb:24:in `'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/a76a4ac45ab35480/variables" for 127.0.0.1 at 2018-05-04 15:46:13 -0700
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_2fb391cceeec3d82920a2035f1849d72" for 127.0.0.1 at 2018-05-04 15:46:34 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_2fb391cceeec3d82920a2035f1849d72"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 575ms (Views: 123.2ms)
+
+
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_2fb391cceeec3d82920a2035f1849d72" for 127.0.0.1 at 2018-05-04 15:47:13 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_2fb391cceeec3d82920a2035f1849d72"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (352.2ms)
+Completed 500 Internal Server Error in 818ms
+
+
+
+NameError - undefined local variable or method `healthLabels' for #<#<Class:0x007fc0837cc590>:0x007fc083dede10>:
+  app/views/recipes/show.html.erb:24:in `block in _app_views_recipes_show_html_erb___1504929081125695549_70232411438160'
+  app/views/recipes/show.html.erb:22:in `_app_views_recipes_show_html_erb___1504929081125695549_70232411438160'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/77b5a96b15ab4f13/variables" for 127.0.0.1 at 2018-05-04 15:47:14 -0700
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_2fb391cceeec3d82920a2035f1849d72" for 127.0.0.1 at 2018-05-04 15:49:49 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_2fb391cceeec3d82920a2035f1849d72"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 617ms (Views: 213.6ms)
+
+
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_2fb391cceeec3d82920a2035f1849d72" for 127.0.0.1 at 2018-05-04 15:52:48 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_2fb391cceeec3d82920a2035f1849d72"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 874ms (Views: 112.2ms)
+
+
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_2fb391cceeec3d82920a2035f1849d72" for 127.0.0.1 at 2018-05-04 15:54:00 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_2fb391cceeec3d82920a2035f1849d72"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 477ms
+
+
+
+NoMethodError - undefined method `recipe_url' for #<Recipe:0x007fc08cb273a8>:
+  app/views/recipes/show.html.erb:31:in `_app_views_recipes_show_html_erb___1504929081125695549_70232485474240'
+  app/controllers/recipes_controller.rb:22:in `catch_api_error'
+
+Started POST "/__better_errors/6ac1e0685211a024/variables" for 127.0.0.1 at 2018-05-04 15:54:01 -0700
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_2fb391cceeec3d82920a2035f1849d72" for 127.0.0.1 at 2018-05-04 15:54:25 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_2fb391cceeec3d82920a2035f1849d72"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 593ms (Views: 97.2ms)
+
+
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_2fb391cceeec3d82920a2035f1849d72" for 127.0.0.1 at 2018-05-04 15:56:08 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_2fb391cceeec3d82920a2035f1849d72"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 489ms (Views: 93.2ms)
+
+
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_2fb391cceeec3d82920a2035f1849d72" for 127.0.0.1 at 2018-05-04 15:57:36 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_2fb391cceeec3d82920a2035f1849d72"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 602ms (Views: 121.6ms)
+
+
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_2fb391cceeec3d82920a2035f1849d72" for 127.0.0.1 at 2018-05-04 15:57:55 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_2fb391cceeec3d82920a2035f1849d72"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 618ms (Views: 116.9ms)
+
+

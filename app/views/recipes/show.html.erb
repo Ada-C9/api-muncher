@@ -1,0 +1,34 @@
+<h3>TEST AGAIN</h3>
+<%= @recipe.label %>
+<div class= "show_img">
+  <%= link_to image_tag(@recipe.image, alt: "recipe-pic", class: "recipe-pic") %>
+</div>
+<div class= "product-info-container">
+  <h2>Details:</h2>
+  <p class= "ingredients-info">
+    Ingredients: <span class="plain-font">
+      <% @recipe.ingredients.each do |ingredient|%>
+      <li>
+        <%= ingredient['text'] %>
+      </li>
+      <% end %>
+    </span>
+  </p>
+  <p class="nutrients-info">
+    Recipe Facts: <span class="plain-font">
+      <li>
+        Calories:<%= @recipe.calories.round %>
+      </li>
+      <% @recipe.healthLabels.each do |label| %>
+      <li>
+        <%= label %>
+      </li>
+      <% end %>
+    </span>
+  </p>
+  <p class="original-url">
+    Recipe Source: <span class="plain-font">
+      <%= @recipe.recipe_url %>
+    </span>
+  </p>
+</div>

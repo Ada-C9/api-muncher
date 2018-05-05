@@ -11,9 +11,9 @@ class RecipesController < ApplicationController
   end
 
   # Show a found recipes details
-  # def show
-  #
-  # end
+  def show
+  @recipe = EdemamApiWrapper.show_recipe(params[:uri])
+  end
 
   private
   def catch_api_error

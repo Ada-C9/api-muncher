@@ -15,6 +15,14 @@ class EdemamApiWrapper
     end
   end
 
+  def self.show_recipe(uri)
+    encoded_uri = URI.encode(uri)
+    url = BASE_URL + "/search?r=#{encoded_uri}&app_id=#{API_ID}&app_key=#{TOKEN}"
+    response = HTTParty.get(url)
+
+    return Recipe.format_api(response[0])
+  end
+
   private
   def self.raise_on_error(response)
     unless response["hits"]

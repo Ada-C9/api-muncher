@@ -23,7 +23,7 @@ describe Recipe do
     @source = "Serious Eats"
   end
 
-  it "Must initialize with the required parameters (uri, label, url) and optional variables ( image, source, ingredientLines, dietLabels)" do
+  it "can initialize with the required parameters (uri, label, url) and optional variables ( image, source, ingredientLines, dietLabels)" do
     recipe = Recipe.new(@uri, @label, @url, options = { ingredientLines: @ingredientLines, dietLabels: @dietLabels, image: @image, source: @source})
 
     recipe.uri.must_equal @uri
@@ -36,7 +36,8 @@ describe Recipe do
     recipe.source.must_equal @source
   end
 
-  it "Cannot be initialized without the required parameters" do
+  it "cannot be initialized without the required parameters (uri, label, url)" do
+
     proc {
       Recipe.new()
     }.must_raise ArgumentError

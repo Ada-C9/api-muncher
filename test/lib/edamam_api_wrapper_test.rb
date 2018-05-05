@@ -19,7 +19,7 @@ describe EdamamApiWrapper do
       end
     end #it gives a list of recipes
 
-    it 'will return an empty array for a bad request' do
+    it 'returns an empty array for a bogus search term so the recipe DNE in Edamam' do
       VCR.use_cassette('recipes') do
         recipes = EdamamApiWrapper.list_of_recipes(@bogus_search_term)
 
@@ -41,5 +41,30 @@ describe EdamamApiWrapper do
 
   end # describe list_of_recipes
 
+  describe 'show recipe' do
+    it 'returns a valid recipe with a valid recipe uri' do
+      VCR.use_cassette("recipes") do
+        uri = "edb6a25bfb2aa0613ccb2c2f545b30a5"
+        recipe = EdamamApiWrapper.show_recipe(uri)
+      end
+
+    end
+
+    it 'returns an error if bogus arguments' do
+      VCR.use_cassette("recipes") do
+        proc {
+          EdamamApiWrapper.show_recipe
+        }.must_raise ArgumentError
+      end
+    end
+
+    it 'returns nil with a bogus recipe uri' do
+      VCR.use_cassette("recipes") do
+        recipe_found = EdamamApiWrapper.show_recipe("99999999999999999999999999999")
+
+        recipe_found.must_be_nil
+      end
+    end
+  end # describe show recipes
 
 end # class EdamamApiWrapper

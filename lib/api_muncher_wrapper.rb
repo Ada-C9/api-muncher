@@ -8,7 +8,7 @@ class ApiMuncherWrapper
 
   def self.search_recipes(search)
 
-    url = BASE_URL + "?q=#{search}&app_id=#{APP_ID}&app_key=#{APP_KEY}"
+    url = BASE_URL + "?q=#{search}&app_id=#{APP_ID}&app_key=#{APP_KEY}&from=0&to=30"
     data = HTTParty.get(url)
 
     if data["hits"]

@@ -2,13 +2,18 @@
 <section class="recipes-list">
   <h1>Search : <%= params[:search] %></h1>
 
-  <%@recipes.each do |recipe|%>
-  <%= link_to recipe_path(recipe.id) do %>
-   <article class="recipe">
-     <%= image_tag recipe.image, alt:"#{recipe.label}" %>
-     <p><%=recipe.label.titleize %></p>
-     <p><%=recipe.source%></p>
-   </article>
-   <% end %>
- <% end %>
+  <ul>
+    <%@recipes_pag.each do |recipe|%>
+    <li>
+      <%= link_to recipe_path(recipe.id) do %>
+      <article class="recipe">
+        <%= image_tag recipe.image, alt:"#{recipe.label}" %>
+        <p><%=recipe.label.titleize %></p>
+        <p><%=recipe.source%></p>
+      </article>
+      <% end %>
+    </li>
+    <% end %>
+  </ul>
+  <%= will_paginate @recipes_pag %>
 </section>

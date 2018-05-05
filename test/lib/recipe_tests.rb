@@ -38,6 +38,9 @@ describe 'Recipe' do
     end
 
     it "raises an error if missing data" do
+      @mock_data['label'] = nil
+
+      proc{Recipe.from_api(@mock_data)}.must_raise
 
     end
   end

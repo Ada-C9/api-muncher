@@ -28,16 +28,12 @@ class EdamamApiWrapper
     uri_id = get_uri_id(recipe_uri_id)
     url = BASE_URL + "?r=" + format_url(SINGLE_RECIPE_URL) +  uri_id + "&app_id=#{ APP_ID }" + "&app_key=#{ APP_KEY }"
     data = HTTParty.get(url)
-    puts "Data (first) from show_recipe: #{ data.first }"
-    puts "Data from show_recipe: #{ data }"
     recipe = create_recipe(data.first)
-    puts "Recipe from show_recipe: #{ recipe }"
     return recipe
   end
 
   private
   def self.create_recipe(api_params)
-    puts "API Params from create recipe: #{ api_params }"
     return Recipe.new(
       api_params['label'],
       api_params['image'],

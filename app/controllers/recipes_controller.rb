@@ -1,4 +1,3 @@
-require 'EdamamWrapper'
 require 'will_paginate/array'
 
 class RecipesController < ApplicationController

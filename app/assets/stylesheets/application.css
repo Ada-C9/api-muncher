@@ -69,13 +69,12 @@ width: 100%;
 
  .pagination{
   padding-left:31%;
+  margin-bottom: 50px;
  }
 
  .pagination li{
     font-size: 20px;
  }
-
-
 
 .item-header{
   color:white;

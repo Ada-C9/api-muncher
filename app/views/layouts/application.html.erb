@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://developer.edamam.com/attribution/badge.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC" rel="stylesheet">
+
+    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <% if flash[:result_text] %>
+  <section class="callout <%= flash[:status] %>">
+    <p><%= flash[:status] == :alert ? "A problem occurred: " : "" %><%= flash[:result_text] %></>
+    </section>
+    <% end %>
+
+    <%= yield %>
+
+    <footer>
+      <div id="edamam-badge" data-color="white"></div>
+    <footer>
+  </body>
+
+</html>

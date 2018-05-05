@@ -1,0 +1,27 @@
+<header>
+  <h4 class='muncher'><%= link_to 'muncher', root_path%></h4>
+  <section class='header-bar'>
+  <%= form_tag muncher_index_path, method: :get do %>
+    <%= text_field_tag(:search) %>
+    <%= submit_tag("Search")  %>
+
+  <% end %>
+</section>
+</header>
+
+<h4 class='results'>results for "<%= params[:search] %>"</h4>
+<section class='recipes'>
+
+<% if @recipes %>
+    <ul>
+      <% @recipes.each do |recipe| %>
+        <li>
+          <img src="<%= recipe.image %>" alt="recipe photo">
+          <p><%= link_to recipe.name, muncher_path(recipe.get_id) %></p>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+</section>
+
+<%= will_paginate @recipes %>

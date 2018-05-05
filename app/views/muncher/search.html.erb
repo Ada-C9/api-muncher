@@ -1,0 +1,14 @@
+<header class='search-head'>
+
+</header>
+<section class='homepage'>
+<h1>muncher</h1>
+
+
+<%= form_tag muncher_index_path, method: :get do %>
+  <%= label_tag(:search, "Find your flavor...") %>
+  <%= text_field_tag(:search) %>
+  <%= submit_tag("Search") %>
+
+<% end %>
+</section>

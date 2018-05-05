@@ -1,0 +1,50 @@
+<header>
+  <h4 class='muncher'><%= link_to 'muncher', root_path%></h4>
+  <section class='header-bar'>
+  <%= form_tag muncher_index_path, method: :get do %>
+    <%= text_field_tag(:search) %>
+    <%= submit_tag("Search") %>
+
+  <% end %>
+  </section>
+</header>
+
+<h3><%= link_to @recipe.name, @recipe.url  %></h3>
+<h4 class='byline'>by <%= @recipe.source %></h4>
+
+
+<section class='show-page'>
+  <div class='image-section'>
+  <img src="<%= @recipe.image %>" alt="recipe photo">
+  </div>
+
+  <div class='labels'>
+    <div class='nutrition'>
+    <p>dietary labels</p>
+    <ul>
+      <% if @recipe.dietary_info %>
+      <% @recipe.dietary_info.each do |label| %>
+      <li>
+        <%= label  %>
+      </li>
+      <% end %>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class='ingredients'>
+    <p>ingredients</p>
+    <ul>
+      <% @recipe.ingredients.each do |label| %>
+      <li>
+        <%= label  %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+</section>
+
+<footer>
+  <div id="edamam-badge" data-color="white"></div>
+<footer>

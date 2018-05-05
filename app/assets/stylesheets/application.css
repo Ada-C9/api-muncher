@@ -168,7 +168,7 @@ a:hover {
 
 /*--------- mobile ---------*/
 @media only screen and (max-width: 650px) {
-  .home a {
+  .home h1 a {
     font-size: 3rem;
   }
 

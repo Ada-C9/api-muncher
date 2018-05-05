@@ -47,7 +47,6 @@
 
 #main-title{
   text-align:center;
-  font-family: blippo;
   color: white;
   font-weight: bold;
 }
@@ -57,11 +56,13 @@ width: 100%;
 }
 
  #food-items{
-   display: grid;
-   grid-template-columns: auto auto auto;
-   padding-left: 100px;
-  list-style-type: none;
+   display: flex;
+   flex-flow: wrap;
+   list-style-type: none;
+   padding-left: 30px;
  }
+
+
 
  #recipe-title{
    text-align:left;

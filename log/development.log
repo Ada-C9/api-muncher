@@ -2435,3 +2435,140 @@ Processing by RecipesController#show as HTML
 Completed 200 OK in 618ms (Views: 116.9ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-05-05 16:11:57 -0700
+Processing by RecipesController#search as HTML
+  Rendering recipes/search.html.erb within layouts/application
+  Rendered recipes/search.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 1201ms (Views: 806.7ms)
+
+
+Started GET "/index?utf8=%E2%9C%93&query=blueberry&commit=Search" for 127.0.0.1 at 2018-05-05 16:12:06 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"blueberry", "commit"=>"Search"}
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 1215ms (Views: 125.6ms)
+
+
+Started GET "/index?utf8=%E2%9C%93&query=blueberry&commit=Search" for 127.0.0.1 at 2018-05-05 16:12:52 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"blueberry", "commit"=>"Search"}
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 1051ms (Views: 148.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-05 16:15:31 -0700
+Processing by RecipesController#search as HTML
+  Rendering recipes/search.html.erb within layouts/application
+  Rendered recipes/search.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 117ms (Views: 114.5ms)
+
+
+Started GET "/index?utf8=%E2%9C%93&query=cucmber&commit=Search" for 127.0.0.1 at 2018-05-05 16:15:36 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"cucmber", "commit"=>"Search"}
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 670ms (Views: 125.7ms)
+
+
+Started GET "/index?utf8=%E2%9C%93&query=cucumber&commit=Search" for 127.0.0.1 at 2018-05-05 16:15:48 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"cucumber", "commit"=>"Search"}
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 1310ms (Views: 115.4ms)
+
+
+Started GET "/index?utf8=%E2%9C%93&query=cucumber&commit=Search" for 127.0.0.1 at 2018-05-05 16:17:57 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"cucumber", "commit"=>"Search"}
+Completed 500 Internal Server Error in 977ms
+
+
+
+NoMethodError - undefined method `where' for #<Array:0x007fc7fab45400>:
+  app/controllers/recipes_controller.rb:7:in `index'
+  app/controllers/recipes_controller.rb:19:in `catch_api_error'
+
+Started POST "/__better_errors/293bd213efa69540/variables" for 127.0.0.1 at 2018-05-05 16:17:58 -0700
+Started GET "/index?utf8=%E2%9C%93&query=cucumber&commit=Search" for 127.0.0.1 at 2018-05-05 16:18:17 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"cucumber", "commit"=>"Search"}
+Completed 500 Internal Server Error in 1178ms
+
+
+
+NoMethodError - undefined method `paginate' for #<Array:0x007fc803673658>:
+  app/controllers/recipes_controller.rb:7:in `index'
+  app/controllers/recipes_controller.rb:19:in `catch_api_error'
+
+Started POST "/__better_errors/c29f6f9944f09bcb/variables" for 127.0.0.1 at 2018-05-05 16:18:18 -0700
+Started GET "/index?utf8=%E2%9C%93&query=cucumber&commit=Search" for 127.0.0.1 at 2018-05-05 16:19:43 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"cucumber", "commit"=>"Search"}
+Completed 500 Internal Server Error in 874ms
+
+
+
+NoMethodError - undefined method `paginate' for #<Array:0x007fc7fd069ce0>:
+  app/controllers/recipes_controller.rb:7:in `index'
+  app/controllers/recipes_controller.rb:19:in `catch_api_error'
+
+Started POST "/__better_errors/4c51c4f2979c0276/variables" for 127.0.0.1 at 2018-05-05 16:19:45 -0700
+Started GET "/index?utf8=%E2%9C%93&query=cucumber&commit=Search" for 127.0.0.1 at 2018-05-05 16:22:01 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"cucumber", "commit"=>"Search"}
+Completed 500 Internal Server Error in 1307ms
+
+
+
+NoMethodError - undefined method `paginate' for #<Array:0x007f896d9afe90>:
+  app/controllers/recipes_controller.rb:8:in `index'
+  app/controllers/recipes_controller.rb:20:in `catch_api_error'
+
+Started POST "/__better_errors/18b2f6622419ae37/variables" for 127.0.0.1 at 2018-05-05 16:22:02 -0700
+Started GET "/" for 127.0.0.1 at 2018-05-05 16:22:10 -0700
+Processing by RecipesController#search as HTML
+  Rendering recipes/search.html.erb within layouts/application
+  Rendered recipes/search.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 716ms (Views: 713.1ms)
+
+
+Started GET "/index?utf8=%E2%9C%93&query=cucumber&commit=Search" for 127.0.0.1 at 2018-05-05 16:22:15 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"cucumber", "commit"=>"Search"}
+Completed 500 Internal Server Error in 1224ms
+
+
+
+NoMethodError - undefined method `paginate' for #<Array:0x007f8972431068>:
+  app/controllers/recipes_controller.rb:8:in `index'
+  app/controllers/recipes_controller.rb:20:in `catch_api_error'
+
+Started POST "/__better_errors/211588a37414549c/variables" for 127.0.0.1 at 2018-05-05 16:22:17 -0700
+Started GET "/index?utf8=%E2%9C%93&query=cucumber&commit=Search" for 127.0.0.1 at 2018-05-05 16:22:44 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"cucumber", "commit"=>"Search"}
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 1661ms (Views: 624.4ms)
+
+
+Started GET "/index?utf8=%E2%9C%93&query=cucumber&commit=Search" for 127.0.0.1 at 2018-05-05 16:22:58 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"cucumber", "commit"=>"Search"}
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 999ms (Views: 128.1ms)
+
+
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_7d1c9d25785b9499725f77ba8153d890" for 127.0.0.1 at 2018-05-05 16:23:48 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_7d1c9d25785b9499725f77ba8153d890"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 801ms (Views: 188.5ms)
+
+

@@ -1,18 +1,16 @@
+require 'will_paginate/array'
 class RecipesController < ApplicationController
   around_action :catch_api_error
 
-  # return a list of searched recipes
-
-  # Need to turn this into a blank and waiting search bar
   def search ;end
 
   def index
-    @recipes = EdemamApiWrapper.search_recipes(params[:query])
+    @recipes = EdemamApiWrapper.search_recipes(params[:query]).paginate(:page => params[:page], :per_page => 10)
   end
 
   # Show a found recipes details
   def show
-  @recipe = EdemamApiWrapper.show_recipe(params[:uri])
+    @recipe = EdemamApiWrapper.show_recipe(params[:uri])
   end
 
   private

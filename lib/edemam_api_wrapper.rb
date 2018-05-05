@@ -7,7 +7,7 @@ class EdemamApiWrapper
   API_ID = ENV["EDEMAM_ID"]
 
   def self.search_recipes(query)
-    url = BASE_URL + "/search?q=#{query}&app_id=#{API_ID}&app_key=#{TOKEN}&from=0&to=10"
+    url = BASE_URL + "/search?q=#{query}&app_id=#{API_ID}&app_key=#{TOKEN}&from=0"
     response = HTTParty.get(url)
     raise_on_error(response)
     return response["hits"].map do |raw_recipe|

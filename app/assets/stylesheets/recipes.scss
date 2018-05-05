@@ -11,6 +11,7 @@ ul.small.medium {
 .recipes-list {
   display: flex;
   flex-flow: wrap row;
+  align-items: center;
 }
 
 .pagination {

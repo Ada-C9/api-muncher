@@ -7,7 +7,6 @@ class RecipesController < ApplicationController
 
   def index
     @recipes = RecipeApiWrapper.list_recipes(params[:ingredient]).paginate(:page => params[:page], :per_page => 12)
-    # add pagenation here
   end
 
   def show
@@ -15,12 +14,6 @@ class RecipesController < ApplicationController
 
     @recipe = RecipeApiWrapper.show_recipe(recipe_id)
   end
-
-  # def search
-  #   ingredient = params[:ingredient]
-  #
-  #   redirect_to recipes_path(ingredient)
-  # end
 
   private
   def catch_api_error

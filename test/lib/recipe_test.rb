@@ -6,7 +6,7 @@ describe Recipe do
       label = "test recipe"
       image = "https://www.edamam.com/web-img/7a2/7a2f41a7891e8a8f8a087a96930c6463.jpg"
       source = "test source"
-      shareAs = "http://www.edamam.com/recipe/teriyaki-chicken-7bf4a371c6884d809682a72808da7dc2/chicken"
+      url = "http://www.davidlebovitz.com/2012/12/chicken-teriyaki-recipe-japanese-farm-food/"
       healthLabels = [
                     "Sugar-Conscious",
                     "Peanut-Free",
@@ -17,18 +17,20 @@ describe Recipe do
                     "1 whole chicken, 3 1/2 to 4 pounds",
                     "Kosher salt and freshly ground black pepper"
                     ]
+      uri = "http://www.edamam.com/ontologies/edamam.owl#recipe_7bf4a371c6884d809682a72808da7dc2"
 
-      recipe = Recipe.new(label, image, source, shareAs, healthLabels, ingredientLines)
+      recipe = Recipe.new(label, image, source, url, healthLabels, ingredientLines, uri)
 
       recipe.label.must_equal label
       recipe.image.must_equal image
       recipe.source.must_equal source
-      recipe.url.must_equal shareAs
+      recipe.url.must_equal url
       recipe.health_labels.must_equal healthLabels
       recipe.ingredients.must_equal ingredientLines
+      recipe.uri.must_equal uri
     end
 
-    it "cannot be created without a name or id" do
+    it "cannot be created without a label" do
       proc { Recipe.new() }.must_raise ArgumentError
       proc { Recipe.new(nil) }.must_raise ArgumentError
       proc { Recipe.new('') }.must_raise ArgumentError

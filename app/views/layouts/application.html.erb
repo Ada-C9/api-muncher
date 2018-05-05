@@ -4,16 +4,34 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Munch. More" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
 
+  <header>
+    <h1 id="home" class="row">
+      <%= link_to "Munch. More", root_path %>
+    </h1>
+    <%= form_tag recipes_path, method: 'get', class: "row search-bar" do %>
+    <div>
+      <%= text_field_tag :search_term, params[:search_term], placeholder: "Search Recipes", type: "search" %>
+    </div>
+    <div>
+      <%= submit_tag 'Search', :name => nil %>
+    </div>
+    <% end %>
+  </header>
   <body>
 
     <%= yield %>
 
   </body>
+  <footer class="row">
+    <h6>Powered by</h6>
+    <%= link_to image_tag("https://www.edamam.com/images/logo-site-header.png", class: "logo"), "https://www.edamam.com/" %>
+  </footer>
+
 </html>

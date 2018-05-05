@@ -1,0 +1,32 @@
+
+  <div>
+    <section>
+      <h4><%= @recipe.label %></h1>
+      <p>By <%= link_to(@recipe.source, "#{@recipe.url}", target: :_blank) %></p>
+    </section>
+
+    <section>
+      <%= image_tag  @recipe.image %>
+    </section>
+
+    <section>
+      <h3>Dietary Label(s)</h3>
+      <% if @recipe.dietLabels.empty? %>
+          <em><p>There are currently no dietary labels for this recipe.</p></em>
+      <% else %>
+          <% @recipe.dietLabels.each do |label| %>
+              <li><%= label %></li>
+          <% end%>
+      <% end %>
+    </section>
+
+    <section>
+      <h2>Ingredients</h2>
+      <% @recipe.ingredientLines.each do |line| %>
+          <li><%= line %></li>
+      <% end %>
+    </section>
+  </div>
+
+
+</div>

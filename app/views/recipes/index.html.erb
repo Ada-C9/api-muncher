@@ -1,0 +1,20 @@
+<% if @recipes.nil? %>
+<% elsif !@recipes.empty? %>
+  <section>
+    <% @recipes.each do |recipe| %>
+    <article>
+      <%= link_to image_tag(recipe.image), recipe_path(:uri => recipe.uri) %>
+      <h5>
+        <%= link_to recipe.label, recipe_path(:uri => recipe.uri) %>
+      </h5>
+    </article>
+    <% end %>
+  </section>
+  <div>
+    <%= paginate @recipes %>
+  </div>
+<% elsif @recipes.empty? %>
+  <p>
+    No results found. Please enter a new search term above.
+  </p>
+<% end %>

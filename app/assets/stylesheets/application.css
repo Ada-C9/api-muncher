@@ -38,6 +38,14 @@ body {
   font-family: 'Poiret One', cursive;
 }
 
+.flash {
+  width: 100%;
+  color: white;
+  font-weight: bolder;
+  text-align: center;
+  background-color: #CB16D3
+}
+
 h1 {
   text-align: center;
   margin-bottom: 15px;

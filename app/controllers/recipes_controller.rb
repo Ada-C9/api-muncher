@@ -25,11 +25,11 @@ class RecipesController < ApplicationController
   def show
     @recipe = MuncherWrapper.show_recipe(params[:uri])
 
-    # if @recipe.empty?
-    #   flash[:status] = :failure
-    #   flash[:message] = "Recipe does not exist. Please try again."
-    #   redirect_to root_path
-    # end
+    if @recipe.empty?
+      flash[:status] = :failure
+      flash[:message] = "Recipe does not exist. Please try again."
+      redirect_to root_path
+    end
 
   end
 

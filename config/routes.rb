@@ -8,7 +8,6 @@ Rails.application.routes.draw do
 
   # post '/search-confirmed', to: 'recipe#search', as:'confirmed_search'
 
-  # root 'homepage#index'
   get '/search',to: 'recipe#index', as: 'query_results'
 
   root 'recipe#index'

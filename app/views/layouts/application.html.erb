@@ -19,10 +19,12 @@
 <%end%>
   </nav>
 
-  <body>
-    <%if params[:query].nil?%>
-      <h1>Welcome to Wrapped Recipes!</h1>
-    <%else%>
+
+  <%if params[:query].nil?%>
+    <body id="homepage-view">
+      <h1 id="main-title">Wrapped Recipes</h1>
+  <%else%>
+    <body id="search-view">
         <h1>Search Results for: <%=params[:query]%></h1>
     <%end%>
     <section id="search-bar">
@@ -32,8 +34,8 @@
       <%end%>
     </section>
       <%= yield %>
+      </body>
     <footer>
-      <div>
         <ul class="pagination">
       <li><%=link_to 1, {:action => 'index', :from=> 0, :to=> 9, :query=>params[:query]} %></li>
       <li><%=link_to 2, {:action => 'index', :from=> 10, :to=> 20, :query=>params[:query]} %></li>
@@ -46,10 +48,9 @@
       <li><%=link_to 9, {:action => 'index', :from=> 81, :to=>90, :query=>params[:query]} %></li>
       <li><%=link_to 10, {:action => 'index', :from=> 91, :to=>100, :query=>params[:query]} %></li>
     </ul>
-      </div>
+      <p id="edamam"> Powered by Edamam ©2018</p>
 
     </footer>
-  </body>
 
 
 </html>

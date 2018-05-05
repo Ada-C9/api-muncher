@@ -17,11 +17,26 @@
  *= require foundation_and_overrides
 
  */
- nav{
-   margin-left:85%;
-   margin-top:10px;
- }
 
+
+
+#homepage-view{
+    background-image: url("http://ak1.picdn.net/shutterstock/videos/15277861/thumb/1.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+#search-view{
+  background-color:#cccccc;
+}
+
+ nav{
+   display: flex;
+   margin-left: 10px;
+   margin-right:10px;
+   margin-top: 10px;
+   justify-content: space-between;
+ }
 
 
 #search-bar{
@@ -30,8 +45,15 @@
   flex-grow: 100%;
 }
 
+#main-title{
+  text-align:center;
+  font-family: blippo;
+  color: white;
+  font-weight: bold;
+}
+
 #search-bar .button {
-  margin-left: 43%;
+width: 100%;
 }
 
  #food-items{
@@ -52,3 +74,64 @@
  .pagination li{
     font-size: 20px;
  }
+
+
+
+.item-header{
+  color:white;
+  text-align:center;
+}
+
+.item-image{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#ingredient-list{
+  color: white;
+  margin-left:15px;
+  font-size: 22px;
+}
+
+#calories{
+  margin-left:15px;
+  color:white;
+  text-decoration: underline;
+}
+#try-it{
+  margin-left:15px;
+  color:white;
+  font-size: 22px;
+}
+
+#nutritional-info-title{
+  color:white;
+  margin-top: 40px;
+  margin-left: 15px;
+}
+#table-block{
+  margin-right:35px;
+  margin-left:35px;
+}
+
+tr{
+  text-align:center
+}
+
+th{
+  text-align:left;
+}
+
+.nutrient-name{
+  text-align:left;
+}
+
+#edamam{
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  width:100%;
+  height:25px;
+  background:#1779ba;
+}

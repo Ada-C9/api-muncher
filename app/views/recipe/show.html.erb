@@ -1,22 +1,29 @@
 
-<h2><%=@recipe.label%></h2>
-<h3>By <%=@recipe.source%></h3>
+<h2 class="item-header"><%=@recipe.label%></h2>
+<h3 class="item-header">By <%=@recipe.source%></h3>
 
-<%=image_tag("#{@recipe.image}",alt: "image of #{@recipe.label}")%>
-<h5 id="ingredient-list">Ingredients</h5>
+
+<%=image_tag("#{@recipe.image}",class: "item-image")%>
+
+<section id="ingredient-list">
+<h4>Ingredients</h4>
 <ul>
 <%@recipe.ingredientLines.each do |ingredient| %>
 <li><%=ingredient%></li>
 <%end%>
 </ul>
+</section>
 
-<p>Try it yourself <%=link_to "here", @recipe.url, target: :_blank%></p>
-<h5>Total Calories: <%=@recipe.totalNutrients["ENERC_KCAL"]["quantity"].round(2)%></h5>
+<h5 id="calories">Total Calories: <%=@recipe.totalNutrients["ENERC_KCAL"]["quantity"].round(2)%></h5>
 
-<h5>Nutritional Information</h5>
-<table>
+<p id="try-it">Try it yourself <%=link_to "here", @recipe.url, target: :_blank%></p>
+
+<h3 id="nutritional-info-title">Nutritional Information : </h3>
+
+<div id="table-block">
+<table id="nutritional-table">
   <tr>
-    <th>Nutritional Information</th>
+    <th class="nutrient-name">Nutritional Information</th>
     <th>Quantity</th>
     <th>Unit</th>
   </tr>
@@ -25,8 +32,9 @@
     <%nutrient[1]["quantity"] = nutrient[1]["quantity"].round(3)%>
       <tr>
       <%nutrient[1].values.each do |item|%>
-          <td><%=item%></td>
+          <td class="nutrient-name"><%=item%></td>
           <%end%>
       </tr>
     <%end%>
 <table>
+</div>

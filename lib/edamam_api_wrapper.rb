@@ -2,7 +2,7 @@ require 'httparty'
 require 'will_paginate'
 
 class EdamamApiWrapper
-  class EdamamError < StandardError; end
+
   TOKEN_APP_ID = ENV['APP_ID']
   TOKEN_APP_KEY= ENV['APP_KEY']
   BASE_URL = "https://api.edamam.com/search"
@@ -19,23 +19,21 @@ class EdamamApiWrapper
   end
 
   def self.get_recipe(uri)
-    # encoded_uri = URI.encode(uri)
+
     url =  (BASE_URL+"?r=http:%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_#{uri}&app_id="+TOKEN_APP_ID+"&app_key="+TOKEN_APP_KEY)
 
     response = HTTParty.get(url)
 
     raise_on_error(response)
 
-    # return response['hits'].map do |raw_data|
     Recipe.from_api(response[0])
-    # end
   end
-
 
   private
   def self.raise_on_error(response)
-    unless response["ok"]
-      raise EdamamError.new(response["error"])
+    unless response.code == 200
+      raise StandardError
     end
   end
+
 end

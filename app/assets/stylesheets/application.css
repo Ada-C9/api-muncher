@@ -17,3 +17,7 @@
  *= require foundation_and_overrides
 
  */
+
+.form {
+  padding: 0 20%
+}

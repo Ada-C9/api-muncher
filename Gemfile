@@ -74,6 +74,4 @@ gem 'jquery-turbolinks'
 
 gem 'foundation-rails', '6.4.1.2'
 
-gem 'httparty'
-
 gem 'awesome_print'

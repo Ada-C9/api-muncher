@@ -1,0 +1,144 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *= require normalize-rails
+
+ *
+ *= require_tree .
+ *= require_self
+ *= require foundation_and_overrides
+
+ */
+
+ ul li {
+   list-style-type: none;
+ }
+
+ /* HEADER  */
+.small-border {
+  border-bottom: pink dotted .25em;
+}
+
+ .muncher {
+   padding: .5em;
+   text-align: center;
+   border-bottom: pink dotted .25em;
+   font-family: 'Libre Baskerville', serif;
+ }
+
+ /* HOME */
+ .home {
+   display:flex;
+   justify-content: center;
+   text-align: center;
+   margin-top: 1em;
+   margin-bottom: 15em;
+   font-family: 'Playfair Display', serif;
+ }
+
+
+ /* INDEX */
+.index-nav {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  margin-right: 1em;
+  margin-bottom: .75em;
+  padding: .5em;
+}
+
+.directions {
+  display: flex;
+  margin-left: 1em;
+  font-size: .75em;
+  font-family: 'Playfair Display', serif;
+}
+
+.stats {
+  font-size: .75em;
+  font-family: 'Playfair Display', serif;
+}
+
+.muncher-home ul {
+  margin-bottom: 2em;
+  display: flex;
+  flex-direction: row
+}
+.muncher-home p {
+  font-family: 'Playfair Display', serif;
+}
+
+.hover img:hover {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+.pages {
+  text-align: center;
+  padding: 1.5em;
+  margin-bottom: 2em;
+  font-family: 'Playfair Display', serif;
+}
+
+/* SHOW */
+.recipe-show {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+
+.recipe-show h2 {
+  font-family: 'Libre Baskerville', serif;
+}
+
+.recipe-show h4 {
+  font-family: 'Libre Baskerville', serif;
+}
+
+.show-header {
+  padding: 1em;
+}
+
+.show-details {
+  display: flex;
+  justify-content: center;
+}
+
+.show-feature {
+  display: flex;
+  flex-direction: row;
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-bottom: 2em;
+}
+
+.show-feature li {
+  font-size: .75em;
+}
+
+.show-feature img {
+  margin-top: 1em;
+}
+
+.info {
+  margin: 1em;
+  padding: .5em;
+}
+
+.status h3 {
+  text-align: center;
+  padding: 1em;
+  font-family: 'Playfair Display', serif;
+  color: red;
+}
+
+/* * {
+  border: black 1px solid;
+} */

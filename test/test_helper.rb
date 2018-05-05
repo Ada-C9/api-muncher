@@ -27,7 +27,7 @@ VCR.configure do |config|
   end
 
   config.filter_sensitive_data("<EDAMAM_KEY>") do
-    ENV['EDAMAM_KEYS']
+    ENV['EDAMAM_KEY']
   end
 end
 

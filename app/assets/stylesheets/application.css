@@ -72,7 +72,7 @@
    margin: 0 auto;
  }
 
- /* .card {
+ .card {
    height: 360px;
    border-radius: 10px;
    border-color: white;
@@ -81,6 +81,7 @@
    -webkit-box-shadow: 0 0 5px #fff;
    box-shadow: 0px 0px 5px #fff;
  }
+
 
  .card img {
    width: 400px;
@@ -109,3 +110,12 @@
    color: #FF9A8D;
    font-size: 1.2em;
  }
+
+ .pages {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.pages-info p {
+  font-size: 1.1em;
+}

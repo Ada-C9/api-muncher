@@ -42,6 +42,8 @@ h1 {
 
 }
 
+/********** link/button **********/
+
 a:hover {
   color: #05807E;
 }
@@ -50,6 +52,13 @@ a:hover {
   font-size: 1.5rem;
   padding: 0.8rem;
   background-color: #05807E;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.account-buttons {
+  display: flex;
+  flex-flow: row nowrap;
 }
 
 /********** flash **********/
@@ -107,7 +116,7 @@ a:hover {
 
 }
 
-.page-header a {
+.page-header h1 a {
   font-size: 3rem;
   color: #05807E;
 }
@@ -158,6 +167,7 @@ a:hover {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .recipe-texts {

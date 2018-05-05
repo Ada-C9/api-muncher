@@ -1,5 +1,6 @@
 <div class="home">
   <h1><%= link_to "MUNCHER", root_path %></h1>
+  <%= render partial: "flash" %>
 
   <section class="search-container">
     <%= form_tag(recipes_path, method: :get) do %>
@@ -12,14 +13,15 @@
         <% end %>
       <% end %>
     </datalist>
-    <%= render partial: "flash" %>
     <%= submit_tag 'Search', class: "search button" %>
     <% end %>
   </section>
-  <% if @login_user %>
+  <div class="account-buttons">
+    <% if @login_user %>
     <%= link_to "Favorites", favorite_recipes_path, method: :get, class: "button" %>
     <%= link_to "Log Out", logout_path, method: :delete, class: "button" %>
-  <% else %>
+    <% else %>
     <%= link_to "Login with Amazon", amazon_login_path, class: "button" %>
-  <% end %>
+    <% end %>
+  </div>
 </div>

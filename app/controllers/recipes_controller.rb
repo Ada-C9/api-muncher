@@ -53,9 +53,9 @@ class RecipesController < ApplicationController
       flash[:result_text] = "Recipe added to Favorites successfully"
       redirect_to favorite_recipes_path
     else
-      flash.now[:status] = :failure
-      flash.now[:result_text] = "Could not add this recipe to Favorites"
-      render :show
+      flash[:status] = :failure
+      flash[:result_text] = "Could not add this recipe to Favorites"
+      redirect_back fallback_location: recipe_path(@recipe)
     end
   end
 

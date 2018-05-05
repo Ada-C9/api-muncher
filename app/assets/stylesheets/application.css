@@ -17,3 +17,95 @@
  *= require foundation_and_overrides
 
  */
+
+ body {
+   background-color: #130C0A;
+
+ }
+
+ h1 {
+   font-size: 50pt;
+ }
+ h1, h2, h3 {
+   color: #3F3B38;
+   font-family: Righteous;
+ }
+
+ .search-bar{
+   width: 40%;
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+ .head-search {
+   padding-top: 30px;
+   padding-bottom: 15px;
+   text-align: center;
+
+ }
+
+ .index-background {
+   background-color: #E8E5E3;
+ }
+
+ .results h2, a{
+   text-align: center;
+ }
+
+ .results h2 {
+   padding-top: 40px;
+   /*color: #EFB0A1;*/
+   color: #FF9A8D;
+   animation: fadeIn 2s;
+ }
+
+ .results a{
+   font-size: 1.1em;
+ }
+
+ .row {
+   margin-bottom: 8px;
+ }
+
+ .recipes-index {
+   max-width: 1000px;
+   margin: 0 auto;
+ }
+
+ /* .card {
+   height: 360px;
+   border-radius: 10px;
+   border-color: white;
+   margin: 4%;
+   -moz-box-shadow: 0 0 5px #fff;
+   -webkit-box-shadow: 0 0 5px #fff;
+   box-shadow: 0px 0px 5px #fff;
+ }
+
+ .card img {
+   width: 400px;
+   height: 300px;
+   border-radius: 10px;
+   padding-top: 8px;
+ } */
+
+ .columns:last-child:not(:first-child) {
+   float: left;
+   /* display: table;
+   vertical-align: middle; */
+ }
+
+ .card a {
+   font-weight: bold;
+   padding-top: 5px;
+   color: #2F2A27;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   font-size: 1.1em;
+ }
+
+ .card a:hover {
+   color: #FF9A8D;
+   font-size: 1.2em;
+ }

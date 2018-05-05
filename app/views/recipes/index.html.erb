@@ -1,20 +1,36 @@
-<% if @recipes.nil? %>
-<% elsif !@recipes.empty? %>
-  <section>
+<article>
+  <header>
+    <section class="head-search">
+      <h2><%= link_to("Munch. More", root_path, class: "head-search") %>
+        <%= render partial: "form" %>
+      </h2>
+    </section>
+  </header>
+
+
+  <section class="row small-up-1 medium-up-3 large-up-4 recipes-list">
+
+    <% if !@recipes.empty? %>
+    <h2 class="results">Recipe Results for "<%= params[:search_term] %>"</h2>
+
+
     <% @recipes.each do |recipe| %>
-    <article>
+    <article class = "small-centered column">
       <%= link_to image_tag(recipe.image), recipe_path(:uri => recipe.uri) %>
       <h5>
         <%= link_to recipe.label, recipe_path(:uri => recipe.uri) %>
       </h5>
+      <% end %>
     </article>
-    <% end %>
   </section>
-  <div>
-    <%= paginate @recipes %>
-  </div>
-<% elsif @recipes.empty? %>
-  <p>
-    No results found. Please enter a new search term above.
-  </p>
-<% end %>
+
+    <div class ="row pages">
+      <%= paginate @recipes %>
+    </div>
+
+  <% elsif @recipes.empty? %>
+  <h3>No results found. Please try another search term.</h3>
+
+  <% end %>
+
+</article>

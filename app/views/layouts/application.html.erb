@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title><%= content_for?(:title) ? yield(:title) : "Munch. More" %></title>
-
+    <link href="https://fonts.googleapis.com/css?family=Freckle+Face|Righteous" rel="stylesheet">
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
 
   <header>
-    <h1 id="home" class="row">
+    <!-- <h1 id="home" class="row">
       <%= link_to "Munch. More", root_path %>
     </h1>
     <%= form_tag recipes_path, method: 'get', class: "row search-bar" do %>
@@ -22,7 +22,7 @@
     <div>
       <%= submit_tag 'Search', :name => nil %>
     </div>
-    <% end %>
+    <% end %> -->
   </header>
   <body>
     <% if flash[:status] %>

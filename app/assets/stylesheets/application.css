@@ -104,3 +104,11 @@ ul {
   color: black;
   cursor: default;
 }
+
+nav ul {
+  display: flex;
+}
+
+.search {
+  margin-left: auto;
+}

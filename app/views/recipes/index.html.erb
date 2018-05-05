@@ -1,11 +1,11 @@
 
-  <header>
-    <section class="head-search">
-      <h1><%= link_to("Munch. More", root_path, class: "head-search") %>
-        <%= render partial: "form" %>
-      </h1>
-    </section>
-  </header>
+<header>
+  <section class="head-search">
+    <h1><%= link_to("Munch. More", root_path, class: "head-search") %>
+      <%= render partial: "form" %>
+    </h1>
+  </section>
+</header>
 
 <div class="index-background">
   <section class="row results ">
@@ -24,13 +24,13 @@
     </article>
   </section>
 
-    <div class ="row pages">
-      <%= paginate @recipes %>
-    </div>
+  <div class ="row pages">
+    <%= paginate @recipes %>
+  </div>
 
   <% elsif @recipes.empty? %>
   <h3>No results found. Please try another search term.</h3>
 
   <% end %>
 
-</div
+</div>

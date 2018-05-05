@@ -11,19 +11,6 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <header>
-    <!-- <h1 id="home" class="row">
-      <%= link_to "Munch. More", root_path %>
-    </h1>
-    <%= form_tag recipes_path, method: 'get', class: "row search-bar" do %>
-    <div>
-      <%= text_field_tag :search_term, params[:search_term], placeholder: "Search Recipes", type: "search" %>
-    </div>
-    <div>
-      <%= submit_tag 'Search', :name => nil %>
-    </div>
-    <% end %> -->
-  </header>
   <body>
     <% if flash[:status] %>
      <section class="row status <%= flash[:status] %>">
@@ -36,7 +23,7 @@
 
   </body>
 
-  <footer class="row">
+  <footer>
     <h6>Powered by</h6>
     <%= link_to image_tag("https://www.edamam.com/images/logo-site-header.png", class: "logo"), "https://www.edamam.com/" %>
   </footer>

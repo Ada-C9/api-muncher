@@ -1,8 +1,8 @@
 class Recipe
   # paginates_per 8
-  attr_reader :label, :image, :calories, :url, :uri, :ingredients, :health
+  attr_reader :label, :image, :calories, :url, :uri, :ingredients, :health, :source
 
-  def initialize(label, image, calories, url, uri, ingredients, health)
+  def initialize(label, image, calories, url, uri, ingredients, health, source)
     @label = label
     @image = image
     @calories = calories
@@ -10,6 +10,7 @@ class Recipe
     @uri = uri
     @ingredients = ingredients
     @health = health
+    @source = source
   end
 
   def self.from_api(raw_data)
@@ -20,7 +21,8 @@ class Recipe
     raw_data["url"],
     raw_data["uri"],
     raw_data["ingredientLines"],
-    raw_data["healthLabels"]
+    raw_data["healthLabels"],
+    raw_data["source"]
     )
   end
 

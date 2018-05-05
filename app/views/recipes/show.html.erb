@@ -1,6 +1,34 @@
+<section class="form">
+  <h1>Api-Tizing</h1>
+  <%= render partial: "layouts/form" %>
+</section>
 
+<section>
+  <header>
+    <h2><%= @recipe.label%></h2>
+    <p>
+      By: <%= @recipe.source %>
+    </p>
+  </header>
 
-<h2><%= @recipe.label%></h2>
-<img src="<%= @recipe.image %>" alt="recipe image">
-<%= @recipe.ingredients %>
-<%= @recipe.health %>
+  <div>
+    <img src="<%= @recipe.image %>" alt="recipe image">
+  </div>
+
+  <section >
+    <h2>Ingredients</h2>
+    <p>
+      <% @recipe.ingredients.each do |ing| %>
+      <%= ing %>
+    </p>
+    <% end %>
+  </section>
+  <section>
+    <h2>Health Info</h2>
+    <p>
+      <% @recipe.health.each do |h| %>
+      <%= h %>
+    </p>
+    <% end %>
+  </section>
+</section>

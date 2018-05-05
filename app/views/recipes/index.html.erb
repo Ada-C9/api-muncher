@@ -1,4 +1,13 @@
-<section class="recipe-list">
+<section>
+  <h1>Api-Tizing</h1>
+  <%= render partial: "layouts/form" %>
+</section>
+<header>
+  <h3>Results for "<%= params[:search]%>"</h3>
+</header>
+<section class="grid-x">
+
+
   <ul>
      <% @recipes.each do |recipe|%>
      <li class="thumbnail">
@@ -13,6 +22,6 @@
   </ul>
   <% end %>
 </section>
-<section>
+<section class="pagination">
   <%= paginate @recipes %>
 </section>

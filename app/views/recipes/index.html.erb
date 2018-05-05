@@ -6,11 +6,14 @@
 
 <% end %>
 
+<% if @recipes %>
 <ul>
-  <% @recipes.each do |recipe| %>
+    <% @recipes.each do |recipe| %>
     <li>
       <img src="<%= recipe.photo_url %>" />
       <%= link_to recipe.name, recipe_path(recipe.uri_id) %>
     </li>
-  <% end %>
+    <% end %>
 </ul>
+  <%= paginate @recipes, window: 2, outer_window: 1 %>
+<% end %>

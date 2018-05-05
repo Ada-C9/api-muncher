@@ -18,7 +18,7 @@ class EdamamApiWrapper
     #en
     #return response["hits"]
     #total_results = response["hits"].maps.count
-    binding.pry
+    
     return response["hits"].map do |raw_recipe|
 
       Recipe.from_api(raw_recipe["recipe"])

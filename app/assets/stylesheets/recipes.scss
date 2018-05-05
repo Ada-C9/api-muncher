@@ -3,11 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #homepagetitle, #navtitle {
   color: darkgray;
-  font-size: 10rem;
+  font-size: 20vw;
+  margin-left: 5%;
+  margin-right: 15%;
 }
 
 #homepagetitle {
-  font-size: 7rem;
+  font-size: 15vw;
   font-family: comic;
   color: lightgray;
 }

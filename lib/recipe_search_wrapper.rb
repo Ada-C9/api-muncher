@@ -14,7 +14,6 @@ class RecipeSearchWrapper
     encoded_uri = URI.encode(url)
 
     response = HTTParty.get(encoded_uri).parsed_response
-    puts response
 
     #response["hits"][0]["recipe"]["label"] => teriyaki chicken
 
@@ -22,9 +21,19 @@ class RecipeSearchWrapper
 
     recipes = []
     #should I handle of nil/empty response["hits"] here?
-    response["hits"].map do |raw_recipe|
-      recipe = raw_recipe["recipe"]
-      recipes << Recipe.from_api(recipe)
+    # response["hits"].map do |raw_recipe|
+    #   recipe = raw_recipe["recipe"]
+    #   recipes << Recipe.from_api(recipe)
+    # end
+    if response["hits"]
+      response["hits"].each do |hit|
+        label = hit["recipe"]["label"]
+        uri = hit["recipe"]["uri"]
+        opts = {}
+        opts["image"] = hit["recipe"]["image"]
+        # recipes << Recipe.from_api(label, uri, opts)
+        recipes << Recipe.new(uri, label, opts)
+      end
     end
     return recipes
   end
@@ -39,39 +48,23 @@ class RecipeSearchWrapper
     #response[0]
     uri = response[0]["uri"]
     label = response[0]["label"]
-    image = response[0]["image"]
-    url = response[0]["url"]
-    servings = response[0]["yield"]
-    ingredients = response[0]["ingredients"]
-    health_labels = response[0]["healthLabels"]
-    calories = response[0]["calories"]
-    fat = response[0]["FAT"]
-    saturated_fat = response[0]["FASAT"]
-    mono_fat = response[0]["FAMS"]
-    carbs = response[0]["CHOCDF"]
-    protein = response[0]["PROCNT"]
-    sodium = response[0]["NA"]
-    fiber = response[0]["FIBTG"]
-    cholesterol = response[0]["CHOLE"]
-    recipe = Recipe.new(
-        uri,
-        label,
-        image,
-        url,
-        servings,
-        ingredients,
-        health_labels,
-        calories,
-        fat,
-        saturated_fat,
-        mono_fat,
-        carbs,
-        protein,
-        sodium,
-        fiber,
-        cholesterol
-      )
-      return recipe
+    opts = {}
+    opts["image"] = response[0]["image"]
+    opts["url"] = response[0]["url"]
+    opts["servings"] = response[0]["yield"]
+    opts["ingredients"] = response[0]["ingredients"]
+    opts["health_labels"] = response[0]["healthLabels"]
+    opts["calories"] = response[0]["calories"]
+    opts["fat"] = response[0]["FAT"]
+    opts["saturated_fat"] = response[0]["FASAT"]
+    opts["mono_fat"] = response[0]["FAMS"]
+    opts["carbs"] = response[0]["CHOCDF"]
+    opts["protein"] = response[0]["PROCNT"]
+    opts["sodium"] = response[0]["NA"]
+    opts["fiber"] = response[0]["FIBTG"]
+    opts["cholesterol"] = response[0]["CHOLE"]
+    recipe = Recipe.new(uri, label, opts)
+    return recipe
   end
 
   private

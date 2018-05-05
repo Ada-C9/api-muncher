@@ -47,3 +47,60 @@ body * {
     color: white;
     text-align: center;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+
+.recipe-title {
+  font-size: 2em;
+}
+
+.entry {
+  border: solid black 2px;
+  width: 450px;
+  padding: 70px;
+  margin-top: 30px;
+  margin-right: 10px;
+  color: black;
+}
+
+.date {
+  font-size: .8em;
+}
+
+.journal-entries {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 100px;
+}
+
+.button-container{
+  padding-top: 30px;
+}
+
+.read-more-button {
+  text-transform: uppercase;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.read-more-button {
+  color: black;
+}
+
+.read-more-button:hover {
+  background-color: rgb(109, 191, 15);
+  color: black;
+  cursor: default;
+}

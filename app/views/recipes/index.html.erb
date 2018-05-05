@@ -10,16 +10,19 @@
 </nav>
 
 
-<section class="recipes-list">
 
-  <h1>Results for <%= @query %></h1>
-  <% if @recipes %>
-    <ul>
-      <% @recipes.each do |recipe| %>
-        <li>
-          <%= link_to recipe.name, recipe_path(recipe.id) %>
-        </li>
-      <% end %>
-    </ul>
+<h2>Results for <%= @query %></h2>
+<% if @recipes %>
+<div class="journal-entries">
+
+  <% @recipes.each do |recipe| %>
+  <section class="entry">
+    <h2 class="recipe-title"><%= link_to recipe.name, recipe_path(recipe.id) %></h2>
+    <div>
+      <%= image_tag(recipe.image, :alt => "food image") %>
+    </div>
+  </section>
+
   <% end %>
-</section>
+<% end %>
+</div>

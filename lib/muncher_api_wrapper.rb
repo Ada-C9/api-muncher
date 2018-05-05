@@ -1,5 +1,5 @@
 require 'httparty'
-
+require 'pry'
 class MuncherApiWrapper
 
 
@@ -29,7 +29,6 @@ class MuncherApiWrapper
     encoded_url = URI.encode(url)
 
     response = HTTParty.get(encoded_url)
-
     return Recipe.from_api(response[0])
 
   end

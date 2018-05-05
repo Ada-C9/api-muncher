@@ -14,8 +14,13 @@ describe MuncherApiWrapper do
 
     end
 
-    it 'gives one recipe' do
-
+    describe 'show' do
+      it 'gives one recipe' do
+        VCR.use_cassette('recipe') do
+          recipe = MuncherApiWrapper.show("9b5945e03f05acbf9d69625138385408")
+          recipe.must_be_kind_of Recipe
+        end
+      end
     end
   end
 end

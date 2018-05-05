@@ -1,19 +1,10 @@
-<section>
-  <h1>Comelón</h1>
-  <h4>¡Busca recetas con información dietética!</h4>
-  <%= form_tag recipes_path, method: :get do %>
-    <%= text_field_tag :search, params[:search], placeholder: "ejemplo: ceviche" %>
-    <%= submit_tag 'Buscar' %>
-  <% end %>
-</section>
-
-<article>
+<article class="recipes-list">
   <% if @recipes %>
   <aside>
     <%= paginate @recipes, window: 2, outer_window: 1 %>
   </aside>
 
-  <ul class>
+  <ul>
     <% @recipes.each do |recipe| %>
     <li>
       <img src="<%= recipe.photo_url %>" />

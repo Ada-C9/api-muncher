@@ -1,23 +1,29 @@
-<h2><%= @recipe.name %></h2>
+<article class="recipe-info">
+  <div class="recipe-name-and-photo">
+    <h2><%= @recipe.name %></h2>
 
-<img src="<%= @recipe.photo_url %>" />
+    <img src="<%= @recipe.photo_url %>" />
 
-<%= link_to 'Ver receta', @recipe.original_recipe_url, target: "_blank" %>
+    <%= link_to 'Ver receta', @recipe.original_recipe_url, target: "_blank" %>
+  </div>
 
-<h4>Ingredientes</h4>
-<ul>
-  <% @recipe.ingredients.each do |ingredient| %>
-  <li>
-    <%= ingredient %>
-  </li>
-  <% end %>
-</ul>
+  <div class="recipe-ingredients-and-other">
+    <h4>Ingredientes</h4>
+    <ul>
+      <% @recipe.ingredients.each do |ingredient| %>
+      <li>
+        <%= ingredient %>
+      </li>
+      <% end %>
+    </ul>
 
-<h4>Información Dietética</h4>
-<ul>
-  <% @recipe.dietary_labels.each do |label| %>
-  <li>
-    <%= label %>
-  </li>
-  <% end %>
-</ul>
+    <h4>Información Dietética</h4>
+    <ul>
+      <% @recipe.dietary_labels.each do |label| %>
+      <li>
+        <%= label %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</article>

@@ -14,12 +14,7 @@
 
   <% end %>
 </section>
-<%= will_paginate @recipes, class: "page-nav row" %>
 
-<div>
-<%= form_tag recipe_results_path, method: "get" do %>
-  <%= label_tag(:search_phrase, "What to cook with next?") %>
-  <%= text_field_tag(:search_phrase) %>
-  <%= submit_tag("Search") %>
-<% end %>
+<div class="pages">
+  <%= will_paginate @recipes, class: "page-nav row" %>
 </div>

@@ -4,6 +4,7 @@ class RecipesController < ApplicationController
 
   def home
   end
+  
   def index
 
 
@@ -11,7 +12,7 @@ class RecipesController < ApplicationController
       result_recipes = EdamamApiWrapper.list_of_recipes(params[:search_term])
 
       # added Kaminari gem to make the pagination
-      @recipes = Kaminari.paginate_array(result_recipes).page(params[:page]).per(12)
+      @recipes = Kaminari.paginate_array(result_recipes).page(params[:page]).per(10)
 
     end
   end

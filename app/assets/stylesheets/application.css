@@ -90,6 +90,9 @@ img:hover {
   opacity: 0.8;
 }
 
+a:hover {
+  color: #CB16D3;
+}
 
 .show-section2 {
   display: grid;

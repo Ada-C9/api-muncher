@@ -1,5 +1,5 @@
 <header>
-  <h4 class='muncher'>muncher</h4>
+  <h4 class='muncher'><%= link_to 'muncher', root_path%></h4>
   <section class='header-bar'>
   <%= form_tag muncher_index_path, method: :get do %>
     <%= text_field_tag(:search) %>
@@ -20,7 +20,7 @@
 
   <div class='labels'>
     <div class='nutrition'>
-    <p>Dietary Labels</p>
+    <p>dietary labels</p>
     <ul>
       <% if @recipe.dietary_info %>
       <% @recipe.dietary_info.each do |label| %>
@@ -31,8 +31,9 @@
       <% end %>
     </ul>
   </div>
+
   <div class='ingredients'>
-    <p>Ingredients</p>
+    <p>ingredients</p>
     <ul>
       <% @recipe.ingredients.each do |label| %>
       <li>

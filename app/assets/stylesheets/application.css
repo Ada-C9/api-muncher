@@ -58,6 +58,15 @@ h4 {
   font-family: 'Alegreya Sans SC', sans-serif;
 }
 
+h4 a {
+  color: #26afaf;
+}
+
+.results {
+  font-size: 3.5em;
+  margin: 1em;
+}
+
 .homepage {
   display: flex;
   flex-direction: column;
@@ -65,13 +74,18 @@ h4 {
   align-items: center;
   margin-bottom: 15%;
   margin-top: 6%;
+  margin-left: 25%;
+  margin-right: 25%;
+  border: black 2px solid;
 }
 
 .show-page {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  height: 90%;
-  justify-content: center;
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+  margin-left: 20%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .image-section {
@@ -82,8 +96,9 @@ h4 {
 .labels {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  margin-left: 25%;
+  justify-content: space-around;
+
+  color: #d0d3d8;
 }
 
 .ingredients {
@@ -102,7 +117,11 @@ h4 {
 }
 
 .show-page ul li a {
-  color: gray;
+  color: #d0d3d8;
+}
+
+.byline {
+  color: #d0d3d8;
 }
 
 html, body {
@@ -110,8 +129,12 @@ html, body {
 }
 
 header {
-  background-color: gray;
+  background-color: #d0d3d8;
   height: 25%;
+}
+
+.search-head {
+  height: 20%;
 }
 
 .pagination {
@@ -124,11 +147,12 @@ header {
 
 footer {
   position: relative;
-  background-color: gray;
+  background-color: #d0d3d8;
   height: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 1em;
 }
 
 .header-bar {
@@ -137,12 +161,30 @@ footer {
 }
 
 form {
-  width: 25%;
+  width: 40%;
+  margin-bottom: 2em;
 }
 
 .muncher {
   text-shadow: 2px 2px white;
   font-size: 3em;
+}
+
+@media screen and (max-width: 600px) {
+  .homepage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15%;
+    margin-top: 6%;
+
+  }
+
+  .show-page {
+    display: grid;
+    grid-auto-rows: auto;
+  }
 }
 
 /* * {

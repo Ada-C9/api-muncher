@@ -3,7 +3,16 @@ require File.expand_path("../../config/environment", __FILE__)
 require "rails/test_help"
 require "minitest/rails"
 require "minitest/reporters"  # for Colorized output
+require 'vcr'
+require 'webmock/minitest'
 
+
+#  For colorful output!
+Minitest::Reporters.use!(
+  Minitest::Reporters::SpecReporter.new,
+  ENV,
+  Minitest.backtrace_filter
+)
 
 VCR.configure do |config|
   config.cassette_library_dir = 'test/cassettes' # folder where casettes will be located
@@ -21,13 +30,6 @@ VCR.configure do |config|
     ENV['EDAMAM_KEYS']
   end
 end
-#  For colorful output!
-Minitest::Reporters.use!(
-  Minitest::Reporters::SpecReporter.new,
-  ENV,
-  Minitest.backtrace_filter
-)
-
 
 # To add Capybara feature tests add `gem "minitest-rails-capybara"`
 # to the test group in the Gemfile and uncomment the following:

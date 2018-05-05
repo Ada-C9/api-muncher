@@ -1,8 +1,8 @@
-<h1>A Wok in Progress</h1>
+<h3>Recipe Finder</h3>
 
-<%= form_tag results_path, method: "get" do %>
-  <%= label_tag(:query, "Recipe Finder:") %>
-  <%= text_field_tag(:query) %>
-  <%= submit_tag "Search" %>
-
-<% end %>
+<section class="form">
+  <%= form_tag results_path, method: "get" do %>
+    <%= text_field_tag(:query) %>
+    <%= submit_tag "Search", class: "button" %>
+  <% end %>
+</section>

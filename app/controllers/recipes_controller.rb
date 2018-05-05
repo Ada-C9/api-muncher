@@ -2,7 +2,7 @@ require 'will_paginate/array'
 
 class RecipesController < ApplicationController
 
-  around_action :catch_api_error
+  # around_action :catch_api_error
 
   def search; end
 
@@ -19,13 +19,13 @@ class RecipesController < ApplicationController
   end
 
   private
-  def catch_api_error
-    begin
-      yield
-    rescue Standard_Error
-      flash[:status] = :failure
-      flash[:message] = "API called failed"
-      redirect_back fallback_location: root_path
-    end
-  end
+  # def catch_api_error
+  #   begin
+  #     yield
+  #   rescue Standard_Error
+  #     flash[:status] = :failure
+  #     flash[:message] = "API called failed"
+  #     redirect_back fallback_location: root_path
+  #   end
+  # end
 end

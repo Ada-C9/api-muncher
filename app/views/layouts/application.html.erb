@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <%= favicon_link_tag asset_path('favicon.png'), rel: 'icon', type: 'image/png' %>
+    <link href="https://fonts.googleapis.com/css?family=Arimo:400,700" rel="stylesheet">
 
     <title><%= content_for?(:title) ? yield(:title) : "A Wok in Progress" %></title>
 
@@ -12,12 +13,18 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body>
+  <body class="page-container">
+    <header class="header">
+      <div><img src="<%= asset_path('favicon.png')%>" alt="wok"></div>
+      <h1>A Wok in Progress</h1>
+    </header>
 
-    <%= yield %>
-    <footer>
-      <div>Created with Edamam</div>
+    <main>
+      <%= yield %>
+    </main>
+
+    <footer class="footer">
+      <h4>Powered by Edamam</h4>
     </footer>
-
   </body>
 </html>

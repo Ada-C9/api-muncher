@@ -9,14 +9,16 @@
 
 <article>
   <% if @recipes %>
-  <ul>
+  <ul class="recipes-list">
     <% @recipes.each do |recipe| %>
     <li>
       <img src="<%= recipe.photo_url %>" />
-      <h3><%= link_to recipe.name, recipe_path(recipe.uri_id) %></h3>
+      <h6><%= link_to recipe.name, recipe_path(recipe.uri_id) %></h6>
     </li>
     <% end %>
   </ul>
-  <%= paginate @recipes, window: 2, outer_window: 1 %>
+  <div class="pages">
+    <%= paginate @recipes, window: 2, outer_window: 1 %>
+  </div>
   <% end %>
 </article>

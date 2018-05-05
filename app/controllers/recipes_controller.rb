@@ -17,6 +17,7 @@ class RecipesController < ApplicationController
       return result_recipes = nil
 
     else
+      binding.pry
       result_recipes = EdamamApiWrapper.list_of_recipes(params[:search_term])
     end
     # added Kaminari gem to make the pagination

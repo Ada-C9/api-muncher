@@ -29,3 +29,20 @@ footer {
 .recipe-list {
   list-style-type: none;
 }
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-page {
+  width: 50%;
+
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  margin: 3%;
+}

@@ -1,13 +1,15 @@
-  <h1>Recipes</h1>
+<section class="nav">
+  <span><%= paginate @paginatable_array %></span>
+</section>
+
 <section class="recipe-list">
   <% if @recipes %>
     <ul>
-    <span class="nav"><%= paginate @paginatable_array %></span>
       <% @recipes.each do |item| %>
         <li class="gallery-item">
           <figure class="item-image">
-            <%= image_tag item["recipe"]["image"] %>
-              <figcaption clas="caption"><p><%= item["recipe"]["label"] %></p></figcaption>
+            <%= image_tag item.image %>
+            <%= link_to item.label, food_path(item) %>
           </figure>
           </li>
       <% end %>

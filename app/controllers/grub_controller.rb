@@ -10,6 +10,13 @@ class GrubController < ApplicationController
     end
 
     def show
-      @recipe = params[:recipe]
+      @recipes = EdamamApiWrapper.recipe_list(params[:recipe])
+      @recipes.each do |recipe|
+        if recipe.id
+          @uri = params[:uri]
+        end
+      end
+      @recipe = EdamamApiWrapper.recipe_detail(@uri)
     end
+
 end

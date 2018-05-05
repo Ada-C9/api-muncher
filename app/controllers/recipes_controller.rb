@@ -1,10 +1,12 @@
+require 'will_paginate/array'
+
 class RecipesController < ApplicationController
   around_action :catch_api_error
 
   def homepage; end
 
   def index
-    @recipes = RecipeApiWrapper.list_recipes(params[:ingredient])
+    @recipes = RecipeApiWrapper.list_recipes(params[:ingredient]).paginate(:page => params[:page], :per_page => 12)
     # add pagenation here
   end
 

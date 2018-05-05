@@ -7,7 +7,7 @@ class RecipeApiWrapper
   APP_ID = ENV["API_APP_ID"]
   APP_KEY = ENV["API_APP_KEY"]
   FROM = 1
-  TO = 20
+  TO = 100
 
 
   def self.list_recipes(query)

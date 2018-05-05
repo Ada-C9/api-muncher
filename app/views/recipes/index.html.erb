@@ -1,5 +1,7 @@
 <h1>Results for recipes</h1>
 
+<%= will_paginate @recipes, id: "pagination" %>
+
 <section class="recipes-list">
 
   <% if @recipes %>
@@ -9,28 +11,7 @@
           <%= link_to recipe.label, show_recipe_path(recipe.uri.split("_")[1]) %>
         </li>
         <li>
-          <%= image_tag recipe.image %>
-        </li>
-        <li> Source:
-          <%= link_to recipe.source, recipe.url %>
-        </li>
-        <li>
-          <ul>
-          <% recipe.health_labels.each do |label| %>
-            <li>
-              <%= label %>
-            </li>
-          <% end %>
-          </ul>
-        </li>
-        <li>
-          <ul>
-          <% recipe.ingredients.each do |ingredient| %>
-            <li>
-              <%= ingredient %>
-            </li>
-          <% end %>
-        </ul>
+          <%= link_to(image_tag(recipe.image), show_recipe_path(recipe.uri.split("_")[1])) %>
         </li>
       </ul>
       <% end %>

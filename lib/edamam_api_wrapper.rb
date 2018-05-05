@@ -2,40 +2,37 @@ require 'httparty'
 require 'will_paginate'
 
 
+  class EdamamApiWrapper
+
+    BASE_URL = "https://api.edamam.com/"
+    APP_ID = ENV["APP_ID"]
+    APP_KEY = ENV["APP_KEY"]
 
 
-class EdamamApiWrapper
-  BASE_URL = "https://api.edamam.com/"
-  APP_ID = ENV['APP_ID']
-  APP_KEY = ENV['APP_KEY']
+    def self.list_recipes(query)
+      url = BASE_URL + "search?q=#{query}" + "&app_id=#{APP_ID}&app_key=#{APP_KEY}"
+      data = HTTParty.get(url)
+      my_recipes = []
 
-  def self.list_recipes(query)
-    recipe_results = []
-
-    url = BASE_URL + "search?&q=#{query}" + "&app_id=#{APP_ID}&app_key=#{APP_KEY}"
-
-    data = HTTParty.get(url)
-
-    if data["hits"]
-      data["hits"].each do |recipe_hash|
-        recipe_results<< Recipe.new( recipe_hash["recipe"]["label"],
+      if data["hits"]
+      my_recipes=  data["hits"].map do |recipe_hash|
+          Recipe.new recipe_hash["recipe"]["label"],
           recipe_hash["recipe"]["uri"],
           recipe_hash["recipe"]["image"],
           recipe_hash["recipe"]["dietLabels"],
-          recipe_hash["recipe"]["healthLabels"],
+          recipe_hash["recipe"]["ingredients"],
           recipe_hash["recipe"]["source"]
-        )
-      end
-        return recipe_results
+
+        end
+        return my_recipes
       else
         return []
       end
-
     end
 
     def self.get_recipe(uri)
-      url = BASE_URL + "search?&r=#{uri}" + "&app_id=#{APP_ID}&app_key=#{APP_KEY}"
-      data = HTTParty.get(url)
+      url = BASE_URL + "search?r=#{uri}" + "&app_id=#{APP_ID}&app_key=#{APP_KEY}"
+      data = parsed_response(HTTParty.get(url))
       puts data
       return nil if data.nil?
 
@@ -48,5 +45,10 @@ class EdamamApiWrapper
 
     end
 
+    private
 
-  end
+    def self.parsed_response(response)
+      return response.parsed_response rescue nil
+    end
+
+end

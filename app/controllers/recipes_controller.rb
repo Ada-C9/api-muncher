@@ -1,9 +1,12 @@
+require 'will_paginate/array'
 class RecipesController < ApplicationController
 
   def index
     if params[:q]
-      #@recipes.paginate(:page => params[:page], :per_page => 30)
+
       @recipes = EdamamApiWrapper.list_recipes(params[:q])
+    @recipe =  @recipes.paginate(:page => params[:page], :per_page => 5)
+
     else
       redirect_to recipes_path
     end

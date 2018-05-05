@@ -24,4 +24,6 @@
       <% end %>
     </div>
   </div>
+
+  <%= link_to "Add to Favorites", add_favorite_path(@recipe.id), method: :post, class: "button" %>
 </div>

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/auth/amazon', as: 'amazon_login'
   delete '/logout', to: 'sessions#logout', as: 'logout'
 
-  get 'recipes/favorite', to: 'recipes#favorite', as: 'favorite_recipes'
+  get 'recipes/favorites', to: 'recipes#favorites', as: 'favorite_recipes'
+  post 'recipes/:id/add_favorite', to: 'recipes#add_favorite', as: 'add_favorite'
   resources :recipes, only: [:index, :show]
 end

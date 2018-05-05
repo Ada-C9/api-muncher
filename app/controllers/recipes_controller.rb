@@ -35,9 +35,28 @@ class RecipesController < ApplicationController
     end
   end
 
-  def favorite
-    @favorite_recipes = []
-    # @recipes = @login_user.favorite_recipes
+  def favorites
+    @favorite_recipes = @login_user.favorite_recipes
+  end
+
+  def add_favorite
+    @recipe = EdamamApiWrapper.find_recipe(params[:id])
+    favorite_recipe = FavoriteRecipe.new
+    favorite_recipe.recipe_id = @recipe.id
+    favorite_recipe.label = @recipe.title
+    favorite_recipe.image = @recipe.image
+    favorite_recipe.source = @recipe.source
+    favorite_recipe.url = @recipe.url
+    favorite_recipe.user_id = @login_user.id
+    if favorite_recipe.save
+      flash[:status] = :success
+      flash[:result_text] = "Recipe added to Favorites successfully"
+      redirect_to favorite_recipes_path
+    else
+      flash.now[:status] = :failure
+      flash.now[:result_text] = "Could not add this recipe to Favorites"
+      render :show
+    end
   end
 
 end

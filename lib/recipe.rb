@@ -1,32 +1,33 @@
 class Recipe
   attr_reader :image, :label, :source
-  def initialize(image, label, source )
+  def initialize(label, image, source )
     # There is a better way to write this maybe using iteration?
+    raise_error(label)
+    raise_error(image)
+    raise_error(source)
 
-    if image.nil? || image.empty?
-      raise ArgumentError.new("Need a image please")
-    end
 
-    if label.nil? || label.empty?
-      raise ArgumentError.new("Need a label please")
-    end
 
-    if source.nil? || source.empty?
-      raise ArgumentError.new("Need a source please")
-    end
-
-    @image = image
     @label = label
+    @image = image
     @source = source
 
   end
 
-end
+  def raise_error(param)
+    if param.nil? || param.empty?
+      raise ArgumentError.new("Need a #{param} please")
+    end
 
-def self.from_api(raw_recipe)
+
+  end
+
+  def self.from_api(raw_recipe)
     self.new(
-      raw_recipe["image"],
       raw_recipe["label"],
+      raw_recipe["image"],
       raw_recipe["source"]
     )
   end
+
+end

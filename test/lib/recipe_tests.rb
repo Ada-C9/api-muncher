@@ -1,30 +1,34 @@
+require 'test_helper'
+
 describe 'Recipe' do
-  it "is created with label, image and source" do
-    label = 'Frozen Yogurt'
-    image = 'url here'
-    source = 'another url'
+  describe 'initialize' do
+    it "is created with label, image and source" do
+      label = 'Frozen Yogurt'
+      image = 'url here'
+      source = 'another url'
 
-    recipe = Recipe.new(label, image, source)
+      recipe = Recipe.new(label, image, source)
 
-    recipe.label.must_equal label
-    recipe.image.must_equal image
-    recipe.source.must_equal source
+      recipe.label.must_equal label
+      recipe.image.must_equal image
+      recipe.source.must_equal source
 
-  end
+    end
 
-  it 'cannot create without chosen data' do
-    proc{Recipe.new(image, source).must_raise ArgumentError}
-    proc{Recipe.new(label, image).must_raise ArgumentError}
-    proc{Recipe.new(label, source).must_raise ArgumentError}
-    proc{Recipe.new().must_raise ArgumentError}
+    it 'cannot create without chosen data' do
+      proc{Recipe.new(image, source).must_raise ArgumentError}
+      proc{Recipe.new(label, image).must_raise ArgumentError}
+      proc{Recipe.new(label, source).must_raise ArgumentError}
+      proc{Recipe.new().must_raise ArgumentError}
 
+    end
   end
 
   describe 'from_api' do
     before do
-      @mock_data {
-        'label' => 'FroYo'
-        'image' => 'the triforce'
+      @mock_data = {
+        'label' => 'FroYo',
+        'image' => 'the triforce',
         'source' => 'I.. have.. The Power!'
       }
     end
@@ -40,7 +44,7 @@ describe 'Recipe' do
     it "raises an error if missing data" do
       @mock_data['label'] = nil
 
-      proc{Recipe.from_api(@mock_data)}.must_raise
+      proc{Recipe.from_api(@mock_data)}.must_raise ArgumentError
 
     end
   end

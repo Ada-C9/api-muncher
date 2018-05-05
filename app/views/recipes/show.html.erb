@@ -14,6 +14,9 @@
   <div>
     <img src="<%= @recipe.image %>" alt="recipe image">
   </div>
+  <p>
+    <%= link_to "Go to original recipe", @recipe.url %>
+  </p>
 
   <section >
     <h2>Ingredients</h2>

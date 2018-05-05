@@ -20,11 +20,20 @@
 
 <section>
 	<ul>
-	  <section class="grid-x grid-margin-x pagination-group">
+	  <section class="grid-x pagination-group">
 			<% (1...@max_pages).each do |page| %>
+			<% if page == @curr_from %>
+				<section class="current-page">
+			<% end %>
 				<section class="cell shrink text-center pagination-numbers">
-					<%= link_to page, { action: 'results', :from => page } %>
+
+
+						<%= link_to page, { action: 'results', :from => page } %>
+
 				</section>
+				<% if page == @curr_from %>
+					</section>
+				<% end %>
 			<% end %>
 		</section>
 	</ul>

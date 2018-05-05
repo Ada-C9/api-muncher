@@ -18,14 +18,7 @@
 
  */
 
- $primary-font: 'Fjalla One', sans-serif;
-
-// $primary-teal: #26A69A;
-// $dark-teal: #00796B;
-// $secondary-color: #B2DFDB;
-// $light-gray: #EEEEEE;
-// $dark-gray: #424242;
-// $gold: #FF5722;
+$primary-font: 'Fjalla One', sans-serif;
 
 $default-border: 2px solid;
 
@@ -37,107 +30,43 @@ h1, h2, h3, h4, h5 {
   font-weight: bold;
 }
 
-// body small {
-//   color: slategrey;
-// }
-//
-// a, h3 {
-//   color: $primary-teal;
-// }
-
-// a:hover {
-//   color: $dark-teal;
-// }
-//
-// .button {
-//   background-color: $primary-teal;
-// }
-
-// .button:hover {
-//   background-color: $dark-teal;
-// }
-
-
 nav {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-// .page-header {
-//   max-width: 100%;
-//   // background: image-url('owl.jpg');
-//   // background-repeat: no-repeat;
-//   background-color: $secondary-color;
-//   border-bottom: 1px solid $light-gray;
-//   margin-bottom: 10px;
-//   padding: 25px 20px 10px 20px;
-//   h2 {
-//     text-align: center;
-//     margin: 25px auto 40px auto;
-//     a {
-//       color: $gold;
-//       padding-right: 25px;
-//       margin-right: 15px;
-//       border-right: white 2px solid;
-//     }
-//     small {
-//       color: white;
-//     }
-//   }
-//   p {
-//     margin-bottom: 5px;
-//   }
-// }
+.page-header {
+  max-width: 100%;
+  border-bottom: 1px solid gray;
+  margin-bottom: 10px;
+  padding: 25px 20px 10px 20px;
+  h2 {
+    text-align: center;
+    margin: 25px auto 40px auto;
+    a {
+      padding-right: 25px;
+      margin-right: 15px;
+      border-right: white 2px solid;
+    }
+    small {
+      color: black;
+    }
+  }
+  p {
+    margin-bottom: 5px;
+  }
+}
 
-// .media-table .upvote.button {
-//   margin: 0;
-// }
-
-// .top-ten {
-//   h3 {
-//     border-bottom: $default-border;
-//     border-bottom-color: $secondary-color;
-//   }
-// }
-
-// .top-ten ul {
-//   list-style-type: none;
-//   margin-left: 0px;
-// }
-
-// section.spotlight > div {
-//   padding: 0 2rem 2rem 2rem;
-// }
-
-// .spotlight {
-//   p {
-//    margin-bottom: 0px;
-//   }
-//   a {
-//     border-bottom: $default-border;
-//   }
-// }
-
-// .media-spotlight-header {
-//   color: $dark-gray;
-// }
-//
-// .media-spotlight-header::after {
-//   content: ":"
-// }
-
-// .root-hr {
-//   margin: 0px auto 75px auto;
-//   color: $light-gray;
-// }
-
-.top-ten-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 2em;
+ul {
+  list-style-type: none;
 }
 
 main {
   padding: 2rem;
+}
+
+.page-footer {
+  padding: 3vr;
+  text-align: center;
 }

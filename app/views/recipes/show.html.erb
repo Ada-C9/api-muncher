@@ -2,7 +2,7 @@
   <%= image_tag(@recipe.image) %>
   <h3><%= @recipe.label %></h3>
   <p>
-    <%= link_to ("Original Recipe"), @recipe.url, target: "_blank" %>
+    <%= link_to ("Original Recipe and Directions"), @recipe.url, target: "_blank" %>
   </p>
   <p><%= @recipe.servings.to_i %> servings</p>
 

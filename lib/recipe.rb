@@ -2,7 +2,6 @@ class Recipe
   #change this to be like http://eric-price.net/blog/rails-api-wrapper/
   attr_reader :uri, :label, :image, :url, :servings, :ingredients, :health_labels, :calories, :fat, :saturated_fat, :mono_fat, :carbs, :protein, :sodium, :fiber, :cholesterol
 
-  #this is a really annoying amount of arguments to require
   def initialize(uri, label, opts = {})
 
     if label.nil? || label.empty?

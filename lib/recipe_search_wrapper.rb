@@ -15,23 +15,15 @@ class RecipeSearchWrapper
 
     response = HTTParty.get(encoded_uri).parsed_response
 
-    #response["hits"][0]["recipe"]["label"] => teriyaki chicken
-
-    #raw_recipe["recipe"]["label"] => teriyaki chicken
-
     recipes = []
-    #should I handle of nil/empty response["hits"] here?
-    # response["hits"].map do |raw_recipe|
-    #   recipe = raw_recipe["recipe"]
-    #   recipes << Recipe.from_api(recipe)
-    # end
+
     if response["hits"]
       response["hits"].each do |hit|
         label = hit["recipe"]["label"]
         uri = hit["recipe"]["uri"]
         opts = {}
         opts["image"] = hit["recipe"]["image"]
-        # recipes << Recipe.from_api(label, uri, opts)
+
         recipes << Recipe.new(uri, label, opts)
       end
     end
@@ -40,7 +32,6 @@ class RecipeSearchWrapper
 
 
   def self.find_recipe(uri)
-    #successful get https://api.edamam.com/search?app_id=#{app_id}&app_key=#{app_key}&r=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_2463f2482609d7a471dbbf3b268bd956
 
     encoded_uri = URI.encode("https://api.edamam.com/search?app_id=#{@app_id}&app_key=#{@app_key}&r=" + uri)
 

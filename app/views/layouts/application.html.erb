@@ -24,11 +24,11 @@
 
       <nav>
         <section class="site-nav">
-          <%= link_to "Find a Thing", root_path, class: "button" %>
           <%= link_to "Peanut-Free", query_recipe_path(:query => "recipe", :health => "peanut-free"), class: "button" %>
           <%= link_to "Vegetarian", query_recipe_path(:query => "recipe", :health => "vegetarian"), class: "button" %>
           <%= link_to "Gluten-Free", query_recipe_path(:query => "recipe", :health => "gluten-free"), class: "button" %>
           <%= link_to "Dairy-Free", query_recipe_path(:query => "recipe", :health => "dairy-free"), class: "button" %>
+          <%= render partial: "form" %>
         </section>
         <section class="user-nav">
           <!-- fill in with github stuff -->

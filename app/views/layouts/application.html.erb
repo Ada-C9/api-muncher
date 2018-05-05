@@ -9,11 +9,15 @@
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+    <script src="https://developer.edamam.com/attribution/badge.js"></script>
   </head>
 
   <body>
 
     <%= yield %>
 
+  <footer>
+    <div id="edamam-badge" data-color="transparent"></div>
+  </footer>
   </body>
 </html>

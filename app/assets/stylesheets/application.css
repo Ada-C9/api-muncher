@@ -91,3 +91,17 @@ aside nav.pagination {
 aside nav.pagination span {
   display: inline-block;
 }
+
+/* attribution styles  */
+
+footer {
+  /* border: solid 1px blue; */
+  height: 10vh;
+  position: relative;
+}
+
+div#edamam-badge {
+  text-align: center;
+  position: relative;
+  top: 25%;
+}

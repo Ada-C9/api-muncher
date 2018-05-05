@@ -9,12 +9,12 @@ class RecipeApiWrapper
   search_results = []
   def self.list_recipes(query)
 
-    url = "https://api.edamam.com/search?app_id=#{API_ID}&app_key=#{API_KEY}&q=#{query}"
+    url = "https://api.edamam.com/search?app_id=#{API_ID}&app_key=#{API_KEY}&q=#{query}&to=120"
 
     encoded_uri = URI.encode(url)
 
     response = HTTParty.get(url).parsed_response
-    #ALWAYS CHECK YOUR ERROR CODES
+    # ALWAYS CHECK YOUR ERROR CODES
     # unless response.success?
     #   raise StandardError.new(response["error"])
     # end

@@ -4,3 +4,5 @@
   <h3><%= link_to recipe.label, recipe_path(:uri => recipe.uri, :label => recipe.label) %></h3>
   <img src=" <%= recipe.image %>" alt="recipe photo">
 <% end %>
+
+<%= will_paginate @recipes, id: "paginate-index"%>

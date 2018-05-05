@@ -4,9 +4,12 @@ class Recipe
 
   def initialize(uri, url, label, image, healthlabels, ingredientlines)
 
-    if label.nil? || label.empty?
-      raise ArgumentError.new('Need a food item')
-    end
+    params_error(uri)
+    params_error(url)
+    params_error(label)
+    params_error(image)
+    params_error(healthlabels)
+    params_error(ingredientlines)
 
     @uri = uri
     @url = url
@@ -26,5 +29,11 @@ class Recipe
       raw_recipe["healthlabels"],
       raw_recipe["ingredientlines"]
   )
+  end
+
+  def params_error(param)
+    if param.nil? || param.empty?
+      raise ArgumentError.new("Missing #{param}")
+    end
   end
 end

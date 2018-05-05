@@ -31,13 +31,16 @@ Minitest::Reporters.use!(
   Minitest.backtrace_filter
 )
 
-
 # To add Capybara feature tests add `gem "minitest-rails-capybara"`
 # to the test group in the Gemfile and uncomment the following:
 # require "minitest/rails/capybara"
 
 # Uncomment for awesome colorful output
 # require "minitest/pride"
+
+if ActionPack::VERSION::STRING >= "5.2.0"
+  Minitest::Rails::TestUnit = Rails::TestUnit
+end
 
 class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.

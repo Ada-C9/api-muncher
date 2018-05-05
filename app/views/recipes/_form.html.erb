@@ -1,7 +1,7 @@
-<h1> Recipe Finder </h1>
 <section class="search-form">
+<h1> Recipe Finder </h1>
 <%= form_tag('/recipes', method: :get) do %>
-<%= text_field_tag(:q, nil, placeholder: 'Search terms') %>
+<%= text_field_tag(:q, nil, placeholder: 'Search terms', class: "search-field") %>
 <%= submit_tag("Submit", class:"button") %>
 <% end %>
 </section>

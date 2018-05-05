@@ -2,76 +2,76 @@
 <%= render partial: "form" %>
 
 <section class="recipe-details">
-
   <section class="page-headline">
     <h2> <%= @recipe.label %> </h2>
     <h5>By <%= link_to @recipe.source, @recipe.url %> </h5> <!--TODO: add link to source-->
   </section>
+  <section class="recipe-container">
+    <div>
+      <section class="recipe-pic">
+        <image>
+          <%= image_tag(@recipe.image, alt: @recipe.label) %>
+        </image>
+      </section>
+    </div>
 
-  <image>
-    <%= image_tag(@recipe.image, alt: @recipe.label) %>
-  </image>
-
-  <p>Original recipe URL: <%= @recipe.url %> </p> <!--TODO: delete line?-->
-  <p>Number of servings: <%= @recipe.yield.to_i %> </p>
-  <p>Total energy: <%= @recipe.calories.to_i %> kcal </p> <!--TODO: need conversion?-->
-  <p>Total weight: <%= @recipe.totalWeight.to_i %> g </p>
-
-  <section class="recipe-list ingredients">
-    <h5>Ingredients list </h5>
-    <% if @recipe.ingredients != nil  %>
-    <% @recipe.ingredients.each do |i| %>
-    <ul>
-      <li> <%= i["text"] %> </li> <!--TODO: figure out ingrediant syntax-->
-    </ul>
-    <% end %>
-    <% end %>
+    <div>
+      <section class="recipe-list ingredients">
+        <h5>Ingredients </h5>
+        <ul>
+          <% if @recipe.ingredients != nil  %>
+          <% @recipe.ingredients.each do |i| %>
+          <li> <%= i["text"] %> </li>
+          <% end %>
+          <% end %>
+        </ul>
+      </section>
+    </div>
   </section>
 
-  <section class="recipe-list nutrition">
-    <h5> Total nutrients for the entire recipe </h5>
-    <% if @recipe.totalNutrients != nil %>
-    <% @recipe.totalNutrients.each do |i| %>
+  <section class="dietary-labels">
     <ul>
-      <li> <%= "#{i[1]["label"]}: #{i[1]["quantity"].to_i} #{i[1]["unit"]}"%> </li>
-    </ul>
-    <% end %>
-    <% end %>
-  </section>
+      <li><strong> Dietary labels:  </strong> </li>
+      <% if @recipe.dietLabels != nil %>
+      <% @recipe.dietLabels.each do |i| %>
+      <li> <%= i %>  | </li>
+      <% end %>
+      <% end %>
 
-  <section class="recipe-list nutrition">
-    <h5> Percent daily value for the entire recipe </h5>
-    <% if @recipe.totalDaily != nil %>
-    <% @recipe.totalDaily.each do |i| %>
-    <ul>
-      <li> <%= "#{i[1]["label"]}: #{i[1]["quantity"].to_i}#{i[1]["unit"]}"%> </li>
+      <% if @recipe.healthLabels != nil %>
+      <% @recipe.healthLabels.each do |i| %>
+      <li> <%= i %>  | </li>
+      <% end %>
+      <% end %>
     </ul>
-    <% end %>
-    <% end %>
   </section>
-
-  <section class="recipe-list labels">
-    <h5>Diet labels</h5>
-    <% if @recipe.dietLabels != nil %>
-    <% @recipe.dietLabels.each do |i| %>
-    <ul>
-      <li> <%= i %> </li>
-    </ul>
-    <% end %>
-    <% end %>
-  </section>
-
-  <section class="recipe-list labels">
-    <h5>Health labels</h5>
-    <% if @recipe.healthLabels != nil %>
-    <% @recipe.healthLabels.each do |i| %>
-    <ul>
-      <li> <%= i %> </li>
-    </ul>
-    <% end %>
-    <% end %>
-  </section>
-
 </section>
 
+<!--
+
+<p>Original recipe URL: <%= @recipe.url %> </p>
+<p>Total energy: <%= @recipe.calories.to_i %> kcal </p>
+<p>Total weight: <%= @recipe.totalWeight.to_i %> g </p>
+<p>Number of servings: <%= @recipe.yield.to_i %> </p>
+<section class="recipe-list nutrition">
+<h5> Total nutrients for the entire recipe </h5>
+<% if @recipe.totalNutrients != nil %>
+<% @recipe.totalNutrients.each do |i| %>
+<ul>
+<li> <%= "#{i[1]["label"]}: #{i[1]["quantity"].to_i} #{i[1]["unit"]}"%> </li>
+</ul>
+<% end %>
+<% end %>
 </section>
+
+<section class="recipe-list nutrition">
+<h5> Percent daily value for the entire recipe </h5>
+<% if @recipe.totalDaily != nil %>
+<% @recipe.totalDaily.each do |i| %>
+<ul>
+<li> <%= "#{i[1]["label"]}: #{i[1]["quantity"].to_i}#{i[1]["unit"]}"%> </li>
+</ul>
+<% end %>
+<% end %>
+</section>
+-->

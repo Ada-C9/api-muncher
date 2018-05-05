@@ -1,3 +1,5 @@
+require 'will_paginate/array'
+
 class Recipe
   attr_reader :uri, :label, :image, :source, :url, :yield, :calories, :totalWeight, :ingredients, :totalNutrients, :totalDaily, :dietLabels, :healthLabels
 

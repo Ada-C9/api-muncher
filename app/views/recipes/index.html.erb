@@ -6,8 +6,8 @@
   <ul>
     <% @recipes.each do |re| %>
     <li>
-      <%= link_to re.name, show_recipe_path(re.uri.split("_")[1]) %>
-      <%= image_tag(re.image, alt: "food-image", class: "food-image") %>
+      <%= re.name  %>
+      <%= link_to image_tag(re.image, alt: "food-image", class: "food-image"), show_recipe_path(re.uri.split("_")[1]) %>
     </li>
     <% end %>
   </ul>

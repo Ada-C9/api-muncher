@@ -12,7 +12,6 @@ class EdamamWrapper
 
     url = BASE_URL + "?q=#{query}" + "&app_id=#{id}" + "&app_key=#{key}" + "&from=0" + "&to=50"
     response = HTTParty.get(url)
-
     raise_on_error(response)
 
     return response["hits"].map do |recipe_hash|

@@ -1,23 +1,25 @@
 <header>
+  <%= render partial: "form" %>
+
   <% if @query %>
-        <h4 class=""><%= @recipes.count %> RESULTS FOR: "<%= @query %>"</h4>
+        <h4 class="align-center"><%= @recipes.count %> RESULTS FOR: "<%= @query %>"</h4>
 </header>
 
 <% end %>
 <div >
 
-<section >
-  <% if @recipes%>
-  <ul class='grid-x'>
-    <% @recipes.each do |recipe| %>
-    <li class='thumbnail'>
-      <%= image_tag recipe.image %>
-      <p><%= link_to recipe.name, recipe_path(recipe.id) %></p>
-    </li>
+  <section >
+    <% if @recipes%>
+    <ul class='grid-x'>
+      <% @recipes.each do |recipe| %>
+      <li class='thumbnail' 'align-center'>
+        <%= image_tag recipe.image %>
+        <p><%= link_to recipe.name, recipe_path(recipe.id) %></p>
+      </li>
+      <% end %>
+    </ul>
     <% end %>
-  </ul>
-  <% end %>
-</section>
+  </section>
 </div>
 
 <section class="will_paginate align-center">

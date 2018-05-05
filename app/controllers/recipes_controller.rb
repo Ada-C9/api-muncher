@@ -2,10 +2,12 @@ require 'will_paginate/array'
 
 class RecipesController < ApplicationController
 
+  def home; end
+  
   def index
     @query = params[:query]
 
-    if @query == ""
+    if @query == "" || @query == nil
       flash[:status] = :error
       flash[:message] = "Please enter the name of a recipe."
     else

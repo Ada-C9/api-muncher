@@ -1,4 +1,4 @@
-
+  <%= render partial: "form" %>
 <!-- Show View: recipe name, link to original recipe, ingredients, dietary info -->
 <h4><%= @recipe.name %></h4>
 <h5>Recipe by:<%= link_to "#{@recipe.source}", @recipe.link %></h5>

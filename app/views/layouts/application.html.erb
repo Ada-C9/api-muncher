@@ -15,19 +15,11 @@
     <header>
       Recipe hAPI
     </header>
-    
+
     <% if flash[:status] %>
     <class="<%= flash[:status] %>"><%= flash[:message] %></p>
     <% end %>
-
-    <section class="search-wrapper more-padding align-center">
-      <%= form_tag({controller: 'recipes', action: 'index'}, method: 'get') do %>
-      <%= text_field_tag(:query) %>
-      <%= submit_tag("Search!")%>
-      <% end %>
-    </section>
-
-
+    
     <%= yield %>
 
     <footer class="align-center">

@@ -1,5 +1,5 @@
 require 'test_helper'
-require 'pry'
+
 
 describe RecipeApiWrapper do
   it 'can query a valid recipe' do

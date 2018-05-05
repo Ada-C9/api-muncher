@@ -5,12 +5,11 @@ class EdamamWrapper
   class EdamamError < StandardError; end
 
   BASE_URL = "https://api.edamam.com/search"
+  ID = ENV["APP_ID"]
+  KEY = ENV["APP_KEY"]
 
   def self.search_recipes(query)
-    id = ENV["APP_ID"]
-    key = ENV["APP_KEY"]
-
-    url = BASE_URL + "?q=#{query}" + "&app_id=#{id}" + "&app_key=#{key}" + "&from=0" + "&to=50"
+    url = BASE_URL + "?q=#{query}" + "&app_id=#{ID}" + "&app_key=#{KEY}" + "&from=0" + "&to=50"
     response = HTTParty.get(url)
     raise_on_error(response)
 
@@ -20,13 +19,11 @@ class EdamamWrapper
   end
 
   def self.get_recipe(id)
-    app_id = ENV["APP_ID"]
-    key = ENV["APP_KEY"]
     uri = "http://www.edamam.com/ontologies/edamam.owl#recipe_" + "#{id}"
 
     encoded_uri = URI.encode(uri)
 
-    url = BASE_URL + "?r=#{encoded_uri}" + "&app_id=#{app_id}" + "&app_key=#{key}"
+    url = BASE_URL + "?r=#{encoded_uri}" + "&app_id=#{ID}" + "&app_key=#{KEY}"
 
     response = HTTParty.get(url)
 
@@ -38,7 +35,7 @@ class EdamamWrapper
 
   private
   def self.raise_on_error(response)
-    unless response.code == 200
+    if response.code != 200 || response.body == "[]"
       raise EdamamError.new("Unable to process your search at this time.")
     end
   end

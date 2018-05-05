@@ -25,5 +25,14 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
+# Ignore secret secrets
 .env
+
+# Ignore my scratch file
 sample.rb
+
+# Ignore VCR cassette
+/tests/cassettes/*
+
+# Ignore coverage
+coverage

@@ -6,6 +6,13 @@ require "minitest/reporters"  # for Colorized output
 require 'vcr'
 require 'webmock/minitest'
 
+require "simplecov"
+SimpleCov.start :rails do
+  add_filter "/channels/"
+  add_filter "/jobs/"
+  add_filter "/mailers/"
+end
+
 VCR.configure do |config|
   config.cassette_library_dir = 'test/cassettes' # folder where casettes will be located
   config.hook_into :webmock # tie into this other tool called webmock

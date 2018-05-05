@@ -9,7 +9,11 @@
 
 <article>
   <% if @recipes %>
-  <ul class="recipes-list">
+  <aside>
+    <%= paginate @recipes, window: 2, outer_window: 1 %>
+  </aside>
+
+  <ul class>
     <% @recipes.each do |recipe| %>
     <li>
       <img src="<%= recipe.photo_url %>" />
@@ -17,8 +21,9 @@
     </li>
     <% end %>
   </ul>
-  <div class="pages">
+  
+  <aside>
     <%= paginate @recipes, window: 2, outer_window: 1 %>
-  </div>
+  </aside>
   <% end %>
 </article>

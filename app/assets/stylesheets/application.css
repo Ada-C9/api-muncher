@@ -37,7 +37,7 @@ form {
 
 /* recipe card styles  */
 
-article ul.recipes-list {
+article ul {
   list-style: none;
   margin-left: 0;
   display: flex;
@@ -46,7 +46,7 @@ article ul.recipes-list {
   justify-content: space-evenly;
 }
 
-article ul.recipes-list li {
+article ul li {
   display: inline-block;
   padding: none;
   width: 15rem;
@@ -57,7 +57,7 @@ article ul.recipes-list li {
   /* border: solid 1px purple; */
 }
 
-article ul.recipes-list li h5 {
+article ul li h5 {
   display: absolute;
   bottom: 0;
   position: absolute;
@@ -68,11 +68,15 @@ article ul.recipes-list li h5 {
   /* border: solid 1px yellow; */
 }
 
-article ul.recipes-list li img {
+article ul li img {
   height: 75%;
 }
 
 /* pagination styles */
-.pages {
-  /* border: solid 1px red; */
+aside nav.pagination {
+  text-align: center;
+}
+
+aside nav.pagination span {
+  display: inline-block;
 }

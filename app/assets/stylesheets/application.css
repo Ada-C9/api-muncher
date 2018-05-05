@@ -43,6 +43,11 @@
   grid-template-rows: repeat(1, 1fr);
 }
 
+header {
+  border-bottom: 8px solid #613A43;
+  margin-bottom: 30px;
+}
+
 body {
   margin: 3em;
   font-family: 'Comfortaa', cursive;

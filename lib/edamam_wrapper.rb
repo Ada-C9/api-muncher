@@ -39,7 +39,7 @@ class EdamamWrapper
 
   private
   def self.raise_on_error(response)
-    unless response
+    unless response.code == 200
       raise EdamamError.new("Unable to process your search at this time.")
     end
   end

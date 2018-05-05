@@ -4,20 +4,21 @@
 </header>
 
 <% end %>
-<section>
+<div >
+
+<section >
   <% if @recipes%>
-  <ul>
+  <ul class='grid-x'>
     <% @recipes.each do |recipe| %>
-    <li>
-      <%= image_tag recipe.image, size: 50 %>
+    <li class='thumbnail'>
+      <%= image_tag recipe.image %>
+      <p><%= link_to recipe.name, recipe_path(recipe.id) %></p>
     </li>
-    <li>
-      <%= link_to recipe.name, recipe_path(recipe.id) %>
-    </li></br>
     <% end %>
   </ul>
   <% end %>
 </section>
+</div>
 
 <section class="will_paginate align-center">
 <% if @recipes%>

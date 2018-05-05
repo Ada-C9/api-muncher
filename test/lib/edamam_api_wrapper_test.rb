@@ -39,9 +39,6 @@ describe EdamamApiWrapper do
     it "returns the accurate information of a recipe" do
       VCR.use_cassette("show_recipe") do
         @recipe.name.must_equal "Teriyaki Chicken"
-        @recipe.image.must_equal "https://www.edamam.com/web-img/262/262b4353ca25074178ead2a07cdf7dc1.jpg"
-        @recipe.must_respond_to :id
-        @recipe.must_respond_to :name
       end
     end
 

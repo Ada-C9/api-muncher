@@ -17,3 +17,33 @@
  *= require foundation_and_overrides
 
  */
+
+body {
+  margin: 3em;
+}
+
+body * {
+  font-family: 'Nixie One', cursive;
+  font-weight: bold;
+}
+
+.muncher a{
+  font-family: 'Special Elite', cursive;
+  color: black;
+}
+
+.muncher {
+  text-align: center;
+  margin-bottom: 80px;
+
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}

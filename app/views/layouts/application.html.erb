@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css?family=Special+Elite|Nixie+One" rel="stylesheet">
 
-    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
 
-    <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
-    <%= csrf_meta_tags %>
-  </head>
 
-  <body>
+  <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
 
-    <%= yield %>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
 
-  </body>
+<body>
+  <h1 class="muncher"><%= link_to "Seattle Muncher", root_path%></h1>
+
+  <%= yield %>
+  <div class="footer">
+    <p>Powered by Edamam</p>
+  </div>
+</body>
 </html>

@@ -1,18 +1,122 @@
-<h1><%= @recipe.label %></h1>
-<%= link_to ("Original Recipe"), @recipe.url, target: "_blank" %>
-<%= @recipe.servings.to_i %>
-<%= @recipe.ingredients.each do |ingredient| %>
-  <%= puts ingredient %>
-<% end %>
-<%= @recipe.health_labels.each do |health_label| %>
-  <%= puts health_label %>
-<% end %>
-<%= @recipe.calories %>
-<%= @recipe.fat %>
-<%= @recipe.saturated_fat %>
-<%= @recipe.mono_fat %>
-<%= @recipe.carbs %>
-<%= @recipe.protein %>
-<%= @recipe.sodium %>
-<%= @recipe.fiber %>
-<%= @recipe.cholesterol %>
+<article class="recipe-details">
+  <%= image_tag(@recipe.image) %>
+  <h3><%= @recipe.label %></h3>
+  <p>
+    <%= link_to ("Original Recipe"), @recipe.url, target: "_blank" %>
+  </p>
+  <p><%= @recipe.servings.to_i %> servings</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Ingredients</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @recipe.ingredients.each do |ingredient| %>
+        <tr>
+          <td><%= ingredient %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <table>
+    <thead>
+      <tr>
+        <th>Health Labels</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @recipe.health_labels.each do |health_label| %>
+        <tr>
+          <td><%= health_label %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nutrition Info</th>
+        <th>Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Calories (kcal)</td>
+        <% if @recipe.calories == nil %>
+          <td>Not Available</td>
+        <% else %>
+          <td><%= @recipe.calories.round(0)%></td>
+        <% end %>
+      </tr>
+      <tr>
+        <td>Fat (g)</td>
+        <% if @recipe.fat == nil %>
+          <td>Not Available</td>
+        <% else %>
+          <td><%= @recipe.fat %></td>
+        <% end %>
+      </tr>
+      <tr>
+        <td>Saturated Fat (g)</td>
+        <% if @recipe.saturated_fat == nil %>
+          <td>Not Available</td>
+        <% else %>
+          <td><%= @recipe.saturated_fat %></td>
+        <% end %>
+      </tr>
+      <tr>
+        <td>Monounsaturated Fat (g)</td>
+        <% if @recipe.mono_fat == nil %>
+          <td>Not Available</td>
+        <% else %>
+          <td><%= @recipe.mono_fat %></td>
+        <% end %>
+      </tr>
+      <tr>
+        <td>Carbs (g)</td>
+        <% if @recipe.carbs == nil %>
+          <td>Not Available</td>
+        <% else %>
+          <td><%= @recipe.carbs %></td>
+        <% end %>
+      </tr>
+      <tr>
+        <td>Protein (g)</td>
+        <% if @recipe.protein == nil %>
+          <td>Not Available</td>
+        <% else %>
+          <td><%= @recipe.protein %></td>
+        <% end %>
+      </tr>
+      <tr>
+        <td>Sodium (mg)</td>
+        <% if @recipe.sodium == nil %>
+          <td>Not Available</td>
+        <% else %>
+          <td><%= @recipe.sodium %></td>
+        <% end %>
+      </tr>
+      <tr>
+        <td>Fiber (g)</td>
+        <% if @recipe.fiber == nil %>
+          <td>Not Available</td>
+        <% else %>
+          <td><%= @recipe.fiber %></td>
+        <% end %>
+      </tr>
+      <tr>
+        <td>Cholesterol (mg)</td>
+        <% if @recipe.cholesterol == nil %>
+          <td>Not Available</td>
+        <% else %>
+          <td><%= @recipe.cholesterol %></td>
+        <% end %>
+      </tr>
+    </tbody>
+  </table>
+
+
+</article>

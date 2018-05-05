@@ -52,7 +52,7 @@ class RecipeSearchWrapper
     opts["image"] = response[0]["image"]
     opts["url"] = response[0]["url"]
     opts["servings"] = response[0]["yield"]
-    opts["ingredients"] = response[0]["ingredients"]
+    opts["ingredients"] = response[0]["ingredientLines"]
     opts["health_labels"] = response[0]["healthLabels"]
     opts["calories"] = response[0]["calories"]
     opts["fat"] = response[0]["FAT"]

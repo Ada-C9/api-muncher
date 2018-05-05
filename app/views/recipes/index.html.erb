@@ -5,12 +5,12 @@
     <% @recipes.each do |recipe| %>
 
     <li>
-      <ul>
-        <li><a class="th"><img src="<%=recipe.image%>" alt="<%=recipe.label%>"></a></li>
-        <li><%=link_to recipe.label, recipe_path(recipe.uri)%></li>
+      <ul class="recipebox">
+        <li class="recipename"><%=link_to recipe.label, recipe_path(recipe.uri)%></li>
+        <li><a class="th"><img src="<%=recipe.image%>" alt="<%=recipe.label%>" class="showphoto"></a></li>
       </ul>
     </li>
     <%end%>
   </ul>
 </section>
-<%= will_paginate @recipes%>
+<a id="pagenumbers"><%= will_paginate @recipes%></a>

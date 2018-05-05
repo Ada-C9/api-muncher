@@ -21,16 +21,25 @@
  body {
    background: rgb(243, 244, 220);
    font-family: 'Overpass', sans-serif;
+   width: 100%;
+   height: 100%;
  }
 
  h1, h2, h3 {
    color: #aaa;
  }
 
- .ten-recipes {
-   display: flex;
-   flex-wrap: wrap;
- }
+a {
+  color: rgb(179, 81, 140);
+  line-height: 50px;
+}
+
+a:hover {
+  color: rgb(153, 49, 79);
+  font-size: 1.3rem;
+}
+
+
  ul {
    list-style-type: none;
  }
@@ -41,6 +50,7 @@
    padding:1px;
    border:3px solid #aaa;
    background-color:white;
+   border-radius: 25px;
  }
 
  .show-image {

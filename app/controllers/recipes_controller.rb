@@ -7,7 +7,7 @@ end
 
   def index
     #@count,
-    @recipes = EdamamApiWrapper.recipe_list(params[:query], 10).paginate(:page => params[:page], :per_page => 5)
+    @recipes = EdamamApiWrapper.recipe_list(params[:query], params[:page].to_i).paginate(:page => params[:page], :per_page => 10, :total_entries => 100)
     #@recipes = @recipes
   end
 

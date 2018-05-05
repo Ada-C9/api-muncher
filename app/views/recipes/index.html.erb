@@ -3,13 +3,15 @@
   <% if @recipes %>
     <ul>
       <% @recipes.each do |recipe| %>
-        <li>
-          <%= link_to recipe.label, recipe_path(recipe.label) %>
-        </li>
-        <li>
+        <li class="small medium">
           <%= image_tag recipe.image %>
+          <%= link_to recipe.label, recipe_path(recipe.uri) %>
         </li>
       <% end %>
     </ul>
   <% end %>
 </section>
+
+<footer class="pagination">
+  <%= paginate @recipes %>
+</footer>

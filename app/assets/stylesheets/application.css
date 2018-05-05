@@ -17,3 +17,62 @@
  *= require foundation_and_overrides
 
  */
+ header img {
+   height: 100px;
+   width: 150px;
+   display: flex;
+   align-self: center;
+ }
+
+nav {
+  padding: 0 20%;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+.recipes-list ul {
+  display: flex;
+  flex-flow: wrap row;
+  /* flex-direction: row; */
+}
+
+li.small.medium {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    max-width: 25%;
+    align-items: center;
+}
+
+.recipes-list ul li img {
+  padding: 20px;
+}
+
+.recipes-list {
+  padding: 50px;
+}
+
+.recipes-list ul li {
+  list-style-type: none;
+}
+
+.pagination {
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.recipes-list h1 {
+  text-align: center;
+}
+
+.recipe {
+  padding: 50px;
+}
+
+.recipe ul li {
+list-style-type: none;}

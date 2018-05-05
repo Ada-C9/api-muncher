@@ -37,7 +37,9 @@ Minitest::Reporters.use!(
   ENV,
   Minitest.backtrace_filter
 )
-
+if ActionPack::VERSION::STRING >= "5.2.0"
+  Minitest::Rails::TestUnit = Rails::TestUnit
+end
 
 # To add Capybara feature tests add `gem "minitest-rails-capybara"`
 # to the test group in the Gemfile and uncomment the following:

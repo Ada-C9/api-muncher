@@ -10,10 +10,23 @@
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
+  <header>
+    <%= image_tag "logo.jpg", alt: "Site logo", class: "logo" %>
+    <nav>
+      <%= form_tag recipes_path(@label), method: "get" do %>
+        <%= label_tag(:message, "Enter Recipe name") %>
+        <%= text_field_tag(:message) %>
+        <%= submit_tag("Search") %>
 
+      <% end %>
+
+    </nav>
+  </header>
   <body>
 
-    <%= yield %>
 
+    <%= yield %>
+    <footer>
+    </footer>
   </body>
 </html>

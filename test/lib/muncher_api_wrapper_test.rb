@@ -5,7 +5,7 @@ describe MuncherApiWrapper do
 
     it 'gives a list of recipes' do
       VCR.use_cassette('recipes') do
-        recipes = MuncherApiWrapper.list_recipes
+        recipes = MuncherApiWrapper.list_recipes("food")
 
         recipes.each do |recipe|
           recipe.must_be_kind_of Recipe
@@ -13,8 +13,9 @@ describe MuncherApiWrapper do
       end
 
     end
+
+    it 'gives one recipe' do
+
+    end
   end
-
-
-
 end

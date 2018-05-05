@@ -22,22 +22,17 @@ class MuncherApiWrapper
     end
   end
 
+  def self.show(uri)
+    token = ENV["MUNCHER_API_KEY"]
+    id = ENV["MUNCHER_API_ID"]
+    uri_root = "http://www.edamam.com/ontologies/edamam.owl#recipe_"
+    url = "https://api.edamam.com/search?r=#{uri_root}#{uri}&app_id=#{id}&app_key=#{token}"
+    encoded_url = URI.encode(url)
 
-  
-  # def self.send_message(recipe_name)
-  #   token = ENV["MUNCHER_API_KEY"]
-  #   id = ENV["MUNCHER_API_ID"]
-  #   url_root = "https://api.edamam.com/search"
-  #   full_url = URI.encode("#{url_root}?app_id=#{id}&app_key=#{token}&recipe=#{recipe_name}")
-  #
-  # end
+    response = HTTParty.get(encoded_url)
 
-  # private
-  # def self.raise_on_error(response)
-  #   unless response["ok"]
-  #     raise SlackError.new(response["error"])
-  #   end
-  # end
+    return Recipe.from_api(response[0])
+
+  end
+
 end
-
-puts MuncherApiWrapper.list_recipes('chicken')

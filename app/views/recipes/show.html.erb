@@ -1,0 +1,19 @@
+<section class="recipe">
+  <%= image_tag @recipe.image %>
+  <h3>Health Labels</h3>
+    <ul>
+      <% @recipe.healthLabels.each do |label| %>
+        <li>
+          <%= label %>
+        </li>
+      <% end %>
+    </ul>
+    <h3>Ingredients</h3>
+    <ul>
+      <% @recipe.ingredientLines.each do |ingredient| %>
+        <li>
+          <%= ingredient %>
+        </li>
+      <% end %>
+    </ul>
+</section>

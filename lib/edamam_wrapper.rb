@@ -1,8 +1,4 @@
 require 'httparty'
-# require_or_load './recipe.rb'
-# require 'lib/recipe.rb'
-# require 'Recipe'
-
 
 class EdamamWrapper
   class EdamamError < StandardError; end

@@ -1,4 +1,5 @@
 class RecipesController < ApplicationController
+  before_action :find_user
 
   def home
   end

@@ -80,7 +80,7 @@ a:hover {
 }
 
 /*--------- home ---------*/
-.home a {
+.home h1 a {
   font-size: 7rem;
   color: #05807E;
 }

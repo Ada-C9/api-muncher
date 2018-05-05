@@ -17,6 +17,14 @@
       </li>
 
       <li>
+        <%= "Allergy/Diet Restriction Info: #{@recipe.allergy}" =%>
+      </li>
+
+      <li>
+        <%= "Nutritional Info: #{@recipe.nutrition}" =%>
+      </li>
+
+      <li>
         <ul>
           <% @recipe.ingredients.each do |ingredient| %>
             <li>
@@ -27,7 +35,7 @@
       </li>
 
       <li>
-        <%= link_to "#{@recipe.name} details", @recipe.link, target: :_blank =%>
+        <%= link_to "Original #{@recipe.name} recipe", @recipe.link, target: :_blank =%>
       </li>
     </ul>
 

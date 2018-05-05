@@ -12,12 +12,15 @@
 <h3><%= link_to @recipe.name, @recipe.url  %></h3>
 <h4 class='byline'>by <%= @recipe.source %></h4>
 
+
 <section class='show-page'>
   <div class='image-section'>
   <img src="<%= @recipe.image %>" alt="recipe photo">
+  </div>
 
-    <section class='nutrition'>
-    <span>Dietary Labels</span>
+  <div class='labels'>
+    <div class='nutrition'>
+    <p>Dietary Labels</p>
     <ul>
       <% if @recipe.dietary_info %>
       <% @recipe.dietary_info.each do |label| %>
@@ -27,10 +30,9 @@
       <% end %>
       <% end %>
     </ul>
-    </section>
   </div>
   <div class='ingredients'>
-    <span>Ingredients</span>
+    <p>Ingredients</p>
     <ul>
       <% @recipe.ingredients.each do |label| %>
       <li>
@@ -39,7 +41,9 @@
       <% end %>
     </ul>
   </div>
+</div>
 </section>
+
 <footer>
   <div id="edamam-badge" data-color="white"></div>
 <footer>

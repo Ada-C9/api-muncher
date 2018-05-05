@@ -14,6 +14,7 @@ class RecipeSearchWrapper
     encoded_uri = URI.encode(url)
 
     response = HTTParty.get(encoded_uri).parsed_response
+    # raise_on_error(response)
 
     recipes = []
 
@@ -36,7 +37,8 @@ class RecipeSearchWrapper
     encoded_uri = URI.encode("https://api.edamam.com/search?app_id=#{@app_id}&app_key=#{@app_key}&r=" + uri)
 
     response = HTTParty.get(encoded_uri).parsed_response
-    #response[0]
+    # raise_on_error(response)
+
     uri = response[0]["uri"]
     label = response[0]["label"]
     opts = {}
@@ -61,6 +63,7 @@ class RecipeSearchWrapper
   private
   def self.raise_on_error(response)
     unless response["ok"]
+      puts "errors"
       raise RecipeError.new(response["error"])
     end
   end

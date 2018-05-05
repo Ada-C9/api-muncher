@@ -17,3 +17,20 @@
  *= require foundation_and_overrides
 
  */
+/* general styles  */
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  margin: 0 10rem;
+  border: solid 1px green;
+}
+
+/* search bar styles  */
+
+form {
+  border: solid 1px blue;
+}

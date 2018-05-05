@@ -1,19 +1,22 @@
-<%= form_tag recipes_path, method: :get do %>
+<section>
+  <h1>Comelón</h1>
+  <h4>¡Busca recetas con información dietética!</h4>
+  <%= form_tag recipes_path, method: :get do %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag 'Search' %>
+  <% end %>
+</section>
 
-  <%= text_field_tag :search, params[:search] %>
-
-  <%= submit_tag 'Search' %>
-
-<% end %>
-
-<% if @recipes %>
-<ul>
+<article>
+  <% if @recipes %>
+  <ul>
     <% @recipes.each do |recipe| %>
     <li>
       <img src="<%= recipe.photo_url %>" />
-      <%= link_to recipe.name, recipe_path(recipe.uri_id) %>
+      <h3><%= link_to recipe.name, recipe_path(recipe.uri_id) %></h3>
     </li>
     <% end %>
-</ul>
+  </ul>
   <%= paginate @recipes, window: 2, outer_window: 1 %>
-<% end %>
+  <% end %>
+</article>

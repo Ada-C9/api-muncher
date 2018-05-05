@@ -1,8 +1,8 @@
 class Recipe
 
-  attr_reader :label, :image, :source, :url, :health_labels, :ingredients
+  attr_reader :label, :image, :source, :url, :health_labels, :ingredients, :uri
 
-  def initialize(label, image, source, shareAs, healthLabels, ingredientLines)
+  def initialize(label, image, source, url, healthLabels, ingredientLines, uri)
     # # Note that the below we used lazy evaluation to
     # # our advantage here
     # # Boolean logic short cercut
@@ -13,9 +13,10 @@ class Recipe
     @label = label
     @image = image
     @source = source
-    @url = shareAs
+    @url = url
     @health_labels = healthLabels
     @ingredients = ingredientLines
+    @uri = uri
   end
 
   def self.from_api(raw_recipe)
@@ -23,9 +24,10 @@ class Recipe
       raw_recipe["label"],
       raw_recipe["image"],
       raw_recipe["source"],
-      raw_recipe["shareAs"],
+      raw_recipe["url"],
       raw_recipe["healthLabels"],
-      raw_recipe["ingredientLines"]
+      raw_recipe["ingredientLines"],
+      raw_recipe["uri"]
     )
   end
 end

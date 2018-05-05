@@ -23,15 +23,15 @@ class RecipeApiWrapper
     end
   end
 
-  # def self.show_recipe(label)
-  #
-  #   full_url = URI.encode("#{url_root}?channel=#{channel_name}&text=#{message}&token=#{token}&username=This is not Luxi&icon_emoji=:sheepy:")
-  #
-  #   response = HTTParty.post(full_url)
-  #
-  #   raise_on_error(response)
-  #
-  # end
+  def self.show_recipe(uri)
+
+    uri_url = "http://www.edamam.com/ontologies/edamam.owl#recipe_"
+    full_url = URI.encode(BASE_URL + "?r=#{uri_url}#{uri}&app_id=" + APP_ID + "&app_key=" + APP_KEY + "&from=#{FROM}&to=#{TO}")
+
+    response = HTTParty.post(full_url)
+
+    return Recipe.from_api(response[0])
+  end
 
   private
   def self.raise_on_error(response)

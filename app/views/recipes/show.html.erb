@@ -1,1 +1,33 @@
+<section class="recipe">
 
+
+      <ul class="">
+        <li>
+          <%= @recipe.label %>
+        </li>
+        <li>
+          <%= image_tag @recipe.image %>
+        </li>
+        <li> Direction/Source:
+          <%= link_to @recipe.source, @recipe.url, target: :_blank %>
+        </li>
+        <li>
+          <ul>
+          <% @recipe.health_labels.each do |label| %>
+            <li>
+              <%= label %>
+            </li>
+          <% end %>
+          </ul>
+        </li>
+        <li>
+          <ul>
+          <% @recipe.ingredients.each do |ingredient| %>
+            <li>
+              <%= ingredient %>
+            </li>
+          <% end %>
+        </ul>
+        </li>
+      </ul>
+</section>

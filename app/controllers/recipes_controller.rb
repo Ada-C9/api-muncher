@@ -9,16 +9,16 @@ class RecipesController < ApplicationController
   end
 
   def show
-    recipe_id = params[:id]
+    recipe_id = params[:uri]
 
-    @recipe = Recipe.find(recipe_id)
+    @recipe = RecipeApiWrapper.show_recipe(recipe_id)
   end
 
-  def search
-    ingredient = params[:ingredient]
-
-    redirect_to recipes_path(ingredient)
-  end
+  # def search
+  #   ingredient = params[:ingredient]
+  #
+  #   redirect_to recipes_path(ingredient)
+  # end
 
   private
   def catch_api_error

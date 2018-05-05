@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   root 'recipes#home'
 
   # path for all the recipes
-  get '/recipes/', to: 'recipes#index', as: 'recipes'
+  get '/recipes', to: 'recipes#index', as: 'recipes'
 
   # path for showing details of a recipe
-  get '/recipes/:id', to: 'recipes#show', as: 'recipe'
+  get '/recipes/:uri', to: 'recipes#show', as: 'recipe'
 end

@@ -3,21 +3,10 @@ require 'test_helper'
 describe Recipe do
 
   before do
-    @uri = "http://www.edamam.com/ontologies/edamam.owl#recipe_7bf4a371c6884d809682a72808da7dc2"
-    @label = "Teriyaki Chicken"
-    @url = "http://www.davidlebovitz.com/2012/12/chicken-teriyaki-recipe-japanese-farm-food/"
 
-    @dietLabels = ["Low-Carb"]
-    @ingredientLines = [
-        "1/2 cup (125ml) mirin",
-        "1/2 cup (125ml) soy sauce",
-        "One 2-inch (5cm) piece of fresh ginger, peeled and grated",
-        "2-pounds (900g) boneless chicken thighs (4-8 thighs, depending on size)"]
-    @image = "https://www.edamam.com/web-img/262/262b4353ca25074178ead2a07cdf7dc1.jpg"
-    @source = "David Lebovitz"
   end
 
-  it "Must initialize with 3 required parameters (uri, label, url) and optional variables ( ingredientLines, dietLabels, image, source)" do
+  it "Must initialize with the required parameters (uri, label, url) and optional variables ( image, source, ingredientLines, dietLabels)" do
     recipe = Recipe.new(@uri, @label, @url, options = { ingredientLines: @ingredientLines, dietLabels: @dietLabels, image: @image, source: @source})
 
     recipe.uri.must_equal @uri
@@ -30,7 +19,7 @@ describe Recipe do
     recipe.source.must_equal @source
   end
 
-  it "Cannot be initialized without 3 required parameters" do
+  it "Cannot be initialized without the required parameters" do
     proc {
       Recipe.new()
     }.must_raise ArgumentError

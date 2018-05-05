@@ -1,18 +1,18 @@
 <header>
   <% if @query %>
-        <h4 class="">RESULTS FOR: "<%= @query %>"</h4>
-      </header>
+        <h4 class=""><%= @recipes.count %> RESULTS FOR: "<%= @query %>"</h4>
+</header>
+
 <% end %>
 <section>
   <% if @recipes%>
-  <h6>COUNT: <%= @recipes.count %> </h6>
   <ul>
     <% @recipes.each do |recipe| %>
     <li>
       <%= image_tag recipe.image, size: 50 %>
     </li>
     <li>
-      <%= link_to recipe.name, recipe_path(uri: recipe.uri) %>
+      <%= link_to recipe.name, recipe_path(recipe.id) %>
     </li></br>
     <% end %>
   </ul>

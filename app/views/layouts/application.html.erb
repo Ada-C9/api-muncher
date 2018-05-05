@@ -15,6 +15,10 @@
     <header>
       Recipe hAPI
     </header>
+    
+    <% if flash[:status] %>
+    <class="<%= flash[:status] %>"><%= flash[:message] %></p>
+    <% end %>
 
     <section class="search-wrapper more-padding align-center">
       <%= form_tag({controller: 'recipes', action: 'index'}, method: 'get') do %>
@@ -22,6 +26,7 @@
       <%= submit_tag("Search!")%>
       <% end %>
     </section>
+
 
     <%= yield %>
 

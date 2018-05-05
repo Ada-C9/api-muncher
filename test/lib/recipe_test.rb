@@ -3,15 +3,15 @@ require 'pry'
 
 describe Recipe do
   before do
-    @recipe_hash = {
-                "uri": "http://www.edamam.com/ontologies/edamam.owl#recipe_3c5cf4968fa095cbdd9fca6ab5389e9c",
-                "label": "Pickled Brains recipes",
-                "image": "https://www.edamam.com/web-img/811/811a71bad21d73adb7fc6e92801f8ec4",
-                "source": "Martha Stewart",
-                "url": "http://www.marthastewart.com/318853/pickled-brains",
-                "shareAs": "http://www.edamam.com/recipe/pickled-brains-recipes-3c5cf4968fa095cbdd9fca6ab5389e9c/brains",
-                "yield": 10,
-                "dietLabels": [
+    data = {
+      "uri" => "http://www.edamam.com/ontologies/edamam.owl#recipe_3c5cf4968fa095cbdd9fca6ab5389e9c",
+      "label": "Pickled Brains recipes",
+      "image": "https://www.edamam.com/web-img/811/811a71bad21d73adb7fc6e92801f8ec4",
+      "source": "Martha Stewart",
+      "url": "http://www.marthastewart.com/318853/pickled-brains",
+      "shareAs": "http://www.edamam.com/recipe/pickled-brains-recipes-3c5cf4968fa095cbdd9fca6ab5389e9c/brains",
+      "yield": 10,
+      "dietLabels": [
                     "Low-Fat"
                 ],
                 "healthLabels": [
@@ -58,10 +58,29 @@ describe Recipe do
                 }
               }
 
+    @recipe = Recipe.new(data[:label],
+      data[:uri],
+      data[:image],
+      data[:ingredientLines],
+      data[:calories],
+      data[:url],
+      data[:source]
+    )
   end
 
   it "can be created with valid data" do
-    recipe = Recipe.from_api(@recipe_hash)
-    recipe.name.must_equal "Recipe name"
+    @recipe.must_be_kind_of Recipe
+    @recipe.name.must_equal "Pickled Brains recipes"
   end
+
+  it "raises error if data is incomplete" do
+    data[:label] = "bloop"
+    binding.pry
+    proc { Recipe.new() }.must_raise ArgumentError
+  end
+
+  it "raises error if data nil" do
+    proc { Recipe.new(nil) }.must_raise ArgumentError
+  end
+
 end

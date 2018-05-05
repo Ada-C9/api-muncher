@@ -10,16 +10,30 @@
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
+  <nav>
+<%if user = User.find_by(id: session[:user_id]) %>
+  <span>Signed in as <%=user.username%> </span><%=link_to "Log out", signout_path, clss:"button"%>
+<%else%>
+  <%= link_to "Sign-in with Github", "/auth/github", class:"button"  %>
+<%end%>
+  </nav>
 
   <body>
     <%= yield %>
     <footer>
-      <div class="pagination">
-      <%=link_to 1, {:action => 'index', :from=> 0, :to=> 9, :query=>params[:query]} %>
-      <%=link_to 2, {:action => 'index', :from=> 10, :to=> 20, :query=>params[:query]} %>
-      <%=link_to 3, {:action => 'index', :from=> 21, :to=> 30, :query=>params[:query]} %>
-      <%=link_to 4, {:action => 'index', :from=> 31, :to=> 40, :query=>params[:query]} %>
-      <%=link_to 5, {:action => 'index', :from=> 41, :to=>50, :query=>params[:query]} %>
+      <div>
+        <ul class="pagination">
+      <li><%=link_to 1, {:action => 'index', :from=> 0, :to=> 9, :query=>params[:query]} %></li>
+      <li><%=link_to 2, {:action => 'index', :from=> 10, :to=> 20, :query=>params[:query]} %></li>
+      <li><%=link_to 3, {:action => 'index', :from=> 21, :to=> 30, :query=>params[:query]} %></li>
+      <li><%=link_to 4, {:action => 'index', :from=> 31, :to=> 40, :query=>params[:query]} %></li>
+      <li><%=link_to 5, {:action => 'index', :from=> 41, :to=>50, :query=>params[:query]} %></li>
+      <li><%=link_to 6, {:action => 'index', :from=> 51, :to=>60, :query=>params[:query]} %></li>
+      <li><%=link_to 7, {:action => 'index', :from=> 61, :to=>70, :query=>params[:query]} %></li>
+      <li><%=link_to 8, {:action => 'index', :from=> 71, :to=>80, :query=>params[:query]} %></li>
+      <li><%=link_to 9, {:action => 'index', :from=> 81, :to=>90, :query=>params[:query]} %></li>
+      <li><%=link_to 10, {:action => 'index', :from=> 91, :to=>100, :query=>params[:query]} %></li>
+    </ul>
       </div>
     </footer>
   </body>

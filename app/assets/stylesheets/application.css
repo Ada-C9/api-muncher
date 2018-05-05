@@ -17,3 +17,27 @@
  *= require foundation_and_overrides
 
  */
+
+nav{
+  margin-left:85%;
+  margin-top:10px;
+}
+
+ #food-items{
+   display: grid;
+   grid-template-columns: auto auto auto;
+   padding-left: 100px;
+  list-style-type: none;
+ }
+
+ #recipe-title{
+   text-align:left;
+ }
+
+ .pagination{
+  padding-left:35%;
+ }
+
+ .pagination li{
+    font-size: 20px;
+ }

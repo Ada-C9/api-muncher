@@ -4,9 +4,10 @@
   <%= submit_tag "Search", class:"button"%>
 <%end%>
 
-<ul>
+<ul id="food-items">
   <%@recipes.each do |recipe|%>
-    <li><%=link_to image_tag(recipe.image),recipe_show_path(recipe.label,:uri=>recipe.uri)%></li>
-    <li><%=link_to recipe.label,recipe_show_path(recipe.label,:uri=>recipe.uri)%></li>
+    <li id="food-image"><%=link_to image_tag(recipe.image),recipe_show_path(recipe.label,:uri=>recipe.uri)%>
+    <p><%=link_to recipe.label,recipe_show_path(recipe.label,:uri=>recipe.uri)%></p>
+  </li>
   <% end %>
 </ul>

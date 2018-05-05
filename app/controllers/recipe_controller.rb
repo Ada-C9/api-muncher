@@ -19,6 +19,7 @@ class RecipeController < ApplicationController
     else
     @recipes = RecipeApiWrapper.list_of_queried_recipes(@query)
     end
+
   end
 
   def show

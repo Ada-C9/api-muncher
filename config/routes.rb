@@ -10,5 +10,9 @@ Rails.application.routes.draw do
 
   get '/search',to: 'recipe#index', as: 'query_results'
 
+  get "/auth/:provider/callback", to: "sessions#create"
+  get 'logout', to:'sessions#destroy', as: 'signout'
+
   get '/:item', to: 'recipe#show', as: 'recipe_show'
+
 end

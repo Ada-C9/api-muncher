@@ -1,21 +1,49 @@
 require "test_helper"
 
 describe RecipesController do
-  it "can get the index path" do
+  it "can get the search path" do
     get root_path
 
     must_respond_with :ok
   end
 
   it "can get the recipe show view" do
-    get show_path("recipe")
+    VCR.use_cassette('Slider') do
+      slider_uri = "#recipe_3765ec2ac5aa6523a30b59203fe64883"
+      get show_path(slider_uri)
 
-    must_respond_with :ok
+      must_respond_with :success
+    end
+  end
+
+  it "handles an invalid request" do
+    VCR.use_cassette('Slider') do
+      slider_uri = "#recipe_376"
+      get show_path(slider_uri)
+
+      must_respond_with :success
+    end
   end
 
   it "can add a query" do
-    post search_path("recipe")
+    VCR.use_cassette('chicken') do
+      get results_path('chicken')
 
-    must_redirect_to root_path
+      result = flash[:status]
+
+      must_respond_with :success
+      result.must_equal :success
+    end
+  end
+
+  it "alerts the user if no results are found" do
+    VCR.use_cassette('chicken') do
+      get results_path('Europa')
+
+      result = flash[:status]
+
+      must_respond_with :success
+      result.must_equal :failure
+    end
   end
 end

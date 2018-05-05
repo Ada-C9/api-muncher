@@ -3,9 +3,10 @@ class Recipe
   attr_reader :label, :image, :orig_url, :ingredients, :diet, :health, :uri, :source
 
   def initialize(recipe_data)
-    # if label.nil? || label.empty?
-    #   raise ArgumentError.new("Need a label please")
-    # end
+    if recipe_data[:label].nil? || recipe_data[:label].empty?
+      raise ArgumentError.new("Need a label please")
+    end
+
     @label = recipe_data[:label]
     @image = recipe_data[:image]
     @orig_url = recipe_data[:orig_url]

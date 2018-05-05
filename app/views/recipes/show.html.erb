@@ -1,6 +1,5 @@
 <section class="recipe">
-  <% if @result %>
-
+  <% if @result && !@result.is_a?(Array) %>
       <%= image_url(@result) %>
       <h2><%= @result.label.titlecase %></h2>
       <%= link_to @result.source, @result.orig_url.html_safe, target: :_blank %>

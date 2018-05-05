@@ -15,6 +15,13 @@
 
 <body>
   <header class="top">
+    <% if flash[:status] && !request.fullpath.include?("/results?page=") %>
+     <section class="row status <%= flash[:status] %> callout">
+       <h3>
+         <%= flash[:message] %>
+       </h3>
+     </section>
+    <% end %>
     <h1><%= link_to "Muncher", root_path %></h1>
     <% if display_search?(request.fullpath) %>
     <aside class="search"> <%= render partial: 'layouts/search' %> </aside>

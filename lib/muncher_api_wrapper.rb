@@ -5,13 +5,14 @@ class MuncherApiWrapper
   BASE_SEARCH = "http://www.edamam.com/ontologies/edamam.owl#recipe_"
   APP_ID = ENV["MUNCHER_APP_ID"]
   APP_KEY = ENV["MUNCHER_APP_KEY"]
+  RESULTS = 80
 
   def self.create_recipe(api_params)
     return Recipe.new(api_params["label"])
   end
 
   def self.list_recipes(terms)
-    url = "#{BASE_URL}?q=#{terms}&app_id=#{APP_ID}&app_key=#{APP_KEY}"
+    url = "#{BASE_URL}?q=#{terms}&to=#{RESULTS}&app_id=#{APP_ID}&app_key=#{APP_KEY}"
 
     escaped = URI.escape(url)
     response = HTTParty.get(escaped)

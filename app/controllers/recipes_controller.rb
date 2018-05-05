@@ -22,6 +22,7 @@ class RecipesController < ApplicationController
       flash[:result_text] = "Please enter a valid term for searching"
       redirect_back fallback_location: root_path
     end
+
   end
 
   def show
@@ -32,6 +33,11 @@ class RecipesController < ApplicationController
       flash[:result_text] = "Could not find that recipe"
       redirect_to recipes_path
     end
+  end
+
+  def favorite
+    @favorite_recipes = []
+    # @recipes = @login_user.favorite_recipes
   end
 
 end

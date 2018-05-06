@@ -1,6 +1,6 @@
 class EdamamApiWrapper
 
-  BASE_URL = "api.edamam.com/search?"
+  BASE_URL = "https://api.edamam.com/search?"
   TOKEN = ENV["EDAMAM_TOKEN"]
   ID = ENV["EDAMAM_ID"]
 

@@ -1,4 +1,4 @@
-<h1><%= @recipe.title %></h1>
+<!-- <h1><%= @recipe.title %></h1>
 
 <p>By <%= @recipe.source %></p>
 <p><%= link_to "See original recipes", @recipe.url , target: :_blank%></p>
@@ -21,3 +21,38 @@
   <li> <%= diet_label %> </li>
   <% end %>
 </ul>
+
+ -->
+
+
+<div class="media-object stack-for-small">
+
+  <div class="media-object-section">
+    <div class="thumbnail"><%= image_tag(@recipe.image, alt: "Recipe image")%></div>
+  </div>
+
+  <div class="media-object-section">
+    <h1><%= @recipe.title %></h1>
+
+    <p>By <%= @recipe.source %></p>
+
+    <p><%= link_to "See original recipes", @recipe.url , target: :_blank%></p>
+
+    <h6>Yield: <%= @recipe.portion.to_i %> </h6>
+
+    <h6>Ingredients:</h6>
+    <ul>
+      <% @recipe.ingredients.each do |ingredient|%>
+      <li> <%= ingredient %> </li>
+      <% end %>
+    </ul>
+
+
+    <h6>Dietry Information:</h6>
+    <ul>
+      <% @recipe.diet.each do |diet_label|%>
+      <li> <%= diet_label %> </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

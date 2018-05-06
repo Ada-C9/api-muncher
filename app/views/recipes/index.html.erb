@@ -1,10 +1,13 @@
-<h1>Results for <%= @term %></h1>
+<!-- <h1>Results for <%= @term %></h1>
+<div class="row align-spaced">
 <% @recipes.each do |r| %>
-<ul>
-  <li><%= image_tag(r.image, size: "100", alt: "Recipe image") %></li>
+
+<ul><div class="column small-4">
+  <div class="column small-4"><%= image_tag(r.image, size: "100", alt: "Recipe image") %></li>
   <li><%= link_to r.title, recipe_path(r.id) %></li>
-</ul>
+</ul></div>
 <% end %>
+</div>
 
 <div class="pagination">
   <div class="page_info">
@@ -12,3 +15,28 @@
   </div>
   <%= will_paginate @recipes, :container => false %>
 </div>
+
+
+<div class="row align-spaced">
+  <div class="column small-4">Aligned to</div>
+  <div class="column small-4">the space around</div>
+</div> -->
+
+<section class="index">
+
+  <% @recipes.each do |r| %>
+
+  <div class="card">
+    <div class="card-section">
+  <div class="home-img"> <%= image_tag(r.image, alt: "Recipe image") %></div>
+    </div>
+        <h4><%= link_to r.title, recipe_path(r.id) %></h4>
+    </div>
+</div>
+<% end%>
+<div class="pagination">
+  <div class="page_info"><%= page_entries_info @recipes %></div>
+  <%= will_paginate @recipes, :container => false %>
+</div>
+
+</section>

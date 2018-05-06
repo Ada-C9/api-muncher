@@ -1,19 +1,75 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *= require normalize-rails
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*= require normalize-rails
 
- *
- *= require_tree .
- *= require_self
- *= require foundation_and_overrides
+*
+*= require_tree .
+*= require_self
+*= require foundation_and_overrides
 
- */
+*/
+
+.media-object {
+  border: 1px solid grey;
+}
+
+
+
+.title-bar, .top-bar, .dropdown.menu, .top-bar-right li {
+  background-color: #e60000;
+  color: white;
+  /* background-color: white; */
+}
+
+.top-bar-right .button {
+  background-color: white;
+  color: #e60000;
+  font-weight: bold;
+    /* border-color: white; */
+    border: solid 1.5px white;
+}
+
+.button {
+  background-color:  #e60000;
+  color: white;
+  font-weight: bold;
+    /* border-color: white; */
+    /* border: solid 1.5px white; */
+}
+
+.index {
+padding: 5%;
+}
+
+.root {
+  padding: 30%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+text-align: center;
+}
+
+.home-img {
+  padding-bottom: 5%;
+}
+
+.card {
+  padding: 10%;
+  border: solid 2px #e60000;
+}
+
+a {
+  color: #e60000;
+}
+
+footer {
+  text-align: center;
+}

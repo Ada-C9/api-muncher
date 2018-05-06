@@ -1,8 +1,23 @@
-<h1 class="recipe-search">Muncher</h1>
+<section class="root">
+  <div class="card">
+    <div class="card-section">
+  <div class="home-img"> <%= link_to image_tag("recipe-icon",size: "200"), root_path  %></div>
+    </div>
 
-<h5>Find your flavor...</h5>
+        <h3>Find your flavor...</h3>
+        <%= form_tag search_results_path, method: :get do %>
+          <%= text_field_tag :query, params[:query], type: 'search', placeholder: 'Find recipe' %>
+        <%= submit_tag "Search", type: 'button', class: 'button' %>
+        <% end %>
+    </div>
+
+<!-- <div class="home-img"> <%= link_to image_tag("recipe-icon",size: "200"), root_path  %></div> -->
+
+<!--
+<h3>Find your flavor...</h3>
 <%= form_tag search_results_path, method: :get do %>
-  <%= label_tag(:query, "Enter term") %>
-  <%= text_field_tag(:query) %>
-  <%= submit_tag("Search") %>
-<% end %>
+  <%= text_field_tag :query, params[:query], type: 'search', placeholder: 'Find recipe' %>
+<%= submit_tag "search", type: 'button', class: 'button' %>
+<% end %> -->
+
+</section>

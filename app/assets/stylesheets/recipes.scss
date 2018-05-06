@@ -1,3 +1,30 @@
 // Place all the styles related to the recipes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.shorten {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.recipe-padding {
+  padding: 1em;
+}
+
+a {
+  border: 1px;
+  border-color: black;
+}
+
+.li-columns {
+  columns: 300px;
+}
+
+.failure {
+  border-radius: 5px;
+  background-color: #FFC0CB;
+  padding: 8px;
+  color: white;
+  font-size: 1em;
+}

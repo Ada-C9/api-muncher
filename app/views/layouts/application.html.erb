@@ -4,28 +4,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "recipe hapi" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
 
+  <%= favicon_link_tag asset_path('recipe4.png'), :rel => 'icon', :type =>  'image/png' %>
+
   <body>
-    <header>
-      Recipe hAPI
-    </header>
-
-    <% if flash[:status] %>
-    <class="<%= flash[:status] %>"><%= flash[:message] %></p>
-    <% end %>
-    
     <%= yield %>
-
-    <footer class="align-center">
-          <p>
-            COPYRIGHT &copy; ID 2018 | Powered by <%= link_to "Edamam", "https://www.edamam.com/" %>
-          </p>
-        </footer>
   </body>
+  
 </html>

@@ -1,6 +1,6 @@
 <section class="search-wrapper align-center">
   <%= form_tag({controller: 'recipes', action: 'index'}, method: 'get') do %>
   <%= text_field_tag(:query) %>
-  <%= submit_tag("Search!")%>
+  <%= submit_tag("Search!", class: "button")%>
   <% end %>
 </section>

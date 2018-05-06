@@ -1,38 +1,72 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *= require normalize-rails
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*= require normalize-rails
 
- *
- *= require_tree .
- *= require_self
- *= require foundation_and_overrides
+*
+*= require_tree .
+*= require_self
+*= require foundation_and_overrides
 
- */
+*/
+
+#ingredients {
+  list-style-type: circle;
+}
+
+h1#large-font {
+  font-size: 5em;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  background-color: #fcf9fa;
+}
 
 .align-center {
   text-align: center;
 }
 
+.button:hover {
+  background-color: #FFFFFF;
+  border: 1px black solid;
+  color: black;
+}
+
 .more-padding {
-  padding: 1em;
+  padding: 2em;
+}
+
+.padding-top {
+  padding-top: 5%;
+}
+
+.padding-bottom {
+  padding-bottom: 10%;
 }
 
 .search-wrapper {
-  padding: 10% 20% 0 20%;
+  padding: 0% 20% 0 20%;
 }
 
-/* .will_paginate a, .will_paginate .current {
-  background-color: red;
-} */
+.border {
+  border: 2px solid black;
+}
+
+.border-bottom {
+  border-bottom: 1px solid black;
+}
 
 .pagination .current {
   background: grey;
@@ -40,4 +74,14 @@
 
 .pagination a {
   display: inline-block;
+}
+
+.pagination a:hover {
+  background-color: #FFFFFF;
+  border: 1px black solid;
+  color: black;
+}
+
+.flash {
+  padding: 0% 30% 0 30%;
 }

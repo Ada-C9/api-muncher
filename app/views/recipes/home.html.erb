@@ -1,1 +1,16 @@
+<header class="search-wrapper">
+  <%= link_to root_path do %>
+    <h1 class="margin-zero" id="large-font">recipe h<em>API</em></h1>
+        <% end %>
+    <h7>Powered by <%= link_to "Edamam", "https://www.edamam.com/" %></h7>
+</header>
+
+<section>
   <%= render partial: "form" %>
+</section>
+
+<section class="flash align-center">
+  <% if flash[:status].present? %>
+  <p class="<%= flash[:status] %>"><%= flash[:message] %></p>
+  <% end %>
+</section>

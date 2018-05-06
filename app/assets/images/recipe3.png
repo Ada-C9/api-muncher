@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+
+<html lang="en-GB" prefix="og: http://ogp.me/ns#">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="https://gmpg.org/xfn/11">
+<link rel="pingback" href="https://markrobertshaw.com/xmlrpc.php">
+
+<title>Home</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v7.4.2 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Welcome to my website. This is my own space to write about what I enjoy and also what I find useful, you may find a review of a  &quot;How to&quot; post useful"/>
+<link rel="canonical" href="https://markrobertshaw.com/" />
+<link rel="publisher" href="https://plus.google.com/u/0/+MarkRobertshaw"/>
+<meta property="og:locale" content="en_GB" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Home" />
+<meta property="og:description" content="Welcome to my website. This is my own space to write about what I enjoy and also what I find useful, you may find a review of a  &quot;How to&quot; post useful" />
+<meta property="og:url" content="https://markrobertshaw.com/" />
+<meta property="og:site_name" content="Mark Robertshaw" />
+<meta property="og:image" content="https://markrobertshaw.com/wp-content/uploads/2017/03/cropped-mjr-thumb-650x385.jpg" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="Welcome to my website. This is my own space to write about what I enjoy and also what I find useful, you may find a review of a  &quot;How to&quot; post useful" />
+<meta name="twitter:title" content="Home" />
+<meta name="twitter:site" content="@markjr84" />
+<meta name="twitter:image" content="https://markrobertshaw.com/wp-content/uploads/2017/03/cropped-mjr-thumb-650x385.jpg" />
+<meta name="twitter:creator" content="@markjr84" />
+<script type='application/ld+json'>{"@context":"https:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/markrobertshaw.com\/","name":"Mark Robertshaw","potentialAction":{"@type":"SearchAction","target":"https:\/\/markrobertshaw.com\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<script type='application/ld+json'>{"@context":"https:\/\/schema.org","@type":"Person","url":"https:\/\/markrobertshaw.com\/","sameAs":["https:\/\/www.facebook.com\/mrobertshaw","http:\/\/markjr_84","https:\/\/www.linkedin.com\/in\/mark-robertshaw-04a64357\/","https:\/\/plus.google.com\/u\/0\/+MarkRobertshaw","https:\/\/www.pinterest.co.uk\/markimark1984\/","https:\/\/twitter.com\/markjr84"],"@id":"#person","name":"Mark Robertshaw"}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel="amphtml" href="https://markrobertshaw.com/amp/" /><link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//www.yummly.com' />
+<link rel='dns-prefetch' href='//maxcdn.bootstrapcdn.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Mark Robertshaw &raquo; Feed" href="https://markrobertshaw.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Mark Robertshaw &raquo; Comments Feed" href="https://markrobertshaw.com/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/markrobertshaw.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.5"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56692,8205,9792,65039],[55357,56692,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='dashicons-css'  href='https://markrobertshaw.com/wp-includes/css/dashicons.min.css?ver=4.9.5' type='text/css' media='all' />
+<link rel='stylesheet' id='obfx-module-pub-css-menu-icons-0-css'  href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?ver=2.4.7' type='text/css' media='all' />
+<link rel='stylesheet' id='wpurp_style_minified-css'  href='https://markrobertshaw.com/wp-content/plugins/wp-ultimate-recipe/assets/wpurp-public-forced.css?ver=3.10.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wpurp_style1-css'  href='https://markrobertshaw.com/wp-content/plugins/wp-ultimate-recipe/vendor/font-awesome/css/font-awesome.min.css?ver=3.10.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wpurp_style2-css'  href='https://fonts.googleapis.com/css?family=Open+Sans&#038;ver=3.10.1' type='text/css' media='all' />
+<link rel='stylesheet' id='zerif_bootstrap_style-css'  href='https://markrobertshaw.com/wp-content/themes/zerif-lite/css/bootstrap.css?ver=4.9.5' type='text/css' media='all' />
+<link rel='stylesheet' id='zblackbeard-style-css'  href='https://markrobertshaw.com/wp-content/themes/zerif-lite/style.css?ver=4.9.5' type='text/css' media='all' />
+<link rel='stylesheet' id='zerif_font-css'  href='//fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C400italic%7CMontserrat%3A400%2C700%7CHomemade+Apple&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='zerif_font_all-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A300%2C300italic%2C400%2C400italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic&#038;subset=latin&#038;ver=4.9.5' type='text/css' media='all' />
+<link rel='stylesheet' id='zerif_fontawesome-css'  href='https://markrobertshaw.com/wp-content/themes/zerif-lite/css/font-awesome.min.css?ver=v1' type='text/css' media='all' />
+<link rel='stylesheet' id='zerif_style-css'  href='https://markrobertshaw.com/wp-content/themes/zblackbeard/style.css?ver=v1' type='text/css' media='all' />
+<style id='zerif_style-inline-css' type='text/css'>
+
+		.page-template-builder-fullwidth {
+			overflow: hidden;
+		}
+		@media (min-width: 768px) {
+			.page-template-builder-fullwidth-std .header > .elementor {
+				padding-top: 76px;
+			}
+		}
+
+</style>
+<link rel='stylesheet' id='zerif_responsive_style-css'  href='https://markrobertshaw.com/wp-content/themes/zerif-lite/css/responsive.css?ver=v1' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='zerif_ie_style-css'  href='https://markrobertshaw.com/wp-content/themes/zerif-lite/css/ie.css?ver=v1' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='simple-social-icons-font-css'  href='https://markrobertshaw.com/wp-content/plugins/simple-social-icons/css/style.css?ver=2.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack-widget-social-icons-styles-css'  href='https://markrobertshaw.com/wp-content/plugins/jetpack/modules/widgets/social-icons/social-icons.css?ver=20170506' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='https://markrobertshaw.com/wp-content/plugins/jetpack/css/jetpack.css?ver=6.1' type='text/css' media='all' />
+            <script>
+                if (document.location.protocol != "https:") {
+                    document.location = document.URL.replace(/^http:/i, "https:");
+                }
+            </script>
+            <script type='text/javascript' src='https://markrobertshaw.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://markrobertshaw.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<!--[if lt IE 9]>
+<script type='text/javascript' src='https://markrobertshaw.com/wp-content/themes/zerif-lite/js/html5.js?ver=4.9.5'></script>
+<![endif]-->
+<script type='text/javascript' src='https://markrobertshaw.com/wp-content/plugins/simple-social-icons/svgxuse.js?ver=1.1.21'></script>
+<script type='text/javascript' async defer src='https://apis.google.com/js/platform.js?ver=4.9.5'></script>
+<link rel='https://api.w.org/' href='https://markrobertshaw.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://markrobertshaw.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://markrobertshaw.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.9.5" />
+<link rel='shortlink' href='https://wp.me/P8z5I6-9' />
+<link rel="alternate" type="application/json+oembed" href="https://markrobertshaw.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fmarkrobertshaw.com%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://markrobertshaw.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fmarkrobertshaw.com%2F&#038;format=xml" />
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97538766-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2831241281203569",
+    enable_page_level_ads: true
+  });
+</script>
+<link rel='dns-prefetch' href='//v0.wordpress.com'/>
+<link rel='dns-prefetch' href='//i0.wp.com'/>
+<link rel='dns-prefetch' href='//i1.wp.com'/>
+<link rel='dns-prefetch' href='//i2.wp.com'/>
+<link rel='dns-prefetch' href='//jetpack.wordpress.com'/>
+<link rel='dns-prefetch' href='//s0.wp.com'/>
+<link rel='dns-prefetch' href='//s1.wp.com'/>
+<link rel='dns-prefetch' href='//s2.wp.com'/>
+<link rel='dns-prefetch' href='//public-api.wordpress.com'/>
+<link rel='dns-prefetch' href='//0.gravatar.com'/>
+<link rel='dns-prefetch' href='//1.gravatar.com'/>
+<link rel='dns-prefetch' href='//2.gravatar.com'/>
+<link rel='dns-prefetch' href='//widgets.wp.com'/>
+<style type='text/css'>img#wpstats{display:none}</style><style type="text/css" media="screen"> .simple-social-icons ul li a, .simple-social-icons ul li a:hover, .simple-social-icons ul li a:focus { background-color: #f96a42 !important; border-radius: 10px; color: #ffffff !important; border: 0px #ffffff solid !important; font-size: 18px; padding: 9px; }  .simple-social-icons ul li a:hover, .simple-social-icons ul li a:focus { background-color: #ffffff !important; border-color: #f96a42 !important; color: #f96a42 !important; }  .simple-social-icons ul li a:focus { outline: 1px dotted #ffffff !important; }</style><style type="text/css">#skypeDropdown-transparent,#skypeDropdown-white{z-index:1}#skypedetectionswf{position:fixed;top:0px;left:-10px}#skypeCheckNotice{position:fixed !important}</style><style type="text/css" id="custom-background-css">
+body.custom-background { background-image: url("https://markrobertshaw.com/wp-content/uploads/2017/03/P1030799_opt-3.jpg"); background-position: left top; background-size: auto; background-repeat: repeat; background-attachment: scroll; }
+</style>
+<link rel="icon" href="https://i2.wp.com/markrobertshaw.com/wp-content/uploads/2017/03/cropped-mjr-thumb-650x385-1.jpg?fit=32%2C32&#038;ssl=1" sizes="32x32" />
+<link rel="icon" href="https://i2.wp.com/markrobertshaw.com/wp-content/uploads/2017/03/cropped-mjr-thumb-650x385-1.jpg?fit=192%2C192&#038;ssl=1" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://i2.wp.com/markrobertshaw.com/wp-content/uploads/2017/03/cropped-mjr-thumb-650x385-1.jpg?fit=180%2C180&#038;ssl=1" />
+<meta name="msapplication-TileImage" content="https://i2.wp.com/markrobertshaw.com/wp-content/uploads/2017/03/cropped-mjr-thumb-650x385-1.jpg?fit=270%2C270&#038;ssl=1" />
+			<style type="text/css" id="wp-custom-css">
+				ins.adsbygoogle { background: transparent !important; }			</style>
+		<style type='text/css'>
+.ai-viewport-3                { display: none !important;}
+.ai-viewport-2                { display: none !important;}
+.ai-viewport-1                { display: inherit !important;}
+.ai-viewport-0                { display: none !important;}
+@media (min-width: 768px) and (max-width: 979px) {
+.ai-viewport-1                { display: none !important;}
+.ai-viewport-2                { display: inherit !important;}
+}
+@media (max-width: 767px) {
+.ai-viewport-1                { display: none !important;}
+.ai-viewport-3                { display: inherit !important;}
+}
+</style>
+
+</head>
+
+
+	<body data-rsssl=1 class="home page-template-default page page-id-9 custom-background wp-custom-logo group-blog" >
+
+<div class="preloader"><div class="status">&nbsp;</div></div>
+
+<div id="mobilebgfix">
+	<div class="mobile-bg-fix-img-wrap">
+		<div class="mobile-bg-fix-img"></div>
+	</div>
+	<div class="mobile-bg-fix-whole-site">
+
+
+<header id="home" class="header" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+
+	<div id="main-nav" class="navbar navbar-inverse bs-docs-nav" role="banner">
+
+		<div class="container">
+
+			
+			<div class="navbar-header responsive-logo">
+
+				<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+
+				<span class="sr-only">Toggle navigation</span>
+
+				<span class="icon-bar"></span>
+
+				<span class="icon-bar"></span>
+
+				<span class="icon-bar"></span>
+
+				</button>
+
+					<div class="navbar-brand" itemscope itemtype="http://schema.org/Organization">
+
+						<a href="https://markrobertshaw.com/" class="custom-logo-link" rel="home" itemprop="url"><img width="650" height="385" src="https://i2.wp.com/markrobertshaw.com/wp-content/uploads/2017/03/cropped-mjr-thumb-650x385.jpg?fit=650%2C385&amp;ssl=1" class="custom-logo" alt="Mark Robertshaw" itemprop="logo" srcset="https://i2.wp.com/markrobertshaw.com/wp-content/uploads/2017/03/cropped-mjr-thumb-650x385.jpg?resize=650%2C385&amp;ssl=1 650w, https://i2.wp.com/markrobertshaw.com/wp-content/uploads/2017/03/cropped-mjr-thumb-650x385.jpg?resize=300%2C178&amp;ssl=1 300w" sizes="(max-width: 650px) 100vw, 650px" data-attachment-id="20" data-permalink="https://markrobertshaw.com/cropped-mjr-thumb-650x385-jpg/" data-orig-file="https://i2.wp.com/markrobertshaw.com/wp-content/uploads/2017/03/cropped-mjr-thumb-650x385.jpg?fit=650%2C385&amp;ssl=1" data-orig-size="650,385" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="cropped-mjr-thumb-650&#215;385.jpg" data-image-description="&lt;p&gt;https://markrobertshaw.com/wp-content/uploads/2017/03/cropped-mjr-thumb-650&#215;385.jpg&lt;/p&gt;
+" data-medium-file="https://i2.wp.com/markrobertshaw.com/wp-content/uploads/2017/03/cropped-mjr-thumb-650x385.jpg?fit=300%2C178&amp;ssl=1" data-large-file="https://i2.wp.com/markrobertshaw.com/wp-content/uploads/2017/03/cropped-mjr-thumb-650x385.jpg?fit=640%2C379&amp;ssl=1" /></a>
+					</div> <!-- /.navbar-brand -->
+
+				</div> <!-- /.navbar-header -->
+
+					<nav class="navbar-collapse bs-navbar-collapse collapse" id="site-navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+			<a class="screen-reader-text skip-link" href="#content">Skip to content</a>
+			<ul id="menu-primary-menu" class="nav navbar-nav navbar-right responsive-nav main-nav-list"><li id="menu-item-24" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-9 current_page_item menu-item-24"><a href="https://markrobertshaw.com/">Home</a></li>
+<li id="menu-item-43" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-43"><a href="https://markrobertshaw.com/#focus">Interests</a></li>
+<li id="menu-item-44" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-44"><a href="https://markrobertshaw.com/#aboutus">About</a></li>
+<li id="menu-item-45" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-45"><a href="https://markrobertshaw.com/#team">My Websites</a></li>
+<li id="menu-item-46" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-46"><a href="https://markrobertshaw.com/#latestnews">Latest Posts</a></li>
+<li id="menu-item-95" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-95"><a href="https://markrobertshaw.com/#contact">Contact</a></li>
+<li id="menu-item-25" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="https://markrobertshaw.com/blog/">Blog</a></li>
+<li id="menu-item-84" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-84"><a href="https://markrobertshaw.com/my-cv/">My CV</a></li>
+</ul>		</nav>
+		
+		</div> <!-- /.container -->
+
+		
+	</div> <!-- /#main-nav -->
+	<!-- / END TOP BAR -->
+<div class=" home-header-wrap"><div class="header-content-wrap"><div class="container"><h1 class="intro-text">Hi there, My Name is mark robertshaw. </h1><div class="buttons"><a href="https://markrobertshaw.com/#contact" class="btn btn-primary custom-button red-btn">Connect with / contact me</a><a href="https://markrobertshaw.com/#team" class="btn btn-primary custom-button green-btn">My websites</a></div></div></div><!-- .header-content-wrap --><div class="clear"></div>
+</div>
+
+</header> <!-- / END HOME SECTION  -->
+<div id="content" class="site-content">
+
+
+<section class="focus" id="focus">
+
+	
+	<div class="container">
+
+		<!-- SECTION HEADER -->
+
+		<div class="section-header">
+
+			<!-- SECTION TITLE AND SUBTITLE -->
+
+			<h2 class="dark-text">What makes me..... me!</h2><div class="section-legend">This is what I love and I could not live without - makes me human.</div>
+		</div>
+
+		<div class="row">
+
+				<span id="ctup-ads-widget-1" class="">
+			<div class="col-lg-3 col-sm-3 focus-box" data-scrollreveal="enter left after 0.15s over 1s">
+
+										<div class="service-icon" tabindex="0">
+							<i class="pixeden"
+							   style="background:url(https://markrobertshaw.com/wp-content/uploads/2017/03/travel-tours02-640x480--300x225.jpg) no-repeat center;width:100%; height:100%;"></i>
+							<!-- FOCUS ICON-->
+						</div>
+						
+
+				
+				<h3 class="red-border-bottom">Travel and exploration</h3>
+				<!-- FOCUS HEADING -->
+
+				
+			</div>
+
+			</span><span id="ctup-ads-widget-2" class="">
+			<div class="col-lg-3 col-sm-3 focus-box" data-scrollreveal="enter left after 0.15s over 1s">
+
+										<div class="service-icon" tabindex="0">
+							<i class="pixeden"
+							   style="background:url(https://markrobertshaw.com/wp-content/uploads/2017/03/63624761000208092873405838_bg-cooking-02-300x188.jpg) no-repeat center;width:100%; height:100%;"></i>
+							<!-- FOCUS ICON-->
+						</div>
+						
+
+				
+				<h3 class="red-border-bottom">Cooking and eating out</h3>
+				<!-- FOCUS HEADING -->
+
+				
+			</div>
+
+			</span><span id="ctup-ads-widget-3" class="">
+			<div class="col-lg-3 col-sm-3 focus-box" data-scrollreveal="enter left after 0.15s over 1s">
+
+										<div class="service-icon" tabindex="0">
+							<i class="pixeden"
+							   style="background:url(https://markrobertshaw.com/wp-content/uploads/2017/03/trekking-300x200.jpg) no-repeat center;width:100%; height:100%;"></i>
+							<!-- FOCUS ICON-->
+						</div>
+						
+
+				
+				<h3 class="red-border-bottom">Exploring the outdoors</h3>
+				<!-- FOCUS HEADING -->
+
+				
+			</div>
+
+			</span><span id="ctup-ads-widget-4" class="">
+			<div class="col-lg-3 col-sm-3 focus-box" data-scrollreveal="enter left after 0.15s over 1s">
+
+										<div class="service-icon" tabindex="0">
+							<i class="pixeden"
+							   style="background:url(https://markrobertshaw.com/wp-content/uploads/2017/03/19-brilliant-gardening-shortcuts-save-time-and-money_opt-300x225.jpg) no-repeat center;width:100%; height:100%;"></i>
+							<!-- FOCUS ICON-->
+						</div>
+						
+
+				
+				<h3 class="red-border-bottom">Gardening on my balcony</h3>
+				<!-- FOCUS HEADING -->
+
+				
+			</div>
+
+			</span>
+		</div>
+
+	</div> <!-- / END CONTAINER -->
+
+	
+</section>  <!-- / END FOCUS SECTION -->
+
+<section class="separator-one" id="ribbon_bottom"><div class="color-overlay"><h3 class="container text" data-scrollreveal="enter left after 0s over 1s">Contact me using the form below or connect with me by clicking on the social icons.
+<a href="https://markrobertshaw.com/#contact">Click here or on the button</a> </h3></div></section>
+<section class="about-us" id="aboutus">
+
+	
+	<div class="container">
+
+		<!-- SECTION HEADER -->
+
+		<div class="section-header">
+
+			<div class="white-text section-legend">Get to know a little more about me</div>
+		</div><!-- / END SECTION HEADER -->
+
+		<!-- 3 COLUMNS OF ABOUT US-->
+
+		<div class="row">
+
+			<!-- COLUMN 1 - BIG MESSAGE ABOUT THE COMPANY-->
+
+		<div class="col-lg-4 col-md-4 column zerif-rtl-big-title"><div class="big-intro" data-scrollreveal="enter left after 0s over 1s">Professional - Timely - Organised - Ethical - Bookkeeping</div></div><div class="col-lg-4 col-md-4 column zerif_about_us_center text_and_skills" data-scrollreveal="enter bottom after 0s over 1s"><p>I have experienced many different job roles in my working life. Starting off in retail working for John Lewis I was a Section Manager in menswear and sports departments. Moving on from that I became assistant store manager in an Austin Reed store. I have been trained in the best customer service and know what people expect in terms of product and service when it comes to parting with their hard earned money.
+<br /><br />
+After that I found myself in a more office based managerial role. This was in an engineering environment where I learned the ins and outs of how manufacturing works. It was here that I learned this was the type of thing I'd like to do as a career. From this I put myself through bookkeeping courses and became qualified. I learned Sage 50 Accounts inside out as a result.
+<br /> <br />
+As you can see I am now completing my AAT qualification which means I will be an accounting technician. Understanding accounts more at a root level makes for more accurate reporting and explanation of figures as needed. I am using these skills for my own bookkeeping business so my clients get the best value for their money.</p></div><div class="col-lg-4 col-md-4 column zerif-rtl-skills ">
+
+<ul class="skills" data-scrollreveal="enter right after 0s over 1s">
+
+<!-- SKILL ONE -->
+<li class="skill skill_1"><div class="skill-count"><input role="presentation" type="text" id="sage-50-accounts" value="96" data-thickness=".2" class="skill1" tabindex="-1"></div><div class="section-legend"><label for="sage-50-accounts">Sage 50 Accounts</label></div><p>The Sage 50 Accounts package is a fantastic but also big program to learn your way around and how to use. I am almost fully proficient in all its features as well as knowing how to install it onto multi-sized networks.</p></li>
+<!-- SKILL TWO -->
+
+<li class="skill skill_2"><div class="skill-count"><input role="presentation" type="text" id="aat-qualification" value="67" data-thickness=".2" class="skill2" tabindex="-1"></div><div class="section-legend"><label for="aat-qualification">AAT Qualification</label></div><p>My qualification is going well. AAT Level 3 is complete as of December 2017, I will begin my studies for Level 4, the final level in March 18. This score will update as I move my way through this qualification.</p></li>
+<!-- SKILL THREE -->
+
+<li class="skill skill_3"><div class="skill-count"><input role="presentation" type="text" id="debt-control" value="100" data-thickness=".2" class="skill3" tabindex="-1"></div><div class="section-legend"><label for="debt-control">Debt Control</label></div><p>Debt can be frustrating, both owing and being owed. I have helped companies deal with credit control efficiently as well as managing their cash flow, paying creditors on time at the same time as keeping the tax man happy.</p></li>
+<!-- SKILL FOUR -->
+
+<li class="skill skill_4"><div class="skill-count"><input role="presentation" type="text" id="payroll" value="100" data-thickness=".2" class="skill4" tabindex="-1"></div><div class="section-legend"><label for="payroll">Payroll</label></div><p>If you employ staff then you will process payroll. I understand the ins and outs of employing and maintaining staff wages and many more aspects of HR. I work with the Nestsystem to process staff pensions.</p></li>
+			</ul>
+
+		</div> <!-- / END SKILLS COLUMN-->
+
+		
+	</div> <!-- / END 3 COLUMNS OF ABOUT US-->
+
+	<!-- CLIENTS -->
+	<div class="our-clients"><h5><span class="section-footer-title">My Clients</span></h5></div><div class="client-list"><div data-scrollreveal="enter right move 60px after 0.00s over 2.5s"><span id="zerif_clients-widget-1">
+			<a href="www.arrowcastings.co.uk">
+				<img src="https://markrobertshaw.com/wp-content/uploads/2017/03/AC-Logo-Lighter-Black-White-Transparent-300x122.png" alt="Client">			</a>
+
+			</span><span id="zerif_clients-widget-2">
+			<a href="www.gasgrab.com">
+				<img src="https://markrobertshaw.com/wp-content/uploads/2017/03/GasGrab-Logo-Grey-Transparent-300x100.png" alt="Client">			</a>
+
+			</span><span id="zerif_clients-widget-3">
+			<a href="www.liftitmoveit.com">
+				<img src="https://markrobertshaw.com/wp-content/uploads/2017/03/Lift-it-Move-it-Grey-Transparent.png" alt="Client">			</a>
+
+			</span><span id="zerif_clients-widget-4">
+			<a href="www.mjrbookkeeping.co.uk">
+				<img src="https://markrobertshaw.com/wp-content/uploads/2017/03/mjr-grey-300x150.png" alt="Client">			</a>
+
+			</span><span id="zerif_clients-widget-5">
+			<a href="www.arrowbutlercastings.co.uk">
+				<img src="https://markrobertshaw.com/wp-content/uploads/2017/03/ABC-Logo-Black-White-Transparent-300x155.png" alt="Client">			</a>
+
+			</span></div></div> 
+	</div> <!-- / END CONTAINER -->
+
+	
+</section> <!-- END ABOUT US SECTION -->
+
+<section class="our-team" id="team"><div class="container"><div class="section-header"><h2 class="dark-text">my websites</h2><div class="section-legend">Feel free to visit any of my websites by clicking on the link provided.</div></div><div class="row" data-scrollreveal="enter left after 0s over 0.1s"><span id="zerif_team-widget-1" class="">
+			<div class="col-lg-3 col-sm-3 team-box">
+
+				<div class="team-member" tabindex="0">
+
+					
+
+						<figure class="profile-pic">
+
+							<img src="https://markrobertshaw.com/wp-content/uploads/2017/03/MJR-Green-Square-300x300.png" alt=""/>
+
+						</figure>
+						
+					<div class="member-details">
+
+						
+							<h3 class="dark-text red-border-bottom">MJR BOOKKEEPING</h3>
+
+						
+						
+							<div
+								class="position">This is my bookkeeping business website. Providing affordable bookkeeping services.
+<a href="https://www.mjrbookkeeping.co.uk" target="_blank">Visit MJR Bookkeeping</a> </div>
+
+						
+					</div>
+
+					<div class="social-icons">
+
+						<ul>
+							
+															<li>
+									<a href="https://www.facebook.com/mjrbookkeeping/"
+									   target="_blank">
+																					<span class="sr-only">
+				                            Facebook account of				                            MJR BOOKKEEPING			                            </span>
+																					<i class="fa fa-facebook"></i>
+									</a>
+								</li>
+																<li>
+									<a href="www.twitter.com/mjrbookkeeping"
+									   target="_blank">
+																					<span class="sr-only">
+				                            Twitter account of				                            MJR BOOKKEEPING			                            </span>
+																					<i class="fa fa-twitter"></i>
+									</a>
+								</li>
+																<li>
+									<a href="https://www.linkedin.com/company-beta/10838988"
+									   target="_blank">
+																					<span class="sr-only">
+				                            Linkedin account of				                            MJR BOOKKEEPING			                            </span>
+																					<i class="fa fa-linkedin"></i>
+									</a>
+								</li>
+								
+						</ul>
+
+					</div>
+
+											<div class="details">
+
+							Are you struggling to keep your accountant and your customers happy? Let us handle your bookkeeping instead. Invoicing, Payroll, VAT and much more.
+						</div>
+					
+				</div>
+
+			</div>
+
+			</span><span id="zerif_team-widget-2" class="">
+			<div class="col-lg-3 col-sm-3 team-box">
+
+				<div class="team-member" tabindex="0">
+
+					
+
+						<figure class="profile-pic">
+
+							<img src="https://markrobertshaw.com/wp-content/uploads/2017/03/imageedit_3_8894243527.jpg" alt=""/>
+
+						</figure>
+						
+					<div class="member-details">
+
+						
+							<h3 class="dark-text red-border-bottom">lift it move it</h3>
+
+						
+						
+							<div
+								class="position">This is a webstore dedicated to selling tooling to aid lifting heavy equipment. 
+<a href="https://www.liftitmoveit.com" target="_blank">Visit Lift it Move it</a> </div>
+
+						
+					</div>
+
+					<div class="social-icons">
+
+						<ul>
+							
+															<li>
+									<a href="https://www.facebook.com/liftitmoveit/"
+									   target="_blank">
+																					<span class="sr-only">
+				                            Facebook account of				                            lift it move it			                            </span>
+																					<i class="fa fa-facebook"></i>
+									</a>
+								</li>
+																<li>
+									<a href="https://twitter.com/liftitmoveit"
+									   target="_blank">
+																					<span class="sr-only">
+				                            Twitter account of				                            lift it move it			                            </span>
+																					<i class="fa fa-twitter"></i>
+									</a>
+								</li>
+								
+						</ul>
+
+					</div>
+
+											<div class="details">
+
+							As the name says, we specialise in lifting gear. Our ever growing product range includes solutions for lifting, jacking, strapping, hoisting and much more. Soon we will be introducing new products focused on safety while lifting.
+						</div>
+					
+				</div>
+
+			</div>
+
+			</span><span id="zerif_team-widget-3" class="">
+			<div class="col-lg-3 col-sm-3 team-box">
+
+				<div class="team-member" tabindex="0">
+
+					
+
+						<figure class="profile-pic">
+
+							<img src="https://markrobertshaw.com/wp-content/uploads/2017/03/favicon.png" alt=""/>
+
+						</figure>
+						
+					<div class="member-details">
+
+						
+							<h3 class="dark-text red-border-bottom">really recipes</h3>
+
+						
+						
+							<div
+								class="position">My favourite recipes, some tried, and tested, some on the cards. Find them here.
+<a href="https://reallyrecipesblog.wordpress.com" target="_blank">Visit Really Recipes</a> </div>
+
+						
+					</div>
+
+					<div class="social-icons">
+
+						<ul>
+							
+							
+						</ul>
+
+					</div>
+
+											<div class="details">
+
+							I&#8217;m building a collection of my favourite recipes. Some tried and tested and some I want to try very soon. Why don&#8217;t you have a look and find some inspiration.
+						</div>
+					
+				</div>
+
+			</div>
+
+			</span><span id="zerif_team-widget-4" class="">
+			<div class="col-lg-3 col-sm-3 team-box">
+
+				<div class="team-member" tabindex="0">
+
+					
+
+						<figure class="profile-pic">
+
+							<img src="https://markrobertshaw.com/wp-content/uploads/2017/03/MJR-White-Square.jpg" alt=""/>
+
+						</figure>
+						
+					<div class="member-details">
+
+						
+							<h3 class="dark-text red-border-bottom">mark thinks</h3>
+
+						
+						
+							<div
+								class="position">This popular blogfeatures how tos, reviews, thoughts, musings and comments of a number cruncher.
+<a href="https://www.markthinks.net" target="_blank">Visit Mark Thinks</a> </div>
+
+						
+					</div>
+
+					<div class="social-icons">
+
+						<ul>
+							
+															<li>
+									<a href="https://www.facebook.com/MarkThinksnet-416805115050131/"
+									   target="_blank">
+																					<span class="sr-only">
+				                            Facebook account of				                            mark thinks			                            </span>
+																					<i class="fa fa-facebook"></i>
+									</a>
+								</li>
+																<li>
+									<a href="www.twitter.com/markthinksblog"
+									   target="_blank">
+																					<span class="sr-only">
+				                            Twitter account of				                            mark thinks			                            </span>
+																					<i class="fa fa-twitter"></i>
+									</a>
+								</li>
+								
+						</ul>
+
+					</div>
+
+											<div class="details">
+
+							A popular blog for how tos, reviews, thoughts, musings and comments of a number cruncher.
+						</div>
+					
+				</div>
+
+			</div>
+
+			</span></div> </div></section><section class="purchase-now ribbon-without-button" id="ribbon_right"><div class="container"><div class="row"><div class="col-md-9" data-scrollreveal="enter left after 0s over 1s"><h3 class="white-text">Contact me using the form below or connect with me by clicking on the social icons.
+<a href="https://markrobertshaw.com/#contact">Click here or on the button</a> </h3></div></div></div></section><section class="latest-news" id="latestnews"><div class="container"><div class="section-header"><h2 class="dark-text">Latest news</h2></div><!-- END .section-header --><div class="clear"></div><div id="carousel-homepage-latestnews" class="carousel slide" data-ride="carousel"><div class="carousel-inner" role="listbox"><div class="item active" role="option"><div class="col-sm-3 latestnews-box"><div class="latestnews-img"><a class="latestnews-img-a" href="https://markrobertshaw.com/2018/01/31/disable-new-persistent-fitbit-sync-notification-android/" title="How to disable the new persistent FitBit Sync notification (Android)"><img src="https://markrobertshaw.com/wp-content/themes/zerif-lite/images/blank-latestposts.png" alt="How to disable the new persistent FitBit Sync notification (Android)" /></a></div><div class="latesnews-content"><h3 class="latestnews-title"><a href="https://markrobertshaw.com/2018/01/31/disable-new-persistent-fitbit-sync-notification-android/" title="How to disable the new persistent FitBit Sync notification (Android)">How to disable the new persistent FitBit Sync notification (Android)</a></h3><p>If you&#8217;re one of the many that own a FitBit you have probably noticed your Android app has recently updated. &nbsp; A result of this update is this notification that you can&#8217;t dismiss in the usual way: I&#8217;m sure FitBit have done this with the best intentions at heart but it can be very annoying <a href="https://markrobertshaw.com/2018/01/31/disable-new-persistent-fitbit-sync-notification-android/" rel="nofollow"><span class="sr-only">Read more about How to disable the new persistent FitBit Sync notification (Android)</span>[&hellip;]</a></p>
+</div></div><!-- .latestnews-box"> --><div class="col-sm-3 latestnews-box"><div class="latestnews-img"><a class="latestnews-img-a" href="https://markrobertshaw.com/2018/01/19/blink/" title="Blink"><img src="https://markrobertshaw.com/wp-content/themes/zerif-lite/images/blank-latestposts.png" alt="Blink" /></a></div><div class="latesnews-content"><h3 class="latestnews-title"><a href="https://markrobertshaw.com/2018/01/19/blink/" title="Blink">Blink</a></h3><p>The Chinese delivery turned up at the door &#8220;sorry, you&#8217;re two and a half hours late, we&#8217;ve ordered from someone else as you weren&#8217;t answering your phone&#8221; &#8220;oh sorry&#8221; &#8220;I&#8217;ll take the spring rolls though as the ring back requests cost about the same&#8221;. At the blink of an eye I got my spring rolls <a href="https://markrobertshaw.com/2018/01/19/blink/" rel="nofollow"><span class="sr-only">Read more about Blink</span>[&hellip;]</a></p>
+</div></div><!-- .latestnews-box"> --><div class="col-sm-3 latestnews-box"><div class="latestnews-img"><a class="latestnews-img-a" href="https://markrobertshaw.com/2018/01/18/shock/" title="Shock"><img width="750" height="445" src="https://markrobertshaw.com/wp-content/uploads/2018/01/cultureShock.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://i1.wp.com/markrobertshaw.com/wp-content/uploads/2018/01/cultureShock.png?w=750&amp;ssl=1 750w, https://i1.wp.com/markrobertshaw.com/wp-content/uploads/2018/01/cultureShock.png?resize=300%2C178&amp;ssl=1 300w" sizes="(max-width: 750px) 100vw, 750px" data-attachment-id="1517" data-permalink="https://markrobertshaw.com/cultureshock/" data-orig-file="https://i1.wp.com/markrobertshaw.com/wp-content/uploads/2018/01/cultureShock.png?fit=750%2C445&amp;ssl=1" data-orig-size="750,445" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="cultureShock.png" data-image-description="" data-medium-file="https://i1.wp.com/markrobertshaw.com/wp-content/uploads/2018/01/cultureShock.png?fit=300%2C178&amp;ssl=1" data-large-file="https://i1.wp.com/markrobertshaw.com/wp-content/uploads/2018/01/cultureShock.png?fit=640%2C380&amp;ssl=1" /></a></div><div class="latesnews-content"><h3 class="latestnews-title"><a href="https://markrobertshaw.com/2018/01/18/shock/" title="Shock">Shock</a></h3><p>Have you ever thought you&#8217;ve done something wrong and you just fill up from the inside with a cold feeling of emptiness. What will happen next? What&#8217;s my fate going to be after this mess? I had to send out the price increase letters. Each customer had to have their own as the price increases <a href="https://markrobertshaw.com/2018/01/18/shock/" rel="nofollow"><span class="sr-only">Read more about Shock</span>[&hellip;]</a></p>
+</div></div><!-- .latestnews-box"> --><div class="col-sm-3 latestnews-box"><div class="latestnews-img"><a class="latestnews-img-a" href="https://markrobertshaw.com/2018/01/11/sunday-roast/" title="Sunday Roast"><img src="https://markrobertshaw.com/wp-content/themes/zerif-lite/images/blank-latestposts.png" alt="Sunday Roast" /></a></div><div class="latesnews-content"><h3 class="latestnews-title"><a href="https://markrobertshaw.com/2018/01/11/sunday-roast/" title="Sunday Roast">Sunday Roast</a></h3><p>He carved the beef for the family. It was the Sunday roast. &#8220;What am I doing? I imagined so much more for my life&#8221; he thought to himself. He was software analyst for a corporate company with no real prospects, but made a pretty good living nevertheless. &#8220;All I do is go to work, come <a href="https://markrobertshaw.com/2018/01/11/sunday-roast/" rel="nofollow"><span class="sr-only">Read more about Sunday Roast</span>[&hellip;]</a></p>
+</div></div><!-- .latestnews-box"> --><div class="clear"></div></div><div class="item"><div class="col-sm-3 latestnews-box"><div class="latestnews-img"><a class="latestnews-img-a" href="https://markrobertshaw.com/2018/01/10/undulating-in-and-out-of-meaning/" title="Undulating in and out of meaning"><img src="https://markrobertshaw.com/wp-content/themes/zerif-lite/images/blank-latestposts.png" alt="Undulating in and out of meaning" /></a></div><div class="latesnews-content"><h3 class="latestnews-title"><a href="https://markrobertshaw.com/2018/01/10/undulating-in-and-out-of-meaning/" title="Undulating in and out of meaning">Undulating in and out of meaning</a></h3><p>Undulate, undulate, undulate, undulate. Is it losing it&#8217;s meaning yet?! It has for me. I have been trying to think of something meaningful to write for today&#8217;s daily post but now all I have is this collection of sounds that come together to form unndeewwlait &#8211; I&#8217;ve said it too much inside my head. What <a href="https://markrobertshaw.com/2018/01/10/undulating-in-and-out-of-meaning/" rel="nofollow"><span class="sr-only">Read more about Undulating in and out of meaning</span>[&hellip;]</a></p>
+</div></div><!-- .latestnews-box"> --><div class="col-sm-3 latestnews-box"><div class="latestnews-img"><a class="latestnews-img-a" href="https://markrobertshaw.com/2018/01/09/two-one-go/" title="Two down, one to go!"><img width="336" height="322" src="https://markrobertshaw.com/wp-content/uploads/2018/01/Level-3.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://i1.wp.com/markrobertshaw.com/wp-content/uploads/2018/01/Level-3.png?w=336&amp;ssl=1 336w, https://i1.wp.com/markrobertshaw.com/wp-content/uploads/2018/01/Level-3.png?resize=300%2C288&amp;ssl=1 300w" sizes="(max-width: 336px) 100vw, 336px" data-attachment-id="1488" data-permalink="https://markrobertshaw.com/2018/01/09/two-one-go/level-3/" data-orig-file="https://i1.wp.com/markrobertshaw.com/wp-content/uploads/2018/01/Level-3.png?fit=336%2C322&amp;ssl=1" data-orig-size="336,322" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Level-3" data-image-description="" data-medium-file="https://i1.wp.com/markrobertshaw.com/wp-content/uploads/2018/01/Level-3.png?fit=300%2C288&amp;ssl=1" data-large-file="https://i1.wp.com/markrobertshaw.com/wp-content/uploads/2018/01/Level-3.png?fit=336%2C322&amp;ssl=1" /></a></div><div class="latesnews-content"><h3 class="latestnews-title"><a href="https://markrobertshaw.com/2018/01/09/two-one-go/" title="Two down, one to go!">Two down, one to go!</a></h3><p>I have to say I&#8217;m feeling pretty damn brilliant today, I have just received my certificate for the completion of my AAT Level 3 course. I have put a lot of work into this course so far and it feels so good to have something to show for it. Originally, I thought I had failed <a href="https://markrobertshaw.com/2018/01/09/two-one-go/" rel="nofollow"><span class="sr-only">Read more about Two down, one to go!</span>[&hellip;]</a></p>
+</div></div><!-- .latestnews-box"> --><div class="col-sm-3 latestnews-box"><div class="latestnews-img"><a class="latestnews-img-a" href="https://markrobertshaw.com/2018/01/08/visiting-prague-tips-advice/" title="Visiting Prague? Here are some Photos, Tips and Advice for Getting Around."><img width="600" height="450" src="https://markrobertshaw.com/wp-content/uploads/2018/01/IMG_20171121_162308-EFFECTS_opt.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Visiting Prague" srcset="https://i1.wp.com/markrobertshaw.com/wp-content/uploads/2018/01/IMG_20171121_162308-EFFECTS_opt.jpg?w=600&amp;ssl=1 600w, https://i1.wp.com/markrobertshaw.com/wp-content/uploads/2018/01/IMG_20171121_162308-EFFECTS_opt.jpg?resize=300%2C225&amp;ssl=1 300w, https://i1.wp.com/markrobertshaw.com/wp-content/uploads/2018/01/IMG_20171121_162308-EFFECTS_opt.jpg?resize=285%2C214&amp;ssl=1 285w" sizes="(max-width: 600px) 100vw, 600px" data-attachment-id="1408" data-permalink="https://markrobertshaw.com/2018/01/08/visiting-prague-tips-advice/img_20171121_162308-effects_opt/" data-orig-file="https://i1.wp.com/markrobertshaw.com/wp-content/uploads/2018/01/IMG_20171121_162308-EFFECTS_opt.jpg?fit=600%2C450&amp;ssl=1" data-orig-size="600,450" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;ONEPLUS A3003&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1511281388&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;4.2600002288818&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="Visit Prague" data-image-description="" data-medium-file="https://i1.wp.com/markrobertshaw.com/wp-content/uploads/2018/01/IMG_20171121_162308-EFFECTS_opt.jpg?fit=300%2C225&amp;ssl=1" data-large-file="https://i1.wp.com/markrobertshaw.com/wp-content/uploads/2018/01/IMG_20171121_162308-EFFECTS_opt.jpg?fit=600%2C450&amp;ssl=1" /></a></div><div class="latesnews-content"><h3 class="latestnews-title"><a href="https://markrobertshaw.com/2018/01/08/visiting-prague-tips-advice/" title="Visiting Prague? Here are some Photos, Tips and Advice for Getting Around.">Visiting Prague? Here are some Photos, Tips and Advice for Getting Around.</a></h3><p>Have you ever been? No? Well I recommend you get your trip booked. Take a chance visiting Prague, you&#8217;ll be amazed at its beauty and the relaxed way of life, perfect for a few days getaway! We have been thinking about visiting Prague for years, so one day back in October last year we decided <a href="https://markrobertshaw.com/2018/01/08/visiting-prague-tips-advice/" rel="nofollow"><span class="sr-only">Read more about Visiting Prague? Here are some Photos, Tips and Advice for Getting Around.</span>[&hellip;]</a></p>
+</div></div><!-- .latestnews-box"> --><div class="col-sm-3 latestnews-box"><div class="latestnews-img"><a class="latestnews-img-a" href="https://markrobertshaw.com/2017/09/30/2-step-verification-setup-google-account-not-working/" title="2-Step Verification Setup for Google Account Not Working"><img width="265" height="162" src="https://markrobertshaw.com/wp-content/uploads/2017/09/unnamed.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Google 2-Step Verification" data-attachment-id="1325" data-permalink="https://markrobertshaw.com/2017/09/30/2-step-verification-setup-google-account-not-working/unnamed-2/" data-orig-file="https://i2.wp.com/markrobertshaw.com/wp-content/uploads/2017/09/unnamed.png?fit=265%2C162&amp;ssl=1" data-orig-size="265,162" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Google 2-Step Verification" data-image-description="" data-medium-file="https://i2.wp.com/markrobertshaw.com/wp-content/uploads/2017/09/unnamed.png?fit=265%2C162&amp;ssl=1" data-large-file="https://i2.wp.com/markrobertshaw.com/wp-content/uploads/2017/09/unnamed.png?fit=265%2C162&amp;ssl=1" /></a></div><div class="latesnews-content"><h3 class="latestnews-title"><a href="https://markrobertshaw.com/2017/09/30/2-step-verification-setup-google-account-not-working/" title="2-Step Verification Setup for Google Account Not Working">2-Step Verification Setup for Google Account Not Working</a></h3><p>Are you trying to set up 2-Step Verification for your Google account but keep being returned to the previous Sign-In &amp; Security page? Well, it&#8217;s most likely because you are using your own domain name with a G Suite account (formerly known as Google Apps) and there&#8217;s a little bit more setup needed before you <a href="https://markrobertshaw.com/2017/09/30/2-step-verification-setup-google-account-not-working/" rel="nofollow"><span class="sr-only">Read more about 2-Step Verification Setup for Google Account Not Working</span>[&hellip;]</a></p>
+</div></div><!-- .latestnews-box"> --><div class="clear"></div></div><div class="item"><div class="col-sm-3 latestnews-box"><div class="latestnews-img"><a class="latestnews-img-a" href="https://markrobertshaw.com/2017/09/13/fix-hyperlinks-not-working-onenote-outlook/" title="How to fix: Hyperlinks not working in Onenote or Outlook"><img width="640" height="100" src="https://markrobertshaw.com/wp-content/uploads/2017/09/outlook2013-links-not-working-error.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="outlook-onenote-links-not-working-error" srcset="https://i1.wp.com/markrobertshaw.com/wp-content/uploads/2017/09/outlook2013-links-not-working-error.jpg?w=640&amp;ssl=1 640w, https://i1.wp.com/markrobertshaw.com/wp-content/uploads/2017/09/outlook2013-links-not-working-error.jpg?resize=300%2C47&amp;ssl=1 300w" sizes="(max-width: 640px) 100vw, 640px" data-attachment-id="1299" data-permalink="https://markrobertshaw.com/2017/09/13/fix-hyperlinks-not-working-onenote-outlook/outlook2013-links-not-working-error/" data-orig-file="https://i1.wp.com/markrobertshaw.com/wp-content/uploads/2017/09/outlook2013-links-not-working-error.jpg?fit=640%2C100&amp;ssl=1" data-orig-size="640,100" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="outlook-onenote-links-not-working-error" data-image-description="" data-medium-file="https://i1.wp.com/markrobertshaw.com/wp-content/uploads/2017/09/outlook2013-links-not-working-error.jpg?fit=300%2C47&amp;ssl=1" data-large-file="https://i1.wp.com/markrobertshaw.com/wp-content/uploads/2017/09/outlook2013-links-not-working-error.jpg?fit=640%2C100&amp;ssl=1" /></a></div><div class="latesnews-content"><h3 class="latestnews-title"><a href="https://markrobertshaw.com/2017/09/13/fix-hyperlinks-not-working-onenote-outlook/" title="How to fix: Hyperlinks not working in Onenote or Outlook">How to fix: Hyperlinks not working in Onenote or Outlook</a></h3><p>This blog post is about how to fix the error message you get when clicking on a link in an email in Outlook or in a note in Onenote. (The programs I am using at the moment are the 2016 desktop versions on the latest version of Windows 10). &nbsp; Having trouble with hyperlinks not <a href="https://markrobertshaw.com/2017/09/13/fix-hyperlinks-not-working-onenote-outlook/" rel="nofollow"><span class="sr-only">Read more about How to fix: Hyperlinks not working in Onenote or Outlook</span>[&hellip;]</a></p>
+</div></div><!-- .latestnews-box"> --><div class="col-sm-3 latestnews-box"><div class="latestnews-img"><a class="latestnews-img-a" href="https://markrobertshaw.com/2017/07/27/how-to-migrate-your-blog-from-wordpress-com-and-change-your-domain-name/" title="How to Migrate your Blog from WordPress.com to WordPress.org AND change your Domain Name"><img width="560" height="396" src="https://markrobertshaw.com/wp-content/uploads/2017/07/how-to-migrate-a-wordpress-com-blog-to-wordpress-org-on-your-own-domain.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://i1.wp.com/markrobertshaw.com/wp-content/uploads/2017/07/how-to-migrate-a-wordpress-com-blog-to-wordpress-org-on-your-own-domain.png?w=560&amp;ssl=1 560w, https://i1.wp.com/markrobertshaw.com/wp-content/uploads/2017/07/how-to-migrate-a-wordpress-com-blog-to-wordpress-org-on-your-own-domain.png?resize=300%2C212&amp;ssl=1 300w" sizes="(max-width: 560px) 100vw, 560px" data-attachment-id="1265" data-permalink="https://markrobertshaw.com/2017/07/27/how-to-migrate-your-blog-from-wordpress-com-and-change-your-domain-name/how-to-migrate-a-wordpress-com-blog-to-wordpress-org-on-your-own-domain/" data-orig-file="https://i1.wp.com/markrobertshaw.com/wp-content/uploads/2017/07/how-to-migrate-a-wordpress-com-blog-to-wordpress-org-on-your-own-domain.png?fit=560%2C396&amp;ssl=1" data-orig-size="560,396" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="how-to-migrate-a-wordpress-com-blog-to-wordpress-org-and-use-a-different-domain" data-image-description="" data-medium-file="https://i1.wp.com/markrobertshaw.com/wp-content/uploads/2017/07/how-to-migrate-a-wordpress-com-blog-to-wordpress-org-on-your-own-domain.png?fit=300%2C212&amp;ssl=1" data-large-file="https://i1.wp.com/markrobertshaw.com/wp-content/uploads/2017/07/how-to-migrate-a-wordpress-com-blog-to-wordpress-org-on-your-own-domain.png?fit=560%2C396&amp;ssl=1" /></a></div><div class="latesnews-content"><h3 class="latestnews-title"><a href="https://markrobertshaw.com/2017/07/27/how-to-migrate-your-blog-from-wordpress-com-and-change-your-domain-name/" title="How to Migrate your Blog from WordPress.com to WordPress.org AND change your Domain Name">How to Migrate your Blog from WordPress.com to WordPress.org AND change your Domain Name</a></h3><p>There are lots of &#8220;how to&#8221; posts and step by step guides out there which are extremely informative. They are great for getting that particular thing done. But sometimes what you need is &#8220;How to do this, but also do that while doing this&#8221; &#8211; These kinds of posts rarely exist, and they are hidden <a href="https://markrobertshaw.com/2017/07/27/how-to-migrate-your-blog-from-wordpress-com-and-change-your-domain-name/" rel="nofollow"><span class="sr-only">Read more about How to Migrate your Blog from WordPress.com to WordPress.org AND change your Domain Name</span>[&hellip;]</a></p>
+</div></div><!-- .latestnews-box"> --><div class="clear"></div></div></div><!-- .carousel-inner --><a class="left carousel-control" href="#carousel-homepage-latestnews" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a><a class="right carousel-control" href="#carousel-homepage-latestnews" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a></div><!-- #carousel-homepage-latestnews --></div><!-- .container --></section>	<section class="contact-us" id="contact">
+<div class="container">
+	<!-- SECTION HEADER -->
+	<div class="section-header">
+
+		<div class="white-text section-legend">Send me a message and I will get back to you within 24 hours.</div>	</div>
+	<!-- / END SECTION HEADER -->
+
+	<div class="row">
+
+<div class="pirate_forms_wrap">
+	
+	<form method="post" id="3430c704e2" enctype="application/x-www-form-urlencoded" class="pirate_forms  form_honeypot-on pirate_forms_from_widget-on wordpress-nonce-on pirate-forms-contact-name-on pirate-forms-contact-email-on pirate-forms-contact-subject-on pirate-forms-contact-message-on pirate-forms-captcha-on pirate-forms-contact-submit-on pirate-forms-contact-referrer-on pirate_forms_from_form-on">
+	<div class="pirate-forms-fields-container"><div class="pirate_forms_three_inputs_wrap"><div class="col-lg-4 col-sm-4 form_field_wrap"><input type="text" id="pirate-forms-contact-name" name="pirate-forms-contact-name" class="form-control input" placeholder="Your Name" required oninvalid="this.setCustomValidity('Enter your name')" onchange="this.setCustomValidity('')" value=""></div><div class="col-lg-4 col-sm-4 form_field_wrap"><input type="email" id="pirate-forms-contact-email" name="pirate-forms-contact-email" class="form-control input" placeholder="Your Email" required oninvalid="this.setCustomValidity('Enter a valid email')" onchange="this.setCustomValidity('')" value=""></div><div class="col-lg-4 col-sm-4 form_field_wrap"><input type="text" id="pirate-forms-contact-subject" name="pirate-forms-contact-subject" class="form-control input" placeholder="Subject" required oninvalid="this.setCustomValidity('Please enter a subject')" onchange="this.setCustomValidity('')" value=""></div></div><div class="col-lg-12 col-sm-12 form_field_wrap"><textarea rows=5 cols=30 id="pirate-forms-contact-message" name="pirate-forms-contact-message" class="form-control input" placeholder="Your message" required oninvalid="this.setCustomValidity('Enter your question or comment')" onchange="this.setCustomValidity('')"></textarea></div><div class="pirate-forms-footer"><div class="col-xs-12 form_field_wrap form_captcha_wrap"><div id="pirate-forms-captcha" class="g-recaptcha pirate-forms-google-recaptcha" data-sitekey="6LfVqhoUAAAAABJs7b8AfNQ37G9BHJiBVNaCJ-aP"></div></div><div class="col-xs-12 form_field_wrap contact_submit_wrap"><button type="submit" id="pirate-forms-contact-submit" name="pirate-forms-contact-submit" class="btn btn-primary custom-button red-btn pirate-forms-submit-button" placeholder="" >Send Message</button></div></div></div>
+	<div class="form_field_wrap hidden" style="display: none"><input type="text" id="form_honeypot" name="honeypot" class="" placeholder=""  value=""></div><input type="hidden" id="pirate_forms_from_widget" name="pirate_forms_from_widget" class="" placeholder=""  value="0"><input type="hidden" id="wordpress-nonce" name="wordpress-nonce" class="" placeholder=""  value="a1e30f9e9c"><input type="hidden" id="pirate-forms-contact-referrer" name="pirate-forms-contact-referrer" class="" placeholder=""  value="https://www.google.com/"><input type="hidden" id="pirate_forms_from_form" name="pirate_forms_from_form" class="" placeholder=""  value="3430c704e2"></form>	<div class="pirate_forms_clearfix"></div>
+</div>
+
+</div>
+				</div> <!-- / END CONTAINER -->
+
+			</section> <!-- / END CONTACT US SECTION-->
+			
+</div><!-- .site-content -->
+
+
+<footer id="footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+
+	<div class="footer-widget-wrap"><div class="container"><div class="footer-widget col-xs-12 col-sm-4"><aside id="text-3" class="widget footer-widget-footer widget_text"><h1 class="widget-title">Follow my Blog</h1>			<div class="textwidget"><a class="wordpress-follow-button" href="https://markrobertshaw.com" data-blog="https://markrobertshaw.com" data-lang="en">Follow Mark Robertshaw on WordPress.com</a>
+<script type="text/javascript">(function(d){var f = d.getElementsByTagName('SCRIPT')[0], p = d.createElement('SCRIPT');p.type = 'text/javascript';p.async = true;p.src = '//widgets.wp.com/platform.js';f.parentNode.insertBefore(p,f);}(document));</script></div>
+		</aside></div><div class="footer-widget col-xs-12 col-sm-4"><aside id="simple-social-icons-2" class="widget footer-widget-footer simple-social-icons"><h1 class="widget-title">Connect with me</h1><ul class="alignleft"><li class="ssi-facebook"><a href="https://www.facebook.com/mrobertshaw" target="_blank"><svg role="img" class="social-facebook" aria-labelledby="social-facebook"><title id="social-facebook">Facebook</title><use xlink:href="https://markrobertshaw.com/wp-content/plugins/simple-social-icons/symbol-defs.svg#social-facebook"></use></svg></a></li><li class="ssi-flickr"><a href="https://www.flickr.com/photos/142822077@N03" target="_blank"><svg role="img" class="social-flickr" aria-labelledby="social-flickr"><title id="social-flickr">Flickr</title><use xlink:href="https://markrobertshaw.com/wp-content/plugins/simple-social-icons/symbol-defs.svg#social-flickr"></use></svg></a></li><li class="ssi-gplus"><a href="https://plus.google.com/u/0/+MarkRobertshaw" target="_blank"><svg role="img" class="social-gplus" aria-labelledby="social-gplus"><title id="social-gplus">Google+</title><use xlink:href="https://markrobertshaw.com/wp-content/plugins/simple-social-icons/symbol-defs.svg#social-gplus"></use></svg></a></li><li class="ssi-instagram"><a href="http://www.instagram.com/markjr_84" target="_blank"><svg role="img" class="social-instagram" aria-labelledby="social-instagram"><title id="social-instagram">Instagram</title><use xlink:href="https://markrobertshaw.com/wp-content/plugins/simple-social-icons/symbol-defs.svg#social-instagram"></use></svg></a></li><li class="ssi-linkedin"><a href="https://www.linkedin.com/in/mark-robertshaw-04a64357/" target="_blank"><svg role="img" class="social-linkedin" aria-labelledby="social-linkedin"><title id="social-linkedin">Linkedin</title><use xlink:href="https://markrobertshaw.com/wp-content/plugins/simple-social-icons/symbol-defs.svg#social-linkedin"></use></svg></a></li><li class="ssi-pinterest"><a href="https://uk.pinterest.com/markimark1984/" target="_blank"><svg role="img" class="social-pinterest" aria-labelledby="social-pinterest"><title id="social-pinterest">Pinterest</title><use xlink:href="https://markrobertshaw.com/wp-content/plugins/simple-social-icons/symbol-defs.svg#social-pinterest"></use></svg></a></li><li class="ssi-twitter"><a href="http://www.twitter.com/markjr84" target="_blank"><svg role="img" class="social-twitter" aria-labelledby="social-twitter"><title id="social-twitter">Twitter</title><use xlink:href="https://markrobertshaw.com/wp-content/plugins/simple-social-icons/symbol-defs.svg#social-twitter"></use></svg></a></li></ul></aside></div></div></div>
+	<div class="container">
+
+		
+		<div class="col-md-3 company-details"><div class="zerif-footer-address">Bow House,
+3 Brookway,
+Brookway,
+Newbury,
+RG14 5RY</div></div><div class="col-md-3 company-details"><div class="zerif-footer-email">See form above</div></div><div class="col-md-3 company-details"><div class="zerif-footer-phone">01635 595 659</div></div><div class="col-md-3 copyright"><ul class="social"><li id="facebook"><a target="_blank" href="https://www.facebook.com/mrobertshaw"><span class="sr-only">Facebook link</span> <i class="fa fa-facebook"></i></a></li><li id="twitter"><a target="_blank" href="https://twitter.com/MarkJR84"><span class="sr-only">Twitter link</span> <i class="fa fa-twitter"></i></a></li><li id="linkedin"><a target="_blank" href="https://www.linkedin.com/in/mark-robertshaw-04a64357/"><span class="sr-only">LinkedIn link</span> <i class="fa fa-linkedin"></i></a></li><li id="instagram"><a target="_blank" href="https://www.instagram.com/markjr_84/"><span class="sr-only">Instagram link</span> <i class="fa fa-instagram"></i></a></li></ul><!-- .social --><p id="zerif-copyright">© Mark Robertshaw 2017</p><div class="zerif-copyright-box"><a class="zerif-copyright" rel="nofollow">Zerif Lite </a>developed by <a class="zerif-copyright" href="https://themeisle.com"  target="_blank" rel="nofollow">ThemeIsle</a></div></div>	</div> <!-- / END CONTAINER -->
+
+</footer> <!-- / END FOOOTER  -->
+
+
+	</div><!-- mobile-bg-fix-whole-site -->
+</div><!-- .mobile-bg-fix-wrap -->
+
+
+	<div style="display:none">
+	<div class="grofile-hash-map-89a30b2a205460b9d2b99dc4a8fa1f15">
+	</div>
+	</div>
+<!--[if lte IE 8]>
+<link rel='stylesheet' id='jetpack-carousel-ie8fix-css'  href='https://markrobertshaw.com/wp-content/plugins/jetpack/modules/carousel/jetpack-carousel-ie8fix.css?ver=20121024' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='pirate_forms_front_styles-css'  href='https://markrobertshaw.com/wp-content/plugins/pirate-forms/public/css/front.css?ver=2.4.0' type='text/css' media='all' />
+<script type='text/javascript' src='https://markrobertshaw.com/wp-content/plugins/jetpack/_inc/build/photon/photon.min.js?ver=20130122'></script>
+<script type='text/javascript' src='https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201818'></script>
+<script type='text/javascript' src='https://markrobertshaw.com/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://markrobertshaw.com/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://markrobertshaw.com/wp-includes/js/jquery/ui/mouse.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://markrobertshaw.com/wp-includes/js/jquery/ui/sortable.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://markrobertshaw.com/wp-includes/js/jquery/ui/draggable.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://markrobertshaw.com/wp-includes/js/jquery/ui/droppable.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://markrobertshaw.com/wp-includes/js/jquery/suggest.min.js?ver=1.1-20110113'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpurp_servings = {"precision":"2","decimal_character":"."};
+var wpurp_print = {"ajaxurl":"https:\/\/markrobertshaw.com\/wp-admin\/admin-ajax.php?wpurp_ajax=1","nonce":"449295dc09","custom_print_css":"","coreUrl":"https:\/\/markrobertshaw.com\/wp-content\/plugins\/wp-ultimate-recipe","premiumUrl":"","title":"Mark Robertshaw","permalinks":"\/%year%\/%monthnum%\/%day%\/%postname%\/"};
+var wpurp_responsive_data = {"breakpoint":"500"};
+var wpurp_sharing_buttons = {"facebook_lang":"en_US","twitter_lang":"en","google_lang":"en-US"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://markrobertshaw.com/wp-content/plugins/wp-ultimate-recipe/assets/wpurp-public.js?ver=3.10.1'></script>
+<script type='text/javascript' src='https://www.yummly.com/js/widget.js?wordpress&#038;ver=3.10.1'></script>
+<script type='text/javascript' src='https://markrobertshaw.com/wp-content/themes/zerif-lite/js/bootstrap.min.js?ver=20120206'></script>
+<script type='text/javascript' src='https://markrobertshaw.com/wp-content/themes/zerif-lite/js/jquery.knob.js?ver=20120206'></script>
+<script type='text/javascript' src='https://markrobertshaw.com/wp-content/themes/zerif-lite/js/smoothscroll.js?ver=20120206'></script>
+<script type='text/javascript' src='https://markrobertshaw.com/wp-content/themes/zerif-lite/js/scrollReveal.js?ver=20120206'></script>
+<script type='text/javascript' src='https://markrobertshaw.com/wp-content/themes/zerif-lite/js/zerif.js?ver=20120206'></script>
+<script type='text/javascript' src='https://markrobertshaw.com/wp-content/plugins/jetpack/_inc/build/twitter-timeline.min.js?ver=4.0.0'></script>
+<script type='text/javascript' src='https://markrobertshaw.com/wp-includes/js/wp-embed.min.js?ver=4.9.5'></script>
+<script type='text/javascript' src='https://markrobertshaw.com/wp-content/plugins/jetpack/_inc/build/spin.min.js?ver=1.3'></script>
+<script type='text/javascript' src='https://markrobertshaw.com/wp-content/plugins/jetpack/_inc/build/jquery.spin.min.js?ver=1.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"https:\/\/markrobertshaw.com\/wp-admin\/admin-ajax.php","nonce":"b7f17ae6af","display_exif":"1","display_geo":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"black","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","download_original":"View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","copyright":"Copyright","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/markrobertshaw.com\/wp-login.php?redirect_to=https%3A%2F%2Fmarkrobertshaw.com%2F2018%2F01%2F31%2Fdisable-new-persistent-fitbit-sync-notification-android%2F","blog_id":"1","meta_data":["camera","aperture","shutter_speed","focal_length","copyright"],"local_comments_commenting_as":"<fieldset><label for=\"email\">Email (Required)<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">Name (Required)<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">Website<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://markrobertshaw.com/wp-content/plugins/jetpack/_inc/build/carousel/jetpack-carousel.min.js?ver=20170209'></script>
+<script type='text/javascript' src='https://www.google.com/recaptcha/api.js?hl=en_GB&#038;ver=4.9.5'></script>
+<script type='text/javascript' src='https://markrobertshaw.com/wp-content/plugins/pirate-forms/public/js/scripts.js?ver=2.4.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var pirateFormsObject = {"errors":"","spam":{"label":"I'm human!","value":"239ee5fa50"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://markrobertshaw.com/wp-content/plugins/pirate-forms/public/js/scripts-general.js?ver=2.4.0'></script>
+<script type='text/javascript' src='https://stats.wp.com/e-201818.js' async='async' defer='defer'></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:6.1',blog:'126574122',post:'9',tz:'0',srv:'markrobertshaw.com'} ]);
+	_stq.push([ 'clickTrackerInit', '126574122', '9' ]);
+</script>
+
+
+</body>
+
+</html>

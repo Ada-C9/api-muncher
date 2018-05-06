@@ -1,5 +1,5 @@
 class Recipe
-  attr_reader :name, :uri, :image, :ingredients, :calories, :link, :source
+  attr_reader :name, :uri, :image, :ingredients, :calories, :link, :source, :nutrients
 
   def initialize(name, uri, link, source, options = {})
 
@@ -14,6 +14,7 @@ class Recipe
     @image = options[:image]
     @ingredients = options[:ingredients]
     @calories = options[:calories]
+    @nutrients = options[:nutrients]
     # @nutrients = nutrients
   end
 
@@ -26,7 +27,8 @@ class Recipe
         options = {
           image: recipe_hash["image"],
           ingredients: recipe_hash["ingredientLines"],
-          calories:recipe_hash["calories"]}
+          calories:recipe_hash["calories"],
+          nutrients: recipe_hash["totalNutrients"]}
         )
       end
     end

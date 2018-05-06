@@ -1,0 +1,26 @@
+<h1>RECIPE DETAIL WHOO</h1>
+
+<h2><%= @target_recipe.name %></h2>
+<%= image_tag(@target_recipe.image, size: 200, alt: "#{@target_recipe.name}") %>
+<h4><%= @target_recipe.source %></h4>
+<%= link_to @target_recipe.source_url %>
+
+<ul>
+  <% if @target_recipe.ingredient_lines %>
+    <% @target_recipe.ingredient_lines.each do |line| %>
+      <li>
+        <%= line %>
+      </li>
+    <% end %>
+  <% end %>
+</ul>
+
+<ul>
+  <% if @target_recipe.diet_labels %>
+    <% @target_recipe.diet_labels.each do |d_label| %>
+      <li>
+        <%= d_label %>
+      </li>
+    <% end %>
+  <% end %>
+</ul>

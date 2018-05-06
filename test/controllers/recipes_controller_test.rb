@@ -14,6 +14,21 @@ describe RecipesController do
         must_respond_with :ok
       end
     end # it do
+
+    it 'succeeds with a blank search' do
+      VCR.use_cassette("recipes") do
+        get recipes_path, params: { search: '' }
+        must_respond_with :ok
+      end
+    end # it do
+
+    it 'succeeds with a bogus search' do
+      VCR.use_cassette("recipes") do
+        get recipes_path, params: { search: 'xxxxxxxxxxxxxxxxx' }
+        must_respond_with :ok
+      end
+    end # it do
+
   end # index
 
   describe 'show' do

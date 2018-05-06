@@ -34,6 +34,7 @@ class EdamamApiWrapper
 
   private
   def self.create_recipe(api_params)
+    raise StandardError.new("Bad recipe data. Could not create recipe.") if api_params.nil?
     return Recipe.new(
       api_params['label'],
       api_params['image'],

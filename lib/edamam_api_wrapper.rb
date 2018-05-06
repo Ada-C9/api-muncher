@@ -33,11 +33,10 @@ class EdamamApiWrapper
     edaman_id = "http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_#{id}"
     # edaman_id = "http://www.edamam.com/ontologies/edamam.owl#recipe_#{id}" encoded
 
-
-# raise
     # Make request:
     response = HTTParty.get("#{URL}?r=#{edaman_id}&app_id=#{ID}&app_key=#{KEY}").parsed_response
 
+    # define recipe details in new variable only if recipe is found by api:
     if response[0]["uri"] == URI.decode(edaman_id)
       response.each do |hit|
         info_hash = {

@@ -10,9 +10,9 @@ class EdamamApiWrapper
   def self.list_recipes(query)
     full_url = URI.encode(BASE_URL + "?q=" + query + "&app_id=" + ID + "&app_key=" + KEY + "&from=0&to=50")
 
-    response = HTTParty.get(full_url).parsed_response
+    response = HTTParty.get(full_url)
 
-    # raise_on_error(response)
+    raise_on_error(response)
 
     return response["hits"].map do |raw_recipe|
       Recipe.from_api(raw_recipe)
@@ -33,10 +33,10 @@ class EdamamApiWrapper
   end
 
   private
-  # def self.raise_on_error(response)
-  #   unless response["ok"]
-  #     raise EdamamError.new(response["error"])
-  #   end
-  # end
+  def self.raise_on_error(response)
+    unless response["more"]
+      raise EdamamError.new(response["error"])
+    end
+  end
 
 end

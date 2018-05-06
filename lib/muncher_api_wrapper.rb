@@ -36,8 +36,11 @@ class MuncherApiWrapper
     escaped = URI.escape(url)
     response = HTTParty.get(escaped)
 
-    recipe = Recipe.from_api(response[0])
-    return recipe
+    if response.empty?
+      return nil
+    else
+      return Recipe.from_api(response[0])
+    end
   end
 
 end

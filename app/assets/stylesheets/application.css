@@ -59,6 +59,10 @@ footer div {
   text-align: center;
 }
 
+footer div:first-child {
+  font-style: italic;
+}
+
 body {
   margin: 3em;
   color: #008080;

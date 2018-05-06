@@ -65,25 +65,23 @@ describe MuncherApiWrapper do
       end
     end
 
-    it 'raises error when you send a nonexistant id' do
+    it 'returns nil when you send an invalid id' do
       VCR.use_cassette('chicken') do
         recipe_list = MuncherApiWrapper.list_recipes("chicken")
         id = recipe_list.first[:id] + "abc"
 
-        proc {
-          MuncherApiWrapper.show_recipe(id)
-        }.must_raise StandardError
+        recipe = MuncherApiWrapper.show_recipe(id)
+        recipe.must_equal nil
       end
     end
 
-    it 'raises error when you send a blank id' do
+    it 'returns nil when you send a blank id' do
       VCR.use_cassette('chicken') do
         recipe_list = MuncherApiWrapper.list_recipes("chicken")
         id = " "
 
-        proc {
-          MuncherApiWrapper.show_recipe(id)
-        }.must_raise StandardError
+        recipe = MuncherApiWrapper.show_recipe(id)
+        recipe.must_equal nil
       end
     end
   end

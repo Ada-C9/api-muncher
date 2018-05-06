@@ -1,5 +1,4 @@
 require 'httparty'
-require 'pry'
 
 class EdamamWrapper
   class EdamamError < StandardError; end

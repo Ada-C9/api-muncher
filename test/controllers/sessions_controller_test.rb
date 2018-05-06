@@ -53,4 +53,21 @@ describe SessionsController do
       session[:user_id].must_equal user.id
     end
   end
+
+  describe 'destroy' do
+    it 'logs out a logged in user' do
+      user = users(:one)
+
+      login(user)
+      session[:user_id].must_equal user.id
+
+      delete logout_path
+      session[:user_id].must_be_nil
+    end
+
+    it 'redirects to root if no user is logged in' do
+      delete logout_path
+      must_redirect_to root_path
+    end
+  end
 end

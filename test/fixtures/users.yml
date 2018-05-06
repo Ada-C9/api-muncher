@@ -4,8 +4,15 @@
 # model remove the "{}" from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-# column: value
+
+one:
+  uid: <%= '99999' %>
+  provider: google
+  name: user one
+  email: user_one@google.com
+
+two:
+  uid: <%= '123456789' %>
+  provider: google
+  name: user two
+  email: user_two@google.com

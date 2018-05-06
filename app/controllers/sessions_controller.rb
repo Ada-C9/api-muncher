@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
 
+  before_action :check_if_logged_in, only: [:create]
+
   def create
     auth_hash = request.env['omniauth.auth']
 
@@ -30,5 +32,16 @@ class SessionsController < ApplicationController
     session[:user_id] = nil
     flash[:status] = :success
     flash[:message] = 'Successfully logged out'
+  end
+
+  private
+
+  def check_if_logged_in
+    if session[:user_id]
+      flash[:status] = :failure
+      flash[:message] = 'Already logged in'
+
+      redirect_back(fallback_location: user_path(session[:user_id]))
+    end
   end
 end

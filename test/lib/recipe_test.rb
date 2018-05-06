@@ -5,7 +5,7 @@ describe Recipe do
   let (:recipe_uri) {'www.edamam.com/a_recipe'}
   let (:recipe_ingredients) { ['some', 'ingredients'] }
   let (:recipe_image) { 'www.edamam.com/image' }
-  let (:dietary_info) { {cals: 'cals', fat: 'fat'} }
+  let (:dietary_info) {  }
   let (:recipe_url) { 'www.food.com/another_recipe' }
 
   describe 'initialize' do
@@ -43,8 +43,13 @@ describe Recipe do
   describe 'from_api' do
     it 'must create a new instance of recipe with good data' do
       raw_recipe = {
-        'label' => 'teriyaki chicken',
-        'uri' => 'www.edamam.com/a_recipe'
+        'label' => recipe_name,
+        'uri' => recipe_uri,
+        'ingredientLines' => recipe_ingredients,
+        'image' => recipe_image,
+        'url' => recipe_url,
+        'dietLabels' => ['all free'],
+        'healthLabels' => ['not healthy']
       }
 
       result = Recipe.from_api(raw_recipe)

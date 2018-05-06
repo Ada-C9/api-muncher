@@ -5,7 +5,7 @@ require_dependency '../../lib/recipe'
 
 class RecipesController < ApplicationController
   def home; end
-    
+
 
   def index
 
@@ -14,7 +14,7 @@ class RecipesController < ApplicationController
     if results.empty?
       redirect_to root_path
     else
-      @recipes =  results.paginate(:page => params[:page], :per_page => 5)
+      @recipes =  results.paginate(:page => params[:page], :per_page => 8)
       return @recipes
 
     end

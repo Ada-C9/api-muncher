@@ -4,20 +4,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Recipes" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
     <%= csrf_meta_tags %>
   </head>
   <nav>
-  <h2 class="nav-main"><%= link_to "Muncher", root_path %></h2>
-
-  <%= form_tag recipes_path, method: :get do %>
-  <section class="search"><%= text_field_tag(:query) %></section>
-  <section class="submit"><%= submit_tag("Search", class: "button nav-button")%></section>
-  <% end %>
-</nav>
+  </nav>
 
   <body>
 
@@ -26,4 +21,9 @@
     <%= yield %>
 
   </body>
+  <footer>
+    <div class="attribution">
+      Powered by Edamam
+    </div>
+  </footer>
 </html>

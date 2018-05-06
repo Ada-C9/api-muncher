@@ -36,12 +36,14 @@ require 'will_paginate'
       puts data
       return nil if data.nil?
 
-      Recipe.new data.first["label"],
+    recipe =  Recipe.new(data.first["label"],
       data.first["uri"],
       data.first["image"],
       data.first["dietLabels"],
       data.first["ingredientLines"],
       data.first["source"]
+    )
+    return recipe
 
     end
 

@@ -17,10 +17,13 @@ describe EdamamApiWrapper do
   end
 
   it "will return an empty array for a search that returns no results" do
-      VCR.use_cassette("search") do
-        recipes = EdamamApiWrapper.list_recipes("")
+    VCR.use_cassette("search") do
+      recipes = EdamamApiWrapper.list_recipes("")
 
-        recipes.must_equal []
-      end
+      recipes.must_equal []
     end
+  end
+  
+
+
 end

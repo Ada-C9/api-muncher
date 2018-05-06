@@ -1,9 +1,10 @@
+<div class="showcontainer">
 <section class="page">
 
   <h2 class="nav"><%= @recipe.name %>'s recipe:</h2>
   <section class="byline">By: <%= link_to "#{@recipe.source}",  target: "_blank" %></section>
 
-  <div class="row">
+  <div class="recipe_info">
     <div class="pic medium-6 medium-push-6 columns">
       <%= image_tag "#{@recipe.image}", alt:"image"%>
     </div>
@@ -17,6 +18,7 @@
         </li>
         <% end %>
       </ul>
+
 
       <h4>Dietary Information</h4>
       <% unless @recipe.dietlabels == [] %>

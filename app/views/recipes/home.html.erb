@@ -20,8 +20,8 @@
   <h2 class="homepage-title">MUNCHER</h2>
 
   <%= form_tag recipes_path, method: :get do %>
-  <p class="form"><%= label_tag(:search, "Find your flavor...") %></p>
-  <p class="form search"><%= text_field_tag(:search) %></p>
+  <p class="form"><%= label_tag(:query, "Find your flavor...") %></p>
+  <p class="form search"><%= text_field_tag(:query) %></p>
   <p class="submit"><%= submit_tag("Search", class: "button")  %></p>
   <% end %>
 </section>

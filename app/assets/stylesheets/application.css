@@ -1,0 +1,127 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *= require normalize-rails
+
+ *
+ *= require_tree .
+ *= require_self
+ *= require foundation_and_overrides
+ */
+
+body, h1, h3, h5 {
+  font-family: 'Slabo 27px', serif;
+}
+
+.button {
+  background-color: darkgreen;
+}
+
+.button:hover {
+  background-color: #e69900;
+}
+
+header h1, .search-bar, #search-form, footer, #pages, #info, h3, h5 {
+  display: flex;
+  justify-content: center;
+}
+
+header {
+  padding-top: 2.5em;
+  padding-bottom: 2em;
+  background-color: #c2f0c2;
+}
+
+footer {
+  padding-top: 1em;
+  background-color: #c2f0c2;
+}
+
+
+#root {
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+ #root h5 {
+   color: grey;
+   margin: 0;
+ }
+
+#root-footer {
+  background-color: white;
+}
+
+h3 {
+  padding-left: 2em;
+}
+
+img {
+  border: thin solid grey;
+}
+
+.show-mid ul {
+padding-left: 1.5em;
+}
+
+.show-mid, .show-low {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 4em;
+  padding-right: 1em;
+  padding-top: .5em
+}
+
+.show-head h3, .show-head h5 {
+  margin: 0;
+  padding: 0;
+}
+
+.show-head h5 a {
+  padding-left: .5em;
+}
+
+#results {
+  padding-top: 1em
+}
+
+.show-head {
+  padding-top: 1em;
+  padding-bottom: 3em;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 4em;
+  padding-bottom: 2em;
+}
+
+#info b {
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+.index {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+}
+
+.index-container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 2.5em;
+}

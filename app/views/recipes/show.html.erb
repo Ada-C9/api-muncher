@@ -1,0 +1,52 @@
+<header>
+  <div>
+    <h1>Recipedia</h1>
+  </div>
+  <div class="search-bar">
+    <%= form_tag(recipes_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Recipes" %>
+    <%= submit_tag "Search", :name => nil, :class => "button" %>
+    <% end %>
+  </div>
+</header>
+
+<div class="show-head">
+    <h3><%= @recipe.title %></h3>
+    <h5>By <%= link_to @recipe.source, @recipe.link %></h5>
+</div>
+
+<div class="show-mid">
+  <p>
+    <%= image_tag(@recipe.image) %>
+  </p>
+  <ul>
+    <strong>Ingredients</strong>
+    <% @recipe.ingredients.each do |ingredient| %>
+    <li>
+      <%= ingredient['text'] %>
+    </li>
+    <% end %>
+  </ul>
+
+</div>
+
+<div class="show-low">
+  <ul>
+    <strong>Dietary Labels</strong>
+    <% if @recipe.dietlabels.count < 1 %>
+    <li>
+      N/A
+    </li>
+    <% else %>
+    <% @recipe.dietlabels.each do |dl| %>
+    <li>
+      <%= dl %>
+    </li>
+    <% end %>
+    <% end %>
+  </ul>
+</div>
+
+<footer>
+  <strong>Powered by Edamam</strong>
+</footer>

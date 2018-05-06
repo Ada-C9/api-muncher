@@ -17,16 +17,41 @@
  *= require foundation_and_overrides
 
  */
+html body {
+  /*font-family: 'Open Sans Condensed', sans-serif;*/
+  /*font-family: 'Anton', sans-serif;*/
+  font-family: 'Comfortaa', cursive;
+  /*font-family: 'Kalam', cursive;*/
+}
 
+h1 {
+  font-family: comfortaa;
+  font-size: 4rem;
+}
+h2 {
+  font-family: comfortaa;
+}
+h3 {
+  font-family: comfortaa;
+}
 body {
   padding: 0 20%;
   background-color: #cc99ff;
  }
 a {
   color: hotpink;
+  font-weight: bold;
+}
+
+a:hover{
+  font-size: 20px;
 }
 .form {
   padding: 0 20%
+}
+
+.homepage {
+  padding-top: 250px;
 }
 
 .pagination {
@@ -37,6 +62,7 @@ a {
 }
 header h3 {
   padding-bottom: 20px;
+  padding-top: 40px;
 }
 
 .thumbnail {
@@ -47,7 +73,19 @@ header h3 {
 }
 
 .label {
-  font-size: 20px;
+  font-size: 15px;
   background-color: lightgrey;
-  text-align: center;
+  white-space:normal;
+}
+
+header {
+  padding-top: 40px;
+}
+
+.ing {
+  padding-left: 20px;
+}
+
+.og-link {
+
 }

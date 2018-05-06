@@ -8,8 +8,9 @@
 </header>
 
 <section class="grid-x">
+  <% @recipes.each do |recipe|%>
   <ul>
-     <% @recipes.each do |recipe|%>
+
      <li class="thumbnail">
        <div>
          <img src="<%= recipe.image %>" alt='recipe image'>

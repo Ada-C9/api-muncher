@@ -15,14 +15,14 @@
       <img src="<%= @recipe.image %>" alt="recipe image">
     </div>
 
-    <section >
+    <section class="ing" >
       <h2>Ingredients</h2>
       <p>
         <% @recipe.ingredients.each do |ing| %>
         <%= ing %>
       </p>
       <% end %>
-      <p>
+      <p class="og-link">
         <%= link_to "Go to original recipe", @recipe.url %>
       </p>
     </section>

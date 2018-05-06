@@ -21,9 +21,9 @@ class RecipesController < ApplicationController
   def show
     @recipe = RecipeSearchWrapper.find_recipe(params[:uri])
 
-    # unless @recipe
-    #   head :not_found
-    # end
+    unless @recipe
+      head :not_found
+    end
   end
 
   private

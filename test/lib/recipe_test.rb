@@ -13,5 +13,24 @@ describe "recipe" do
       recipe.label.must_equal label
       recipe.uri.must_equal uri
     end
+
+    it "raises an error if not enough arguments are provided" do
+      label = "chicken dinner"
+      proc { Recipe.new(label)}.must_raise ArgumentError
+    end
+
+    it "accepts optional arguments" do
+      label = "Best Label"
+      uri = "Uridiculous"
+      opts = {
+        url: "http:://homestarrunner.com",
+        servings: "200"
+      }
+      recipe = Recipe.new(uri, label, opts)
+
+      recipe.url.must_equal opts["url"]
+      recipe.servings.must_equal opts["servings"]
+
+    end
   end
 end

@@ -43,18 +43,10 @@ describe "RecipesController" do
       end
     end
 
-    it "results in not_found if the recipe uri does not exist" do
-      # VCR.use_cassette("show") do
-      #   uri = "..."
-      #   label = "thisisfake"
-      #
-      #   proc {recipe = RecipeSearchWrapper.find_recipe(uri)}.must raise
-        # recipe.must_equal nil
-        # get recipe_path(uri: uri, label: label)
-        # must_respond_with :not_found
-      # end
-
+    it "raises RecipeError if the recipe uri does not exist" do
+      
     end
+
   end
 
 

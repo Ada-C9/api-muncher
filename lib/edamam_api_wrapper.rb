@@ -12,7 +12,7 @@ class EdamamApiWrapper
       @recipe_list = []
     end
 
-    response = HTTParty.get("#{URL}?q=#{search}&app_id=#{APP_ID}&app_key=#{APP_KEY}")
+    response = HTTParty.get("#{URL}?q=#{search}&app_id=#{APP_ID}&app_key=#{APP_KEY}&from=0&to=100")
 
 
     if response["hits"]

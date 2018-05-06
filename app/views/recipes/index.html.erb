@@ -20,6 +20,7 @@
 
 <h2>Results for <%= @query %></h2>
 <% if @recipes %>
+
 <div class="journal-entries">
 
   <% @recipes.each do |recipe| %>
@@ -33,3 +34,5 @@
   <% end %>
 <% end %>
 </div>
+
+<section class="paginate"><%= will_paginate @recipes %></section>

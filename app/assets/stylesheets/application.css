@@ -218,4 +218,8 @@ a:hover {
     padding: 0;
   }
 
+  .pagination li {
+    display: inline-block !important;
+  }
+
 }

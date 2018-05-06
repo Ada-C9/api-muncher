@@ -1,6 +1,6 @@
 require 'httparty'
 
-class EdemamApiWrapper
+class EdamamApiWrapper
   URL = "https://api.edamam.com/search"
   APP_KEY = ENV["APPLICATION_KEY"]
   APP_ID = ENV["APPLICATION_ID"]

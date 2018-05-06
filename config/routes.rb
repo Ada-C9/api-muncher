@@ -5,5 +5,5 @@ Rails.application.routes.draw do
 
   resources :recipes, only: [:index]
 
-  get 'recipes/show', to: 'recipes#show', as: 'show'
+  get 'recipes/show', to: 'recipes#show', as: 'recipe'
 end

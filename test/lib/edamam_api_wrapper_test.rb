@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'pry'
 
 describe EdamamApiWrapper do
 
@@ -22,11 +21,10 @@ describe EdamamApiWrapper do
         response.count.must_equal 0
       end
     end
-
   end
 
   describe 'show_recipe method' do
-    it "can retrieve a specific, valid recipe" do
+    it "can retrieve a valid recipe" do
       VCR.use_cassette("recipes") do
         response = EdamamApiWrapper.show_recipe("http://www.edamam.com/ontologies/edamam.owl#recipe_7bf4a371c6884d809682a72808da7dc2")
 
@@ -35,9 +33,14 @@ describe EdamamApiWrapper do
       end
     end
 
-    it "returns an error for incorrect params" do
+    it "returns the correct recipe" do
+      valid_id = "http://www.edamam.com/ontologies/edamam.owl#recipe_7bf4a371c6884d809682a72808da7dc2"
+      VCR.use_cassette("recipes") do
+        response = EdamamApiWrapper.show_recipe(valid_id)
 
+        response.id.must_equal valid_id
+      end
     end
-
   end
+
 end

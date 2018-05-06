@@ -14,7 +14,6 @@ class RecipesController < ApplicationController
   end
 
   def show
-    # raise
-    @recipe = EdamamApiWrapper.find(params[:id])
+    not_found unless @recipe = EdamamApiWrapper.find(params[:id])
   end
 end

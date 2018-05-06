@@ -28,10 +28,7 @@ describe RecipesController do
     VCR.use_cassette('chicken') do
       get results_path('chicken')
 
-      result = flash[:status]
-
       must_respond_with :success
-      result.must_equal :success
     end
   end
 

@@ -39,6 +39,5 @@ describe EdamamApiWrapper do
         proc {EdamamApiWrapper.search(uri)}.must_raise
       end
     end
-    
   end
 end

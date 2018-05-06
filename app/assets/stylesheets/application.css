@@ -248,9 +248,9 @@ form {
 
   @media screen and (min-width: 780px) {
     aside.search, section.search {
-      position: relative
+      position: relative;
       padding: auto;
-      display: block
+      display: block;
     }
 
     section.search {

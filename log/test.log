@@ -1,2 +1,32 @@
   [1m[35m (209.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
   [1m[35m (469.9ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (211.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (580.7ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (166.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (487.7ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (204.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (618.3ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (214.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (527.1ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (205.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (443.2ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (211.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (456.4ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (206.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (613.9ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (203.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (432.3ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (138.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (453.1ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (208.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (383.5ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (212.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (455.8ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (176.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (463.3ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (196.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (454.5ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (207.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (439.6ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (207.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (458.4ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m

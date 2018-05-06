@@ -6,6 +6,10 @@ class Recipe
       raise ArgumentError.new("No name has been provided for this recipe")
     end
 
+    if options.nil? || options.empty?
+      raise ArgumentError.new("No details ")
+    end
+
     @label = label
     @image =  options[:image]
     @source =  options[:source]

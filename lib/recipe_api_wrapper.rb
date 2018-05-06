@@ -31,7 +31,7 @@ class RecipeApiWrapper
 
     response = HTTParty.get(encoded_uri).parsed_response
     # ALWAYS CHECK YOUR ERROR CODES
-    # unless response.success?
+    # unless response["count"] == true
     #   raise StandardError.new(response["error"])
     # end
 
@@ -41,7 +41,7 @@ class RecipeApiWrapper
   private
 
   def self.raise_on_error(response)
-    unless response["ok"]
+    unless response["count"]
       raise RecipeError.new(response["error"])
     end
   end

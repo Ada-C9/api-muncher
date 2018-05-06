@@ -9,7 +9,7 @@ describe RecipesController do
     it "returns a list of search recipes results" do
       query = "chicken"
       VCR.use_cassette("recipes") do
-        RecipeSearchWrapper.list_recipes(query)
+        RecipeApiWrapper.list_recipes(query)
         get recipes_path(query: query)
 
         must_respond_with :success
@@ -19,7 +19,7 @@ describe RecipesController do
     it "won't return anything for a search term with no results" do
       query = "hjn2w0qq"
       VCR.use_cassette("recipes") do
-        RecipeSearchWrapper.search_recipes(query)
+        RecipeApiWrapper.list_recipes(query)
 
         get recipes_path(query: query)
         must_redirect_to root_path
@@ -34,18 +34,11 @@ describe RecipesController do
         uri = "http://www.edamam.com/ontologies/edamam.owl#recipe_e427aa9f6e7a96ecadbf994d9f75fd14"
         label = "Chicken Florentine Pesto Pasta"
 
-        recipe = RecipeSearchWrapper.find_recipe(uri)
+        recipe = RecipeApiWrapper.show_recipe(uri)
         recipe.must_be_kind_of Recipe
         get recipe_path(uri: uri, label: label)
         must_respond_with :success
-       end
-     end
-
-    it "it returns a RecipeError if the recipe uri does not exist" do
-      VCR.use_cassette("show") do
-        uri = "http://www.edamam.com/ontologies/edamam.owl#recipe_no"
-
-        result = RecipeSearchWrapper.find_recipe(uri)
-        result.must_be_kind_of RecipeSearchWrapper::RecipeError
+      end
+    end
   end
 end

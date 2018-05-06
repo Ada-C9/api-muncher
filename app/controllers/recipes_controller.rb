@@ -1,8 +1,10 @@
 class RecipesController < ApplicationController
+  around_action :catch_api_error
+
   def index
     @query = params[:query]
     @recipes = RecipeApiWrapper.list_recipes(@query).paginate(:page => params[:page], :per_page => 12)
-    # @recipe = RecipeApiWrapper.show_recipe("http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_48c52ac3bd8c16720a7cb8ef34cd5e5b")
+    redirect_to root_path if @recipes.length == 0
   end
 
   def show

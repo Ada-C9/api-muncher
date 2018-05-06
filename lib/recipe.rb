@@ -7,9 +7,10 @@ class Recipe
       raise ArgumentError.new("Need a recipe name pls")
     end
 
-    if url.nil? || url.empty?
-      raise ArgumentError.new("Need a recipe url pls")
+    if uri.nil? || uri.empty?
+      raise ArgumentError.new("Need a recipe uri pls")
     end
+
     @label = label
     @image = image
     @url = url

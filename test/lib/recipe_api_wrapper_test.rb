@@ -18,15 +18,9 @@ describe RecipeApiWrapper do
     it "can't give a list of recipes" do
       VCR.use_cassette("recipes") do
       recipe = RecipeApiWrapper.list_recipes("jdns2n")
-      recipe['count'].must_equal 0
-      response["error"].wont_be_nil
-  end
-end
-  end
+      recipe.must_equal []
 
-  describe 'show_recipe' do
-    it 'gives a single recipe' do
-      VCR.use_cassette("recipe") do
-        recipe =
+      end
+    end
   end
 end

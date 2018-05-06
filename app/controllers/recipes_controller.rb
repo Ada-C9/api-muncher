@@ -11,7 +11,7 @@ class RecipesController < ApplicationController
   def new; end
 
   def create # this is for searching
-    
+
   end
 
 end

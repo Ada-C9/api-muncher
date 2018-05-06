@@ -18,12 +18,7 @@ class EdamamApiWrapper
         info_hash = {
           title: hit["recipe"]["label"],
           id: hit["recipe"]["uri"].match(/[^_]*$/)[0],
-          image: hit["recipe"]["image"],
-          source: hit["recipe"]["source"],
-          url: hit["recipe"]["url"],
-          portion: hit["recipe"]["yield"],
-          ingredients: hit["recipe"]["ingredientLines"],
-          diet: hit["recipe"]["dietLabels"]
+          image: hit["recipe"]["image"]
         }
 
         @recipe_list << Recipe.new(info_hash)
@@ -33,9 +28,33 @@ class EdamamApiWrapper
   end
 
   def self.find(id)
-    @recipe_list.each do |recipe|
-      return recipe if recipe.id == id
-    end
-  end
 
+    # Format recipe id into Edaman id:
+    edaman_id = "http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_#{id}"
+    # edaman_id = "http://www.edamam.com/ontologies/edamam.owl#recipe_#{id}" encoded
+
+
+# raise
+    # Make request:
+    response = HTTParty.get("#{URL}?r=#{edaman_id}&app_id=#{ID}&app_key=#{KEY}").parsed_response
+
+    if response[0]["uri"] == URI.decode(edaman_id)
+      response.each do |hit|
+        info_hash = {
+          title: hit["label"],
+          id: hit["uri"].match(/[^_]*$/)[0],
+          image: hit["image"],
+          source: hit["source"],
+          url: hit["url"],
+          portion: hit["yield"],
+          ingredients: hit["ingredientLines"],
+          diet: hit["dietLabels"]
+        }
+
+        @recipe = Recipe.new(info_hash)
+      end
+    end
+    return @recipe
+
+  end
 end

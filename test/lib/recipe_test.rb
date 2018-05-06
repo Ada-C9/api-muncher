@@ -10,7 +10,7 @@ describe 'Recipe' do
 
       proc {
         recipe = Recipe.new(label,image,calories)
-      }.must_raise StandardError
+      }.must_raise ArgumentError
     end
 
     it "initializes when all parameters are given" do

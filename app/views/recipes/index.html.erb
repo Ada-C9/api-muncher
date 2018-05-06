@@ -1,0 +1,48 @@
+<main>
+  <div>
+    <header class="search-wrapper">
+      <%= link_to root_path do %>
+      <h1 class="margin-zero" id="large-font">recipe h<em>API</em>
+        <small>( ˘▽˘)っ♨</small>
+      </h1>
+      <% end %>
+      <h7>Powered by <%= link_to "Edamam", "https://www.edamam.com/" %></h7>
+    </header>
+
+    <div>
+      <%= render partial: "form" %>
+      <section class="flash align-center">
+        <% if flash[:status].present? %>
+        <p class="<%= flash[:status] %>"><%= flash[:message] %></p>
+        <% end %>
+      </section>
+    </div>
+
+
+      <% if @recipes %>
+    <h4 class="align-center more-padding"><%= @recipes.count %> RESULTS FOR: "<%= @query.capitalize %>"</h4>
+      <% end %>
+  </div>
+
+    <section >
+      <% if @recipes%>
+      <ul class='grid-x'>
+        <% @recipes.each do |recipe| %>
+        <li class='recipe-padding'>
+          <%= link_to recipe_path(recipe.id) do %>
+                  <%= image_tag(recipe.image, class:"border", target: :_blank, alt: "#{recipe.name}") %>
+                <% end %>
+          <div class="shorten"><%= recipe.name %></div>
+        </li>
+        <% end %>
+      </ul>
+      <% end %>
+    </section>
+
+
+  <section class="will_paginate align-center">
+  <% if @recipes%>
+    <%= will_paginate @recipes %>
+    <% end %>
+  </section>
+</main>

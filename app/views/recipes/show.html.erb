@@ -1,0 +1,64 @@
+<header class="search-wrapper">
+  <%= link_to root_path do %>
+  <h1 class="margin-zero" id="large-font">recipe h<em>API</em>
+    <small>( ˘▽˘)っ♨</small>
+  </h1>
+  <% end %>
+  <h7>Powered by <%= link_to "Edamam", "https://www.edamam.com/" %></h7>
+</header>
+
+<div>
+  <%= render partial: "form" %>
+  <section class="flash align-center">
+    <% if flash[:status].present? %>
+    <p class="<%= flash[:status] %>"><%= flash[:message] %></p>
+    <% end %>
+  </section>
+</div>
+
+
+<div class="small-12 medium-5 large-5 columns align-center padding-top">
+  <%= image_tag(@recipe.image, class:"padding thumbnail border", alt:"#{@recipe.name}") %>
+</div>
+
+<header class="align-center">
+  <h2><%= @recipe.name %></h2>
+  <h5>Recipe by: <%= link_to @recipe.source, @recipe.link, target:"_blank" %></h5>
+</header>
+
+<div class="row padding-top more-padding">
+  <div>
+    <h2 class="align-center border-bottom">Ingredients</h2>
+  </div>
+
+  <section class="li-columns">
+    <ul id="ingredients">
+      <% @recipe.ingredients.each do |line| %>
+      <li>
+        <%= line %>
+      </li>
+      <% end %>
+    </ul>
+  </section>
+</div>
+
+<div class="row mid-width padding-top more-padding">
+  <section class="nutrition-wrapper">
+    <header>
+        <h2 class="align-center border-bottom">Nutrition Facts</h2>
+    </header>
+    <section class="li-columns">
+      <ul>
+          <% @recipe.nutrients.each do |nutrient, value| %>
+          <li>
+            <% if ["FASAT", "FAMS","FAPU", "FATRN"].include?(nutrient) %>
+              <%= value["label"] %> Fat: <%= value["quantity"].to_i %> <%= value["unit"] %>
+            <% else %>
+              <%= value["label"] %>: <%= value["quantity"].to_i %> <%= value["unit"] %>
+          </li>
+            <% end %>
+          <% end %>
+      </ul>
+    </section>
+  </section>
+</div>

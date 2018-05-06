@@ -37,7 +37,7 @@ class EdamamApiWrapper
     response = HTTParty.get("#{URL}?r=#{edaman_id}&app_id=#{ID}&app_key=#{KEY}").parsed_response
 
     # define recipe details in new variable only if recipe is found by api:
-    if response[0]["uri"] == URI.decode(edaman_id)
+    if response[0] && response[0]["uri"] == URI.decode(edaman_id)
       response.each do |hit|
         info_hash = {
           title: hit["label"],

@@ -38,7 +38,13 @@ img {
   margin: 5%;
 }
 
-footer {
-  text-align: center;
+/* footer {
   background-color: grey;
+
+} */
+#edamam-badge {
+  text-align: center;
+}
+#edamam-badge a img {
+  max-height: 30px;
 }

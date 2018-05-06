@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+    <script src="https://developer.edamam.com/attribution/badge.js"></script>
+    <title><%= content_for?(:title) ? yield(:title) : "Muncher" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
@@ -17,7 +17,7 @@
     </head>
     <%= yield %>
     <footer>
-      <p>Powered by Edemam</p>
+      <div id="edamam-badge" data-color="transparent"></div>
     </footer>
   </body>
 </html>

@@ -5,12 +5,13 @@ class EdemamApiWrapper
   APP_KEY = ENV["APPLICATION_KEY"]
   APP_ID = ENV["APPLICATION_ID"]
 
+
 # postman template
-# https://test-es.edamam.com/search?q=noodles&app_key=97680b5b553222cff5288b9d110d55ed&app_id=ee889654
+ # https://test-es.edamam.com/search?q=noodles&app_key=97680b5b553222cff5288b9d110d55ed&app_id=ee889654
   def self.list_recipes(search_term)
     return [] if search_term.blank?
 
-    encoded_uri = URI.encode("#{URL}?q=#{search_term}&app_id=#{APP_ID}&app_key=#{APP_KEY}")
+    encoded_uri = URI.encode("#{URL}?q=#{search_term}&app_id=#{APP_ID}&app_key=#{APP_KEY}&to=100")
 
     puts encoded_uri
 
@@ -43,9 +44,10 @@ class EdemamApiWrapper
       recipe_hash["uri"] = response[0]["uri"]
       recipe_hash["image"] = response[0]["image"]
       recipe_hash["url"] = response[0]["url"]
-      recipe_hash["recipe_source"] = response[0]["recipe_source"]
-      recipe_hash["ingredients"] = response[0]["ingredients"]
+      recipe_hash["source"] = response[0]["source"]
+      recipe_hash["ingredientLines"] = response[0]["ingredientLines"]
       recipe_hash["totalNutrients"] = response[0]["totalNutrients"]
+      recipe_hash["dietLabels"] = response[0]["dietLabels"]
 
       recipe = Recipe.new(recipe_hash)
     else

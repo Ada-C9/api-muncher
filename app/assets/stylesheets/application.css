@@ -190,13 +190,23 @@ form {
     z-index: 0;
   }
 
+  aside.login {
+    position: fixed;
+    top: 7.5rem;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    margin: 5vw;
+}
+
   @media screen and (min-width: 650px) {
     .nav-trigger:checked + label {
       margin-top: 2.5rem;
     }
 
     form {
-      padding: 20vh 5vw;
+      padding: 8rem;
     }
   }
 
@@ -249,7 +259,6 @@ form {
   @media screen and (min-width: 780px) {
     aside.search, section.search {
       position: relative;
-      padding: auto;
       display: block;
     }
 

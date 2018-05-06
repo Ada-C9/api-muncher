@@ -1,6 +1,7 @@
 
 class RecipesController < ApplicationController
   around_action :catch_api_error
+  skip_before_action :require_login
 
   def root
     query = params[:query]

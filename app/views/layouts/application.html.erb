@@ -15,21 +15,39 @@
 
 <body>
   <header class="top">
-    <% if flash[:status] && !request.fullpath.include?("/results?page=") %>
+
+    <h1 class="main"><%= link_to "Muncher", root_path %></h1>
+
+    <% if display_search?(request.fullpath) %>
+    <aside class="search">
+     <%= render partial: 'layouts/search' %>
+     </aside>
+    <% end %>
+
+
+    <% if @login_user %>
+    <aside class="login">
+    <%= link_to "Logged in as #{@login_user.username}", user_path(@login_user), class: "button small" %>
+    <%= link_to "Logout", logout_path, method: :delete, class: "secondary button small" %>
+    <% else %>
+    <%= link_to "Login/SignUp with Google", "/auth/google_oauth2", class: "hollow button small" %>
+    </aside>
+    <% end %>
+
+
+  </header>
+  <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+  <label for="nav-trigger"></label>
+
+  <section class="content">
+    <% if flash[:status] %>
     <section class="row status <%= flash[:status] %> callout">
       <h3>
         <%= flash[:message] %>
       </h3>
     </section>
     <% end %>
-    <h1 class="main"><%= link_to "Muncher", root_path %></h1>
-    <% if display_search?(request.fullpath) %>
-    <aside class="search"> <%= render partial: 'layouts/search' %> </aside>
-    <% end %>
-  </header>
-  <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-  <label for="nav-trigger"></label>
-  <section class="content">
+    
     <%= yield %>
   </section>
 

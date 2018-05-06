@@ -97,3 +97,16 @@ a:hover {
 footer {
   text-align: center;
 }
+
+
+.pagination .current {
+  background: red;
+}
+
+.pagination a:hover {
+  background: red;
+}
+
+.pagination a {
+  display: inline-block;
+}

@@ -36,7 +36,10 @@
 <% end%>
 <div class="pagination">
   <div class="page_info"><%= page_entries_info @recipes %></div>
-  <%= will_paginate @recipes, :container => false %>
+  <div class="pag">
+      <%= will_paginate @recipes, :container => false %>
+  </div>
+
 </div>
 
 </section>

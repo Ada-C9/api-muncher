@@ -17,7 +17,7 @@ class EdamamApiWrapper
       search = Recsearch.from_api(response)
       return search
     else
-
+      return nil
     end
 
   end

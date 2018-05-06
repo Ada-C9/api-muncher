@@ -10,7 +10,7 @@ class RecipeApiWrapper
 
   def self.recipes(user_query)
 
-    url = URI.encode("#{BASE_URL}#{user_query}&app_id=#{TOKEN_ID}&app_key=#{TOKEN_KEY}")
+    url = URI.encode("#{BASE_URL}#{user_query}&app_id=#{TOKEN_ID}&app_key=#{TOKEN_KEY}&from=#{0}&to=#{300}")
 
     response = HTTParty.get(url).parsed_response
 

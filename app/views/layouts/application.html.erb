@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <script src="https://developer.edamam.com/attribution/badge.js"></script>
+  </head>
+
+  <body>
+
+    <section>
+      <h1><%= link_to "Comelón", root_path %></h1>
+      <h4>¡Busca recetas con información dietética!</h4>
+      <%= form_tag recipes_path, method: :get do %>
+        <%= text_field_tag :search, params[:search], placeholder: "ejemplo: ceviche" %>
+        <%= submit_tag 'Buscar' %>
+      <% end %>
+    </section>
+
+    <%= yield %>
+
+  <footer>
+    <div id="edamam-badge" data-color="transparent"></div>
+  </footer>
+  </body>
+</html>

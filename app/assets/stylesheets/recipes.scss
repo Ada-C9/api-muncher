@@ -1,0 +1,60 @@
+// Place all the styles related to the Recipes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* recipe card styles  */
+
+article.recipes-list ul {
+  list-style: none;
+  margin-left: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+article.recipes-list ul li {
+  display: inline-block;
+  padding: none;
+  width: 15rem;
+  height: 15rem;
+  margin: 0.3rem;
+  text-align: center;
+  position: relative;
+  /* border: solid 1px purple; */
+}
+
+article.recipes-list ul li h5 {
+  display: absolute;
+  bottom: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 0;
+  height: 25%;
+  /* border: solid 1px yellow; */
+}
+
+article.recipes-list ul li img {
+  height: 75%;
+}
+
+/* pagination styles */
+aside nav.pagination {
+  text-align: center;
+}
+
+aside nav.pagination span {
+  display: inline-block;
+}
+
+/* show page styles */
+
+article.recipe-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+article.recipe-info div.recipe-name-and-photo a {
+  display: block;
+}

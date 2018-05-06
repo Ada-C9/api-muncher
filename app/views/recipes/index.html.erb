@@ -1,0 +1,20 @@
+<article class="recipes-list">
+  <% if @recipes %>
+  <aside>
+    <%= paginate @recipes, window: 2, outer_window: 1 %>
+  </aside>
+
+  <ul>
+    <% @recipes.each do |recipe| %>
+    <li>
+      <img src="<%= recipe.photo_url %>" />
+      <h6><%= link_to recipe.name, recipe_path(recipe.uri_id) %></h6>
+    </li>
+    <% end %>
+  </ul>
+
+  <aside>
+    <%= paginate @recipes, window: 2, outer_window: 1 %>
+  </aside>
+  <% end %>
+</article>

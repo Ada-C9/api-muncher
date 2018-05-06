@@ -5,6 +5,10 @@ class RecipesController < ApplicationController
     # @recipe = params[:recipe]
   end
 
+  def search
+
+  end
+
   def index
     query = params[:query]
     @recipes = EdamamApiWrapper.recipe_search_result(query)
@@ -17,7 +21,8 @@ class RecipesController < ApplicationController
     end
   end
 
-  def show
-    @target_recipe = EdamamApiWrapper.specific_recipe
+  def detail
+    target_uri = params[:uri_wanted]
+    @target_recipe = EdamamApiWrapper.specific_recipe(target_uri)
   end
 end

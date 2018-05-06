@@ -9,7 +9,7 @@ class EdamamApiWrapper
 
   def self.recipe_search_result(query)
 
-    list_response = HTTParty.get("#{SEARCH_URL}q=#{query}&app_id=#{APP_ID}&app_key=#{APP_KEY}")
+    list_response = HTTParty.get("#{SEARCH_URL}q=#{query}&app_id=#{APP_ID}&app_key=#{APP_KEY}&from=0&to=40")
 
     recipe_list = []
 
@@ -26,9 +26,9 @@ class EdamamApiWrapper
 
   end
 
-  def self.specific_recipe
+  def self.specific_recipe(target_uri)
 
-    form_encoded_recipe_URI = CGI::escape(@recipe.uri)
+    form_encoded_recipe_URI = CGI::escape(target_uri)
     recipe_response = HTTParty.get("#{SEARCH_URL}app_id=#{APP_ID}&app_key=#{APP_KEY}&r=#{form_encoded_recipe_URI}")
 
     if !recipe_response.empty?

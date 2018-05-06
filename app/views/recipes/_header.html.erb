@@ -1,7 +1,7 @@
 <header class="page-header">
   <h1><%= link_to "MUNCHER", root_path %></h1>
   <%= render partial: "flash" %>
-  
+
   <section class="search-container">
     <%= form_tag(recipes_path, method: :get) do %>
       <input id="term" name="term" type="text" placeholder="🔍" list="terms" class="search-box" />
@@ -15,12 +15,5 @@
       <%= submit_tag 'Search', class: "button" %>
     <% end %>
   </section>
-  <div class="account-buttons">
-    <% if @login_user %>
-    <%= link_to "Favorites", favorite_recipes_path, method: :get, class: "button" %>
-    <%= link_to "Log Out", logout_path, method: :delete, class: "button" %>
-    <% else %>
-    <%= link_to "Login with Amazon", amazon_login_path, class: "button" %>
-    <% end %>
-  </div>
+  <%= render partial: "buttons" %>
 </header>

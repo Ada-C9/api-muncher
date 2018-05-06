@@ -23,7 +23,7 @@ class Recipe
       uri: raw_recipe['uri'],
       ingredients: raw_recipe['ingredientLines'],
       image: raw_recipe['image'],
-      dietary_info: raw_recipe['totalNutrients'],
+      dietary_info: (raw_recipe['dietLabels'] + raw_recipe['healthLabels']),
       url: raw_recipe['url']
     )
   end

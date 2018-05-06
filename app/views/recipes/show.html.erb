@@ -1,5 +1,29 @@
 <%= render partial: 'shared/search' %>
 
-<%= image_tag @recipe.image %>
-<%= @recipe.name %>
-<%= link_to 'See Recipe', @recipe.url, target: :_blank %>
+  <div class="cell" id='recipe-info'>
+    <h3 class='cell'> <strong> <%= @recipe.name %> </strong> </h3>
+    <p class='cell'> <%= link_to 'See Recipe', @recipe.url, target: :_blank %> </p>
+  </div>
+
+
+
+<div class="recipe-image cell small-12 medium-6 large-4 large-offset-1">
+  <%= image_tag @recipe.image %>
+</div>
+
+
+<section class='grid-container'>
+  <div class="grid-x grid-margin-x">
+    <h4 class='cell'> <strong> Ingredients: </strong> </h4>
+    <% @recipe.ingredients.each do |line| %>
+      <p><%= line %></p>
+    <% end %>
+  </div>
+</section>
+
+<section id='dietary-info' class='cell'>
+  <h4> <strong> Dietary & Health Labels: </strong> </h4>
+  <% @recipe.dietary_info.each do |info| %>
+    <p><%= info %></p>
+  <% end %>
+</section>

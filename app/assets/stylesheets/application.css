@@ -30,6 +30,13 @@
   text-align: right;
 }
 
+form#search-bar {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  padding-right: 3vw;
+  padding-left: 3vw;
+}
+
 .card {
   min-width: 300px;
   max-width: 300px;
@@ -49,4 +56,19 @@
 
 .pagination > a:hover {
   background-color: rgb(215, 232, 194);
+}
+
+.grid-container {
+  margin-left: 3vw;
+  max-width: 40vw;
+}
+
+div#recipe-info {
+  text-align: center;
+  margin-bottom: 2vh;
+  margin-left: 5vw;
+}
+
+#dietary-info {
+  margin-left: 5vw;
 }

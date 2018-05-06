@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title><%= content_for?(:title) ? yield(:title) : "Boka" %></title>
+    <link href="https://fonts.googleapis.com/css?family=Domine" rel="stylesheet">
+    <title><%= content_for?(:title) ? yield(:title) : "Octo-Muncher" %></title>
 
     <script src="https://developer.edamam.com/attribution/badge.js"></script>
 
@@ -15,6 +15,10 @@
 
   <body>
     <header>
+      <nav class='top-bar'>
+        <span>Octo-Muncher</span>
+        <%= 'Login' %>
+      </nav>
     </header>
 
     <main class='grid-x grid-margin-x'>

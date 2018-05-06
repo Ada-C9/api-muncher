@@ -51,3 +51,24 @@ input[type=submit] {
 .index-search {
   margin-bottom: 60px;
 }
+
+.recipe-details {
+  display: flex;
+}
+
+.recipe-details section {
+  padding: 70px 20px;
+}
+
+.ingredients, .labels {
+  list-style-type: circle;
+}
+
+.label-section {
+  padding-left: 30px;
+  padding-bottom: 40px;
+}
+
+.label-section section {
+  padding-bottom: 20px;
+}

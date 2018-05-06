@@ -1,5 +1,5 @@
 class Recipe
-  attr_reader :name, :id, :image, :contributor, :ingredients, :dietary_labels, :health_labels
+  attr_reader :name, :id, :image, :contributor, :ingredients, :dietary_labels, :health_labels, :url
 
   def initialize(recipe)
     @id = recipe["uri"].partition('_').last
@@ -9,5 +9,6 @@ class Recipe
     @ingredients = recipe["ingredientLines"]
     @dietary_labels = recipe["dietLabels"]
     @health_labels = recipe["healthLabels"]
+    @url = recipe["url"]
   end
 end

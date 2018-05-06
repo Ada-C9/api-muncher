@@ -5,7 +5,7 @@
       <% @recipe_list.each do |recipe| %>
         <li>
           <%= link_to recipe.label, recipe_details_path(recipe) %>
-          <%= recipe.image %>
+          <%= image_tag("#{recipe.image}")  %>
         </li>
       <% end %>
     </ul>

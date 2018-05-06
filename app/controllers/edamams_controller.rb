@@ -1,11 +1,11 @@
 class EdamamsController < ApplicationController
 
   def index
-
+    @recipe_list = RecipeApiWrapper.recipes(params[:recipe])
   end
 
   def new
-    @recipe_list = RecipeApiWrapper.recipes(params[:recipe])
+    @search_for = params[:recipe]
   end
 
   def show

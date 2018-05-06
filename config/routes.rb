@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  
-  get ':recipe/new', to: 'recipe#new', as: 'recipe_list'
-  get ':recipe/show', to: 'recipe#show', as: 'recipe_details'
+  root 'edamams#new'
+  get '/recipe/new', to: 'edamams#new'
+  get '/recipe/index', to: 'edamams#index', as: 'recipe_list'
+  get '/recipe/show', to: 'edamams#show', as: 'recipe_details'
 
 
 

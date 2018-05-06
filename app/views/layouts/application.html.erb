@@ -21,7 +21,7 @@
     <div class="top-bar" id="responsive-menu">
       <div class="top-bar-left">
         <ul class="dropdown menu" data-dropdown-menu>
-          <li class="menu-text">Muncher</li>
+          <li class="menu-text"><%=link_to "Muncher", root_path%></li>
 
           <!-- TODO: Enable last seacrhes (create method to store it and create an About page.) -->
           <!-- <li class="has-submenu">
@@ -42,7 +42,7 @@
         <ul class="menu">
           <li><%= form_tag search_results_path, method: :get, class: "menu" do %></li>
           <li><%= text_field_tag :query, params[:query], type: 'search', placeholder: 'Find recipe' %></li>
-          <li><%= submit_tag "Search", type: 'button', class: 'button' %></li>
+          <li><%= submit_tag "Search", class: 'button' %></li>
           <% end %>
         </ul>
       </div>

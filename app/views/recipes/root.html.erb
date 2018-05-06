@@ -7,7 +7,7 @@
         <h3>Find your flavor...</h3>
         <%= form_tag search_results_path, method: :get do %>
           <%= text_field_tag :query, params[:query], type: 'search', placeholder: 'Find recipe' %>
-        <%= submit_tag "Search", type: 'button', class: 'button' %>
+        <%= submit_tag "Search", class: 'button' %>
         <% end %>
     </div>
 

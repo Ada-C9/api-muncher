@@ -1,7 +1,13 @@
 require "test_helper"
 
-describe RecipeController do
-  # it "must be a real test" do
-  #   flunk "Need real tests"
+describe RecipesController do
+
+  it "can get the search path" do
+    get search_path  
+    must_respond_with :ok
+  end
+
+  # it "can get the recipes index" do
   # end
+
 end

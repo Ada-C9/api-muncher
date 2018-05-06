@@ -3,13 +3,9 @@ require 'httparty'
 class MuncherApiWrapper
   BASE_URL = "https://api.edamam.com/search"
   BASE_SEARCH = "http://www.edamam.com/ontologies/edamam.owl#recipe_"
-  APP_ID = ENV["MUNCHER_APP_ID"]
-  APP_KEY = ENV["MUNCHER_APP_KEY"]
+  APP_ID = ENV["APP_ID"]
+  APP_KEY = ENV["APP_KEY"]
   RESULTS = 80
-
-  def self.create_recipe(api_params)
-    return Recipe.new(api_params["label"])
-  end
 
   def self.list_recipes(terms)
     url = "#{BASE_URL}?q=#{terms}&to=#{RESULTS}&app_id=#{APP_ID}&app_key=#{APP_KEY}"
@@ -34,8 +30,6 @@ class MuncherApiWrapper
     return recipe_list
   end
 
-  # doesn't work bc recipe needs to be the muncher r key
-  # need to store this as an instance variable of the recipe
   def self.show_recipe(id)
     url = "#{BASE_URL}?r=#{BASE_SEARCH + id}&app_id=#{APP_ID}&app_key=#{APP_KEY}"
 

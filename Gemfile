@@ -72,8 +72,11 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'jquery-turbolinks'
 gem 'jquery-rails'
 gem 'normalize-rails'
+
 group :development, :test do
   gem 'pry-rails'
+  gem 'minitest-vcr'
+  gem 'webmock'
 end
 
 group :development do

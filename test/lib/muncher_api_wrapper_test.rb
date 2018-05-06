@@ -1,4 +1,6 @@
 require 'test_helper'
+require 'httparty'
+
 
 describe MuncherApiWrapper do
   describe 'list_recipes(terms)' do
@@ -77,11 +79,41 @@ describe MuncherApiWrapper do
 
     it 'returns nil when you send a blank id' do
       VCR.use_cassette('chicken') do
-        recipe_list = MuncherApiWrapper.list_recipes("chicken")
+
         id = " "
 
         recipe = MuncherApiWrapper.show_recipe(id)
         recipe.must_equal nil
+      end
+    end
+  end
+
+  describe '.get_ingredients' do
+    it 'gets the ingredients appropriately' do
+      VCR.use_cassette('chicken') do
+        url = "https://api.edamam.com/search?r=http://www.edamam.com/ontologies/edamam.owl#recipe_888e9fc4a808e9e4ccdb2ac24a6a2f46&app_id=#{ENV["APP_ID"]}&app_key=#{ENV["APP_KEY"]}"
+
+        escaped = URI.escape(url)
+        response = HTTParty.get(escaped)
+
+        recipe = MuncherApiWrapper.show_recipe("888e9fc4a808e9e4ccdb2ac24a6a2f46")
+
+        MuncherApiWrapper.get_ingredients(response[0]).must_equal recipe.ingredients
+      end
+    end
+  end
+
+  describe '.get_nutrition_info' do
+    it 'gets the nutrition info appropriately' do
+      VCR.use_cassette('chicken') do
+        url = "https://api.edamam.com/search?r=http://www.edamam.com/ontologies/edamam.owl#recipe_888e9fc4a808e9e4ccdb2ac24a6a2f46&app_id=#{ENV["APP_ID"]}&app_key=#{ENV["APP_KEY"]}"
+
+        escaped = URI.escape(url)
+        response = HTTParty.get(escaped)
+
+        recipe = MuncherApiWrapper.show_recipe("888e9fc4a808e9e4ccdb2ac24a6a2f46")
+
+        MuncherApiWrapper.get_nutrition_info(response[0]).must_equal recipe.nutrition_info
       end
     end
   end

@@ -39,7 +39,7 @@ describe RecipesController do
 
     it "can't get the recipe's info and redirects with invalid id" do
       VCR.use_cassette("chicken") do
-        recipe_list = MuncherApiWrapper.list_recipes("id" => "chicken")
+        recipe_list = MuncherApiWrapper.list_recipes("chicken")
         id = recipe_list.first[:id] + "abc"
 
         get recipe_path(id)

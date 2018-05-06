@@ -4,12 +4,13 @@ require 'httparty'
 class RecipeApiWrapper
   class RecipeError < StandardError; end
 
-  def self.recipes(user_query)
-    token_id = ENV["wolverine"]
-    token_key = ENV["storm"]
-    BASE_URL =  https://api.edamam.com/search?q=
+  TOKEN_ID = ENV["wolverine"]
+  TOKEN_KEY = ENV["storm"]
+  BASE_URL = "https://api.edamam.com/search?q="
 
-    url = URI.encode(BASE_URL + "#{user_query}" + "&app_id" + token_id + "&app_key" + token_key)
+  def self.recipes(user_query)
+
+    url = URI.encode("#{BASE_URL}#{user_query}&app_id=#{TOKEN_ID}&app_key=#{TOKEN_KEY}")
 
     response = HTTParty.get(url).parsed_response
 
@@ -17,7 +18,7 @@ class RecipeApiWrapper
     raise_on_error(response)
 
     return response["hits"].map do |raw_recipe|
-      Recipe.from_api(raw_recipe)
+      Recipe.from_api(raw_recipe["recipe"])
     end
   end
 
@@ -40,7 +41,7 @@ class RecipeApiWrapper
   def self.raise_on_error(response)
     # this needs to be changed based on the api
     unless response["more"]
-      raise SlackError.new(response["error"])
+      raise RecipeError.new(response["error"])
     end
   end
 end

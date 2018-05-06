@@ -69,7 +69,7 @@ $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #613A43,
+  primary: #008080,
   secondary: #767676,
   success: #3adb76,
   warning: #ffae00,
@@ -279,11 +279,10 @@ $breadcrumbs-item-separator-color: $medium-gray;
 // ----------
 
 $button-font-family: inherit;
-$button-padding: 0.85em 1em;
+$button-padding: 0 0.25em 0 0.25em;
 $button-margin: 0 0 $global-margin 0;
-$button-fill: solid;
-$button-background: $primary-color;
-$button-background-hover: scale-color($button-background, $lightness: -15%);
+$button-fill: hallow;
+$button-background: $white;
 $button-color: $white;
 $button-color-alt: $black;
 $button-radius: $global-radius;

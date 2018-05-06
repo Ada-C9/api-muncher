@@ -4,9 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 
-    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+    <title>The Kitchen</title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
@@ -20,14 +20,22 @@
 
     <header>
       <div>
-        <%= form_for :search, url: index_path do |f| %>
-          <%= f.search_field :terms, placeholder: "Enter food..." %>
-          <%= f.submit "Submit", class: "button" %>
+        <%= form_for(:search, url:{:controller=>'recipes', :action=>'index'}, html:{:class =>'form-inline', :method=>'get'}) do |f| %>
+          <div class="form-fields">
+            <%= f.search_field :terms, placeholder: "Enter dish or ingredient..." %>
+            <%= f.button fa_icon("utensils"), class: "button", id: "search-button" %>
+          </div>
         <% end %>
       </div>
     </header>
 
     <%= yield %>
+
+    <footer>
+      <div>
+        <%= link_to("POWERED BY EDMAM", "https://developer.edamam.com/") %>
+      </div>
+    </footer>
 
   </body>
 </html>

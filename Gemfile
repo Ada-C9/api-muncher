@@ -39,8 +39,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'foundation-rails'
 gem 'autoprefixer-rails'
 
+gem "font-awesome-rails"
 gem 'will_paginate'
-
 gem 'httparty'
 
 group :development, :test do

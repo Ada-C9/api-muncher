@@ -18,14 +18,18 @@ class MuncherApiWrapper
     response = HTTParty.get(escaped)
 
     recipe_list = []
-    response["hits"].each do |r|
-      label_uri_image = {}
-      label_uri_image[:label] = r["recipe"]["label"]
-      # #recipe_ always has to be last # delimited item in uri otherwise this breaks
-      label_uri_image[:id] = r["recipe"]["uri"].split("#recipe_")[-1]
-      label_uri_image[:image] = r["recipe"]["image"]
+    if response["hits"].nil?
+      return recipe_list
+    else
+      response["hits"].each do |r|
+        label_uri_image = {}
+        label_uri_image[:label] = r["recipe"]["label"]
+        # #recipe_ always has to be last # delimited item in uri otherwise this breaks
+        label_uri_image[:id] = r["recipe"]["uri"].split("#recipe_")[-1]
+        label_uri_image[:image] = r["recipe"]["image"]
 
-      recipe_list << label_uri_image
+        recipe_list << label_uri_image
+      end
     end
     return recipe_list
   end

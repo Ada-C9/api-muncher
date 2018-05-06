@@ -3,6 +3,7 @@ class RecipesController < ApplicationController
   def index
     terms = search_params["terms"]
     list = MuncherApiWrapper.list_recipes(terms)
+    x = MuncherApiWrapper.list_recipes(terms).uniq
     @recipe_list = list.paginate(:page => params[:page], :per_page => 8)
   end
 

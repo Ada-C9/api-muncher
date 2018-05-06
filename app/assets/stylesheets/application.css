@@ -22,6 +22,8 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .index div {
@@ -30,7 +32,7 @@
 
 .index img, .big-image img {
   border-radius: 5px;
-  border: 3px solid #613A43;
+  border: 3px solid #008080;
 }
 
 .index div p {
@@ -44,11 +46,38 @@
 }
 
 header {
-  border-bottom: 8px solid #613A43;
+  border-bottom: 8px solid #008080;
+}
+
+footer {
+  border-top: 8px solid #008080;
   margin-bottom: 30px;
+}
+
+footer div {
+  padding: 10px;
+  text-align: center;
 }
 
 body {
   margin: 3em;
-  font-family: 'Comfortaa', cursive;
+  color: #008080;
+  font-family: 'Poppins', sans-serif;
+}
+
+#search-button {
+  color: #008080;
+  font-size: 1.75em;
+}
+
+.form-fields {
+  display: flex;
+}
+
+.pagination {
+  text-align:center;
+}
+
+.pagination a {
+  display: inline-block;
 }

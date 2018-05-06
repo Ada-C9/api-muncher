@@ -40,3 +40,7 @@
 .button:hover {
   background-color: #A09B6D;
 }
+
+.footer {
+  flex-shrink: 0;
+}

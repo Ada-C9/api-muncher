@@ -10,12 +10,15 @@
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
-  <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700,900|Francois+One|Metal+Mania|Pangolin|Prompt" rel="stylesheet">
+    <script src="https://developer.edamam.com/attribution/badge.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700,900|Francois+One|Metal+Mania|Pangolin|Prompt" rel="stylesheet">
   </head>
 
   <body>
 
     <%= yield %>
-
+  <footer class="footer">
+    <div id="edamam-badge" data-color="white"></div>
+  </footer>
   </body>
 </html>

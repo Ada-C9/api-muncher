@@ -1,0 +1,24 @@
+
+<div class= "index_container">
+<h2 class="results">Results for "<%= params[:query].capitalize %>"</h2>
+
+<article class="row small-up-3 medium-up-3 large-up-4">
+<ul class="recipecontainer">
+  <% @recipes.each do |recipe| %>
+  <section class="column">
+    <li class="recipe">
+    <%=link_to recipe_path(:label=>recipe.name,:uri => recipe.uri) do %>
+    <%= image_tag recipe.image %>
+    <% end %>
+
+<br><div class="name">
+    <%= link_to recipe.name, recipe_path(:label=>recipe.name,:uri => recipe.uri) %>
+</li>
+  </section>
+  <% end %>
+</ul>
+</article>
+
+<section class="row">
+  <%= will_paginate @recipes, class: "row" %>
+</section>

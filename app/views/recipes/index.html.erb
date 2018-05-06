@@ -2,5 +2,5 @@
 
 <% @recipes.each do |recipe| %>
 <%=image_tag(recipe.image)%>
-<%=link_to(recipe.label, recipe_path(:uri => "uri"))%>
+<%=link_to(recipe.label, recipe_path(:uri => "uri"), action: "show", method: :get)%>
 <% end %>

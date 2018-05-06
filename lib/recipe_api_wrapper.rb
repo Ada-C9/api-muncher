@@ -3,31 +3,36 @@ require 'pry'
 
 class RecipeApiWrapper
 	class EdamamError < StandardError; end
-	BASE_URL = "https://api.edamam.com/search?q="
+	BASE_URL = "https://api.edamam.com/"
 	ID = ENV["EDAMAM_ID"]
 	KEY = ENV["EDAMAM_KEY"]
 
 	def self.list_recipes(query)
-		encoded_uri = URI.encode(BASE_URL + query + "&app_id=#{ID}" + "&app_key=#{KEY}")
+		encoded_uri = URI.encode(BASE_URL + "search?q=" + query + "&app_id=#{ID}" + "&app_key=#{KEY}")
 
 		response = HTTParty.get(encoded_uri).parsed_response
 
-		hits = response["hits"]
+		recipe_response = response["hits"]
 
 		# raise_on_error(response)
-
-		return hits.map do |raw_hit|
-			Recipe.from_api(raw_hit)
+		return recipe_response.map do |raw_recipe|
+			Recipe.new(raw_recipe)
 		end
+		# return hits.map do |raw_hit|
+			# from_api(raw_hit)
+		# end
+
+		# Recipe.new(hits)
 	end
 
-	def self.get_details
+	def self.get_details(recipe_uri)
+		base = URI.encode("http://www.edamam.com/ontologies/edamam.owl#recipe_")
 
-		url = "https://api.edamam.com" + "&app_id=#{ID}" + "&app_key=#{KEY}"
+		url = base + recipe_uri + "&app_id=#{ID}" + "&app_key=#{KEY}"
 
 		response = HTTParty.get(url).parsed_response
 
-		recipe = response["hits"]["recipe"]
+		return Recipe.new(response)
 	end
 
 	private

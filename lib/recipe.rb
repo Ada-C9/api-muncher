@@ -1,18 +1,24 @@
 class Recipe
 
 	# this is a factory method. Keeps code dry and isolates dependencies
-	attr_reader :image, :label
+	attr_reader :image, :label, :url, :uri, :ingredients, :healthlabels
 
-	def initialize(image, label)
-		@image = image
-		@label = label
-	end
+	def initialize(recipe_response)
+		if recipe_response.nil? || recipe_response.empty?
+			raise ArgumentError.new("")
+		end
 
-	# if not nil, should return list of recipes
-	def self.from_api(raw_hit)
-		self.new(
-			raw_hit["recipe"]["image"],
-			raw_hit["recipe"]["label"]
-		)
+		@uri = recipe_response["recipe"]["uri"]
+		@label = recipe_response["recipe"]["label"]
+		@image = recipe_response["recipe"]["image"]
+		@url = recipe_response["recipe"]["url"]
+		@ingredients = recipe_response["recipe"]["healthlabels"]
+
+		# def self.from_api(raw_hit)
+		# 	self.new(
+		# 		raw_hit["recipe"]["image"],
+		# 		raw_hit["recipe"]["label"]
+		# 	)
+		# end
 	end
 end

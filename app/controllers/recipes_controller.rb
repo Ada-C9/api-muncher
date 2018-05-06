@@ -10,8 +10,9 @@ class RecipesController < ApplicationController
 	end
 
 	def show
-		uid = params[:uid]
-	
-		@recipe = RecipeApiWrapper.get_details(uid)
+		uri = params[:uri]
+
+		@recipe = RecipeApiWrapper.get_details(uri)
+		raise
 	end
 end

@@ -5,7 +5,7 @@ class Recipe
 
 	def initialize(recipe_response)
 		if recipe_response.nil? || recipe_response.empty?
-			raise ArgumentError.new("")
+			raise ArgumentError.new("Oops, this is embarrasing. We can't find the data you're looking for.")
 		end
 
 		@uri = recipe_response["recipe"]["uri"]
@@ -16,8 +16,11 @@ class Recipe
 
 		# def self.from_api(raw_hit)
 		# 	self.new(
+		# 		raw_hit["recipe"]["uri"],
+		# 		raw_hit["recipe"]["label"],
 		# 		raw_hit["recipe"]["image"],
-		# 		raw_hit["recipe"]["label"]
+		# 		raw_hit["recipe"]["url"],
+		# 		raw_hit["recipe"]["healthlabels"]
 		# 	)
 		# end
 	end

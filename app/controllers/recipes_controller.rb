@@ -13,6 +13,5 @@ class RecipesController < ApplicationController
 		uri = params[:uri]
 
 		@recipe = RecipeApiWrapper.get_details(uri)
-		raise
 	end
 end

@@ -2572,3 +2572,42 @@ Processing by RecipesController#show as HTML
 Completed 200 OK in 801ms (Views: 188.5ms)
 
 
+Started GET "/recipe?uri=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_7d1c9d25785b9499725f77ba8153d890" for 127.0.0.1 at 2018-05-05 17:14:56 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"uri"=>"http://www.edamam.com/ontologies/edamam.owl#recipe_7d1c9d25785b9499725f77ba8153d890"}
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 1782ms (Views: 916.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-05 17:15:04 -0700
+Processing by RecipesController#search as HTML
+  Rendering recipes/search.html.erb within layouts/application
+  Rendered recipes/search.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 123ms (Views: 120.7ms)
+
+
+Started GET "/index?utf8=%E2%9C%93&query=cucumber&commit=Search" for 127.0.0.1 at 2018-05-05 17:15:14 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"cucumber", "commit"=>"Search"}
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 1288ms (Views: 151.3ms)
+
+
+Started GET "/search?commit=Search&page=2&query=cucumber&utf8=%E2%9C%93" for 127.0.0.1 at 2018-05-05 17:15:20 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"commit"=>"Search", "page"=>"2", "query"=>"cucumber", "utf8"=>"✓"}
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 1517ms (Views: 163.4ms)
+
+
+Started GET "/search?commit=Search&page=2&query=cucumber&utf8=%E2%9C%93" for 127.0.0.1 at 2018-05-05 17:17:03 -0700
+Processing by RecipesController#index as HTML
+  Parameters: {"commit"=>"Search", "page"=>"2", "query"=>"cucumber", "utf8"=>"✓"}
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 1392ms (Views: 197.8ms)
+
+

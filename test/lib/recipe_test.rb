@@ -20,7 +20,9 @@ describe Recipe do
       ],
       "healthLabels" => [
         "Sugar-Conscious",
-        "Peanut-Free"]
+        "Peanut-Free"
+      ],
+      "url" => "http://www.davidlebovitz.com/2012/12/chicken-teriyaki-recipe-japanese-farm-food/"
     }
 
     @new_recipe = Recipe.new(recipe)
@@ -49,5 +51,6 @@ describe Recipe do
       "Sugar-Conscious",
       "Peanut-Free"
     ]
+    @new_recipe.url.must_equal "http://www.davidlebovitz.com/2012/12/chicken-teriyaki-recipe-japanese-farm-food/"
   end
 end

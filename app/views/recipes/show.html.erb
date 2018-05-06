@@ -57,6 +57,11 @@
 
     <section>
       <h4>Health Labels</h4>
+      <% if @recipe.health_labels.empty? %>
+      <p>
+        None
+      </p>
+      <% else %>
       <ul class="labels">
         <% @recipe.health_labels.each do |label| %>
         <li>
@@ -64,6 +69,7 @@
         </li>
         <% end %>
       </ul>
+      <% end %>
     </section>
 
     <button type="button" class="success button"><%= link_to "Read Recipe", @recipe.url,  target: :_blank %></button>

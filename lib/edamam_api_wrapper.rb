@@ -15,12 +15,13 @@ class EdamamApiWrapper
 
     if list_response["hits"]
       list_response["hits"].each do |hit|
-        @recipe =  Recipe.new(hit["recipe"]["label"], hit["recipe"]["image"], hit["recipe"]["uri"], hit["recipe"]["url"], hit["recipe"]["source"], hit["recipe"]["ingredientLines"], hit["recipe"]["dietLabels"] )
+        @recipe =  Recipe.new(hit["recipe"]["label"], hit["recipe"]["image"], hit["recipe"]["uri"], hit["recipe"]["source"], hit["recipe"]["url"], hit["recipe"]["ingredientLines"], hit["recipe"]["dietLabels"])
         recipe_list << @recipe
       end
     else
       return []
     end
+
     return recipe_list
 
   end

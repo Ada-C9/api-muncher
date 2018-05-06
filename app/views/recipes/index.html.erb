@@ -1,17 +1,13 @@
 <section class="recipes-list">
-  <h3>Recipes</h3>
-  <% if @recipes %>
+  <h3>Recipes </h3>
   <div class="grid-x grid-padding-x align-center">
-    <ul>
+
+    <% if @recipes %>
       <% @recipes.each do |recipe| %>
-      <li>
-        <!-- make the label a link_to show page -->
         <%= image_url(recipe) %>
-        <%= link_to recipe.label, recipe_path(recipe.get_id) %>
+        <%= link_to recipe.name, recipe_path(recipe.get_id) %>
         <%= recipe.uri %>
-      </li>
       <% end %>
-    </ul>
+    <% end %>
   </div>
-  <% end %>
 </section>

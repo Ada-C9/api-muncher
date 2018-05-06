@@ -15,7 +15,10 @@ class RecipesController < ApplicationController
   end
 
   def show
-    @recipe = MuncherApiWrapper.show_recipe(params[:id])
+    @recipe = MuncherApiWrapper.show_recipe(params[:format])
+    if !@recipe
+      redirect_to root_path
+    end
   end
 
 end

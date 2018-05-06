@@ -1,12 +1,25 @@
 <section class="recipe-show-page">
-  <h3><%= @recipe.label %></h3>
+  <h3><%= @recipe.name %></h3>
   <%= image_url(@recipe) %>
   <h4>Ingredients:</h4>
   <ul>
-    <% @recipe.ingredientLines.each do |line| %>
-      <li>
-        <%= line["text"] %>
-      </li>
+    <% @recipe.ingredients.each do |line| %>
+    <li>
+      <%= line %>
+    </li>
     <% end %>
   </ul>
+
+  <h4>Dietary Info:</h4>
+  <ul>
+    <% @recipe.dietary_info.each do |line| %>
+    <li>
+      <%= line %>
+    </li>
+    <% end %>
+  </ul>
+
+  <h4>See Full Recipe: </h4>
+  <%= link_to @recipe.url, @recipe.url %>
+
 </section>

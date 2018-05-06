@@ -4,13 +4,31 @@ describe EdamamApiWrapper do
 
   describe 'list_recipes' do
 
-    it 'gives a list of recipes' do
+    it 'gives a list of recipes for an appropriate search' do
       VCR.use_cassette('recipes') do
         recipes = EdamamApiWrapper.list_recipes('ceviche')
 
         recipes.each do |recipe|
           recipe.must_be_kind_of Recipe
         end
+      end
+    end # it do
+
+    it 'returns an empty array for a blank search' do
+      VCR.use_cassette('recipes') do
+        recipes = EdamamApiWrapper.list_recipes('')
+
+        recipes.must_be_kind_of Array
+        recipes.must_be :empty?
+      end
+    end # it do
+
+    it 'returns an empty array for a bad search' do
+      VCR.use_cassette('recipes') do
+        recipes = EdamamApiWrapper.list_recipes('xxxxxxxxxxxxxxxxx')
+
+        recipes.must_be_kind_of Array
+        recipes.must_be :empty?
       end
     end # it do
 

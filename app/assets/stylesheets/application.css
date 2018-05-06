@@ -248,6 +248,7 @@ form {
 
   @media screen and (min-width: 780px) {
     aside.search, section.search {
+      position: relative
       padding: auto;
       display: block
     }
@@ -304,5 +305,15 @@ form {
 
     span.page {
       display: block;
+    }
+
+    form {
+      position: relative;
+      padding: 5vh 5vw;
+    }
+
+    section.content {
+      border-top: dotted 3px whitesmoke;
+      padding: 0 5vw;
     }
   }

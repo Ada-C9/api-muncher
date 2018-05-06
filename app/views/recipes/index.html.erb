@@ -1,13 +1,21 @@
 <section class="recipes-list">
   <h3>Recipes </h3>
-  <div class="grid-x grid-padding-x align-center">
 
-    <% if @recipes %>
-      <% @recipes.each do |recipe| %>
+  <% if @recipes %>
+  <ul class="grid-x">
+    <% @recipes.each do |recipe| %>
+    <li class="thumbnail">
+      <div class="image">
         <%= image_url(recipe) %>
-        <%= link_to recipe.name, recipe_path(recipe.get_id) %>
-      <% end %>
+      </div>
+      <div class="caption">
+        <h5><%= link_to recipe.name, recipe_path(recipe.get_id) %></h5>
+      </div>
+    </li>
     <% end %>
-  </div>
+    <% end %>
+  </ul>
 </section>
+<div class="recipe-pagination">
 <%= will_paginate @recipes %>
+</div>

@@ -12,7 +12,7 @@ class EdamamApiWrapper
 
 	def self.search_recipes(query_text, from, diet: nil)
 		response = HTTParty.get(build_url_for_search(query_text, from, diet))
-		return { # TODO: better to make this a class?
+		return {
 			recipes: build_recipes(response),
 			max_pages: get_max_page_count(response)
 		}
@@ -38,9 +38,6 @@ class EdamamApiWrapper
 		return total_pages > MAX_ALLOWABLE_PAGES ? MAX_ALLOWABLE_PAGES : total_pages
 	end
 
-	# QUESTION: Do to and from have to come together? Are there any rules about
-	# their relationship with each other.
-
 	def self.build_url_for_search(query_text, from, diet)
 		build_url = get_search_base_url(query_text)
 		add_from_to_url(from, build_url)
@@ -55,7 +52,6 @@ class EdamamApiWrapper
 	def self.get_find_recipe_base_url(recipe_uri)
 		return get_base_url("r=#{recipe_uri}")
 	end
-
 
 	def self.get_base_url(input)
 		return "#{URL}#{input}&app_id=#{APP_ID}&app_key=#{APP_KEY}"

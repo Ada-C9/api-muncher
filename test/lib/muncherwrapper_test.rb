@@ -23,7 +23,6 @@ describe MuncherWrapper do
 
     it "will show one recipe" do
 
-
       VCR.use_cassette("show_recipe") do
 
         recipe = MuncherWrapper.get_recipes("ube").first

@@ -1,0 +1,6 @@
+<%= form_tag recipes_path(@recipes), method: "get" do %>
+  <%= label_tag(:query, "Featured Ingredient") %>
+  <%= text_field_tag(:query) %>
+  <%= submit_tag("Search") %>
+
+<% end %>

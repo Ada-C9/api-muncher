@@ -9,6 +9,7 @@
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+    <script src="https://developer.edamam.com/attribution/badge.js"></script>
   </head>
   <header>
     <%= link_to(image_tag("logo.jpg", alt: "Site logo"), "/" , class: "logo") %>
@@ -27,6 +28,7 @@
 
     <%= yield %>
     <footer>
+      <div id="edamam-badge" data-color="white"></div>
     </footer>
   </body>
 </html>

@@ -101,7 +101,8 @@ li.small.medium {
 }
 
 .recipe {
-  padding: 50px;
+  padding-left: 50px;
+  padding-top: 50px;
 }
 
 .recipe ul li {
@@ -113,4 +114,18 @@ li.small.medium {
 
   li.small.medium a:hover {
     color: rgb(59, 137, 39);
+  }
+
+  .button {
+    margin-left: 50px;
+    background: rgb(143,199,72);
+  }
+
+  .button:hover {
+    background: rgb(59, 137, 39);
+  }
+
+  #edamam-badge {
+    display: flex;
+    justify-content: center;
   }

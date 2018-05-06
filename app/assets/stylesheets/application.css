@@ -34,27 +34,39 @@
   background-color: white;
   color: #e60000;
   font-weight: bold;
-    /* border-color: white; */
-    border: solid 1.5px white;
+  /* border-color: white; */
+  border: solid 1.5px white;
 }
+
+.top-bar-right .button:hover {
+  background-color: #e60000;
+  color: white;
+  border: solid 1.5px  white;
+}
+.button:hover {
+  background-color: white;
+  color: #e60000;
+  border: solid 1px #e60000;
+}
+
 
 .button {
   background-color:  #e60000;
   color: white;
   font-weight: bold;
-    /* border-color: white; */
-    /* border: solid 1.5px white; */
+  /* border-color: white; */
+  /* border: solid 1.5px white; */
 }
 
 .index {
-padding: 5%;
+  padding: 5%;
 }
 
 .root {
   padding: 30%;
   padding-top: 5%;
   padding-bottom: 5%;
-text-align: center;
+  text-align: center;
 }
 
 .home-img {
@@ -69,6 +81,18 @@ text-align: center;
 a {
   color: #e60000;
 }
+
+a:hover {
+  color: black;
+}
+
+.menu-text a{
+  color: white;
+}
+
+/* .menu-text a:hover {
+  color: black;
+} */
 
 footer {
   text-align: center;

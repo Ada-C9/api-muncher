@@ -19,7 +19,6 @@
 <%end%>
   </nav>
 
-
   <%if params[:query].nil?%>
     <body id="homepage-view">
       <h1 id="main-title">Wrapped Recipes</h1>
@@ -27,6 +26,15 @@
     <body id="search-view">
         <h1>Search Results for: <%=params[:query]%></h1>
     <%end%>
+
+    <%if flash[:message]%>
+        <% if params[:query].nil? %>
+            <h4 class="flash-messages"><%=flash[:login_required]%></h4>
+        <%else%>
+          <h4 class="flash-messages"><%=flash[:message]%></h4>
+        <%end%>
+    <%end%>
+
     <section id="search-bar">
       <%= form_tag query_results_path, method: :get do %>
         <%=text_field_tag :query%>

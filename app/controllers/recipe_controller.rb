@@ -1,4 +1,6 @@
 class RecipeController < ApplicationController
+    before_action :require_user_log_in, only: [:show]
+  #First attempt at design - is this another valid approch?
   # def new
   #   @query = "user_input"
   #   #can i update this in the form? Or do i need a seperate method?
@@ -6,8 +8,6 @@ class RecipeController < ApplicationController
   # end
 
   # def search
-  #   #should be post because we are modifiying content - despite not having a server....''
-  #   # raise
   #   @query = params["user_input"]
   #   redirect_to query_results_path(@query)
   # end
@@ -18,6 +18,13 @@ class RecipeController < ApplicationController
       @recipes = RecipeApiWrapper.limited_query(@query,params[:from],params[:to])
     else
     @recipes = RecipeApiWrapper.list_of_queried_recipes(@query)
+      if @recipes == []
+        flash[:status] = :error
+        flash[:message] = "We currently do not have any #{@query} recipes."
+      else
+        flash[:status] = :success
+        flash[:message] = "Sucecssfully found #{@query} recipes."
+      end
     end
 
   end
@@ -27,9 +34,3 @@ class RecipeController < ApplicationController
   end
 
 end
-
-
-#Questions
-#10 unsure of how restful my set up is, especially routes
-#2) attempted to build w/o new/create set up but couldn't figure out how to update new method with params info..is there a way?
-#3) how weird does this solution look?

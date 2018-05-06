@@ -21,7 +21,9 @@
  body {
    /* background-color: #130C0A; */
    text-align: center;
-   padding: 10%;
+   padding: 5%;
+   display: flex;
+   flex-direction: column;
 
  }
 
@@ -49,6 +51,9 @@
 
  .index-background {
    background-color: #E8E5E3;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
  }
 
  .results h2, a{

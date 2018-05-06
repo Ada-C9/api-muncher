@@ -1,17 +1,20 @@
 
 
-<section class="recipes-list">
-  <h1>Recipes</h1>
+<h2 class="results">Results for "<%= params[:query].capitalize %>"</h2>
 
-    <% if @recipes %>
-    <% @recipes.each do |recipe| %>
-     <%= image_tag recipe.image %>
-     <br>
-        <%= link_to recipe.name, recipe_path(:r => recipe.uri)  %>
-        <br>
+<article class="row small-up-3 medium-up-3 large-up-4">
 
+  <% @recipes.each do |recipe| %>
+  <section class="column">
+    <%=link_to recipe_path(:label=>recipe.name,:uri => recipe.uri) do %>
+    <%= image_tag recipe.image %>
     <% end %>
-    <% end %>
-    <%= will_paginate @recipe %>
 
+    <%= link_to recipe.name, recipe_path(:label=>recipe.name,:uri => recipe.uri) %>
+  </section>
+  <% end %>
+</article>
+
+<section class="row">
+  <%= will_paginate @recipes, class: "row" %>
 </section>

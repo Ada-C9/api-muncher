@@ -1,19 +1,31 @@
 require 'will_paginate/array'
+require_dependency '../../lib/edamam_api_wrapper'
+require_dependency '../../lib/recipe'
+
+
 class RecipesController < ApplicationController
+  def home; end
+    
 
   def index
-    if params[:q]
 
-      @recipes = EdamamApiWrapper.list_recipes(params[:q])
-    @recipe =  @recipes.paginate(:page => params[:page], :per_page => 5)
-
+    @query= params[:query]
+      results = EdamamApiWrapper.list_recipes(params[:query])
+    if results.empty?
+      redirect_to root_path
     else
-      redirect_to recipes_path
+      @recipes =  results.paginate(:page => params[:page], :per_page => 5)
+      return @recipes
+
     end
   end
 
   def show
-    @recipe = EdamamApiWrapper.get_recipe(params[:r])
+    @uri = params[:uri]
+    @recipe = EdamamApiWrapper.get_recipe(@uri)
+    unless @recipe
+      head :not_found
+    end
   end
 
 

@@ -4,12 +4,11 @@
 <section class="recipes-list">
   <h1>Recipe Search Result</h1>
   <% if @recipes %>
-    <% raise %>
     <ul>
       <% @recipes.each do |recipe| %>
         <li>
-          <% recipe.name %>
-          <img src= "#{recipe.image}" alt= "#{recipe.name}" >
+          <%= recipe.name %>
+          <%= image_tag(recipe.image, size: 200, alt: "#{recipe.name}") %>
         </li>
       <% end %>
     </ul>

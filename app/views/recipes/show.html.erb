@@ -1,25 +1,17 @@
 <div class="grid-container">
-	<div class="grid-y medium-grid-frame">
+	<div class="grid-y">
 	  <div class="cell shrink header">
-    	<h3><%= @recipe.name %></h3>
-			<div class="grid-container">
+    	<section class="show-name"><%= @recipe.name %></section>
+			<div class="grid-container no-extra-space">
 	      <div class="grid-x grid-margin-x">
-	        <div class="medium-4 cell medium-offset-2 large-offset-2">
-						<%= image_tag(@recipe.image, :alt => "recipe image") %>
+	        <div class="medium-4 cell medium-offset-2 large-offset-2"><%= image_tag(@recipe.image, :alt => "recipe image", :class => "stitched") %></div>
+      		<div class="medium-4 cell show-info">
+						<section class="show-subsection-title">Ingredients</section>
+		        <ul class="to-circle"><% @recipe.ingredients.each do |ingredient| %><li><%= ingredient %></li><% end %></ul>
       		</div>
-      		<div class="medium-4 cell">
-		        <ul>
-							<% @recipe.ingredients.each do |ingredient| %>
-								<li><%= ingredient %></li>
-							<% end %>
-						</ul>
-      		</div>
-		      <div class="medium-4 cell medium-offset-2 large-offset-2">
-						<ul>
-							<% @recipe.diet_labels.each do |diet_label| %>
-								<li><%= diet_label %></li>
-							<% end %>
-						</ul>
+		      <div class="medium-4 cell medium-offset-2 large-offset-2 show-info">
+						<section class="show-subsection-title">Diet Info</section>
+						<ul class="to-circle"><% @recipe.diet_labels.each do |diet_label| %><li><%= diet_label %></li><% end %></ul>
 		      </div>
 			  </div>
 			</div>

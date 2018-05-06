@@ -14,7 +14,7 @@ describe "RecipesController" do
       VCR.use_cassette("recipes") do
         RecipeSearchWrapper.search_recipes(query)
 
-        get query_recipe_path(query)
+        get query_recipe_path(query: query)
         must_respond_with :success
       end
     end

@@ -43,8 +43,13 @@ describe "RecipesController" do
       end
     end
 
-    it "raises RecipeError if the recipe uri does not exist" do
-      
+    it "it returns a RecipeError if the recipe uri does not exist" do
+      VCR.use_cassette("show") do
+        uri = "http://www.edamam.com/ontologies/edamam.owl#recipe_b79327d05b8e5b838ad6cfd9576b30b69999999"
+
+        result = RecipeSearchWrapper.find_recipe(uri)
+        result.must_be_kind_of RecipeSearchWrapper::RecipeError
+      end
     end
 
   end

@@ -41,6 +41,7 @@
           <% session[:recent_searches].each do |query| %>
             <%= query %>
           <% end %>
+        <% end %>
       </aside>
       <%= yield %>
     </main>

@@ -21,13 +21,13 @@ describe Recipe do
   end # it do
 
   it "must initialize arguments properly" do
-    recipe = Recipe.new("Fish Taco", "http://lorempixel.com/400/200/", ["tortilla", "fish"], ["gluten-free", "pescatarian"], "https://www.google.com/", "7ioe0235mxo0eio05234b63h26r2463c6")
-    recipe.name.must_equal "Fish Taco"
+    recipe = Recipe.new("Ceviche", "http://lorempixel.com/400/200/", ["tostada", "shrimp"], ["gluten-free", "pescatarian"], "https://www.google.com/", "7ioe0235mxo0eio05234b63h26r2463c6")
+    recipe.name.must_equal "Ceviche"
     recipe.photo_url.must_equal "http://lorempixel.com/400/200/"
-    recipe.ingredients.must_equal ["tortilla", "fish"]
+    recipe.ingredients.must_equal ["tostada", "shrimp"]
     recipe.dietary_labels.must_equal ["gluten-free", "pescatarian"]
     recipe.original_recipe_url.must_equal "https://www.google.com/"
     recipe.uri_id.must_equal "7ioe0235mxo0eio05234b63h26r2463c6"
-  end # it do 
+  end # it do
 
 end # Recipe

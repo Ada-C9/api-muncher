@@ -15,14 +15,6 @@ class RecipesController < ApplicationController
     results = EdamamApiWrapper.search(@query)
 
     @results = Kaminari.paginate_array(results).page(params[:page]).per(12)
-
-    if @results.length > 0
-      flash.now[:status] = :success
-      flash.now[:message] = "Found recipes for #{@query}"
-    elsif @results.length == 0
-      flash.now[:status] = :failure
-      flash.now[:message] = "Could not find recipes for #{@query}"
-    end
   end
 
   def show

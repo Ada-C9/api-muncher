@@ -16,4 +16,27 @@
  *= require_self
  *= require foundation_and_overrides
 
+
+
  */
+
+
+@import url('https://fonts.googleapis.com/css?family=Cinzel:400,700,900|Francois+One|Metal+Mania|Pangolin|Prompt');
+
+
+
+ .button {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #A09B6D
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  background-color: #55395F;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.button:hover {
+  background-color: #A09B6D;
+}

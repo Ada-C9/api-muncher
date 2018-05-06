@@ -1,3 +1,27 @@
-// Place all the styles related to the Recipes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+h1 {
+  text-align: center;
+  font-family: 'Metal Mania', cursive;
+  color: #5C0909;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Francois One', sans-serif;
+  color: #330249
+}
+
+body {
+  background-color: #6F575C;
+}
+
+.search-box {
+  color: #266015;
+}
+
+div.search-button {
+  color: #303D2E;
+}
+
+input {
+  background: #266015;
+}

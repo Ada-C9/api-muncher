@@ -1,7 +1,7 @@
 class Recipe
 
-  attr_accessor :uri
-  attr_reader :name, :image, :source, :source_url, :ingredient_lines, :diet_labels
+  # attr_accessor :uri
+  attr_reader :name, :image, :uri, :source, :source_url, :ingredient_lines, :diet_labels
 
   def initialize(name, image, uri, source, url, ingredient_lines, diet_labels )
     @name = name

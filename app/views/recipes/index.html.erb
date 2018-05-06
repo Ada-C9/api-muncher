@@ -1,7 +1,8 @@
-<h1>Recipes#index</h1>
+
 
 <section class="recipes-list">
-  <h1>Recipe Search Result</h1>
+  <h1>You have searched for <%= @query %>. </h1>
+  <h2>And now you shall reap the whirlwind.</h2>
   <% if @recipes %>
     <ul>
       <% @recipes.each do |recipe| %>
@@ -12,6 +13,7 @@
           <%= image_tag(recipe.image, size: 200, alt: "#{recipe.name}") %>
         </li>
       <% end %>
+      <%= will_paginate @recipes %>
     </ul>
   <% end %>
 </section>

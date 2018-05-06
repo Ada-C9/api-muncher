@@ -2,8 +2,6 @@ class Recipe
 
   attr_reader :label, :uri, :image, :source, :url, :ingredientLines, :totalNutrients, :healthLabels, :id
 
-
-
   def initialize(recipe)
     @label = recipe["label"]
     @uri = recipe["uri"]
@@ -11,7 +9,6 @@ class Recipe
     @url = recipe["url"]
     @source = recipe["source"]
     @ingredientLines = recipe["ingredientLines"]
-    @totalNutrients = recipe["totalNutrients"]
     @healthLabels = recipe["healthLabels"]
 
     split_uri = recipe["uri"].split("_")

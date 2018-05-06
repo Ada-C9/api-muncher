@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Lobster|Poiret+One|Shadows+Into+Light" rel="stylesheet">
+  <%=favicon_link_tag 'utensils.png', type: 'image/png'%>
+
+  <title><%= content_for?(:title) ? yield(:title) : "Munchies Finder" %></title>
+
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+  <% unless (controller_name == "recipes" && action_name == "new") %>
+  <div class = "search">
+  <%= form_tag recipe_results_path, method: "get" do %>
+    <%= label_tag(:search_phrase, "What to cook with next?") %>
+    <%= text_field_tag(:search_phrase) %>
+    <%= submit_tag("Search") %>
+  <% end %>
+  </div>
+            <% end %>
+</head>
+
+<header>
+
+</header>
+
+
+<body>
+  <section class="flash">
+    <% flash.each do |name, message| %>
+      <div class="<%= name %>"><%= message %></div>
+    <% end %>
+  </section>
+  <%= yield %>
+
+</body>
+
+<footer>
+  Powered by <img src="https://www.edamam.com/images/logo-site-header.png" alt="edamam logo"/>
+</footer>
+</html>

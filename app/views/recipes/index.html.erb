@@ -1,0 +1,20 @@
+<h1> Results for '<%= @query %>'</h1>
+
+
+<section class="grid-container">
+  <% if @recipes %>
+
+  <% @recipes.each do |recipe| %>
+  <div class="grid-item">
+  <%= link_to image_tag(recipe.image, :size => "200x200", alt:"recipe image"), recipe_show_path(recipe.id) %>
+  <p><%= link_to recipe.label, recipe_show_path(recipe.id) %></p>
+  </div>
+
+  <% end %>
+
+  <% end %>
+</section>
+
+<div class="pages">
+  <%= will_paginate @recipes, class: "page-nav row" %>
+</div>

@@ -10,7 +10,7 @@ class RecipesController < ApplicationController
 
   def index
     search_term = params[:search_term]
-    @recipes = MuncherApiWrapper.search_recipes(search_term)
+    @recipes = MuncherApiWrapper.search_recipes(search_term).paginate(:page => params[:page], :per_page => 10)
     # raise
   end
 

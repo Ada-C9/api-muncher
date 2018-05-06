@@ -6,8 +6,8 @@
       <% @recipes.each do |recipe| %>
         <%= image_url(recipe) %>
         <%= link_to recipe.name, recipe_path(recipe.get_id) %>
-        <%= recipe.uri %>
       <% end %>
     <% end %>
   </div>
 </section>
+<%= will_paginate @recipes %>

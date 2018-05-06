@@ -39,7 +39,6 @@ gem 'httparty'
 gem 'will_paginate'
 
 gem 'omniauth'
-gem 'omniauth'
 gem 'omniauth-google-oauth2'
 
 group :development, :test do

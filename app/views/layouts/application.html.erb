@@ -12,15 +12,44 @@
 
   <header>
     <!-- Menu for searching available in every page: -->
-    <h1 class="recipe-search">Muncher</h1>
 
-    <%= form_tag search_results_path, method: :get do %>
-    <%= label_tag(:query, "Enter term") %>
-    <%= text_field_tag(:query) %>
-    <%= submit_tag("Search") %>
-    <% end %>
+    <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+      <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
+      <div class="title-bar-title">Menu</div>
+    </div>
+
+    <div class="top-bar" id="responsive-menu">
+      <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li class="menu-text">Muncher</li>
+
+          <!-- TODO: Enable last seacrhes (create method to store it and create an About page.) -->
+          <!-- <li class="has-submenu">
+            <a href="#0">Previous searchs</a>
+            <ul class="submenu menu vertical" data-submenu>
+              <li><a href="#0">One</a></li>
+              <li><a href="#0">Two</a></li>
+              <li><a href="#0">Three</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#0">About</a></li> -->
+
+          <li><a href="https://developer.edamam.com/edamam-docs-recipe-api">API Source</a></li>
+        </ul>
+
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu">
+          <li><%= form_tag search_results_path, method: :get, class: "menu" do %></li>
+          <li><%= text_field_tag :query, params[:query], type: 'search', placeholder: 'Find recipe' %></li>
+          <li><%= submit_tag "search", type: 'button', class: 'button' %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+
   </header>
-
 </head>
 
 <body>
@@ -30,7 +59,7 @@
 </body>
 
 <footer>
-  <p>Powered by Edamam</p>
+  <p>Powered by <a href="https://developer.edamam.com/edamam-docs-recipe-api">Edamam</a></p>
 </footer>
 
 </html>

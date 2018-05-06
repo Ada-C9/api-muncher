@@ -21,6 +21,14 @@ body, h1, h3, h5 {
   font-family: 'Slabo 27px', serif;
 }
 
+.button {
+  background-color: darkgreen;
+}
+
+.button:hover {
+  background-color: #e69900;
+}
+
 header h1, .search-bar, #search-form, footer, #pages, #info, h3, h5 {
   display: flex;
   justify-content: center;
@@ -33,10 +41,10 @@ header {
 }
 
 footer {
-  /* margin-top: 1em; */
   padding-top: 1em;
   background-color: #c2f0c2;
 }
+
 
 #root {
   margin-top: 200px;

@@ -10,7 +10,7 @@ class Recipe
 
     @label = label
     @image = image
-    @uri = uri.split('recipe_')
+    @uri = uri.split('recipe_').last
     @url = url
     @ingredient_list = ingredient_list
     @nutrition_info = nutrition_info

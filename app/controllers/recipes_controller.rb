@@ -1,7 +1,10 @@
 class RecipesController < ApplicationController
 
   def index
-    @recipes = EdamamApiWrapper.list_recipes(params[:query])
+    recipes = EdamamApiWrapper.list_recipes(params[:query])
+
+    @recipes = Kaminari.paginate_array(recipes).page(params[:page]).per(12)
+
   end
 
   def new; end

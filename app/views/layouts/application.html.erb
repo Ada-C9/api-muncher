@@ -13,15 +13,26 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body>
+  <body class='grid-y grid-frame'>
     <header>
       <nav class='top-bar'>
-        <span>Octo-Muncher</span>
-        <% unless session[:user_id] %>
-          <%= link_to 'Login', '/auth/google_oauth2', class: 'button' %>
-        <% end %> 
+        <span><%= link_to "Octo-Muncher", root_path %></span>
+        <div class="right">
+          <% unless session[:user_id] %>
+            <%= link_to 'Login', '/auth/google_oauth2', class: 'button' %>
+          <% else %>
+            <%= link_to "Logged in as #{@logged_user.name}", user_path(@logged_user) %>
+            <%= link_to 'Logout', logout_path, class: 'button' %>
+          <% end %>
+        </div>
       </nav>
     </header>
+
+    <section>
+      <% if flash[:status] %>
+        <%= flash[:message] %>
+      <% end %>
+    </section>
 
     <main class='grid-x grid-margin-x'>
       <%= yield %>

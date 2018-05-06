@@ -1,7 +1,9 @@
 require "test_helper"
 
 describe SessionsController do
-  # it "must be a real test" do
-  #   flunk "Need real tests"
-  # end
+  describe 'create' do
+    it 'logs in a new user' do
+
+    end
+  end
 end

@@ -7,4 +7,7 @@ Rails.application.routes.draw do
   get '/recipe', to: 'recipes#show', as: 'recipe'
 
   get '/auth/google_oauth2/callback', to: 'sessions#create', as: 'auth_callback_path'
+  delete '/logout', to: 'sessions#destroy', as: 'logout'
+
+  resources :users, only: [:show, :edit, :update, :destroy]
 end

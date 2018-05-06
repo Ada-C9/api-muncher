@@ -1,0 +1,44 @@
+<h2 class="search-result-header">Recipes for <%= @query %></h2>
+
+<section class="result-container">
+  <div class="grid-container">
+    <div class="grid-x grid-margin-x">
+    <% if @recipes.nil? || @recipes.empty? %>
+    <p>None found!</p>
+    <% else %>
+      <% @recipes.each do |recipe| %>
+      <div class="cell small-4">
+        <%= link_to recipe_path(uri: recipe.uri) do %>
+        <%= image_tag recipe.image, alt: recipe.label, class: "small-img"%></br>
+        <%= recipe.label %>
+        <% end %>
+      </div>
+      <% end %>
+    <% end %>
+    </div>
+  </div>
+</section>
+<section class="page-details">
+  <div class="grid-container">
+    <div class="grid-x grid-margin-x">
+      <div class="cell small-4">
+        <% if @page > 1 %>
+        <%= link_to "<- Prev", recipes_path(q: @query, page: @page - 1) %>
+        <% else %>
+        [ first ]
+        <% end %>
+      </div>
+
+      <div class="cell small-4">
+        <%= "[ p#{@page} of #{@last_page} ]" %>
+      </div>
+      <div class="cell small-4">
+        <% if @page < @last_page %>
+        <%= link_to "Next ->", recipes_path(q: @query, page: @page + 1) %>
+        <% else %>
+        [ last ]
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>

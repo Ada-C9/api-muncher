@@ -1,0 +1,13 @@
+<section>
+  <%= form_tag("recipes/index", method: "get") do %>
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x">
+      <div class="small-10 medium-8 cell">
+        What do you want to search a recipe for?
+        <%= text_field_tag(:q) %>
+        <%= submit_tag "Search", class: "button" %>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</section>

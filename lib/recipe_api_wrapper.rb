@@ -16,10 +16,6 @@ class RecipeApiWrapper
 
     response = HTTParty.get(full_url)
 
-    unless response["more"]
-      raise RecipeError.new(response["error"])
-    end
-
     if response["hits"]
       return response["hits"].map do |raw_recipe|
         Recipe.from_api(raw_recipe["recipe"])

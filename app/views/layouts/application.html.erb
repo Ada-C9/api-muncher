@@ -9,7 +9,7 @@
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
-
+    <%= favicon_link_tag 'favicon.ico' %>
     <script src="https://developer.edamam.com/attribution/badge.js"></script>
   </head>
 
@@ -48,7 +48,8 @@
 
   <footer id="footer">
     <section>
-      <div id="edamam-badge" data-color="white"></div>
+      <div id="edamam-badge" data-color="transparent"></div>
+      <h5>©2018, Luxi Lindsey</h5>
     </section>
   </footer>
 </html>

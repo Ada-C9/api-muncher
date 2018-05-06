@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  validates :email, presence: true
+
   def self.build_from_google(data_hash)
     user = User.find_by(uid: data_hash['uid'], provider: data_hash['provider'])
     if user.nil?

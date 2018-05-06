@@ -4,8 +4,8 @@ class RecipesController < ApplicationController
   end
 
   def index
-    @recipes = ApiMuncherWrapper.search_recipes(params[:search])
-    @recipes_pag = @recipes.paginate(:page => params[:page],:per_page => 10)
+    @recipes = ApiMuncherWrapper.search_recipes(params[:search]).paginate(:page => params[:page],:per_page => 10)
+    # @recipes_pag = @recipes.paginate(:page => params[:page],:per_page => 10)
   end
 
   def show

@@ -16,8 +16,74 @@
  *= require_self
  *= require foundation_and_overrides
 
- */
- $light-blue: #092232;
- $blue: #051c2a; //#031626
- $light-yellow: #FDAA5D;
- $gold: #C08750;
+ /*global*/
+
+body {
+background-image: url('background.jpg');
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+padding-bottom: 100px 0px;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Londrina Solid',cursive; sans-serif;
+  color: white;
+}
+
+.button {
+  font-size: 1.5rem;
+  padding: 0.8rem;
+  collor: white;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.main-container, .home, .page-header, .index-container, .show-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.main-container, .home {
+  text-align: center;
+  min-height: 100%;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.recipe-info {
+  width: 250px;
+  margin: 20px;
+}
+
+.recipe-info img {
+  padding-bottom: 10px;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 4em;
+  padding-bottom: 2em;
+}
+
+.pagination a {
+  font-size: 1rem;
+}
+
+.recipe-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  text-align: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+footer {
+  padding-top: 1em;
+}

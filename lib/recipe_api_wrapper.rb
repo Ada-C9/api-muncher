@@ -16,12 +16,19 @@ class RecipeApiWrapper
 
     response = HTTParty.get(full_url)
 
-    raise_on_error(response)
+    unless response["more"]
+      raise RecipeError.new(response["error"])
+    end
 
-    return response["hits"].map do |raw_recipe|
-      Recipe.from_api(raw_recipe["recipe"])
+    if response["hits"]
+      return response["hits"].map do |raw_recipe|
+        Recipe.from_api(raw_recipe["recipe"])
+      end
+    else
+      return []
     end
   end
+
 
   def self.show_recipe(uri)
 
@@ -30,13 +37,11 @@ class RecipeApiWrapper
 
     response = HTTParty.post(full_url)
 
-    return Recipe.from_api(response[0])
-  end
-
-  private
-  def self.raise_on_error(response)
-    unless response["more"]
-      raise RecipeError.new(response["error"])
+    if response[0]
+      return Recipe.from_api(response[0])
+    else
+      return nil
     end
   end
+
 end

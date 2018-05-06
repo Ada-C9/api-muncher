@@ -18,12 +18,20 @@ VCR.configure do |config|
   config.filter_sensitive_data("<API_KEY>") do
     ENV["API_APP_KEY"]
   end
+end
+
+VCR.configure do |config|
+  config.cassette_library_dir = 'test/cassettes' # folder where casettes will be located
+  config.hook_into :webmock # tie into this other tool called webmock
+  config.default_cassette_options = {
+    :record => :new_episodes,    # record new data when we don't have it yet
+    :match_requests_on => [:method, :uri, :body] # The http method, URI and body of a request all need to match
+  }
 
   config.filter_sensitive_data("<API_ID>") do
     ENV["API_APP_ID"]
   end
 end
-
 
 #  For colorful output!
 Minitest::Reporters.use!(

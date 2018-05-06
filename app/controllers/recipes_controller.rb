@@ -24,7 +24,7 @@ class RecipesController < ApplicationController
       yield
     rescue RecipeApiWrapper::RecipeError => error
       flash[:status] = :failure
-      flash[:message] = "API called failed: #{error}"
+      flash[:message] = "API called failed: invalid input. Please try again."
       redirect_back fallback_location: root_path
     end
   end

@@ -1,21 +1,31 @@
-<h1><%= @recipe.name.capitalize %></h1>
+<%= render partial: "search-bar" %>
 
-<img src="<%= @recipe.image %>">
-<p><a href="<%= @recipe.url %>" target="_blank">Source Recipe</a></p>
-<p>Ingredients:</p>
-<ul>
-  <% @recipe.ingredients.each do |ingredient| %>
-  <li><%= ingredient %></li>
-  <% end %>
-</ul>
+<h3><%= @recipe.name %></h3>
 
+<section class="recipe-container">
+  <div>
+    <h4><a href="<%= @recipe.url %>" target="_blank">Link to Source Recipe</a></h4>
+    <img src="<%= @recipe.image %>">
+  </div>
 
-<p>Health and Dietary Labels:</p>
+  <article>
+    <h4>Ingredients:</h4>
+    <ul>
+      <% @recipe.ingredients.each do |ingredient| %>
+        <li><%= ingredient %></li>
+      <% end %>
+    </ul>
+  </article>
+</section>
+
+<section class="dietary-container">
+<h4>Health and Dietary Labels</h4>
 <ul>
   <% @recipe.dietary_info.each do |label| %>
-  <li><%= label %></li>
+    <li><%= label %></li>
   <% end %>
   <% @recipe.health_info.each do |label| %>
-  <li><%= label %></li>
+    <li><%= label %></li>
   <% end %>
 </ul>
+</section>

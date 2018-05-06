@@ -1,0 +1,6 @@
+<section class="search-bar">
+  <%= form_tag results_path, class: "search-bar-container", method: "get" do %>
+    <%= text_field_tag (:query) %>
+    <%= submit_tag "Search", class: "button" %>
+  <% end %>
+</section>

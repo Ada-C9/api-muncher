@@ -14,16 +14,16 @@
   </head>
 
   <body class="page-container">
-    <header class="header">
-      <div><img src="<%= asset_path('favicon.png')%>" alt="wok"></div>
-      <h1>A Wok in Progress</h1>
+    <header>
+      <img src="<%= asset_path('favicon.png')%>" alt="wok">
+      <h1><%= link_to "A Wok in Progress", root_path %></h1>
     </header>
 
     <main>
       <%= yield %>
     </main>
 
-    <footer class="footer">
+    <footer>
       <h4>Powered by Edamam</h4>
     </footer>
   </body>

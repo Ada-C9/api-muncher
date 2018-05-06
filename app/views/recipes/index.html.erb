@@ -1,14 +1,18 @@
-<h2>List of Recipes</h2>
-
-<%= will_paginate @recipes %>
+<%= render partial: "search-bar" %>
 
 <section>
-  <ul>
-    <% @recipes.each do |recipe| %>
-    <div>
-      <li><%= link_to recipe.name, recipe_path(recipe.id) %></li>
-      <li><img src="<%= recipe.image %>"></li>
+  <h3>Results for <%= @query.downcase %> recipes</h3>
+
+  <article class="recipe-list-container">
+  <% @recipes.each do |recipe| %>
+    <div class="card">
+      <%= link_to image_tag(recipe.image), recipe_path(recipe.id) %>
+      <div class="card-section">
+        <h4><%= link_to recipe.name, recipe_path(recipe.id) %></h4>
+      </div>
     </div>
-    <% end %>
-  </ul>
+  <% end %>
+  </article>
+
+  <%= will_paginate @recipes %>
 </section>

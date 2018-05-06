@@ -26,4 +26,26 @@ describe RecipesController do
       end
     end
   end
+
+  describe 'show' do
+
+    it "displays the recipe page for the selected recipe" do
+      VCR.use_cassette("recipe") do
+        uri = "http://www.edamam.com/ontologies/edamam.owl#recipe_e427aa9f6e7a96ecadbf994d9f75fd14"
+        label = "Chicken Florentine Pesto Pasta"
+
+        recipe = RecipeSearchWrapper.find_recipe(uri)
+        recipe.must_be_kind_of Recipe
+        get recipe_path(uri: uri, label: label)
+        must_respond_with :success
+       end
+     end
+
+    it "it returns a RecipeError if the recipe uri does not exist" do
+      VCR.use_cassette("show") do
+        uri = "http://www.edamam.com/ontologies/edamam.owl#recipe_no"
+
+        result = RecipeSearchWrapper.find_recipe(uri)
+        result.must_be_kind_of RecipeSearchWrapper::RecipeError
+  end
 end

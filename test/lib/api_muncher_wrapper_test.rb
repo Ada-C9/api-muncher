@@ -50,11 +50,7 @@ describe ApiMuncherWrapper do
           recipe.must_be_nil
 
         end
-
     end
-
-
   end
-
-
+  
 end

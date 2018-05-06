@@ -14,6 +14,7 @@ class RecipesController < ApplicationController
 
     if @recipe.nil?
       flash[:alert] = "Invalid recipe"
+      redirect_to recipes_path
     else
       @recipe
     end

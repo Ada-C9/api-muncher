@@ -1,0 +1,28 @@
+<section class="form">
+  <h1>Api-Tizing</h1>
+  <%= render partial: "layouts/form" %>
+</section>
+
+<header class="text-center">
+  <h3>Results for "<%= params[:search]%>"</h3>
+</header>
+
+<section class="grid-x">
+  <% @recipes.each do |recipe|%>
+  <ul>
+
+     <li class="thumbnail">
+       <div>
+         <img src="<%= recipe.image %>" alt='recipe image'>
+       </div>
+      <p class="text-center label">
+        <%= link_to recipe.label, recipe_path(recipe.uri.split("_")[1])%>
+      </p>
+     </li>
+  </ul>
+  <% end %>
+</section>
+
+<section class="pagination">
+  <%= paginate @recipes %>
+</section>

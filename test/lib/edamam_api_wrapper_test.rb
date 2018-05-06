@@ -20,11 +20,6 @@ describe EdamamApiWrapper do
         # assert response.any?
       end
     end
-
-    it "text" do
-
-
-    end
   end
 
   describe 'find' do

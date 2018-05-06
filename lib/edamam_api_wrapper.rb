@@ -31,7 +31,7 @@ class EdamamApiWrapper
 
     # Format recipe id into Edaman id:
     edaman_id = "http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_#{id}"
-    # edaman_id = "http://www.edamam.com/ontologies/edamam.owl#recipe_#{id}" encoded
+    #  "http://www.edamam.com/ontologies/edamam.owl#recipe_#{id}" encoded
 
     # Make request:
     response = HTTParty.get("#{URL}?r=#{edaman_id}&app_id=#{ID}&app_key=#{KEY}").parsed_response

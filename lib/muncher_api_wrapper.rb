@@ -7,32 +7,36 @@ class MuncherApiWrapper
   APP_KEY = ENV["EDAMAM_APPLICATION_KEY"]
 
   def self.search_recipes(search_term)
+    recipes_list = []
     url = "#{BASE_URL}search?q=#{search_term}&app_id=#{APP_ID}&app_key=#{APP_KEY}"
     results = HTTParty.get(url)
-    recipes_list = []
     if results["hits"]
       results["hits"].each do |result_data|
-        recipe = Recipe.new(result_data["recipe"]["label"], result_data["recipe"]["image"], result_data["recipe"]["url"], result_data["recipe"]["ingredientLines"])
+        recipe = Recipe.new(
+          result_data["recipe"]["label"],
+          result_data["recipe"]["image"],
+          result_data["recipe"]["uri"],
+          result_data["recipe"]["url"],
+          result_data["recipe"]["ingredientLines"]
+        )
         recipes_list << recipe
       end
     end
-      return recipes_list
+    return recipes_list
   end
 
-  def self.show_recipe(recipe_id)
-    url = "#{BASE_URL}search?r=r=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_#{recipe_d}&app_id=#{APP_ID}&app_key=#{APP_KEY}"
-    response = HTTParty.get(url)
-  end
+  def self.show_recipe(id)
+    encode = URI.encode("#{BASE_URL}search?r=http://www.edamam.com/ontologies/edamam.owl#recipe_#{id}&app_id=#{APP_ID}&app_key=#{APP_KEY}")
+    response = HTTParty.get(encode)
 
-  private
-
-  def create_recipe(api_params)
-    return Recipe.new(
-      api_params["label"],
-      api_params["image"],
-      api_params["url"],
-      api_params["ingredientLines"]
+    recipe = Recipe.new(
+      response[0]["label"],
+      response[0]["image"],
+      response[0]["uri"],
+      response[0]["url"],
+      response[0]["ingredientLines"]
     )
+    return recipe
   end
 
 end

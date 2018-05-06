@@ -1,0 +1,12 @@
+<section class="recipe-show-page">
+  <h3><%= @recipe.label %></h3>
+  <%= image_url(@recipe) %>
+  <h4>Ingredients:</h4>
+  <ul>
+    <% @recipe.ingredientLines.each do |line| %>
+      <li>
+        <%= line["text"] %>
+      </li>
+    <% end %>
+  </ul>
+</section>

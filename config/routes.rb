@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root "recipes#root"
-  post "search" => "recipes#search", as: :search
+  post "search", to: "recipes#search", as: :search
 
 
-  get "index" => "recipes#index", as: :index
+  get "index", to: "recipes#index", as: :index
 
-  # get "recipes#show"
+  get "show", to: "recipes#show", as: :recipe
+
 end

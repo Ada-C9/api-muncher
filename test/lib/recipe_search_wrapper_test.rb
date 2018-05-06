@@ -6,7 +6,7 @@ describe "RecipeApiWrapper" do
 
     it "gives a list of recipes" do
       VCR.use_cassette("recipes") do
-        query = "chicken"
+        query = "rabbit"
         recipes = RecipeSearchWrapper.search_recipes(query)
 
         recipes.each do |recipe|
@@ -14,7 +14,19 @@ describe "RecipeApiWrapper" do
         end
       end
     end
+  end
 
+  describe "find_recipe" do
+    it "returns a recipe" do
+      VCR.use_cassette("find") do
+        rabbits = RecipeSearchWrapper.search_recipes("rabbit")
+        recipe = rabbits.last
+
+        rabbit_recipe = RecipeSearchWrapper.find_recipe(recipe.uri)
+
+        rabbit_recipe.must_be_kind_of Recipe
+      end
+    end
   end
 
 

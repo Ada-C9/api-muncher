@@ -20,6 +20,10 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = RecipeSearchWrapper.find_recipe(params[:uri])
+
+    # unless @recipe
+    #   head :not_found
+    # end
   end
 
   private
@@ -31,7 +35,7 @@ class RecipesController < ApplicationController
       yield
     rescue RecipeSearchWrapper::RecipeError => error
       flash[:status] = :failure
-      flash[:result_text] = "API called failed: #{error}"
+      flash[:result_text] = "API call failed: #{error}"
       redirect_back fallback_location: root_path
     end
   end

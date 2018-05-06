@@ -56,7 +56,7 @@
         <% if @recipe.fat == nil %>
           <td>Not Available</td>
         <% else %>
-          <td><%= @recipe.fat %></td>
+          <td><%= @recipe.fat.round(0) %></td>
         <% end %>
       </tr>
       <tr>
@@ -64,7 +64,7 @@
         <% if @recipe.saturated_fat == nil %>
           <td>Not Available</td>
         <% else %>
-          <td><%= @recipe.saturated_fat %></td>
+          <td><%= @recipe.saturated_fat.round(0) %></td>
         <% end %>
       </tr>
       <tr>
@@ -72,7 +72,7 @@
         <% if @recipe.mono_fat == nil %>
           <td>Not Available</td>
         <% else %>
-          <td><%= @recipe.mono_fat %></td>
+          <td><%= @recipe.mono_fat.round(0) %></td>
         <% end %>
       </tr>
       <tr>
@@ -80,7 +80,7 @@
         <% if @recipe.carbs == nil %>
           <td>Not Available</td>
         <% else %>
-          <td><%= @recipe.carbs %></td>
+          <td><%= @recipe.carbs.round(0) %></td>
         <% end %>
       </tr>
       <tr>
@@ -88,7 +88,7 @@
         <% if @recipe.protein == nil %>
           <td>Not Available</td>
         <% else %>
-          <td><%= @recipe.protein %></td>
+          <td><%= @recipe.protein.round(0) %></td>
         <% end %>
       </tr>
       <tr>
@@ -96,7 +96,7 @@
         <% if @recipe.sodium == nil %>
           <td>Not Available</td>
         <% else %>
-          <td><%= @recipe.sodium %></td>
+          <td><%= @recipe.sodium.round(0) %></td>
         <% end %>
       </tr>
       <tr>
@@ -104,7 +104,7 @@
         <% if @recipe.fiber == nil %>
           <td>Not Available</td>
         <% else %>
-          <td><%= @recipe.fiber %></td>
+          <td><%= @recipe.fiber.round(0) %></td>
         <% end %>
       </tr>
       <tr>
@@ -112,7 +112,7 @@
         <% if @recipe.cholesterol == nil %>
           <td>Not Available</td>
         <% else %>
-          <td><%= @recipe.cholesterol %></td>
+          <td><%= @recipe.cholesterol.round(0) %></td>
         <% end %>
       </tr>
     </tbody>

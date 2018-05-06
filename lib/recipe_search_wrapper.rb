@@ -9,11 +9,12 @@ class RecipeSearchWrapper
   class RecipeError < StandardError; end
 
   def self.search_recipes(query)
-    url = @base_url  + "app_id=#{@app_id}&app_key=#{@app_key}" + "&q=#{query}" + "&to=1000"
+    url = @base_url  + "app_id=#{@app_id}&app_key=#{@app_key}" + "&q=#{query}" + "&to=100"
 
     encoded_uri = URI.encode(url)
 
     response = HTTParty.get(encoded_uri).parsed_response
+
     # raise_on_error(response)
 
     recipes = []
@@ -37,33 +38,37 @@ class RecipeSearchWrapper
     encoded_uri = URI.encode("https://api.edamam.com/search?app_id=#{@app_id}&app_key=#{@app_key}&r=" + uri)
 
     response = HTTParty.get(encoded_uri).parsed_response
+
     # raise_on_error(response)
 
-    uri = response[0]["uri"]
-    label = response[0]["label"]
-    opts = {}
-    opts["image"] = response[0]["image"]
-    opts["url"] = response[0]["url"]
-    opts["servings"] = response[0]["yield"]
-    opts["ingredients"] = response[0]["ingredientLines"]
-    opts["health_labels"] = response[0]["healthLabels"]
-    opts["calories"] = response[0]["calories"]
-    opts["fat"] = response[0]["FAT"]
-    opts["saturated_fat"] = response[0]["FASAT"]
-    opts["mono_fat"] = response[0]["FAMS"]
-    opts["carbs"] = response[0]["CHOCDF"]
-    opts["protein"] = response[0]["PROCNT"]
-    opts["sodium"] = response[0]["NA"]
-    opts["fiber"] = response[0]["FIBTG"]
-    opts["cholesterol"] = response[0]["CHOLE"]
-    recipe = Recipe.new(uri, label, opts)
-    return recipe
+    unless response.empty?
+      uri = response[0]["uri"]
+      label = response[0]["label"]
+      opts = {}
+      opts["image"] = response[0]["image"]
+      opts["url"] = response[0]["url"]
+      opts["servings"] = response[0]["yield"]
+      opts["ingredients"] = response[0]["ingredientLines"]
+      opts["health_labels"] = response[0]["healthLabels"]
+      opts["calories"] = response[0]["calories"]
+      opts["fat"] = response[0]["totalNutrients"]["FAT"]["quantity"]
+      opts["saturated_fat"] = response[0]["totalNutrients"]["FASAT"]["quantity"]
+      opts["mono_fat"] = response[0]["totalNutrients"]["FAMS"]["quantity"]
+      opts["carbs"] = response[0]["totalNutrients"]["CHOCDF"]["quantity"]
+      opts["protein"] = response[0]["totalNutrients"]["PROCNT"]["quantity"]
+      opts["sodium"] = response[0]["totalNutrients"]["NA"]["quantity"]
+      opts["fiber"] = response[0]["totalNutrients"]["FIBTG"]["quantity"]
+      opts["cholesterol"] = response[0]["totalNutrients"]["CHOLE"]["quantity"]
+      @recipe = Recipe.new(uri, label, opts)
+      return @recipe
+    else
+      RecipeError.new("We couldn't find that recipe. Maybe you could write it?")
+    end
   end
 
   private
   def self.raise_on_error(response)
     unless response["ok"]
-      puts "errors"
       raise RecipeError.new(response["error"])
     end
   end

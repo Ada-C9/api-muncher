@@ -41,7 +41,8 @@ describe Recipe do
     before do
       @fake_recipe_data = {
         "label" => "test recipe",
-        'source' => "test source"
+        'source' => "test source",
+        'uri' => "http://www.edamam.com/ontologies/edamam.owl#recipe_7bf4a371c6884d809682a72808da7dc2"
       }
     end
 
@@ -52,6 +53,7 @@ describe Recipe do
       recipe.must_be_kind_of Recipe
       recipe.label.must_equal @fake_recipe_data["label"]
       recipe.source.must_equal @fake_recipe_data["source"]
+      recipe.uri.must_equal @fake_recipe_data["uri"]
     end
 
     it "Raises an exception without critical data" do

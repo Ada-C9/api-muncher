@@ -10,7 +10,7 @@
         <li> Direction/Source:
           <%= link_to @recipe.source, @recipe.url, target: :_blank %>
         </li>
-        <li>
+        <li> Nutrition:
           <ul>
           <% @recipe.health_labels.each do |label| %>
             <li>
@@ -19,7 +19,7 @@
           <% end %>
           </ul>
         </li>
-        <li>
+        <li> ingredients:
           <ul>
           <% @recipe.ingredients.each do |ingredient| %>
             <li>

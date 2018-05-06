@@ -6,7 +6,7 @@ class Recipe
     # # Note that the below we used lazy evaluation to
     # # our advantage here
     # # Boolean logic short cercut
-    if label.nil? || label.empty?
+    if label.nil? || label.empty? || uri.nil?
       raise ArgumentError.new("Need a recipe to search")
     end
 

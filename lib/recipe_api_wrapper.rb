@@ -16,13 +16,12 @@ class RecipeApiWrapper
 
     response = HTTParty.get(full_url)
 
-    if response["hits"]
-      return response["hits"].map do |raw_recipe|
-        Recipe.from_api(raw_recipe["recipe"])
-      end
-    else
-      return []
+    raise RecipeError.new("Could not find recipes") unless response["hits"]
+
+    return response["hits"].map do |raw_recipe|
+      Recipe.from_api(raw_recipe["recipe"])
     end
+
   end
 
 
@@ -31,13 +30,12 @@ class RecipeApiWrapper
     uri_url = "http://www.edamam.com/ontologies/edamam.owl#recipe_"
     full_url = URI.encode(BASE_URL + "?r=#{uri_url}#{uri}&app_id=" + APP_ID + "&app_key=" + APP_KEY + "&from=#{FROM}&to=#{TO}")
 
-    response = HTTParty.post(full_url)
+    response = HTTParty.get(full_url).parsed_response
 
-    if response[0]
-      return Recipe.from_api(response[0])
-    else
-      return nil
-    end
+
+    raise RecipeError.new("Could not find the recipe") unless response[0]
+
+    return Recipe.from_api(response[0])
   end
 
 end

@@ -2,38 +2,61 @@ require "test_helper"
 
 describe RecipesController do
 
+  describe 'homepage' do
+    it "succeeds" do
+      get root_path
 
-  describe "index" do
-    it "succeeds when there are recipes" do
-      # Assumption instead of Arrange
-      # Check your assumption
-      User.count.must_be :>, 0
-
-      # Act
-      get users_path
-
-      # Assert
       must_respond_with :success
     end
   end
 
-  describe "show" do
-    it "succeeds for an extant user ID" do
-      login(@user)
+  describe "index" do
+    it "succeeds when valid ingredient is provided" do
+      VCR.use_cassette("recipes") do
+        get recipes_path, params: {
+          ingredient: "tofu"
+        }
 
-      get user_path(@user.id)
-
-      must_respond_with :success
+        must_respond_with :success
+      end
     end
 
-    it "renders 404 not_found for a bogus user ID" do
-      login(@user)
+    it "can show results for unreasonable ingredient" do
+      VCR.use_cassette("recipes") do
+        get recipes_path, params: {
+          ingredient: "chinese food"
+        }
 
-      user_id = User.last.id + 1
+        must_respond_with :success
+      end
+    end
 
-      get user_path(user_id)
+  end
 
-      must_respond_with :not_found
+  describe "show" do
+    it "succeeds when valid 'ingredient' is provided" do
+      VCR.use_cassette("recipes") do
+        recipe = RecipeApiWrapper.list_recipes("chicken").first
+
+        recipe_id = recipe.uri.split("_")[1]
+
+        get show_recipe_path(recipe_id)
+
+        must_respond_with :success
+      end
+    end
+
+    it "redirects to index page for invalid recipe id" do
+      VCR.use_cassette("recipes") do
+        invalid_recipe_id = "8875432qsdfghj87653579hhsadf"
+
+        get show_recipe_path(invalid_recipe_id)
+
+        flash[:status].must_equal :failure
+        flash[:message].must_equal "API called failed: invalid input. Please try again."
+        must_respond_with :redirect
+        must_redirect_to root_path
+      end
     end
   end
 

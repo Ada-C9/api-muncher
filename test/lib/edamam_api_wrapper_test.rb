@@ -57,6 +57,26 @@ describe EdamamApiWrapper do
         recipes[:recipe_list].must_be_empty
       end
     end
+
+    it 'returns an empty array / results from search parameter that are not a string' do
+      VCR.use_cassette("recipes") do
+        key_words = 123456
+        recipes = EdamamApiWrapper.list_recipes(key_words, 100)
+
+        recipes.must_be_kind_of Hash
+        recipes[:recipe_list].must_be_empty
+      end
+    end
+
+    it 'returns an empty array from search parameter that are nil' do
+      VCR.use_cassette("recipes") do
+        key_words = nil
+        recipes = EdamamApiWrapper.list_recipes(key_words, 100)
+
+        recipes.must_be_kind_of Hash
+        recipes[:recipe_list].must_be_empty
+      end
+    end
   end
 
   describe 'return_recipe' do
@@ -92,7 +112,7 @@ describe EdamamApiWrapper do
       end
     end
 
-    it 'returns nil if for invalid uri id' do
+    it 'returns nil for non-string uri id input' do
       VCR.use_cassette("recipe") do
         recipe = EdamamApiWrapper.return_recipe(123456)
 

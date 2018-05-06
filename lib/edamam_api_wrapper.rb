@@ -5,7 +5,8 @@ class EdamamApiWrapper
   KEY = ENV["APPLICATION_KEY"]
 
   def self.list_recipes(key_words, start_index = nil)
-    encoded_key_words = URI.encode(key_words)
+    key_words ||= ""
+    encoded_key_words = URI.encode("#{key_words}")
     if !start_index
       response = HTTParty.get("#{BASE_URL}q=#{encoded_key_words}&app_id=#{ID}&app_key=#{KEY}")
     elsif start_index < 100

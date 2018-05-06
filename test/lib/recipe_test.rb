@@ -44,7 +44,7 @@ describe Recipe do
       ]
     )
 
-    recipe.id.must_equal "uri_id"
+    recipe.id.must_equal "id"
     recipe.name.must_equal"Lemon Chicken"
     recipe.photo.must_equal "photo_url"
     recipe.url.must_equal "original_url"

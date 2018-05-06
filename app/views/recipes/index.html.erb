@@ -6,7 +6,7 @@
       <div>
         <%= image_tag recipe.image %>
       </div>
-      <p> insert link to recipe </p>
+      <p><%= link_to recipe.label, recipe_path(recipe.uri) %></p>
     </li>
   <% end %>
 </ul>

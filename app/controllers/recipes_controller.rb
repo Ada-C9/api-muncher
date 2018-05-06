@@ -14,8 +14,8 @@ class RecipesController < ApplicationController
     redirect_to :show
   end
 
-  # def show
-  #   @recipe =
-  # end
+  def show
+    # @recipe =
+  end
 
 end

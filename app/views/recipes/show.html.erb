@@ -1,10 +1,39 @@
-<h1>THIS IS A VIEW</h1>
+<main class="recipe-details">
 
-<%if @recipe && @recipe.title %>
-<ul>
-  <li>Title: <%= @recipe.title%></li>
-  <li>By: <%= @recipe.author%></li>
-  <li><%= image_tag @recipe.image %></li>
-  <li>Ingredients: <%= @recipe.ingredients%></li>
-</ul>
-<% end %>
+  <section class="top">
+    <% if @recipe && @recipe.title %>
+    <h2><%= @recipe.title.capitalize %></h2>
+    <% else %>
+    <h2>Untitled Recipe</h2>
+    <% end %>
+    <p>By <%= @recipe.author %></p>
+  </section>
+
+  <section>
+    <%= image_tag @recipe.image %>
+    <h3>Dietary Labels</h3>
+    <% if @recipe.labels %>
+    <ul>
+      <% @recipe.labels.each do |label| %>
+      <li><%= label %></li>
+      <% end %>
+    </ul>
+    <% else %>
+    <p>No dietary labels available</p>
+    <% end %>
+  </section>
+
+  <section>
+    <h3>Ingredients</h3>
+    <% if @recipe.ingredients %>
+    <ul>
+      <% @recipe.ingredients.each do |ing| %>
+      <li><%= ing %></li>
+      <% end %>
+    </ul>
+    <% else %>
+    <p>No ingredients available</p>
+    <% end %>
+  </section>
+
+</main>

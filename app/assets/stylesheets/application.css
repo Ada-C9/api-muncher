@@ -17,6 +17,11 @@
  *= require_self
  */
 
+main {
+  margin: 5vw;
+}
+
+
 .title {
   text-align: center;
   margin: 5vh;

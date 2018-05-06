@@ -28,7 +28,19 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  width: 100vw;
+  overflow-x: hidden;
+}
+
+/*  Search Form Styling*/
+
+input#query {
+  height: 2rem;
+}
+
+/* Results Styling */
+
+.results img {
+  width: 100%;
 }
 
 section.results {
@@ -55,13 +67,9 @@ section.tags ul a {
   padding: 1vh;
 }
 
-aside.search {
-  display: none;
-}
-
-h1 {
+h1.main {
   text-align: center;
-  padding-top: 5vh;
+  margin-top: 5vh;
 }
 
 img.edamam-logo {
@@ -70,8 +78,14 @@ img.edamam-logo {
 
 .content {
   flex: 1 0 auto; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
-  padding: 20px;
+  background-color: #fff;
+  position: relative;
+  top: 0;
+  bottom: 100%;
+  left: 0;
+  z-index: 1;
 }
+
 
 footer {
   display: flex;
@@ -80,11 +94,10 @@ footer {
   font-size: .8em;
   flex-shrink: 0;
   padding: 20px;
+  z-index: 1;
+  background-color: inherit;
 }
-form {
-  display: flex;
-  flex-direction: column;
-}
+
 .button {
   align-self: flex-end;
 }
@@ -103,8 +116,6 @@ article.results.item a {
   color: hsl(189, 6%, 16%);
   text-decoration: none;
   font-size: .9em;
-  min-height: 5vh;
-  max-height: 8vh;
   margin-top: 2vh;
   overflow: hidden;
   text-align: center;
@@ -127,117 +138,171 @@ nav.pagination {
   justify-content: center;
 }
 
-/* On screens that are 992px or less, set the background color to blue */
+.nav-trigger {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+form {
+  padding: 12vh 5vw;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: absolute;
+}
+
+@media screen and (max-width: 780px) {
+
+  label[for="nav-trigger"] {
+    position: fixed;
+    top: -1.5rem;
+    align-self: center;
+    z-index: 2;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    border-radius: 50%;
+    border: solid .4em hsla(0, 1%, 30%, .5);
+    background-color: hsla(0, 0%, 100%, 1);
+  }
+
+  .nav-trigger:checked + label {
+    top: 32vh;
+    position: absolute;
+    box-shadow: 0 8px 5px 1px hsla(0, 0%, 0%, 0.5);
+  }
+
+  .nav-trigger:checked ~ .content {
+    top: 25vh;
+    box-shadow: 0 0 5px 5px hsla(0, 0%, 0%, 0.5);
+  }
+
+  .nav-trigger + label, .content {
+    transition: top 0.2s;
+  }
+
+  aside.search {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  @media screen and (min-width: 650px) {
+    .nav-trigger:checked + label {
+      margin-top: 2.5rem;
+    }
+
+    form {
+      padding: 20vh 5vw;
+    }
+  }
 
 
-/* On screens that are 600px or less, set the background color to olive */
-
-
-@media screen and (min-width: 400px) {
+}
 
   /* h1 {
   text-align: center;
   padding-top: 30vh;
   } */
+  @media screen and (min-width: 450px) {
+    article.results.item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-content: center;
+      max-width: 40vw;
+      margin: 2vw;
+    }
 
-  article.results.item {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-content: center;
-    width: 40vw;
-    margin: 2vw;
+    article.results.item img {
+      width: 100%;
+    }
+
+    article.results.item a:hover {
+      color: hsl(180, 30%, 53%);
+    }
+
+    section.results {
+      display: flex;
+      flex-flow: wrap row;
+      justify-content: space-around;
+      flex: 1 0 auto;
+    }
+
+    section.recipe img {
+      width: 100%;
+    }
+
+    aside.h1, section.recipe h2 {
+      font-size: 2em;
+      font-weight: bold;
+    }
+    section.recipe a {
+      text-align: center;
+    }
   }
 
-  article.results.item img {
-    width: 100%;
-  }
 
-  article.results.item a:hover {
-    color: hsl(180, 30%, 53%);
-  }
+  @media screen and (min-width: 780px) {
+    aside.search, section.search {
+      padding: auto;
+      display: block
+    }
 
-  section.results {
-    display: flex;
-    flex-flow: wrap row;
-    justify-content: space-around;
-    flex: 1 0 auto;
-  }
+    section.search {
+      padding: 25vh 0;
+    }
 
-  section.recipe img {
-    width: 100%;
-  }
+    section.recipe img {
+      float: left;
+      margin-right: 10vh;
+      width: 60%;
+    }
 
-  h1, section.recipe h2 {
-    font-size: 2em;
-    font-weight: bold;
-  }
-  section.recipe a {
-    text-align: center;
-  }
-}
+    section.tags ul {
+      flex-flow: wrap row;
+    }
 
+    section.results {
+      display: flex;
+      flex-flow: wrap row;
+      flex: 1 0 auto;
+    }
 
-@media screen and (min-width: 900px) {
-  aside.search, section.search {
-    width: 80vw;
-    margin: 0 10vw;
-    padding: auto;
-    display: block
+    article.results.item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-content: center;
+      max-width: 20%;
+      margin: 1vw;
+    }
+
+    nav.pagination {
+      display: flex;
+      justify-content: space-around;
+      visibility: visible;
+      display: flex;
+      justify-content: center;
+    }
+
+    .clearfix :after {
+      content: ".";
+      visibility: hidden;
+      display: block;
+      height: 0;
+      clear: both;
+
+    }
+
+    h1.main {
+      font-size: 4em;
+    }
+
+    span.page {
+      display: block;
+    }
   }
-
-  section.search {
-    height:  40vh;
-    padding: 20vh;
-  }
-
-  section.recipe img {
-    float: left;
-    margin-right: 10vh;
-    width: 60%;
-  }
-
-  section.tags ul {
-    flex-flow: wrap row;
-  }
-
-  section.results {
-    display: flex;
-    flex-flow: wrap row;
-    flex: 1 0 auto;
-  }
-
-  article.results.item {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-content: center;
-    max-width: 19vw;
-    margin: 2vw;
-  }
-
-  nav.pagination {
-    display: flex;
-    justify-content: space-around;
-    visibility: visible;
-    display: flex;
-    justify-content: center;
-  }
-
-  .clearfix :after {
-    content: ".";
-    visibility: hidden;
-    display: block;
-    height: 0;
-    clear: both;
-
-  }
-
-  h1 {
-    font-size: 4em;
-  }
-
-  span.page {
-    display: block;
-  }
-}

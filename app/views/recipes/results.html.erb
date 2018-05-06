@@ -3,9 +3,10 @@
   <% if @results %>
     <% @results.each do |result| %>
     <article class="results item small medium">
+      <%= link_to show_path(result.uri.split('owl')[1]), :action => 'go' do %>
       <%= image_url(result) %>
-      <% @recipe = result %>
-      <%= link_to result.label, show_path(result.uri.split('owl')[1]), class: "recipe-label" %>
+      <%= result.label %>
+      <% end %>
     </article>
     <% end %>
   <% end %>

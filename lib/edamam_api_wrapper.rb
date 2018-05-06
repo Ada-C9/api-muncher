@@ -26,7 +26,7 @@ class EdamamApiWrapper
       data = data[0]
       return Recipe.from_api(data)
     else
-      return []
+      raise_on_error(data)
     end
   end
 
@@ -35,18 +35,20 @@ class EdamamApiWrapper
     url = URI.encode(url)
     data = HTTParty.get(url)
 
-    if data["hits"]
+    if !raise_on_error(data)
       return data["hits"].map do |raw_recipe|
         recipe = raw_recipe["recipe"]
         Recipe.from_api(recipe)
       end
+    else
     end
+
   end
 
   private
   def self.raise_on_error(response)
-    unless response["ok"]
-      raise EdamamError.new(response["error"])
+    unless response["more"]
+      raise EdamamError.new("There were no results for #{response["q"]}")
     end
   end
 

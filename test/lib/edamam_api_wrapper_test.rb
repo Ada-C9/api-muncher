@@ -11,6 +11,9 @@ describe EdamamApiWrapper do
         end
       end
     end
-    
+
+    it "text" do
+
+    end
   end
 end

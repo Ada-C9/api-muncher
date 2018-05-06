@@ -18,10 +18,9 @@ describe RecipesController do
 
   it "handles an invalid request" do
     VCR.use_cassette('Slider') do
-      slider_uri = "#recipe_376"
-      get show_path(slider_uri)
+      slider_uri = "#recipe_slider"
+      proc { get show_path(slider_uri)}.must_raise
 
-      must_respond_with :success
     end
   end
 
@@ -42,7 +41,7 @@ describe RecipesController do
 
       result = flash[:status]
 
-      must_respond_with :success
+      must_redirect_to root_path
       result.must_equal :failure
     end
   end

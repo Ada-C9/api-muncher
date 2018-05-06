@@ -18,9 +18,11 @@ describe Recipe do
         "1/2 cup (125ml) soy sauce",
         "One 2-inch (5cm) piece of fresh ginger, peeled and grated",
         "2-pounds (900g) boneless chicken thighs (4-8 thighs, depending on size)"
+      ],
+      url = [ "http://www.davidlebovitz.com/2012/12/chicken-teriyaki-recipe-japanese-farm-food/"
       ]
 
-      recipe = Recipe.new(uri, label, image, healthLabels, ingredientLines)
+      recipe = Recipe.new(uri, label, image, healthLabels, ingredientLines, url)
 
       recipe.uri.must_equal uri
       recipe.label.must_equal label

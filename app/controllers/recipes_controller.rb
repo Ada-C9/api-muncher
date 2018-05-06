@@ -1,7 +1,7 @@
 require 'httparty'
 # require_dependency '../../lib/muncher_wrapper'
 # require_dependency '../../lib/recipe'
- require 'will_paginate/array'
+require 'will_paginate/array'
 
 
 class RecipesController < ApplicationController

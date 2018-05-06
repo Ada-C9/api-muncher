@@ -1,0 +1,5 @@
+<%= form_tag recipes_path, :method => "get" do %>
+  <%= text_field_tag :query, params[:search], class: "form-text-field" %>
+  <%= submit_tag "Search", class: "button" %>
+
+<% end %>

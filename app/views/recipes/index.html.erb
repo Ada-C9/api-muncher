@@ -1,0 +1,33 @@
+<header class="page-header">
+  <h1>Muncher</h1>
+
+  <section class="search_form">
+    <%= render "form" %>
+  </section>
+</header>
+
+<main class="index-page-wrapper">
+  <section class="grid-y">
+    <section class="recipes-container shrink header medium-cell-block-container">
+      <h2 class="results-header">Results for "<%= @query %>"</h2>
+
+      <section class="recipes grid-container fluid">
+        <% if @recipes %>
+          <section class="recipe grid-x grid-padding-x small-up-2 medium-up-3 large-up-4">
+          <% @recipes.each do |recipe| %>
+            <article class="cell">
+              <%= link_to image_tag(recipe.img, size: "300x300", alt: recipe.title), recipe_path(recipe.id), class: "" %>
+              <%= link_to recipe.title, recipe_path(recipe.id), class: "" %>
+            </article>
+            <% end %>
+          </section>
+        <% end %>
+      </section>
+    </section>
+  </section>
+
+
+  <nav class="page-nav" aria-label="Pagination">
+    <%= will_paginate @recipes, renderer: FoundationPagination::Rails %>
+  </nav>
+</main>

@@ -1,0 +1,17 @@
+.show-page-wrapper {
+  padding: 3% 25%;
+}
+.title, .source {
+  text-align: center;
+}
+
+.recipe-details {
+  padding-top: 3%;
+}
+
+
+@media screen and (max-width: 600px) {
+  .show-page-wrapper {
+    padding: 0 5%;
+  }
+}

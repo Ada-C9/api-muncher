@@ -1,0 +1,28 @@
+// Place all the styles related to the Recipes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.cell {
+  padding-bottom: 2%;
+}
+
+.results-header {
+  text-align: center;
+  line-height: 2.5;
+}
+
+.index-page-wrapper, .show-page-wrapper {
+  background-color: #ffffff;
+  padding-bottom: 5%;
+}
+
+.pagination {
+  text-align: center;
+}
+
+.pagination li {
+  border-radius: 20px;
+}
+
+.pagination a:hover, .pagination button:hover {
+  border-radius: 20px;
+}

@@ -1,0 +1,18 @@
+.homepage-page-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 500px;
+}
+
+.search_form {
+  margin: 0 auto;
+  text-align: right;
+  max-width: 35%;
+}
+
+@media screen and (max-width: 600px) {
+  .search_form {
+    max-width: 80%;
+  }
+}

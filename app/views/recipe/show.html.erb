@@ -1,0 +1,32 @@
+<section>
+<h1><%= @recipe.label %></h1>
+<% if @recipe.image %>
+  <%= image_tag(@recipe.image, size: "300") %>
+<% end %>
+
+<h2> Ingredients </h2>
+  <% if @recipe.ingredients %>
+    <ul>
+       <% @recipe.ingredients.each do |ingredient| %>
+        <li> <%= ingredient %> </li>
+      <% end %>
+    </ul>
+  <% else %>
+    Ingredient Information Not Available
+  <% end %>
+
+  <% if @recipe.url %>
+    <%= link_to "See Original Recipe", @recipe.url %>
+  <% end %>
+
+<h2> Nutrition </h2>
+  <% if @recipe.diet %>
+    <ul>
+       <% @recipe.diet.each do |category| %>
+        <li><%= category %></li>
+        <% end %>
+    </ul>
+  <% else %>
+    Nutrition Information Not Available
+  <% end %>
+</section>

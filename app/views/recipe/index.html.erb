@@ -1,0 +1,13 @@
+<section class="recipes-list">
+  <h1>Recipes</h1>
+  <% if @recipes %>
+    <ul>
+      <% @recipes.each do |entry| %>
+      <li>  <%= link_to entry.label, { action: 'show', :uri => entry.uri } %> </li>
+      <% end %>
+    </ul>
+
+  <% end %>
+</section>
+
+   <%= will_paginate @recipes, class: "row" %>

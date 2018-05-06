@@ -67,7 +67,7 @@ describe Recipe do
       it "raises error if data is incomplete" do
         proc { Recipe.new() }.must_raise ArgumentError
         proc { Recipe.new("uri", "label") }.must_raise ArgumentError
-        proc { Recipe.new("", "", "") }.must_raise ArgumentError
+        proc { Recipe.new("", "", "", "") }.must_raise ArgumentError
       end
 
       it "raises error if required data contain nil" do

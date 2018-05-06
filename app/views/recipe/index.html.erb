@@ -1,13 +1,36 @@
-<section class="recipes-list">
-  <h1>Recipes</h1>
-  <% if @recipes %>
-    <ul>
-      <% @recipes.each do |entry| %>
-      <li>  <%= link_to entry.label, { action: 'show', :uri => entry.uri } %> </li>
-      <% end %>
-    </ul>
 
-  <% end %>
-</section>
+
+	<link rel="stylesheet" href="photo_blog_with_sticky_headers.css">
+
+	<!-- container -->
+<div class="container">
+	<div class="row">
+		<div class="twelve columns">
+			<h1>Welcome to My Showcase</h1>
+			<p class="lede">
+          <%= render "search" %></p>
+
+
+      <% if @recipes %>
+			    <ul class="showcase">
+           <% @recipes.each do |entry| %>
+				     <li>
+                <div class="title">
+  						  <div class="pinned">
+                 <%= link_to entry.label, { action: 'show', :uri => entry.uri } %> </li>
+                </div>
+					      </div>
+					      <%= image_tag(entry.image) %>
+				      </li>
+            <% end %>
+			    </ul>
+        <% end %>
+		</div>
+	</div>
+</div>
+
 
    <%= will_paginate @recipes, class: "row" %>
+
+</body>
+</html>

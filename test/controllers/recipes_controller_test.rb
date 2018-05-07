@@ -35,6 +35,7 @@ describe RecipesController do
 
       recipe_id = "not_valid_recipe"
       EdamamApiWrapper.find_recipe(recipe_id)
+
     end
     must_respond_with :redirect
   end

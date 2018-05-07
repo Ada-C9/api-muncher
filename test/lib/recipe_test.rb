@@ -1,4 +1,5 @@
 require "test_helper"
+require 'minitest-rails'
 
 describe Recipe do
   describe "initialize" do

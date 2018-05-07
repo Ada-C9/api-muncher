@@ -7,19 +7,23 @@
 <body>
   <%= yield %>
   <%if  @recipes && @recipes != []%>
-  Here are all the recipes that you searched for
+
+<main>
   <% @recipes.each do |recipe|%>
+  <secton class = "recipe section">
   <%= image_tag(recipe.image, alt: "picture of the image") %>
-  <a href= "<%= recipe.url %>" >External Link</a>
-
+ </section>
+ <aside class = "aside">
+ <secton class = "recipe section">
+  <a href= "<%= recipe.url %>" target="_blank">Link to Original Recipe</a>
+</section>
+<section class = "recipe section">
   <%= link_to recipe.label, show_recipes_path(recipe.uri.split("_")[1])%>
-
+</section>
   <% end %>
-
-  <% else %>
-  Sorry we don't have that in our recipe book, please search again.
   <% end %>
+</aside>
+</main>
+  Powered by Edamam
 </body>
 </html>
-
-<a href=""></a>

@@ -5,10 +5,30 @@
     <title>Here are is that specific recipe</title>
   </head>
   <body>
-Here is that specific recipe
+
+<aside class = "recipe">
+  <%= image_tag(@recipe.image, alt: "picture of the image") %>
 
 <%= @recipe.label %>
+<p> Ingredients</p>
+<%= @recipe.ingredients.each do |ingredient| %>
+<ul>
+  <li>
+<%= ingredient %>
+</li>
+</ul>
+<% end %>
+
+<p>Healthlabels</p>
+<%= @recipe.healthlabels.each do |label| %>
+<ul>
+  <li>
+<%= label %>
+</li>
+</ul>
+<% end %>
 
 <a href= "<%= @recipe.url %>" >External Link</a>
+</aside>
   </body>
 </html>

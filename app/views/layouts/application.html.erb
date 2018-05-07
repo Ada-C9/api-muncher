@@ -20,19 +20,18 @@
 
     <% if display_search?(request.fullpath) %>
     <aside class="search">
-     <%= render partial: 'layouts/search' %>
-     </aside>
-    <% end %>
-
-
-    <% if @login_user %>
-    <aside class="login">
-    <%= link_to "Logged in as #{@login_user.username}", user_path(@login_user), class: "button small" %>
-    <%= link_to "Logout", logout_path, method: :delete, class: "secondary button small" %>
-    <% else %>
-    <%= link_to "Login/SignUp with Google", "/auth/google_oauth2", class: "hollow button small" %>
+      <%= render partial: 'layouts/search' %>
     </aside>
     <% end %>
+
+    <aside class="login">
+      <% if @login_user %>
+      <%= link_to "Logged in as #{@login_user.username}", user_path(@login_user), class: "button tiny" %>
+      <%= link_to "Logout", logout_path, method: :delete, class: "secondary button tiny" %>
+      <% else %>
+      <%= link_to "Login/SignUp with Google", "/auth/google_oauth2", class: "secondary button tiny" %>
+      <% end %>
+    </aside>
 
 
   </header>
@@ -47,7 +46,7 @@
       </h3>
     </section>
     <% end %>
-    
+
     <%= yield %>
   </section>
 

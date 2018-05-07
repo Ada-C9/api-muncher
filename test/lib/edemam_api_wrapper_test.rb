@@ -7,6 +7,9 @@ describe EdemamApiWrapper do
       VCR.use_cassette('recipes') do
         recipes = EdemamApiWrapper.search_recipes(query)
 
+        get recipes_path, params: {query: "pepper"}
+        must_respond_with :success
+
         recipes.each do |recipe|
           recipe.must_be_kind_of Recipe
         end
@@ -14,14 +17,11 @@ describe EdemamApiWrapper do
     end
 
     it 'returns an error if no recipes exsist for that search' do
-      query = " "
-
       VCR.use_cassette('recipes') do
-        recipes = EdemamApiWrapper.search_recipes(query)
 
-        recipes.each do |recipe|
-          recipe.wont_be_instance_of Recipe
-        end
+      get recipes_path, params: {query: ""}
+      must_respond_with :success
+      flash[:status].must_respond_with :failure
       end
     end
   end
@@ -31,20 +31,22 @@ describe EdemamApiWrapper do
       uri = "http://www.edamam.com/ontologies/edamam.owl#recipe_e9d318b6c547e3e2adb395133c1e21cf"
 
       VCR.use_cassette('recipes') do
-        recipe = EdemamApiWrapper.show_recipe(uri)
+        recipes =  EdemamApiWrapper.search_recipes("pepper")
+        recipe = recipes.first
 
-        recipe.must_be_kind_of Recipe
+        get recipe_path(recipe.id)
+        must_respond_with :success
       end
     end
 
     # FIXME: Currently this test is not working, need further help to understand why
-    it 'raises an error for a recipe that DNE' do
+    it 'fails for a recipe that DNE' do
       uri = "http://www.edamam.com/ontologies/edamam.owl#recipe_e9d318b6c547e3e2adb395133c1e21cf"
 
       VCR.use_cassette('recipes') do
-        recipe = EdemamApiWrapper.show_recipe(uri)
 
-        recipe.wont_be_kind_of Recipe
+        get recipe_path("0000")
+        flash[:status].must_respond_with :failure
       end
     end
   end

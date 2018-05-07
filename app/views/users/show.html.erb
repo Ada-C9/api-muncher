@@ -2,6 +2,6 @@
   <% if @login_user %>
   <h3>Name: <%= @login_user.name %></h3>
   <h2>Email: <%= @login_user.email %></h2>
-  <span> Member Since: <%= render_date(@login_user.created_at) %> </span> 
+  <span> Member Since: <%= render_date(@login_user.created_at) %> </span>
   <% end %>
 </section>

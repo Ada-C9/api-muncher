@@ -86,7 +86,7 @@ img.edamam-logo {
   z-index: 1;
 }
 
-aside.search, aside. {
+aside.search {
   position: fixed;
   top: 0;
   right: 0;

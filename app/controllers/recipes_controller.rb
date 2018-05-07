@@ -1,19 +1,27 @@
+require_dependency '../../lib/edamam-api-wrapper'
+require_dependency '../../lib/recipe'
+
 class RecipesController < ApplicationController
-  def search
-  
+  def home
+    @home_page = true
   end
 
   def index
-    if params[:q].blank?
+    @home_page = false
+    @recipes = EdamamApiWrapper.search_recipes(params[:search])
+    if @recipes.length == 0
+      flash[:message] = "No search results found"
       redirect_to root_path
-    else
-      query = params[:q]
-      @recipes = EdamamApiWrapper.search(q)
     end
   end
 
   def show
-    @recipe = EdamamApiWrapper.search(params[:id])[0]
+    @home_page = false
 
+    @recipe = EdamamApiWrapper.find_recipe(params[:uri])
+    unless @recipe
+      render_404
+    end
   end
+
 end

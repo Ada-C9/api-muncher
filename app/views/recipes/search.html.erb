@@ -1,6 +1,0 @@
-<h1><%= t(:API_Muncher) %></h1>
-<%= form_tag recipes_path, method: :get do %>
-<p>Eat it!</p>
-<%= text_field_tag :query, nil, placeholder: "Ex. Brie, Apple, Marshmallow"%>
-<%= submit_tag "Find a Recipe!", class: "button" %>
-<% end %>

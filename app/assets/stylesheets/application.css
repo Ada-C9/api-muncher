@@ -71,6 +71,8 @@ text-align: center;
   padding-top: 5%;
     padding-bottom: 5%;
   text-align: center;
+  /* width: 400px;  */
+  margin-right: 0;
 }
 
 .home-img {
@@ -83,7 +85,7 @@ text-align: center;
   align-items: center;
 }
 
-div.card {
+.item-box div.card {
   width: 400px;
 }
 

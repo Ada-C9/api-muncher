@@ -3,11 +3,11 @@ require_dependency '../../lib/recipe'
 
 class RecipesController < ApplicationController
   def home
-    @home_page = true
+
   end
 
   def index
-    @home_page = false
+
     @recipes = EdamamApiWrapper.search_recipes(params[:search])
     if @recipes.length == 0
       flash[:message] = "No search results found"
@@ -16,7 +16,7 @@ class RecipesController < ApplicationController
   end
 
   def show
-    @home_page = false
+    
 
     @recipe = EdamamApiWrapper.find_recipe(params[:uri])
     unless @recipe

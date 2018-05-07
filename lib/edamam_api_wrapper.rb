@@ -2,10 +2,12 @@ require 'httparty'
 
 class EdamamApiWrapper
   # Your code here!
-  def self.recipe_list(query, page)
+  def self.recipe_list(query)
     q = query
-    to = (10 * page) + 1
-    from = to - 10
+    to = 100
+    #(10 * page) + 1
+    from = 10
+    #to - 10
 
     key = ENV["EDAMAM_KEY"]
     id = ENV["APPLICATION_ID"]
@@ -18,7 +20,7 @@ class EdamamApiWrapper
     #en
     #return response["hits"]
     #total_results = response["hits"].maps.count
-    
+
     return response["hits"].map do |raw_recipe|
 
       Recipe.from_api(raw_recipe["recipe"])

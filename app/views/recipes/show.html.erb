@@ -1,0 +1,24 @@
+<section class="recipe">
+  <h2><%= @recipe.label %></h2>
+  <%= image_tag @recipe.image %>
+
+    <h3>Ingredients</h3>
+    <ul>
+      <% @recipe.ingredientLines.each do |ingredient| %>
+        <li>
+          <%= ingredient %>
+        </li>
+      <% end %>
+    </ul>
+
+    <h3>Health Labels</h3>
+      <ul>
+        <% @recipe.healthLabels.each do |label| %>
+          <li>
+            <%= label %>
+          </li>
+        <% end %>
+      </ul>
+</section>
+
+<%= link_to("Full Recipe", @recipe.url, class: "button") %>

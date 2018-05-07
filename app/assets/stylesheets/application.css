@@ -1,0 +1,131 @@
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*= require normalize-rails
+
+*
+*= require_tree .
+*= require_self
+*= require foundation_and_overrides
+
+*/
+h1 {
+  color: rgb(143,199,72)
+}
+
+.recipe h2 {
+  color: rgb(143,199,72)
+}
+
+.recipe h3 {
+  color: rgb(59, 137, 39)
+}
+
+.recipe ul li {
+  color: rgb(143,199,72)
+}
+header .logo {
+  height: 100px;
+  width: 150px;
+  display: flex;
+  align-self: center;
+}
+
+nav {
+  padding: 0 20%;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+header nav label {
+  color: rgb(143,199,72);
+}
+
+header nav input {
+  color: rgb(143,199,72);
+}
+
+.recipes-list ul {
+  display: flex;
+  flex-flow: wrap row;
+  /* flex-direction: row; */
+}
+
+li.small.medium {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  max-width: 25%;
+  align-items: center;
+}
+
+.recipes-list ul li img {
+  padding: 20px;
+}
+
+.recipes-list {
+  padding: 50px;
+}
+
+.recipes-list ul li {
+  list-style-type: none;
+}
+
+.pagination {
+  margin-left: 0;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.pagination .current{
+  background: rgb(143,199,72);
+}
+
+.pagination a {
+  color: rgb(143,199,72);
+}
+.recipes-list h1 {
+  text-align: center;
+}
+
+.recipe {
+  padding-left: 50px;
+  padding-top: 50px;
+}
+
+.recipe ul li {
+  list-style-type: none;}
+
+  li.small.medium a {
+    color: rgb(143,199,72);
+  }
+
+  li.small.medium a:hover {
+    color: rgb(59, 137, 39);
+  }
+
+  .button {
+    margin-left: 50px;
+    background: rgb(143,199,72);
+  }
+
+  .button:hover {
+    background: rgb(59, 137, 39);
+  }
+
+  #edamam-badge {
+    display: flex;
+    justify-content: center;
+  }

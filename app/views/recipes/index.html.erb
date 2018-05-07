@@ -1,0 +1,17 @@
+<section class="recipes-list">
+  <h1>Muncher</h1>
+  <% if @recipes %>
+    <ul>
+      <% @recipes.each do |recipe| %>
+        <li class="small medium">
+          <%= image_tag recipe.image %>
+          <%= link_to recipe.label, recipe_path(recipe.uri) %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+</section>
+
+<footer class="pagination">
+  <%= paginate @recipes %>
+</footer>

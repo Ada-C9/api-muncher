@@ -9,13 +9,14 @@
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+    <script src="https://developer.edamam.com/attribution/badge.js"></script>
   </head>
 
   <body>
     <header class="header">
       <nav>
         <ul class='top-nav'>
-          <li class="welcome">Welcome Guest</li>
+          <li class="welcome">Welcome, Guest</li>
         </ul>
         <span>
           <h2 class="title"><%= link_to image_tag("NOSHER-logo.png"), root_path %></h2>
@@ -54,4 +55,8 @@
     <%= yield %>
 
   </body>
+  <footer class="footer">
+    <div id="edamam-badge" data-color="white"></div>
+    <p class="copyright ">Copyright 2018, N.Peters</p>
+  </footer>
 </html>

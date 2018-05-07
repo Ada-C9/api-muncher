@@ -1,7 +1,14 @@
 require "test_helper"
 
 describe RecipesController do
-  # it "must be a real test" do
-  #   flunk "Need real tests"
-  # end
+  describe 'new' do
+  end
+
+  describe 'index' do
+
+  end
+
+  describe 'show' do
+    
+  end
 end

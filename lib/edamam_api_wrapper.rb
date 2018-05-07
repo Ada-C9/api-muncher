@@ -15,20 +15,18 @@ class EdamamApiWrapper
     raise_on_error(response)
 
     return response["hits"].map do |raw_recipe|
-      Recipe.from_api(raw_recipe)
+      Recipe.from_api(raw_recipe['recipe'])
     end
   end
 
   def self.display_recipe(uri)
-    full_url = URI.encode(BASE_URL + "?r=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_" + uri + "&app_id=" + ID + "&app_key=" + KEY)
+    full_url = URI.encode(BASE_URL + "?r=http://www.edamam.com/ontologies/edamam.owl#recipe_" + uri + "&app_id=" + ID + "&app_key=" + KEY)
 
-    response = HTTParty.get(full_url).parsed_response
+    response = HTTParty.get(full_url)
 
-    # raise_on_error(response)
+    raise_on_error(response)
 
-    return response["hits"].map do |raw_recipe|
-      Recipe.from_api(raw_recipe)
-    end
+    return Recipe.from_api(response[0])
 
   end
 

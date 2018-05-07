@@ -1,19 +1,21 @@
 require 'test_helper'
 
 describe Recipe do
-  it "Cannot be initialized with less than 2 parameters" do
-    proc {
-      Channel.new
-    }.must_raise ArgumentError
 
-    proc {
-      Channel.new "Name"
-    }.must_raise ArgumentError
+  before do
+    recipe = {
+      "uri" => "http://www.edamam.com/ontologies/edamam.owl#recipe_42c0f6c2441352c5900eee4ce9f3f7e0",
+      "label" => "Kimchi Pasta",
+      "image" => "https://www.edamam.com/web-img/6c9/6c9960eaf107c71cffdaed4e57ff8bdf.jpg",
+      "url" => "http://norecipes.com/kimchi-pasta-recipe",
+      "recipe_source" => "No Recipes"
+    }
+    @new_recipe = Recipe.new(recipe)
   end
 
-  it "Must initialize name & id properly" do
-    channel = Channel.new("Name", "ID")
-    channel.name.must_equal "Name"
-    channel.id.must_equal "ID"
+  it "Cannot be initialized with less than 1 parameter" do
+    proc {
+      Recipe.new
+    }.must_raise ArgumentError
   end
 end

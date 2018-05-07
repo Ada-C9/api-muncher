@@ -1,4 +1,3 @@
-require ‘muncher_api_wrapper’
 
 class RecipesController < ApplicationController
   def root

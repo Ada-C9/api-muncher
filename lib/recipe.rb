@@ -21,6 +21,7 @@ class Recipe
 		raise ArgumentError.new("Invalid name") if !is_nonempty_string?(@name)
 		raise ArgumentError.new("Invalid uri") if !is_nonempty_string?(@uri)
 		raise ArgumentError.new("Invalid url") if !is_nonempty_string?(@url)
+		raise ArgumentError.new("Invalid image") if !is_nonempty_string?(@image)
 		raise ArgumentError.new("Invalid ingredients") if !@ingredients.is_a?(Array)
 
 		if !valid_label?(@diet_labels, DIET_OPTIONS)

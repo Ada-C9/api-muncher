@@ -5,7 +5,7 @@ class RecipesController < ApplicationController
 				session[:query_text] = params[:query_text] if params[:query_text]
 				from = set_from(params[:from])
 				search_results = EdamamApiWrapper.search_recipes(session[:query_text], from)
-				if search_results
+				if !search_results[:recipes].empty?
 					@curr_from = set_curr_from_for_view(params[:from].to_i)
 					@recipes = search_results[:recipes]
 					@max_pages = search_results[:max_pages]

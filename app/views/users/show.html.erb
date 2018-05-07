@@ -1,10 +1,19 @@
-<h2> <%= @logged_user.name %> </h2>
+<h2>
+  Hi
+  <% if @logged_user.name.nil? %>
+    <%= @logged_user.email %>
+  <% else %>
+    <%= @logged_user.name %>
+  <% end %>
+</h2>
 
 <article class="cell">
-  <h4>Favorites</h4>
-
-  <% @favorites.each do |favorite| %>
-    <%= render partial: 'shared/card', locals: {item: favorite} %>
-  <% end %>
-
+    <h4>Favorites</h4>
+    <% unless @favorites.empty? %>
+      <% @favorites.each do |favorite| %>
+        <%= render partial: 'shared/card', locals: {item: favorite} %>
+      <% end %>
+    <% else %>
+      <p>You have no favorites - go like something!</p>
+    <% end %>
 </article>

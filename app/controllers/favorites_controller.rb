@@ -2,7 +2,19 @@ class FavoritesController < ApplicationController
 
   def create
     if @logged_user
-      favorite = Favorite.new(user_id: @logged_user.id)
+      favorite = Favorite.new(favorite_params)
+      favorite.user = @logged_user
+      
+      if favorite.save
+        flash[:status] = :success
+        flash[:message] = 'Successfully added favorite'
+        return
+      else
+        flash[:status] = :failure
+        flash[:message] = 'You must be logged in to do that'
+        redirect_to root_path
+        return
+      end
     else
       flash[:status] = :failure
       flash[:message] = 'You must be logged in to do that'

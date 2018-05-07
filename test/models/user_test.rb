@@ -52,7 +52,7 @@ describe User do
 
   describe 'relations' do
     it 'connects a user and a favorite' do
-      Favorite.create!(name: 'Teriyaki Chicken', uri: 'http://www.recipe.com/12345', user: users(:one))
+      Favorite.create!(name: 'Teriyaki Chicken', uri: 'http://www.recipe.com/12345', user: users(:one), image: "https://www.edamam.com/web-img/262/262b4353ca25074178ead2a07cdf7dc1.jpg")
 
       users(:one).favorites.must_include Favorite.last
     end

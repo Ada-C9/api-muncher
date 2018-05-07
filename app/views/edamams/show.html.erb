@@ -5,16 +5,20 @@
 <section>
   <ul>
     <li>
-    <%= @recipe.healthLabels%>
+      <% @recipe.healthLabels.each do |label|%>
+      <%= "#{label}, " %>
+      <% end %>
     </li>
     <li>
-<%= @recipe.ingredientLines %>
+      <% @recipe.ingredientLines.each do |ingredient| %>
+      <%= "#{ingredient}, " %>
+      <% end %>
     </li>
     <li>
       <%= @recipe.source %>
       <p>
-      <%= link_to @recipe.source, @recipe.url, target: :_blank %>
-    </p>
+        <%= link_to "Get if from the source!", @recipe.url, target: :_blank %>
+      </p>
     </li>
   </ul>
 

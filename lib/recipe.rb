@@ -1,7 +1,7 @@
 class Recipe
-  attr_accessor  :label, :image, :source, :uri, :healthLabels
-  def initialize(label, image, source, uri, healthLabels )
-    # There is a better way to write this maybe using iteration?
+  attr_accessor  :label, :image, :source, :uri, :healthLabels, :url, :ingredientLines
+  def initialize(label, image, source, uri, healthLabels, url, ingredientLines )
+
     raise_error(label)
     raise_error(image)
     raise_error(source)
@@ -37,8 +37,8 @@ class Recipe
       raw_recipe["image"],
       raw_recipe["source"],
       raw_recipe["uri"].split("_").last,
-      raw_recipe["healthLabels"]
-      raw_recipe["url"]
+      raw_recipe["healthLabels"],
+      raw_recipe["url"],
       raw_recipe["ingredientLines"]
     )
   end

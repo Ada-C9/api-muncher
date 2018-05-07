@@ -1,26 +1,38 @@
 <section class="recipe-show-page">
   <h3><%= @recipe.name %></h3>
-  <div class="float-center"><%= image_url(@recipe) %></div>
-
+  <div class="row">
+    <div class="twelve columns text-center">
+      <%= image_url(@recipe) %>
+    </div>
+  </div>
   <h4>Ingredients:</h4>
   <ul>
     <% @recipe.ingredients.each do |line| %>
-    <li>
-      <%= line %>
-    </li>
+    <div class="row">
+      <div class="twelve columns text-center">
+        <li>
+          <%= line %>
+        </li>
+      </div>
+    </div>
     <% end %>
   </ul>
 
   <h4>Dietary Info:</h4>
   <ul>
     <% @recipe.dietary_info.each do |line| %>
-    <li>
-      <%= line %>
-    </li>
+    <div class="row">
+      <div class="twelve columns text-center">
+        <li>
+          <%= line %>
+        </li>
+      </div>
+    </div>
     <% end %>
   </ul>
 
-  <h4>See Full Recipe: </h4>
-  <%= link_to @recipe.url, @recipe.url %>
-
+  <h4 >See Full Recipe: </h4>
+  <div class="text-center">
+    <%= link_to @recipe.url, @recipe.url %>
+  </div>
 </section>

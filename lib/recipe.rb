@@ -1,5 +1,5 @@
 class Recipe
-  attr_reader :label, :image, :uri, :url, :ingredient_list, :nutrition_info
+  attr_reader :label, :image, :uri, :url, :ingredient_list, :health_labels, :source
   def initialize(label, image, uri, url, ingredient_list, health_labels, source)
     valid_attribute?(label)
     valid_attribute?(image)

@@ -25,5 +25,6 @@ module ApiMuncher
 
     # New Code that I added to load all the code rails root lib folder
     config.autoload_paths << Rails.root.join('lib')
+
   end
 end

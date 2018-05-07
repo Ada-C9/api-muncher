@@ -9,11 +9,22 @@
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+    <script src="https://developer.edamam.com/attribution/badge.js"></script>
   </head>
-
+    <header>
+      <div class="site-logo">
+        <%= link_to(image_tag("edamam_logo.png", alt: 'Site Logo'), "/", class: "logo")%>
+      </div>
+      <%= form_tag(recipes_path(@label), method: "get") do %>
+        <%= label_tag(:user_input, "Search for a recipe:") %>
+        <%= text_field_tag(:user_input) %>
+        <%= submit_tag("Search") %>
+      <% end %>
+    </header>
   <body>
-
     <%= yield %>
-
+    <footer>
+      <div id="edamam-badge" data-color="white"></div>
+    </footer>
   </body>
 </html>

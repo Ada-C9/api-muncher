@@ -1,7 +1,6 @@
 require 'test_helper'
 require 'httparty'
 
-
 describe MuncherApiWrapper do
   describe 'list_recipes(terms)' do
     it 'gives a list of recipes with real word, no spaces' do

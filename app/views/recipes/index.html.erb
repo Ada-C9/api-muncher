@@ -1,0 +1,26 @@
+<%= render partial: "form" %>
+
+<section class="search-results">
+
+  <section class="page-headline">
+    <h2> Search Results </h2>
+  </section>
+
+  <section class="recipe-index">
+    <% counter = 1 %>
+    <% @recipes.each do |recipe| %>
+    <figure>
+      <image>
+        <%= link_to image_tag(recipe.image, alt: recipe.label), recipe_path(recipe.uri_trim) %>
+      </image>
+      <figcaption> <%= "#{counter}. #{recipe.label}" %></figcaption>
+    </figure>
+    <% counter += 1 %>
+    <% end %>
+  </section>
+
+  <section class="pagination">
+    <%= will_paginate @recipes %>
+  </section>
+
+</section>

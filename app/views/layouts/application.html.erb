@@ -1,19 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+  <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
 
-    <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
-    <%= csrf_meta_tags %>
-  </head>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
 
-  <body>
+<body>
+  <header>
+    <section>
+      <h2 class="image-header">
+        <%= link_to "Munch Munch!", root_path %>
+      </h2>
+    </section>
+    <div class= "search-bar">
+      <%= form_tag(index_path, method: "get") do %>
+      <%= label_tag(:query, "What are you in the mood for:") %>
+      <%= text_field_tag(:query) %>
+      <%= submit_tag("Search") %>
+      <% end %>
+    </div>
+  </header>
 
-    <%= yield %>
-
-  </body>
+  <%= yield %>
+  <footer>
+    <h4 class= "copyright"> Powered by Edamam</h4>
+  </footer>
+</body>
 </html>

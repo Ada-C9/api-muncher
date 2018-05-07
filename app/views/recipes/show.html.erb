@@ -1,5 +1,6 @@
-<h3>TEST AGAIN</h3>
-<%= @recipe.label %>
+<div class=" recipe-name">
+  <h3><%= @recipe.label %></h3>
+</div>
 <div class= "show_img">
   <%= link_to image_tag(@recipe.image, alt: "recipe-pic", class: "recipe-pic") %>
 </div>

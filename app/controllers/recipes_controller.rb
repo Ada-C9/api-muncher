@@ -21,9 +21,6 @@ class RecipesController < ApplicationController
   def show
     recipe = params[:id]
     @result = EdamamApiWrapper.search(recipe)
-    unless @result.label
-      render :head, status: :not_found
-    end
   end
 
   private

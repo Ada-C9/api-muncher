@@ -44,6 +44,32 @@ if ActionPack::VERSION::STRING >= "5.2.0"
   Minitest::Rails::TestUnit = Rails::TestUnit
 end
 
+OmniAuth.config.test_mode = true
+
+def mock_auth_hash(user)
+  return {
+    provider: user.provider,
+    uid: user.uid,
+    "info" => {
+      "email" => user.email,
+      "name" => user.name
+    }
+  }
+end
+
+def login(user)
+  # Tell OmniAuth to use this user's info when it sees
+  # an auth callback from github
+  OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new(mock_auth_hash(user))
+
+  # Send a login request for that user
+  # Note that we're using the named path for the callback, as defined
+  # in the `as:` clause in `config/routes.rb`
+  get auth_callback_path(:google_oauth2)
+
+  # In our books app, logging in should always redirect
+end
+
 
 # To add Capybara feature tests add `gem "minitest-rails-capybara"`
 # to the test group in the Gemfile and uncomment the following:

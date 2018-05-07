@@ -31,6 +31,10 @@ body {
   overflow-x: hidden;
 }
 
+body a {
+  color: hsl(203, 77%, 40%);
+}
+
 /*  Search Form Styling*/
 
 input#query {
@@ -57,7 +61,7 @@ section.tags ul {
 
 section.tags ul a {
   line-height: inherit;
-  color: #1779ba;
+  color: hsl(203, 77%, 40%);
   text-decoration: none;
   cursor: pointer;
   display: block;

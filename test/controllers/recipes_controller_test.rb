@@ -2,9 +2,11 @@ require "test_helper"
 
 describe RecipesController do
   it "can get the search path" do
-    get root_path
+    VCR.use_cassette('chicken') do
+      get root_path, params: {query: "chicken meatballs"}
 
-    must_respond_with :ok
+      must_redirect_to results_path("chicken meatballs")
+    end
   end
 
   it "can get the recipe show view" do

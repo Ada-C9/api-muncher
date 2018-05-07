@@ -176,6 +176,36 @@ footer {
   padding: 20px;
 }
 
+.recipe-details {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 1fr 1fr ;
+  padding-bottom: 5%;
+  padding-left: 5%;
+  background-color: #e6e6e6;
+  font-size: 12pt;
+}
+
+.recipe-details .recipe-title {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  text-align: center;
+  margin: 3vw;
+}
+
+.recipe-details .recipe-title h2 {
+  margin: 0;
+}
+
+.recipe-details .ingredients h2 {
+  text-align: center;
+}
+.recipe-details .ingredients {
+  text-align: left;
+}
+
+
+
 @media screen and (max-width: 780px) {
   li.small.medium {
     display: flex;
@@ -202,7 +232,6 @@ footer {
     padding-top: 8px;
     } */
 }
-
 @media screen and (min-width: 450px) {
 
 }

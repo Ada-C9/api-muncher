@@ -24,21 +24,26 @@
 
  -->
 
+<section class="recipe">
 
 <div class="media-object stack-for-small">
 
   <div class="media-object-section">
-    <div class="thumbnail"><%= image_tag(@recipe.image, alt: "Recipe image")%></div>
+    <div class=""><%= image_tag(@recipe.image, alt: "Recipe image")%></div>
   </div>
 
   <div class="media-object-section">
+    <div class="text-center">
+
     <h1><%= @recipe.title %></h1>
 
     <p>By <%= @recipe.source %></p>
 
-    <p><%= link_to "See original recipes", @recipe.url , target: :_blank%></p>
+    <p class="text-center"><%= link_to "See original recipe", @recipe.url , target: :_blank%></p>
 
-    <h6>Yield: <%= @recipe.portion.to_i %> </h6>
+      <h6>Yield: <%= @recipe.portion.to_i %> </h6>
+  </div>
+
 
     <h6>Ingredients:</h6>
     <ul>
@@ -56,3 +61,5 @@
     </ul>
   </div>
 </div>
+
+</section>

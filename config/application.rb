@@ -24,7 +24,7 @@ module ApiMuncher
     # the framework and any gems in your application.
 
     # New Code that I added to load all the code rails root lib folder
-    config.autoload_paths << Rails.root.join('lib')
+    config.eager_load_paths << Rails.root.join('lib')
 
   end
 end

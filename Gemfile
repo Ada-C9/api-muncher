@@ -76,7 +76,6 @@ gem 'jquery-rails'
 gem 'foundation-rails'
 gem 'normalize-rails'
 group :development, :test do
-  gem 'pry-rails'
 end
 
 group :development do

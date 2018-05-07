@@ -48,6 +48,15 @@ describe User do
     it 'can be created with all required data' do
       @user.must_be :valid?
     end
+
+    it 'lets a user favorite a recipe uri only once' do
+      favorites(:one).user_id.must_equal users(:one).id
+
+      favorite = Favorite.new(uri: favorites(:one).uri, name: 'Another test name', image: 'image.png', user: users(:one))
+
+      favorite.valid?.must_equal false
+      favorite.errors.must_include :uri
+    end
   end
 
   describe 'relations' do

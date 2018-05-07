@@ -12,7 +12,7 @@ class RecipesController < ApplicationController
     search_term = params[:search_term]
     @recipes = EdemamWrapper.search_recipes(search_term).paginate(:page => params[:page], :per_page => 12)
     if !@recipes
-      flash[:error] = "There are no recipes matching this query. Please try again."
+      flash.now[:error] = "There are no recipes matching this query. Please try again."
       render :root
     end
     # raise
@@ -21,8 +21,8 @@ class RecipesController < ApplicationController
   def show
     @recipe = EdemamWrapper.show_recipe(params[:format])
     if !@recipe
-      flash[:error] = "This recipe does not exist. Please try again."
-      redirect_to root_path
+      flash.now[:error] = "This recipe does not exist. Please try again."
+      render root_path
     end
   end
 

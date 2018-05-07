@@ -1,32 +1,44 @@
-<section>
-<h1><%= @recipe.label %></h1>
-<% if @recipe.image %>
-  <%= image_tag(@recipe.image, size: "300") %>
-<% end %>
+<%= stylesheet_link_tag "recipe_show" %>
 
-<h2> Ingredients </h2>
-  <% if @recipe.ingredients %>
-    <ul>
-       <% @recipe.ingredients.each do |ingredient| %>
-        <li> <%= ingredient %> </li>
+<html>
+<main>
+  <section class="show-container">
+    <article class="grid-container">
+      <% if @recipe.image %>
+        <div id="picture">
+          <%= image_tag(@recipe.image, alt: "Picture of food", size: "300") %>
+          <% if @recipe.url %>
+            <p><%= link_to "See Original Recipe", @recipe.url %></p>
+          <% end %>
+        </div>
       <% end %>
-    </ul>
-  <% else %>
-    Ingredient Information Not Available
-  <% end %>
 
-  <% if @recipe.url %>
-    <%= link_to "See Original Recipe", @recipe.url %>
-  <% end %>
+      <section id="details">
+        <h2><%= @recipe.label %></h2>
+        <h1> Ingredients </h1>
+        <% if @recipe.ingredients %>
+          <ul>
+            <% @recipe.ingredients.each do |ingredient| %>
+              <li> <%= ingredient %> </li>
+            <% end %>
+          </ul>
+        <% else %>
+          Ingredient Information Not Available
+          <% end %>
 
-<h2> Nutrition </h2>
-  <% if @recipe.diet %>
-    <ul>
-       <% @recipe.diet.each do |category| %>
-        <li><%= category %></li>
+        <h1> Nutrition </h1>
+        <% if @recipe.diet %>
+          <ul>
+            <% @recipe.diet.each do |category| %>
+              <li><%= category %></li>
+            <% end %>
+          </ul>
+        <% else %>
+          Nutrition Information Not Available
         <% end %>
-    </ul>
-  <% else %>
-    Nutrition Information Not Available
-  <% end %>
-</section>
+      </section>
+    </article>
+  </section>
+<main>
+
+</html>

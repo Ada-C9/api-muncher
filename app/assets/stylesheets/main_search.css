@@ -11,9 +11,6 @@ body {
   background:rgba(255,255,255,0.5); /* applies a 50% transparent white background */
 }
 
-body {
-  margin: 0px;
-}
 
 .search_container {
   font-family: 'Gudea', sans-serif;

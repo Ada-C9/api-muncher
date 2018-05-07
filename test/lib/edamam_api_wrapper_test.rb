@@ -15,11 +15,14 @@ describe EdamamApiWrapper do
     it 'returns all recipes' do
       VCR.use_cassette('recipes') do
         recipes = EdamamApiWrapper.all_recipes("kale")
-
         recipes.each do |recipe|
           recipe.must_be_kind_of Recipe
         end
       end
+
+    it 'responds with error with an invalid search' do
+      VCR.use_cassette('recipes') do
+        recipes
     end
   end
 

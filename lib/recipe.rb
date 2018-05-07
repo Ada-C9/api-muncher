@@ -1,6 +1,7 @@
+
 class Recipe
-  attr_reader :uri, :label, :image, :healthLabels, :ingredients
-  def initialize(uri, label, image, healthLabels, ingredients)
+  attr_reader :uri, :label, :image, :url, :source, :healthLabels, :ingredientLines
+  def initialize(uri, label, image, url, source, healthLabels, ingredientLines)
     if label.nil? || label.empty?
       raise ArgumentError.new("Need a recipe please")
     end
@@ -8,17 +9,21 @@ class Recipe
     @uri = uri
     @label = label
     @image = image
+    @url = url
+    @source = source
     @healthLabels = healthLabels
-    @ingredients = ingredients
+    @ingredientLines = ingredientLines
   end
 
   def self.from_api(raw_recipe)
     self.new(
+      raw_recipe["uri"].split("_").last,
       raw_recipe["label"],
-      raw_recipe["uri"],
       raw_recipe["image"],
+      raw_recipe["url"],
+      raw_recipe["source"],
       raw_recipe["healthLabels"],
-      raw_recipe["ingredients"]
+      raw_recipe["ingredientLines"]
     )
   end
 

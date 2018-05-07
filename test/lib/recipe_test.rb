@@ -4,12 +4,12 @@ require 'minitest-rails'
 describe Recipe do
   describe "initialize" do
     it "can be created with all parameters needed" do
-      label = label
-      image = image
-      health = health
-      ingredients = ingredients
-      url = url
-      uri = uri
+      label = "label"
+      image = "image"
+      health = "health"
+      ingredients = "ingredients"
+      url = "url"
+      uri = "uri"
 
       recipe = Recipe.new(label, image, health, ingredients, url, uri)
 
@@ -18,12 +18,11 @@ describe Recipe do
     end
 
 
-    it "cannot be created without a name or an id" do
-      skip
+    it "cannot be created without a label or an uri" do
+
       proc { Recipe.new()}.must_raise ArgumentError
       proc { Recipe.new(uri)}.must_raise ArgumentError
-      proc { Recipe.new("",12345)}.must_raise ArgumentError
-      proc { Recipe.new(nil, 12345)}.must_raise ArgumentError
+
     end
 
   end

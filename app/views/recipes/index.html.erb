@@ -1,4 +1,3 @@
-
 <header>
   <section class="head-search">
     <h1><%= link_to("Munch. More", root_path, class: "head-search") %>
@@ -7,30 +6,27 @@
   </section>
 </header>
 
-<div class="index-background">
-  <section class="row results ">
+<div class ="index-container">
+  <section class="index-recipes">
 
     <% if !@recipes.empty? %>
-    <h2 class="row results">Recipe Results for "<%= params[:search_term] %>"</h2>
 
+    <h2>Recipe Results for: "<%= params[:search_term] %>"</h2>
 
-    <% @recipes.each do |recipe| %>
-    <article class = "small-centered column">
-      <%= link_to image_tag(recipe.image), recipe_path(:uri => recipe.uri) %>
-      <h5>
-        <%= link_to recipe.label, recipe_path(:uri => recipe.uri) %>
-      </h5>
+    <ul>
+      <% @recipes.each do |recipe| %>
+      <li class="columns small-10 large-3 card">
+        <%= link_to image_tag(recipe.image), recipe_path(:uri => recipe.uri) %>
+        <%= link_to recipe.label, recipe_path(recipe.uri) %>
+      </li>
       <% end %>
-    </article>
+    </ul>
+    <%end %>
+
   </section>
-
-  <div class ="row pages">
-    <%= paginate @recipes %>
-  </div>
-
-  <% elsif @recipes.empty? %>
-  <h3>No results found. Please try another search term.</h3>
-
-  <% end %>
-
+  <p class="pages-info"><%= page_entries_info @recipes%></p>
 </div>
+<section class ="pagination">
+  <%= paginate @recipes %>
+
+</section>

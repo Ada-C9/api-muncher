@@ -1,5 +1,4 @@
 require 'httparty'
-require 'pry'
 
 class Recipe
   attr_accessor :name, :uri, :ingredients, :image, :dietary_info, :url, :source, :id

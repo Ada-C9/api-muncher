@@ -1,0 +1,88 @@
+nav {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.results-header {
+  background:rgba(255,255,255,0.5);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-around;
+  width: 80%;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+
+}
+
+.results-header h1 {
+  font-family: 'Do Hyeon';
+  font-size: 40px;
+}
+
+.results-header h1 a {
+  text-decoration: none;
+  color: black;
+}
+
+
+.search_container form {
+  width: 300px;
+}
+
+.search_container .input-container {
+  display: flex;
+  align-items: center;
+}
+
+
+.search_container .button {
+  height: 44px;
+  border: none;
+}
+
+
+.search_container #input {
+  width: 65%;
+  background: #B0C4DE;
+  font-family: inherit;
+  color: black;
+  letter-spacing: 1px;
+  text-indent: 5%;
+  border-radius: 5px 0 0 5px;
+}
+
+
+.search_container #submit {
+  width: 30%;
+  height: 46px;
+  background: #6E7B8B;
+  font-family: inherit;
+  font-weight: bold;
+  color: inherit;
+  letter-spacing: 1px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background .3s ease-in-out;
+}
+
+
+.search_container #submit:hover {
+  background: #344152;
+}
+
+
+.search_container input:focus {
+  outline: none;
+  outline: 2px solid #344152;
+  box-shadow: 0 0 2px #344152;
+}

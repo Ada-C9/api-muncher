@@ -1,16 +1,15 @@
 <section class="root">
   <div class="card">
     <div class="card-section">
-  <div class="home-img"> </div>
+      <div class="home-img"> </div>
     </div>
 
-        <h3>Find your flavor...</h3>
+    <h3>Find your flavor...</h3>
 
-        <%= form_tag search_results_path, method: :get do %>
-             <%= text_field_tag(:query) %>
-           <%= submit_tag "Search", class: "button" %>
-           <% end %>
+    <%= form_tag search_results_path, method: :get do %>
+    <%= text_field_tag(:query), params[:query], placeholder: 'Find recipe' %>
+    <%= submit_tag "Search", class: 'button ' %>
+    <% end %>
 
-
-    </div>
+  </div>
 </section>

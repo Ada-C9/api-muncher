@@ -9,7 +9,6 @@ class Recipe
     @ingredientLines = recipe["ingredientLines"]
     @calories = recipe["calories"]
     @totalNutrients = recipe["totalNutrients"]
-    @count = recipe["count"]
   end
 
 end

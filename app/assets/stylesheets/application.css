@@ -1,0 +1,87 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *= require normalize-rails
+
+ *
+ *= require_tree .
+ *= require_self
+ *= require foundation_and_overrides
+
+ */
+
+.index {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.index div {
+  margin: 10px;
+}
+
+.index img, .big-image img {
+  border-radius: 5px;
+  border: 3px solid #008080;
+}
+
+.index div p {
+  text-align: center;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(1, 1fr);
+}
+
+header {
+  border-bottom: 8px solid #008080;
+}
+
+footer {
+  border-top: 8px solid #008080;
+  margin-bottom: 30px;
+}
+
+footer div {
+  padding: 10px;
+  text-align: center;
+}
+
+footer div:first-child {
+  font-style: italic;
+}
+
+body {
+  margin: 3em;
+  color: #008080;
+  font-family: 'Poppins', sans-serif;
+}
+
+#search-button {
+  color: #008080;
+  font-size: 1.75em;
+}
+
+.form-fields {
+  display: flex;
+}
+
+.pagination {
+  text-align:center;
+}
+
+.pagination a {
+  display: inline-block;
+}

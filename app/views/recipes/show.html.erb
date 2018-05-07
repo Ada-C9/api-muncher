@@ -1,0 +1,51 @@
+<h1><%= "Recipe for #{@recipe.label}" %></h1>
+
+<div class="summary">
+<section>
+  <div class="big-image">
+    <img src="<%= @recipe.image %>" alt="<%= @recipe.label %>" >
+  </div>
+</section>
+
+<section>
+  <h3>Basics</h3>
+  <div><%= "Estimated Time: #{@recipe.time}" %></div>
+  <div><%= "Total Calories: #{@recipe.calories}" %></div>
+
+  <h3>Ingredients</h3>
+    <ul>
+      <% @recipe.ingredients.each do |i| %>
+        <li><%= i %></li>
+      <% end %>
+    </ul>
+</section>
+</div>
+
+<section class="nutrition">
+  <h3>Nutrition Facts</h3>
+  <table>
+    <thead>
+      <th>Nutrient</th>
+      <th>Amount</th>
+      <th>Recommended</th>
+      <th>% Daily Value</th>
+    </thead>
+
+    <tbody>
+
+      <% @recipe.nutrition_info.each do |n| %>
+
+      <tr>
+
+        <td><%= n["nutrient"] %></td>
+        <td><%= "#{n["total_amt"].round(1)}#{n["unit"]}" %></td>
+        <td><%= "#{n["daily_recommended"].round(1)}#{n["unit"]}" %></td>
+        <td><%= "#{@recipe.percent_of_rec(n["total_amt"], n["daily_recommended"])}%" %></td>
+
+      </tr>
+
+      <% end %>
+
+    </tbody>
+  </table>
+</section>

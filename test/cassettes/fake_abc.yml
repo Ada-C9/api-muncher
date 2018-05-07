@@ -1,0 +1,177 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.edamam.com/search?app_id=<APP_ID>&app_key=<APP_KEY>&q=fake%20abc&to=80
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - ngx_openresty
+      Date:
+      - Sun, 06 May 2018 15:43:54 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - route=ee37ea0cbec446fe0dc609c7b4a6323b; Path=/
+      Cache-Control:
+      - private
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      X-Served-By:
+      - ip-10-149-22-246/10.149.22.246
+      Vary:
+      - Accept-Encoding
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "q" : "fake abc",
+          "from" : 0,
+          "to" : 80,
+          "params" : {
+            "sane" : [ ],
+            "q" : [ "fake abc" ],
+            "to" : [ "80" ],
+            "app_key" : [ "<APP_KEY>" ],
+            "app_id" : [ "<APP_ID>" ]
+          },
+          "more" : false,
+          "count" : 0,
+          "hits" : [ ]
+        }
+    http_version: 
+  recorded_at: Sun, 06 May 2018 15:43:54 GMT
+- request:
+    method: get
+    uri: https://api.edamam.com/search?app_id=<APP_ID>&app_key=<APP_KEY>&q=&to=80
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - ngx_openresty
+      Date:
+      - Sun, 06 May 2018 17:06:29 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - route=ee37ea0cbec446fe0dc609c7b4a6323b; Path=/
+      Cache-Control:
+      - private
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      X-Served-By:
+      - ip-10-149-22-246/10.149.22.246
+      Vary:
+      - Accept-Encoding
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "q" : "",
+          "from" : 0,
+          "to" : 80,
+          "params" : {
+            "sane" : [ ],
+            "q" : [ "" ],
+            "to" : [ "80" ],
+            "app_key" : [ "<APP_KEY>" ],
+            "app_id" : [ "<APP_ID>" ]
+          },
+          "more" : false,
+          "count" : 0,
+          "hits" : [ ]
+        }
+    http_version: 
+  recorded_at: Sun, 06 May 2018 17:06:29 GMT
+- request:
+    method: get
+    uri: https://api.edamam.com/search?app_id=<APP_ID>&app_key=<APP_KEY>&q=&to=80
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - ngx_openresty
+      Date:
+      - Sun, 06 May 2018 17:06:30 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - route=272f54237f8ce06ebc267f46f9de4658; Path=/
+      Cache-Control:
+      - private
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      X-Served-By:
+      - ip-10-150-7-77/10.150.7.77
+      Vary:
+      - Accept-Encoding
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "q" : "",
+          "from" : 0,
+          "to" : 80,
+          "params" : {
+            "sane" : [ ],
+            "q" : [ "" ],
+            "to" : [ "80" ],
+            "app_key" : [ "<APP_KEY>" ],
+            "app_id" : [ "<APP_ID>" ]
+          },
+          "more" : false,
+          "count" : 0,
+          "hits" : [ ]
+        }
+    http_version: 
+  recorded_at: Sun, 06 May 2018 17:06:30 GMT
+recorded_with: VCR 4.0.0

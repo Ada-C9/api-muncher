@@ -1,0 +1,17 @@
+<% if @recipe_list.empty? %>
+  <h2><%= "Sorry, we don't have any recipes for that." %></h2>
+
+  <% else %>
+
+  <div class="index">
+    <% @recipe_list.each do |recipe_info| %>
+      <div>
+        <img src="<%= recipe_info[:image] %>" alt="<%= recipe_info[:label] %>" >
+        <p><%= link_to recipe_info[:label], recipe_path(recipe_info[:id]) %></p>
+      </div>
+    <% end %>
+  </div>
+
+  <%= will_paginate @recipe_list %>
+
+<% end %>

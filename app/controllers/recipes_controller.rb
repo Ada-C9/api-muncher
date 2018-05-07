@@ -1,4 +1,4 @@
-require ‘muncher_api_wrapper’
+require ‘MuncherApiWrapper’
 class RecipesController < ApplicationController
   def root
   end

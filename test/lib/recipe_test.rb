@@ -1,5 +1,6 @@
 require 'test_helper'
 
+# FIXME: Currently broken, need to fix. Have Charles and I walk through why in tutoring
 describe Recipe do
   describe 'initialize' do
     it 'can be created with a label and a hash for options' do

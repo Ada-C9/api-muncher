@@ -30,3 +30,25 @@
   [1m[35m (439.6ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
   [1m[35m (207.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
   [1m[35m (458.4ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (194.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (610.9ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (206.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (436.3ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (204.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (461.3ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (207.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (447.2ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (222.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (410.8ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (214.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (476.2ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (203.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (418.3ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (198.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (449.3ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (213.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (439.0ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (205.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (454.3ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (218.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (453.7ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m

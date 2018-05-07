@@ -1,10 +1,10 @@
 ENV["RAILS_ENV"] = "test"
 require File.expand_path("../../config/environment", __FILE__)
 require "rails/test_help"
+
 require "minitest/rails"
 require "minitest/reporters"  # for Colorized output
-require 'vcr'
-require 'webmock/minitest'
+
 
 VCR.configure do |config|
   config.cassette_library_dir = 'test/cassettes' # folder where casettes will be located

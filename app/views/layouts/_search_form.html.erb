@@ -1,0 +1,4 @@
+    <% params[:search] = nil %>
+    <%= form_tag(recipes_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: raw("Whatcha hungry for?") %>
+    <% end %>

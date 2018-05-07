@@ -1,16 +1,24 @@
-<section class="recipe">
-
-      <ul class="">
-        <li>
+<section>
+      <ul class="recipe-info">
+        <li class="recipe-name">
           <%= @recipe.label %>
         </li>
-        <li>
+        <li class="recipe-img">
           <%= image_tag @recipe.image %>
         </li>
-        <li> Direction/Source:
+        <li> <strong>Directions/Source:</strong>
           <%= link_to @recipe.source, @recipe.url, target: :_blank %>
         </li>
-        <li> Nutrition:
+        <li> <strong>Ingredients:</strong>
+          <ul>
+          <% @recipe.ingredients.each do |ingredient| %>
+            <li>
+              <%= ingredient %>
+            </li>
+          <% end %>
+          </ul>
+        </li>
+        <li> <strong>Health Facts:</strong>
           <ul>
           <% @recipe.health_labels.each do |label| %>
             <li>
@@ -19,14 +27,6 @@
           <% end %>
           </ul>
         </li>
-        <li> ingredients:
-          <ul>
-          <% @recipe.ingredients.each do |ingredient| %>
-            <li>
-              <%= ingredient %>
-            </li>
-          <% end %>
-        </ul>
-        </li>
+
       </ul>
 </section>

@@ -11,6 +11,7 @@
     <%= csrf_meta_tags %>
     <%= favicon_link_tag 'favicon.ico' %>
     <script src="https://developer.edamam.com/attribution/badge.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
   </head>
 
   <body>
@@ -20,7 +21,7 @@
         <%= link_to "Cooking Thyme", root_path %>
       </h2>
       <h5 id="slogan">
-        There is always thyme for cooking
+        There's always thyme for cooking
       </h5>
 
       <% if request.fullpath != root_path %>
@@ -49,7 +50,7 @@
   <footer id="footer">
     <section>
       <div id="edamam-badge" data-color="transparent"></div>
-      <h5>©2018, Luxi Lindsey</h5>
+      <h6>©2018, Luxi Lindsey</h6>
     </section>
   </footer>
 </html>

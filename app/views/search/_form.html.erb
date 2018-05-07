@@ -1,5 +1,7 @@
-<%= form_tag recipes_path, method: "get", :class => 'search-form' do %>
-  <%= label_tag :search_terms, "Find your flavor..." %>
-  <%= text_field_tag :search_terms %>
-  <%= submit_tag("Search") %>
-<% end %>
+<div class="search-bar">
+  <%= form_tag recipes_path, method: "get", :id => 'search-form' do %>
+    <%= label_tag :search_terms, "Find your flavor..." %>
+    <%= text_field_tag :search_terms %>
+    <%= submit_tag("Search") %>
+  <% end %>
+</div>

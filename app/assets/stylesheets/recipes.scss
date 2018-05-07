@@ -21,16 +21,16 @@
   padding-bottom: 2em;
 }
 .recipe-pic {
-  display: flex;
-  flex-wrap: wrap;
+  width: 500px;
+  display: block;
+  align-items: center;
   justify-content: center;
-  border-radius: 15%;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  vertical-align: baseline;
+  border-radius: 50%;
+  border: 10px double rgb(64, 34, 2);
 }
 .recipe_name {
   padding-left: 3em;
+  padding-bottom: 3em;
   display: flex;
   justify-content: flex-end;
   height: 10%;

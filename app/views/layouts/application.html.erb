@@ -13,7 +13,7 @@
   <nav>
   <%=link_to "Home", root_path ,class:"button"%>
 <%if user = User.find_by(id: session[:user_id]) %>
-  <span>Signed in as <%=user.username%> </span><%=link_to "Log out", signout_path, clss:"button"%>
+  <span>Signed in as <%=user.username%> </span><%=link_to "Log out", signout_path, class:"button"%>
 <%else%>
   <%= link_to "Sign-in with Github", "/auth/github", class:"button"  %>
 <%end%>

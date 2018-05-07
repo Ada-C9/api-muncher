@@ -3,6 +3,7 @@ require 'httparty'
 class RecipeApiWrapper
 
   URL = "https://api.edamam.com/search"
+  RPARAM = "http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_"
   ID = ENV["APP_ID"]
   KEY = ENV["APP_KEY"]
 
@@ -25,7 +26,13 @@ class RecipeApiWrapper
   end
 
   def self.get_recipe(id)
-    @recipes_list.find { |recipe| recipe.id == id }
+    response = HTTParty.get("#{URL}?r=#{RPARAM}#{id}&app_id=#{ID}&app_key=#{KEY}")
+    if response.empty?
+      return nil
+    else
+      recipe = Recipe.new(response[0])
+      return recipe
+    end
   end
 
 end

@@ -1,8 +1,8 @@
 class GrubController < ApplicationController
+  around_action :catch_api_error
 
     def index
-      @recipes = EdamamApiWrapper.recipe_list(params[:recipe])
-      @paginatable_array = Kaminari.paginate_array(@recipes).page(params[:page]).per(6)
+      @recipes = EdamamApiWrapper.recipe_list(params[:recipe]).paginate(page: params[:page], per_page: 10)
     end
 
     def new
@@ -10,7 +10,19 @@ class GrubController < ApplicationController
     end
 
     def show
-      @recipe = EdamamApiWrapper.recipe_detail(@uri)
+      uri = params[:uid]
+      @recipe = EdamamApiWrapper.recipe_detail(uri)
     end
+
+  private
+  def catch_api_error
+    begin
+      yield
+    rescue EdamamApiWrapper::RecipeError => error
+      flash[:status] = :failure
+      flash[:message] = "API called failed: #{error}"
+      redirect_back fallback_location: root_path
+    end
+  end
 
 end

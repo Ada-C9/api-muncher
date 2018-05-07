@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root 'grub#new'
   get '/recipe', to: 'grub#index', as: 'food_list'
-  get '/recipe/new', to: 'grub#new', as: 'new_food'
-  get '/recipe/:id', to: 'grub#show', as: 'food'
+  get '/recipes/:id', to: 'grub#show', as: 'food'
+  get '/recipe/new', to: 'grub#new'
 
 end

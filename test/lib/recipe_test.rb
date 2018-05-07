@@ -33,8 +33,8 @@ describe Recipe do
           "url" => 'url',
           "label" => "test channel",
           "image" => 'image',
-          "healthlabels" => 'peanuts',
-          "ingredientlines" => "asdkfjlskdjf"
+          "healthLabels" => 'peanuts',
+          "ingredientLines" => "asdkfjlskdjf"
         }
       end
 
@@ -46,8 +46,8 @@ describe Recipe do
         new_recipe.label.must_equal @fake_data["label"]
         new_recipe.uri.must_equal @fake_data["uri"]
         new_recipe.image.must_equal @fake_data["image"]
-        new_recipe.healthlabels.must_equal @fake_data["healthlabels"]
-        new_recipe.ingredientlines.must_equal @fake_data["ingredientlines"]
+        new_recipe.healthlabels.must_equal @fake_data["healthLabels"]
+        new_recipe.ingredientlines.must_equal @fake_data["ingredientLines"]
       end
 
       it 'Raises an exception without critical data' do

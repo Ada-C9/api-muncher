@@ -9,7 +9,8 @@
         <li class="gallery-item">
           <figure class="item-image">
             <%= image_tag item.image %>
-            <%= link_to item.label, food_path(item) %>
+            <%= link_to item.source, food_path(item) %><br/>
+             by <%= item.label %>
           </figure>
           </li>
       <% end %>

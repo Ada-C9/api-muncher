@@ -1,39 +1,41 @@
 class Recipe
 
-  attr_reader :uri, :url, :label, :image, :healthlabels, :ingredientlines
+  attr_reader :source, :uri, :url, :label, :image, :healthlabels, :ingredientlines
 
-  def initialize(uri, url, label, image, healthlabels, ingredientlines)
+  def initialize(source, uri, url, label, image, healthlabels, ingredientlines)
 
-    params_error(uri)
-    params_error(url)
-    params_error(label)
-    params_error(image)
-    params_error(healthlabels)
-    params_error(ingredientlines)
-
+    # raise_error(uri)
+    # raise_error(url)
+    raise_error(label)
+    raise_error(image)
+    # raise_error(healthlabels)
+    # raise_error(ingredientlines)
+    
+    @source = source
     @uri = uri
     @url = url
     @label = label
     @image = image
     @healthlabels = healthlabels
     @ingredientlines = ingredientlines
-
   end
 
   def self.from_api(raw_recipe)
     self.new(
-      raw_recipe["uri"],
+      raw_recipe["source"],
+      raw_recipe["uri"].split('_')[1].strip,
       raw_recipe["url"],
       raw_recipe["label"],
       raw_recipe["image"],
-      raw_recipe["healthlabels"],
-      raw_recipe["ingredientlines"]
+      raw_recipe["healthLabels"],
+      raw_recipe["ingredientLines"]
   )
   end
 
-  def params_error(param)
+  def raise_error(param)
     if param.nil? || param.empty?
       raise ArgumentError.new("Missing #{param}")
     end
   end
+
 end

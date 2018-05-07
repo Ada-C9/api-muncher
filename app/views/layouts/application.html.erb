@@ -28,6 +28,12 @@
       <%= yield %>
     </main>
 
+    <% if flash[:result_text] %>
+      <section class="status <%= flash[:status] %> ">
+        <h3><%= flash[:result_text] %></h3>
+      </section>
+    <% end %>
+
     <footer>
       <div>&copy muncher llc</div>
       <div id="edamam-badge" data-color="transparent"></div>

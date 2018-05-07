@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+    before_action :require_user_log_in, only: [:destroy]
   def create
   auth_hash = request.env['omniauth.auth']
   if auth_hash['uid']
@@ -7,12 +8,12 @@ class SessionsController < ApplicationController
       create_new_user
     else
       flash[:status] = :success
-      flash[:result_text] = "Logged in successfully, welcome back #{@user.username}"
+      flash[:message] = "Logged in successfully, welcome back #{@user.username}"
     end
     session[:user_id] = @user.id
   else
     flash[:status] = :failure
-    flash[:result_text] = "Log in has failed"
+    flash[:message] = "Log in has failed"
   end
     redirect_to query_results_path
  end
@@ -20,7 +21,7 @@ class SessionsController < ApplicationController
   def destroy
     session[:user_id] = nil
     flash[:status] = :success
-    flash[:result_text] = "You've logged out"
+    flash[:message] = "You've logged out"
     redirect_to query_results_path
   end
 
@@ -31,10 +32,10 @@ class SessionsController < ApplicationController
       @user = User.new(username: auth_hash['info']['nickname'], email: auth_hash['info']['email'], uid: auth_hash['uid'])
       if @user.save
         flash[:status] = :success
-        flash[:result_text] = "Your account has been generated #{@user.username}!"
+        flash[:message] = "Your account has been generated #{@user.username}!"
       else
         flash[:status] = :failure
-        flash[:result_text] = "Something has gone wrong in the account generation process."
+        flash[:message] = "Something has gone wrong in the account generation process."
       end
   end
 

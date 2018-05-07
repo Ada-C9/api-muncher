@@ -1,5 +1,5 @@
 class RecipeController < ApplicationController
-    before_action :require_user_log_in, only: [:show]
+  before_action :require_user_log_in, only: [:show]
   #First attempt at design - is this another valid approch?
   # def new
   #   @query = "user_input"
@@ -31,6 +31,7 @@ class RecipeController < ApplicationController
 
   def show
     @recipe = RecipeApiWrapper.a_recipe(params[:uri])
+
   end
 
 end

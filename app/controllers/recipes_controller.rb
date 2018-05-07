@@ -7,14 +7,18 @@ class RecipesController < ApplicationController
       params[:page] = 0
     end
 
-    @page = params[:page] * 10
+    @page = params[:page]
 
     all_recipes_info = ApiMuncherWrapper.get_recipes(@query, @page)
 
     params[:count] = all_recipes_info[0]
     @count = params[:count]
 
-    @recipes = all_recipes_info[1]
+    # This is the page we are on, starting a 0
+    params[:page] = all_recipes_info[1]
+    @page = params[:page]
+
+    @recipes = all_recipes_info[2]
   end
 
   def show

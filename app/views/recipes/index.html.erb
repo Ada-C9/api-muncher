@@ -6,7 +6,8 @@
   <%= submit_tag("Search") %>
 <% end %>
 
-<% if !@recipes.nil?  && @recipes.count > 0 %>
+<% if (!@recipes.nil?)  && (@recipes.count > 0) %>
+
   <% @recipes.each do |recipe| %>
     <ul>
       <li>
@@ -29,8 +30,7 @@
 
   <nav>
     <ul>
-
-      <% page_number = params[:page] + 1 %>
+      <% page_number = (params[:page]).to_i + 1 %>
       <% query = params[:q] %>
 
       <% if params[:page] > 1 %>
@@ -39,41 +39,35 @@
             :page => page_number - 1) %>
         </li>
       <% end %>
+
       <li>
         <%= link_to "Page #{page_number}", search_path(:q => query,
           :page => page_number) %>
       </li>
 
       <li>
-        <%= link_to "Page #{page_number + 1}", search_path(:q => query,
-          :page => (page_number + 1)) %>
+        <%= link_to "Page #{page_number + 1}", search_path(:q => query, :page => (page_number + 1)) %>
       </li>
 
       <li>
-        <%= link_to "Page #{page_number + 2}", search_path(:q => query,
-          :page => (page_number + 2) %>
+        <%= link_to "Page #{page_number + 2}", search_path(:q => query, :page => (page_number + 2)) %>
       </li>
 
       <li>
-        <%= link_to "Page #{page_number + 3}", search_path(:q => query,
-          :page => (page_number + 3) %>
+        <%= link_to "Page #{page_number + 3}", search_path(:q => query, :page => (page_number + 3)) %>
       </li>
 
       <li>
-        <%= link_to "Page #{page_number + 4}", search_path(:q => query,
-          :page => (page_number + 4)) %>
+        <%= link_to "Page #{page_number + 4}", search_path(:q => query, :page => (page_number + 4)) %>
       </li>
 
-      <% if params[:page] < (params[:count] / 10) %>
+      <% if (params[:page].to_i) < ((params[:count].to_i) / 10) %>
         <li>
           <%= link_to ">", search_path(:q => query,
-            :page => (page_number + 4) %>
+            :page => (page_number + 5)) %>
         </li>
       <% end %>
-
     </ul>
   </nav>
 
-  <% else %>
-    <%= "Sorry No Recipes Match #{params[:q]}" %>
-  <% end %>
+<% end %>

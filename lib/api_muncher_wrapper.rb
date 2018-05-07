@@ -13,7 +13,7 @@ class ApiMuncherWrapper
 
     return recipes if query.nil?
 
-    url = "#{BASE_URL}?q=#{query}&app_id=#{APPLICATION_ID}&app_key=#{APPLICATION_KEYS}&from=#{page}"
+    url = "#{BASE_URL}?q=#{query}&app_id=#{APPLICATION_ID}&app_key=#{APPLICATION_KEYS}&from=#{(page.to_i * 10)}"
     data = HTTParty.get(url)
 
     # is this better as a hash????
@@ -21,6 +21,8 @@ class ApiMuncherWrapper
     # how many recipes there are that match the querry
     all_recipes_info << data["count"]
 
+    # the range from X to X+10 for muncher api to return
+    all_recipes_info << (page.to_i + 1)
 
     data["hits"].each do |hit|
       uri = hit["recipe"]["uri"]

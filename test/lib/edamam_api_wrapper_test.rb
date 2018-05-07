@@ -5,21 +5,22 @@ describe EdamamApiWrapper do
  it "Can get results back" do
 	 search_term = "chicken"
 	 VCR.use_cassette("recipes") do
-		 response = EdamamApiWrapper.search_recipes(search_term, 0)
-		 ## how to test if you decide not the return the response and instead just
-		 ## want to see if it worked
-		 # response.must_equal true
-		 response["ok"].must_equal true
-		 # response["message"]["text"].must_equal message
+		 results = EdamamApiWrapper.search_recipes(search_term, 0)
+
+		 results.must_be_kind_of Hash
+		 results[:max_pages].must_be_kind_of Integer
+		 results[:recipes].must_be_kind_of Array
+		 results[:recipes].size.must_equal 10
+		 results[:recipes].all? { |recipe| recipe.class == Recipe }.must_equal true
 	 end
  end
- #
- # it "Can't send message to fake channel" do
-	#  VCR.use_cassette("channels") do
-	# 	 response = SlackApiWrapper.send_message("this-channel-does-not-exist",
-	# 		 "test message")
-	# 	 response["ok"].must_equal false
-	# 	 response["error"].wont_be_nil
-	#  end
- # end
+
+ it "raises an error for invalid information" do
+	 search_term = "potato"
+
+	proc { VCR.use_cassette("recipes") do
+		 EdamamApiWrapper.search_recipes(search_term, "foo")
+	 end }.must_raise ArgumentError
+ end
+
 end

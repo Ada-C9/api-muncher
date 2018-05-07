@@ -63,8 +63,8 @@ class EdamamApiWrapper
 	end
 
 	def self.add_from_to_url(from, build_url)
-		from = from.to_i if !from.nil?
-		if !from.nil? && !(from.is_a?(Integer) && from >= 0)
+		# from = from.to_i if !from.nil?
+		if !from.is_a?(Integer)
 			raise ArgumentError.new("invalid 'from'")
 		end
 		build_url << "&from=#{from}" if from.is_a?(Integer)

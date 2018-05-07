@@ -1,5 +1,4 @@
 require 'httparty'
-require 'will_paginate/array'
 
 class EdamamApiWrapper
 	include Standards

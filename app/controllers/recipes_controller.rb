@@ -1,3 +1,5 @@
+require_relative "../../lib/muncher_api_wrapper.rb"
+
 class RecipesController < ApplicationController
 
   def search; end

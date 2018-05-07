@@ -1,6 +1,11 @@
 // Place all the styles related to the recipes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.flash {
+  background-color: red;
+  color: white;
+}
+
 header {
   background: linear-gradient(to left, rgba(1,50,32,0.5), rgba(1,50,32,0.8));
   height: 6em;
@@ -53,3 +58,13 @@ header h1 a:visited{
 .recipe-show-page h4 {
   text-align: center;
 }
+
+// Small screens
+@media only screen { } /* Define mobile styles */
+
+@media only screen and (max-width: 40em) { } /* max-width 640px, mobile-only styles, use when QAing mobile issues */
+
+// Medium screens
+@media only screen and (min-width: 40.063em) { } /* min-width 641px, medium screens */
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) { } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */

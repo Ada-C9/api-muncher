@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title><%= content_for?(:title) ? yield(:title) : "Api-Muncher" %></title>
+
+  <%= stylesheet_link_tag    "application" %>
+  <%= csrf_meta_tags %>
+</head>
+    <h1><%= link_to "Snack Time", root_path, alt: "link to home page" %></h1>
+    <%= render partial: '/layouts/search_form' %>
+  </header>
+  <% if flash[:message] %>
+    <h3>
+      <%= flash[:message] %>
+    </h3>
+  </section>
+  <% end %>
+
+    <%= yield %>
+  </main>
+
+  <!-- <script src="https://developer.edamam.com/attribution/badge.js"></script> -->
+  <footer class="footer">
+      <%= image_tag("transparent.png", alt: "attribution badge for Edamam API") %>
+  </footer>
+</body>
+
+</html>

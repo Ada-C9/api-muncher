@@ -1,8 +1,8 @@
-<h2>Homepage</h2>
-<p>SEARCH BAR</p>
 
+<div class="search-form">
 <%= form_tag recipes_path, method: 'get' do %>
   <%= label_tag(:query, "Search for Recipes!") %>
   <%= text_field_tag(:query) %>
   <%= submit_tag("Send") %>
 <% end %>
+</div>

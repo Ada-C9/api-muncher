@@ -1,8 +1,18 @@
-<h2>HiHello</h2>
+<section class="index-page">
 
+<h2>Search Results</h2>
+
+<ul class="recipe-block">
 <% @recipes.each do |recipe| %>
-  <h3><%= link_to recipe.label, recipe_path(:uri => recipe.uri, :label => recipe.label) %></h3>
-  <img src=" <%= recipe.image %>" alt="recipe photo">
+    <li>
+      <h3><%= link_to recipe.label, recipe_path(:uri => recipe.uri, :label => recipe.label) %></h3>
+    <img src=" <%= recipe.image %>" alt="recipe photo">
+  </li>
 <% end %>
+</ul>
 
-<%= will_paginate @recipes, id: "paginate-index"%>
+<div class="paginate-bar"
+  <%= will_paginate @recipes, id: "paginate-index"%>
+</div>
+
+</section>

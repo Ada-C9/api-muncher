@@ -13,14 +13,41 @@
 
  *
  *= require_tree .
- *= require_self
  *= require foundation_and_overrides
+ *= require_self
 
  */
+
+
  body {
   background-image: url(brooke-lark-385507-unsplash.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+ }
+
+ main {
+   margin: 0;
+   position: absolute;
+   top: 53%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   vertical-align: middle;
+   margin: auto;
+   text-align: center;
+   display: grid;
+   grid-template-columns:  1fr;
+   grid-template-rows: 1fr, 1fr;
+   justify-items: center;
+   align-content: center;
+   border: solid white .3em;
+   padding: 15px;
+   padding-bottom: 25px;
+   
+ }
+
+ header {
+   color: white;
+   font-size: 3em;
  }
 
 footer {

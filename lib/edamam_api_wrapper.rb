@@ -28,7 +28,7 @@ class EdamamApiWrapper
   end
 
   def self.find(id)
-
+    @recipe = nil
     # Format recipe id into Edaman id:
     edaman_id = "http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_#{id}"
     #  "http://www.edamam.com/ontologies/edamam.owl#recipe_#{id}" encoded

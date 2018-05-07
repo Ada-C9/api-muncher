@@ -16,7 +16,7 @@
     <% end %>
   </nav>
 
-  <h1><%= link_to @recipe.name, @recipe.url %></h1>
+  <h1><%= link_to @recipe.name, @recipe.url, target: :_blank %></h1>
   <h3>By: <%= @recipe.contributor %></h3>
 
   <section class="recipe-details">

@@ -62,7 +62,7 @@
 .root {
   padding: 30%;
   padding-top: 5%;
-
+    padding-bottom: 5%;
   text-align: center;
 }
 
@@ -153,11 +153,10 @@ img {
     box-shadow: none;
 }
 
-input {
-
+/* input {
       background-color: white;
       background-image: url('searchicon.png');
       background-position: 10px 10px;
       background-repeat: no-repeat;
       padding-left: 40px;
-}
+} */

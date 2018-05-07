@@ -112,8 +112,17 @@
   display: inline;
 }
 
-.search-form {
+#search-form {
   width: 50%;
   display: block;
   margin: 0 auto;
 }
+/*
+#search-form {
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar input {
+  height: 100%;
+}*/

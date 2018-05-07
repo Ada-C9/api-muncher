@@ -34,6 +34,7 @@ describe RecipesController do
         session[:recent_searches].wont_include 'boeing'
       end
     end
+    # =======================
 
     it 'must return ok for no recipes' do
       VCR.use_cassette('recipes') do

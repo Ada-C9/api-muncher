@@ -42,3 +42,7 @@ footer {
 footer>div {
   margin-top: 1.5vh;
 }
+
+.search-form a {
+  color: black;
+}

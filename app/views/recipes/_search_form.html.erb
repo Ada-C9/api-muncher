@@ -1,6 +1,6 @@
 
 <section class="search-form">
-  <h1>YUMMMMSTER</h1>
+  <h1><%= link_to "YUMMMMSTER", root_path %></h1>
   <%= form_tag results_path, method: :get do %>
   <% if !@recipe && !@recipes %>
   <h3 class="tagline">Find your flavor...</h3>

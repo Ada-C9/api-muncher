@@ -1,0 +1,144 @@
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*= require normalize-rails
+
+*
+*= require_tree .
+*= require_self
+*= require foundation_and_overrides
+
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /*font-family: 'Work Sans', sans-serif;*/
+  /*font-family: 'Helvetica', sans-serif;*/
+  /*font-family: 'Quicksand', sans-serif;*/
+  /*font-family: 'Roboto', sans-serif;*/
+  font-family: 'Montserrat', sans-serif;
+  /*font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif*/
+  margin: 20px;
+}
+
+ul {
+  list-style-type: none;
+  margin-left: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h2 {
+  margin-bottom: 20px;
+
+}
+
+h3 {
+  font-size: 2em;
+}
+
+h3, h5 {
+  text-align: center;
+  padding-bottom: 40px;
+  padding-top: 20px;
+}
+
+footer {
+  width: 100%;
+  min-height: 30px;
+  margin: 50px auto;
+  padding: 20px 20px 40px 20px;
+  text-align: center;
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.title {
+  letter-spacing: 3px;
+  text-align: center;
+  color: black;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(186px, 1fr));
+  grid-column-gap: 25px;
+  grid-row-gap: 25px;
+}
+
+.grid-item {
+  justify-self: center;
+  align-items: center;
+}
+
+.show-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.show-section2 {
+  margin-left: 40px;
+}
+
+.show-section1 {
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+
+.show-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.pagination a {
+  display: inline;
+}
+
+.footer {
+  border-top: solid thin;
+  padding-bottom: 5px;
+}
+
+footer {
+  width: 100%;
+  min-height: 30px;
+  margin: 50px auto;
+  padding: 20px 20px 40px 20px;
+  text-align: center;
+}
+
+#search-form {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+
+@media screen and (max-width: 600px) {
+  .show-container {
+    flex-direction: column;
+    /*justify-content: center;
+    align-items: center;*/
+  }
+  .show-section2 {
+    margin-left: 0px;
+  }
+}

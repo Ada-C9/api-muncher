@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <script src="https://developer.edamam.com/attribution/badge.js"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <nav>
+        <ul class='top-nav'>
+          <li class="welcome">Welcome, Guest</li>
+        </ul>
+        <span>
+          <h2 class="title"><%= link_to image_tag("NOSHER-logo.png"), root_path %></h2>
+        </span>
+        <span>
+            <% unless (controller_name == "search" && action_name == "new") %>
+              <%= render partial: "form" %>
+            <% end %>
+        </span>
+      </nav>
+    </header>
+
+    <section>
+      <% flash.each do | name, message | %>
+      <% if name == "error" %>
+      <h4>You're doing something wrong</h4>
+      <dl>
+        <% flash[:error].each do |field, error_messages| %>
+          <dt><strong><%= field.upcase %></strong></dt>
+          <% if error_messages.class == Array %>
+            <% error_messages.each do |error_message| %>
+              <dd> >> <%= error_message %></dd>
+            <% end %>
+          <% else %>
+            <dd> >> <%= error_messages %></dd>
+          <% end %>
+        </li>
+        <% end %>
+      </dl>
+      <% else %>
+        <h4><%= message %></h4>
+        <% end %>
+      <% end %>
+    </section>
+
+    <%= yield %>
+
+  </body>
+  <footer class="footer">
+    <div id="edamam-badge" data-color="white"></div>
+    <p class="copyright ">Copyright 2018, N.Peters</p>
+  </footer>
+</html>

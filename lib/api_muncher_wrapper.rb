@@ -45,12 +45,11 @@ class ApiMuncherWrapper
      return nil
    else
      return Recipe.new(recipe["label"],
-     recipe["uri"],
-     image: recipe["image"],
+     recipe["uri"], {image: recipe["image"],
      source: recipe["source"],
      url: recipe["url"],
      ingredients: recipe["ingredientLines"],
-     dietary_info: recipe["dietLabels"])
+     dietary_info: recipe["dietLabels"]})
    end
  end
 

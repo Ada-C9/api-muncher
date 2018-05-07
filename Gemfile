@@ -5,6 +5,8 @@ ruby '2.5.0'
 
 gem 'httparty'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'kaminari'
+
 gem 'rails', '~> 5.2.0'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'

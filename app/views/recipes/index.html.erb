@@ -1,6 +1,20 @@
 <h3>Yummy recipes</h3>
 
-<% @recipes.each do |recipe| %>
-<%=image_tag(recipe.image)%>
-<%=link_to(recipe.label, recipe_path(:uri => recipe.uri), action: "show", method: :get)%>
+<% if @recipes %>
+<%= paginate @recipes, window: 2, outer_window: 1 %>
+
+
+<ul>
+	<% @recipes.each do |recipe| %>
+	<li>
+		<img src="<%= recipe.image %>" />
+		<%=link_to(recipe.label, recipe_path(recipe.uri))%>
+	</li>
+	<% end %>
+</ul>
+
+<aside>
+	<%= paginate @recipes, window: 2, outer_window: 1 %>
+</aside>
+
 <% end %>

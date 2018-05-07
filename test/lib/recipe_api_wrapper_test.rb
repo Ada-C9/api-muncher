@@ -19,7 +19,7 @@ describe "Recipes" do
 		it "returns the details for a specific recipe" do
 			VCR.use_cassette("recipes") do
 						search = "ice cream"
-						response = RecipeApiWrapper.get_details("115b7da63f48e228cfdbf88e0e0a338a")
+						response = RecipeApiWrapper.get_details("http://www.edamam.com/ontologies/edamam.owl#recipe_7bf4a371c6884d809682a72808da7dc2")
 
 						response.must_be_kind_of Recipe
 			end

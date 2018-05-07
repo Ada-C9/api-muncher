@@ -63,10 +63,10 @@ describe RecipesController do
     end
 
     it 'must return not found with a nonexistent uri' do
-      skip
       VCR.use_cassette('recipes') do
-        get recipe_path, params: {uri: 'this-is-not-a-uri'}
-        must_respond_with :not_found
+        get recipe_path, params: {uri: 'aasdlfasf;asdflk'}
+        must_respond_with :redirect
+        must_redirect_to root_path
       end
     end
   end

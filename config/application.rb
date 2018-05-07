@@ -10,7 +10,7 @@ module EdamamAPI
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
 
-    config.autoload_paths += %W(#{config.root}/lib)
+    # config.autoload_paths += %W(#{config.root}/lib)
     config.eager_load_paths += %W(#{config.root}/lib)
     config.generators do |g|
       g.test_framework :minitest, spec: true

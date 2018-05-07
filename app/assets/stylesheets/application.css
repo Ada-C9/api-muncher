@@ -1,0 +1,193 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *= require normalize-rails
+
+ *
+ *= require_tree .
+ *= require_self
+ *= require foundation_and_overrides
+
+ */
+
+ /* OVERALL */
+html, body {
+  height: 100%;
+  /* overflow: hidden; */
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: black;
+}
+
+li {
+ list-style-type: none;
+}
+
+/* HEADER */
+.header {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header a, .header p {
+  /* float: right; */
+  color: white;
+  padding: 0.5rem;
+}
+
+/* a.btn-default {
+  align-self: flex-end;
+}
+
+#nav-title {
+  align-self: flex-start;
+} */
+
+/* PAGINATION */
+.pagination a {
+  display: inline;
+  color: white;
+  font-size: 1rem;
+}
+
+a.single_recipe {
+  display: block;
+}
+
+div.pagination {
+  text-align: center;
+}
+
+/* ROOT PAGE */
+section.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("https://images.unsplash.com/photo-1491185841098-9ce20f966624?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f83a8cf7b92564946950e478c9606e4f&auto=format&fit=crop&w=2378&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+div.root {
+  margin-bottom: 6rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+form {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+div.submit {
+  text-align: center;
+}
+
+input#search {
+  background-color: transparent;
+  color: white;
+}
+
+/* LIST */
+section.list {
+  color: white;
+  background-color: black;
+}
+
+h2 {
+  text-align: center;
+  margin: 0;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+nav {
+  height: auto;
+}
+
+ul.pagination {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+ul.pagination li{
+  padding: 1rem;
+}
+
+a.single_recipe {
+  text-align: center;
+  color: white;
+}
+
+div#search_button {
+  text-align: center;
+}
+
+/* SHOW */
+section.show {
+  color: white;
+  background-color: black;
+  height: 100%;
+}
+
+section.show-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 3rem;
+}
+
+h4#show-title {
+  color: white;
+  padding-top: 2rem;
+  text-align: center;
+}
+
+div#show-photo {
+  padding-right: 2rem;
+}
+
+div#show-photo p {
+  text-align: center;
+}
+
+div#show-text {
+  padding-left: 2rem;
+}
+
+/* FOOTER */
+footer {
+  background-color: transparent;
+  color: white;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3rem;
+  text-align: center;
+  margin-top:auto;
+}

@@ -1,0 +1,35 @@
+<div class="header">
+  <p id="nav-title">Munchy</p>
+  <%= link_to root_path, class: "btn btn-default" do %>
+    <i class="fas fa-search"></i> search
+  <% end %>
+</div>
+
+<h4 id="show-title"><%= @recipe.name %></h4>
+
+<section class="show show-container">
+  <div id="show-photo">
+    <img src="<%= @recipe.image %>" alt= "<%= @recipe.name %>">
+    <p>Source: <%= link_to @recipe.source, @recipe.url, target: :_blank %></p>
+  </div>
+
+  <div id="show-text">
+    <p>Ingredients: </p>
+    <ul>
+      <% @recipe.ingredients.each do |ingredient| %>
+        <li><%= ingredient["text"] %></li>
+      <% end %>
+    </ul>
+    <p>Dietary Info: </p>
+    <ul>
+      <% if @recipe.dietary_info == [] %>
+        <p>None</p>
+      <% else %>
+        <% @recipe.dietary_info.each do |label| %>
+        <li><%= label %></li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+
+</section>

@@ -6,8 +6,10 @@ class EdamamApiWrapper
 	URL = "https://api.edamam.com/search?"
 	APP_ID = ENV["APPLICATION_ID"]
 	APP_KEY = ENV["APPLICATION_KEY"]
-	PER_PAGE = 9
-	MAX_ALLOWABLE_PAGES = 10
+	# API already sets Default to 10. Could remove PER_PAGE but keeping in case
+	# future versions of program wish to change this.
+	PER_PAGE = 10
+	MAX_ALLOWABLE_PAGES = 5 # Set to 5 to try to limit the number of calls to API
 
 	def self.search_recipes(query_text, from, diet: nil)
 		response = HTTParty.get(build_url_for_search(query_text, from, diet))
@@ -66,7 +68,7 @@ class EdamamApiWrapper
 			raise ArgumentError.new("invalid 'from'")
 		end
 		build_url << "&from=#{from}" if from.is_a?(Integer)
-		build_url << "&to=#{from + PER_PAGE}" if from.is_a?(Integer)
+		# build_url << "&to=#{from + PER_PAGE}" if from.is_a?(Integer)
 	end
 end
 	# def self.add_health_to_url(health, build_url)

@@ -43,11 +43,12 @@ ul {
   font-size: 1.3em;
 }
 
-.prod-container {
+.recipes-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
+  margin-left: 0;
 }
 
 .product-summary {
@@ -146,9 +147,10 @@ ul {
   color: white;
 }
 
-.pagination-ul {
+ul.pagination-ul {
   justify-content: center;
   align-content: center;
+  margin-left: -1rem;
 }
 
 .pagination-numbers, .current-page {
@@ -162,6 +164,7 @@ ul {
 .pagination-group {
   justify-content: center;
   align-content: center;
+  width: 100%;
 }
 
 .pagination-ul {

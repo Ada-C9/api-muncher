@@ -27,7 +27,6 @@ html * {
 body {
   background-color: lightgrey;
   background-size: 100% auto;
-
 }
 
 footer {
@@ -53,7 +52,7 @@ img {
 figure {
   padding: 1em;
   text-align: center;
-  width: 20em
+  width: 20em;
 }
 
 .font {
@@ -94,14 +93,14 @@ figure {
 
 .recipe-pic {
   align-content: center;
-  margin: 1em ;
+  margin: 1em;
   padding-right: 2em;
   padding-right: 2em;
 }
 
 .ingredients {
   align-content: center;
-  margin: 1em ;
+  margin: 1em;
   padding-right: 2em;
   padding-right: 2em;
 }
@@ -110,7 +109,7 @@ figure {
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
-  padding-left: 1em
+  padding-left: 1em;
   align-content: center;
   justify-content: center;
 }

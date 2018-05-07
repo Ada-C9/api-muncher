@@ -45,7 +45,6 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'minitest-vcr'
   gem 'webmock'
-  gem 'will_paginate'
   # gem 'capybara', '~> 2.13'
 end
 

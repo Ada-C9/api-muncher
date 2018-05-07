@@ -1,5 +1,5 @@
 html, body {
-  height:58%;
+  height:55%;
   padding: 0;
   margin: 0;
   background:url(https://www.foodiesfeed.com/wp-content/uploads/2015/05/homemade-bun-with-tea-and-a-book.jpg) no-repeat center center fixed;
@@ -8,13 +8,14 @@ html, body {
 
 
 body {
-  margin: 0px;
   background:rgba(255,255,255,0.5); /* applies a 50% transparent white background */
 }
 
+body {
+  margin: 0px;
+}
 
 .search_container {
-  /* background: #F8A434; */
   font-family: 'Gudea', sans-serif;
   color: black;
   text-align: center;

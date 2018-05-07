@@ -47,8 +47,10 @@ h1, h2, h3 {
   padding-top: 30px;
   padding-bottom: 15px;
   text-align: center;
+  /* position: fixed; */
 
 }
+
 
 .index-container {
   background-color: #E8E5E3;
@@ -69,7 +71,8 @@ li.small.medium {
   flex-direction: column;
   padding: 2em;
   max-width: 25%;
-  align-items: center;
+  /* align-items: center; */
+  justify-content: space-around;
 }
 
 .index-recipes ul li img {
@@ -171,4 +174,35 @@ footer {
   font-size: .10em;
   flex-shrink: 0;
   padding: 20px;
+}
+
+@media screen and (max-width: 780px) {
+  li.small.medium {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    max-width: 5%;
+    align-items: center;
+  }
+  .card {
+    height: 180px;
+    border-radius: 10  px;
+    border-color: white;
+    margin: 4%;
+    -moz-box-shadow: 0 0 5px #fff;
+    -webkit-box-shadow: 0 0 5px #fff;
+    box-shadow: 0px 0px 5px #fff;
+  }
+
+
+  .card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    padding-top: 8px;
+    } */
+}
+
+@media screen and (min-width: 450px) {
+
 }

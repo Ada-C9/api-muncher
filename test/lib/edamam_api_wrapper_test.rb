@@ -7,7 +7,7 @@ describe EdamamApiWrapper do
     it "Can search for existing food-item" do
       VCR.use_cassette("recipes") do
         response = EdamamApiWrapper.search_for("chicken")
-        response.must_equal []
+        response.must_be_kind_of Array
       end
     end
 

@@ -24,6 +24,7 @@ class EdamamApiWrapper
       end
     end
 
+
     return @recipe_list
 
   end
@@ -39,6 +40,7 @@ class EdamamApiWrapper
       encoded_uri = URI.encode("#{URL}?r=http://www.edamam.com/ontologies/edamam.owl#recipe_#{uri}&app_id=#{APP_ID}&app_key=#{APP_KEY}")
 
       response = HTTParty.get(encoded_uri)
+
 
       return Recipe.new(response[0])
     end

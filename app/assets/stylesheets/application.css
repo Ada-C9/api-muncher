@@ -17,3 +17,89 @@
  *= require foundation_and_overrides
 
  */
+body {
+  background-color: rgba(102, 153, 51, 0.15);
+  font-family: 'Bellefair', serif;
+  font-size: 1.5em;
+  color: #406020;
+  text-align: center;
+  min-height: 100%;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Aclonica', sans-serif;
+  margin: 0;
+  padding: 20px 0 10px;
+
+}
+
+header {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  border-bottom: 2.5px rgb(102, 153, 51) solid;
+}
+
+header h1 {
+  padding: 20px 0 10px;
+}
+
+footer {
+  background-color: white;
+  text-align: center;
+  border-top: 2.5px rgb(102, 153, 51) solid;
+}
+
+main {
+  margin: 50px 0 20px;
+  padding: 75px 0 50px;
+}
+
+.results-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.result {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.result img {
+  max-width: 240px;
+  border-radius: 50%;
+  border: 2.5px rgb(102, 153, 51) solid;
+}
+
+.result h4 {
+  text-align: center;
+}
+
+a:link, a:visited {
+  color: #406020;
+}
+
+a:hover {
+  color: rgb(102, 153, 51);
+}
+
+.pagination{
+  font-size: 2em;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.pagination .current {
+  background: #406020;
+}
+
+h3 > span {
+  color: rgb(102, 153, 51);
+}

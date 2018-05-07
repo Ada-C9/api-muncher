@@ -9,12 +9,15 @@
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+    <link href="https://fonts.googleapis.com/css?family=Aclonica" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
+
     <script src="https://developer.edamam.com/attribution/badge.js"></script>
   </head>
 
   <body>
     <header>
-      <h1>find some fare</h1>
+      <h1><%= link_to "find some fare", root_path %></h1>
     </header>
     <main>
       <%= yield %>

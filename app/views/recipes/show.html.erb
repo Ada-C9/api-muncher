@@ -7,10 +7,10 @@
   <section class="top">
     <% if @recipe && @recipe.title %>
     <h2><%= @recipe.title.capitalize %></h2>
+    <p>By <%= link_to @recipe.author, @recipe.website %></p>
     <% else %>
     <h2>Untitled Recipe</h2>
     <% end %>
-    <p>By <%= @recipe.author %></p>
   </section>
 
   <section>
@@ -28,6 +28,12 @@
   </section>
 
   <section>
+    <p>
+      Yields: <%= @recipe.yield %><br/>
+      <% if @recipe.time > 0 %>
+      Total Time: <%= @recipe.time %>
+      <% end %>
+    </p>
     <h3>Ingredients</h3>
     <% if @recipe.ingredients %>
     <ul>

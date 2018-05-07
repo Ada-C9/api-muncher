@@ -17,4 +17,12 @@ describe EdamamApiWrapper do
     end
   end
 
+  it "returns single recipe if searching single" do
+    VCR.use_cassette("recipes") do
+      id = "67b2867627c159e4f5bbaf2431b3ccb6"
+      response = EdamamApiWrapper.single_search(id)
+      response.must_be_kind_of Recipe
+    end
+  end
+
 end

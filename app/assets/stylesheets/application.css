@@ -1,0 +1,127 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *= require normalize-rails
+
+ *
+ *= require_tree .
+ *= require_self
+ *= require foundation_and_overrides
+
+ */
+
+body {
+  margin: 3em;
+}
+
+body * {
+  font-family: 'Nixie One', cursive;
+  font-weight: bold;
+}
+
+.muncher a{
+  font-family: 'Special Elite', cursive;
+  color: black;
+}
+
+.muncher {
+  text-align: center;
+  margin-bottom: 80px;
+
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+
+.recipe-title {
+  font-size: 2em;
+}
+
+.entry {
+  border: solid black 2px;
+  width: 450px;
+  padding: 70px;
+  margin-top: 30px;
+  margin-right: 10px;
+  color: black;
+}
+
+.date {
+  font-size: .8em;
+}
+
+.journal-entries {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 100px;
+}
+
+.button-container{
+  padding-top: 30px;
+}
+
+.read-more-button {
+  text-transform: uppercase;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.read-more-button {
+  color: black;
+}
+
+.read-more-button:hover {
+  background-color: rgb(109, 191, 15);
+  color: black;
+  cursor: default;
+}
+
+nav ul {
+  display: flex;
+}
+
+.search {
+  margin-left: auto;
+}
+
+
+.pagination a {
+    border: 1px solid #ddd;
+    display: inline;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100px;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,77 @@
+<nav>
+  <div class="index-search">
+    <%= form_tag recipes_path, method: :get do %>
+    <div class="row">
+      <div class="col-25">
+        <%= label_tag(:search, "Find your flavor...") %>
+      </div>
+      <div class="col-75">
+        <%= text_field_tag(:search) %>
+      </div>
+    </div>
+    <div>
+      <%= submit_tag("Search") %>
+    </div>
+
+    <% end %>
+  </nav>
+
+  <h1><%= link_to @recipe.name, @recipe.url, target: :_blank %></h1>
+  <h3>By: <%= @recipe.contributor %></h3>
+
+  <section class="recipe-details">
+    <section>
+      <%= image_tag @recipe.image %>
+    </section>
+
+    <section>
+      <h4>Ingredients</h4>
+      <ul class="ingredients">
+        <% @recipe.ingredients.each do |ingredient| %>
+        <li>
+          <%= ingredient %>
+        </li>
+        <% end %>
+      </ul>
+    </section>
+  </section>
+
+  <section class="label-section">
+    <section>
+      <h4>Dietary Labels</h4>
+      <% if @recipe.dietary_labels.empty? %>
+      <p>
+        None
+      </p>
+      <% else %>
+      <ul class="labels">
+        <% @recipe.dietary_labels.each do |label| %>
+        <li>
+          <%= label %>
+        </li>
+        <% end %>
+      </ul>
+      <% end %>
+
+    </section>
+
+    <section>
+      <h4>Health Labels</h4>
+      <% if @recipe.health_labels.empty? %>
+      <p>
+        None
+      </p>
+      <% else %>
+      <ul class="labels">
+        <% @recipe.health_labels.each do |label| %>
+        <li>
+          <%= label %>
+        </li>
+        <% end %>
+      </ul>
+      <% end %>
+    </section>
+
+    <button type="button" class="success button"><%= link_to "Read Recipe", @recipe.url,  target: :_blank %></button>
+
+  </section>

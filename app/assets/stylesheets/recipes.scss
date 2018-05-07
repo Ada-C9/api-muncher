@@ -1,6 +1,7 @@
 // Place all the styles related to the recipes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 .search-form {
   width: 50%;
 }
@@ -16,14 +17,31 @@
   border: none;
 }
 
-.recipe-block
+.recipe-block {
 
   display: grid;
-  width: 95vw;
+  width: 100vw;
   height: 65vh;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3,1fr);
   list-style-type: none;
   justify-content: center;
-  overflow-y:scroll;
+  overflow-y: scroll;
+  padding-right: 2%;
+}
+
+.recipe-block a {
+  color: black;
+  font-size: 1.2em;
+}
+
+.recipe-block a:hover {
+  color: white;
+
+}
+
+.show-recipe-page {
+  width: 90vw;
+  height: 90vh;
+  overflow-y: scroll;
 }

@@ -16,7 +16,7 @@ describe FavoritesController do
           image: 'www.goodfood.com/image/1'
         }
 
-        post favorites_path, params: {favorite: recipe_data}
+        post favorites_path, params: recipe_data
 
         must_respond_with :success
         Favorite.count.must_equal @favorite_count + 1
@@ -29,7 +29,7 @@ describe FavoritesController do
           image: 'www.goodfood.com/image/1'
         }
 
-        post favorites_path, params: {favorite: recipe_data}
+        post favorites_path, params: recipe_data
 
         must_respond_with :redirect
         Favorite.count.must_equal @favorite_count

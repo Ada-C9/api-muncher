@@ -3,6 +3,7 @@
   <div class="cell" id='recipe-info'>
     <h3 class='cell'> <strong> <%= @recipe.name %> </strong> </h3>
     <p class='cell'> <%= link_to 'See Recipe', @recipe.url, target: :_blank %> </p>
+    <p class='cell'> <%= link_to 'Add to Favorites', favorites_path(name: @recipe.name, uri: @recipe.uri, image: @recipe.image), method: :post %></p>
   </div>
 
 

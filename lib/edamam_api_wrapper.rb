@@ -24,6 +24,31 @@ class EdamamApiWrapper
   end
 
   def self.find_recipe(id)
+
+
+
     @recipe_list.find {|recipe| recipe.id == id }
+  end
+
+  def self.find_recipe(id)
+    recipe_id_list = []
+
+    @recipe_list.each do |recipe|
+      recipe_id_list << recipe.id
+    end
+
+    if !recipe_id_list.include?(id)
+      encoded_uri = URI.encode("#{URL}?r=http://www.edamam.com/ontologies/edamam.owl#recipe_#{id}&app_id=#{APP_ID}&app_key=#{APP_KEY}")
+
+      response = HTTParty.get(encoded_uri)
+
+      return Recipe.new(response[0])
+    end
+
+    @recipe_list.each do |recipe|
+      if recipe.id == id
+        return recipe
+      end
+    end
   end
 end

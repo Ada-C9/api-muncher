@@ -3,33 +3,33 @@ require 'test_helper'
 describe Recipe do
   describe 'initialize' do
     it 'can be created with all recipe parameters' do
-    uri = 'http://www.edamam.com/ontologies/edamam.owl#recipe_b1a783e4ad64f147e4bf3344464602c6'
-    label = 'Grilled Kale'
-    image = 'https://www.edamam.com/web-img/19e/19e5ea32ef3e12bdd4ba0abc04797ed0.jpg'
-    url = 'http://leitesculinaria.com/86679/recipes-grilled-kale.html'
-    source = "Leite's Culinaria"
-    healthLabels = [
-                    "Sugar-Conscious",
-                    "Vegan",
-                    "Vegetarian",
-                    "Peanut-Free",
-                    "Tree-Nut-Free",
-                    "Alcohol-Free"
-                  ]
-    ingredientLines = [
-                    "2 bunches lacinato kale (also known as black, dinosaur, or Tuscan kale)",
-                    "2 tablespoons extra-virgin olive oil",
-                    "Kosher salt"
-                ]
-    recipe = Recipe.new(uri, label, image, url, source, healthLabels, ingredientLines)
+      uri = 'http://www.edamam.com/ontologies/edamam.owl#recipe_b1a783e4ad64f147e4bf3344464602c6'
+      label = 'Grilled Kale'
+      image = 'https://www.edamam.com/web-img/19e/19e5ea32ef3e12bdd4ba0abc04797ed0.jpg'
+      url = 'http://leitesculinaria.com/86679/recipes-grilled-kale.html'
+      source = "Leite's Culinaria"
+      healthLabels = [
+        "Sugar-Conscious",
+        "Vegan",
+        "Vegetarian",
+        "Peanut-Free",
+        "Tree-Nut-Free",
+        "Alcohol-Free"
+      ]
+      ingredientLines = [
+        "2 bunches lacinato kale (also known as black, dinosaur, or Tuscan kale)",
+        "2 tablespoons extra-virgin olive oil",
+        "Kosher salt"
+      ]
+      recipe = Recipe.new(uri, label, image, url, source, healthLabels, ingredientLines)
 
-    recipe.uri.must_equal uri
-    recipe.label.must_equal label
-    recipe.image.must_equal image
-    recipe.url.must_equal url
-    recipe.source.must_equal source
-    recipe.healthLabels.must_equal healthLabels
-    recipe.ingredientLines.must_equal ingredientLines
+      recipe.uri.must_equal uri
+      recipe.label.must_equal label
+      recipe.image.must_equal image
+      recipe.url.must_equal url
+      recipe.source.must_equal source
+      recipe.healthLabels.must_equal healthLabels
+      recipe.ingredientLines.must_equal ingredientLines
 
     end
 
@@ -50,15 +50,15 @@ describe Recipe do
         "url" => 'https://medium.com/glitch/learning-about-learning-about-what-we-want-to-be-learning-9bd58e674d29',
         "source" => "Workforce Guinea Pigs",
         "healthLabels" => [
-                        "Super-Human",
-                        "Really-Hard-Working",
-                        "Time-Off-Free"
-                      ],
+          "Super-Human",
+          "Really-Hard-Working",
+          "Time-Off-Free"
+        ],
         "ingredientLines" => [
-                        "2 shots rye whiskey on the rocks",
-                        "3 hours sleep",
-                        "5 moments of panic"
-                    ]
+          "2 shots rye whiskey on the rocks",
+          "3 hours sleep",
+          "5 moments of panic"
+        ]
       }
     end
 
@@ -82,6 +82,5 @@ describe Recipe do
       }.must_raise
     end
   end
-
 
 end

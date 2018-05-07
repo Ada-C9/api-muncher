@@ -10,13 +10,16 @@ class FavoritesController < ApplicationController
       )
 
       if favorite.save
-        flash.now[:status] = :success
-        flash.now[:message] = 'Successfully added favorite'
+        flash[:status] = :success
+        flash[:message] = 'Successfully added favorite'
+        redirect_back(fallback_location: root_path)
         return
       else
         flash[:status] = :failure
         if favorite.errors.messages[:uri]
-          flash.now[:message] = 'You have alredy favorited this recipe'
+          flash[:message] = 'You have alredy favorited this recipe'
+          redirect_back(fallback_location: root_path)
+          return
         else
           flash[:message] = 'Unable to favorite'
           redirect_to root_path

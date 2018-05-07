@@ -282,7 +282,7 @@ $button-font-family: inherit;
 $button-padding: 0.85em 1em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
-$button-background: rgb(137, 179, 86);
+$button-background: #89b356;
 $button-background-hover: scale-color($button-background, $lightness: -15%);
 $button-color: $white;
 $button-color-alt: $black;
@@ -327,10 +327,10 @@ $callout-link-tint: 30%;
 
 $card-background: $white;
 $card-font-color: $body-font-color;
-$card-divider-background: $light-gray;
-$card-border: 1px solid $light-gray;
+$card-divider-background: rgb(215, 232, 194);
+$card-border: 1px solid rgb(137, 179, 86);
 $card-shadow: none;
-$card-border-radius: $global-radius;
+$card-border-radius: 3px;
 $card-padding: $global-padding;
 $card-margin-bottom: $global-margin;
 

@@ -27,7 +27,7 @@
             <% unless session[:user_id] %>
             <%= link_to 'Login', '/auth/google_oauth2', class: 'button' %>
             <% else %>
-            <%= link_to "Logged in as #{@logged_user.name}", user_path(@logged_user) %>
+            <%= "Logged in as #{@logged_user.name}" %>
             <%= link_to 'Logout', logout_path, method: :delete, class: 'button' %>
             <% end %>
           </div>
@@ -49,7 +49,7 @@
     </section>
 
     <main class='grid-x grid-margin-x'>
-      <aside class="recent-searches cell" aria-label="recent-searches">
+      <aside class="cell" aria-label="recent-searches" id='recent-searches'>
         <% if !session[:recent_searches].empty? %>
           <h5>
             <strong> Recent Searches: </strong>

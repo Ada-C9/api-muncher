@@ -74,10 +74,12 @@
   padding: 1%;
   border: solid 2px #e60000;
   align-items: center;
-    margin: 15px;
-     width: 250px;
 }
 
+.index .card {
+  margin: 15px;
+   width: 250px;
+}
 a {
   color: #e60000;
 }

@@ -10,6 +10,14 @@ class RecipesController < ApplicationController
   end
 
   def show
-    not_found unless @recipe = EdamamApiWrapper.find(params[:id])
+    @recipe = EdamamApiWrapper.find(params[:id])
+
+    if @recipe.nil?
+      flash[:alert] = "Invalid recipe."
+      redirect_back(fallback_location: root_path)
+    else
+      @recipe
+    end
+
   end
 end

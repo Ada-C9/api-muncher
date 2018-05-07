@@ -1,0 +1,49 @@
+<header>
+  <%= render partial: 'search_form' %>
+</header>
+
+<main class="recipe-details">
+
+  <section class="top">
+    <% if @recipe && @recipe.title %>
+    <h2><%= @recipe.title.capitalize %></h2>
+    <p>By <%= link_to @recipe.author, @recipe.website %></p>
+    <% else %>
+    <h2>Untitled Recipe</h2>
+    <% end %>
+  </section>
+
+  <section>
+    <%= image_tag @recipe.image %>
+    <h3>Dietary Labels</h3>
+    <% if @recipe.labels %>
+    <ul>
+      <% @recipe.labels.each do |label| %>
+      <li><%= label %></li>
+      <% end %>
+    </ul>
+    <% else %>
+    <p>No dietary labels available</p>
+    <% end %>
+  </section>
+
+  <section>
+    <p>
+      Yields: <%= @recipe.yield %><br/>
+      <% if @recipe.time > 0 %>
+      Total Time: <%= @recipe.time %>
+      <% end %>
+    </p>
+    <h3>Ingredients</h3>
+    <% if @recipe.ingredients %>
+    <ul>
+      <% @recipe.ingredients.each do |ing| %>
+      <li><%= ing %></li>
+      <% end %>
+    </ul>
+    <% else %>
+    <p>No ingredients available</p>
+    <% end %>
+  </section>
+
+</main>

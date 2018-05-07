@@ -1,21 +1,21 @@
-<html>
-<body>
-<%= stylesheet_link_tag "main_search" %>
 
-<section class="search_container">
-  <%= form_tag results_path, method: "get" do %>
-    <header>
-     <p>YUM MUNCHER</p>
-   </header>
-    <div class="description">
-      <p>What would you like to cook?</p>
-    </div>
-    <div class="input">
-      <%= text_field_tag(:query, nil, class: "button", id: "input") %>
-      <%= submit_tag("Get Recipes", class: "button", id: "submit") %>
-    </div>
-  <% end %>
-</section>
-</body>
+  <body>
+    <%= stylesheet_link_tag "main_search" %>
+
+    <section class="search_container">
+      <%= form_tag results_path, method: "get" do %>
+        <header>
+         <p>YUM MUNCHER</p>
+       </header>
+        <div class="description">
+          <p>What would you like to cook?</p>
+        </div>
+        <div class="input">
+          <%= text_field_tag(:query, nil, class: "button", id: "input") %>
+          <%= submit_tag("Get Recipes", class: "button", id: "submit") %>
+        </div>
+      <% end %>
+    </section>
+  </body>
+
     <p><div id="edamam-badge" data-color="white"></div></p>
-</html>

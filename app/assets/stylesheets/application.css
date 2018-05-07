@@ -71,7 +71,8 @@ nav {
   width: 30%;
   height: 46px;
   background: #6E7B8B;
-  font-family: inherit;
+  font-family: 'Gudea';
+  font-size: 14px;
   font-weight: bold;
   color: inherit;
   letter-spacing: 1px;

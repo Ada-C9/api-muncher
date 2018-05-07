@@ -16,7 +16,9 @@
     <% end %>
     </section>
     <section class="results-container">
-    <%= will_paginate @recipes, class: "row" %>
+      <nav class="pagination">
+        <%= will_paginate @recipes, class: "row" %>
+      </nav>
   </section>
       <p><div id="edamam-badge" data-color="white"></div></p>
   </main>

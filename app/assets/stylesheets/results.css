@@ -50,7 +50,8 @@ main {
   position: absolute;
   overflow: hidden;
   top: 0;
-  left: 0; }
+  left: 0;
+  font-family: 'Gudea'}
 
 .overlay-fade-in p {
   letter-spacing: 0.15em;
@@ -100,3 +101,40 @@ main {
 
 .overlay-fade-in:hover .button {
   transition-delay: 0.2s; }
+
+
+.pagination {
+  font-family: 'Do Hyeon';
+  font-size: 22px;
+  text-decoration: none;
+  color: black;
+}
+
+.pagination > * {
+    margin-right: 0.1em;
+    padding: 0.3em 0.4em;
+}
+
+.pagination a {
+  text-decoration: none;
+  color: black;
+}
+
+.pagination a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.pagination a:active {
+    text-shadow: none;
+    text-decoration: none;
+    color: black;
+
+}
+
+.pagination .current {
+    text-decoration: underline;
+    color: black;
+    font-size: none;
+    font-size: 26px
+}

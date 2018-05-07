@@ -1,1 +1,10 @@
-<%= @logged_user.name %>
+<h2> <%= @logged_user.name %> </h2>
+
+<article class="cell">
+  <h4>Favorites</h4>
+
+  <% @favorites.each do |favorite| %>
+    <%= render partial: 'shared/card', locals: {item: favorite} %>
+  <% end %>
+
+</article>

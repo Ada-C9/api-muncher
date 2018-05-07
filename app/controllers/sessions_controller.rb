@@ -36,8 +36,8 @@ class SessionsController < ApplicationController
     else
       flash[:status] = :failure
       flash[:message] = 'Not logged in'
-      redirect_to root_path
     end
+    redirect_to root_path
   end
 
   private

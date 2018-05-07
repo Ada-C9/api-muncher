@@ -17,6 +17,10 @@ class RecipesController < ApplicationController
 
 	def show
 		@recipe = EdamamApiWrapper.get_recipe(params[:uri])
+		if !@recipe
+			flash[:alert] = "Recipe does not exist"
+			redirect_to root_path
+		end
 	end
 
 	def search

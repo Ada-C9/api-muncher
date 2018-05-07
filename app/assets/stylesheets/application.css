@@ -19,11 +19,18 @@
 */
 
 
-
 .title-bar, .top-bar, .dropdown.menu, .top-bar-right li {
   background-color: #e60000;
   color: white;
-  /* background-color: white; */
+}
+
+li.menu-text{
+text-align: center;
+}
+
+ ul.menu{
+  background-color: #e60000;
+  color:  #e60000;
 }
 
 .top-bar-right .button {
@@ -152,11 +159,3 @@ img {
 .home-img img{
     box-shadow: none;
 }
-
-/* input {
-      background-color: white;
-      background-image: url('searchicon.png');
-      background-position: 10px 10px;
-      background-repeat: no-repeat;
-      padding-left: 40px;
-} */

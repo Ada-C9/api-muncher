@@ -1,5 +1,5 @@
 require 'httparty'
-require 'pry'
+
 
 class EdamamApiWrapper
 

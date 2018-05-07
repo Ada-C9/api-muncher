@@ -15,25 +15,27 @@
 
   <body class='grid-y'>
     <header>
-      <nav class='top-bar'>
-        <div class="left">
-          <span><%= link_to "Octo-Muncher", root_path %></span>
-          <% if @logged_user %>
+      <nav class="sticky sticky-topbar" data-sticky data-options="anchor: page; marginTop: 0; stickyOn: small;">
+        <div class="top-bar">
+          <div class="left">
+            <span><%= link_to image_tag('octo-icon.png', alt: 'octopus icon', style: 'width:50px'), root_path %></span>
+            <% if @logged_user %>
             <%= link_to 'Dashboard', user_path(@logged_user) %>
-          <% end %>
-        </div>
-        <div class="right">
-          <% unless session[:user_id] %>
+            <% end %>
+          </div>
+          <div class="right">
+            <% unless session[:user_id] %>
             <%= link_to 'Login', '/auth/google_oauth2', class: 'button' %>
-          <% else %>
+            <% else %>
             <%= link_to "Logged in as #{@logged_user.name}", user_path(@logged_user) %>
             <%= link_to 'Logout', logout_path, method: :delete, class: 'button' %>
-          <% end %>
+            <% end %>
+          </div>
         </div>
       </nav>
 
       <section>
-        <%= form_tag :recipes, url: recipes_path, method: :get, class: 'cell small-12 medium-10 large-4 large-offset-4', id: 'search-bar' do %>
+        <%= form_tag :recipes, url: recipes_path, method: :get, class: 'cell small-12 medium-10 large-4', id: 'search-bar' do %>
           <%= text_field_tag :query, params[:query], placeholder: 'Search for recipes' %>
           <%= submit_tag 'Get Recipes', class: 'button search' %>
         <% end %>

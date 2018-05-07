@@ -25,33 +25,37 @@
 
           <!-- TODO: Enable last seacrhes (create method to store it and create an About page.) -->
           <!-- <li class="has-submenu">
-            <a href="#0">Previous searchs</a>
-            <ul class="submenu menu vertical" data-submenu>
-              <li><a href="#0">One</a></li>
-              <li><a href="#0">Two</a></li>
-              <li><a href="#0">Three</a></li>
-            </ul>
-          </li>
-
-          <li><a href="#0">About</a></li>
-          <li><a href="https://developer.edamam.com/edamam-docs-recipe-api">API Source</a></li> -->
+          <a href="#0">Previous searchs</a>
+          <ul class="submenu menu vertical" data-submenu>
+          <li><a href="#0">One</a></li>
+          <li><a href="#0">Two</a></li>
+          <li><a href="#0">Three</a></li>
         </ul>
+      </li>
 
-      </div>
-      <div class="top-bar-right">
-        <ul class="menu">
-          <li><%= form_tag search_results_path, method: :get, class: "menu" do %></li>
-          <li><%= text_field_tag :query, params[:query], type: 'search', placeholder: 'Find recipe' %></li>
-          <li><%= submit_tag "Search", class: 'button' %></li>
-          <% end %>
-        </ul>
-      </div>
-    </div>
+      <li><a href="#0">About</a></li>
+      <li><a href="https://developer.edamam.com/edamam-docs-recipe-api">API Source</a></li> -->
+    </ul>
 
-  </header>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+      <li><%= form_tag search_results_path, method: :get, class: "menu" do %></li>
+      <li><%= text_field_tag :query, params[:query], type: 'search', placeholder: 'Find recipe' %></li>
+      <li><%= submit_tag "Search", class: 'button' %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+</header>
 </head>
 
 <body>
+  <% flash.each do |key, value| %>
+
+  <div class="callout <%= key %> " data-closable><%= value %></div>
+  <% end %>
 
   <%= yield %>
 

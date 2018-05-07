@@ -14,6 +14,7 @@ class EdamamApiWrapper
 	# PRE: provided uri must be a String. Otherwise throws ArgumentError.
 	def self.search_recipes(query_text, from, diet: nil)
 		response = HTTParty.get(build_url_for_search(query_text, from, diet))
+		return if response["count"] == 0
 		return {
 			recipes: build_recipes(response),
 			max_pages: get_max_page_count(response)

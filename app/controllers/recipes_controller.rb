@@ -2,16 +2,20 @@ class RecipesController < ApplicationController
 
 	def results
 		if params[:query_text] || session[:query_text]
-				# query_text = set_query_text(params[:query_text])
 				session[:query_text] = params[:query_text] if params[:query_text]
 				from = set_from(params[:from])
 				search_results = EdamamApiWrapper.search_recipes(session[:query_text], from)
-				@curr_from = params[:from].to_i
-				@recipes = search_results[:recipes]
-				@max_pages = search_results[:max_pages]
+				if search_results
+					@curr_from = set_curr_from_for_view(params[:from].to_i)
+					@recipes = search_results[:recipes]
+					@max_pages = search_results[:max_pages]
+				else
+					flash[:alert] = "No results!"
+					redirect_to root_path
+				end
 		else
 			flash[:alert] = "Something done broke!"
-			redirect_to root
+			redirect_to root_path
 		end
 	end
 
@@ -32,6 +36,10 @@ class RecipesController < ApplicationController
 		# 'from' is nil if it is coming from the search form. The rationale behind
 		# this was not to put this responsibility on view.
 		return from.nil? ? 0 : (from.to_i - 1) * 10
+	end
+
+	def set_curr_from_for_view(curr_from)
+		return curr_from.zero? ? 1 : curr_from
 	end
 
 	# !! Not currently used! This feature should be implemented is a future version

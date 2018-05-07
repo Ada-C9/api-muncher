@@ -1,5 +1,3 @@
-require 'api_muncher_wrapper'
-
 class RecipesController < ApplicationController
   def index
     @query = params[:q]

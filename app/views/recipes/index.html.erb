@@ -2,9 +2,9 @@
   <h3>Recipes </h3>
 
   <% if @recipes %>
-  <ul class="grid-x">
+  <ul class="row">
     <% @recipes.each do |recipe| %>
-    <li class="thumbnail">
+    <li class="small-1 medium-2 thumbnail">
       <div class="image">
         <%= image_url(recipe) %>
       </div>

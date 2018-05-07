@@ -4,13 +4,11 @@ class Recipe
 
   def initialize(source, uri, url, label, image, healthlabels, ingredientlines)
 
-    # raise_error(uri)
-    # raise_error(url)
+    raise_error(uri)
+    raise_error(url)
     raise_error(label)
     raise_error(image)
-    # raise_error(healthlabels)
-    # raise_error(ingredientlines)
-    
+
     @source = source
     @uri = uri
     @url = url

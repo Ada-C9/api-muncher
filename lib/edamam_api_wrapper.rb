@@ -24,7 +24,7 @@ class EdamamApiWrapper
     encoded_uri = URI.encode("#{BASE_URL}r=#{URI_BASE}#{uri}&app_id=#{APP_ID}&app_key=#{APP_KEY}")
     response = HTTParty.get(encoded_uri)
 
-    raise RecipeError.new("Could not find recipe") unless response[0]
+    raise StandardError.new("Could not find recipe") if response == []
 
     return Recipe.from_api(response[0])
   end

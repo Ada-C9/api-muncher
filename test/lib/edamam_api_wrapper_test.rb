@@ -5,9 +5,9 @@ describe "EdamamApiWrapper" do
 
     it "gives a list of recipes" do
       VCR.use_cassette("recipes") do
-        recipes = EdamamApiWrapper.recipe_list
+        recipes = EdamamApiWrapper.recipe_list("chicken")
 
-        recipe.each do |recipe|
+        recipes.each do |recipe|
           recipe.must_be_kind_of Recipe
 
           # remember to gem "dotenv-rails" move it in the gem file to the development and test , not just developmet because it is going to fail.
@@ -21,7 +21,7 @@ describe "EdamamApiWrapper" do
 
     it "gives a recipe" do
       VCR.use_cassette("recipe") do
-        recipe = EdamamApiWrapper.recipe_list
+        recipe = EdamamApiWrapper.one_recipe("uri")
 
 
         recipe.must_be_kind_of Recipe

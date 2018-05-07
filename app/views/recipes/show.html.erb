@@ -1,0 +1,51 @@
+<h1><%= @recipe.label %></h1>
+
+<h2>Ingredients: </h2>
+<ul>
+  <% @recipe.ingredientLines.each do |ingredient| %>
+  <li>
+    <%= ingredient %>
+  </li>
+  <% end %>
+</ul>
+
+<%= image_tag(@recipe.image) %>
+
+<h2>Health Labels: </h2>
+<ul>
+  <% @recipe.healthLabels.each do |health_label| %>
+<li>
+  <%= health_label %>
+</li>
+<% end %>
+</ul>
+
+<h2>Diet Labels: </h2>
+<ul>
+  <% @recipe.dietLabels.each do |diet_label| %>
+<li>
+  <%= diet_label %>
+</li>
+<% end %>
+</ul>
+
+
+
+
+<h2>Nutrition Info: </h2>
+<ul>
+  <% @recipe.totalNutrients.each do |nutrient| %>
+  <li>
+    <%= nutrient[0] %><%= ":" %>
+    <ul>
+
+      <% nutrient[1].each do |info| %>
+      <li>
+        <%= info[0] %> <%= ":" %><%= info[1] %>
+      </li>
+
+      <% end %>
+    </ul>
+  </li>
+  <% end %>
+</ul>

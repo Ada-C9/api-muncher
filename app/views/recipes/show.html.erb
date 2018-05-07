@@ -7,21 +7,23 @@
 <% end %>
 
 <% if @recipe %>
+    <h1><%= @recipe.name %></h1>
+
+    <img>
+      <%= image_tag(@recipe.image_url, :alt => "#{@recipe.name}") %>
+    </img>
+    
     <ul>
       <li>
-        <%= image_tag(@recipe.image_url, :alt => "#{@recipe.name}") %>
+        <%= "Allergy/Diet Restriction Info: #{@recipe.allergy}".delete("[]") =%>
       </li>
 
       <li>
-        <%= @recipe.name %>
+        <%= "Nutritional Info: #{@recipe.nutrition}".delete("[]") =%>
       </li>
 
       <li>
-        <%= "Allergy/Diet Restriction Info: #{@recipe.allergy}" =%>
-      </li>
-
-      <li>
-        <%= "Nutritional Info: #{@recipe.nutrition}" =%>
+        <%= link_to "Original #{@recipe.name} recipe source", @recipe.link, target: :_blank =%>
       </li>
 
       <li>
@@ -32,10 +34,6 @@
             </li>
           <% end %>
         </ul>
-      </li>
-
-      <li>
-        <%= link_to "Original #{@recipe.name} recipe", @recipe.link, target: :_blank =%>
       </li>
     </ul>
 

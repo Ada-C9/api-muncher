@@ -4,6 +4,10 @@ require "rails/test_help"
 require "minitest/rails"
 require "minitest/reporters"  # for Colorized output
 
+# add this for testing VCR!!!!
+require 'vcr'
+require 'webmock/minitest'
+
 #  For colorful output!
 Minitest::Reporters.use!(
   Minitest::Reporters::SpecReporter.new,
@@ -12,9 +16,6 @@ Minitest::Reporters.use!(
 )
 
 # add this for testing VCR!!!!
-require 'vcr'
-require 'webmock/minitest'
-
 VCR.configure do |config|
   config.cassette_library_dir = 'test/cassettes' # folder where casettes will be located
   config.hook_into :webmock # tie into this other tool called webmock
@@ -23,16 +24,13 @@ VCR.configure do |config|
     :match_requests_on => [:method, :uri, :body] # The http method, URI and body of a request all need to match
   }
 
-  
-  # Don't leave our Slack token lying around in a cassette file.
-  # do I  do this 2x b/c there are keys??
-  APPLICATION_ID
-  APPLICATION_KEYS
-  config.filter_sensitive_data("<SLACK_TOKEN>") do
-    ENV['SLACK_TOKEN']
+  config.filter_sensitive_data("<APPLICATION_ID>") do
+    ENV['APPLICATION_ID']
+  end
+  config.filter_sensitive_data("<APPLICATION_KEYS>") do
+    ENV['APPLICATION_KEYS']
   end
 end
-
 
 # To add Capybara feature tests add `gem "minitest-rails-capybara"`
 # to the test group in the Gemfile and uncomment the following:

@@ -17,3 +17,29 @@
  *= require foundation_and_overrides
 
  */
+
+ .search {
+   display: flex;
+   margin: auto;
+   align-items: left;
+   justify-content: space-around;
+ }
+
+ .img {
+   display: flex;
+   margin: auto;
+   align-items: left;
+   justify-content: space-around;
+ }
+
+ .recipies {
+  margin: auto;
+  list-style:none;
+  display: flex;
+  grid-template-columns: repeat(3, 1fr)
+ }
+
+ .recipes ul li{
+   display: flex;
+   margin: auto;
+ }

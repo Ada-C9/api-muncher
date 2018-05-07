@@ -1,4 +1,4 @@
-require 'test-helper'
+require 'test_helper'
 
 describe <Recipe> do
 
@@ -34,3 +34,8 @@ describe <Recipe> do
     recipe.id.must_equal "123"
   end
 end
+
+# creates recipe instances from q and r request
+# can I test the actual api muncher wrapper?
+# how do I test a wrapper? copy the testing in the slack wrapper code example
+# can access specific recipes

@@ -1,3 +1,8 @@
+body {
+  margin: 0px;
+  background: #F8A434;
+}
+
 .results-container {
   display: flex;
   flex-direction: row;
@@ -5,12 +10,13 @@
   justify-content: space-evenly;
   align-items: center;
   align-content: space-around;
+
 }
 
 
 .image-wrapper {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   border: 1px solid rgba(0, 0, 0, 0.04);
   overflow: hidden;
   position: relative;

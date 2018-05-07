@@ -1,15 +1,20 @@
 require 'httparty'
 
 class EdamamApiWrapper
-  def self.search_results(query)
-    app_id = ENV["EDAMAM_APP_ID"]
-    app_key = ENV["EDAMAM_APP_KEY"]
-    url = "https://api.edamam.com/search?q=#{query}&app_id=#{app_id}&app_key=#{app_key}&from=0&to=120"
+  class EdamamError < StandardError; end
 
-    response = HTTParty.get(url).parsed_response
+  APP_ID = ENV["EDAMAM_APP_ID"]
+  APP_KEY = ENV["EDAMAM_APP_KEY"]
+  BASE_URL = "https://api.edamam.com/search?"
+  BASE_URI = "http://www.edamam.com/ontologies/edamam.owl#recipe_"
+
+  def self.search_results(query)
+    url = "#{BASE_URL}q=#{query}&app_id=#{APP_ID}&app_key=#{APP_KEY}&from=0&to=120"
+
+    response = HTTParty.get(url)
 
     unless response["count"] > 0
-      raise StandardError.new
+      raise EdamamError.new
     end
 
     return response["hits"].map do |raw_recipe|
@@ -18,15 +23,13 @@ class EdamamApiWrapper
   end
 
   def self.recipe_details(id)
-    app_id = ENV["EDAMAM_APP_ID"]
-    app_key = ENV["EDAMAM_APP_KEY"]
-    uri = "http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_" + id.to_s
-    url = "https://api.edamam.com/search?r=#{uri}&app_id=#{app_id}&app_key=#{app_key}"
+    uri = URI.encode(BASE_URI) + id.to_s
+    url = "#{BASE_URL}r=#{uri}&app_id=#{APP_ID}&app_key=#{APP_KEY}"
 
-    response = HTTParty.get(url).parsed_response
+    response = HTTParty.get(url)
 
     unless response.count > 0
-      raise StandardError.new
+      raise EdamamError.new
     end
 
     return  Recipe.from_recipe_api(response)

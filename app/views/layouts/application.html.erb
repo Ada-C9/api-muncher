@@ -20,6 +20,12 @@
     </header>
 
     <main>
+      <% if flash[:status] %>
+        <section class="flash-message">
+          <h4><%= flash[:message] %></h4>
+        </section>
+      <% end %>
+
       <%= yield %>
     </main>
 

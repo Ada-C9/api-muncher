@@ -26,9 +26,22 @@ VCR.configure do |config|
     :match_requests_on => [:method, :uri, :body] # The http method, URI and body of a request all need to match
   }
   # Don't leave our Slack token lying around in a cassette file.
-  config.filter_sensitive_data("<SLACK_TOKEN>") do
-    ENV['SLACK_TOKEN']
+  config.filter_sensitive_data("APPID") do
+    ENV['APPID']
   end
+
+  config.filter_sensitive_data("APPKEY") do
+    ENV['APPKEY']
+  end
+
+  config.filter_sensitive_data("GITHUB_CLIENT_ID") do
+    ENV['GITHUB_CLIENT_ID']
+  end
+
+  config.filter_sensitive_data("GITHUB_CLIENT_SECRET") do
+    ENV['GITHUB_CLIENT_SECRET']
+  end
+
 end
 # To add Capybara feature tests add `gem "minitest-rails-capybara"`
 # to the test group in the Gemfile and uncomment the following:

@@ -14,7 +14,10 @@ module ApiMuncher
 
       # Always use .js files, never .coffee
       g.javascript_engine :js
-      config.autoload_paths << Rails.root.join('lib')
+
+      # TODO
+      # if you’re deploying to Heroku and it’s not able to find your wrapper class, try going into `config/application.rb` and changing `config.autoload_paths` to `config.eager_load_paths`
+      config.eager_load_paths << Rails.root.join('lib')
 
     end
     # Initialize configuration defaults for originally generated Rails version.

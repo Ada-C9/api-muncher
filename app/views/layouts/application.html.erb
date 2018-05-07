@@ -7,12 +7,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+<script src="https://developer.edamam.com/attribution/badge.js"></script>
     <title><%= content_for?(:title) ? yield(:title) : "YUM MUNCHER" %></title>
   <% unless controller_name=="recipe" && action_name=='new' %>
       <%= stylesheet_link_tag    "application" %>
       <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
       <%= csrf_meta_tags %>
+
     </head>
 
     <nav>

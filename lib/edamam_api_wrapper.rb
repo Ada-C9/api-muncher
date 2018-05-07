@@ -11,6 +11,8 @@ class EdamamApiWrapper
 	PER_PAGE = 10
 	MAX_ALLOWABLE_PAGES = 5 # Set to 5 to try to limit the number of calls to API
 
+	# PRE: provided uri must be a String. Otherwise throws ArgumentError.
+	#
 	def self.search_recipes(query_text, from, diet: nil)
 		response = HTTParty.get(build_url_for_search(query_text, from, diet))
 		return {
@@ -19,8 +21,11 @@ class EdamamApiWrapper
 		}
 	end
 
+	# PRE: provided uri must be a String. Otherwise throws ArgumentError.
+	# Returns the
 	def self.get_recipe(uri)
 		result = HTTParty.get(URI.encode(get_find_recipe_base_url(uri)))
+		raise ArgumentError.new("invalid uri") if result.empty?
 		return Recipe.new(result.pop)
 	end
 
@@ -35,7 +40,7 @@ class EdamamApiWrapper
 	end
 
 	def self.get_max_page_count(response)
-		total_pages = (response["count"] / PER_PAGE.to_f).ceil # ceil makes it an int
+		total_pages = (response["count"] / PER_PAGE.to_f).ceil # ceil -> int
 		return total_pages > MAX_ALLOWABLE_PAGES ? MAX_ALLOWABLE_PAGES : total_pages
 	end
 
@@ -47,10 +52,12 @@ class EdamamApiWrapper
 	end
 
 	def self.get_search_base_url(query_text)
+		raise ArgumentError.new("invalid search term") if !query_text.is_a?(String)
 		return get_base_url("q=#{query_text}")
 	end
 
 	def self.get_find_recipe_base_url(recipe_uri)
+		raise ArgumentError.new("invalid term") if !recipe_uri.is_a?(String)
 		return get_base_url("r=#{recipe_uri}")
 	end
 
@@ -63,32 +70,10 @@ class EdamamApiWrapper
 	end
 
 	def self.add_from_to_url(from, build_url)
-		# from = from.to_i if !from.nil?
-		if !from.is_a?(Integer)
-			raise ArgumentError.new("invalid 'from'")
-		end
+		raise ArgumentError.new("invalid from") if !from.is_a?(Integer) || from < 0
 		build_url << "&from=#{from}" if from.is_a?(Integer)
-		# build_url << "&to=#{from + PER_PAGE}" if from.is_a?(Integer)
 	end
 end
-	# def self.add_health_to_url(health, build_url)
-	# 	build_url << "&health=#{health}" if HEALTH_OPTIONS.include?(health)
-	# end
-
-	# def self.add_to_or_from_to_url(from, build_url)
-	# 	if !from.nil? && !(from.is_a?(Integer) && from >= 0)
-	# 		raise ArgumentError.new("invalid 'from'")
-	# 	end
-	# 	build_url << "&from=" << from if from.is_a?(Integer)
-	# end
-
-	# def self.add_to_to_url(to, build_url)
-	# 	if !to.nil? && !(to.is_a?(Integer) && to >= 0)
-	# 		raise ArgumentError.new("invalid 'to'")
-	# 	end
-	# 	build_url << "&to=#{to}" if to.is_a?(Integer)
-	# end
-
 
 
 ################################################################################

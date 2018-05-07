@@ -1,6 +1,5 @@
 class RecipesController < ApplicationController
 
-	# displays up to 10 results at a time from search
 	def results
 		if params[:query_text] || session[:query_text]
 				# query_text = set_query_text(params[:query_text])
@@ -11,7 +10,7 @@ class RecipesController < ApplicationController
 				@recipes = search_results[:recipes]
 				@max_pages = search_results[:max_pages]
 		else
-			flash[:alert] = "Something broke!"
+			flash[:alert] = "Something done broke!"
 			redirect_to root
 		end
 	end
@@ -25,16 +24,19 @@ class RecipesController < ApplicationController
 
 	private
 
-	def set_query_text(query_text)
-		# If query_text if not nil, it is search result and represents a new search.
-		# It stores this value in session[:query_text], in case past results are
-		# a feature in future versions.
-		session[:query_text] << query_text if query_text
-		return session[:query_text].last
-	end
-
 	def set_from(from)
-		# from is nil if it is the first time
+		# 'from' is nil if it is coming from the search form. The rationale behind
+		# this was not to put this responsibility on view.
 		return from.nil? ? 0 : (from.to_i - 1) * 10
 	end
+
+	# !! Not currently used! This feature should be implemented is a future version
+	# of the program wants to store previous searches.
+	# def set_query_text(query_text)
+	# 	# If query_text if not nil, it is search result and represents a new search.
+	# 	# It stores this value in session[:query_text], in case past results are
+	# 	# a feature in future versions.
+	# 	session[:query_text] << query_text if query_text
+	# 	return session[:query_text].last
+	# end
 end

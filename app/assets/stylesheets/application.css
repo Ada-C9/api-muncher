@@ -1,0 +1,78 @@
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*= require normalize-rails
+
+*
+*= require_tree .
+*= require_self
+*= require foundation_and_overrides
+
+*/
+
+header {
+  background-color: #A4D67B;
+}
+
+header #site-title {
+  text-align: center;
+  padding-top: 1rem;
+  font-size: 5em;
+  font-family: 'Lobster';
+}
+
+header #site-title a {
+  color: #DE4E42;
+}
+
+header #slogan {
+  text-align: center;
+  padding-top: .5rem;
+  padding-bottom: 1rem;
+  font-size: 2em;
+  font-family: 'Lobster', cursive;
+}
+
+#footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #C6C3C2;
+  color: white;
+}
+
+section#search-bar{
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 3%
+}
+
+input[type="submit"] {
+  margin-left: 85%;
+  border-radius: 12px;
+  font-size: 1.5em;
+}
+
+section.homepage-search-bar {
+  padding-top: 15rem;
+  padding-bottom: 15rem;
+}
+
+main section.homepage-search-bar{
+  background-image: url(cookingthyme.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  filter: alpha(opacity=30);
+  border-bottom: solid white 8px;
+}

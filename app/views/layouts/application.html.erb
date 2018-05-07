@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "Cooking Thyme" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <%= favicon_link_tag 'favicon.ico' %>
+    <script src="https://developer.edamam.com/attribution/badge.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <header>
+      <h2 id="site-title">
+        <%= link_to "Cooking Thyme", root_path %>
+      </h2>
+      <h5 id="slogan">
+        There's always thyme for cooking
+      </h5>
+
+      <% if request.fullpath != root_path %>
+      <nav class="nav-search">
+        <%= render partial: "form" %>
+      </nav>
+      <% end %>
+    </header>
+
+    <main>
+
+      <% if flash[:status] %>
+         <section class="row status <%= flash[:status] %>">
+           <h3>
+             <%= flash[:message] %>
+           </h3>
+          </section>
+      <% end %>
+
+
+      <%= yield %>
+    </main>
+
+  </body>
+
+  <footer id="footer">
+    <section>
+      <div id="edamam-badge" data-color="transparent"></div>
+      <h6>©2018, Luxi Lindsey</h6>
+    </section>
+  </footer>
+</html>

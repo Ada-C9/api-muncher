@@ -1,0 +1,11 @@
+<section id="search-bar">
+
+  <h4>Find a recipe...</h4>
+
+  <%= form_tag list_recipe_path, method: "get" do %>
+    <%= label_tag %>
+    <%= text_field_tag :ingredient, params[:ingredient], require: true%>
+    <%= submit_tag("Search") %>
+  <% end %>
+
+</section>

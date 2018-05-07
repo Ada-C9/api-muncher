@@ -6,7 +6,7 @@
 <section class="recipes-list">
   <% if @recipes %>
     <% if @recipes.count == 0 %>
-      <h3>(Alas, this time there was no whirlwind.)</h3>
+      <h3>(Alas, your search yielded zero results, so this time there was no whirlwind.)</h3>
     <% else %>
       <ul class="search-result">
         <% @recipes.each do |recipe| %>

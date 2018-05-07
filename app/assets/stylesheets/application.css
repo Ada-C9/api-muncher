@@ -44,3 +44,22 @@
 .footer {
   flex-shrink: 0;
 }
+
+.callout {
+  border: none;
+  text-align: center;
+}
+
+.callout .error, .callout .alert {
+  color: red;
+  background-color: yellow;
+}
+
+.field_with_errors input {
+  margin-bottom: 0;
+}
+
+.message {
+  color: red;
+  margin: 3px auto;
+}

@@ -1,7 +1,7 @@
 require 'httparty'
 require 'pry'
 
-class MuncherApiWrapper
+class EdemamWrapper
   BASE_URL = "https://api.edamam.com/search"
   SINGLE_RECIPE_URL = "http://www.edamam.com/ontologies/edamam.owl#recipe_"
   APP_ID = ENV["EDAMAM_APPLICATION_ID"]

@@ -8,13 +8,13 @@ class EdamamApiWrapper
 
   @recipe_list = []
 
-  def self.list_recipes(search)
+  def self.search_for(query)
     # def self.search_for(query)
     if !@recipe_list.empty?
       @recipe_list = []
     end
 
-    encoded_uri =  URI.encode("#{URL}?q=#{search}&app_id=#{APP_ID}&app_key=#{APP_KEY}&from=0&to=30")
+    encoded_uri =  URI.encode("#{URL}?q=#{query}&app_id=#{APP_ID}&app_key=#{APP_KEY}&from=0&to=30")
 
     response = HTTParty.get(encoded_uri)
 

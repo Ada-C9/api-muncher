@@ -4,6 +4,10 @@ require "rails/test_help"
 require "minitest/rails"
 require "minitest/reporters"  # for Colorized output
 
+if ActionPack::VERSION::STRING >= "5.2.0"
+  Minitest::Rails::TestUnit = Rails::TestUnit
+end
+
 #  For colorful output!
 Minitest::Reporters.use!(
   Minitest::Reporters::SpecReporter.new,

@@ -1,7 +1,11 @@
 <h3 class='cell small-10 small-offset-1 medium-6 medium-offset-3 large-10 large-offset-1'>Search results for <%= @query %></h3>
 
-<% @recipes.each do |recipe| %>
-  <%= render partial: 'shared/card', locals: {item: recipe} %>
+<% if @recipes.empty? %>
+  Oh no! There are no recipes
+<% else %>
+  <% @recipes.each do |recipe| %>
+    <%= render partial: 'shared/card', locals: {item: recipe} %>
+  <% end %>
 <% end %>
 
 <%= will_paginate @recipes, class: 'cell pagination' %>

@@ -18,12 +18,36 @@ describe RecipesController do
       end
     end
 
+    # these probably should be in model testing...
+    it 'updates recent_searches for a new search term' do
+      VCR.use_cassette('recipes') do
+        get recipes_path, params: {query: 'chicken'}
+
+        session[:recent_searches].must_include 'chicken'
+      end
+    end
+
+    it 'wont add a search term that produces no results' do
+      VCR.use_cassette('recipes') do
+        get recipes_path, params: {query: 'boeing'}
+
+        session[:recent_searches].wont_include 'boeing'
+      end
+    end
+
     it 'must return ok for no recipes' do
-      skip
       VCR.use_cassette('recipes') do
         get recipes_path, params: {query: 'some-non-indexed-dish'}
 
         must_respond_with :ok
+      end
+    end
+
+
+    it 'redirects to root when an error is received' do
+      skip
+      VCR.use_cassette('recipes') do
+        # not sure how to produce an error
       end
     end
   end

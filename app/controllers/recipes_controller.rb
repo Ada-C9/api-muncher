@@ -7,7 +7,7 @@ class RecipesController < ApplicationController
       @query = params[:query]
       @recipes = MuncherApiWrapper.get_recipes(@query).paginate(:page => params[:page], :per_page => 12)
 
-      unless session[:recent_searches].include?(@query)
+      unless session[:recent_searches].include?(@query) || @recipes.empty?
         session[:recent_searches] << @query
       end
     rescue

@@ -16,12 +16,12 @@ class FavoritesController < ApplicationController
       else
         flash[:status] = :failure
         if favorite.errors.messages[:uri]
-          flash[:message] = 'You have alredy favorited this recipe'
+          flash.now[:message] = 'You have alredy favorited this recipe'
         else
           flash[:message] = 'Unable to favorite'
+          redirect_to root_path
+          return
         end
-        redirect_to root_path
-        return
       end
     else
       flash[:status] = :failure

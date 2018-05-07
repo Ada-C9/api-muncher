@@ -53,7 +53,7 @@
             <strong> Recent Searches: </strong>
             <small>
               <% session[:recent_searches].last(5).reverse.each do |query| %>
-                <%= link_to query, recipes_path(query: query) %>
+                <%= link_to query, recipes_path(query: query), class: 'button small' %>
               <% end %>
             </small>
           </h5>

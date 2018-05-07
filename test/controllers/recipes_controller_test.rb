@@ -28,6 +28,7 @@ describe RecipesController do
         get recipes_path params: {query: "nematodes"}
         value(response).must_be :successful?
         flash[:result_text].must_equal "Your chosen foodstuff is too mëtäl for this app and has returned zero search results."
+        must_redirect_to root_path
       end
     end
 

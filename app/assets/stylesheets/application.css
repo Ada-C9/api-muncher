@@ -25,10 +25,10 @@
 }
 
 li.menu-text{
-text-align: center;
+  text-align: center;
 }
 
- ul.menu{
+ul.menu{
   background-color: #e60000;
   color:  #e60000;
 }
@@ -69,9 +69,8 @@ text-align: center;
 .root {
   padding: 30%;
   padding-top: 5%;
-    padding-bottom: 5%;
+  padding-bottom: 5%;
   text-align: center;
-  /* width: 400px;  */
   margin-right: 0;
 }
 
@@ -106,12 +105,12 @@ a:hover {
 }
 
 /* .menu-text a:hover {
-  color: black;
+color: black;
 } */
 
 footer {
   text-align: center;
-    padding-top: 3%;
+  padding-top: 3%;
 }
 
 
@@ -128,8 +127,8 @@ footer {
   display: inline-block;
 }
 .pagination {
-   margin-top: 20px;
- }
+  margin-top: 20px;
+}
 
 
 .recipe {
@@ -161,9 +160,13 @@ h2 {
 }
 
 img {
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .home-img img{
-    box-shadow: none;
+  box-shadow: none;
+}
+
+h4 {
+  text-align: center;
 }

@@ -15,14 +15,14 @@ describe EdamamApiWrapper do
 
     it 'raises an error if no query is provided' do
       VCR.use_cassette('recipes') do
-        proc { recipes = EdamamApiWrapper.search_results() }.must_raise StandardError
+        proc { recipes = EdamamApiWrapper.search_results() }.must_raise
       end
     end
 
-    it 'raises an error for fake query' do
+    it 'raises an error for invalid query' do
       VCR.use_cassette('recipes') do
-        proc { recipes = EdamamApiWrapper.search_results('12345') }.must_raise StandardError
-        proc { recipes = EdamamApiWrapper.search_results('qwerty') }.must_raise StandardError
+        proc { recipes = EdamamApiWrapper.search_results('12345') }.must_raise
+        proc { recipes = EdamamApiWrapper.search_results('qwerty') }.must_raise
       end
     end
   end
@@ -38,14 +38,14 @@ describe EdamamApiWrapper do
 
     it 'raises an error if no recipe id is provided' do
       VCR.use_cassette('recipe') do
-        proc { recipe = EdamamApiWrapper.recipe_details() }.must_raise StandardError
+        proc { recipe = EdamamApiWrapper.recipe_details() }.must_raise
       end
     end
 
-    it 'raises an error for fake recipe id' do
+    it 'raises an error for invalid recipe id' do
       VCR.use_cassette('recipe') do
-        proc { recipe = EdamamApiWrapper.recipe_details('12345') }.must_raise StandardError
-        proc { recipe = EdamamApiWrapper.recipe_details('qwerty') }.must_raise StandardError
+        proc { recipe = EdamamApiWrapper.recipe_details('12345') }.must_raise
+        proc { recipe = EdamamApiWrapper.recipe_details('qwerty') }.must_raise
       end
     end
   end

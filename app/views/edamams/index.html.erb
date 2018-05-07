@@ -9,14 +9,14 @@
       <figure>
         <%= image_tag("#{recipe.image}")  %>
       </figure>
-      <figcaption>
-      <%= link_to recipe.label, recipe_details_path(recipe) %>
-    </figcaption>
+      <p>
+        <%= link_to recipe.label, recipe_details_path(recipe.uri) %>
+      </p>
     </li>
     <% end %>
   </ul>
   <% end %>
 </section>
-<section>
-  <%= paginate @recipe_list %>
+</header>
+<%= paginate @recipe_list %>
 </section>

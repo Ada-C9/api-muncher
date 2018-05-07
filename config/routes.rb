@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'edamams#new'
   get '/recipe/new', to: 'edamams#new'
   get '/recipe/index', to: 'edamams#index', as: 'recipe_list'
-  get '/recipe/show', to: 'edamams#show', as: 'recipe_details'
+  get '/recipe/:uri', to: 'edamams#show', as: 'recipe_details'
 
 
 

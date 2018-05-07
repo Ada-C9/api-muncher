@@ -20,12 +20,19 @@ describe "RecipeApiWrapper" do
 
   it "raises and error if query is empty" do
     VCR.use_cassette('recipes') do
-    query = ' '
+      query = ' '
 
-    proc {
-      RecipeApiWrapper.recipes(query)
-    }.must_raise RecipeApiWrapper::RecipeError
+      proc {
+        RecipeApiWrapper.recipes(query)
+      }.must_raise RecipeApiWrapper::RecipeError
+    end
   end
-end
+
+  describe "single recipe" do
+    it "" do
+
+    end
+
+  end
 
 end

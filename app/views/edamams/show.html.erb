@@ -1,0 +1,21 @@
+<header>
+  <h1></h1>
+</header>
+
+<section>
+  <ul>
+    <li>
+    <%= @recipe.healthLabels%>
+    </li>
+    <li>
+<%= @recipe.ingredientLines %>
+    </li>
+    <li>
+      <%= @recipe.source %>
+      <p>
+      <%= link_to @recipe.source, @recipe.url, target: :_blank %>
+    </p>
+    </li>
+  </ul>
+
+</section>

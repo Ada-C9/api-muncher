@@ -1,6 +1,8 @@
 class RecipesController < ApplicationController
 
-  def root; end
+  def root;
+    @no_search_in_header = true
+  end
 
   def index
     begin

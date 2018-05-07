@@ -69,7 +69,7 @@ $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #1779ba,
+  primary: rgb(128, 86, 179),
   secondary: #767676,
   success: #3adb76,
   warning: #ffae00,
@@ -859,7 +859,7 @@ $xy-grid: true;
 $grid-container: $global-width;
 $grid-columns: 12;
 $grid-margin-gutters: (
-  small: 20px,
+  small: 0px,
   medium: 30px
 );
 $grid-padding-gutters: $grid-margin-gutters;

@@ -15,9 +15,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   align-content: space-around;
-  width: 80%;
-  padding-left: 30px;
-  padding-right: 30px;
+  width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
 
@@ -27,6 +25,7 @@ nav {
 .results-header h1 {
   font-family: 'Do Hyeon';
   font-size: 40px;
+  padding-left: 175px;
 }
 
 .results-header h1 a {
@@ -37,6 +36,7 @@ nav {
 
 .search_container form {
   width: 300px;
+  padding-right: 175px;
 }
 
 .search_container .input-container {

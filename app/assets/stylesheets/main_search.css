@@ -31,7 +31,8 @@ footer {
 .search_container form {
   width: 450px;
   /* margin: 17% auto; */
-  flex: 0, 2, auto
+  flex: 0, 2, auto;
+  justify-content: center;
 }
 
 
@@ -83,6 +84,7 @@ footer {
   height: 46px;
   background: #6E7B8B;
   font-family: inherit;
+  font-size: 16px;
   font-weight: bold;
   color: inherit;
   letter-spacing: 1px;

@@ -12,7 +12,6 @@ main {
     flex-flow: column;
     justify-content: center;
     align-items: center;
-
   }
 
 .show-container {
@@ -23,11 +22,12 @@ main {
   justify-content: space-evenly;
   align-items: center;
   align-content: space-around;
-  width: 80%;
+  width: 100%;
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 20px;
   padding-bottom: 20px;
+  flex: 0, 2, auto
 
 }
 
@@ -58,4 +58,8 @@ h2 {
   margin-top: 0px;
   font-family: 'Do Hyeon';
   font-size: 40px;
+}
+
+img {
+  border-radius: 8px;
 }

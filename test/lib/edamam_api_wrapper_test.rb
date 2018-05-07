@@ -63,17 +63,17 @@ describe EdamamApiWrapper do
 		end
 	end
 
-	# it "must work when provided too many from" do
-	# 	search_term = "ferret"
-	# 	VCR.use_cassette("recipes") do
-	# 		results = EdamamApiWrapper.search_recipes(search_term, 1000)
-	#
-	# 		results.must_be_kind_of Hash
-	# 		results[:max_pages].must_equal 1
-	# 		results[:recipes].must_be_kind_of Array
-	# 		results[:recipes].size.must_equal 1
-	# 		results[:recipes].all? { |recipe| recipe.class == Recipe }.must_equal true
-	# 	end
-	# end
+	it "must not break but give no results when from is too large" do
+		search_term = "ferret" # only one result, according to Postman
+		from = 1000
+		VCR.use_cassette("recipes") do
+			results = EdamamApiWrapper.search_recipes(search_term, from)
+
+			results.must_be_kind_of Hash
+			results[:max_pages].must_equal 1
+			results[:recipes].must_be_kind_of Array
+			results[:recipes].size.must_equal 0
+		end
+	end
 
 end

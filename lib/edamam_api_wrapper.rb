@@ -12,7 +12,6 @@ class EdamamApiWrapper
 	MAX_ALLOWABLE_PAGES = 5 # Set to 5 to try to limit the number of calls to API
 
 	# PRE: provided uri must be a String. Otherwise throws ArgumentError.
-	#
 	def self.search_recipes(query_text, from, diet: nil)
 		response = HTTParty.get(build_url_for_search(query_text, from, diet))
 		return {
@@ -22,7 +21,6 @@ class EdamamApiWrapper
 	end
 
 	# PRE: provided uri must be a String. Otherwise throws ArgumentError.
-	# Returns the
 	def self.get_recipe(uri)
 		result = HTTParty.get(URI.encode(get_find_recipe_base_url(uri)))
 		raise ArgumentError.new("invalid uri") if result.empty?

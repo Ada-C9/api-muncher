@@ -1,36 +1,18 @@
+<%= stylesheet_link_tag "search" %>
 
 
-	<link rel="stylesheet" href="photo_blog_with_sticky_headers.css">
+    <section class="results-container">
+    <% if @recipes %>
+      <% @recipes.each do |entry| %>
+      <div class="image-wrapper overlay-fade-in">
+          <%= image_tag(entry.image, alt: "recipe image") %>
 
-	<!-- container -->
-<div class="container">
-	<div class="row">
-		<div class="twelve columns">
-			<h1>Welcome to My Showcase</h1>
-			<p class="lede">
-          <%= render "search" %></p>
+        <div class="image-overlay-content">
+          <h2>  <%= link_to entry.label, { action: 'show', :uri => entry.uri }, class: "button" %></h2>
+        </div>
+      </div>
+    <% end %>
+    <% end %>
+    </section>
 
-
-      <% if @recipes %>
-			    <ul class="showcase">
-           <% @recipes.each do |entry| %>
-				     <li>
-                <div class="title">
-  						  <div class="pinned">
-                 <%= link_to entry.label, { action: 'show', :uri => entry.uri } %> </li>
-                </div>
-					      </div>
-					      <%= image_tag(entry.image) %>
-				      </li>
-            <% end %>
-			    </ul>
-        <% end %>
-		</div>
-	</div>
-</div>
-
-
-   <%= will_paginate @recipes, class: "row" %>
-
-</body>
-</html>
+<%= will_paginate @recipes, class: "row" %>

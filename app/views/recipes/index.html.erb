@@ -5,14 +5,18 @@
 <h2>And now you shall reap the whirlwind.</h2>
 <section class="recipes-list">
   <% if @recipes %>
-    <ul class="search-result">
-      <% @recipes.each do |recipe| %>
-        <li class="result-item">
-          <a><%= link_to recipe.name, recipes_detail_path(:uri_wanted => recipe.uri), :method => :get, :class => "recipe-name" %></a>
-          <a><%= image_tag(recipe.image, alt: "#{recipe.name}", class: "recipe-illustration") %></a>
-        </li>
-      <% end %>
-    </ul>
+    <% if @recipes.count == 0 %>
+      <h3>(Alas, this time there was no whirlwind. Your search returned zero results.)</h3>
+    <% else %>
+      <ul class="search-result">
+        <% @recipes.each do |recipe| %>
+          <li class="result-item">
+            <a><%= link_to recipe.name, recipes_detail_path(:uri_wanted => recipe.uri), :method => :get, :class => "recipe-name" %></a>
+            <a><%= image_tag(recipe.image, alt: "#{recipe.name}", class: "recipe-illustration") %></a>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
   <% end %>
 </section>
 <span class="pagination-container"><%= will_paginate @recipes, :class => "pagination" %></span>

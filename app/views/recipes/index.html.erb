@@ -1,1 +1,21 @@
-<h1>Recipe Index - All Recipes</h1>
+<section class="recipe-search-results">
+  <h1>Recipe Search Results</h1>
+  <% if @recipes %>
+    <ul>
+      <% @recipes.each do |recipe| %>
+        <li class="thumbnail">
+          <%= link_to recipe_path(recipe.uri) do %>
+            <%= image_tag (recipe.image) %>
+          <% end %>
+          <p>
+            <%= link_to recipe.label, recipe_path(recipe.uri) %>
+          </p>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+</section>
+
+<section class="pagination">
+    <%= paginate @recipes %>
+</section>

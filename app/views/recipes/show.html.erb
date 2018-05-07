@@ -1,0 +1,17 @@
+<h2><%= @recipe.label %> </h2>
+<h4>From: <%= @recipe.source %></h4>
+<section>
+  <%= image_tag recipe.image %>
+</section>
+
+<article>
+  <h4>Ingredients</h4>
+  <% @recipe.ingredients_list.each do |ingedient| %>
+    <li> ingredient </li>
+  <% end %>
+
+  <h4>Dietary Labels</h4>
+  <% @recipe.health_labels.each do |health_label| %>
+    <li> health_label </li>
+  <% end %>
+</article>

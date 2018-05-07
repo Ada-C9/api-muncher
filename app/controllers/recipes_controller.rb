@@ -13,7 +13,7 @@ class RecipesController < ApplicationController
       flash[:status] = :failure
       flash[:result_text] = "The raw power of your search has caused this app to fail."
       flash[:messages] = @recipes.errors.messages
-    elsif @recipes.empty?
+    elsif @recipes.count == 0
       flash[:status] = :failure
       flash[:result_text] = "Your chosen foodstuff is too mëtäl for this app and has returned zero search results."
     else
@@ -28,7 +28,7 @@ class RecipesController < ApplicationController
       flash[:status] = :success
     else
       flash[:status] = :failure
-      flash[:result_text] = "We cannot display that recipe because it requires geometries from beyond this universe and therefore would reduce every living being on this planet to gibbering madness."
+      flash[:result_text] = "We cannot display that recipe because it requires geometries from beyond this universe and therefore would reduce every living being on this planet to gibbering madness. We apologize for any inconvenience."
       redirect_to root_path
     end
   end

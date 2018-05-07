@@ -48,6 +48,7 @@
 .callout {
   border: none;
   text-align: center;
+  background-color: inherit;
 }
 
 .callout .error, .callout .alert {

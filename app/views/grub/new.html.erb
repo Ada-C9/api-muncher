@@ -1,0 +1,7 @@
+<section class="form-page">
+<%= form_tag grub_list_path(@recipes), method: "get" do %>
+  <%= label_tag(:recipe, "What is your flavor?") %>
+  <%= text_field_tag(:recipe) %>
+  <%= submit_tag("Search") %>
+<% end %>
+</section>

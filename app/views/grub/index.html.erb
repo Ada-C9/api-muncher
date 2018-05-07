@@ -1,19 +1,28 @@
-<section class="nav">
-  <span><%= paginate @paginatable_array %></span>
-</section>
+<article class="container">
+  <section class="form-page">
+    <%= form_tag grub_list_path(@recipes), method: "get" do %>
+    <%= label_tag(:recipe, "What is your flavor?") %>
+    <%= text_field_tag(:recipe) %>
+    <%= submit_tag("Search") %>
+    <% end %>
+  </section>
+  <section class="nav">
+    <span><%= paginate @recipes %></span>
+  </section>
 
-<section class="recipe-list">
-  <% if @recipes %>
+  <section class="recipe-list">
+    <% if @recipes %>
     <ul>
       <% @recipes.each do |item| %>
-        <li class="gallery-item">
-          <figure class="item-image">
-            <%= image_tag item.image %>
-            <%= link_to item.source, food_path(item) %><br/>
-             by <%= item.label %>
-          </figure>
-          </li>
+      <li class="gallery-item">
+        <figure class="item-image">
+          <%= image_tag item.image %>
+          <%= link_to item.label, grub_path(item.uri) %><br/>
+          by <%= item.source %>
+        </figure>
+      </li>
       <% end %>
     </ul>
-  <% end %>
-</section>
+    <% end %>
+  </section>
+</article>

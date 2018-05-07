@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <%= favicon_link_tag asset_path('favicon.png'), rel: 'icon', type: 'image/png' %>
+    <link href="https://fonts.googleapis.com/css?family=Arimo:400,700" rel="stylesheet">
+
+    <title><%= content_for?(:title) ? yield(:title) : "A Wok in Progress" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body class="page-container">
+    <header>
+      <img src="<%= asset_path('favicon.png')%>" alt="wok">
+      <h1><%= link_to "A Wok in Progress", root_path %></h1>
+    </header>
+
+    <main>
+      <% if flash[:status] %>
+        <section class="flash-message">
+          <h4><%= flash[:message] %></h4>
+        </section>
+      <% end %>
+
+      <%= yield %>
+    </main>
+
+    <footer>
+      <h4>Powered by Edamam</h4>
+    </footer>
+  </body>
+</html>

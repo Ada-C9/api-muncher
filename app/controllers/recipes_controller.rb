@@ -10,7 +10,6 @@ class RecipesController < ApplicationController
     @query = params[:query]
     @recipes = ( EdamamApiWrapper.recipe_search_result(@query)).paginate(page: params[:page], per_page: 10)
     if !@recipes
-      raise
       flash[:status] = :failure
       flash[:result_text] = "The raw power of your search has caused this app to fail."
       flash[:messages] = @recipes.errors.messages
@@ -19,7 +18,6 @@ class RecipesController < ApplicationController
       flash[:result_text] = "Your chosen foodstuff is too mëtäl for this app and has returned zero search results."
       redirect_to root_path
     else
-      raise
       flash[:status] = :success
     end
   end

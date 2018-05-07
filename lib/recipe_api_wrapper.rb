@@ -32,13 +32,13 @@ class RecipeApiWrapper
   end
 
   def self.limited_query(query,from,to)
-    if from.class != Integer || to.class != Integer
+    if from.class != String || to.class != String
       return []
     end
     if from.nil? || to.nil?
       return []
     end
-    if from < 0 || to < 0
+    if from.to_i < 0 || to.to_i < 0
       return []
     end
     response = HTTParty.get("https://api.edamam.com/search?q=#{query}&app_id=#{APP_ID}&app_key=#{APP_KEY}&from=#{from}&to=#{to}")

@@ -13,6 +13,7 @@ class RecipeController < ApplicationController
   # end
 
   def index
+
     @query = params[:query]
     if params[:from] && params[:to]
       @recipes = RecipeApiWrapper.limited_query(@query,params[:from],params[:to])
@@ -31,7 +32,6 @@ class RecipeController < ApplicationController
 
   def show
     @recipe = RecipeApiWrapper.a_recipe(params[:uri])
-
   end
 
 end

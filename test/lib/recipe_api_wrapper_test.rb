@@ -74,8 +74,8 @@ describe RecipeApiWrapper do
       #expected names are displayed
       VCR.use_cassette("recipe-query-specific-range") do
         a_recipe = "lime"
-        from = 4
-        to = 10
+        from = "4"
+        to = "10"
 
         response = RecipeApiWrapper.limited_query(a_recipe,from,to)
 
@@ -92,8 +92,8 @@ describe RecipeApiWrapper do
     it 'query w/specific range that are negative will return []' do
       VCR.use_cassette("must-be-positive") do
         a_recipe = "lime"
-        from = -4
-        to = -5
+        from = "-4"
+        to = "-5"
         response = RecipeApiWrapper.limited_query(a_recipe,from,to)
         #recieve expected data structure and size
         response.class.must_equal Array
@@ -116,11 +116,11 @@ describe RecipeApiWrapper do
       end
     end
 
-    it 'query w/specific range that are not of type Integer will return []' do
+    it 'query w/specific range that are not of type String will return []' do
       VCR.use_cassette("must-be-Integer") do
         a_recipe = "lime"
-        from = "4"
-        to = "5"
+        from = 4
+        to = 5
 
         response = RecipeApiWrapper.limited_query(a_recipe,from,to)
 

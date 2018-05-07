@@ -137,3 +137,11 @@ th{
 .flash-messages{
   color:white;
 }
+
+#user-signed-in{
+  color: #1779ba;
+}
+
+#user-name{
+  font-weight:bold;
+}

@@ -7,7 +7,6 @@ class RecipesController < ApplicationController
   end
 
   def index
-
     @recipes = EdamamApiWrapper.search_recipes(params[:search])
     if @recipes.length == 0
       flash[:message] = "No search results found"
@@ -16,7 +15,6 @@ class RecipesController < ApplicationController
   end
 
   def show
-    
 
     @recipe = EdamamApiWrapper.find_recipe(params[:uri])
     unless @recipe

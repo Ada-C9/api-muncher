@@ -7,34 +7,24 @@
   <title><%= content_for?(:title) ? yield(:title) : "Api-Muncher" %></title>
 
   <%= stylesheet_link_tag    "application" %>
-
   <%= csrf_meta_tags %>
 </head>
-
-<body class=<%= @home_page ? "home_body" : "body" %> >
-  <header class="small-12 small-centered columns" id="header">
-    <h1><%= link_to "Api-Muncher", root_path, alt: "link to home page" %></h1>
-    <% if @home_page == false %>
+    <h1><%= link_to "Snack Time", root_path, alt: "link to home page" %></h1>
     <%= render partial: '/layouts/search_form' %>
-    <% end %>
   </header>
   <% if flash[:message] %>
-  <section class="row status" id="flash">
     <h3>
       <%= flash[:message] %>
     </h3>
   </section>
   <% end %>
 
-  <main id="main-content">
     <%= yield %>
   </main>
 
   <!-- <script src="https://developer.edamam.com/attribution/badge.js"></script> -->
   <footer class="footer">
-    <div id="edamam-badge">
       <%= image_tag("transparent.png", alt: "attribution badge for Edamam API") %>
-    </div>
   </footer>
 </body>
 

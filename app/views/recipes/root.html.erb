@@ -5,9 +5,12 @@
     </div>
 
         <h3>Find your flavor...</h3>
+
         <%= form_tag search_results_path, method: :get do %>
-          <%= text_field_tag :query, params[:query], placeholder: 'Find recipe' %>
-        <%= submit_tag "Search", class: 'button ' %>
-        <% end %>
+             <%= text_field_tag(:query) %>
+           <%= submit_tag "Search", class: "button" %>
+           <% end %>
+
+
     </div>
 </section>

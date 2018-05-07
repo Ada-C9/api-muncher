@@ -10,10 +10,107 @@ h2 {
   color: #330249
 }
 
+h3 {
+  text-align: center;
+}
+
+.recipe-source {
+  font-family: 'Alegreya', serif;
+  color: #282168;
+  text-align: center;
+}
+
 body {
   background-color: #6F575C;
 }
 
-input {
-  background: #266015;
+
+ul.search-result {
+  list-style-type: none;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 40px;
+  justify-content: center;
+}
+
+li.result-item {
+  display: inline-block;
+  max-width: 30%;
+  padding-top: 20px;
+}
+
+li.result-item a {
+  display: block;
+}
+
+.recipe-name {
+  text-align: left;
+  font-family: 'Cinzel', serif;
+  font-weight: bold;
+  color: #FFF8DC;
+  max-width: 70%
+}
+
+.recipe-illustration {
+  align-content: center;
+  max-width: 200;
+  max-height: 200;
+}
+
+.pagination {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#edamam-badge {
+  float: right;
+}
+
+.recipe-info-container h5 {
+  font-weight: bold;
+  color: #5C0909;
+}
+
+.recipe-info-container {
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+
+.pic_and_diet_container {
+  display: inline-block;
+  max-width: 40%;
+}
+
+.target-pic-container {
+  display: block;
+  padding-bottom: 20px;
+}
+
+.diet_info_container {
+  display: block;
+}
+
+.target-recipe-pic {
+  align-content: center;
+  max-width: 400;
+  max-height: 400;
+}
+
+.ingredient-container {
+  display: inline-block;
+  max-width: 40%;
+}
+
+.ingredient-container {
+  max-width: 40%
 }

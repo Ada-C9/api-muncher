@@ -3,11 +3,6 @@ require 'will_paginate/array'
 
 class RecipesController < ApplicationController
 
-  # def new
-  #   #This is for the front page search
-  #   # @recipe = params[:recipe]
-  # end
-
   def search
   end
 

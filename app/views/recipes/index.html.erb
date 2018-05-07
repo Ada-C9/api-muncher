@@ -1,19 +1,18 @@
 
 
+
+<h1>You have searched for <%= @query %>. </h1>
+<h2>And now you shall reap the whirlwind.</h2>
 <section class="recipes-list">
-  <h1>You have searched for <%= @query %>. </h1>
-  <h2>And now you shall reap the whirlwind.</h2>
   <% if @recipes %>
-    <ul>
+    <ul class="search-result">
       <% @recipes.each do |recipe| %>
-        <li>
-          <h3><%= recipe.name %></h3>
-          <%= link_to recipe.name, recipes_detail_path(:uri_wanted => recipe.uri), :method => :get %>
-          <%= recipe.name %>
-          <%= image_tag(recipe.image, size: 200, alt: "#{recipe.name}") %>
+        <li class="result-item">
+          <a><%= link_to recipe.name, recipes_detail_path(:uri_wanted => recipe.uri), :method => :get, :class => "recipe-name" %></a>
+          <a><%= image_tag(recipe.image, alt: "#{recipe.name}", class: "recipe-illustration") %></a>
         </li>
       <% end %>
-      <%= will_paginate @recipes %>
     </ul>
   <% end %>
 </section>
+<span class="pagination-container"><%= will_paginate @recipes, :class => "pagination" %></span>

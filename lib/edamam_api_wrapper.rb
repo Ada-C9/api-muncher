@@ -48,7 +48,6 @@ class EdamamApiWrapper
 
     url = BASE_URL + "r=" + "http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_" + uri + "&app_id=#{app_id}" + "&app_key=#{app_key}"
 
-    # cuando parsed_response?
     data = HTTParty.get(url)
 
     if data.body == '['

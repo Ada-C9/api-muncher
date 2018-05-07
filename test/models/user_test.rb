@@ -48,6 +48,13 @@ describe User do
     it 'can be created with all required data' do
       @user.must_be :valid?
     end
+  end
 
+  describe 'relations' do
+    it 'connects a user and a favorite' do
+      Favorite.create!(name: 'Teriyaki Chicken', uri: 'http://www.recipe.com/12345', user: users(:one))
+
+      users(:one).favorites.must_include Favorite.last
+    end
   end
 end

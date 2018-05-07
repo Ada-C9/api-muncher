@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :favorites
   validates :email, presence: true
 
   def self.build_from_google(data_hash)

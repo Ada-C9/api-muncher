@@ -35,7 +35,7 @@
     </section>
 
     <main class='grid-x grid-margin-x'>
-      <aside class="recent-searches" aria-label="recent-searches">
+      <aside class="recent-searches cell" aria-label="recent-searches">
         <% if !session[:recent_searches].empty? %>
           <h4> <strong> Recent Searches </strong> </h4>
           <% session[:recent_searches].each do |query| %>

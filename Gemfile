@@ -44,6 +44,7 @@ group :development, :test do
   gem 'httparty'
   gem 'minitest-vcr'
   gem 'webmock'
+  gem 'kaminari'
 end
 
 group :development do

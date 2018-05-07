@@ -1,34 +1,74 @@
 require "httparty"
-require "awesome_print"
 
 class EdamamApiWrapper
-  # Your code here!
-  BASE_URL = "https://api.edamam.com/"
-  APP_KEY = ENV["EDAMAM_KEY"]
-  APP_ID = ENV["EDAMAM_ID"]
 
-  def self.search(query)
-    app_key ||= APP_KEY
+  URL = "https://api.edamam.com/search?"
+  APP_ID = ENV["APP_ID"]
+  APP_KEY = ENV["APP_KEY"]
+
+  def self.search_recipes(search_term, app_id = nil, app_key = nil)
     app_id ||= APP_ID
-    query = URI.encode(query)
-    url = BASE_URL + "search?app_key=#{app_key}" + "&app_id=#{app_id}" + "&q=#{query}" + "&from=0&to=100"
+    app_key ||= APP_KEY
 
-    data = HTTParty.get(url)
+    url = URL + "q=#{search_term}&app_id=#{app_id}&app_key=#{app_key}&from=0&to=100"
 
-        Recipe.new(
-          name: recipe_hash["recipe"]["label"],
-          id: recipe_hash["recipe"]["uri"].remove("http://www.edamam.com/ontologies/edamam.owl#recipe_"),
-          url: recipe_hash["recipe"]["url"],
-          ingredients: recipe_hash["recipe"]["ingredientLines"],
-          dietary_info: recipe_hash["recipe"]["dietLabels"],
-          health_info: recipe_hash["recipe"]["healthLabels"],
-          image: recipe_hash["recipe"]["image"],
-          source: recipe_hash["recipe"]["source"],
-          yield:recipe_hash["recipe"]["yield"])
+    results = HTTParty.get(url)
+
+    recipe_results = []
+    if results["hits"]
+      results["hits"].each do |recipe|
+        recipe_results << create_recipe(recipe)
       end
-      return recipes
     else
-      return[]
+      return []
+    end
+    return recipe_results
+  end
+
+  private
+
+  def self.create_recipe(api_params)
+    return Recipe.new(
+    api_params["recipe"]["uri"],
+    api_params["recipe"]["label"],
+    api_params["recipe"]["image"],
+    api_params["recipe"]["url"],
+    api_params["recipe"]["yield"],
+    api_params["recipe"]["ingredientList"],
+    {
+      totalNutrients: api_params["recipe"]["totalNutrients"],
+      calories: api_params["recipe"]["calories"],
+      healthLabels: api_params["recipe"]["healthLabels"],
+      dietLabels: api_params["recipe"]["dietLabels"]
+    }
+    )
+  end
+
+  def self.find_recipe(uri, api_id = nil, app_key = nil)
+    app_id ||= APP_ID
+    app_key ||= APP_KEY
+
+    return nil if uri == nil
+
+    url = URL + "r=#{uri}&app_id=#{app_id}&app_key=#{app_key}"
+    result = HTTParty.get(url)
+    if result && result[0]
+      Recipe.new(
+      result[0]["uri"],
+      result[0]["label"],
+      result[0]["image"],
+      result[0]["url"],
+      result[0]["yield"],
+      result[0]["ingredientList"],
+      {
+        totalNutrients: result[0]["totalNutrients"],
+        calories: result[0]["calories"],
+        healthLabels: result[0]["healthLabels"],
+        dietLabels: result[0]["dietLabels"]
+      }
+      )
+    else
+      return nil
     end
   end
 

@@ -1,20 +1,18 @@
 class Recipe
 
-  attr_reader :name, :id, :url, :ingredients, :dietary_info, :health_info, :image, :source, :yield
+  attr_reader :uri, :name, :image, :link, :servings, :ingredients, :calories, :totalNutrients, :dietLabels, :healthLabels
 
-  def initialize(name:, id:, url:, ingredients:, **options) #**options = options = {}
-    raise ArgumentError if name.blank? || url.blank? || ingredients.blank?
-
-    @name = name
-    @id = id
-    @url = url
-    @ingredients = ingredients
-
-    @dietary_info = options[:dietary_info]
-    @health_info = options[:health_info]
-    @image = options[:image]
-    @source = options[:source]
-    @yield = options[:yield]
-
+  def initialize(uri, label, image, url, servings, ingredientList, options = {})
+    @uri = URI.escape(uri)
+    @name = label
+    @image = image
+    @link = url
+    @servings = servings
+    @ingredients = ingredientList
+    @calories = options[:calories]
+    @totalNutrients = options[:totalNutrients]
+    @dietLabels = options[:dietLabels]
+    @healthLabels = options[:healthLabels]
   end
+
 end

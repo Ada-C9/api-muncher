@@ -1,17 +1,13 @@
-
-<header>
-  <section class="head-search">
-    <h1><%= link_to("Munch. More", root_path, class: "head-search") %>
-      <%= render partial: "form" %>
-    </h1>
-  </section>
+<header class="head-search">
+  <h1><%= link_to("Munch. More", root_path, class: "head-search") %>
+    <%= render partial: "form" %>
+  </h1>
 </header>
 
-<div class ="index-container">
+<main class ="index-container">
   <section class="index-recipes">
 
     <% if !@recipes.empty? %>
-
     <h2>Recipe Results for: "<%= params[:search_term] %>"</h2>
 
     <ul>
@@ -25,9 +21,9 @@
     <%end %>
 
   </section>
+
   <p class="pages-info"><%= page_entries_info @recipes%></p>
-</div>
+</main>
 <section class ="pagination">
   <%= paginate @recipes %>
-
 </section>

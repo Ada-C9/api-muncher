@@ -1,22 +1,10 @@
 
-<div class="home-content home-img">
-  <section class="home">
+<main class ="home">
+  <section>
 
     <h1>Munch. More</h1>
     <h3>Recipes to cook more</h1>
 
-    <section class="home-search">
-
-      <%= form_tag(recipes_path, :method => "get", id: "search-form") do %>
-        <div class="search-bar">
-          <%= text_field_tag :search_term, params[:search_term], placeholder: "Search Recipes", type: "search", :required => 'required' %>
-        </div>
-          <%= hidden_field_tag :page, 1 %>
-          <%= submit_tag "Search", :name => nil, :style => "display: none;" %>
-      <% end %>
-
+      <%= render partial: "form" %>
     </section>
-
-  </section>
-
-</div>
+  </main>

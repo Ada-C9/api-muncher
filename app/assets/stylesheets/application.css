@@ -17,8 +17,14 @@
  *= require foundation_and_overrides
 
  */
+nav {
+  background-image: url('munch');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
 body {
-  list-style-type: none;
+  background-color: rgb(249, 219, 185);
 }
 
 footer {
@@ -26,19 +32,12 @@ footer {
   justify-content: flex-end;
 
 }
-.recipe-list {
-  list-style-type: none;
-}
 
 nav {
+  color: whitesmoke;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.form-page {
-  width: 50%;
-
 }
 
 .title {

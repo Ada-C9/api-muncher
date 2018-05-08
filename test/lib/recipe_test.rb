@@ -1,67 +1,67 @@
 require 'test_helper'
+require 'pry'
 
 describe "Recipe" do
 
-  # it "cannot be initialized with less than 7 parameters" do
-  #   proc {
-  #     Recipe.new
-  #   }.must_raise ArgumentError
-  #
-  #   proc {
-  #     Recipe.new("fries")
-  #   }.must_raise ArgumentError
-  #
-  #   proc {
-  #     Recipe.new("fries", "fries.com")
-  #   }.must_raise ArgumentError
-  #
-  #   proc {
-  #     Recipe.new("fries","fries.com", ["potatoes", "oil", "salt"])
-  #   }.must_raise ArgumentError
-  #
-  #   proc {
-  #     Recipe.new("fries", "fries.com", ["potatoes", "oil", "salt"], "vegan")
-  #   }.must_raise ArgumentError
-  #
-  #   proc {
-  #     Recipe.new("fries", "fries.com", ["potatoes", "oil", "salt"], "vegan", "image.blah.jpg")
-  #   }.must_raise ArgumentError
-  # end
+  it "cannot be initialized with less than 7 parameters" do
+    proc {
+      Recipe.new
+    }.must_raise ArgumentError
 
-  # it "Must initialize name, link, ingredients, dietary info, and recipie id properly" do
-  #   recipe = Recipe.new("fries", "fries.com", ["potatoes", "oil", "salt"], "image.jpg", "fries_fires.com", "no nuts", "vegan", "potatoes")
-  #
-  #   recipe.name.must_equal "fries"
-  #   recipe.link.must_equal "fries.com"
-  #   recipe.ingredients.must_equal ["potatoes", "oil", "salt"]
-  #   recipe.diet_info.must_equal "vegan"
-  #   recipe.id.must_equal "123"
-  # end
+    proc {
+      Recipe.new("fries")
+    }.must_raise ArgumentError
+
+    proc {
+      Recipe.new("fries", "fries.com")
+    }.must_raise ArgumentError
+
+    proc {
+      Recipe.new("fries","fries.com", ["potatoes", "oil", "salt"])
+    }.must_raise ArgumentError
+
+    proc {
+      Recipe.new("fries", "fries.com", ["potatoes", "oil", "salt"], "vegan")
+    }.must_raise ArgumentError
+
+    proc {
+      Recipe.new("fries", "fries.com", ["potatoes", "oil", "salt"], "vegan", "image.blah.jpg")
+    }.must_raise ArgumentError
+  end
+
+  it "Must initialize name, link, ingredients, dietary info, and recipie id properly" do
+    recipe = Recipe.new("fries.com", "fries", ["potatoes", "oil", "salt"], "image.jpg", "fries_fires.com", "no nuts", "vegan")
+
+    recipe.name.must_equal "fries"
+    recipe.link.must_equal "fries_fires.com"
+    recipe.ingredients.must_equal ["potatoes", "oil", "salt"]
+    recipe.allergy.must_equal "no nuts"
+  end
 end
 
 
 describe "ApiMuncherWrapper" do
 
-#   # This code goes where an API call would be made
-#   # Use the cassetee called channels to
-#   it "Can get recipes with valid querry and page number" do
-#     VCR.use_cassette("recipes") do
-#       query = "avocado"
-#       page = 0
-#
-#       response = ApiMuncherWrapper.get_recipes(query, page)
-#
-#       recipe_count = response[0]
-#       recipes = response[2]
-#
-#       recipe_count.nil? must_equal false
-# # this is confirming that the wrapper is returning recipes
-#       recipes[0].must_be_instance_of Recipe
-#       recipes[(recipe_count -1)].must_be_instance_of Recipe
-# # this is checking the status of the api response.
-#       response["ok"].must_equal true
-#     end
-#   end
+  # This code goes where an API call would be made
+  # Use the cassetee called channels to
+  it "Can get recipes with valid querry and page number" do
+    VCR.use_cassette("recipes") do
+      query = "avocado"
+      page = 0
+
+      data = ApiMuncherWrapper.get_recipes(query, page)
+
+      recipe_count = data[0].to_i
+      recipes = data[2]
+
+      recipe_count.nil?.must_equal false
+
+      recipes[0].must_be_instance_of Recipe
+
+      # each call to api only returns a list of 10 recipes
+      recipes[9].must_be_instance_of Recipe
+    end
+  end
 
   # it "Redirects to root for get recipes requests with invalid querry" do
   #   VCR.use_cassette("recipes") do

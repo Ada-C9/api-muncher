@@ -1,0 +1,29 @@
+
+<h1 class="recipe-label-show"><%= @recipe.label %></h1>
+
+<section class="recipe-image">
+  <%= image_tag @recipe.image, alt: @recipe.label %>
+</section>
+
+<section class="recipe-attribution">
+   <h5>Recipe By: <%= @recipe.source %></h5>
+   <%= link_to("View Full Recipe", @recipe.url, class: "hollow button")%>
+</section>
+
+<section class="recipe-details">
+    <h3>Ingredients</h3>
+    <ul>
+      <% @recipe.ingredientLines.each do |ingredient| %>
+        <li><%= ingredient %></li>
+      <% end %>
+    </ul>
+</section>
+
+<section class="recipe-details">
+    <h3>Dietary Information</h3>
+    <ul>
+      <% @recipe.healthLabels.each do |label| %>
+        <li><%= label %></li>
+      <% end %>
+    </ul>
+</section>

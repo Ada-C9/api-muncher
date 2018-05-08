@@ -49,18 +49,17 @@ describe "ApiMuncherWrapper" do
       query = "avocado"
       page = 0
 
-      # for this is the get response really ok or a list of recipes?
       response = ApiMuncherWrapper.get_recipes(query, page)
-      # do they send the status with JSON?
-      # can I just pick one at random?
 
       recipe_count = response[0]
       recipes = response[2]
 
       recipe_count.nil? must_equal false
-
+# this is confirming that the wrapper is returning recipes
       recipes[0].must_be_instance_of Recipe
       recipes[(recipe_count -1)].must_be_instance_of Recipe
+# this is checking the status of the api response.
+      response["ok"].must_equal true
     end
   end
 
@@ -70,11 +69,8 @@ describe "ApiMuncherWrapper" do
       page = 0
 
       response = ApiMuncherWrapper.get_recipes(query, page)
-
-      # response["ok"].must_equal false
-
-      #set up this error page/notification in recipe controller
-      # response["error"].wont_be_nil
+      response["ok"].must_equal false
+      response["error"].wont_be_nil
     end
   end
 
@@ -84,11 +80,8 @@ describe "ApiMuncherWrapper" do
       page = -999
 
       response = ApiMuncherWrapper.get_recipes(query, page)
-
-      # response["ok"].must_equal false
-
-      #set up this error page/notification in recipe controller
-      # response["error"].wont_be_nil
+      response["ok"].must_equal false
+      response["error"].wont_be_nil
     end
   end
 end

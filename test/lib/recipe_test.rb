@@ -28,27 +28,32 @@ describe Recipe do
   end
 
   describe "from_api" do
-    # skip
-    # before do
-    #   @fake_channel_data = {
-    #     "name" => "test channel",
-    #     "id" => 12345
-    #   }
 
-
-    it "pulls the relevant information into an instance of channel" do
-      # channel = Channel.from_api(@fake_channel_data)
-      #
-      # channel.must_be_kind_of Channel
-      # channel.name.must_equal @fake_channel_data["name"]
-      # channel.id.must_equal @fake_channel_data["id"]
-    end
-
-    it "raises and exception without critical data" do
-      # @fake_channel_data["name"] = nil
-      # proc { Channel.from_api(@fake_channel_data)}.must_raise
+    before do
+      @fake_recipe = {
+        "label" => "chicken",
+        "image" => "photo",
+        "health" => "health",
+        "ingredients" => "ingredients",
+        "url" => "url",
+        "uri" => "uri",
+      }
     end
 
 
+      it "pulls the relevant information into an instance of recipe" do
+        recipe = Recipe.from_api(@fake_recipe)
+
+        recipe.must_be_kind_of Recipe
+        recipe.label.must_equal @fake_recipe["label"]
+        recipe.uri.must_equal @fake_recipe["uri"]
+      end
+
+      it "raises and exception without critical data" do
+        @fake_recipe["label"] = nil
+         proc { Recipe.from_api(@fake_recipe)}.must_raise
+      end
+
+
+    end
   end
-end

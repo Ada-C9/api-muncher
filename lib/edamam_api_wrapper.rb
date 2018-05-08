@@ -15,9 +15,9 @@ class EdamamApiWrapper
     response = HTTParty.get(url)
 
 
-    #unless response["ok"]
-    #raise StandarError.new(response["error"])
-    #en
+    unless response["more"]
+    raise StandarError.new(response["error"])
+    end
     #return response["hits"]
     #total_results = response["hits"].maps.count
 
@@ -37,6 +37,10 @@ class EdamamApiWrapper
     url  = URI.encode"https://api.edamam.com/search?app_id=#{id}&app_key=#{key}&r=#{url_root}"
     response = HTTParty.get(url)
     #http://www.edamam.com/ontologies/edamam.owl#recipe_3f1569240d53523d54aec78a409379fa   URI
+
+    unless response["more"]
+    raise StandarError.new(response["error"])
+    end
 
     return  Recipe.from_api(response[0])
     #created a from_api to channel in lib to be able to dry up the code a little bit and we isolate the [:name] in channels over there.

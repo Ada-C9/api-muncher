@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+
+    <%= stylesheet_link_tag  "application" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <nav>
+  <%=link_to "Home", root_path ,class:"button"%>
+<%if user = User.find_by(id: session[:user_id]) %>
+  <span id="user-signed-in">Signed in as: <span id="user-name"><%=user.username%></span> </span><%=link_to "Log out", signout_path, class:"button"%>
+<%else%>
+  <%= link_to "Sign-in with Github", "/auth/github", class:"button"  %>
+<%end%>
+  </nav>
+
+  <%if params[:query].nil?%>
+    <body id="homepage-view">
+      <h1 id="main-title">Wrapped Recipes</h1>
+  <%else%>
+    <body id="search-view">
+        <h1>Search results for: <%=params[:query]%></h1>
+    <%end%>
+
+    <%if flash[:message]%>
+        <% if params[:query].nil? %>
+            <h4 class="flash-messages"><%=flash[:login_required]%></h4>
+        <%else%>
+          <h4 class="flash-messages"><%=flash[:message]%></h4>
+        <%end%>
+    <%end%>
+
+    <section id="search-bar">
+      <%= form_tag query_results_path, method: :get do %>
+        <%=text_field_tag :query%>
+        <%= submit_tag "Search", class:"button"%>
+      <%end%>
+    </section>
+      <%= yield %>
+      </body>
+    <footer>
+        <ul class="pagination">
+      <li><%=link_to 1, {:action => 'index', :from=> 0, :to=> 9, :query=>params[:query]} %></li>
+      <li><%=link_to 2, {:action => 'index', :from=> 10, :to=> 20, :query=>params[:query]} %></li>
+      <li><%=link_to 3, {:action => 'index', :from=> 21, :to=> 30, :query=>params[:query]} %></li>
+      <li><%=link_to 4, {:action => 'index', :from=> 31, :to=> 40, :query=>params[:query]} %></li>
+      <li><%=link_to 5, {:action => 'index', :from=> 41, :to=>50, :query=>params[:query]} %></li>
+      <li><%=link_to 6, {:action => 'index', :from=> 51, :to=>60, :query=>params[:query]} %></li>
+      <li><%=link_to 7, {:action => 'index', :from=> 61, :to=>70, :query=>params[:query]} %></li>
+      <li><%=link_to 8, {:action => 'index', :from=> 71, :to=>80, :query=>params[:query]} %></li>
+      <li><%=link_to 9, {:action => 'index', :from=> 81, :to=>90, :query=>params[:query]} %></li>
+      <li><%=link_to 10, {:action => 'index', :from=> 91, :to=>100, :query=>params[:query]} %></li>
+    </ul>
+      <p id="edamam"> Powered by Edamam ©2018</p>
+
+    </footer>
+
+
+</html>

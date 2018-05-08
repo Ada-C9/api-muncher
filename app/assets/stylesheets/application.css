@@ -1,0 +1,147 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *= require normalize-rails
+
+ *
+ *= require_tree .
+ *= require_self
+ *= require foundation_and_overrides
+
+ */
+
+
+
+#homepage-view{
+    background-image: url("http://ak1.picdn.net/shutterstock/videos/15277861/thumb/1.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+#search-view{
+  background-color:#cccccc;
+}
+
+ nav{
+   display: flex;
+   margin-left: 10px;
+   margin-right:10px;
+   margin-top: 10px;
+   justify-content: space-between;
+ }
+
+
+#search-bar{
+  margin-left:50px;
+  margin-right:50px;
+  flex-grow: 100%;
+}
+
+#main-title{
+  text-align:center;
+  color: white;
+  font-weight: bold;
+}
+
+#search-bar .button {
+width: 100%;
+}
+
+ #food-items{
+   display: flex;
+   flex-flow: wrap;
+   list-style-type: none;
+   padding-left: 30px;
+ }
+
+ #recipe-title{
+   text-align:left;
+ }
+
+ .pagination{
+  padding-left:31%;
+  margin-bottom: 50px;
+ }
+
+ .pagination li{
+    font-size: 20px;
+ }
+
+.item-header{
+  color:white;
+  text-align:center;
+}
+
+.item-image{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#ingredient-list{
+  color: white;
+  margin-left:15px;
+  font-size: 22px;
+}
+
+#calories{
+  margin-left:15px;
+  color:white;
+  text-decoration: underline;
+}
+#try-it{
+  margin-left:15px;
+  color:white;
+  font-size: 22px;
+}
+
+#nutritional-info-title{
+  color:white;
+  margin-top: 40px;
+  margin-left: 15px;
+}
+#table-block{
+  margin-right:35px;
+  margin-left:35px;
+}
+
+tr{
+  text-align:center
+}
+
+th{
+  text-align:left;
+}
+
+.nutrient-name{
+  text-align:left;
+}
+
+#edamam{
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  width:100%;
+  height:25px;
+  background:#1779ba;
+}
+
+.flash-messages{
+  color:white;
+}
+
+#user-signed-in{
+  color: #1779ba;
+}
+
+#user-name{
+  font-weight:bold;
+}

@@ -1,0 +1,7 @@
+<ul id="food-items">
+  <%@recipes.each do |recipe|%>
+    <li id="food-image"><%=link_to image_tag(recipe.image),recipe_show_path(recipe.label,:uri=>recipe.uri)%>
+    <p><%=link_to recipe.label,recipe_show_path(recipe.label,:uri=>recipe.uri)%></p>
+  </li>
+  <% end %>
+</ul>

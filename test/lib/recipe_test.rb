@@ -1,6 +1,6 @@
 require 'test_helper'
 
-describe <Recipe> do
+describe "Recipe" do
 
   it "cannot be initialized with less than 7 parameters" do
     proc {
@@ -29,7 +29,7 @@ describe <Recipe> do
   end
 
   it "Must initialize name, link, ingredients, dietary info, and recipie id properly" do
-    recipe = Recipe.new ("fries", "fries.com" "potatoes, oil, salt", "image.jpg", "fries_fires.com", "no nuts", "vegan", "potatoes")
+    recipe = Recipe.new("fries", "fries.com", ["potatoes", "oil", "salt"], "image.jpg", "fries_fires.com", "no nuts", "vegan", "potatoes")
 
     recipe.name.must_equal "fries"
     recipe.link.must_equal "fries.com"

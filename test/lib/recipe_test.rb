@@ -68,8 +68,8 @@ describe "ApiMuncherWrapper" do
       query = nil
       page = 0
 
-      response = ApiMuncherWrapper.get_recipes(query, page)
-      response["ok"].must_equal false
+      ApiMuncherWrapper.get_recipes(query, page)
+      expect(response).to :not_found
       response["error"].wont_be_nil
     end
   end

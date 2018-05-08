@@ -8,13 +8,10 @@ class RecipesController < ApplicationController
     @recipes = Kaminari.paginate_array(recipes).page(params[:page]).per(12)
 
     if @recipes == []
-      message = "Nothing found while searching #{params[:user_input]} Please try a different search term!"
-      status(:error, message)
-      puts "Sorry. No recipes found for #{params[:user_input]}"
+      flash[:message] = "Nothing found while searching \"#{params[:user_input]}\" Please try a different search term!"
     else
       puts "Found recipes!"
-      message = "Results found for #{params[:user_input]}"
-      status(:success, message)
+      flash[:message] = "Results found for #{params[:user_input]}"
     end
   end
 
@@ -22,11 +19,11 @@ class RecipesController < ApplicationController
     @recipe = EdamamApiWrapper.one_recipe(params[:id])
   end
 
-private
-
-  def status_message(status, message)
-      flash[:status] = status
-      flash[:result_text] = message
-  end
+# private
+#
+#   def status_message(status, message)
+#       flash[:status] = status
+#       flash[:result_text] = message
+#   end
 
 end

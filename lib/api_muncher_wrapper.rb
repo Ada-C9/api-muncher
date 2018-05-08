@@ -15,21 +15,26 @@ class ApiMuncherWrapper
     data = HTTParty.get(url)
 
     # Needs refactor: to a hash
-    all_recipes_info << data["count"]
+    if !data["count"].nil?
+      all_recipes_info << data["count"]
+    else
+      all_recipes_info << []
+    end
 
     # the range from X to X+10 for muncher api to return
     all_recipes_info << (page.to_i + 1)
+    
+    if !data["hits"].nil?
+      data["hits"].each do |hit|
+        uri = hit["recipe"]["uri"]
+        name = hit["recipe"]["label"]
+        ingredients = hit["recipe"]["ingredientLines"]
+        image_url = hit["recipe"]["image"]
+        link = hit["recipe"]["url"]
+        allergy = hit ["recipe"]["healthLabels"]
+        nutrition = hit ["recipe"]["dietLabels"]
 
-    data["hits"].each do |hit|
-      uri = hit["recipe"]["uri"]
-      name = hit["recipe"]["label"]
-      ingredients = hit["recipe"]["ingredientLines"]
-      image_url = hit["recipe"]["image"]
-      link = hit["recipe"]["url"]
-      allergy = hit ["recipe"]["healthLabels"]
-      nutrition = hit ["recipe"]["dietLabels"]
-
-      recipes << Recipe.new(uri, name, ingredients, image_url, link, allergy, nutrition, query)
+        recipes << Recipe.new(uri, name, ingredients, image_url, link, allergy, nutrition, query)
     end
 
     return all_recipes_info << recipes

@@ -44,7 +44,7 @@ describe "ApiMuncherWrapper" do
 
   # This code goes where an API call would be made
   # Use the cassetee called channels to
-  it "Can get recipes with valid querry and page number" do
+  it "Can get recipes with valid query and page number" do
     VCR.use_cassette("recipes") do
       query = "avocado"
       page = 0
@@ -63,32 +63,52 @@ describe "ApiMuncherWrapper" do
     end
   end
 
-  # it "Redirects to root for get recipes requests with invalid querry" do
-  #   VCR.use_cassette("recipes") do
-  #     query = nil
-  #     page = 0
-  #
-  #     ApiMuncherWrapper.get_recipes(query, page)
-  #     expect(response).to :not_found
-  #     response["error"].wont_be_nil
-  #   end
-  # end
+  it "Returns an empty array of recipes and 0 recipe_count for recipe matches for invalid query" do
+    VCR.use_cassette("recipes") do
+      query = 999999
+      page = 0
 
-  # it "Redirects to root for get recipes requests with invalid page number" do
-  #   VCR.use_cassette("recipes") do
-  #     query = "avocado"
-  #     page = -999
-  #
-  #     response = ApiMuncherWrapper.get_recipes(query, page)
-  #     expect(response).to :not_found
-  #     response["error"].wont_be_nil
-  #   end
-  # end
+      data = ApiMuncherWrapper.get_recipes(query, page)
+
+      recipe_count = data[0].to_i
+      recipes = data[2]
+
+      recipe_count.must_equal 0
+
+      recipes.count.must_equal 0
+      # I am unsure how to test the negative using the testing example from class:
+      # it "Can't send message to fake channel" do
+      #   VCR.use_cassette("channels") do
+      #     response = SlackApiWrapper.send_msg("this-channel-does-not-exist", "test message")
+      #     response["ok"].must_equal false
+      #     response["error"].wont_be_nil
+      #   end
+      # end
+
+    end
+  end
+
+  it "Returns an empty array of recipes and 0 recipe_count for invalid page number" do
+    VCR.use_cassette("recipes") do
+      query = "avocado"
+      page = -999
+
+      data = ApiMuncherWrapper.get_recipes(query, page)
+
+      recipe_count = data[0]
+      recipes = data[2]
+
+      recipe_count.must_equal []
+
+      recipes.count.must_equal []
+    end
+  end
 end
 
 describe "recipes_controller" do
 
   describe "index" do
+
 
     it "should sucessfully show index of all recipes with valid data in params" do
 

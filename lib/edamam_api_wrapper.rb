@@ -17,7 +17,8 @@ class EdamamApiWrapper
     if response[0].nil?
       return nil
     else
-    return Recipe.from_api(response[0])
+      return Recipe.from_api(response[0])
+    end
   end
 
   def self.all_recipes(user_input)
@@ -25,16 +26,14 @@ class EdamamApiWrapper
 
     encoded_url = URI.encode(url)
     response = HTTParty.get(encoded_url)
-
-    unless response["more"]
+    # in case of a bad ID or Key, for example
+    unless response["hits"]
       raise
       StandardError.new(response["error"])
     end
     return response["hits"].map do |raw_recipe|
       Recipe.from_api(raw_recipe["recipe"])
     end
-
-
   end
 
 end

@@ -5,7 +5,6 @@ class ApiMuncherWrapper
   APPLICATION_ID = ENV["APPLICATION_ID"]
   APPLICATION_KEYS = ENV["APPLICATION_KEYS"]
 
-  # This sends a get request with my search word etc to the API and gets a JSON that will be used to create new recipe instances
   def self.get_recipes(query, page)
     recipes = []
     all_recipes_info = []
@@ -15,9 +14,7 @@ class ApiMuncherWrapper
     url = "#{BASE_URL}?q=#{query}&app_id=#{APPLICATION_ID}&app_key=#{APPLICATION_KEYS}&from=#{(page.to_i * 10)}"
     data = HTTParty.get(url)
 
-    # is this better as a hash????
-    # ????
-    # how many recipes there are that match the querry
+    # Needs refactor: to a hash
     all_recipes_info << data["count"]
 
     # the range from X to X+10 for muncher api to return
@@ -43,7 +40,7 @@ class ApiMuncherWrapper
     return r if r.nil?
 
     url = "#{BASE_URL}?r=#{r}&app_id=#{APPLICATION_ID}&app_key=#{APPLICATION_KEYS}"
-    # send a message through slasck or get has to encode
+
     data = HTTParty.get(URI.encode(url))
 
     uri = data[0]["uri"]
@@ -56,5 +53,4 @@ class ApiMuncherWrapper
 
     return Recipe.new(uri, name, ingredients, image_url, link, allergy, nutrition)
   end
-# From and to to get paging done
 end

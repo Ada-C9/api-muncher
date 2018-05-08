@@ -1,3 +1,8 @@
 require 'test_helper'
-# take a search value
-# redirects user to index page for recipes controller
+
+# can't test formtag/redirect to recipes index
+# the logic is in the view pages
+
+describe "index" do
+
+end

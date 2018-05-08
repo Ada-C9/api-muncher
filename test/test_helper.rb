@@ -7,6 +7,7 @@ require "minitest/reporters"  # for Colorized output
 # add this for testing VCR!!!!
 require 'vcr'
 require 'webmock/minitest'
+require "minitest/pride"
 
 #  For colorful output!
 Minitest::Reporters.use!(

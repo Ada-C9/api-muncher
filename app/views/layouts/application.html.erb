@@ -19,6 +19,9 @@
     <header>
       <h1><%= link_to "find some fare", root_path %></h1>
     </header>
+    <% if flash[:alert] %>
+      <h5 class="flash alert"><%= flash[:alert] %></h5>
+    <% end %>
     <main>
       <%= yield %>
     </main>

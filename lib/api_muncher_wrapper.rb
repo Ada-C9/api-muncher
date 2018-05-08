@@ -51,6 +51,13 @@ class ApiMuncherWrapper
     nutrition = data[0]["dietLabels"]
     link = data[0]["url"]
 
-    return Recipe.new(uri, name, ingredients, image_url, link, allergy, nutrition)
+
+    if uri == nil ||name == nil
+      recipe = false
+    else
+      recipe = Recipe.new(uri, name, ingredients, image_url, link, allergy, nutrition)
+    end
+
+    return recipe
   end
 end

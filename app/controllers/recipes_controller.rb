@@ -7,23 +7,22 @@ class RecipesController < ApplicationController
       params[:page] = 0
     end
 
+    @page = params[:page].to_i
+
     if @page < 0
       flash[:error] = "Invalid recipes results range"
-      # redirect/ render?
+      redirect :root
     elsif @query.nil?
       flash[:error] = "Invalid search value"
-      # redirect/ render?
+      redirect :root
     end
-
-    @page = params[:page]
 
     all_recipes_info = ApiMuncherWrapper.get_recipes(@query, @page)
 
-# how do i process no recipes that match search query
     if !all_recipes_info
       flash[:message] = "Sorry, that recipe doesnt exist"
       flash[:error] = "Invalid recipe url"
-      # redirect/ render?
+      redirect :root
     end
 
     params[:count] = all_recipes_info[0]
@@ -43,7 +42,7 @@ class RecipesController < ApplicationController
     if r.nil?
       flash[:message] = "Sorry, that recipe doesnt exist"
       flash[:error] = "Invalid recipe url"
-      # redirect/ render?
+      redirect :root
     end
 
     recipe_details = ApiMuncherWrapper.get_recipe(r)
@@ -51,7 +50,7 @@ class RecipesController < ApplicationController
     if !recipe_details
       flash[:message] = "Sorry, that recipe doesnt exist"
       flash[:error] = "Invalid recipe url"
-      # redirect/ render?
+      redirect :root
     end
 
     @recipe = recipe_details

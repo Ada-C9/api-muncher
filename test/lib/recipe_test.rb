@@ -64,10 +64,24 @@ describe "ApiMuncherWrapper" do
     end
   end
 
-  it "Can get recipes with invalid querry and page number" do
+  it "Redirects to root for get recipes requests with invalid querry" do
     VCR.use_cassette("recipes") do
       query = nil
-      page = -1
+      page = 0
+
+      response = ApiMuncherWrapper.get_recipes(query, page)
+
+      # response["ok"].must_equal false
+
+      #set up this error page/notification in recipe controller
+      # response["error"].wont_be_nil
+    end
+  end
+
+  it "Redirects to root for get recipes requests with invalid page number" do
+    VCR.use_cassette("recipes") do
+      query = "avocado"
+      page = -999
 
       response = ApiMuncherWrapper.get_recipes(query, page)
 

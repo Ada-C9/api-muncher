@@ -14,15 +14,16 @@ class RecipeApiWrapper
 
 			response = HTTParty.get(url).parsed_response
 
-			recipe_response = response["hits"]
+			recipe_responses = response["hits"]
 
 			# raise_on_error(response)
 			recipes = []
-			return recipe_response.map do |raw_recipe|
-				recipes << initialize_recipe(raw_recipe)
-			end
+				return recipe_responses.each do |raw_recipe|
+					recipes << initialize_recipe(raw_recipe["recipe"])
+				end
 			return recipes
 		end
+		raise
 	end
 
 	def self.get_details(uri)

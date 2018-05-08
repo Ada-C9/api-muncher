@@ -1,5 +1,4 @@
 require 'httparty'
-require 'pry'
 
 class EdemamWrapper
   BASE_URL = "https://api.edamam.com/search"

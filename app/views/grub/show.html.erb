@@ -1,6 +1,21 @@
 <section class="recipe-detail">
-    <ul>
-      <li><%=link_to @recipe.label, @recipe.url %></li>
-      <li><%= image_tag @recipe.image %></li>
-    </ul>
+    <article>
+      <h4><%=link_to @recipe.label, @recipe.url %></h4>
+      <p><%= image_tag @recipe.image %></p>
+    </article>
+
+    <article>
+      <% @recipe.healthlabels.each do |label| %>
+      <ul>
+        <li><%= label %></li>
+      </ul>
+      <% end %></br>
+
+      <p>What you'll need...</p>
+      <% @recipe.ingredientlines.each do |ingredient| %>
+      <ul>
+        <li><%= ingredient %></li>
+      </ul>
+      <% end %>
+    </article>
 </section>

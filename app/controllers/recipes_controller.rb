@@ -2,8 +2,7 @@ class RecipesController < ApplicationController
 	MAX_PER_PAGE = 12
 
 	def index
-
-		query = params[:q]
+		query = params[:uri]
 
 		recipes = RecipeApiWrapper.list_recipes(query)
 

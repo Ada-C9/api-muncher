@@ -1,7 +1,27 @@
-<h3>Results for:</h3>
+<h2>Results for:</h2>
 
 <section>
-<%=image_tag(@recipe.image)%>
-<%=@recipe.label%>
-<%=@recipe.ingredients%>
+	<%=@recipe.name%>
+	<img src="<%= @recipe.photo_url %>" />
+
+	<%= link_to "See the original recipe", @recipe.url, target: "_blank" %>
 </section>
+
+<div>
+	<h3>Ingredients</h3>
+	<ul>
+		<% @recipe.ingredients.each do |ingredient| %>
+		<li>
+			<%= ingredient %>
+		</li>
+		<% end %>
+	</ul>
+	<h3>Health Facts</h3>
+	<ul>
+		<% @recipe.dietary_labels.each do |label| %>
+		<li>
+			<%= label %>
+		</li>
+		<% end %>
+	</ul>
+</div>

@@ -2,13 +2,15 @@
 
 <section>
   <%= form_tag(recipes_path, method: :get) do %>
-    <%= label_tag(:q, "What's cooking?")  %>
-    <%= text_field_tag(:q) %>
-
-		<%= hidden_field_tag(:label) %>
-		<%= hidden_field_tag(:image) %>
-		<%= hidden_field_tag(:ingredients)%>
-
+    <%= label_tag(:uri, "What's cooking?")  %>
+    <%= text_field_tag(:uri, params[:uri]) %>
     <%= submit_tag("Search") %>
+
+    <%= hidden_field_tag(:label) %>
+    <%= hidden_field_tag(:image) %>
+    <%= hidden_field_tag(:ingredientLines) %>
+    <%= hidden_field_tag(:dietLabels) %>
+    <%= hidden_field_tag(:url) %>
+    <%= hidden_field_tag(:uri) %>
   <% end %>
 </section>

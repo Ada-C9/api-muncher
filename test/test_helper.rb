@@ -16,6 +16,12 @@ Minitest::Reporters.use!(
   Minitest.backtrace_filter
 )
 
+# MonkeyPatch for This version of Rails :(
+if ActionPack::VERSION::STRING >= "5.2.0"
+  Minitest::Rails::TestUnit = Rails::TestUnit
+end
+
+
 # add this for testing VCR!!!!
 VCR.configure do |config|
   config.cassette_library_dir = 'test/cassettes' # folder where casettes will be located

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+    <title>Victualizer</title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <script src="https://developer.edamam.com/attribution/badge.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Alegreya:400,500,800,800i|Cinzel:400,700|Francois+One|Metal+Mania" rel="stylesheet">
+  </head>
+
+  <body>
+    <section class = "flash">
+      <% if flash[:result_text] %>
+        <section class="callout">
+          <h5><%= flash[:result_text] %></h5>
+        </section>
+      <% end %>
+    </section>
+
+    <%= yield %>
+
+    <footer class="footer">
+      <div id="edamam-badge" data-color="white"></div>
+    </footer>
+  </body>
+</html>

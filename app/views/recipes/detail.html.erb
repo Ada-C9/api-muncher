@@ -1,0 +1,37 @@
+
+
+<h1>BEHOLD THE BRUTAL TRUTH OF:</h1>
+<h2 class="recipe-title"><%= @target_recipe.name %></h2>
+<h4 class="recipe-source">Brought forth from the howling void by:   <%= link_to @target_recipe.source, @target_recipe.source_url %></h4>
+
+<div class="recipe-info-container">
+  <div class="pic-and-diet-container">
+    <section class="target-pic-container">
+      <%= image_tag(@target_recipe.image, alt: "#{@target_recipe.name}", :class => "target-recipe-pic") %>
+    </section>
+    <section class="diet-info-container" >
+    <ul class="diet-labels">
+      <% if @target_recipe.diet_labels.count > 0 %>
+        <h5>Dire Warnings:</h5>
+        <% @target_recipe.diet_labels.each do |d_label| %>
+          <li>
+            <%= d_label %>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+    </section>
+  </div>
+  <section class="ingredient-container">
+    <ul class="ingredient-lines">
+      <% if @target_recipe.ingredient_lines %>
+        <h5>Dread Reagents:</h5>
+        <% @target_recipe.ingredient_lines.each do |line| %>
+          <li>
+            <%= line %>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </section>
+</div>

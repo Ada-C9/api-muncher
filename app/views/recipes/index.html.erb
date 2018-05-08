@@ -1,5 +1,8 @@
 <section class="recipe-search-results">
   <h1>Recipe Search Results</h1>
+  <% flash.each do |key, value| %>
+        <div class="flash-message"><%= value %></div>
+      <% end %>
   <% if @recipes %>
     <ul>
       <% @recipes.each do |recipe| %>

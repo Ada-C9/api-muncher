@@ -11,10 +11,10 @@ class RecipesController < ApplicationController
 
     if @page < 0
       flash[:error] = "Invalid recipes results range"
-      redirect_to :root
+      redirect_to root_path
     elsif @query.nil?
       flash[:error] = "Invalid search value"
-      redirect_to :root
+      redirect_to root_path
     end
 
     all_recipes_info = ApiMuncherWrapper.get_recipes(@query, @page)

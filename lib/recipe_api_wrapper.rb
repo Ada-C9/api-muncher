@@ -8,6 +8,7 @@ class RecipeApiWrapper
 	KEY = ENV["EDAMAM_KEY"]
 
 	def self.list_recipes(query)
+		# raise
 		if query
 			url = BASE_URL + "?q=#{ query }" + "&app_id=#{ID}" + "&app_key=#{KEY}"
 
@@ -18,12 +19,14 @@ class RecipeApiWrapper
 
 			# raise_on_error(response)
 			recipes = []
-				return recipe_responses.each do |raw_recipe|
-					recipes << initialize_recipe(raw_recipe["recipe"])
-				end
+
+			recipe_responses.each do |raw_recipe|
+				recipes << initialize_recipe(raw_recipe["recipe"])
+				# raise
+			end
+
 			return recipes
 		end
-		raise
 	end
 
 	def self.get_details(uri)

@@ -2,13 +2,14 @@ class RecipesController < ApplicationController
 	MAX_PER_PAGE = 12
 
 	def index
-		query = params[:uri]
+		query = params[:q]
 
-		recipes = RecipeApiWrapper.list_recipes(query)
+		# raise
 
-		if recipes
-			@recipes = Kaminari.paginate_array(recipes).page(params[:page]).per(MAX_PER_PAGE)
-		end
+		@recipes = RecipeApiWrapper.list_recipes(query)
+		# if recipes
+		# 	@recipes = Kaminari.paginate_array(recipes).page(params[:page]).per(MAX_PER_PAGE)
+		# end
 	end
 
 	def search

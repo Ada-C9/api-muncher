@@ -1,20 +1,10 @@
 <h2>Yummy recipes</h2>
 
-<% if @recipes %>
-<%= paginate @recipes %>
-
-
 <ul>
 	<% @recipes.each do |recipe| %>
 	<li>
 		<img src="<%= recipe.photo_url %>" />
-		<%=link_to(recipe.name, recipe_path(recipe.uri))%>
+		<%=link_to(recipe.name, recipe_path(2))%>
 	</li>
 	<% end %>
 </ul>
-
-<aside>
-	<%= paginate @recipes %>
-</aside>
-
-<% end %>

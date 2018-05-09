@@ -1,0 +1,16 @@
+<h1 class="header"> Results for "<%= params[:q] %>" </h1>
+
+<% if @results %>
+  <ul>
+    <% @results.each do |recipe| %>
+      <li>
+        <img src="<%= recipe.image %>" alt="recipe image">
+        <br>
+        <%= link_to recipe.label, recipe_show_path(recipe.id), target: :_blank  %>
+      </li>
+    <% end %>
+  </ul>
+  <% end %>
+
+  <%= paginate @results %>
+  <%= page_entries_info @results %>

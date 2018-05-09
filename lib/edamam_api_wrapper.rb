@@ -38,7 +38,6 @@ class EdamamApiWrapper
     response = HTTParty.get(url)
     #http://www.edamam.com/ontologies/edamam.owl#recipe_3f1569240d53523d54aec78a409379fa   URI
 
-  
 
     return  Recipe.from_api(response[0])
     #created a from_api to channel in lib to be able to dry up the code a little bit and we isolate the [:name] in channels over there.

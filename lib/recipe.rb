@@ -4,6 +4,7 @@ class Recipe
 
   def initialize(label, image, health, ingredients, url, uri)
     #this is a lazy validation:
+
     if label.nil? || label.empty? || uri.nil? || uri.empty?
       raise ArgumentError.new("No recipe name")
     end

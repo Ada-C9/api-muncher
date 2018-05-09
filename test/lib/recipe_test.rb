@@ -19,6 +19,13 @@ describe Recipe do
 
 
     it "cannot be created without a label or an uri" do
+      
+      label = "label"
+      image = "image"
+      health = "health"
+      ingredients = "ingredients"
+      url = "url"
+      uri = "uri"
 
       proc { Recipe.new()}.must_raise ArgumentError
       proc { Recipe.new(uri)}.must_raise ArgumentError

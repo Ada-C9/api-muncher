@@ -21,7 +21,10 @@ describe "EdamamApiWrapper" do
 
     it "gives a recipe" do
       VCR.use_cassette("recipe") do
-        recipe = EdamamApiWrapper.one_recipe("uri")
+
+        uri = "59c70510ab18f27b3c374f5c4790c8b9"
+
+        recipe = EdamamApiWrapper.one_recipe(uri)
 
 
         recipe.must_be_kind_of Recipe

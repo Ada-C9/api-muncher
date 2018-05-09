@@ -3,8 +3,8 @@ Rails.application.routes.draw do
 	# root '/'
 	root 'recipes#search'
 
-	resources :recipes, only: [:index, :show]
+	# resources :recipes, only: [:index, :show]
 
-	# get '/recipes', to: 'recipes#index', as: 'recipes'
-	# get '/recipes/:uri', to: 'recipes#show', as: 'recipe'
+	get '/recipes', to: 'recipes#index', as: 'recipes'
+	get '/recipe', to: 'recipes#show', as: 'recipe'
 end

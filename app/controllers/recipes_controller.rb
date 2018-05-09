@@ -4,8 +4,6 @@ class RecipesController < ApplicationController
 	def index
 		query = params[:q]
 
-		# raise
-
 		@recipes = RecipeApiWrapper.list_recipes(query)
 		# if recipes
 		# 	@recipes = Kaminari.paginate_array(recipes).page(params[:page]).per(MAX_PER_PAGE)

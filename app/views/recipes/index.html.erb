@@ -4,7 +4,7 @@
 	<% @recipes.each do |recipe| %>
 	<li>
 		<img src="<%= recipe.photo_url %>" />
-		<%=link_to(recipe.name, recipe_path(2))%>
+		<%=link_to(recipe.name, recipe_path(uri: recipe.uri))%>
 	</li>
 	<% end %>
 </ul>

@@ -8,34 +8,33 @@ class RecipeApiWrapper
 	KEY = ENV["EDAMAM_KEY"]
 
 	def self.list_recipes(query)
-		# raise
+		recipes = []
+
 		if query
 			url = BASE_URL + "?q=#{ query }" + "&app_id=#{ID}" + "&app_key=#{KEY}"
 
-
 			response = HTTParty.get(url).parsed_response
+
+			raise_on_error(response)
 
 			recipe_responses = response["hits"]
 
-			# raise_on_error(response)
-			recipes = []
-
 			recipe_responses.each do |raw_recipe|
 				recipes << initialize_recipe(raw_recipe["recipe"])
-				# raise
 			end
-
-			return recipes
 		end
+
+		return recipes
 	end
 
 	def self.get_details(uri)
-		url = URI.encode(BASE_URL + "?r=" + uri + "&app_id=#{ID}" + "&app_key=#{KEY}")
+		url = BASE_URL + "?r=" + URI.encode(uri) + "&app_id=#{ID}" + "&app_key=#{KEY}"
 
 
 		response = HTTParty.get(url)
 		recipe = initialize_recipe(response.first)
 		return recipe
+
 	end
 
 	private
@@ -57,13 +56,4 @@ class RecipeApiWrapper
 			api_params['uri']
 		)
 	end
-
-	# def self.split_uri(uri)
-	# 	id = uri
-	# 	if uri.include?("recipe_")
-	# 		split_uri = uri.split("recipe_")
-	# 		id = split_uri.last
-	# 	end
-	# 	return id
-	# end
 end

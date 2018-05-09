@@ -6,7 +6,6 @@ class Recipe
     raise_error(image)
     raise_error(source)
     raise_error(uri)
-    raise_error(healthLabels)
     raise_error(url)
     raise_error(ingredientLines)
 

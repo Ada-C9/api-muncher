@@ -1,0 +1,12 @@
+<article class="cell" id='user-favorites'>
+  <h4>Favorites</h4>
+  <div class="grid-x text-center" aria-label='favorite cards'>
+    <% unless @favorites.empty? %>
+      <% @favorites.each do |favorite| %>
+        <%= render partial: 'shared/card', locals: {item: favorite} %>
+      <% end %>
+    <% else %>
+      <p>You have no favorites - go like something!</p>
+    <% end %>
+  </div>
+</article>

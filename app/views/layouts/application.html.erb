@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Domine" rel="stylesheet">
+    <title><%= content_for?(:title) ? yield(:title) : "Octo-Muncher" %></title>
+
+    <script src="https://developer.edamam.com/attribution/badge.js"></script>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body class='grid-y'>
+    <header>
+      <nav class="sticky sticky-topbar" data-sticky data-options="anchor: page; marginTop: 0; stickyOn: small;">
+        <div class="top-bar">
+          <div class="left">
+            <span><%= link_to image_tag('octo-icon.png', alt: 'octopus icon', style: 'width:50px'), root_path %></span>
+            <% if @logged_user %>
+            <%= link_to 'Dashboard', user_path(@logged_user) %>
+            <% end %>
+          </div>
+          <div class="right">
+            <% unless session[:user_id] %>
+            <%= link_to 'Login', '/auth/google_oauth2', class: 'button' %>
+            <% else %>
+            <%= "Logged in as #{@logged_user.name}" %>
+            <%= link_to 'Logout', logout_path, method: :delete, class: 'button' %>
+            <% end %>
+          </div>
+        </div>
+      </nav>
+
+      <% unless @no_search_in_header %>
+        <section>
+          <%= form_tag :recipes, url: recipes_path, method: :get, class: 'cell small-12 medium-10 large-4', id: 'search-bar' do %>
+            <%= text_field_tag :query, params[:query], placeholder: 'Search for recipes' %>
+            <%= submit_tag 'Get Recipes', class: 'button search' %>
+          <% end %>
+        </section>
+      <% end %>
+    </header>
+
+    <section>
+      <% if flash[:status] %>
+        <%= flash[:message] %>
+      <% end %>
+    </section>
+
+    <main class='grid-x grid-margin-x'>
+      <aside class="cell" aria-label="recent-searches" id='recent-searches'>
+        <% if !session[:recent_searches].empty? %>
+          <h5>
+            <strong> Recent Searches: </strong>
+            <small>
+              <% session[:recent_searches].last(5).reverse.each do |query| %>
+                <%= link_to query, recipes_path(query: query), class: 'button tiny' %>
+              <% end %>
+            </small>
+          </h5>
+        <% end %>
+      </aside>
+      <%= yield %>
+    </main>
+
+    <footer>
+      <div id="edamam-badge" data-color="white"></div>
+    </footer>
+  </body>
+</html>

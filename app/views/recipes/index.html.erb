@@ -8,3 +8,5 @@
 	</li>
 	<% end %>
 </ul>
+
+<%= link_to("Next Page", recipes_path(q: @query, from: @from, to: @to)) %>

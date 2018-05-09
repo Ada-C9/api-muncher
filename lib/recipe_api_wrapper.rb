@@ -7,11 +7,11 @@ class RecipeApiWrapper
 	ID = ENV["EDAMAM_ID"]
 	KEY = ENV["EDAMAM_KEY"]
 
-	def self.list_recipes(query)
+	def self.list_recipes(query, from, to)
 		recipes = []
 
 		if query
-			url = BASE_URL + "?q=#{ query }" + "&app_id=#{ID}" + "&app_key=#{KEY}"
+			url = BASE_URL + "?q=#{ query }" + "&app_id=#{ID}" + "&app_key=#{KEY}" + "&from=#{from}" + "&to=#{to}"
 
 			response = HTTParty.get(url).parsed_response
 
@@ -30,16 +30,14 @@ class RecipeApiWrapper
 	def self.get_details(uri)
 		url = BASE_URL + "?r=" + URI.encode(uri) + "&app_id=#{ID}" + "&app_key=#{KEY}"
 
-
 		response = HTTParty.get(url)
 		recipe = initialize_recipe(response.first)
 		return recipe
-
 	end
 
 	private
 	def self.raise_on_error(response)
-		unless response["OK"]
+		if response["OK"]
 			raise EdamamError.new(response["error"])
 		end
 	end

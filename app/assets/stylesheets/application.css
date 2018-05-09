@@ -18,8 +18,9 @@
 
  */
 
-.header, p, h1, h3 {
+.header, p, h1, h3, .form_font {
   text-align: center;
+  font-family: 'Homemade Apple', cursive;
 }
 
 ul li {
@@ -49,4 +50,12 @@ img {
 }
 #edamam-badge a img {
   max-height: 30px;
+}
+
+.search_form {
+  padding-left: 40%;
+  padding-right: 40%;
+  margin-top: 1%;
+  margin-bottom: 2%;
+  text-align: center;
 }

@@ -6,7 +6,7 @@
       <li>
         <img src="<%= recipe.image %>" alt="recipe image">
         <br>
-        <%= link_to recipe.label, recipe_show_path(recipe.id) %>
+        <%= link_to recipe.label, recipe_show_path(recipe.id), target: :_blank  %>
       </li>
     <% end %>
   </ul>

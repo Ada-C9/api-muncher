@@ -1,23 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://developer.edamam.com/attribution/badge.js"></script>
-    <title><%= content_for?(:title) ? yield(:title) : "Muncher" %></title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://developer.edamam.com/attribution/badge.js"></script>
+  <title><%= content_for?(:title) ? yield(:title) : "Muncher" %></title>
 
-    <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
-    <%= csrf_meta_tags %>
-  </head>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
+</head>
 
-  <body>
-    <head>
-
-    </head>
-    <%= yield %>
-    <footer>
-      <div id="edamam-badge" data-color="transparent"></div>
-    </footer>
-  </body>
+<body>
+  <header>
+    <% if !current_page?(url_for(:controller => 'recipes', :action => 'new')) %>
+    <div class = "search_form">
+      <%= form_tag recipe_results_path, method: "get" do %>
+      <%= label_tag(:search_phrase, "Search Muncher for:", :class => "form_font") %>
+      <%= text_field_tag(:search_phrase) %>
+      <%= submit_tag("Search", :class => "form_font hollow button secondary" ) %>
+      <% end %>
+    </div>
+    <% end %>
+  </header>
+  <main>
+    <section class="flash">
+      <% flash.each do |name, message| %>
+      <div class="<%= name %>"><%= message %></div>
+      <% end %>
+    </section>
+  </main>
+  <%= yield %>
+  <footer>
+    <div id="edamam-badge" data-color="transparent"></div>
+  </footer>
+</body>
 </html>

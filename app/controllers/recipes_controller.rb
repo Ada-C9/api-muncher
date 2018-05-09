@@ -22,7 +22,7 @@ class RecipesController < ApplicationController
     if @count == 0
       flash[:message] = "Sorry, that recipe doesnt exist"
       flash[:error] = "Invalid recipe url"
-      redirect_to :root
+      redirect_to root_path
     end
 
     params[:count] = all_recipes_info[0]
@@ -31,7 +31,7 @@ class RecipesController < ApplicationController
     if @count == 0
       flash[:message] = "Sorry, that recipe doesnt exist"
       flash[:error] = "Invalid recipe url"
-      redirect_to :root
+      redirect_to root_path
     end
 
     # This is the page we are on, starting a 0
@@ -48,7 +48,7 @@ class RecipesController < ApplicationController
     if r.nil?
       flash[:message] = "Sorry, that recipe doesnt exist"
       flash[:error] = "Invalid recipe url"
-      redirect_to :root
+      redirect_to root_path
     end
 
     recipe_details = ApiMuncherWrapper.get_recipe(r)
@@ -57,7 +57,7 @@ class RecipesController < ApplicationController
     if recipe_details == false
       flash[:message] = "Sorry, that recipe doesnt exist"
       flash[:error] = "Invalid recipe url"
-      redirect_to :root
+      redirect_to root_path
     end
 
     @recipe = recipe_details

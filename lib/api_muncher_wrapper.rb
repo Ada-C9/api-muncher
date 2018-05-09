@@ -23,7 +23,7 @@ class ApiMuncherWrapper
 
     # the range from X to X+10 for muncher api to return
     all_recipes_info << (page.to_i + 1)
-    
+
     if !data["hits"].nil?
       data["hits"].each do |hit|
         uri = hit["recipe"]["uri"]
@@ -35,9 +35,10 @@ class ApiMuncherWrapper
         nutrition = hit ["recipe"]["dietLabels"]
 
         recipes << Recipe.new(uri, name, ingredients, image_url, link, allergy, nutrition, query)
-    end
+      end
 
-    return all_recipes_info << recipes
+      return all_recipes_info << recipes
+    end
   end
 
   def self.get_recipe(r)

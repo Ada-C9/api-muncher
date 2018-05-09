@@ -75,15 +75,6 @@ describe "ApiMuncherWrapper" do
       recipe_count.must_equal 0
 
       recipes.count.must_equal 0
-      # I am unsure how to test the negative using the testing example from class:
-      # it "Can't send message to fake channel" do
-      #   VCR.use_cassette("channels") do
-      #     response = SlackApiWrapper.send_msg("this-channel-does-not-exist", "test message")
-      #     response["ok"].must_equal false
-      #     response["error"].wont_be_nil
-      #   end
-      # end
-
     end
   end
 
@@ -108,13 +99,26 @@ describe "recipes_controller" do
 
   describe "index" do
 
-
     it "should sucessfully show index of all recipes with valid data in params" do
-
+      proc {
+        get search_path, params: {
+          q: "avocado" ,
+          page: 1
+        }
+      }
+      must_respond_with :success
     end
 
     it "should redirect to root with invalid data in params" do
 
+      proc {
+        get search_path, params: {
+          q: "avocado" ,
+          page: 1
+        }
+      }
+      must_respond_with :redirect
+      must_redirect_to root_path
     end
 
   end
@@ -123,9 +127,25 @@ describe "recipes_controller" do
 
     it "should sucessfully show recipe details with valid data in params" do
 
+      proc {
+        get recipe_path, params: {
+            q: "avocado" ,
+            r: "http://www.edamam.com/ontologies/edamam.owl#recipe_b7ad27e3e2c9440baca6ac8f7fac2a53"
+        }
+      }
+      must_respond_with :success
     end
 
     it "should redirect to root with invalid data in params" do
+
+      proc {
+        get recipe_path, params: {
+            q: "avocado" ,
+            r: nil
+        }
+      }
+      must_respond_with :redirect
+      must_redirect_to root_path
 
     end
 

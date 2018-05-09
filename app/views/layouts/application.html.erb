@@ -17,8 +17,8 @@
     <% if !current_page?(url_for(:controller => 'recipes', :action => 'new')) %>
     <div class = "search_form">
       <%= form_tag recipe_results_path, method: "get" do %>
-      <%= label_tag(:search_phrase, "Search Muncher for:", :class => "form_font") %>
-      <%= text_field_tag(:search_phrase) %>
+      <%= label_tag(:q, "Search Muncher for:", :class => "form_font") %>
+      <%= text_field_tag(:q) %>
       <%= submit_tag("Search", :class => "form_font hollow button secondary" ) %>
       <% end %>
     </div>

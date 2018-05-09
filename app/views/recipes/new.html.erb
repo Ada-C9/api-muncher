@@ -1,9 +1,9 @@
-<h1 class="header">Search Muncher Recipes</h1>
+<h1 class="header">Muncher Recipes</h1>
 
-<span class="search_form">
+<div class="search_form">
   <%= form_tag recipe_results_path, method: "get" do %>
-    <%= label_tag(:q, "Search for:") %>
-    <%= text_field_tag(:q) %>
-    <%= submit_tag("Search") %>
+  <%= label_tag(:q, "Find recipes for ...", :class => "form_font") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search", :class => "form_font hollow button secondary" ) %>
   <% end %>
-</span>
+</div>

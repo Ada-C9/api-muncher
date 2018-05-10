@@ -1,0 +1,11 @@
+<div class="home">
+  <h1>MUNCHIES</h1>
+  <section class="search">
+
+    <%= form_tag(recipes_path, :method => "get", id: "search-form") do %>
+    <%= label_tag "Find your flavor..." %>
+    <%= text_field_tag :search, params[:search], placeholder: "What would you like to munch on?", class: "button" %>
+    <%= submit_tag "Search" %>
+    <% end %>
+  </section>
+</div>

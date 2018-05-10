@@ -1,0 +1,27 @@
+
+<div class="index">
+  <h1>Search: <%= params[:search] %></h1>
+  <ul class = "recipe-container">
+
+  <% if @recipes.empty? %>
+  <p>
+    sorry... no recipe found!
+  </p>
+
+  <%else%>
+  <%@recipes.each do |recipe|%>
+  <li class="recipe-info">
+
+    <%= link_to recipe_path(recipe.id) do %>
+    <%= image_tag recipe.image, alt:"#{recipe.label}" %>
+    <p><%=recipe.label.titleize %></p>
+    <p><%=recipe.source%></p>
+    <% end %>
+  </li>
+  <% end %>
+
+  <div class="pagination">
+    <%= will_paginate @recipes %>
+  </div>
+
+  <% end %>

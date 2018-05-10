@@ -16,7 +16,7 @@ class ApiMuncherWrapper
       data["hits"].each do |hash|
         recipe = hash["recipe"]
         recipe_list << Recipe.new(recipe["label"],
-          recipe["uri"], {image: recipe ["image"],
+          recipe["uri"], {image: recipe["image"],
             source: recipe['source'],
             url: recipe['url'],
             ingredients: recipe['ingredientLines'],

@@ -5,8 +5,8 @@ class RecipesController < ApplicationController
 
   def index
     @recipes = ApiMuncherWrapper.search_recipes(params[:search]).paginate(:page => params[:page],:per_page => 10)
-    # @recipes_pag = @recipes.paginate(:page => params[:page],:per_page => 10)
   end
+
 
   def show
     recipe_id = params[:id]
@@ -18,5 +18,6 @@ class RecipesController < ApplicationController
     else
       @recipe
     end
+
   end
 end

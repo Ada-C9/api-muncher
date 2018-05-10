@@ -30,7 +30,7 @@ padding-bottom: 100px 0px;
 html, body {
   height: 100%;
   font-family: 'Londrina Solid', sans-serif;
-  color: blue;
+  color: orange;
 }
 
 .button {
@@ -45,6 +45,10 @@ html, body {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  list-style-type: none
+}
+ul {
+  list-style-type: none
 }
 
 .main-container, .home {

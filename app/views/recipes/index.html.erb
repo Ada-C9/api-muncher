@@ -1,0 +1,12 @@
+<h2>Yummy recipes</h2>
+
+<ul>
+	<% @recipes.each do |recipe| %>
+	<li>
+		<img src="<%= recipe.photo_url %>" />
+		<%=link_to(recipe.name, recipe_path(uri: recipe.uri))%>
+	</li>
+	<% end %>
+</ul>
+
+<%= link_to("Next Page", recipes_path(q: @query, from: @from, to: @to)) %>

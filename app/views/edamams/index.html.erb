@@ -1,0 +1,22 @@
+<header>
+  <h1>Recipes</h1>
+</header>
+<section>
+  <% if @recipe_list %>
+  <ul>
+    <% @recipe_list.each do |recipe| %>
+    <li class="thumbnail">
+      <figure>
+        <%= image_tag("#{recipe.image}")  %>
+      </figure>
+      <p>
+        <%= link_to recipe.label, recipe_details_path(recipe.uri) %>
+      </p>
+    </li>
+    <% end %>
+  </ul>
+  <% end %>
+</section>
+</header>
+<%= paginate @recipe_list %>
+</section>

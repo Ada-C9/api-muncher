@@ -1,0 +1,25 @@
+<header>
+  <h1></h1>
+</header>
+
+<section>
+  <ul>
+    <li>
+      <% @recipe.healthLabels.each do |label|%>
+      <%= "#{label}, " %>
+      <% end %>
+    </li>
+    <li>
+      <% @recipe.ingredientLines.each do |ingredient| %>
+      <%= "#{ingredient}, " %>
+      <% end %>
+    </li>
+    <li>
+      <%= @recipe.source %>
+      <p>
+        <%= link_to "Get if from the source!", @recipe.url, target: :_blank %>
+      </p>
+    </li>
+  </ul>
+
+</section>

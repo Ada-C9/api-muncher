@@ -1,0 +1,16 @@
+
+<section>
+  <h2>Your recipes</h2>
+  <ul class="ten-recipes">
+    <% @recipes.each do |recipe| %>
+
+    <li>
+      <ul class="recipebox">
+        <li class="recipename"><%=link_to recipe.label, recipe_path(recipe.uri)%></li>
+        <li><a class="th"><img src="<%=recipe.image%>" alt="<%=recipe.label%>" class="showphoto"></a></li>
+      </ul>
+    </li>
+    <%end%>
+  </ul>
+</section>
+<a id="pagenumbers"><%= will_paginate @recipes%></a>

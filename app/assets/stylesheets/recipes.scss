@@ -1,0 +1,62 @@
+// Place all the styles related to the recipes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+ #navtitle {
+  color: darkgray;
+  font-size: 15vw;
+  margin-left: 5%;
+  margin-right: 35%;
+}
+
+.flexcontainer {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  align-content: space-around;
+  color: #aaa;
+  margin-right: 10%
+}
+
+#homepagetitle {
+  font-size: 15vw;
+  font-family: comic;
+  color: lightgray;
+}
+
+#recipe-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.ten-recipes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 20px;
+  align-items: stretch;
+}
+
+.recipebox {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 1fr 3fr;
+}
+
+.recipename {
+  display: flex;
+  align-items:flex-end;
+  justify-content: center;
+}
+
+.showphoto {
+  border: solid 3px #aaa;
+
+}
+
+.pagination {
+  display: flex;
+}
+.pagenumbers {
+  color: darkgray;
+}

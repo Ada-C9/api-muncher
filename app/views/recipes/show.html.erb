@@ -1,0 +1,39 @@
+<section>
+
+
+  <h1><%=@recipe.label%></h1>
+
+  <a target="_blank" href="<%=@recipe.url%>">Go to the original <%=@recipe.label%> recipe</a>
+  <ul id="recipe-details">
+
+    <li><img src="<%=@recipe.image%>" alt="<%=@recipe.label%>" class="show-image"></li>
+
+
+    <% unless @recipe.ingredients.nil?%>
+    <ul>
+      <li>
+        <h3>Ingredients:</h3>
+        <ul>
+          <% @recipe.ingredients.each do |ingredient|%>
+          <li><%=ingredient%></li>
+          <%end%>
+        </ul>
+      </li>
+      <%end%>
+
+      <% unless @recipe.health.nil?%>
+      <li>
+        <h3>Dietary information:</h3>
+        <ul>
+          <% @recipe.health.each do |health|%>
+          <li><%=health%></li>
+          <%end%>
+        </ul>
+      </li>
+      <%end%>
+    </ul>
+
+  </ul>
+
+
+</section>

@@ -1,0 +1,340 @@
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*= require normalize-rails
+
+*
+*= require_tree .
+*= require_self
+*= require foundation_and_overrides
+
+*/
+
+/* Set the background color of body to tan */
+* {
+  /* set in foundations */
+  font-family: 'Pangolin', cursive;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+body a {
+  color: hsl(203, 77%, 40%);
+}
+
+/*  Search Form Styling*/
+
+input#query {
+  height: 2rem;
+}
+
+/* Results Styling */
+
+.results img {
+  width: 100%;
+}
+
+section.results {
+  display: flex;
+  flex-direction: column;
+}
+
+section.tags ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+section.tags ul a {
+  line-height: inherit;
+  color: hsl(203, 77%, 40%);
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  background-color: antiquewhite;
+  text-align: center;
+  margin: .5vh;
+  padding: 1vh;
+}
+
+h1.main {
+  text-align: center;
+  margin-top: 5vh;
+}
+
+img.edamam-logo {
+  max-height: 7vh;
+}
+
+.content {
+  flex: 1 0 auto; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+  background-color: #fff;
+  position: relative;
+  top: 0;
+  bottom: 100%;
+  left: 0;
+  z-index: 1;
+}
+
+aside.search {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: .8em;
+  flex-shrink: 0;
+  padding: 20px;
+  background-color: inherit;
+}
+
+.button {
+  align-self: flex-end;
+}
+
+article.results.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  /* width: 100%;
+  height: auto; */
+  margin: 2vw;
+}
+
+article.results.item a {
+  color: hsl(189, 6%, 16%);
+  text-decoration: none;
+  font-size: .9em;
+  margin-top: 2vh;
+  overflow: hidden;
+  text-align: center;
+}
+
+span.page {
+  display: none;
+}
+
+section.recipe {
+  padding: 3vw;
+  margin: 2vw;
+}
+
+nav.pagination {
+  display: flex;
+  justify-content: space-around;
+  visibility: visible;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-trigger {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+form {
+  padding: 12vh 5vw;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: absolute;
+}
+
+@media screen and (max-width: 780px) {
+
+  label[for="nav-trigger"] {
+    position: fixed;
+    top: -1.5rem;
+    align-self: center;
+    z-index: 2;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    border-radius: 50%;
+    border: solid .4em hsla(0, 1%, 30%, .5);
+    background-color: hsla(0, 0%, 100%, 1);
+  }
+
+  .nav-trigger:checked + label {
+    top: 35vh;
+    position: absolute;
+    box-shadow: 0 0 5px 5px hsla(0, 0%, 0%, 0.5);
+  }
+
+  .nav-trigger:checked ~ .content {
+    top: 30vh;
+    box-shadow: 0 0 5px 5px hsla(0, 0%, 0%, 0.5);
+  }
+
+  .nav-trigger + label, .content {
+    transition: top 0.2s;
+  }
+
+  aside.search {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  aside.login {
+    position: fixed;
+    top: 7.5rem;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    margin: 5vw;
+}
+
+  @media screen and (min-width: 650px) {
+    .nav-trigger:checked + label {
+      margin-top: 2.5rem;
+    }
+
+    form {
+      padding: 8rem;
+    }
+  }
+
+
+}
+
+  /* h1 {
+  text-align: center;
+  padding-top: 30vh;
+  } */
+  @media screen and (min-width: 450px) {
+    article.results.item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-content: center;
+      max-width: 40vw;
+      margin: 2vw;
+    }
+
+    article.results.item img {
+      width: 100%;
+    }
+
+    article.results.item a:hover {
+      color: hsl(180, 30%, 53%);
+    }
+
+    section.results {
+      display: flex;
+      flex-flow: wrap row;
+      justify-content: space-around;
+      flex: 1 0 auto;
+    }
+
+    section.recipe img {
+      width: 100%;
+    }
+
+    aside.h1, section.recipe h2 {
+      font-size: 2em;
+      font-weight: bold;
+    }
+    section.recipe a {
+      text-align: center;
+    }
+  }
+
+
+  @media screen and (min-width: 780px) {
+    aside.search, section.search {
+      position: relative;
+      display: block;
+    }
+
+    section.search {
+      padding: 25vh 0;
+    }
+
+    section.recipe img {
+      float: left;
+      margin-right: 10vh;
+      width: 60%;
+    }
+
+    section.tags ul {
+      flex-flow: wrap row;
+    }
+
+    section.results {
+      display: flex;
+      flex-flow: wrap row;
+      flex: 1 0 auto;
+    }
+
+    article.results.item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-content: center;
+      max-width: 20%;
+      margin: 1vw;
+    }
+
+    nav.pagination {
+      display: flex;
+      justify-content: space-around;
+      visibility: visible;
+      display: flex;
+      justify-content: center;
+    }
+
+    .clearfix :after {
+      content: ".";
+      visibility: hidden;
+      display: block;
+      height: 0;
+      clear: both;
+
+    }
+
+    h1.main {
+      font-size: 4em;
+    }
+
+    span.page {
+      display: block;
+    }
+
+    form {
+      position: relative;
+      padding: 5vh 5vw;
+    }
+
+    section.content {
+      border-top: dotted 3px whitesmoke;
+      padding: 0 5vw;
+    }
+  }

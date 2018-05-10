@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title><%= content_for?(:title) ? yield(:title) : "Muncher" %></title>
+
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet">
+  <%= favicon_link_tag asset_path('favicon.png'), rel: 'icon', type: 'image/png' %>
+</head>
+
+<body>
+  <header class="top">
+
+    <h1 class="main"><%= link_to "Muncher", root_path %></h1>
+
+    <% if display_search?(request.fullpath) %>
+    <aside class="search">
+      <%= render partial: 'layouts/search' %>
+    </aside>
+    <% end %>
+
+    <aside class="login">
+      <% if @login_user %>
+      <%= link_to "Logged in as #{@login_user.username}", user_path(@login_user), class: "button tiny" %>
+      <%= link_to "Logout", logout_path, method: :delete, class: "secondary button tiny" %>
+      <% else %>
+      <%= link_to "Login/SignUp with Google", "/auth/google_oauth2", class: "secondary button tiny" %>
+      <% end %>
+    </aside>
+
+
+  </header>
+  <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+  <label for="nav-trigger"></label>
+
+  <section class="content">
+    <% if flash[:status] %>
+    <section class="row status <%= flash[:status] %> callout">
+      <h3>
+        <%= flash[:message] %>
+      </h3>
+    </section>
+    <% end %>
+
+    <%= yield %>
+  </section>
+
+  <footer>
+    <span> powered by <%= image_tag("edamam.png", class: "edamam-logo") %></span>
+  </footer>
+</body>
+</html>

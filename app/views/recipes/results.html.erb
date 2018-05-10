@@ -1,0 +1,14 @@
+<h2>Results for "<%= @query.titlecase %>"</h2>
+<section class="results">
+  <% if @results %>
+    <% @results.each do |result| %>
+    <article class="results item small medium">
+      <%= link_to show_path(result.uri.split('owl')[1]), :action => 'go' do %>
+      <%= image_url(result) %>
+      <%= result.label %>
+      <% end %>
+    </article>
+    <% end %>
+  <% end %>
+</section>
+<%= paginate @results, window: 2 %>

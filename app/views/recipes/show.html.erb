@@ -1,3 +1,5 @@
+<% content_for :title, "Display recipe" %>
+
 <%= render partial: "search", locals: { page_title: "Welcome to Muncher"} %>
 
 <section class="show-page">
@@ -11,9 +13,9 @@
     <section class="list-info">
       <ul>
         <h3 class="blue-mc">
-          Ingridients:
+          Ingredients:
         </h3>
-        <% @recipe.ingridients.each do |ingr| %>
+        <% @recipe.ingredients.each do |ingr| %>
         <li>
           <%= ingr %>
         </li>

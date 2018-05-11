@@ -27,7 +27,7 @@ describe EdemamApiWrapper do
         uri = "edb6djdka343dad33a25bfb2aa0613ccb2c2f545b30a5"
         proc {
           EdemamApiWrapper.find_recipe(uri)
-        }.must_raise ArgumentError
+        }.must_raise EdemamApiWrapper::EdemamError
       end
     end
   end

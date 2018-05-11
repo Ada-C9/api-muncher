@@ -142,7 +142,7 @@ ul {
   transition-delay: 0.2s;
 }
 
-/* I added this */
+/* added */
 .overlay-fade-in h4 a {
   color: white;
 }
@@ -197,13 +197,10 @@ line-height: 1.25;
   padding-left: 1rem;
   padding-right: 1rem;
   background-color: rgba(255, 255, 255, 0.5);
-
-  /* background-color: rgba(0, 0, 0, 0.1); */
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  /* box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1); */
-
 }
+
 .current-page  {
   background-color: #C2DCA4;
 }
@@ -213,7 +210,6 @@ line-height: 1.25;
   margin-left: 0px;
   max-width: 100%;
 }
-
 
 .show-name {
   padding-top: 2rem;
@@ -226,12 +222,10 @@ line-height: 1.25;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/* .found-image {
-padding-left: 0.5rem;
-padding-right: 0.5rem;
-} */
 .current-page a {
-  /* background-color: #C2DCA4; */
   border-bottom: 0.3rem solid #C2DCA4;
-  /* background-color: red; */
+}
+
+.recipe-link {
+  border-bottom: 0;
 }

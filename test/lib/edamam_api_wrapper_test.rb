@@ -76,4 +76,36 @@ describe EdamamApiWrapper do
 		end
 	end
 
+	it "Can get a result using uri" do
+		test_uri = "http://www.edamam.com/ontologies/edamam.owl#recipe_46f0285ac49d2b918bc7171142de042b"
+		VCR.use_cassette("recipes") do
+			result = EdamamApiWrapper.get_recipe(test_uri)
+
+			result.must_be_kind_of Recipe
+			result.name.must_equal "Fish Curry"
+			result.uri.must_equal test_uri
+		end
+	end
+
+	it "raises an error for invalid information" do
+		proc { VCR.use_cassette("recipes") do
+			EdamamApiWrapper.get_recipe("foo")
+		end }.must_raise JSON::ParserError
+
+		proc { VCR.use_cassette("recipes") do
+			EdamamApiWrapper.get_recipe(nil)
+		end }.must_raise ArgumentError
+
+		proc { VCR.use_cassette("recipes") do
+			EdamamApiWrapper.get_recipe(42)
+		end }.must_raise ArgumentError
+	end
+
+	it "doesn't break if it can't find anything" do
+		VCR.use_cassette("recipes") do
+			result = EdamamApiWrapper.get_recipe("http://google.com")
+			result.must_be_nil
+		end
+	end
+
 end

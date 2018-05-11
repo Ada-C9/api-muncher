@@ -20,7 +20,8 @@ class EdamamApiWrapper
 		}
 	end
 
-	# PRE: provided uri must be a String. Otherwise throws ArgumentError.
+	# PRE: Throw ArgumentError if provided uri is not a String. Throw a ParserError
+	# if uri is not a parable url.
 	# Returns nil if cannot find. Otherwise returns Recipe associated with
 	# provided uri.
 	def self.get_recipe(uri)
@@ -31,7 +32,7 @@ class EdamamApiWrapper
 
 	def self.find_recipe(uri)
 		result = HTTParty.get(URI.encode(get_find_recipe_base_url(uri)))
-		return result.empty? ? result.pop : Recipe.new(result.pop)
+		return Recipe.new(result.pop) if !result.empty?
 	end
 
 	def self.build_recipes(response)

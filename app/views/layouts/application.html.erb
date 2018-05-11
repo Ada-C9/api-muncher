@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <script src="https://developer.edamam.com/attribution/badge.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Raleway:300,400,700" rel="stylesheet">
+  </head>
+
+  <body>
+    <section class="main-part inside-shit">
+
+      <section class="header text-center">
+        <h2 class="page-header">FindYum!</h2>
+        <%= form_tag results_path(@search_input), method: "get" do %>
+          <section class="grid-x align-center">
+            <section class="cell medium-4 input-group">
+                <%= text_field_tag(:query_text) %>
+                <section class="input-group-button">
+                  <%= submit_tag "Search", class:"button" %>
+                </section> <!-- nput-group-button -->
+            </section> <!-- cell medium-4 input-group -->
+          </section> <!-- grid-x align-center -->
+        <% end %>
+
+        <section class="whole-thing">
+
+          <section class="alert-section">
+            <% if flash[:alert] %>
+                <h5 class="callout alert"><%= flash[:alert] %></h5>
+            <% end %>
+          </section>
+
+          <%= yield %>
+
+        </section> <!-- whole-thing -->
+        <section id="edamam-badge" data-color="white"></section>
+      </section> <!-- header text-center -->
+    </section> <!-- main-part inside-shit -->
+  </body>
+</html>

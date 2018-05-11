@@ -1,0 +1,37 @@
+<section class="grid-container">
+	<section class="grid-x grid-margin-x align-center">
+		<ul class="recipes-container">
+			<% @recipes.each do |result| %>
+				<li class="product-summary">
+					<section class="block-thing">
+						<section class="image-wrapper overlay-fade-in">
+							<%= image_tag(result.image, :alt => "recipe image", :class => "found-image") %>
+							<section class="image-overlay-content">
+								<h4><%= link_to result.name, { action: 'show', :uri => result.uri } %></h4>
+							</section>
+						</section>
+					</section>
+				</li>
+			<%end%>
+		</ul>
+	</section>
+</section>
+
+
+<section>
+	<ul class="pagination-ul">
+	  <section class="grid-x pagination-group">
+			<% (1...@max_pages).each do |page| %>
+				<% if page == @curr_from %>
+					<section class="cell shrink text-center current-page">
+						<%= page %>
+					</section>
+				<% else %>
+					<section class="cell shrink text-center pagination-numbers">
+							<%= link_to page, { action: 'results', :from => page } %>
+					</section>
+				<% end %>
+			<% end %>
+		</section>
+	</ul>
+</section>

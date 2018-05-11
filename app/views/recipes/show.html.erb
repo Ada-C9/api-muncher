@@ -1,0 +1,23 @@
+<section class="grid-container">
+	<section class="grid-y">
+	  <section class="cell shrink header">
+    	<section class="show-name"><%= @recipe.name %></section>
+			<section class="recipe-link show-subsection-title">
+				<%= link_to "View this Yum!", @recipe.url, target: :_blank %>
+			</section>
+			<section class="grid-container no-extra-space">
+	      <section class="grid-x grid-margin-x">
+	        <section class="medium-4 cell medium-offset-2 large-offset-2"><%= image_tag(@recipe.image, :alt => "recipe image", :class => "stitched") %></section>
+      		<section class="medium-4 cell show-info">
+						<section class="show-subsection-title">Ingredients</section>
+		        <ul class="to-circle"><% @recipe.ingredients.each do |ingredient| %><li><%= ingredient %></li><% end %></ul>
+      		</section>
+		      <section class="medium-4 cell medium-offset-2 large-offset-2 show-info">
+						<section class="show-subsection-title">Diet Info</section>
+						<ul class="to-circle"><% @recipe.diet_labels.each do |diet_label| %><li><%= diet_label %></li><% end %></ul>
+		      </section>
+			  </section>
+			</section>
+    </section>
+  </section>
+</section>

@@ -1,0 +1,47 @@
+<% content_for :title, "Display recipe" %>
+
+<%= render partial: "search", locals: { page_title: "Welcome to Muncher"} %>
+
+<section class="show-page">
+
+  <h2>
+     <%= link_to @recipe.name, "#{@recipe.url}", target: :_blank %>
+  </h2>
+
+  <section class="recipe-info">
+    <%= image_tag(@recipe.image, alt: "food-image", class: "food-pic") %>
+    <section class="list-info">
+      <ul>
+        <h3 class="blue-mc">
+          Ingredients:
+        </h3>
+        <% @recipe.ingredients.each do |ingr| %>
+        <li>
+          <%= ingr %>
+        </li>
+        <% end %>
+      </ul>
+      <ul>
+        <h3 class="red-ue">
+          Total Calories:
+        </h3>
+        <%= @recipe.calories.round(2) %>cal
+      </ul>
+
+      <% if !@recipe.dietlabels.empty? %>
+          <ul>
+            <h3 class="yellow-nr">
+              Dietary Labels:
+            </h3>
+            <% @recipe.dietlabels.each do |lab| %>
+            <li>
+              <%= lab %>
+            </li>
+        <% end %>
+
+        <% end %>
+      </ul>
+    </section>
+
+  </section>
+</section>

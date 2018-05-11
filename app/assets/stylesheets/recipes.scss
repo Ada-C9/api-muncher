@@ -1,0 +1,112 @@
+// Place all the styles related to the recipes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.search-partial {
+  justify-content: center;
+  text-align: center;
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 8%;
+}
+
+body section h2 {
+  text-align: center;
+
+}
+
+body section {
+  margin: 3% 10%;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  margin-left: auto;
+}
+
+.blue-mc {
+  color: #4885ed;
+}
+
+.red-ue {
+  color: #db3236;
+}
+
+.yellow-nr {
+  color: #f4c20d;
+}
+
+#green-h {
+  color: #3cba54;
+}
+
+.search-partial h2 {
+  font-family: Helvetica;
+  font-weight: bold;
+}
+
+.search-partial .button {
+  background-color: #f2f2f2;
+  color: #757575;
+  font-family: arial,sans-serif;
+}
+
+.search-partial .button:hover {
+  border: 1px solid #5e5e5c;
+}
+
+.show_recipe ul li {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  margin: 3%;
+}
+
+.show_recipe ul {
+  justify-content: center;
+
+}
+
+.show_recipe ul li img {
+  margin-top: 30px;
+  color: rgb(40, 88, 75);
+}
+
+.show_recipe ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.recipe-info > img {
+  width: 300px;
+  max-height: 300px;
+  border-radius: 30%;
+}
+
+.show-page > h2 {
+  margin-bottom: 5%;
+}
+
+#site-logo {
+  width: 200px;
+  height: 80px;
+}
+
+footer {
+  text-align: center;
+  font-family: sans-serif;
+  color: #474935;
+  padding: 2%;
+  border-top: solid 1px #7f827c;
+}
+
+#pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.error-display {
+  color: rgb(210, 42, 72);
+  font-size: 2rem;
+}

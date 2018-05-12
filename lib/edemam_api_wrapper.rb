@@ -16,10 +16,17 @@ class EdemamApiWrapper
   end
 
   def self.show_recipe(uri)
+    if uri.nil? || uri.blank?
+      raise ArgumentError.new(
+        "Uri is not valid #{uri}"
+      )
+    end
+
     encoded_uri = URI.encode(uri)
     url = BASE_URL + "/search?r=#{encoded_uri}&app_id=#{API_ID}&app_key=#{TOKEN}"
     response = HTTParty.get(url)
 
+    return nil if response[0].nil?
     return Recipe.format_api(response[0])
   end
 

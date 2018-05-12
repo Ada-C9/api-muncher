@@ -54,3 +54,45 @@
   [1m[35m (453.7ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
   [1m[35m (219.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
   [1m[35m (416.8ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (203.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (612.0ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (211.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (393.4ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------------------------------
+RecipesController::show_recipe: test_0002_fails for a recipe that DNE
+---------------------------------------------------------------------
+Started GET "/recipe/0000" for 127.0.0.1 at 2018-05-12 12:37:00 -0700
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"0000"}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------------------------
+RecipesController::show_recipe: test_0001_ can show an exsisting recipe
+-----------------------------------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (199.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (438.5ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (193.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (456.2ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (204.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (434.2ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (202.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (399.9ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (200.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (470.4ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (183.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (421.6ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (193.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (425.7ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (199.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (412.9ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (209.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (432.0ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (198.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (462.8ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (213.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (431.9ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m
+  [1m[35m (197.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Week_1_test"[0m
+  [1m[35m (405.2ms)[0m  [1m[35mCREATE DATABASE "Week_1_test" ENCODING = 'unicode'[0m

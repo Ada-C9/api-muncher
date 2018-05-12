@@ -24,15 +24,15 @@ describe Recipe do
   describe 'format_api' do
     before  do
       @fake_recipe = {
-        label = 'some name',
-        options = {
-          uri = "a uri",
-          image = "an image url",
-          source = "got it",
-          recipe__url = "wow lots of url",
-          ingredients = "stuff to eat",
-          calories = "123",
-          healthLabels = "gluten"
+        label: 'some name',
+        options: {
+          uri: "a uri",
+          image: "an image url",
+          source: "got it",
+          recipe__url: "wow lots of url",
+          ingredients: "stuff to eat",
+          calories: "123",
+          healthLabels: "gluten"
         }
       }
     end

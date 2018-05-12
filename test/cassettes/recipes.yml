@@ -311,4 +311,104 @@ http_interactions:
       string: "[]"
     http_version: 
   recorded_at: Mon, 07 May 2018 00:38:48 GMT
+- request:
+    method: get
+    uri: https://api.edamam.com/search?app_id=ccd5eb21&app_key=<EDEMAM_TOKEN>&from=0&q=wedasfgt&to=30
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - ngx_openresty
+      Date:
+      - Sat, 12 May 2018 19:37:01 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - route=ee37ea0cbec446fe0dc609c7b4a6323b; Path=/
+      Cache-Control:
+      - private
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      X-Served-By:
+      - ip-10-149-22-246/10.149.22.246
+      Vary:
+      - Accept-Encoding
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "q" : "wedasfgt",
+          "from" : 0,
+          "to" : 30,
+          "params" : {
+            "sane" : [ ],
+            "q" : [ "wedasfgt" ],
+            "from" : [ "0" ],
+            "app_key" : [ "<EDEMAM_TOKEN>" ],
+            "to" : [ "30" ],
+            "app_id" : [ "ccd5eb21" ]
+          },
+          "more" : false,
+          "count" : 0,
+          "hits" : [ ]
+        }
+    http_version: 
+  recorded_at: Sat, 12 May 2018 19:37:01 GMT
+- request:
+    method: get
+    uri: https://api.edamam.com/search?app_id=ccd5eb21&app_key=<EDEMAM_TOKEN>&r=http://www.edamam.com/ontologies/edamam.owl%23recipe_e9d318b6c547e3e2adb395133c1e21cd
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - ngx_openresty
+      Date:
+      - Sat, 12 May 2018 19:50:58 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '2'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - route=272f54237f8ce06ebc267f46f9de4658; Path=/
+      Cache-Control:
+      - private
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 UTC
+      X-Served-By:
+      - ip-10-150-7-77/10.150.7.77
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: 
+  recorded_at: Sat, 12 May 2018 19:50:58 GMT
 recorded_with: VCR 4.0.0

@@ -7,46 +7,62 @@ describe EdemamApiWrapper do
       VCR.use_cassette('recipes') do
         recipes = EdemamApiWrapper.search_recipes(query)
 
-        get recipes_path, params: {query: "pepper"}
-        must_respond_with :success
-
         recipes.each do |recipe|
           recipe.must_be_kind_of Recipe
         end
       end
     end
 
-    it 'returns an error if no recipes exsist for that search' do
-      VCR.use_cassette('recipes') do
 
-      get recipes_path, params: {query: ""}
-      must_respond_with :success
-      flash[:status].must_respond_with :failure
+    it 'returns an error if no recipes exsist for that search' do
+      query = 'wedasfgt'
+      VCR.use_cassette('recipes') do
+        recipes = EdemamApiWrapper.search_recipes(query)
+
+        recipes.must_be_kind_of Array
+        recipes.must_be :empty?
       end
     end
   end
 
-  describe 'show_recipe' do
-    it ' can show an exsisting recipe' do
+  describe 'show recipe' do
+    it 'can show a single recipe' do
       uri = "http://www.edamam.com/ontologies/edamam.owl#recipe_e9d318b6c547e3e2adb395133c1e21cf"
 
       VCR.use_cassette('recipes') do
-        recipes =  EdemamApiWrapper.search_recipes("pepper")
-        recipe = recipes.first
+        recipe = EdemamApiWrapper.show_recipe(uri)
 
-        get recipe_path(recipe.id)
-        must_respond_with :success
+        recipe.must_be_kind_of Recipe
+        recipe.uri.must_equal uri
       end
     end
 
-    # FIXME: Currently this test is not working, need further help to understand why
-    it 'fails for a recipe that DNE' do
-      uri = "http://www.edamam.com/ontologies/edamam.owl#recipe_e9d318b6c547e3e2adb395133c1e21cf"
+    it 'will raise an error if passed an empty URI' do
+      uri = " "
+      VCR.use_cassette('recipes') do
+        proc {
+          recipe = EdemamApiWrapper.show_recipe(uri)
+        }.must_raise ArgumentError
+      end
+    end
+
+    it 'will raise an error if passed a uri that is nil' do
+      uri = nil
+      VCR.use_cassette('recipes') do
+        proc {
+          recipe = EdemamApiWrapper.show_recipe(uri)
+        }.must_raise ArgumentError
+      end
+    end
+
+    it 'will raise an error if passed a bad uri' do
+
+      uri = "http://www.edamam.com/ontologies/edamam.owl#recipe_e9d318b6c547e3e2adb395133c1e21cd"
 
       VCR.use_cassette('recipes') do
+        recipe = EdemamApiWrapper.show_recipe(uri)
 
-        get recipe_path("0000")
-        flash[:status].must_respond_with :failure
+        recipe.must_be_nil
       end
     end
   end

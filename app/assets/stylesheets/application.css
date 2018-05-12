@@ -1,0 +1,197 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *= require normalize-rails
+
+ *
+ *= require_tree .
+ *= require_self
+ *= require foundation_and_overrides
+
+ */
+
+
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+French+Canon:400,400i|Old+Standard+TT:400,400i,700');
+/* font-family: 'IM Fell French Canon', serif;
+font-family: 'Old Standard TT', serif; */
+
+ /* #05807E; green;
+    #dbdde0; grey; */
+
+/*--------- global ---------*/
+html, body {
+  height: 100%;
+}
+
+body, h2, h3, h4, h5, p, a, label {
+  font-family: 'Old Standard TT', serif;
+}
+
+h1 {
+  font-family: 'IM Fell French Canon', serif;
+}
+
+a:hover {
+  color: #05807E;
+}
+
+.button {
+  font-size: 1.5rem;
+  padding: 0.8rem;
+  background-color: #05807E;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.account-buttons {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+/********** flash **********/
+.callout {
+  border: none;
+  text-align: center;
+  background: none;
+  padding: 0;
+}
+
+.callout .success {
+  color: green;
+}
+
+.callout .error, .callout .alert {
+  color: red;
+}
+
+/********** layout **********/
+.main-container, .home, .page-header, .index-container, .show-container, .favorite-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.main-container, .home {
+  text-align: center;
+  min-height: 100%;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.index-container, .show-container, .favorite-container {
+  width: 100%;
+  min-height: 900px;
+}
+
+/*--------- home ---------*/
+.home h1 a {
+  font-size: 7rem;
+  color: #05807E;
+}
+
+.search-container {
+  width: 50%;
+}
+
+.search-container label {
+  font-size: 2rem;
+  text-align: left;
+}
+
+/*--------- header ---------*/
+.page-header {
+  width: 100%;
+  min-height: 200px;
+  background-color: #dbdde0;
+  padding: 30px 0 20px 0;
+  margin-bottom: 20px;
+}
+
+.page-header h1 a {
+  font-size: 3rem;
+  color: #05807E;
+}
+
+/*--------- index & favorites ---------*/
+.recipe-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  text-align: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.recipe-info {
+  width: 250px;
+  margin: 20px;
+}
+
+.recipe-info img {
+  padding-bottom: 10px;
+}
+
+.pagination a {
+  font-size: 1.5rem;
+}
+
+/*--------- show ---------*/
+.recipe-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.recipe-texts {
+  text-align: left;
+  width: 300px;
+  padding-left: 50px;
+}
+
+/*--------- mobile ---------*/
+@media only screen and (max-width: 650px) {
+  .home h1 a {
+    font-size: 3rem;
+  }
+
+  .search-container {
+    width: 80%;
+  }
+
+  .search-container label {
+    font-size: 1.5rem;
+  }
+
+  .recipe-details {
+    display: flex;
+    flex-flow: column nowrap;
+    padding-top: 10px;
+  }
+
+  .recipe-texts {
+    text-align: center;
+    padding-top: 50px;
+    padding-left: 0px;
+    padding-top: 30px;
+  }
+
+  .recipe-texts ul {
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .pagination li {
+    display: inline-block !important;
+  }
+
+}

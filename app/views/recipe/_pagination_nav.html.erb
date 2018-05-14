@@ -1,0 +1,35 @@
+<nav aria-label="Pagination">
+  <ul class="pagination">
+    <% if !@start_index %>
+      <li class="pagination-previous disabled">Previous<span class="show-for-sr">page</span></li>
+    <% else %>
+      <li class="pagination-previous">
+        <%= link_to 'Previous',  recipes_path(search_terms: @search_terms, start_index: @start_index.to_i - 10), 'aria-label': 'Previous page' %>
+        <span class="show-for-sr">page</span>
+      </li>
+    <% end %>
+    <% @page_count.times do |page| %>
+      <% if !@start_index && page == 0 %>
+        <li class="current" >
+          <%= (page + 1) %>
+        </li>
+      <% elsif @start_index && @start_index.to_i == page * 10 %>
+        <li class="current" >
+          <%= (page + 1) %>
+        </li>
+      <% else %>
+        <li>
+          <%= link_to (page + 1), recipes_path(search_terms: @search_terms, start_index: page * 10), 'aria-label': "Page #{page + 1}" %>
+        </li>
+      <% end %>
+    <% end %>
+    <% if @start_index.to_i == (@page_count - 1) * 10  %>
+      <li class="pagination-next disabled">Next<span class="show-for-sr">page</span></li>
+    <% else %>
+      <li class="pagination-next">
+        <%= link_to 'Next',  recipes_path(search_terms: @search_terms, start_index: @start_index.to_i + 10), 'aria-label': 'Next page' %>
+        <span class="show-for-sr">page</span>
+      </li>
+    <% end %>
+  </ul>
+</nav>

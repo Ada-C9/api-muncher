@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Recipes</title>
+</head>
+<body>
+  <%= yield %>
+  <%if  @recipes && @recipes != []%>
+
+<main>
+  <% @recipes.each do |recipe|%>
+  <secton class = "recipe section">
+  <%= image_tag(recipe.image, alt: "picture of the image") %>
+ </section>
+ <aside class = "aside">
+ <secton class = "recipe section">
+  <a href= "<%= recipe.url %>" target="_blank">Link to Original Recipe</a>
+</section>
+<section class = "recipe section">
+  <%= link_to recipe.label, show_recipes_path(recipe.uri.split("_")[1])%>
+</section>
+  <% end %>
+  <% end %>
+</aside>
+</main>
+  Powered by Edamam
+</body>
+</html>

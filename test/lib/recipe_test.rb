@@ -1,7 +1,7 @@
 require 'test_helper'
 # this is in the lib test only
 
-describe <Recipe> do
+describe Recipe do
 
   it "cannot be initialized with less than 7 parameters" do
     proc {

@@ -2,7 +2,48 @@ require 'test_helper'
 
 # this needs to be done in controller testing?
 
-describe "Recipes Controller" do
+describe RecipesController do
+
+  describe "index" do
+
+    it "should sucessfully show index of all recipes with valid data in params" do
+
+      VCR.use_cassette("recipes") do
+        get search_path, params: {
+          q: "avocado" ,
+          page: 1
+        }
+      end
+      must_respond_with :success
+    end
+
+    it "should redirect to root with invalid q value in params" do
+      VCR.use_cassette("recipes") do
+        get search_path, params: {
+          q: nil ,
+          page: 1
+        }
+
+        must_respond_with :redirect
+        must_redirect_to root_path
+      end
+    end
+
+    it "should redirect to root with invalid page value in params" do
+      VCR.use_cassette("recipes") do
+        get search_path, params: {
+          q: "avocado" ,
+          page: -1
+        }
+
+        must_respond_with :redirect
+        must_redirect_to root_path
+      end
+    end
+
+  end
+
+
   # describe "ApiMuncherWrapper" do
   #
   #   # This code goes where an API call would be made
@@ -58,33 +99,6 @@ describe "Recipes Controller" do
   #     end
   #   end
   # end
-
-  describe "index" do
-
-    it "should sucessfully show index of all recipes with valid data in params" do
-      # should this be reliant on vcr as well??
-      proc {
-        get search_path, params: {
-          q: "avocado" ,
-          page: 1
-        }
-      }
-      must_respond_with :success
-    end
-
-    # it "should redirect to root with invalid data in params" do
-    #
-    #   proc {
-    #     get search_path, params: {
-    #       q: "avocado" ,
-    #       page: 1
-    #     }
-    #   }
-    #   must_respond_with :redirect
-    #   must_redirect_to root_path
-    # end
-
-  end
 
   # describe "show" do
   #

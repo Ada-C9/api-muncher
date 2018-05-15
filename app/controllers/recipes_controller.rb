@@ -19,27 +19,22 @@ class RecipesController < ApplicationController
 
     all_recipes_info = ApiMuncherWrapper.get_recipes(@query, @page)
 
-    if @count == 0
-      flash[:message] = "Sorry, that recipe doesnt exist"
-      flash[:error] = "Invalid recipe url"
-      redirect_to root_path
+    if all_recipes_info
+      params[:count] = all_recipes_info[0]
+      @count = params[:count]
+
+      if @count == 0
+        flash[:message] = "Sorry, that recipe doesnt exist"
+        flash[:error] = "Invalid recipe url"
+        redirect_to root_path
+      end
+
+      params[:page] = all_recipes_info[1]
+      @page = params[:page]
+
+      @recipes = all_recipes_info[2]
+
     end
-
-    params[:count] = all_recipes_info[0]
-    @count = params[:count]
-
-    if @count == 0
-      flash[:message] = "Sorry, that recipe doesnt exist"
-      flash[:error] = "Invalid recipe url"
-      redirect_to root_path
-    end
-
-    # This is the page we are on, starting a 0
-    params[:page] = all_recipes_info[1]
-    @page = params[:page]
-
-    @recipes = all_recipes_info[2]
-
   end
 
   def show
@@ -53,7 +48,7 @@ class RecipesController < ApplicationController
 
     recipe_details = ApiMuncherWrapper.get_recipe(r)
 
-# should this be in ApiMuncherWrapper???
+    # should this be in ApiMuncherWrapper???
     if recipe_details == false
       flash[:message] = "Sorry, that recipe doesnt exist"
       flash[:error] = "Invalid recipe url"

@@ -1,7 +1,5 @@
 require 'test_helper'
 
-# this needs to be done in controller testing?
-
 describe RecipesController do
 
   describe "index" do
@@ -52,6 +50,33 @@ describe RecipesController do
         must_redirect_to root_path
       end
     end
+  end
+
+  describe "show" do
+
+    it "should sucessfully show recipe details with valid data in params" do
+      VCR.use_cassette("recipes") do
+        get recipe_path, params: {
+          q: "avocado" ,
+          r: "http://www.edamam.com/ontologies/edamam.owl#recipe_b7ad27e3e2c9440baca6ac8f7fac2a53"
+        }
+      end
+      must_respond_with :success
+    end
+
+    it "should redirect to root with invalid r (uri) value in params" do
+
+      VCR.use_cassette("recipes") do
+        get recipe_path, params: {
+          q: "avocado" ,
+          r: nil
+        }
+      end
+      must_respond_with :redirect
+      must_redirect_to root_path
+
+    end
+
   end
 
 
@@ -109,34 +134,6 @@ describe RecipesController do
   #       recipes.count.must_equal []
   #     end
   #   end
-  # end
-
-  # describe "show" do
-  #
-  #   it "should sucessfully show recipe details with valid data in params" do
-  #
-  #     proc {
-  #       get recipe_path, params: {
-  #         q: "avocado" ,
-  #         r: "http://www.edamam.com/ontologies/edamam.owl#recipe_b7ad27e3e2c9440baca6ac8f7fac2a53"
-  #       }
-  #     }
-  #     must_respond_with :success
-  #   end
-  #
-  #   it "should redirect to root with invalid data in params" do
-  #
-  #     proc {
-  #       get recipe_path, params: {
-  #         q: "avocado" ,
-  #         r: nil
-  #       }
-  #     }
-  #     must_respond_with :redirect
-  #     must_redirect_to root_path
-  #
-  #   end
-  #
   # end
 
 end

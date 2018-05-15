@@ -17,10 +17,22 @@ describe RecipesController do
       must_respond_with :success
     end
 
-    it "should redirect to root with invalid q value in params" do
+    it "should redirect to root with nil q value in params" do
       VCR.use_cassette("recipes") do
         get search_path, params: {
           q: nil ,
+          page: 1
+        }
+
+        must_respond_with :redirect
+        must_redirect_to root_path
+      end
+    end
+
+    it "should redirect to root with invalid q (ie has no recipe hits) value in params" do
+      VCR.use_cassette("recipes") do
+        get search_path, params: {
+          q: -99999 ,
           page: 1
         }
 
@@ -40,7 +52,6 @@ describe RecipesController do
         must_redirect_to root_path
       end
     end
-
   end
 
 

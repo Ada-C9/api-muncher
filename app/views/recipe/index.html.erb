@@ -1,0 +1,24 @@
+<%= stylesheet_link_tag "results" %>
+
+
+  <main>
+    <section class="results-container">
+    <% if @recipes %>
+      <% @recipes.each do |entry| %>
+      <div class="image-wrapper overlay-fade-in">
+          <%= image_tag(entry.image, alt: "recipe image") %>
+
+        <div class="image-overlay-content">
+          <h2>  <%= link_to entry.label, { action: 'show', :uri => entry.uri }, class: "button" %></h2>
+        </div>
+      </div>
+    <% end %>
+    <% end %>
+    </section>
+    <section class="results-container">
+      <nav class="pagination">
+        <%= will_paginate @recipes, class: "row" %>
+      </nav>
+  </section>
+      <p><div id="edamam-badge" data-color="white"></div></p>
+  </main>

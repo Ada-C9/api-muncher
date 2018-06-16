@@ -1,0 +1,65 @@
+html, main {
+  height:55%;
+  padding: 0;
+  margin: 0;
+  background:url(https://www.foodiesfeed.com/wp-content/uploads/2015/05/homemade-bun-with-tea-and-a-book.jpg) no-repeat center center fixed;
+}
+
+
+main {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+.show-container {
+  background:rgba(255,255,255,0.5);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: space-around;
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  flex: 0, 2, auto
+
+}
+
+.grid-container {
+  font-family: 'Gudea', sans-serif;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+  "image details"
+}
+
+a {
+  font-weight: bold;
+  color: black;
+}
+
+#picture {
+  grid-area: image;
+}
+
+#details {
+  grid-area: details;
+  margin-left: 10px;
+}
+
+h2 {
+  margin-top: 0px;
+  font-family: 'Do Hyeon';
+  font-size: 40px;
+}
+
+img {
+  border-radius: 8px;
+}

@@ -1,0 +1,8 @@
+<section class="search_container">
+  <%= form_tag results_path, method: "get" do %>
+    <div class="input-container">
+      <%= text_field_tag(:query, nil, class: "button", id: "input") %>
+      <%= submit_tag("Get Recipes", class: "button", id: "submit") %>
+    </div>
+  <% end %>
+</section>

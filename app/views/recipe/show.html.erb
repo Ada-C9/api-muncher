@@ -1,0 +1,44 @@
+<%= stylesheet_link_tag "recipe_show" %>
+
+<html>
+<main>
+  <section class="show-container">
+    <article class="grid-container">
+      <% if @recipe.image %>
+        <div id="picture">
+          <%= image_tag(@recipe.image, alt: "Picture of food", size: "300") %>
+          <% if @recipe.url %>
+            <p><%= link_to "See Original Recipe", @recipe.url %></p>
+          <% end %>
+        </div>
+      <% end %>
+
+      <section id="details">
+        <h2><%= @recipe.label %></h2>
+        <h1> Ingredients </h1>
+        <% if @recipe.ingredients %>
+          <ul>
+            <% @recipe.ingredients.each do |ingredient| %>
+              <li> <%= ingredient %> </li>
+            <% end %>
+          </ul>
+        <% else %>
+          Ingredient Information Not Available
+          <% end %>
+
+        <h1> Nutrition </h1>
+        <% if @recipe.diet %>
+          <ul>
+            <% @recipe.diet.each do |category| %>
+              <li><%= category %></li>
+            <% end %>
+          </ul>
+        <% else %>
+          Nutrition Information Not Available
+        <% end %>
+      </section>
+    </article>
+  </section>
+<main>
+  <p><div id="edamam-badge" data-color="white"></div></p>
+</html>

@@ -1,0 +1,106 @@
+html, body {
+
+  padding: 0;
+  margin: 0;
+  background:url(https://www.foodiesfeed.com/wp-content/uploads/2015/05/homemade-bun-with-tea-and-a-book.jpg) no-repeat center center fixed;
+}
+
+* {
+  text-align: center;
+}
+
+
+.search_container {
+  font-family: 'Gudea', sans-serif;
+  color: black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  height:25%;
+  background:rgba(255,255,255,0.5); /* applies a 50% transparent white background */
+  padding-bottom: 50px;
+
+}
+
+footer {
+  background: none;
+}
+
+
+.search_container form {
+  width: 450px;
+  /* margin: 17% auto; */
+  flex: 0, 2, auto;
+  justify-content: center;
+}
+
+
+.search_container header p {
+  font-size: 50px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  padding-top: 40px;
+  margin-bottom: 5px;
+  font-family: 'Do Hyeon';
+}
+
+
+.search_container .description {
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 1.3em;
+  margin: -2px 0 25px;
+  padding-top: 10px;
+}
+
+
+.search_container .input {
+  display: flex;
+  align-items: center;
+}
+
+
+.search_container .button {
+  height: 44px;
+  border: none;
+}
+
+
+.search_container #input {
+  width: 75%;
+  background: #B0C4DE;
+  font-family: inherit;
+  color: black;
+  letter-spacing: 1px;
+  text-indent: 5%;
+  border-radius: 5px 0 0 5px;
+  text-align: left;
+}
+
+
+.search_container #submit {
+  width: 25%;
+  height: 46px;
+  background: #6E7B8B;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: bold;
+  color: inherit;
+  letter-spacing: 1px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background .3s ease-in-out;
+}
+
+
+.search_container #submit:hover {
+  background: #344152;
+}
+
+
+.search_container input:focus {
+  outline: none;
+  outline: 2px solid #344152;
+  box-shadow: 0 0 2px #344152;
+}

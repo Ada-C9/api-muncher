@@ -1,0 +1,140 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  background:url(https://www.foodiesfeed.com/wp-content/uploads/2015/05/homemade-bun-with-tea-and-a-book.jpg) no-repeat center center fixed;
+  }
+
+main {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center; /*centers items on the line (the x-axis by default)*/
+  align-items: center; /*centers items on the cross-axis (y by default)*/
+
+}
+
+.results-container {
+  background:rgba(255,255,255,0.5);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: space-around;
+  width: 80%;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+}
+
+
+.image-wrapper {
+  width: 200px;
+  height: 200px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  border-radius: 4px;
+  margin: 5px;
+
+}
+
+.image-overlay-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  font-family: 'Gudea'}
+
+.overlay-fade-in p {
+  letter-spacing: 0.15em;
+  color: #f4f4f4;
+  font-size: 22px;
+  opacity: 0;
+  transition: all 0.2s linear; }
+
+.overlay-fade-in img {
+  transition: all 0.2s linear; }
+
+.overlay-fade-in .image-overlay-content {
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease-in-out; }
+
+.overlay-fade-in h2 {
+  color: #f2f2f2;
+  font-size: 1.2rem;
+  margin-top: 40%;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  background: rgba(0, 0, 0, 0.7); }
+
+
+.overlay-fade-in .button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 14px;
+  color: white;
+  text-transform: uppercase;
+  position: relative;
+  opacity: 0;
+  transition: all 0.2s ease-in-out; }
+
+.overlay-fade-in:hover img {
+  transform: scale(1.2); }
+
+.overlay-fade-in:hover .image-overlay-content {
+  opacity: 1; }
+
+.overlay-fade-in:hover h2, .overlay-fade-in p, .overlay-fade-in .button {
+  opacity: 1; }
+
+.overlay-fade-in:hover p {
+  transition-delay: 0.1s; }
+
+.overlay-fade-in:hover .button {
+  transition-delay: 0.2s; }
+
+
+.pagination {
+  font-family: 'Do Hyeon';
+  font-size: 22px;
+  text-decoration: none;
+  color: black;
+}
+
+.pagination > * {
+    margin-right: 0.1em;
+    padding: 0.3em 0.4em;
+}
+
+.pagination a {
+  text-decoration: none;
+  color: black;
+}
+
+.pagination a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.pagination a:active {
+    text-shadow: none;
+    text-decoration: none;
+    color: black;
+
+}
+
+.pagination .current {
+    text-decoration: underline;
+    color: black;
+    font-size: none;
+    font-size: 26px
+}

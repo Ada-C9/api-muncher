@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "Munchies" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <script src="https://developer.edamam.com/attribution/badge.js"></script>
+  </head>
+
+  <body>
+    <nav>
+      <h2 class="title">Munchies</h2>
+    </nav>
+
+    <main>
+      <%= yield %>
+    </main>
+
+    <% if flash[:result_text] %>
+      <section class="status <%= flash[:status] %> ">
+        <h3><%= flash[:result_text] %></h3>
+      </section>
+    <% end %>
+
+    <footer>
+      <div>&copy muncher llc</div>
+      <div id="edamam-badge" data-color="transparent"></div>
+    </footer>
+  </body>
+</html>

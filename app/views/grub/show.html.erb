@@ -1,0 +1,22 @@
+<section class="recipe-detail">
+    <article>
+      <h4><%=link_to @recipe.label, @recipe.url %></h4>
+      <p><%= image_tag @recipe.image %></p>
+    </article>
+
+    <article>
+      <% @recipe.healthlabels.each do |label| %>
+      <ul>
+        <li><%= label %></li>
+      </ul>
+      <% end %></br>
+
+      <p>What you'll need...</p>
+      <% @recipe.ingredientlines.each do |ingredient| %>
+      <ul>
+        <li><%= ingredient %></li>
+      </ul>
+      <% end %>
+    </article>
+    <%= link_to "Back to Search page", root_path, class: "button" %>
+</section>

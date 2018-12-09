@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "Munch. More" %></title>
+    <link href="https://fonts.googleapis.com/css?family=Freckle+Face|Righteous" rel="stylesheet">
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <% if flash[:status] %>
+     <section class="row status <%= flash[:status] %>">
+       <h3>
+         <%= flash[:message] %>
+       </h3>
+     </section>
+    <% end %>
+    <%= yield %>
+
+  </body>
+
+  <footer>
+    <h6>Powered by</h6>
+    <%= link_to image_tag("https://www.edamam.com/images/logo-site-header.png", class: "logo"), "https://www.edamam.com/" %>
+  </footer>
+
+</html>

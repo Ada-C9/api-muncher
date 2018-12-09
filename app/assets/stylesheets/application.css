@@ -1,0 +1,299 @@
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*= require normalize-rails
+
+*
+*= require_tree .
+*= require_self
+*= require foundation_and_overrides
+
+*/
+
+body {
+  text-align: center;
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  background-image: url(background.jpg) ;
+}
+
+h1, h2, h3 {
+  color: #3F3B38;
+  font-family: Righteous;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: .10em;
+  flex-shrink: 0;
+  padding: 20px;
+}
+
+.home h1{
+  font-size: 70pt;
+}
+
+.home h3{
+  padding-bottom: 5%;
+  padding-top: 0%;
+}
+.search-bar{
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.head-search {
+  padding-bottom: 10px;
+  text-align: center;
+
+}
+
+/* index page */
+.index-container {
+  background-color: #E8E5E3;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: wrap row; */
+  justify-content: space-between;
+}
+
+.index-recipes ul {
+  display: flex;
+  flex-flow: wrap row;
+}
+
+.index-recipes ul li img {
+  padding: 10px;
+}
+
+.index-recipes {
+  padding: 20px;
+}
+
+.index-recipes ul li {
+  list-style-type: none;
+}
+
+.pagination {
+  margin-left: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination .current{
+  background: #0066cc;
+  border-radius: 5px;
+  font-size: 22px;
+}
+
+.pagination a {
+  color: #cc0000;
+  border-radius: 5px;
+  transition: background-color .10s;
+  margin: 0 4px;
+  font-size: 22px;
+  background-color: white;
+}
+
+.card {
+  height: 170px;
+  width: 145px;
+  border-radius: 15px;
+  border-color: white;
+  margin: 4%;
+  -moz-box-shadow: 0 0 5px #fff;
+  -webkit-box-shadow: 0 0 5px #fff;
+  box-shadow: 0px 0px 5px #fff;
+}
+
+
+.card img {
+  border-radius: 20px;
+  padding-top: 6px;
+  width: 150px;
+  height: 150px;
+  }
+
+.columns:last-child:not(:first-child) {
+  float: left;
+
+}
+
+.card a {
+  font-weight: bold;
+  font-size: 1.4em;
+  padding-top: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #2F2A27;
+  white-space: nowrap;
+}
+
+.card a:hover {
+  color: #0066cc;
+  font-size: 1.7em;
+}
+
+ /* show page */
+.recipe-details {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 1fr 1fr ;
+  padding-bottom: 5%;
+  padding-left: 5%;
+  background-color: #e6e6e6;
+  font-size: 12pt;
+}
+
+.recipe-details .recipe-title {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  text-align: center;
+  margin: 3vw;
+}
+
+.recipe-details .recipe-title h2 {
+  margin: 0;
+}
+
+.recipe-details .ingredients h2 {
+  text-align: center;
+}
+.recipe-details .ingredients {
+  text-align: left;
+}
+
+
+
+@media screen and (max-width: 780px) {
+  body {
+    background-image: url(background_small.jpg) ;
+  }
+
+  .recipe-details .ingredients {
+    text-align: left;
+    font-size: 10pt;
+  }
+  .home h1{
+    font-size: 40pt;
+  }
+
+  .head-search {
+    font-size: 40pt;
+  }
+  /* index page */
+  .index-recipes ul li img {
+    padding: 5px;
+  }
+
+  .index-recipes {
+    padding: 5px;
+  }
+  .card {
+    height: 150px;
+    width: 135px;
+  }
+
+  .card img {
+    height: 150px;
+    width: 150px;
+  }
+
+  .card a {
+    font-size: 1em;
+  }
+
+  .card a:hover {
+    font-size: 1.2em;
+  }
+
+   /* show page */
+  .recipe-details {
+    font-size: 15pt;
+  }
+}
+@media screen and (min-width: 450px) {
+  h1 {
+    font-size: 60pt;
+    padding-bottom: 5%;
+  }
+
+  /* index page */
+
+  .card {
+    height: 170px;
+    width: 145px;
+  }
+
+  .card img {
+    height: 150px;
+    width: 150px;
+  }
+
+
+  .card a {
+    font-size: 1em;
+  }
+
+  .card a:hover {
+    font-size: 1.2em;
+  }
+
+   /* show page */
+  .recipe-details {
+    font-size: 15pt;
+  }
+}
+
+/ @media screen and (max-width: 450px) {
+  h1 {
+    font-size: 30pt;
+    padding-bottom: 5%;
+  }
+
+  /* index page */
+
+  .card {
+    height: 170px;
+    width: 145px;
+  }
+
+  .card img {
+    height: 150px;
+    width: 150px;
+  }
+
+
+  .card a {
+    font-size: 1em;
+  }
+
+  .card a:hover {
+    font-size: 1.2em;
+  }
+
+   /* show page */
+ .recipe-details {
+    font-size: 10pt;
+  }
+
+  .pagination .current{
+    font-size: 15px;
+  }
+
+  .pagination a {
+    font-size: 15px;
+  }
+}

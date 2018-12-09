@@ -1,0 +1,38 @@
+<header class="head-search">
+    <h1><%= link_to("Munch. More", root_path, class: "head-search") %>
+      <%= render partial: "form" %>
+    </h1>
+</header>
+
+<main class="recipe-details">
+
+  <section class="recipe-title">
+    <h2><%= link_to(@recipe.label, "#{@recipe.url}", target: :_blank) %></h2>
+    <p>By <%= link_to(@recipe.source, "#{@recipe.url}", target: :_blank) %></p>
+  </section>
+
+
+  <section>
+    <%= image_tag  @recipe.image %>
+    <h3>Dietary Label(s)</h3>
+    <% if @recipe.dietLabels.empty? %>
+    <em><p>There are currently no dietary labels for this recipe.</p></em>
+    <% else %>
+    <% @recipe.dietLabels.each do |label| %>
+    <li><%= label %></li>
+    <% end%>
+    <% end %>
+  </section>
+
+  <section class="ingredients">
+    <h2>Ingredients</h2>
+    <%if @recipe.ingredientLines %>
+    <% @recipe.ingredientLines.each do |line| %>
+    <li><%= line %></li>
+    <% end %>
+    <%else%>
+    <p>There are currently no ingredients for this recipe </p>
+    <%end%>
+  </section>
+
+</main>

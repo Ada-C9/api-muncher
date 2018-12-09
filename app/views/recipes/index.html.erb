@@ -1,0 +1,29 @@
+<header class="head-search">
+  <h1><%= link_to("Munch. More", root_path, class: "head-search") %>
+    <%= render partial: "form" %>
+  </h1>
+</header>
+
+<main class ="index-container">
+  <section class="index-recipes">
+
+    <% if !@recipes.empty? %>
+    <h2>Recipe Results for: "<%= params[:search_term] %>"</h2>
+
+    <ul>
+      <% @recipes.each do |recipe| %>
+      <li class="columns small-10 large-3 card">
+        <%= link_to image_tag(recipe.image), recipe_path(:uri => recipe.uri) %>
+        <%= link_to recipe.label, recipe_path(recipe.uri) %>
+      </li>
+      <% end %>
+    </ul>
+    <%end %>
+
+  </section>
+
+  <p class="pages-info"><%= page_entries_info @recipes%></p>
+</main>
+<section class ="pagination">
+  <%= paginate @recipes %>
+</section>
